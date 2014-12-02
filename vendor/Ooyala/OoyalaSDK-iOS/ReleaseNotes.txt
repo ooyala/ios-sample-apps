@@ -1,0 +1,232 @@
+Current Version: 3.1.0_RC8
+
+------------ 3.1.0 ------------
+Major Features
+  [PBA-604] Added localization support for Spanish
+  [PBA-792] Added support for arm64 architecture.
+  [PBA-771] Updated Widevine libraries to 60012790
+
+Bug Fixes
+   [PBA-789] reconnect broken embedCodeGenerator through layers of init methods.
+   [PBA-850] avoid crashing on iOS6- vs. iOS7+ when doing base64 encoding.
+   [PBA-790] Remove excessive IMA logging
+   [PBA-848] Update Learn More button positioning
+   [PBA-829] Fix GettingStartedSampleApp UI bugs
+   [PBA-837] Fix IMA player playing after OoyalaPlayer is destroyed
+   [PBA-844] Updates to FreewheelSampleApp
+   [PBA-851] Updates to GoogleIMASampleApp
+   [PBA-588] Continue Airplay when app goes to background.
+   [PBA-780] Fix Memory Leaks
+   [PBA-727] Fix setLiveSliderShowing for fullscreen
+   [PBA-827] Fix resume after ad under poor network condition.
+   [PBA-842] Fix Freewheel Player memory leaks
+   [PBA-604] Updated Localization strings for Japanese
+   [PBA-894] Null pointer checks around Controllers and XML PArsing
+   [PBA-892] fix armv7s support
+
+------------ 3.0.1 ------------
+Bug Fixes
+  [PBA-780] Fix memory leaks on OoyalaPlayerViewController dealloc
+  [PBA-789] Fix OoyalaPlayer init method.
+  [PBA-790] Fix IMA excessive logging
+  [PBA-827] fix resume after ad under poor network condition.
+  [PBA-830] Fix IMA Ad Playback after InitialTime seek
+  [PBA-839] Fix Multiple Learn More Buttons
+  [PBA-842] Fix Memory Leak of Ad Plugins
+  [PBA-841] Change reference to FWSlot to strong in AdPlayer
+  [PBA-837] Fix IMA Player not deallocating correctly
+  [PBA-844] Fixed Update FreewheelSampleApp to have multiple views
+
+------------ 3.0.0 ------------
+Major Features   
+  [PBA-498] Support for TV Ratings pop-ups as per FCC Guidelines
+  [PBA-623] Support for visual advertisement cue points for Freewheel, Ooyala, and VAST ads
+  [PBA-299] Major refactoring of Advertisement playback code. Fixed a number of bugs across all advertisements and third party ad managers
+  [PBA-299] New APIs for third party ad manager development
+  [PBA-633] Added functionality that will avoid playing too many ads after seeking over multiple midrolls
+
+Bugs/Fixes
+  [PBA-663] Disabled Seek-while-Seeking feature, where as you drag the scrubber, the rendered video updates to current dragged positon.
+  [PBA-596] Fix bugs with Fullscreen video playback
+  [PBA-615] Fix video playback crashing for some advertisements in iOS8
+  [PBA-579] integrate with google IMA beta 7.
+
+------------ 2.7.1 ------------
+Bug Fixes
+  [PBA-547] Fixed consistency of OoyalaPlayer.isExternalPlaybackActive
+  [PBA-551] Fix isFullscreen while OoyalaPlayer is placed in a modal view
+  [PBA-579] Integrated with Google IMA SDK Beta7
+  [PBA-400] Fixed crash with VAST Ads in iOS8 
+  [PBA-400] Fixed video not playing after Midroll in iOS8
+  [PBA-593] Fixed crash with NSObserver
+
+------------ 2.7.0 ------------
+API Changes
+ [PBA-451] Support highlight caption styling for iOS 7+ closed captions
+ [PBA-456] Generate/use a UUID for more precise device tracking for Ooyala Analytics
+
+Bug fixes
+  [PBA-464] Fix graphical issues with closed captions styling when rotating
+  [PBA-538] If the content has been finished then resume without seek.
+  [PBK-464] Fix bug with improperly offset text edge styles in closed captions
+
+------------ 2.6.1 ------------
+API/Packaging Changes
+  [PBA-497] Remove AdSupport.framework. Developers needing e.g. [LR_DEVICEID] must use [OOVASTUtils setAdvertisingId]
+  [PBA-484] Disable the Roll-up and Paint-on closed caption style on iOS
+  [PBA-469] Add “FullscreenDoneClicked” notification from OOOoyalaPlayerViewController
+  [PBA-469] Add “imaAdClicked” notification from OOIMAAdManager
+
+------------ 2.6.0 ------------
+API/Packaging Changes
+  [PBA-359] Ooyala no longer provides Google IMA libraries alongside our integration. Please download these libraries from Google IMA directly
+  [PBA-291] Made DebugMode.h public, so you can disable Ooyala SDK logging if desired
+  [PBA-302] We have transitioned to a newer packaging script.  If there is anything missing from an SDK pacakge, please file an issue with Technical Support
+
+Bug fixes
+  [PBA-353] Fix Widevine Playback resuming when authorization heartbeats are disabled
+  [PBA-386] Add support of hh:mm:ss:ff timestamp format for Closed Captions
+  [PBA-385] fix volume scrubber UI for iOS7.1
+  [PBA-406] Fix bug where current item duration was not available on Current Item Changed Notification
+
+Freewheel - IMA Bug fixes
+  [PBA-361] Verified integration with Freewheel version 5.15
+  [PBA-407] Fix Freehweel Ad Player skipping ad after pausing
+  [PBA-403] Fix Freewheel Ad Player when fast forwarding through ad spots
+  [PBA-319] Fix Freewheel Ad Player when invalid ad would crash application
+
+------------ 2.5.0 ------------
+API Changes
+[PBA-245] implement [LR_DEVICEID] 'macro' expansion in VAST URLs. Requires AdSupport.framework.
+[PBA-291] Adding OODebugMode to customize logs
+[PBK-655] Add bitrate change notification for HLS playback
+
+Bug Fixes
+[PB-3043][PB-3045] Don't use the pop-over CC menu any more on iPads
+[PB-3399] Don't allow CC button to show during ads.
+[PBK-689] Fix bug where closed captions could be obstructed by video playback
+[PBK-552] fix enable/disable AirPlay.
+[PB-3384] Fix popover when switching between inline/fullscreen.
+[PBK-709] Fix crash when calling OoyalaPlayer stop
+[PBK-709] freewheelplayer play will be called twice in the mid-roll scenario and the timer won't get invalidate and cause a leak.
+[PBA-301] Changes to Analytics reporting to be more accurate
+[PBA-326] fix freewheel ad error by timing out after 5 seconds if playback fails.
+          Fix issue closing player  with conrolType OOOoyalaPlayerControlTypeFullscreen
+
+------------ 2.4.0 ------------
+API Changes
+[ANA-3407]extract 'player domain' as a concrete type, and put validation enforcement in there, and update (break on purpose) APIs using such.
+        - fix up sample projects to use OOPlayerDomain.
+[ANA-3407]Throw an uncaught exception if domain string looks bad.
+          Pass all available resolutions to iOS devices, as opposed to filtering
+[PBK-551] Add setControlsViewControllers method
+[PBK-503] Add setLiveScrubberShowing method
+[PBK-456] Major Closed Captions UI Updates to adhere to FCC regulations.
+        - make sure QuartzCore.framework, and MediaAccessibility.framework ('optional') are included in your applications
+
+Freewheel - IMA Bug fixes
+[PBK-566] get us out of the bad-ad-infinite-loop when FW returns an actual error via FW_NOTIFICATION_REQUEST_COMPLETE.
+[PBK-518] a fix for view frame sizing when fullscreen, for both iOS6 and iOS7 (they are different).
+[PBK-518] Avoid adjusting the Learn More UI for Google IMA ads
+[PBK-644] Fix IMA postroll for iOS.
+[PBK-566] attempt to fix race where FW comes back before we've set up our player as delegate.
+[PBK-628] Pass current item duration into Freewheel instead of Stream Player duration
+
+Other Changes
+[PBK-539] Update Adobe Pass SDK to 1.7.6
+[PBK-524] rename JSONKit category methods to avoid name collisions with other categories.
+[PBK-560] Add support for x86_64 as a valid architecture
+[PBK-587] Remove iOS 4.3-specific code
+[PBK-615] Fix memory leak with Ooyala Player/Closed Captions View Controllers
+
+------------ 2.3.0 ------------
+[PBK-498,499,502] IMA fixes around prerolls and ad pools.
+[PBK-518] don't try to adjust non-full-screen ad view, it wasn't looking quite right.
+[PBK-521] Fix default boolean value, to restore AirPlay ability.
+[PBK-522] more attempts to avoid null dereferencing.
+[PBK-531] Add support of FRMSegment to Ooyala Freewheel Manager
+[PBK-506] Update Freewheel Libraries
+
+------------ 2.2.0 ------------
+Freewheel Ad Manager Support
+iOS 7 UI improvements
+Google IMA Bug fixes
+Fixed Widevine PLAY_COMPLETE bug
+Added Volume slider to iOS7 UI
+Added language translation to Closed Captions menu buttons
+Added support for arm64 architecture
+Removed some sample applications
+Removed unused PresentationSizeChangedNotification
+Added setClosedCaptionsLangauge
+Renamed some localization APIs
+
+------------ 2.1.0 ------------
+Renamed BaseMoviePlayer to BaseStreamPlayer
+Made some originally public classes private.  If you come across build issues, file a ticket to Support with what classes you expect to be public.
+Fixed behavior where ads played without a play() call
+Bug fixed where PlayStartedNotification would fire multiple times.
+Support for Cross Device Resume
+iOS7 UI improvements
+Fixed some memory leaks
+Various bug fixes
+
+------------ 2.0.1 ------------
+Google IMA Support
+Updated Widevine error handling
+Added Device Notification Sample App for Widevine
+Fixed VAST analytics
+Updated iOS7 UI
+
+------------ 2.0.0 ------------
+
+Streamlined the APIs
+Support for XTV Connect
+
+------------ 1.5.0 ------------
+
+Big Fixes
+ARMv7s Support is back
+Better support for Live and VOD CCs
+
+------------ 1.4.0 ------------
+
+Bug fixes
+VAST ads are now more robust. A failing VAST ad will be skipped, not cause the player to crash
+Expose setRootItem
+Update our JSON parser
+Support for Widevine encrypted content
+Various UI bugfixes
+Support for setting custom analytics tags
+
+------------ 1.3.0 ------------
+Added Adobe Pass Demo App
+Prerolls start on play versus first OOOoyalaPlayerTimeChangedNotification
+
+------------ 1.2.0 ------------
+
+Updated the default UI to more closely resemble default iOS UI
+Packaged all UI sources with the SDK for easier customization
+Added a new sample project (OOView) that showcases advanced use cases
+Added support for setting Embed Tokens
+Queued play calls to make sure play resumes after the Player is ready
+Made sure seek is available when player is ready
+Made minor documentation and getting started guide updates
+Fixed seeking bugs on iOS 4.3
+Fixed fullscreen related crashes
+Updated to ignore failed ads during playback
+Configured to queue up fullscreen calls if the player is not ready
+Updated the stream selector to properly select streams based on Apple's guidelines. This requires you to add an additional framework to the project (SystemConfiguration.framework)
+
+------------ 1.1.1 ------------
+
+Fixed OOOoyalaPlayer crash on rapid changeCurrentVideo calls
+
+------------ 1.1.0 ------------
+
+Rename all classes to have "OO" prefix to prevent namespace conflicts
+Fixed crash on seek when player is not ready
+Fixed crash on disposing of player while seeking
+
+------------ 1.0.0 ------------
+
+Initial Release

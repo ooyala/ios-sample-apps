@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B625E3B197DFBE800CE2E21 /* libOoyalaFreewheelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B625E39197DFBE800CE2E21 /* libOoyalaFreewheelSDK.a */; };
+		0B625E3C197DFBE800CE2E21 /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B625E3A197DFBE800CE2E21 /* libOoyalaSDK.a */; };
+		952DFA50184698DE00119ED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFA4F184698DE00119ED7 /* Foundation.framework */; };
+		952DFA52184698DE00119ED7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFA51184698DE00119ED7 /* CoreGraphics.framework */; };
+		952DFA54184698DE00119ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFA53184698DE00119ED7 /* UIKit.framework */; };
+		952DFA5A184698DE00119ED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 952DFA58184698DE00119ED7 /* InfoPlist.strings */; };
+		952DFA5C184698DE00119ED7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 952DFA5B184698DE00119ED7 /* main.m */; };
+		952DFA60184698DE00119ED7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 952DFA5F184698DE00119ED7 /* AppDelegate.m */; };
+		952DFA62184698DE00119ED7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952DFA61184698DE00119ED7 /* Images.xcassets */; };
+		952DFA8018469A6F00119ED7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952DFA7F18469A6F00119ED7 /* ViewController.m */; };
+		952DFA8518469A7C00119ED7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952DFA8118469A7C00119ED7 /* ViewController_iPad.xib */; };
+		952DFA8618469A7C00119ED7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952DFA8318469A7C00119ED7 /* ViewController_iPhone.xib */; };
+		952DFA8A18469A9000119ED7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952DFA8718469A9000119ED7 /* Default-568h@2x.png */; };
+		952DFA8B18469A9000119ED7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 952DFA8818469A9000119ED7 /* Default.png */; };
+		952DFA8C18469A9000119ED7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952DFA8918469A9000119ED7 /* Default@2x.png */; };
+		952DFABB18469B9600119ED7 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFABA18469B9600119ED7 /* libxml2.dylib */; };
+		952DFABD18469BA000119ED7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFABC18469BA000119ED7 /* libc++.dylib */; };
+		952DFABF18469BAC00119ED7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFABE18469BAC00119ED7 /* CFNetwork.framework */; };
+		952DFAC118469BB200119ED7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAC018469BB200119ED7 /* SystemConfiguration.framework */; };
+		952DFAC318469BB800119ED7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAC218469BB700119ED7 /* Security.framework */; };
+		952DFAC518469BC000119ED7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAC418469BC000119ED7 /* CoreMedia.framework */; };
+		952DFAC718469BC500119ED7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAC618469BC500119ED7 /* AVFoundation.framework */; };
+		952DFAC918469BCC00119ED7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAC818469BCC00119ED7 /* CoreText.framework */; };
+		952DFACB18469BD200119ED7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFACA18469BD200119ED7 /* MediaPlayer.framework */; };
+		952DFAE11846C21700119ED7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAE01846C21700119ED7 /* CoreLocation.framework */; };
+		952DFAE31846C22700119ED7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAE21846C22700119ED7 /* MessageUI.framework */; };
+		952DFAE51846C23400119ED7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAE41846C23400119ED7 /* EventKit.framework */; };
+		952DFAE71846C24400119ED7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAE61846C24400119ED7 /* AdSupport.framework */; };
+		952DFAE91846C3AB00119ED7 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952DFAE81846C3AB00119ED7 /* AdManager.framework */; };
+		97E766A31A00139F00438EB1 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E766A21A00139F00438EB1 /* PickerViewController.m */; };
+		97E766A81A001B7000438EB1 /* PickerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97E766A41A001B7000438EB1 /* PickerViewController_iPad.xib */; };
+		97E766A91A001B7000438EB1 /* PickerViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97E766A61A001B7000438EB1 /* PickerViewController_iPhone.xib */; };
+		97E766AB1A00227400438EB1 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97E766AA1A00227400438EB1 /* View.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B625E0B197DFBE800CE2E21 /* OOFreewheelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFreewheelManager.h; sourceTree = "<group>"; };
+		0B625E0D197DFBE800CE2E21 /* OOAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdSpot.h; sourceTree = "<group>"; };
+		0B625E0E197DFBE800CE2E21 /* OOAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAnalytics.h; sourceTree = "<group>"; };
+		0B625E0F197DFBE800CE2E21 /* OOAuthorizableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAuthorizableItem.h; sourceTree = "<group>"; };
+		0B625E10197DFBE800CE2E21 /* OOCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCallbacks.h; sourceTree = "<group>"; };
+		0B625E11197DFBE800CE2E21 /* OOCaption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCaption.h; sourceTree = "<group>"; };
+		0B625E12197DFBE800CE2E21 /* OOChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOChannel.h; sourceTree = "<group>"; };
+		0B625E13197DFBE800CE2E21 /* OOChannelSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOChannelSet.h; sourceTree = "<group>"; };
+		0B625E14197DFBE800CE2E21 /* OOClosedCaptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOClosedCaptions.h; sourceTree = "<group>"; };
+		0B625E15197DFBE800CE2E21 /* OOClosedCaptionsStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOClosedCaptionsStyle.h; sourceTree = "<group>"; };
+		0B625E16197DFBE800CE2E21 /* OOContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOContentItem.h; sourceTree = "<group>"; };
+		0B625E17197DFBE800CE2E21 /* OODebugMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OODebugMode.h; sourceTree = "<group>"; };
+		0B625E18197DFBE800CE2E21 /* OODefaultPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OODefaultPlayerInfo.h; sourceTree = "<group>"; };
+		0B625E19197DFBE800CE2E21 /* OODynamicChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OODynamicChannel.h; sourceTree = "<group>"; };
+		0B625E1A197DFBE800CE2E21 /* OOEmbeddedSecureURLGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOEmbeddedSecureURLGenerator.h; sourceTree = "<group>"; };
+		0B625E1B197DFBE800CE2E21 /* OOEmbeddedSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOEmbeddedSignatureGenerator.h; sourceTree = "<group>"; };
+		0B625E1C197DFBE800CE2E21 /* OOEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOEmbedTokenGenerator.h; sourceTree = "<group>"; };
+		0B625E1D197DFBE800CE2E21 /* OOModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOModule.h; sourceTree = "<group>"; };
+		0B625E1E197DFBE800CE2E21 /* OOOoyalaAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaAdSpot.h; sourceTree = "<group>"; };
+		0B625E1F197DFBE800CE2E21 /* OOOoyalaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaAPIClient.h; sourceTree = "<group>"; };
+		0B625E20197DFBE800CE2E21 /* OOOoyalaError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaError.h; sourceTree = "<group>"; };
+		0B625E21197DFBE800CE2E21 /* OOOoyalaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaPlayer.h; sourceTree = "<group>"; };
+		0B625E22197DFBE800CE2E21 /* OOOoyalaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaPlayerViewController.h; sourceTree = "<group>"; };
+		0B625E23197DFBE800CE2E21 /* OOOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOrderedDictionary.h; sourceTree = "<group>"; };
+		0B625E24197DFBE800CE2E21 /* OOPaginatedParentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPaginatedParentItem.h; sourceTree = "<group>"; };
+		0B625E25197DFBE800CE2E21 /* OOPlayableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayableItem.h; sourceTree = "<group>"; };
+		0B625E26197DFBE800CE2E21 /* OOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayer.h; sourceTree = "<group>"; };
+		0B625E27197DFBE800CE2E21 /* OOPlayerDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayerDomain.h; sourceTree = "<group>"; };
+		0B625E28197DFBE800CE2E21 /* OOPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayerInfo.h; sourceTree = "<group>"; };
+		0B625E29197DFBE800CE2E21 /* OOReturnState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOReturnState.h; sourceTree = "<group>"; };
+		0B625E2A197DFBE800CE2E21 /* OOSecureURLGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSecureURLGenerator.h; sourceTree = "<group>"; };
+		0B625E2B197DFBE800CE2E21 /* OOSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSignatureGenerator.h; sourceTree = "<group>"; };
+		0B625E2C197DFBE800CE2E21 /* OOStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStream.h; sourceTree = "<group>"; };
+		0B625E2D197DFBE800CE2E21 /* OOStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStreamPlayer.h; sourceTree = "<group>"; };
+		0B625E2E197DFBE800CE2E21 /* OOTBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOTBXML.h; sourceTree = "<group>"; };
+		0B625E2F197DFBE800CE2E21 /* OOUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOUserInfo.h; sourceTree = "<group>"; };
+		0B625E30197DFBE800CE2E21 /* OOVASTAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTAd.h; sourceTree = "<group>"; };
+		0B625E31197DFBE800CE2E21 /* OOVASTAdData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTAdData.h; sourceTree = "<group>"; };
+		0B625E32197DFBE800CE2E21 /* OOVASTAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTAdSpot.h; sourceTree = "<group>"; };
+		0B625E33197DFBE800CE2E21 /* OOVASTLinearAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTLinearAd.h; sourceTree = "<group>"; };
+		0B625E34197DFBE800CE2E21 /* OOVASTSequenceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTSequenceItem.h; sourceTree = "<group>"; };
+		0B625E35197DFBE800CE2E21 /* OOVASTStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTStream.h; sourceTree = "<group>"; };
+		0B625E36197DFBE800CE2E21 /* OOVASTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTUtils.h; sourceTree = "<group>"; };
+		0B625E37197DFBE800CE2E21 /* OOVASTWrapperAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTWrapperAd.h; sourceTree = "<group>"; };
+		0B625E38197DFBE800CE2E21 /* OOVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVideo.h; sourceTree = "<group>"; };
+		0B625E39197DFBE800CE2E21 /* libOoyalaFreewheelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaFreewheelSDK.a; sourceTree = "<group>"; };
+		0B625E3A197DFBE800CE2E21 /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaSDK.a; sourceTree = "<group>"; };
+		952DFA4C184698DE00119ED7 /* FreewheelSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreewheelSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		952DFA4F184698DE00119ED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		952DFA51184698DE00119ED7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		952DFA53184698DE00119ED7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		952DFA57184698DE00119ED7 /* FreewheelSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreewheelSampleApp-Info.plist"; sourceTree = "<group>"; };
+		952DFA59184698DE00119ED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		952DFA5B184698DE00119ED7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		952DFA5D184698DE00119ED7 /* FreewheelSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FreewheelSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		952DFA5E184698DE00119ED7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		952DFA5F184698DE00119ED7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		952DFA61184698DE00119ED7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		952DFA7E18469A6F00119ED7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		952DFA7F18469A6F00119ED7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		952DFA8218469A7C00119ED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		952DFA8418469A7C00119ED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		952DFA8718469A9000119ED7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		952DFA8818469A9000119ED7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		952DFA8918469A9000119ED7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		952DFABA18469B9600119ED7 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		952DFABC18469BA000119ED7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		952DFABE18469BAC00119ED7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		952DFAC018469BB200119ED7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		952DFAC218469BB700119ED7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		952DFAC418469BC000119ED7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		952DFAC618469BC500119ED7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		952DFAC818469BCC00119ED7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		952DFACA18469BD200119ED7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		952DFAE01846C21700119ED7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		952DFAE21846C22700119ED7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		952DFAE41846C23400119ED7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		952DFAE61846C24400119ED7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		952DFAE81846C3AB00119ED7 /* AdManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdManager.framework; path = FreewheelSampleApp/AdManager.framework; sourceTree = "<group>"; };
+		9710FE6619CA306000F82C4E /* OOAdPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdPlugin.h; sourceTree = "<group>"; };
+		9710FE6719CA306000F82C4E /* OOAdPluginManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdPluginManagerProtocol.h; sourceTree = "<group>"; };
+		9710FE6819CA306000F82C4E /* OOAdSpotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdSpotManager.h; sourceTree = "<group>"; };
+		9710FE6919CA306000F82C4E /* OOAdSpotPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdSpotPlugin.h; sourceTree = "<group>"; };
+		9710FE6A19CA306000F82C4E /* OOClientId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOClientId.h; sourceTree = "<group>"; };
+		9710FE6B19CA306000F82C4E /* OOLifeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOLifeCycle.h; sourceTree = "<group>"; };
+		9710FE6C19CA306000F82C4E /* OOManagedAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOManagedAdSpot.h; sourceTree = "<group>"; };
+		9710FE6D19CA306000F82C4E /* OOPlayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayerProtocol.h; sourceTree = "<group>"; };
+		9710FE6E19CA306000F82C4E /* OOStateNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStateNotifier.h; sourceTree = "<group>"; };
+		97E766A11A00139F00438EB1 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		97E766A21A00139F00438EB1 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		97E766A51A001B7000438EB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PickerViewController_iPad.xib; sourceTree = "<group>"; };
+		97E766A71A001B7000438EB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PickerViewController_iPhone.xib; sourceTree = "<group>"; };
+		97E766AA1A00227400438EB1 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		952DFA49184698DE00119ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952DFAE71846C24400119ED7 /* AdSupport.framework in Frameworks */,
+				952DFAE91846C3AB00119ED7 /* AdManager.framework in Frameworks */,
+				952DFAE51846C23400119ED7 /* EventKit.framework in Frameworks */,
+				952DFAE31846C22700119ED7 /* MessageUI.framework in Frameworks */,
+				952DFAE11846C21700119ED7 /* CoreLocation.framework in Frameworks */,
+				0B625E3C197DFBE800CE2E21 /* libOoyalaSDK.a in Frameworks */,
+				952DFACB18469BD200119ED7 /* MediaPlayer.framework in Frameworks */,
+				952DFAC918469BCC00119ED7 /* CoreText.framework in Frameworks */,
+				0B625E3B197DFBE800CE2E21 /* libOoyalaFreewheelSDK.a in Frameworks */,
+				952DFAC718469BC500119ED7 /* AVFoundation.framework in Frameworks */,
+				952DFAC518469BC000119ED7 /* CoreMedia.framework in Frameworks */,
+				952DFAC318469BB800119ED7 /* Security.framework in Frameworks */,
+				952DFAC118469BB200119ED7 /* SystemConfiguration.framework in Frameworks */,
+				952DFABF18469BAC00119ED7 /* CFNetwork.framework in Frameworks */,
+				952DFABD18469BA000119ED7 /* libc++.dylib in Frameworks */,
+				952DFABB18469B9600119ED7 /* libxml2.dylib in Frameworks */,
+				952DFA52184698DE00119ED7 /* CoreGraphics.framework in Frameworks */,
+				952DFA54184698DE00119ED7 /* UIKit.framework in Frameworks */,
+				952DFA50184698DE00119ED7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B625E0A197DFBE800CE2E21 /* FreewheelHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				0B625E0B197DFBE800CE2E21 /* OOFreewheelManager.h */,
+			);
+			path = FreewheelHeaders;
+			sourceTree = "<group>";
+		};
+		0B625E0C197DFBE800CE2E21 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				9710FE6619CA306000F82C4E /* OOAdPlugin.h */,
+				9710FE6719CA306000F82C4E /* OOAdPluginManagerProtocol.h */,
+				0B625E0D197DFBE800CE2E21 /* OOAdSpot.h */,
+				9710FE6819CA306000F82C4E /* OOAdSpotManager.h */,
+				9710FE6919CA306000F82C4E /* OOAdSpotPlugin.h */,
+				0B625E0E197DFBE800CE2E21 /* OOAnalytics.h */,
+				0B625E0F197DFBE800CE2E21 /* OOAuthorizableItem.h */,
+				0B625E10197DFBE800CE2E21 /* OOCallbacks.h */,
+				0B625E11197DFBE800CE2E21 /* OOCaption.h */,
+				0B625E12197DFBE800CE2E21 /* OOChannel.h */,
+				0B625E13197DFBE800CE2E21 /* OOChannelSet.h */,
+				9710FE6A19CA306000F82C4E /* OOClientId.h */,
+				0B625E14197DFBE800CE2E21 /* OOClosedCaptions.h */,
+				0B625E15197DFBE800CE2E21 /* OOClosedCaptionsStyle.h */,
+				0B625E16197DFBE800CE2E21 /* OOContentItem.h */,
+				0B625E17197DFBE800CE2E21 /* OODebugMode.h */,
+				0B625E18197DFBE800CE2E21 /* OODefaultPlayerInfo.h */,
+				0B625E19197DFBE800CE2E21 /* OODynamicChannel.h */,
+				0B625E1A197DFBE800CE2E21 /* OOEmbeddedSecureURLGenerator.h */,
+				0B625E1B197DFBE800CE2E21 /* OOEmbeddedSignatureGenerator.h */,
+				0B625E1C197DFBE800CE2E21 /* OOEmbedTokenGenerator.h */,
+				9710FE6B19CA306000F82C4E /* OOLifeCycle.h */,
+				9710FE6C19CA306000F82C4E /* OOManagedAdSpot.h */,
+				0B625E1D197DFBE800CE2E21 /* OOModule.h */,
+				0B625E1E197DFBE800CE2E21 /* OOOoyalaAdSpot.h */,
+				0B625E1F197DFBE800CE2E21 /* OOOoyalaAPIClient.h */,
+				0B625E20197DFBE800CE2E21 /* OOOoyalaError.h */,
+				0B625E21197DFBE800CE2E21 /* OOOoyalaPlayer.h */,
+				0B625E22197DFBE800CE2E21 /* OOOoyalaPlayerViewController.h */,
+				0B625E23197DFBE800CE2E21 /* OOOrderedDictionary.h */,
+				0B625E24197DFBE800CE2E21 /* OOPaginatedParentItem.h */,
+				0B625E25197DFBE800CE2E21 /* OOPlayableItem.h */,
+				0B625E26197DFBE800CE2E21 /* OOPlayer.h */,
+				0B625E27197DFBE800CE2E21 /* OOPlayerDomain.h */,
+				0B625E28197DFBE800CE2E21 /* OOPlayerInfo.h */,
+				9710FE6D19CA306000F82C4E /* OOPlayerProtocol.h */,
+				0B625E29197DFBE800CE2E21 /* OOReturnState.h */,
+				0B625E2A197DFBE800CE2E21 /* OOSecureURLGenerator.h */,
+				0B625E2B197DFBE800CE2E21 /* OOSignatureGenerator.h */,
+				9710FE6E19CA306000F82C4E /* OOStateNotifier.h */,
+				0B625E2C197DFBE800CE2E21 /* OOStream.h */,
+				0B625E2D197DFBE800CE2E21 /* OOStreamPlayer.h */,
+				0B625E2E197DFBE800CE2E21 /* OOTBXML.h */,
+				0B625E2F197DFBE800CE2E21 /* OOUserInfo.h */,
+				0B625E30197DFBE800CE2E21 /* OOVASTAd.h */,
+				0B625E31197DFBE800CE2E21 /* OOVASTAdData.h */,
+				0B625E32197DFBE800CE2E21 /* OOVASTAdSpot.h */,
+				0B625E33197DFBE800CE2E21 /* OOVASTLinearAd.h */,
+				0B625E34197DFBE800CE2E21 /* OOVASTSequenceItem.h */,
+				0B625E35197DFBE800CE2E21 /* OOVASTStream.h */,
+				0B625E36197DFBE800CE2E21 /* OOVASTUtils.h */,
+				0B625E37197DFBE800CE2E21 /* OOVASTWrapperAd.h */,
+				0B625E38197DFBE800CE2E21 /* OOVideo.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		952DFA43184698DE00119ED7 = {
+			isa = PBXGroup;
+			children = (
+				952DFAB918469ABA00119ED7 /* lib */,
+				952DFA55184698DE00119ED7 /* FreewheelSampleApp */,
+				952DFA4E184698DE00119ED7 /* Frameworks */,
+				952DFA4D184698DE00119ED7 /* Products */,
+				0B625E0A197DFBE800CE2E21 /* FreewheelHeaders */,
+				0B625E0C197DFBE800CE2E21 /* Headers */,
+			);
+			sourceTree = "<group>";
+		};
+		952DFA4D184698DE00119ED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				952DFA4C184698DE00119ED7 /* FreewheelSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		952DFA4E184698DE00119ED7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				952DFAE81846C3AB00119ED7 /* AdManager.framework */,
+				952DFAE61846C24400119ED7 /* AdSupport.framework */,
+				952DFAE41846C23400119ED7 /* EventKit.framework */,
+				952DFAE21846C22700119ED7 /* MessageUI.framework */,
+				952DFAE01846C21700119ED7 /* CoreLocation.framework */,
+				952DFACA18469BD200119ED7 /* MediaPlayer.framework */,
+				952DFAC818469BCC00119ED7 /* CoreText.framework */,
+				952DFAC618469BC500119ED7 /* AVFoundation.framework */,
+				952DFAC418469BC000119ED7 /* CoreMedia.framework */,
+				952DFAC218469BB700119ED7 /* Security.framework */,
+				952DFAC018469BB200119ED7 /* SystemConfiguration.framework */,
+				952DFABE18469BAC00119ED7 /* CFNetwork.framework */,
+				952DFABC18469BA000119ED7 /* libc++.dylib */,
+				952DFABA18469B9600119ED7 /* libxml2.dylib */,
+				952DFA4F184698DE00119ED7 /* Foundation.framework */,
+				952DFA51184698DE00119ED7 /* CoreGraphics.framework */,
+				952DFA53184698DE00119ED7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		952DFA55184698DE00119ED7 /* FreewheelSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				97E766A41A001B7000438EB1 /* PickerViewController_iPad.xib */,
+				97E766A61A001B7000438EB1 /* PickerViewController_iPhone.xib */,
+				952DFA8118469A7C00119ED7 /* ViewController_iPad.xib */,
+				952DFA8318469A7C00119ED7 /* ViewController_iPhone.xib */,
+				952DFA7E18469A6F00119ED7 /* ViewController.h */,
+				952DFA7F18469A6F00119ED7 /* ViewController.m */,
+				952DFA5E184698DE00119ED7 /* AppDelegate.h */,
+				952DFA5F184698DE00119ED7 /* AppDelegate.m */,
+				952DFA61184698DE00119ED7 /* Images.xcassets */,
+				952DFA56184698DE00119ED7 /* Supporting Files */,
+				97E766A11A00139F00438EB1 /* PickerViewController.h */,
+				97E766A21A00139F00438EB1 /* PickerViewController.m */,
+				97E766AA1A00227400438EB1 /* View.xib */,
+			);
+			path = FreewheelSampleApp;
+			sourceTree = "<group>";
+		};
+		952DFA56184698DE00119ED7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				952DFA8718469A9000119ED7 /* Default-568h@2x.png */,
+				952DFA8818469A9000119ED7 /* Default.png */,
+				952DFA8918469A9000119ED7 /* Default@2x.png */,
+				952DFA57184698DE00119ED7 /* FreewheelSampleApp-Info.plist */,
+				952DFA58184698DE00119ED7 /* InfoPlist.strings */,
+				952DFA5B184698DE00119ED7 /* main.m */,
+				952DFA5D184698DE00119ED7 /* FreewheelSampleApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		952DFAB918469ABA00119ED7 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0B625E39197DFBE800CE2E21 /* libOoyalaFreewheelSDK.a */,
+				0B625E3A197DFBE800CE2E21 /* libOoyalaSDK.a */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		952DFA4B184698DE00119ED7 /* FreewheelSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952DFA78184698DE00119ED7 /* Build configuration list for PBXNativeTarget "FreewheelSampleApp" */;
+			buildPhases = (
+				952DFA48184698DE00119ED7 /* Sources */,
+				952DFA49184698DE00119ED7 /* Frameworks */,
+				952DFA4A184698DE00119ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreewheelSampleApp;
+			productName = FreewheelSampleApp;
+			productReference = 952DFA4C184698DE00119ED7 /* FreewheelSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		952DFA44184698DE00119ED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Ooyala;
+				TargetAttributes = {
+					952DFA4B184698DE00119ED7 = {
+						DevelopmentTeam = 556Y9XWD3N;
+					};
+				};
+			};
+			buildConfigurationList = 952DFA47184698DE00119ED7 /* Build configuration list for PBXProject "FreewheelSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 952DFA43184698DE00119ED7;
+			productRefGroup = 952DFA4D184698DE00119ED7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				952DFA4B184698DE00119ED7 /* FreewheelSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		952DFA4A184698DE00119ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97E766A81A001B7000438EB1 /* PickerViewController_iPad.xib in Resources */,
+				97E766A91A001B7000438EB1 /* PickerViewController_iPhone.xib in Resources */,
+				952DFA8518469A7C00119ED7 /* ViewController_iPad.xib in Resources */,
+				952DFA8B18469A9000119ED7 /* Default.png in Resources */,
+				952DFA5A184698DE00119ED7 /* InfoPlist.strings in Resources */,
+				952DFA62184698DE00119ED7 /* Images.xcassets in Resources */,
+				97E766AB1A00227400438EB1 /* View.xib in Resources */,
+				952DFA8A18469A9000119ED7 /* Default-568h@2x.png in Resources */,
+				952DFA8C18469A9000119ED7 /* Default@2x.png in Resources */,
+				952DFA8618469A7C00119ED7 /* ViewController_iPhone.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		952DFA48184698DE00119ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97E766A31A00139F00438EB1 /* PickerViewController.m in Sources */,
+				952DFA8018469A6F00119ED7 /* ViewController.m in Sources */,
+				952DFA60184698DE00119ED7 /* AppDelegate.m in Sources */,
+				952DFA5C184698DE00119ED7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		952DFA58184698DE00119ED7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				952DFA59184698DE00119ED7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		952DFA8118469A7C00119ED7 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				952DFA8218469A7C00119ED7 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		952DFA8318469A7C00119ED7 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				952DFA8418469A7C00119ED7 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		97E766A41A001B7000438EB1 /* PickerViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97E766A51A001B7000438EB1 /* en */,
+			);
+			name = PickerViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		97E766A61A001B7000438EB1 /* PickerViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97E766A71A001B7000438EB1 /* en */,
+			);
+			name = PickerViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		952DFA76184698DE00119ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		952DFA77184698DE00119ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		952DFA79184698DE00119ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/FreewheelSampleApp",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreewheelSampleApp/FreewheelSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "FreewheelSampleApp/FreewheelSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/FreewheelSampleApp",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		952DFA7A184698DE00119ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/FreewheelSampleApp",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreewheelSampleApp/FreewheelSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "FreewheelSampleApp/FreewheelSampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/FreewheelSampleApp",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		952DFA47184698DE00119ED7 /* Build configuration list for PBXProject "FreewheelSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952DFA76184698DE00119ED7 /* Debug */,
+				952DFA77184698DE00119ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952DFA78184698DE00119ED7 /* Build configuration list for PBXNativeTarget "FreewheelSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952DFA79184698DE00119ED7 /* Debug */,
+				952DFA7A184698DE00119ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 952DFA44184698DE00119ED7 /* Project object */;
+}
