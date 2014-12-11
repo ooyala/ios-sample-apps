@@ -13,12 +13,11 @@
 
 @interface DetailViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property NSString *embedCode;
 @end
 
 @implementation DetailViewController
-
-NSString * const EMBED_CODE = @"M1eWpiNTpSMLcbWjYdAymIF-o7WCWQIo";
-NSString * const PCODE = @"Z5Mm06XeZlcDlfU_1R9v_L2KwYG6";
+NSString * PCODE = @"R2d3I6s06RyB712DN0_2GsQS-R-Y";
 NSString * const PLAYERDOMAIN = @"http://www.ooyala.com";
 
 #pragma mark - Managing the detail item
@@ -35,41 +34,42 @@ NSString * const PLAYERDOMAIN = @"http://www.ooyala.com";
 - (void)configureView {
   // Update the user interface for the detail item.
   if (self.detailItem) {
-//      self.detailDescriptionLabel.text = [self.detailItem description];
-    self.navigationItem.title = [self.detailItem description];
+      self.embedCode = self.detailItem;
   }
 }
-
-
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self configureView];
   [[NSBundle bundleWithPath:@"shared"] loadNibNamed:@"PlayerSimpleLayout" owner:self options:nil];
+
   // Create Ooyala ViewController
-  _ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN]];
 
   // Attach it to current view
   [self addChildViewController:_ooyalaPlayerViewController];
-  [_ooyalaPlayerViewController.view setFrame:self.view.bounds];
+  [self.ooyalaPlayerViewController.view setFrame:self.view.bounds];
   [self addChildViewController:_ooyalaPlayerViewController];
   [self.view addSubview:_ooyalaPlayerViewController.view];
 
   // Load the video
-  [_ooyalaPlayerViewController.player setEmbedCode:EMBED_CODE];
+  [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
 
-
-//  [[NSNotificationCenter defaultCenter] addObserver: self
-//                                           selector:@selector(notificationHandler:)
-//                                               name:nil
-//                                             object:_ooyalaPlayerViewController.player];
-
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:_ooyalaPlayerViewController.player];
+  [_ooyalaPlayerViewController.player play];
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+- (void) notificationHandler:(NSNotification*) notification {
+  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    return;
+  }
+  NSLog(@"Notification Received: %@ - state: %@ -- playhead: %f",
+        [notification name],
+        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+        [self.ooyalaPlayerViewController.player playheadTime]);
 }
 
 @end

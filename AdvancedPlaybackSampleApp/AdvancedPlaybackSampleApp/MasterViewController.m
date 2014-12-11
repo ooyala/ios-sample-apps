@@ -27,11 +27,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-//  self.navigationItem.leftBarButtonItem = [self.editButtonItem];
   [self insertNewObject: @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"];
-//  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-
-//  self.navigationItem.rightBarButtonItem = addButton;
   self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -57,8 +53,6 @@
       NSDate *object = self.objects[indexPath.row];
       DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
       [controller setDetailItem:object];
-      controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-      controller.navigationItem.leftItemsSupplementBackButton = YES;
   }
 }
 

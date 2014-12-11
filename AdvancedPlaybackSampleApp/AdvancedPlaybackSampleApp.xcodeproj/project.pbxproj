@@ -15,13 +15,12 @@
 		0B140F671A2E4709001324EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F661A2E4709001324EE /* Images.xcassets */; };
 		0B140F6A1A2E4709001324EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F681A2E4709001324EE /* LaunchScreen.xib */; };
 		0B140F761A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F751A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m */; };
-		0B140F831A2E4E51001324EE /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F821A2E4E51001324EE /* libOoyalaSDK.a */; };
-		0B140F851A2E4E7A001324EE /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F841A2E4E7A001324EE /* Headers */; };
 		0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8A1A2E53A6001324EE /* AVFoundation.framework */; };
 		0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B140F941A2E5BF8001324EE /* shared.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F931A2E5BF8001324EE /* shared.bundle */; };
+		0B140FB11A2E6A8E001324EE /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,13 +49,13 @@
 		0B140F6F1A2E4709001324EE /* AdvancedPlaybackSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedPlaybackSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B140F741A2E4709001324EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B140F751A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedPlaybackSampleAppTests.m; sourceTree = "<group>"; };
-		0B140F821A2E4E51001324EE /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "../vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
-		0B140F841A2E4E7A001324EE /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = "../vendor/Ooyala/OoyalaSDK-iOS/Headers"; sourceTree = "<group>"; };
 		0B140F881A2E5374001324EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B140F931A2E5BF8001324EE /* shared.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = shared.bundle; path = ../shared.bundle; sourceTree = "<group>"; };
+		0B140F9E1A2E5FBD001324EE /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vendor; path = ../vendor; sourceTree = "<group>"; };
+		0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "../vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +66,8 @@
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
 				0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */,
 				0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */,
+				0B140FB11A2E6A8E001324EE /* libOoyalaSDK.a in Frameworks */,
 				0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */,
-				0B140F831A2E4E51001324EE /* libOoyalaSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,11 +84,9 @@
 		0B140F4A1A2E4709001324EE = {
 			isa = PBXGroup;
 			children = (
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
-				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
-				0B140F7F1A2E4E2E001324EE /* Vendor/Ooyala */,
+				0B140FAB1A2E6550001324EE /* Frameworks */,
+				0B140FA81A2E64E0001324EE /* VendorLibraries */,
+				0B140F9E1A2E5FBD001324EE /* vendor */,
 				0B140F551A2E4709001324EE /* AdvancedPlaybackSampleApp */,
 				0B140F721A2E4709001324EE /* AdvancedPlaybackSampleAppTests */,
 				0B140F541A2E4709001324EE /* Products */,
@@ -109,6 +106,7 @@
 		0B140F551A2E4709001324EE /* AdvancedPlaybackSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				0B140FB21A2E6DF7001324EE /* Players */,
 				0B140F5A1A2E4709001324EE /* AppDelegate.h */,
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
 				0B140F5D1A2E4709001324EE /* MasterViewController.h */,
@@ -149,16 +147,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0B140F7F1A2E4E2E001324EE /* Vendor/Ooyala */ = {
+		0B140FA81A2E64E0001324EE /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				0B140F841A2E4E7A001324EE /* Headers */,
-				0B140F821A2E4E51001324EE /* libOoyalaSDK.a */,
+				0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */,
 			);
-			name = Vendor/Ooyala;
+			name = VendorLibraries;
+			sourceTree = "<group>";
+		};
+		0B140FAB1A2E6550001324EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
+				0B140F8C1A2E53B0001324EE /* Security.framework */,
+				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B140FB21A2E6DF7001324EE /* Players */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Players;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B140FA11A2E6438001324EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0B140F521A2E4709001324EE /* AdvancedPlaybackSampleApp */ = {
@@ -168,6 +193,7 @@
 				0B140F4F1A2E4709001324EE /* Sources */,
 				0B140F501A2E4709001324EE /* Frameworks */,
 				0B140F511A2E4709001324EE /* Resources */,
+				0B140FA11A2E6438001324EE /* Headers */,
 			);
 			buildRules = (
 			);
@@ -241,7 +267,6 @@
 				0B140F651A2E4709001324EE /* Main.storyboard in Resources */,
 				0B140F6A1A2E4709001324EE /* LaunchScreen.xib in Resources */,
 				0B140F671A2E4709001324EE /* Images.xcassets in Resources */,
-				0B140F851A2E4E7A001324EE /* Headers in Resources */,
 				0B140F941A2E5BF8001324EE /* shared.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,10 +417,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/michael.len/repos/ios_sample_apps/vendor/Ooyala/OoyalaSDK-iOS",
+					"../vendor/Ooyala/OoyalaSDK-iOS",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../vendor/Ooyala/OoyalaSDK-iOS/Headers";
+				USER_HEADER_SEARCH_PATHS = "../vendor/**";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -408,10 +435,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/michael.len/repos/ios_sample_apps/vendor/Ooyala/OoyalaSDK-iOS",
+					"../vendor/Ooyala/OoyalaSDK-iOS",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../vendor/Ooyala/OoyalaSDK-iOS/Headers";
+				USER_HEADER_SEARCH_PATHS = "../vendor/**";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
