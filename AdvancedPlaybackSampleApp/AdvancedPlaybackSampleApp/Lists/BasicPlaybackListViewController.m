@@ -10,28 +10,27 @@
 #import "PlayerSelectionOption.h"
 
 @interface BasicPlaybackListViewController ()
-@property NSMutableArray *objects;
+@property NSMutableArray *options;
 @end
 
 @implementation BasicPlaybackListViewController
-
-- (void)viewDidLoad {
-  [super viewDidLoad];
-
-  [self addAllPlayerSelectionOptions];
-  
-  self.navigationController.navigationBar.translucent = NO;
-}
 
 - (void)addAllPlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic HLS Playback" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [SimplePlayerViewController class]]];
 }
 
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.navigationController.navigationBar.translucent = NO;
+
+  [self addAllPlayerSelectionOptions];
+}
+
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
-  if (!self.objects) {
-      self.objects = [[NSMutableArray alloc] init];
+  if (!self.options) {
+      self.options = [[NSMutableArray alloc] init];
   }
-  [self.objects insertObject:selectionObject atIndex:0];
+  [self.options insertObject:selectionObject atIndex:0];
   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
   [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -47,13 +46,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return self.objects.count;
+  return self.options.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-  PlayerSelectionOption *selection = self.objects[indexPath.row];
+  PlayerSelectionOption *selection = self.options[indexPath.row];
   cell.textLabel.text = [selection title];
   return cell;
 }
@@ -65,7 +64,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   // When a row is selected, load its desired PlayerViewController
-  PlayerSelectionOption *selection = self.objects[indexPath.row];
+  PlayerSelectionOption *selection = self.options[indexPath.row];
   SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
   [self.navigationController pushViewController:controller animated:YES];
 }

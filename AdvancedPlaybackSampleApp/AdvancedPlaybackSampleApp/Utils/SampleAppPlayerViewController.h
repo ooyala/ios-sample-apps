@@ -1,7 +1,7 @@
 //
 //  PlayerSingleButtonOutlet.h
-//  
 //
+//  An abstract ViewController which is used as the outlet for all Player nibs
 //
 
 #import <UIKit/UIKit.h>

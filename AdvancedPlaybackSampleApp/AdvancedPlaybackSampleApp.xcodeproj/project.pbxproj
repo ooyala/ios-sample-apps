@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B140F591A2E4709001324EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F581A2E4709001324EE /* main.m */; };
 		0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F5B1A2E4709001324EE /* AppDelegate.m */; };
-		0B140F671A2E4709001324EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F661A2E4709001324EE /* Images.xcassets */; };
-		0B140F761A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F751A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m */; };
 		0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8A1A2E53A6001324EE /* AVFoundation.framework */; };
 		0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
@@ -22,23 +20,9 @@
 		0B19FEDF1A3AB4B4003E57DF /* SimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */; };
 		0B19FEE31A3AB4BC003E57DF /* BasicPlaybackListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
 		0B19FEE41A3AB4BC003E57DF /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* BasicPlaybackListViewController.m */; };
-		0B19FEEE1A3AB4E6003E57DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEE61A3AB4E6003E57DF /* LaunchScreen.xib */; };
-		0B19FEF01A3AB4E6003E57DF /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEEA1A3AB4E6003E57DF /* PlayerSimple.xib */; };
-		0B19FEF11A3AB4E6003E57DF /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEEC1A3AB4E6003E57DF /* PlayerSingleButton.xib */; };
-		0B19FEF41A3AB57E003E57DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0B19FEF81A3AB608003E57DF /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
 		0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0B140F701A2E4709001324EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B140F4B1A2E4709001324EE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B140F521A2E4709001324EE;
-			remoteInfo = AdvancedPlaybackSampleApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B140F531A2E4709001324EE /* AdvancedPlaybackSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedPlaybackSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,18 +30,14 @@
 		0B140F581A2E4709001324EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B140F5A1A2E4709001324EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B140F5B1A2E4709001324EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B140F661A2E4709001324EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0B140F6F1A2E4709001324EE /* AdvancedPlaybackSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedPlaybackSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B140F741A2E4709001324EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B140F751A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedPlaybackSampleAppTests.m; sourceTree = "<group>"; };
 		0B140F881A2E5374001324EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B140F9E1A2E5FBD001324EE /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vendor; path = ../vendor; sourceTree = "<group>"; };
 		0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "../vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
-		0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
-		0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
+		0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleAppPlayerViewController.h; path = Utils/SampleAppPlayerViewController.h; sourceTree = "<group>"; };
+		0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleAppPlayerViewController.m; path = Utils/SampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePlayerViewController.h; sourceTree = "<group>"; };
 		0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicPlaybackListViewController.h; sourceTree = "<group>"; };
@@ -83,13 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B140F6C1A2E4709001324EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,7 +73,6 @@
 				0B140FA81A2E64E0001324EE /* VendorLibraries */,
 				0B140F9E1A2E5FBD001324EE /* vendor */,
 				0B140F551A2E4709001324EE /* AdvancedPlaybackSampleApp */,
-				0B140F721A2E4709001324EE /* AdvancedPlaybackSampleAppTests */,
 				0B140F541A2E4709001324EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				0B140F531A2E4709001324EE /* AdvancedPlaybackSampleApp.app */,
-				0B140F6F1A2E4709001324EE /* AdvancedPlaybackSampleAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,7 +94,6 @@
 				0B19FEDB1A3AB4B4003E57DF /* Players */,
 				0B140F5A1A2E4709001324EE /* AppDelegate.h */,
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
-				0B140F661A2E4709001324EE /* Images.xcassets */,
 				0B140F561A2E4709001324EE /* Supporting Files */,
 			);
 			path = AdvancedPlaybackSampleApp;
@@ -134,23 +104,6 @@
 			children = (
 				0B140F571A2E4709001324EE /* Info.plist */,
 				0B140F581A2E4709001324EE /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0B140F721A2E4709001324EE /* AdvancedPlaybackSampleAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				0B140F751A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m */,
-				0B140F731A2E4709001324EE /* Supporting Files */,
-			);
-			path = AdvancedPlaybackSampleAppTests;
-			sourceTree = "<group>";
-		};
-		0B140F731A2E4709001324EE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0B140F741A2E4709001324EE /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,24 +202,6 @@
 			productReference = 0B140F531A2E4709001324EE /* AdvancedPlaybackSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0B140F6E1A2E4709001324EE /* AdvancedPlaybackSampleAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B140F7C1A2E4709001324EE /* Build configuration list for PBXNativeTarget "AdvancedPlaybackSampleAppTests" */;
-			buildPhases = (
-				0B140F6B1A2E4709001324EE /* Sources */,
-				0B140F6C1A2E4709001324EE /* Frameworks */,
-				0B140F6D1A2E4709001324EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0B140F711A2E4709001324EE /* PBXTargetDependency */,
-			);
-			name = AdvancedPlaybackSampleAppTests;
-			productName = AdvancedPlaybackSampleAppTests;
-			productReference = 0B140F6F1A2E4709001324EE /* AdvancedPlaybackSampleAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,10 +213,6 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					0B140F6E1A2E4709001324EE = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 0B140F521A2E4709001324EE;
 					};
 				};
 			};
@@ -299,25 +230,12 @@
 			projectRoot = "";
 			targets = (
 				0B140F521A2E4709001324EE /* AdvancedPlaybackSampleApp */,
-				0B140F6E1A2E4709001324EE /* AdvancedPlaybackSampleAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0B140F511A2E4709001324EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B19FEF11A3AB4E6003E57DF /* PlayerSingleButton.xib in Resources */,
-				0B19FEF41A3AB57E003E57DF /* Main.storyboard in Resources */,
-				0B19FEF01A3AB4E6003E57DF /* PlayerSimple.xib in Resources */,
-				0B140F671A2E4709001324EE /* Images.xcassets in Resources */,
-				0B19FEEE1A3AB4E6003E57DF /* LaunchScreen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B140F6D1A2E4709001324EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,23 +258,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B140F6B1A2E4709001324EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B140F761A2E4709001324EE /* AdvancedPlaybackSampleAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0B140F711A2E4709001324EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B140F521A2E4709001324EE /* AdvancedPlaybackSampleApp */;
-			targetProxy = 0B140F701A2E4709001324EE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0B19FEE61A3AB4E6003E57DF /* LaunchScreen.xib */ = {
@@ -508,40 +410,6 @@
 			};
 			name = Release;
 		};
-		0B140F7D1A2E4709001324EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AdvancedPlaybackSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdvancedPlaybackSampleApp.app/AdvancedPlaybackSampleApp";
-			};
-			name = Debug;
-		};
-		0B140F7E1A2E4709001324EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AdvancedPlaybackSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdvancedPlaybackSampleApp.app/AdvancedPlaybackSampleApp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,15 +427,6 @@
 			buildConfigurations = (
 				0B140F7A1A2E4709001324EE /* Debug */,
 				0B140F7B1A2E4709001324EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0B140F7C1A2E4709001324EE /* Build configuration list for PBXNativeTarget "AdvancedPlaybackSampleAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B140F7D1A2E4709001324EE /* Debug */,
-				0B140F7E1A2E4709001324EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
