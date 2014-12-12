@@ -10,7 +10,7 @@
 		0B140F591A2E4709001324EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F581A2E4709001324EE /* main.m */; };
 		0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F5B1A2E4709001324EE /* AppDelegate.m */; };
 		0B140F5F1A2E4709001324EE /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F5E1A2E4709001324EE /* MasterViewController.m */; };
-		0B140F621A2E4709001324EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F611A2E4709001324EE /* DetailViewController.m */; };
+		0B140F621A2E4709001324EE /* SimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F611A2E4709001324EE /* SimplePlayerViewController.m */; };
 		0B140F651A2E4709001324EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F631A2E4709001324EE /* Main.storyboard */; };
 		0B140F671A2E4709001324EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F661A2E4709001324EE /* Images.xcassets */; };
 		0B140F6A1A2E4709001324EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F681A2E4709001324EE /* LaunchScreen.xib */; };
@@ -21,6 +21,7 @@
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B140F941A2E5BF8001324EE /* shared.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B140F931A2E5BF8001324EE /* shared.bundle */; };
 		0B140FB11A2E6A8E001324EE /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */; };
+		0B4CD9F21A3A726300F9CFBE /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4CD9F11A3A726300F9CFBE /* PlayerSimple.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,8 @@
 		0B140F5B1A2E4709001324EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B140F5D1A2E4709001324EE /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		0B140F5E1A2E4709001324EE /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		0B140F601A2E4709001324EE /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		0B140F611A2E4709001324EE /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0B140F601A2E4709001324EE /* SimplePlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePlayerViewController.h; sourceTree = "<group>"; };
+		0B140F611A2E4709001324EE /* SimplePlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerViewController.m; sourceTree = "<group>"; };
 		0B140F641A2E4709001324EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B140F661A2E4709001324EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B140F691A2E4709001324EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		0B140F931A2E5BF8001324EE /* shared.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = shared.bundle; path = ../shared.bundle; sourceTree = "<group>"; };
 		0B140F9E1A2E5FBD001324EE /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vendor; path = ../vendor; sourceTree = "<group>"; };
 		0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "../vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
+		0B4CD9F11A3A726300F9CFBE /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +113,8 @@
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
 				0B140F5D1A2E4709001324EE /* MasterViewController.h */,
 				0B140F5E1A2E4709001324EE /* MasterViewController.m */,
-				0B140F601A2E4709001324EE /* DetailViewController.h */,
-				0B140F611A2E4709001324EE /* DetailViewController.m */,
+				0B140F601A2E4709001324EE /* SimplePlayerViewController.h */,
+				0B140F611A2E4709001324EE /* SimplePlayerViewController.m */,
 				0B140F631A2E4709001324EE /* Main.storyboard */,
 				0B140F661A2E4709001324EE /* Images.xcassets */,
 				0B140F681A2E4709001324EE /* LaunchScreen.xib */,
@@ -169,6 +171,7 @@
 		0B140FB21A2E6DF7001324EE /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				0B4CD9F11A3A726300F9CFBE /* PlayerSimple.xib */,
 			);
 			name = Players;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B140F651A2E4709001324EE /* Main.storyboard in Resources */,
+				0B4CD9F21A3A726300F9CFBE /* PlayerSimple.xib in Resources */,
 				0B140F6A1A2E4709001324EE /* LaunchScreen.xib in Resources */,
 				0B140F671A2E4709001324EE /* Images.xcassets in Resources */,
 				0B140F941A2E5BF8001324EE /* shared.bundle in Resources */,
@@ -288,7 +292,7 @@
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				0B140F5F1A2E4709001324EE /* MasterViewController.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
-				0B140F621A2E4709001324EE /* DetailViewController.m in Sources */,
+				0B140F621A2E4709001324EE /* SimplePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +501,7 @@
 				0B140F7B1A2E4709001324EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B140F7C1A2E4709001324EE /* Build configuration list for PBXNativeTarget "AdvancedPlaybackSampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +510,7 @@
 				0B140F7E1A2E4709001324EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

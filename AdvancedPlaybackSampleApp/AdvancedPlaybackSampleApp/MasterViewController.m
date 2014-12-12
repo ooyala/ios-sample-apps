@@ -6,7 +6,7 @@
 //
 
 #import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "SimplePlayerViewController.h"
 
 @interface MasterViewController ()
 
@@ -27,7 +27,8 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
   [self insertNewObject: @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"];
-  self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+  self.detailViewController = (SimplePlayerViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+  self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,17 +43,6 @@
   [self.objects insertObject:embedCode atIndex:0];
   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
   [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
-#pragma mark - Segues
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([[segue identifier] isEqualToString:@"showDetail"]) {
-      NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-      NSDate *object = self.objects[indexPath.row];
-      DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-      [controller setDetailItem:object];
-  }
 }
 
 #pragma mark - Table View
@@ -75,7 +65,7 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
   // Return NO if you do not want the specified item to be editable.
-  return YES;
+  return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,6 +75,17 @@
   } else if (editingStyle == UITableViewCellEditingStyleInsert) {
       // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
   }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  NSDate *object = self.objects[indexPath.row];
+
+  //  [ loadNibNamed:@"PlayerSimpleLayout" owner:self options:nil];
+  SimplePlayerViewController *controller = [[SimplePlayerViewController alloc] init];
+  [controller setDetailItem:object];
+
+  [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

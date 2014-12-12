@@ -5,21 +5,26 @@
 //  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "SimplePlayerViewController.h"
 #import "OOOoyalaPlayerViewController.h"
 #import "OOOoyalaPlayer.h"
 #import "OOPlayerDomain.h"
 
-@interface DetailViewController ()
+@interface SimplePlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property NSString *embedCode;
 @end
 
-@implementation DetailViewController
+@implementation SimplePlayerViewController
 NSString * PCODE = @"R2d3I6s06RyB712DN0_2GsQS-R-Y";
 NSString * const PLAYERDOMAIN = @"http://www.ooyala.com";
 
 #pragma mark - Managing the detail item
+
+- (void)loadView {
+  [super loadView];
+  [[NSBundle mainBundle] loadNibNamed:@"PlayerSimple" owner:self options:nil];
+}
 
 - (void)setDetailItem:(id)newDetailItem {
   if (_detailItem != newDetailItem) {
@@ -40,8 +45,6 @@ NSString * const PLAYERDOMAIN = @"http://www.ooyala.com";
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [[NSBundle bundleWithPath:@"shared"] loadNibNamed:@"PlayerSimpleLayout" owner:self options:nil];
-
   // Create Ooyala ViewController
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN]];
 

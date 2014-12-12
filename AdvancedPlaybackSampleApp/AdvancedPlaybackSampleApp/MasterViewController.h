@@ -7,11 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
+@class SimplePlayerViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <UITableViewDelegate>
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) SimplePlayerViewController *detailViewController;
 
 
 @end
