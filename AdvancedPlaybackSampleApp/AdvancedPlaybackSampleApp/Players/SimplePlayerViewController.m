@@ -23,23 +23,16 @@ NSString * const PLAYERDOMAIN = @"http://www.ooyala.com";
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:@"PlayerSimple" owner:self options:nil];
+  [[NSBundle mainBundle] loadNibNamed:@"PlayerSingleButton" owner:self options:nil];
 }
 
-- (void)setDetailItem:(id)newDetailItem {
-  if (_detailItem != newDetailItem) {
-      _detailItem = newDetailItem;
-          
-      // Update the view.
-      [self configureView];
-  }
-}
-
-- (void)configureView {
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  self = [super initWithPlayerSelectionOption:playerSelectionOption];
   // Update the user interface for the detail item.
-  if (self.detailItem) {
-      self.embedCode = self.detailItem;
+  if (self.playerSelectionOption) {
+      self.embedCode = self.playerSelectionOption.embedCode;
   }
+  return self;
 }
 
 - (void)viewDidLoad
@@ -50,9 +43,9 @@ NSString * const PLAYERDOMAIN = @"http://www.ooyala.com";
 
   // Attach it to current view
   [self addChildViewController:_ooyalaPlayerViewController];
-  [self.ooyalaPlayerViewController.view setFrame:self.view.bounds];
+  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
   [self addChildViewController:_ooyalaPlayerViewController];
-  [self.view addSubview:_ooyalaPlayerViewController.view];
+  [self.playerView addSubview:_ooyalaPlayerViewController.view];
 
   // Load the video
   [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
