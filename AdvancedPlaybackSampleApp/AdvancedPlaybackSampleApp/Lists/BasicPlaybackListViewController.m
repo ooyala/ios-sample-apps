@@ -15,6 +15,8 @@
 
 @implementation BasicPlaybackListViewController
 
+NSString * const TITLE = @"Advanced Playback";
+
 - (void)addAllPlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic HLS Playback" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [SimplePlayerViewController class]]];
 }
@@ -22,6 +24,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
+  self.title = TITLE;
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
   [self addAllPlayerSelectionOptions];
 }
@@ -50,7 +54,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
 
   PlayerSelectionOption *selection = self.options[indexPath.row];
   cell.textLabel.text = [selection title];

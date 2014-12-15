@@ -22,7 +22,40 @@
 		0B19FEE41A3AB4BC003E57DF /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* BasicPlaybackListViewController.m */; };
 		0B19FEF81A3AB608003E57DF /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
 		0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */; };
+		0B19FF011A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */; };
+		0B19FF031A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */; };
+		0B19FF161A3B755A003E57DF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */; };
+		0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */; };
+		0B19FF1A1A3B755A003E57DF /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* BasicPlaybackListViewController.m */; };
+		0B19FF1C1A3B755A003E57DF /* SimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */; };
+		0B19FF1D1A3B7585003E57DF /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */; };
+		0B19FF291A3B780B003E57DF /* PlayerSelectionOption.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
+		0B19FF2A1A3B780B003E57DF /* SampleAppPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
+		0B19FF2B1A3B780B003E57DF /* BasicPlaybackListViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
+		0B19FF2C1A3B780B003E57DF /* SimplePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */; };
+		0B19FF601A3B80FB003E57DF /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
+		0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
+		0B19FF621A3B80FB003E57DF /* BasicPlaybackListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
+		0B19FF631A3B80FB003E57DF /* SimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */; };
+		0B19FF741A3BABFD003E57DF /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FF721A3BABFD003E57DF /* TableCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0B19FEFC1A3B7532003E57DF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0B19FF291A3B780B003E57DF /* PlayerSelectionOption.h in CopyFiles */,
+				0B19FF2A1A3B780B003E57DF /* SampleAppPlayerViewController.h in CopyFiles */,
+				0B19FF2B1A3B780B003E57DF /* BasicPlaybackListViewController.h in CopyFiles */,
+				0B19FF2C1A3B780B003E57DF /* SimplePlayerViewController.h in CopyFiles */,
+				0B19FF011A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B140F531A2E4709001324EE /* AdvancedPlaybackSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedPlaybackSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,8 +69,8 @@
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B140F9E1A2E5FBD001324EE /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vendor; path = ../vendor; sourceTree = "<group>"; };
 		0B140FB01A2E6A8E001324EE /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "../vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
-		0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleAppPlayerViewController.h; path = Utils/SampleAppPlayerViewController.h; sourceTree = "<group>"; };
-		0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleAppPlayerViewController.m; path = Utils/SampleAppPlayerViewController.m; sourceTree = "<group>"; };
+		0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
+		0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePlayerViewController.h; sourceTree = "<group>"; };
 		0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicPlaybackListViewController.h; sourceTree = "<group>"; };
@@ -46,8 +79,12 @@
 		0B19FEEB1A3AB4E6003E57DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0B19FEED1A3AB4E6003E57DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0B19FEF31A3AB57E003E57DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerSelectionOption.h; path = Utils/PlayerSelectionOption.h; sourceTree = "<group>"; };
-		0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerSelectionOption.m; path = Utils/PlayerSelectionOption.m; sourceTree = "<group>"; };
+		0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
+		0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		0B19FEFE1A3B7532003E57DF /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdvancedPlaybackSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedPlaybackSampleAppSource.h; sourceTree = "<group>"; };
+		0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedPlaybackSampleAppSource.m; sourceTree = "<group>"; };
+		0B19FF731A3BABFD003E57DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = TableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +100,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B19FEFB1A3B7532003E57DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B19FF1D1A3B7585003E57DF /* libOoyalaSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0B140F4A1A2E4709001324EE = {
 			isa = PBXGroup;
 			children = (
+				0B19FEFF1A3B7532003E57DF /* AdvancedPlaybackSampleAppSource */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140FA81A2E64E0001324EE /* VendorLibraries */,
 				0B140F9E1A2E5FBD001324EE /* vendor */,
@@ -81,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				0B140F531A2E4709001324EE /* AdvancedPlaybackSampleApp.app */,
+				0B19FEFE1A3B7532003E57DF /* libAdvancedPlaybackSampleAppSource.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +199,7 @@
 				0B19FEE61A3AB4E6003E57DF /* LaunchScreen.xib */,
 				0B19FEEA1A3AB4E6003E57DF /* PlayerSimple.xib */,
 				0B19FEEC1A3AB4E6003E57DF /* PlayerSingleButton.xib */,
+				0B19FF721A3BABFD003E57DF /* TableCell.xib */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -164,7 +212,16 @@
 				0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */,
 				0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */,
 			);
-			name = Utils;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0B19FEFF1A3B7532003E57DF /* AdvancedPlaybackSampleAppSource */ = {
+			isa = PBXGroup;
+			children = (
+				0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */,
+				0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */,
+			);
+			path = AdvancedPlaybackSampleAppSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +235,17 @@
 				0B19FEE31A3AB4BC003E57DF /* BasicPlaybackListViewController.h in Headers */,
 				0B19FEDE1A3AB4B4003E57DF /* SimplePlayerViewController.h in Headers */,
 				0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19FF5F1A3B80E4003E57DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B19FF601A3B80FB003E57DF /* PlayerSelectionOption.h in Headers */,
+				0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */,
+				0B19FF621A3B80FB003E57DF /* BasicPlaybackListViewController.h in Headers */,
+				0B19FF631A3B80FB003E57DF /* SimplePlayerViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +270,24 @@
 			productReference = 0B140F531A2E4709001324EE /* AdvancedPlaybackSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0B19FEFD1A3B7532003E57DF /* AdvancedPlaybackSampleAppSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B19FF0F1A3B7533003E57DF /* Build configuration list for PBXNativeTarget "AdvancedPlaybackSampleAppSource" */;
+			buildPhases = (
+				0B19FEFA1A3B7532003E57DF /* Sources */,
+				0B19FEFB1A3B7532003E57DF /* Frameworks */,
+				0B19FEFC1A3B7532003E57DF /* CopyFiles */,
+				0B19FF5F1A3B80E4003E57DF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdvancedPlaybackSampleAppSource;
+			productName = AdvancedPlaybackSampleAppSource;
+			productReference = 0B19FEFE1A3B7532003E57DF /* libAdvancedPlaybackSampleAppSource.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +298,9 @@
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					0B19FEFD1A3B7532003E57DF = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -230,6 +319,7 @@
 			projectRoot = "";
 			targets = (
 				0B140F521A2E4709001324EE /* AdvancedPlaybackSampleApp */,
+				0B19FEFD1A3B7532003E57DF /* AdvancedPlaybackSampleAppSource */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B19FF741A3BABFD003E57DF /* TableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +346,18 @@
 				0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */,
 				0B19FED41A3A901F003E57DF /* SampleAppPlayerViewController.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* BasicPlaybackListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B19FEFA1A3B7532003E57DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B19FF161A3B755A003E57DF /* PlayerSelectionOption.m in Sources */,
+				0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */,
+				0B19FF1A1A3B755A003E57DF /* BasicPlaybackListViewController.m in Sources */,
+				0B19FF1C1A3B755A003E57DF /* SimplePlayerViewController.m in Sources */,
+				0B19FF031A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +394,14 @@
 				0B19FEF31A3AB57E003E57DF /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0B19FF721A3BABFD003E57DF /* TableCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B19FF731A3BABFD003E57DF /* Base */,
+			);
+			name = TableCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -410,6 +521,38 @@
 			};
 			name = Release;
 		};
+		0B19FF101A3B7533003E57DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../vendor/Ooyala/OoyalaSDK-iOS",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../vendor/** ../shared/**";
+			};
+			name = Debug;
+		};
+		0B19FF111A3B7533003E57DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../vendor/Ooyala/OoyalaSDK-iOS",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../vendor/** ../shared/**";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -427,6 +570,15 @@
 			buildConfigurations = (
 				0B140F7A1A2E4709001324EE /* Debug */,
 				0B140F7B1A2E4709001324EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B19FF0F1A3B7533003E57DF /* Build configuration list for PBXNativeTarget "AdvancedPlaybackSampleAppSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B19FF101A3B7533003E57DF /* Debug */,
+				0B19FF111A3B7533003E57DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

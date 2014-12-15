@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AdvancedPlaybackSampleAppSource.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>0B140F6E1A2E4709001324EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0B19FEFD1A3B7532003E57DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0B19FF071A3B7533003E57DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

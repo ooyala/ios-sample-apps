@@ -32,7 +32,8 @@ NSString * const NIB_NAME = @"PlayerSingleButton";
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption:playerSelectionOption];
   if (self.playerSelectionOption) {
-      self.embedCode = self.playerSelectionOption.embedCode;
+    self.embedCode = self.playerSelectionOption.embedCode;
+    self.title = self.playerSelectionOption.title;
   }
   return self;
 }
