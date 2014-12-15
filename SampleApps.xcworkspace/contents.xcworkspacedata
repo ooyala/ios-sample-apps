@@ -4,4 +4,7 @@
    <FileRef
       location = "group:AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:CompleteSampleApp/CompleteSampleApp.xcodeproj">
+   </FileRef>
 </Workspace>
