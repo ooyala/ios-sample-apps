@@ -17,6 +17,11 @@
 		0B19FF6A1A3B8C75003E57DF /* CompleteSampleAppListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */; };
 		0B19FF6B1A3B8C75003E57DF /* CompleteSampleAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */; };
 		0BA5476C1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		0BF236261A3F91B600C4CE9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF236211A3F91B600C4CE9A /* LaunchScreen.xib */; };
+		0BF236271A3F91B600C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF236221A3F91B600C4CE9A /* Main.storyboard */; };
+		0BF236281A3F91B600C4CE9A /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF236231A3F91B600C4CE9A /* PlayerSimple.xib */; };
+		0BF236291A3F91B600C4CE9A /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF236241A3F91B600C4CE9A /* PlayerSingleButton.xib */; };
+		0BF2362A1A3F91B600C4CE9A /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF236251A3F91B600C4CE9A /* TableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteSampleAppListViewController.h; sourceTree = "<group>"; };
 		0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteSampleAppListViewController.m; sourceTree = "<group>"; };
 		0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
+		0BF236211A3F91B600C4CE9A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0BF236221A3F91B600C4CE9A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0BF236231A3F91B600C4CE9A /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerSimple.xib; path = ../AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp/Base.lproj/PlayerSimple.xib; sourceTree = "<group>"; };
+		0BF236241A3F91B600C4CE9A /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerSingleButton.xib; path = ../AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp/Base.lproj/PlayerSingleButton.xib; sourceTree = "<group>"; };
+		0BF236251A3F91B600C4CE9A /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableCell.xib; path = ../AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp/Base.lproj/TableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 		0B140F4A1A2E4709001324EE = {
 			isa = PBXGroup;
 			children = (
+				0BF236201A3F91AD00C4CE9A /* Nibs */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140FA81A2E64E0001324EE /* VendorLibraries */,
 				0B140F551A2E4709001324EE /* CompleteSampleApp */,
@@ -127,6 +138,18 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
+		0BF236201A3F91AD00C4CE9A /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				0BF236211A3F91B600C4CE9A /* LaunchScreen.xib */,
+				0BF236221A3F91B600C4CE9A /* Main.storyboard */,
+				0BF236231A3F91B600C4CE9A /* PlayerSimple.xib */,
+				0BF236241A3F91B600C4CE9A /* PlayerSingleButton.xib */,
+				0BF236251A3F91B600C4CE9A /* TableCell.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -196,6 +219,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF236281A3F91B600C4CE9A /* PlayerSimple.xib in Resources */,
+				0BF236271A3F91B600C4CE9A /* Main.storyboard in Resources */,
+				0BF236261A3F91B600C4CE9A /* LaunchScreen.xib in Resources */,
+				0BF2362A1A3F91B600C4CE9A /* TableCell.xib in Resources */,
+				0BF236291A3F91B600C4CE9A /* PlayerSingleButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
