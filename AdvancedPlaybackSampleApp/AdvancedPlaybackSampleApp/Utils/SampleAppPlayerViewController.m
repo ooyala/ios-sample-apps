@@ -19,4 +19,6 @@
   }
   return self;
 }
+
+- (IBAction)onButtonClick:(id)sender {}
 @end

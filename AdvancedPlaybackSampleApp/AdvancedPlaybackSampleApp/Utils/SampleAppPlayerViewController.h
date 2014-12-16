@@ -19,5 +19,7 @@
 @property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption;
+
+- (IBAction)onButtonClick:(id)sender;
 @end
 

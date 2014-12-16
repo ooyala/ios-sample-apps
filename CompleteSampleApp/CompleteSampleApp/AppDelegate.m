@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
 
-  //You Need to reference the different libraries in some fashion, or the linker will ignore the library
+  //You need to reference the different libraries in some fashion, or the linker will ignore the library
   [CompleteSampleAppListViewController class];
   [OOOoyalaPlayerViewController class];
   return YES;

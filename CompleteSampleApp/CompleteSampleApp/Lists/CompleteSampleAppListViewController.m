@@ -10,20 +10,18 @@
 #import "BasicPlaybackListViewController.h"
 #import "PlayerSelectionOption.h"
 
-@interface CompleteSampleAppListViewController ()
-@property NSMutableArray *options;
-@end
 
+#pragma mark - List Selection Option
+/**
+ * A list entry that represents a subsection of the complete sample app
+ */
 @interface ListSelectionOption : NSObject
 @property NSString *title;
 @property Class listViewController;
-
 - (id)initWithTitle:(NSString *)title listViewController:(Class) viewController;
 @end
 
 @implementation ListSelectionOption
-
-
 - (id)initWithTitle:(NSString *)title listViewController:(Class) listViewController {
   self = [super init];
   if (self) {
@@ -35,8 +33,18 @@
 
 @end
 
+#pragma mark - CompleteSampleAppListViewController
+
+@interface CompleteSampleAppListViewController ()
+@property NSMutableArray *options;
+@end
+
 @implementation CompleteSampleAppListViewController
 
+/**
+ * List all of your ListViews here here
+ *
+ */
 - (void)addAllPlayerSelectionOptions {
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"AdvancedPlaybackSampleApp" listViewController: [BasicPlaybackListViewController class]]];
 }
@@ -83,7 +91,6 @@
   return NO;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   // When a row is selected, load its desired PlayerViewController
@@ -91,6 +98,5 @@
   UITableViewController *controller = [(UITableViewController *)[[selection listViewController] alloc] init];
   [self.navigationController pushViewController:controller animated:YES];
 }
-
 
 @end
