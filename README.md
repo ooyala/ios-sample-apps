@@ -5,7 +5,7 @@
 2. Open that newly copied app's .xcodeproj
 3. Rename the project's:
   1. Project name
-  2. Target names
+  2. Target names (both the App target and Source Library target)
   3. Folder names in Finder (You will have to fix the Xcode references to the folder)
   4. Group names in Xcode
   5. The ListsViewController
@@ -13,7 +13,8 @@
   7. The Custom Class of the Master Scene's master View in Main.Storyboard
 4. Drag the project from Xcode's Sidebar into the Sample App Workspace's Xcode Sidebar
 5. Close both XCode windows, reopen the Sample App Workspace window
-6. In the CompleteSampleApp, open up the Lists/CompleteSampleAppViewController.m
+6. In the CompleteSampleApp's target's build phases, Add your New Sample App's Source Code Library to your "Link Binary with Libraries" phases
+7. open up the Lists/CompleteSampleAppViewController.
 7. Add your new project as a ListSelectionOption to the List generation method
 
 # To Add a New Vendor Library to your Sample App
