@@ -31,6 +31,17 @@
 4. When you need a new IBAction, add the IBAction the the SampleAppPlayerViewController.h, and add a blank implementation into the .m file
 5. Then you can reference that IBOutlet or override the IBAction method in your Player to use it.
 
+# How to Create a New Test Case for an Existing Sample App
+## If you need can reuse an existing PlayerViewController.
+1. Go into the ListViewController of your sample app. 
+2. Add a PlayerSelectionOption to the list of PlayerSelectionOptions that already exists there.
+
+## If you need a new PlayerViewController
+1. Create a new PlayerViewController class in your Players Xcode group (ensure the file goes into *SampleApp/*SampleApp/Players folder in Finder).  Either copy an existing player or create a new one.
+2. Add the import into your ListViewController.
+3. Reference the new PlayerViewController in one of the PlayerSelectionOptions in the ListViewController
+4. You do not need to change anything in the CompleteSampleApp
+
 TODO:
 Check to see how this works with xcodebuild
 Figure out Nibs, and how they can be shared yet usable.
