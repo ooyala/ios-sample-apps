@@ -4,13 +4,13 @@
 1. Duplicate an originally existing sample app in Finder (use cp --preserve=links)
 2. Open that newly copied app's .xcodeproj
 3. Rename the project's:
-  a. Project name
-  b. Target names
-  c. Folder names in Finder (You will have to fix the references to the folder)
-  d. group names in Xcode
-  e. The ListsViewController
-  f. The Base.lproj LaunchScreen.xib
-  g. The Custom Class of the Master Scene's master View in Main.Storyboard
+  1. Project name
+  2. Target names
+  3. Folder names in Finder (You will have to fix the references to the folder)
+  4. group names in Xcode
+  5. The ListsViewController
+  6. The Base.lproj LaunchScreen.xib
+  7. The Custom Class of the Master Scene's master View in Main.Storyboard
 4. Drag the project from Xcode's Sidebar into the Sample App Workspace's Xcode Sidebar
 5. Close both XCode windows, reopen the Sample App Workspace window
 6. In the CompleteSampleApp, open up the Lists/CompleteSampleAppViewController.m
