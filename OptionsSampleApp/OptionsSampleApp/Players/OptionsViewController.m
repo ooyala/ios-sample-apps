@@ -20,6 +20,8 @@
 @property IBOutlet UIButton *button;
 @property IBOutlet UIView *playerView;
 
+@property OOOoyalaPlayerViewController* playerViewController;
+
 - (IBAction)onButton:(id)sender;
 
 @end
@@ -59,18 +61,23 @@
   options.showPromoImage = _switch1.on;
   options.preloadContent = _switch2.on;
 
-  OOOoyalaPlayerViewController *ooyalaPlayerViewController =
-  [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN] options:options];
+  if (_playerViewController) {
+    [_playerViewController removeFromParentViewController];
+    [_playerViewController.view removeFromSuperview];
+  }
+  
+  _playerViewController =
+    [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN] options:options];
 
   //Setup video view
   CGRect rect = self.playerView.bounds;
-  [ooyalaPlayerViewController.view setFrame:rect];
-  [self addChildViewController:ooyalaPlayerViewController];
-  [self.playerView addSubview:ooyalaPlayerViewController.view];
+  [_playerViewController.view setFrame:rect];
+  [self addChildViewController:_playerViewController];
+  [self.playerView addSubview:_playerViewController.view];
 
-  [ooyalaPlayerViewController.player setEmbedCode:_embedCode];
+  [_playerViewController.player setEmbedCode:_embedCode];
   if (_initialTime > 0) {
-    [ooyalaPlayerViewController.player playWithInitialTime:_initialTime];
+    [_playerViewController.player playWithInitialTime:_initialTime];
   }
   
 }
