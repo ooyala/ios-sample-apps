@@ -12,29 +12,32 @@
 #import "OOPlayerDomain.h"
 
 @interface OptionsViewController ()
-
-@property IBOutlet UILabel *switchLabel1;
-@property IBOutlet UILabel *switchLabel2;
-@property IBOutlet UISwitch *switch1;
-@property IBOutlet UISwitch *switch2;
-@property IBOutlet UIButton *button;
-@property IBOutlet UIView *playerView;
-
 @property OOOoyalaPlayerViewController* playerViewController;
-
-- (IBAction)onButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *switchLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *switchLabel2;
+@property (weak, nonatomic) IBOutlet UISwitch *switch1;
+@property (weak, nonatomic) IBOutlet UISwitch *switch2;
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
 
 @implementation OptionsViewController
+NSString * const NIB_NAME = @"PlayerDoubleSwitch";
+NSString *const PCODE        = @"BidTQxOqebpNk1rVsjs2sUJSTOZc";
+NSString *const PLAYERDOMAIN = @"http://www.ooyala.com";
+
+- (void)loadView {
+  [super loadView];
+  [[NSBundle mainBundle] loadNibNamed:NIB_NAME owner:self options:nil];
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  _switchLabel1.text = @"ShowPromoImage";
-  _switchLabel2.text = @"Preload";
-  [_button setTitle:@"Create" forState:UIControlStateNormal];
-   _switch1.on = NO;
-  _switch2.on = YES;
+  self.switchLabel1.text = @"ShowPromoImage";
+  self.switchLabel2.text = @"Preload";
+  [self.button1 setTitle:@"Create" forState:UIControlStateNormal];
+  self.switch1.on = NO;
+  self.switch2.on = YES;
   self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
@@ -43,23 +46,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
--(IBAction)onButton:(id)sender {
-  NSString *const PCODE        = @"BidTQxOqebpNk1rVsjs2sUJSTOZc";
-  NSString *const PLAYERDOMAIN = @"http://www.ooyala.com";
+-(IBAction)onButtonClick:(id)sender {
 
   OOOptions *options = [OOOptions new];
-  options.showPromoImage = _switch1.on;
-  options.preloadContent = _switch2.on;
+  options.showPromoImage = self.switch1.on;
+  options.preloadContent = self.switch2.on;
 
   if (_playerViewController) {
     [_playerViewController removeFromParentViewController];
@@ -75,7 +66,7 @@
   [self addChildViewController:_playerViewController];
   [self.playerView addSubview:_playerViewController.view];
 
-  [_playerViewController.player setEmbedCode:_embedCode];
+  [_playerViewController.player setEmbedCode:self.playerSelectionOption.embedCode];
   if (_initialTime > 0) {
     [_playerViewController.player playWithInitialTime:_initialTime];
   }

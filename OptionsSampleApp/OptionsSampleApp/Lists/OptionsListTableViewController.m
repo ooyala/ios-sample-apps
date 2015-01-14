@@ -8,39 +8,46 @@
 
 #import "OptionsListTableViewController.h"
 #import "OptionsViewController.h"
+#import "PlayerSelectionOption.h"
 
 @interface OptionsListTableViewController ()
-
-@property (nonatomic) NSArray *titles;
-@property (nonatomic) NSArray *embedCodes;
-
+@property NSMutableArray *options;
 @end
 
 @implementation OptionsListTableViewController
 
 static NSString *cellId = @"pickerCell";
 
+NSString * const TITLE = @"Options Configuration";
+
+- (void)addAllPlayerSelectionOptions {
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Preroll" embedCode:@"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c" viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Midroll" embedCode:@"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa" viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Postroll" embedCode:@"Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf" viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with HLS Video" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]]];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.navigationController.navigationBar.translucent = NO;
+  self.title = TITLE;
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
-  _titles = [NSArray arrayWithObjects:@"VAST Preroll", @"VAST Midroll", @"VAST postroll", @"Plain HLS Video", @"HLS Video with initialPlayTime", nil];
-  _embedCodes = [NSArray arrayWithObjects:
-                 @"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c",
-                 @"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa",
-                 @"Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf",
-                 @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1",
-                 @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1", nil];
-  // Uncomment the following line to preserve selection between presentations.
-  // self.clearsSelectionOnViewWillAppear = NO;
+  [self addAllPlayerSelectionOptions];
+}
 
-  // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-  // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-  [(UITableView*)self.view registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
+- (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
+  if (!self.options) {
+    self.options = [[NSMutableArray alloc] init];
+  }
+  [self.options insertObject:selectionObject atIndex:0];
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+  [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Table view data source
@@ -50,31 +57,30 @@ static NSString *cellId = @"pickerCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _titles.count;
+  return self.options.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
 
-  if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-  }
-  cell.textLabel.text = [_titles objectAtIndex:indexPath.row];
+  PlayerSelectionOption *selection = self.options[indexPath.row];
+  cell.textLabel.text = [selection title];
   return cell;
 }
 
-- (void) tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
-{
-  OptionsViewController *playerController;
-  // Override point for customization after application launch.
-  playerController = [[OptionsViewController alloc] initWithNibName:@"PlayerDoubleSwitch" bundle:nil];
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+  return NO;
+}
 
-  playerController.embedCode = [_embedCodes objectAtIndex:indexPath.row];
-  NSString *title = [_titles objectAtIndex:indexPath.row];
-  if ([title rangeOfString:@"initialPlayTime"].location != NSNotFound) {
-    playerController.initialTime = 20;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  // When a row is selected, load its desired PlayerViewController
+  PlayerSelectionOption *selection = self.options[indexPath.row];
+  SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  if ([selection.title rangeOfString:@"initialPlayTime"].location != NSNotFound) {
+    ((OptionsViewController *)controller).initialTime = 20;
   }
-  [self.navigationController pushViewController:playerController animated:YES];
+  [self.navigationController pushViewController:controller animated:YES];
 }
 
 
