@@ -70,6 +70,12 @@ static NSDictionary *currentLocale = nil;
 
 - (id)initWithPcode:(NSString *)pcode
              domain:(OOPlayerDomain *)domain
+            options:(OOOptions *)options {
+  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode domain:domain options:options]];
+}
+
+- (id)initWithPcode:(NSString *)pcode
+             domain:(OOPlayerDomain *)domain
         controlType:(OOOoyalaPlayerControlType)_controlType {
   return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode
                                                              domain:domain]

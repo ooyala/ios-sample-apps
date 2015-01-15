@@ -15,8 +15,11 @@
 
 @implementation BasicPlaybackListViewController
 
-NSString * const TITLE = @"Advanced Playback";
-
+- (id)init {
+  self = [super init];
+  self.title = @"Basic Playback";
+  return self;
+}
 - (void)addAllPlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic HLS Playback" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [SimplePlayerViewController class]]];
 }
@@ -24,7 +27,6 @@ NSString * const TITLE = @"Advanced Playback";
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
-  self.title = TITLE;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
   [self addAllPlayerSelectionOptions];

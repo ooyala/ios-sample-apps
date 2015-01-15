@@ -57,6 +57,16 @@ typedef NSInteger OOOoyalaPlayerControlType;
  */
 - (id)initWithPcode:(NSString *)pcode
              domain:(OOPlayerDomain *)domain;
+
+/**
+ * Initialize the UI and player with pcode and domain
+ * @param[in] pcode Ooyala publisher code
+ * @param[in] domain Web domain to which playback will be assigned
+ * @param[in] options the options
+ */
+- (id)initWithPcode:(NSString *)pcode
+             domain:(OOPlayerDomain *)domain
+            options:(OOOptions *)options;
 /**
  * Initialize the UI and player with pcode, domain and control type
  * @param[in] pcode Ooyala publisher code

@@ -15,22 +15,19 @@
 @interface SimplePlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property NSString *embedCode;
+@property NSString *nib;
+@property NSString *pcode;
+@property NSString *playerDomain;
 @end
 
 @implementation SimplePlayerViewController
-NSString * const PCODE = @"R2d3I6s06RyB712DN0_2GsQS-R-Y";
-NSString * const PLAYERDOMAIN = @"http://www.ooyala.com";
-NSString * const NIB_NAME = @"PlayerSingleButton";
-
-#pragma mark - Managing the detail item
-
-- (void)loadView {
-  [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:NIB_NAME owner:self options:nil];
-}
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption:playerSelectionOption];
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+  self.nib = @"PlayerSingleButton";
+  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
+  self.playerDomain = @"http://www.ooyala.com";
+
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
@@ -38,10 +35,15 @@ NSString * const NIB_NAME = @"PlayerSingleButton";
   return self;
 }
 
+- (void)loadView {
+  [super loadView];
+  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Create Ooyala ViewController
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
 
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
