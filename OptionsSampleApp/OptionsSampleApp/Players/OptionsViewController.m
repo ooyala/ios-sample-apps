@@ -13,22 +13,23 @@
 
 @interface OptionsViewController ()
 @property OOOoyalaPlayerViewController* playerViewController;
-@property (weak, nonatomic) IBOutlet UILabel *switchLabel1;
-@property (weak, nonatomic) IBOutlet UILabel *switchLabel2;
-@property (weak, nonatomic) IBOutlet UISwitch *switch1;
-@property (weak, nonatomic) IBOutlet UISwitch *switch2;
-@property (weak, nonatomic) IBOutlet UIButton *button;
-
+@property NSString *nib;
+@property NSString *pcode;
+@property NSString *playerDomain;
 @end
 
 @implementation OptionsViewController
-NSString * const NIB_NAME = @"PlayerDoubleSwitch";
-NSString *const PCODE        = @"BidTQxOqebpNk1rVsjs2sUJSTOZc";
-NSString *const PLAYERDOMAIN = @"http://www.ooyala.com";
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+  self.nib = @"PlayerDoubleSwitch";
+  self.pcode =@"BidTQxOqebpNk1rVsjs2sUJSTOZc";
+  self.playerDomain = @"http://www.ooyala.com";
+  return self;
+}
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:NIB_NAME owner:self options:nil];
+  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
@@ -58,7 +59,7 @@ NSString *const PLAYERDOMAIN = @"http://www.ooyala.com";
   }
   
   _playerViewController =
-    [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN] options:options];
+    [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
 
   //Setup video view
   CGRect rect = self.playerView.bounds;

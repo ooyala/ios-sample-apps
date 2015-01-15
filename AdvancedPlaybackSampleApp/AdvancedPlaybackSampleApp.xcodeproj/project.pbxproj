@@ -27,10 +27,8 @@
 		0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */; };
 		0B19FF1A1A3B755A003E57DF /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* BasicPlaybackListViewController.m */; };
 		0B19FF1C1A3B755A003E57DF /* SimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */; };
-		0B19FF291A3B780B003E57DF /* PlayerSelectionOption.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
 		0B19FF2A1A3B780B003E57DF /* SampleAppPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
 		0B19FF2B1A3B780B003E57DF /* BasicPlaybackListViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
-		0B19FF2C1A3B780B003E57DF /* SimplePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */; };
 		0B19FF601A3B80FB003E57DF /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
 		0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
 		0B19FF621A3B80FB003E57DF /* BasicPlaybackListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
@@ -50,10 +48,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				0B19FF291A3B780B003E57DF /* PlayerSelectionOption.h in CopyFiles */,
 				0B19FF2A1A3B780B003E57DF /* SampleAppPlayerViewController.h in CopyFiles */,
 				0B19FF2B1A3B780B003E57DF /* BasicPlaybackListViewController.h in CopyFiles */,
-				0B19FF2C1A3B780B003E57DF /* SimplePlayerViewController.h in CopyFiles */,
 				0B19FF011A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,11 @@
 
 static NSString *cellId = @"pickerCell";
 
-NSString * const TITLE = @"Options Configuration";
+- (id)init {
+  self = [super init];
+  self.title = @"Options Configuration";
+  return self;
+}
 
 - (void)addAllPlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Preroll" embedCode:@"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c" viewController: [OptionsViewController class]]];
@@ -31,7 +35,6 @@ NSString * const TITLE = @"Options Configuration";
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
-  self.title = TITLE;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
   [self addAllPlayerSelectionOptions];

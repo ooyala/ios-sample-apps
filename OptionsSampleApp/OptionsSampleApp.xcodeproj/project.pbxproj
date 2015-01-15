@@ -13,11 +13,18 @@
 		0BF0B0EE1A67200600026FDC /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0B0EB1A67200600026FDC /* PlayerSingleButton.xib */; };
 		0BF0B0EF1A67200600026FDC /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0B0EC1A67200600026FDC /* TableCell.xib */; };
 		0BF0B0F11A67245300026FDC /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0B0F01A67245300026FDC /* PlayerDoubleSwitch.xib */; };
+		0BF4F9E41A6850CE0050A602 /* OptionsSampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0BF4F9E31A6850CE0050A602 /* OptionsSampleAppSource.h */; };
+		0BF4F9E61A6850CE0050A602 /* OptionsSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4F9E51A6850CE0050A602 /* OptionsSampleAppSource.m */; };
+		0BF4F9F81A6850FD0050A602 /* OptionsListTableViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */; };
+		0BF4F9F91A6851060050A602 /* OptionsViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772BFAE1A43C11C00B255C0 /* OptionsViewController.h */; };
+		0BF4F9FE1A6852030050A602 /* OptionsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */; };
+		0BF4F9FF1A6852090050A602 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */; };
+		0BF4FA011A6852290050A602 /* OptionsListTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */; };
+		0BF4FA091A685F9E0050A602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA051A685F9E0050A602 /* LaunchScreen.xib */; };
+		0BF4FA0A1A685F9E0050A602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA071A685F9E0050A602 /* Main.storyboard */; };
 		9772BF861A43B61500B255C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF851A43B61500B255C0 /* main.m */; };
 		9772BF891A43B61500B255C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF881A43B61500B255C0 /* AppDelegate.m */; };
-		9772BF8F1A43B61500B255C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9772BF8D1A43B61500B255C0 /* Main.storyboard */; };
 		9772BF911A43B61500B255C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9772BF901A43B61500B255C0 /* Images.xcassets */; };
-		9772BF941A43B61500B255C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9772BF921A43B61500B255C0 /* LaunchScreen.xib */; };
 		9772BFB01A43C11C00B255C0 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */; };
 		9772BFB31A43C15E00B255C0 /* OptionsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */; };
 		9772BFF41A48EF7C00B255C0 /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFEF1A48EEE300B255C0 /* libOoyalaSDK.a */; };
@@ -27,15 +34,20 @@
 		9772BFFE1A48FE9700B255C0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFFD1A48FE9700B255C0 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9772BF9A1A43B61500B255C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9772BF781A43B61500B255C0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9772BF7F1A43B61500B255C0;
-			remoteInfo = OptionsSampleApp;
+/* Begin PBXCopyFilesBuildPhase section */
+		0BF4F9DF1A6850CE0050A602 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0BF4F9F91A6851060050A602 /* OptionsViewController.h in CopyFiles */,
+				0BF4F9F81A6850FD0050A602 /* OptionsListTableViewController.h in CopyFiles */,
+				0BF4F9E41A6850CE0050A602 /* OptionsSampleAppSource.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0BF0B0E21A671E4300026FDC /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
@@ -46,15 +58,17 @@
 		0BF0B0EB1A67200600026FDC /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BF0B0EC1A67200600026FDC /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		0BF0B0F01A67245300026FDC /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
+		0BF4F9E11A6850CE0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOptionsSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF4F9E31A6850CE0050A602 /* OptionsSampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionsSampleAppSource.h; sourceTree = "<group>"; };
+		0BF4F9E51A6850CE0050A602 /* OptionsSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionsSampleAppSource.m; sourceTree = "<group>"; };
+		0BF4FA061A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		0BF4FA081A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		9772BF801A43B61500B255C0 /* OptionsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9772BF841A43B61500B255C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9772BF851A43B61500B255C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9772BF871A43B61500B255C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9772BF881A43B61500B255C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9772BF8E1A43B61500B255C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9772BF901A43B61500B255C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9772BF931A43B61500B255C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9772BF991A43B61500B255C0 /* OptionsSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionsSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9772BFAE1A43C11C00B255C0 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsListTableViewController.h; sourceTree = "<group>"; };
@@ -124,6 +138,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0BF4F9DE1A6850CE0050A602 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9772BF7D1A43B61500B255C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,13 +154,6 @@
 				9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */,
 				9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */,
 				9772BFF41A48EF7C00B255C0 /* libOoyalaSDK.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9772BF961A43B61500B255C0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,18 +191,53 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0BF4F9E21A6850CE0050A602 /* OptionsSampleAppSource */ = {
+			isa = PBXGroup;
+			children = (
+				0BF4F9E31A6850CE0050A602 /* OptionsSampleAppSource.h */,
+				0BF4F9E51A6850CE0050A602 /* OptionsSampleAppSource.m */,
+			);
+			path = OptionsSampleAppSource;
+			sourceTree = "<group>";
+		};
+		0BF4FA021A685F2F0050A602 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */,
+				9772BFF51A48EF8800B255C0 /* MediaPlayer.framework */,
+				9772BFF91A48FE4E00B255C0 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BF4FA031A685F3C0050A602 /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				9772BFB61A48D7E300B255C0 /* Headers */,
+				9772BFEF1A48EEE300B255C0 /* libOoyalaSDK.a */,
+			);
+			name = VendorLibraries;
+			sourceTree = "<group>";
+		};
+		0BF4FA041A685F9E0050A602 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0BF4FA051A685F9E0050A602 /* LaunchScreen.xib */,
+				0BF4FA071A685F9E0050A602 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		9772BF771A43B61500B255C0 = {
 			isa = PBXGroup;
 			children = (
-				9772BFF91A48FE4E00B255C0 /* CoreFoundation.framework */,
-				9772BFB61A48D7E300B255C0 /* Headers */,
+				0BF4FA021A685F2F0050A602 /* Frameworks */,
 				9772BFFD1A48FE9700B255C0 /* libc++.dylib */,
-				9772BFEF1A48EEE300B255C0 /* libOoyalaSDK.a */,
 				9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */,
-				9772BFF51A48EF8800B255C0 /* MediaPlayer.framework */,
 				9772BF821A43B61500B255C0 /* OptionsSampleApp */,
+				0BF4F9E21A6850CE0050A602 /* OptionsSampleAppSource */,
 				9772BF811A43B61500B255C0 /* Products */,
-				9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */,
+				0BF4FA031A685F3C0050A602 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9772BF801A43B61500B255C0 /* OptionsSampleApp.app */,
-				9772BF991A43B61500B255C0 /* OptionsSampleAppTests.xctest */,
+				0BF4F9E11A6850CE0050A602 /* libOptionsSampleAppSource.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,10 +255,9 @@
 			children = (
 				9772BF871A43B61500B255C0 /* AppDelegate.h */,
 				9772BF881A43B61500B255C0 /* AppDelegate.m */,
+				0BF4FA041A685F9E0050A602 /* Base.lproj */,
 				9772BF901A43B61500B255C0 /* Images.xcassets */,
-				9772BF921A43B61500B255C0 /* LaunchScreen.xib */,
 				9772BFA91A43B6B200B255C0 /* Lists */,
-				9772BF8D1A43B61500B255C0 /* Main.storyboard */,
 				9772BFAA1A43B6C000B255C0 /* Players */,
 				0BF0B0E81A67200600026FDC /* Shared */,
 				9772BF831A43B61500B255C0 /* Supporting Files */,
@@ -318,9 +366,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BF4FA001A6852210050A602 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF4FA011A6852290050A602 /* OptionsListTableViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0BF4F9E01A6850CE0050A602 /* OptionsSampleAppSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BF4F9F21A6850CF0050A602 /* Build configuration list for PBXNativeTarget "OptionsSampleAppSource" */;
+			buildPhases = (
+				0BF4F9DD1A6850CE0050A602 /* Sources */,
+				0BF4F9DE1A6850CE0050A602 /* Frameworks */,
+				0BF4F9DF1A6850CE0050A602 /* CopyFiles */,
+				0BF4FA001A6852210050A602 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OptionsSampleAppSource;
+			productName = OptionsSampleAppSource;
+			productReference = 0BF4F9E11A6850CE0050A602 /* libOptionsSampleAppSource.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		9772BF7F1A43B61500B255C0 /* OptionsSampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9772BFA31A43B61500B255C0 /* Build configuration list for PBXNativeTarget "OptionsSampleApp" */;
@@ -339,24 +413,6 @@
 			productReference = 9772BF801A43B61500B255C0 /* OptionsSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9772BF981A43B61500B255C0 /* OptionsSampleAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9772BFA61A43B61500B255C0 /* Build configuration list for PBXNativeTarget "OptionsSampleAppTests" */;
-			buildPhases = (
-				9772BF951A43B61500B255C0 /* Sources */,
-				9772BF961A43B61500B255C0 /* Frameworks */,
-				9772BF971A43B61500B255C0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9772BF9B1A43B61500B255C0 /* PBXTargetDependency */,
-			);
-			name = OptionsSampleAppTests;
-			productName = OptionsSampleAppTests;
-			productReference = 9772BF991A43B61500B255C0 /* OptionsSampleAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -366,12 +422,11 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = ooyala;
 				TargetAttributes = {
+					0BF4F9E01A6850CE0050A602 = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					9772BF7F1A43B61500B255C0 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					9772BF981A43B61500B255C0 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 9772BF7F1A43B61500B255C0;
 					};
 				};
 			};
@@ -389,7 +444,7 @@
 			projectRoot = "";
 			targets = (
 				9772BF7F1A43B61500B255C0 /* OptionsSampleApp */,
-				9772BF981A43B61500B255C0 /* OptionsSampleAppTests */,
+				0BF4F9E01A6850CE0050A602 /* OptionsSampleAppSource */,
 			);
 		};
 /* End PBXProject section */
@@ -401,24 +456,27 @@
 			files = (
 				0BF0B0EE1A67200600026FDC /* PlayerSingleButton.xib in Resources */,
 				0BF0B0ED1A67200600026FDC /* PlayerSimple.xib in Resources */,
-				9772BF8F1A43B61500B255C0 /* Main.storyboard in Resources */,
-				9772BF941A43B61500B255C0 /* LaunchScreen.xib in Resources */,
+				0BF4FA091A685F9E0050A602 /* LaunchScreen.xib in Resources */,
 				9772BF911A43B61500B255C0 /* Images.xcassets in Resources */,
+				0BF4FA0A1A685F9E0050A602 /* Main.storyboard in Resources */,
 				0BF0B0F11A67245300026FDC /* PlayerDoubleSwitch.xib in Resources */,
 				0BF0B0EF1A67200600026FDC /* TableCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9772BF971A43B61500B255C0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0BF4F9DD1A6850CE0050A602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF4F9FF1A6852090050A602 /* OptionsViewController.m in Sources */,
+				0BF4F9FE1A6852030050A602 /* OptionsListTableViewController.m in Sources */,
+				0BF4F9E61A6850CE0050A602 /* OptionsSampleAppSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9772BF7C1A43B61500B255C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,43 +490,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9772BF951A43B61500B255C0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9772BF9B1A43B61500B255C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9772BF7F1A43B61500B255C0 /* OptionsSampleApp */;
-			targetProxy = 9772BF9A1A43B61500B255C0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		9772BF8D1A43B61500B255C0 /* Main.storyboard */ = {
+		0BF4FA051A685F9E0050A602 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9772BF8E1A43B61500B255C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9772BF921A43B61500B255C0 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9772BF931A43B61500B255C0 /* Base */,
+				0BF4FA061A685F9E0050A602 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		0BF4FA071A685F9E0050A602 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BF4FA081A685F9E0050A602 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0BF4F9F31A6850CF0050A602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0BF4F9F41A6850CF0050A602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		9772BFA11A43B61500B255C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -577,43 +642,17 @@
 			};
 			name = Release;
 		};
-		9772BFA71A43B61500B255C0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OptionsSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OptionsSampleApp.app/OptionsSampleApp";
-			};
-			name = Debug;
-		};
-		9772BFA81A43B61500B255C0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OptionsSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OptionsSampleApp.app/OptionsSampleApp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0BF4F9F21A6850CF0050A602 /* Build configuration list for PBXNativeTarget "OptionsSampleAppSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BF4F9F31A6850CF0050A602 /* Debug */,
+				0BF4F9F41A6850CF0050A602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9772BF7B1A43B61500B255C0 /* Build configuration list for PBXProject "OptionsSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -628,15 +667,6 @@
 			buildConfigurations = (
 				9772BFA41A43B61500B255C0 /* Debug */,
 				9772BFA51A43B61500B255C0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9772BFA61A43B61500B255C0 /* Build configuration list for PBXNativeTarget "OptionsSampleAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9772BFA71A43B61500B255C0 /* Debug */,
-				9772BFA81A43B61500B255C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
