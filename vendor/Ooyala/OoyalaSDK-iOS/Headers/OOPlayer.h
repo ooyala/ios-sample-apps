@@ -35,8 +35,6 @@ extern NSString *const PlayerErrorNotification;
 
 - (BOOL)isPlaying;
 
-- (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity;
-
 - (BOOL)isAudioOnlyStreamPlaying;
 
 - (void) setLiveClosedCaptionsEnabled:(BOOL)enabled;

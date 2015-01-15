@@ -6,10 +6,20 @@
 #import <Foundation/Foundation.h>
 
 @class OOFCCTVRatingConfiguration;
-@class OOOptions;
 
 @interface OOOptions : NSObject
+
 @property (nonatomic) OOFCCTVRatingConfiguration *tvRatingConfiguration; // todo: readonly?
+@property (nonatomic) BOOL showCuePoints;
+@property (nonatomic) BOOL showAdsControls;
+@property (nonatomic) BOOL preloadContent;
+@property (nonatomic) BOOL showPromoImage;
+
 -(instancetype) init;
--(instancetype) initWithTVRatingsConfiguration:(OOFCCTVRatingConfiguration *)tvRatingConfiguration;
+-(instancetype) initWithTVRatingsConfiguration:(OOFCCTVRatingConfiguration *)tvRatingConfiguration
+                                 showCuePoints:(BOOL)showCuePoints
+                                  showControls:(BOOL)showControls
+                                preloadContent:(BOOL)preloadContent
+                                showPromoImage:(BOOL)showPromoImage;
+
 @end

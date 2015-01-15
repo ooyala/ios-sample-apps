@@ -8,8 +8,8 @@
 
 #import "OOManagedAdSpot.h"
 #import "OOAuthorizableItem.h"
-#import "OOConstants.h"
 #import "OOPlayableItem.h"
+#import "OOOoyalaAPIClient.h"
 
 /**
  * A single ooyala video ad associated with specific time
@@ -32,9 +32,10 @@
  * @param[in] theClickURL the clickthrough URL
  * @param[in] theTrackingURLs the tracking URLs
  * @param[in] theEmbedCode the embed code to initialize the OOOoyalaAdSpot with
+ * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOOoyalaAdSpot
  * @returns the initialized OOOoyalaAdSpot
  */
-- (id)initWithTime:(NSNumber *)theTime clickURL:(NSURL *)theClickURL trackingURLs:(NSArray *)theTrackingURLs embedCode:(NSString *)theEmbedCode;
+- (id)initWithTime:(NSNumber *)theTime clickURL:(NSURL *)theClickURL trackingURLs:(NSArray *)theTrackingURLs embedCode:(NSString *)theEmbedCode api:(OOOoyalaAPIClient *)theAPI;
 
 /** @internal
  * Initialize an OOOoyalaAdSpot using the specified data (subclasses should override this)

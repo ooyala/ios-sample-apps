@@ -3,7 +3,6 @@
  * @headerfile OOCallbacks.h "OOCallbacks.h"
  * @brief      OOCallbacks
  * @details    OOCallbacks.h in OoyalaSDK
- * @author     Jigish Patel
  * @date       2/2/12
  * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
  */

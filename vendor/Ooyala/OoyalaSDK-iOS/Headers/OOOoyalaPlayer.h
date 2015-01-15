@@ -17,6 +17,7 @@
 #import "OOClosedCaptionsStyle.h"
 #import "OOAdPluginManagerProtocol.h"
 #import "OOStateNotifier.h"
+#import "OOPlayerProtocol.h"
 
 @class OOContentItem;
 @class OOVideo;
@@ -29,6 +30,7 @@
 @class OOFCCTVRatingConfiguration;
 @class OOFCCTVRating;
 @class OOOptions;
+@class OOManagedAdsPlugin;
 
 /**
  * Defines player behavior after video playback has ended, defaults to OOOoyalaPlayerActionAtEndContinue
@@ -44,19 +46,6 @@ typedef enum
     /** Pause and reset to the beginning of the current video */
     OOOoyalaPlayerActionAtEndReset
 } OOOoyalaPlayerActionAtEnd;
-
-/**
- * Defines different gravity modes, which control how video is adjusted to available screen size
- */
-typedef enum
-{
-  /** Specifies that the video should be stretched to fill the layer’s bounds. */
-  OOOoyalaPlayerVideoGravityResize,
-  /** Specifies that the player should preserve the video’s aspect ratio and fit the video within the layer’s bounds */
-  OOOoyalaPlayerVideoGravityResizeAspect,
-  /** Specifies that the player should preserve the video’s aspect ratio and fill the layer’s bounds. */
-  OOOoyalaPlayerVideoGravityResizeAspectFill
-} OOOoyalaPlayerVideoGravity;
 
 /**
  * Defines which Ooyala API environment is used for API calls.
@@ -133,6 +122,16 @@ extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when 
 @property (readonly, nonatomic) NSString *authToken;
 
 /**
+ * Get the managedAdsPlugin that manages OOOoyalaAdSpots and OOVASTAdSpots.
+ */
+@property (readonly, nonatomic) OOManagedAdsPlugin *managedAdsPlugin;
+
+/**
+ * Get the options
+ */
+@property (readonly, nonatomic) OOOptions *options;
+
+/**
  * @internal
  */
 + (void)setEnvironment:(OOOoyalaPlayerEnvironment)e;
@@ -158,6 +157,17 @@ extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when 
  */
 - (id)initWithPcode:(NSString *)pcode
              domain:(OOPlayerDomain *)domain;
+
+/**
+ * Initialize an OOOoyalaPlayer with the given parameters
+ * @param[in] pcode Your Provider Code
+ * @param[in] domain Your Embed Domain
+ * @param[in] options the options
+ * @returns the initialized OOOoyalaPlayer
+ */
+- (id)initWithPcode:(NSString *)pcode
+             domain:(OOPlayerDomain *)domain
+            options:(OOOptions *)options;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -415,5 +425,10 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 * E.g. for the content player, show when ads are scheduled to play.
 */
 -(NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSecondsForCurrentPlayer;
+
+/**
+ * Return an OoyalaAPIClient
+ */
+- (OOOoyalaAPIClient *)api;
 
 @end

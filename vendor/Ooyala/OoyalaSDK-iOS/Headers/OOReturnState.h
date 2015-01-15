@@ -2,7 +2,6 @@
  * @headerfile OOReturnState.h "OOReturnState.h"
  * @brief      OOReturnState
  * @details    OOReturnState.h in OoyalaSDK
- * @author     Jigish Patel
  * @date       2/2/12
  * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
  */

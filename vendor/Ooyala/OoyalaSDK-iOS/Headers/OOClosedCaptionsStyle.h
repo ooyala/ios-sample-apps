@@ -3,7 +3,6 @@
  * @class      OOClosedCaptionsStyle OOClosedCaptionsStyle.h "OOClosedCaptionsStyle.h"
  * @brief      OOClosedCaptionsStyle
  * @details    OOClosedCaptionsStyle.h in OoyalaSDK
- * @author     Chris Leonavicius
  * @date       1/31/12
  * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
  */

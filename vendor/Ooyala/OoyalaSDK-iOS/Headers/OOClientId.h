@@ -3,7 +3,6 @@
  * @headerfile OOClientId.h "OOClientId.h"
  * @brief      OOClientId
  * @details    OOClientId.h in OoyalaSDK
- * @author     Matthew Chen
  * @date       7/29/14
  * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
  */

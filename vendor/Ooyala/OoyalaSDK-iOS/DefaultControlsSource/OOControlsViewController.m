@@ -2,7 +2,6 @@
  * @file       OOControlsViewController.m
  * @brief      Implementation of OOControlsViewController
  * @details    OOControlsViewController.m in OoyalaSDK
- * @author     Chris Leonavicius
  * @date       2/23/12
  * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
  */
@@ -234,17 +233,20 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-  if (self.controls.hidden) {
-    [self showControls];
-  } else {
-    [self hideControls];
-  }
+  [self toggleControls];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
   [super touchesCancelled:touches withEvent:event];
 }
 
+- (void)toggleControls {
+  if (self.controls.hidden) {
+    [self showControls];
+  } else {
+    [self hideControls];
+  }
+}
 
 - (void) setFullScreenButtonShowing: (BOOL) isShowing {
   // subclass need to implement this method

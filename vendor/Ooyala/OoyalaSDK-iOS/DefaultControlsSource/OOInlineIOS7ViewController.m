@@ -7,12 +7,13 @@
 //
 
 #import "OOInlineIOS7ViewController.h"
-#import "OOOoyalaPlayer.h"
+#import "OOOoyalaPlayer+Internal.h"
 #import "OOInlineIOS7ControlsView.h"
 #import "OOUIProgressSliderIOS7.h"
 #import "OOVideo.h"
 #import "OOUIUtils.h"
 #import "OODebugMode.h"
+#import "OOOptions.h"
 
 @interface OOInlineIOS7ViewController() {
   BOOL wasPlaying;
@@ -134,7 +135,9 @@
   
   //Handle state
   if (self.player.isPlaying) {
-    if (self.controls.playButtonShowing) {
+    if ([self.player showingAdsWithHiddenControls]) {
+      [self hideControls];
+    } else if (self.controls.playButtonShowing) {
       [self.controls setPlayButtonShowing:NO];
       if (self.controls.hidden == NO) {
         [self showControls];
@@ -188,7 +191,7 @@
 }
 
 - (void)showControls {
-  if (self.player == nil) {
+  if (self.player == nil || [self.player showingAdsWithHiddenControls]) {
     LOG(@"showControls while player is nil");
     return;
   }

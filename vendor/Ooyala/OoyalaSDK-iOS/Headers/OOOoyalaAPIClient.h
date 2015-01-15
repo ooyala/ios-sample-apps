@@ -2,7 +2,6 @@
  * @class      OOOoyalaAPIClient OOOoyalaAPIClient.h "OOOoyalaAPIClient.h"
  * @brief      OOOoyalaAPIClient
  * @details    OOOoyalaAPIClient.h in OoyalaSDK
- * @author     Jigish Patel
  * @date       1/17/12
  * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
  */
