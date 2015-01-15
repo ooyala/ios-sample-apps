@@ -15,6 +15,14 @@
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B19FF6A1A3B8C75003E57DF /* CompleteSampleAppListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */; };
 		0B19FF6B1A3B8C75003E57DF /* CompleteSampleAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */; };
+		0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45BC1A6889440092F056 /* EventKit.framework */; };
+		0B1E45BF1A68894B0092F056 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45BE1A68894B0092F056 /* libxml2.dylib */; };
+		0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C01A6889510092F056 /* MessageUI.framework */; };
+		0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C21A68895A0092F056 /* AdSupport.framework */; };
+		0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */; };
+		0B1E45CD1A688A610092F056 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C91A688A610092F056 /* AdManager.framework */; };
+		0B1E45CE1A688A610092F056 /* OOFreewheelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B1E45CB1A688A610092F056 /* OOFreewheelManager.h */; };
+		0B1E45CF1A688A610092F056 /* libOoyalaFreewheelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45CC1A688A610092F056 /* libOoyalaFreewheelSDK.a */; };
 		0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E21A40DF7000E7DE88 /* Main.storyboard */; };
 		0B98010E1A40DFD600E7DE88 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B98010B1A40DFD600E7DE88 /* PlayerSimple.xib */; };
 		0B98010F1A40DFD600E7DE88 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B98010C1A40DFD600E7DE88 /* PlayerSingleButton.xib */; };
@@ -117,6 +125,15 @@
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteSampleAppListViewController.h; sourceTree = "<group>"; };
 		0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteSampleAppListViewController.m; sourceTree = "<group>"; };
+		0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
+		0B1E45BC1A6889440092F056 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		0B1E45BE1A68894B0092F056 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		0B1E45C01A6889510092F056 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0B1E45C21A68895A0092F056 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
+		0B1E45C91A688A610092F056 /* AdManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdManager.framework; sourceTree = "<group>"; };
+		0B1E45CB1A688A610092F056 /* OOFreewheelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFreewheelManager.h; sourceTree = "<group>"; };
+		0B1E45CC1A688A610092F056 /* libOoyalaFreewheelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaFreewheelSDK.a; sourceTree = "<group>"; };
 		0B9800E31A40DF7000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B98010B1A40DFD600E7DE88 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0B98010C1A40DFD600E7DE88 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
@@ -212,6 +229,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */,
+				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
+				0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */,
+				0B1E45BF1A68894B0092F056 /* libxml2.dylib in Frameworks */,
+				0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */,
 				0BF4FA4F1A6873120050A602 /* libz.dylib in Frameworks */,
 				0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */,
 				0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */,
@@ -222,6 +244,8 @@
 				0BF4FC291A6877470050A602 /* libOoyalaSDK.a in Frameworks */,
 				0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */,
 				0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */,
+				0B1E45CD1A688A610092F056 /* AdManager.framework in Frameworks */,
+				0B1E45CF1A688A610092F056 /* libOoyalaFreewheelSDK.a in Frameworks */,
 				0BF4FC281A6877470050A602 /* libOoyalaIMASDK.a in Frameworks */,
 				0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */,
 			);
@@ -273,6 +297,12 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */,
+				0B1E45C21A68895A0092F056 /* AdSupport.framework */,
+				0B1E45C01A6889510092F056 /* MessageUI.framework */,
+				0B1E45BE1A68894B0092F056 /* libxml2.dylib */,
+				0B1E45BC1A6889440092F056 /* EventKit.framework */,
+				0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */,
 				0BF4FA4E1A6873120050A602 /* libz.dylib */,
 				0BF4FA4C1A68730A0050A602 /* WebKit.framework */,
 				0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */,
@@ -304,6 +334,14 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
+		0B1E45CA1A688A610092F056 /* FreewheelHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				0B1E45CB1A688A610092F056 /* OOFreewheelManager.h */,
+			);
+			path = FreewheelHeaders;
+			sourceTree = "<group>";
+		};
 		0B9801091A40DFD600E7DE88 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,10 +365,13 @@
 		0BF4FB8C1A6877470050A602 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				0B1E45C91A688A610092F056 /* AdManager.framework */,
+				0B1E45CA1A688A610092F056 /* FreewheelHeaders */,
 				0BF4FB8D1A6877470050A602 /* GoogleIMAHeaders */,
 				0BF4FB9C1A6877470050A602 /* Headers */,
 				0BF4FBD61A6877470050A602 /* IMAHeaders */,
 				0BF4FBDA1A6877470050A602 /* libGoogleIMA3.a */,
+				0B1E45CC1A688A610092F056 /* libOoyalaFreewheelSDK.a */,
 				0BF4FBDB1A6877470050A602 /* libOoyalaIMASDK.a */,
 				0BF4FBDC1A6877470050A602 /* libOoyalaSDK.a */,
 			);
@@ -497,6 +538,7 @@
 				0BF4FBE11A6877470050A602 /* IMAAdPlaybackInfo.h in Headers */,
 				0BF4FC131A6877470050A602 /* OOReturnState.h in Headers */,
 				0BF4FBF21A6877470050A602 /* OOCallbacks.h in Headers */,
+				0B1E45CE1A688A610092F056 /* OOFreewheelManager.h in Headers */,
 				0BF4FC1A1A6877470050A602 /* OOUserInfo.h in Headers */,
 				0BF4FBFD1A6877470050A602 /* OOEmbeddedSecureURLGenerator.h in Headers */,
 				0BF4FBDD1A6877470050A602 /* IMAAd.h in Headers */,
@@ -702,6 +744,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = CompleteSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -710,6 +756,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
 					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/FreewheelSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -724,6 +771,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = CompleteSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -732,6 +783,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
 					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/FreewheelSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
