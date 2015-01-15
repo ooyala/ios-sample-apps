@@ -8,12 +8,12 @@
       location = "group:CompleteSampleApp/CompleteSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:README.md">
-   </FileRef>
-   <FileRef
       location = "group:OptionsSampleApp/OptionsSampleApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:IMASampleApp/IMASampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
    </FileRef>
 </Workspace>
