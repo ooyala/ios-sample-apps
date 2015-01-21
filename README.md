@@ -12,11 +12,13 @@
   6. The Text in Base.lproj/LaunchScreen.xib
   7. The Custom Class of the Master Scene's master View in Main.Storyboard
 4. In the SampleApp Target's General tab, choose the plist for your sample app (The folder name was changed)
-5. Drag the project from Xcode's Sidebar into the Sample App Workspace's Xcode Sidebar
-6. Close both XCode windows, reopen the Sample App Workspace window
-7. In the CompleteSampleApp's target's build phases, Add your New Sample App's Source Code Library to your "Link Binary with Libraries" phases
-8. open up the Lists/CompleteSampleAppViewController.
-9. Add your new project as a ListSelectionOption to the List generation method
+5. In the SampleappSource target's build phases, make sure that in the "CompileSources" step, your ListViewController and PlayerViewControllers are compiled into the library
+6. Drag the project from Xcode's Sidebar into the Sample App Workspace's Xcode Sidebar
+7. Close both XCode windows, reopen the Sample App Workspace window
+8. In the CompleteSampleApp's target's build phases, Add your New Sample App's Source Code Library to your "Link Binary with Libraries" phases
+9. open up the Lists/CompleteSampleAppViewController.
+10. Add your new project as a ListSelectionOption to the List generation method
+
 
 # To Add a New Vendor Library to your Sample App
 1. Ensure the library is in the Vendor folder.
