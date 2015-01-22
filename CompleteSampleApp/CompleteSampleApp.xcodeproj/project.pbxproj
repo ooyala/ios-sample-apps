@@ -29,6 +29,7 @@
 		0B9801101A40DFD600E7DE88 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B98010D1A40DFD600E7DE88 /* TableCell.xib */; };
 		0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801111A40E02000E7DE88 /* LaunchScreen.xib */; };
 		0BA5476C1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		0BDDD7C01A7174A500C2D33D /* libBasicPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDDD7BF1A7174A500C2D33D /* libBasicPlaybackSampleAppSource.a */; };
 		0BF4F9FB1A68513E0050A602 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4F9FA1A68513E0050A602 /* PlayerDoubleSwitch.xib */; };
 		0BF4F9FD1A68514F0050A602 /* libOptionsSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */; };
 		0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */; };
@@ -140,6 +141,8 @@
 		0B98010D1A40DFD600E7DE88 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		0B9801121A40E02000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
+		0BDDD7BD1A70AC4D00C2D33D /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
+		0BDDD7BF1A7174A500C2D33D /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4F9FA1A68513E0050A602 /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
 		0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOptionsSampleAppSource.a; path = "../OptionsSampleApp/build/Debug-iphoneos/libOptionsSampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMASampleAppSource.a; path = "../IMASampleApp/build/Debug-iphoneos/libIMASampleAppSource.a"; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDDD7C01A7174A500C2D33D /* libBasicPlaybackSampleAppSource.a in Frameworks */,
 				0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */,
 				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
 				0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */,
@@ -297,6 +301,8 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BDDD7BF1A7174A500C2D33D /* libBasicPlaybackSampleAppSource.a */,
+				0BDDD7BD1A70AC4D00C2D33D /* libBasicPlaybackSampleAppSource.a */,
 				0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */,
 				0B1E45C21A68895A0092F056 /* AdSupport.framework */,
 				0B1E45C01A6889510092F056 /* MessageUI.framework */,
@@ -757,6 +763,7 @@
 					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
 					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
 					"/Users/michael.len/repos/ios_sample_apps/FreewheelSampleApp/build/Debug-iphoneos",
+					"/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -784,6 +791,7 @@
 					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
 					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
 					"/Users/michael.len/repos/ios_sample_apps/FreewheelSampleApp/build/Debug-iphoneos",
+					"/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
