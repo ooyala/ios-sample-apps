@@ -8,6 +8,7 @@
 #import "CompleteSampleAppListViewController.h"
 #import "SimplePlayerViewController.h"
 #import "BasicPlaybackListViewController.h"
+#import "AdvancedPlaybackListViewController.h"
 #import "OptionsListTableViewController.h"
 #import "IMAPlaybackListViewcontroller.h"
 #import "FreewheelPlaybackListViewcontroller.h"
@@ -49,10 +50,11 @@
  *
  */
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"AdvancedPlaybackSampleApp" listViewController: [BasicPlaybackListViewController class]]];
+  [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"AdvancedPlaybackSampleApp" listViewController: [AdvancedPlaybackListViewController class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"OptionsSampleApp" listViewController: [OptionsListTableViewController class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"IMASampleApp" listViewController: [IMAPlaybackListViewcontroller class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"FreewheelSampleApp" listViewController: [FreewheelPlaybackListViewcontroller class]]];
+    [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"BasicPlaybackSampleApp" listViewController: [BasicPlaybackListViewController class]]];
 }
 
 - (void)viewDidLoad {
