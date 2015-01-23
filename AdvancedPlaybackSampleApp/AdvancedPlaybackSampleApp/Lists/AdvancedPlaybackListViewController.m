@@ -1,23 +1,23 @@
 /**
- * @class      BasicPlaybackListViewController BasicPlaybackListViewController.m "BasicPlaybackListViewController.m"
+ * @class      AdvancedPlaybackListViewController AdvancedPlaybackListViewController.m "AdvancedPlaybackListViewController.m"
  * @brief      A list of playback examples that demonstrate basic playback
  * @date       12/12/14
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import "BasicPlaybackListViewController.h"
+#import "AdvancedPlaybackListViewController.h"
 #import "SimplePlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
-@interface BasicPlaybackListViewController ()
+@interface AdvancedPlaybackListViewController ()
 @property NSMutableArray *options;
 @end
 
-@implementation BasicPlaybackListViewController
+@implementation AdvancedPlaybackListViewController
 
 - (id)init {
   self = [super init];
-  self.title = @"Basic Playback";
+  self.title = @"Advanced Playback";
   return self;
 }
 - (void)addAllPlayerSelectionOptions {
