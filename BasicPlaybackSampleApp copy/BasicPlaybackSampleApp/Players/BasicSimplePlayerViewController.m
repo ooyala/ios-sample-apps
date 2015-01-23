@@ -24,7 +24,7 @@
 
 - (id)initWithPlayerSelectionOption:(BasicPlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSingleButton";
+  self.nib = @"PlayerSimple";
   self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
   self.playerDomain = @"http://www.ooyala.com";
 
