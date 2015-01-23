@@ -24,12 +24,12 @@
 		0B1E45CE1A688A610092F056 /* OOFreewheelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B1E45CB1A688A610092F056 /* OOFreewheelManager.h */; };
 		0B1E45CF1A688A610092F056 /* libOoyalaFreewheelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45CC1A688A610092F056 /* libOoyalaFreewheelSDK.a */; };
 		0B2459D11A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */; };
+		0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */; };
 		0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E21A40DF7000E7DE88 /* Main.storyboard */; };
 		0B98010E1A40DFD600E7DE88 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B98010B1A40DFD600E7DE88 /* PlayerSimple.xib */; };
 		0B98010F1A40DFD600E7DE88 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B98010C1A40DFD600E7DE88 /* PlayerSingleButton.xib */; };
 		0B9801101A40DFD600E7DE88 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B98010D1A40DFD600E7DE88 /* TableCell.xib */; };
 		0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801111A40E02000E7DE88 /* LaunchScreen.xib */; };
-		0BA5476C1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		0BF4F9FB1A68513E0050A602 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4F9FA1A68513E0050A602 /* PlayerDoubleSwitch.xib */; };
 		0BF4F9FD1A68514F0050A602 /* libOptionsSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */; };
 		0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */; };
@@ -137,6 +137,7 @@
 		0B1E45CC1A688A610092F056 /* libOoyalaFreewheelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaFreewheelSDK.a; sourceTree = "<group>"; };
 		0B2459CE1A72CA3500CC399A /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp copy/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
 		0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp copy/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
+		0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
 		0B9800E31A40DF7000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B98010B1A40DFD600E7DE88 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0B98010C1A40DFD600E7DE88 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
@@ -232,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
 				0B2459D11A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a in Frameworks */,
 				0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */,
 				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
@@ -242,7 +244,6 @@
 				0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */,
 				0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */,
 				0BF4F9FD1A68514F0050A602 /* libOptionsSampleAppSource.a in Frameworks */,
-				0BA5476C1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
 				0BF4FC271A6877470050A602 /* libGoogleIMA3.a in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
 				0BF4FC291A6877470050A602 /* libOoyalaSDK.a in Frameworks */,
@@ -301,6 +302,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */,
 				0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */,
 				0B2459CE1A72CA3500CC399A /* libBasicPlaybackSampleAppSource.a */,
 				0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */,
@@ -767,6 +769,7 @@
 					"copy/build/Debug-iphoneos",
 					/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp,
 					"copy/build/Debug-iphoneos",
+					"/Users/yigu/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -798,6 +801,7 @@
 					"copy/build/Debug-iphoneos",
 					/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp,
 					"copy/build/Debug-iphoneos",
+					"/Users/yigu/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";

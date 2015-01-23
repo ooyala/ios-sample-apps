@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import "AdvancedPlaybackSampleAppSource.h"
+#import "BaiscPlaybackSampleAppSource.h"
 
 @implementation BasicPlaybackSampleAppSource
 
