@@ -22,7 +22,7 @@
 
 @implementation BasicSimplePlayerViewController
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+- (id)initWithPlayerSelectionOption:(BasicPlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSingleButton";
   self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
