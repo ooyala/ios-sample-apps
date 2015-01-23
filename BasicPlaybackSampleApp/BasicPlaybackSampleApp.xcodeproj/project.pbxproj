@@ -13,26 +13,27 @@
 		0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8A1A2E53A6001324EE /* AVFoundation.framework */; };
 		0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
-		0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
-		0B19FED41A3A901F003E57DF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */; };
-		0B19FEDE1A3AB4B4003E57DF /* SimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */; };
-		0B19FEDF1A3AB4B4003E57DF /* SimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */; };
+		0B19FED01A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h */; };
+		0B19FED41A3A901F003E57DF /* BasicSampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* BasicSampleAppPlayerViewController.m */; };
+		0B19FEDE1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */; };
+		0B19FEDF1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEDD1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m */; };
 		0B19FEE31A3AB4BC003E57DF /* BasicPlaybackListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
 		0B19FEE41A3AB4BC003E57DF /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* BasicPlaybackListViewController.m */; };
-		0B19FEF81A3AB608003E57DF /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
-		0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */; };
-		0B19FF011A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */; };
-		0B19FF031A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */; };
-		0B19FF161A3B755A003E57DF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */; };
-		0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */; };
+		0B19FEF81A3AB608003E57DF /* BasicPlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* BasicPlayerSelectionOption.h */; };
+		0B19FEF91A3AB608003E57DF /* BasicPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* BasicPlayerSelectionOption.m */; };
+		0B19FF031A3B7533003E57DF /* BasicPlaybackSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF021A3B7533003E57DF /* BasicPlaybackSampleAppSource.m */; };
+		0B19FF161A3B755A003E57DF /* BasicPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* BasicPlayerSelectionOption.m */; };
+		0B19FF181A3B755A003E57DF /* BasicSampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* BasicSampleAppPlayerViewController.m */; };
 		0B19FF1A1A3B755A003E57DF /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* BasicPlaybackListViewController.m */; };
-		0B19FF1C1A3B755A003E57DF /* SimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */; };
-		0B19FF2A1A3B780B003E57DF /* SampleAppPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
+		0B19FF1C1A3B755A003E57DF /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEDD1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m */; };
+		0B19FF2A1A3B780B003E57DF /* BasicSampleAppPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h */; };
 		0B19FF2B1A3B780B003E57DF /* BasicPlaybackListViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
-		0B19FF601A3B80FB003E57DF /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
-		0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
+		0B19FF601A3B80FB003E57DF /* BasicPlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* BasicPlayerSelectionOption.h */; };
+		0B19FF611A3B80FB003E57DF /* BasicSampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h */; };
 		0B19FF621A3B80FB003E57DF /* BasicPlaybackListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */; };
-		0B19FF631A3B80FB003E57DF /* SimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */; };
+		0B19FF631A3B80FB003E57DF /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */; };
+		0B2459CC1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */; };
+		0B2459CD1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */; };
 		0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E51A40DF9A00E7DE88 /* LaunchScreen.xib */; };
 		0B9801061A40DFD300E7DE88 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */; };
 		0B9801071A40DFD300E7DE88 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */; };
@@ -96,7 +97,7 @@
 		0BF4FD181A68808A0050A602 /* OOVASTWrapperAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FCDE1A68808A0050A602 /* OOVASTWrapperAd.h */; };
 		0BF4FD191A68808A0050A602 /* OOVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FCDF1A68808A0050A602 /* OOVideo.h */; };
 		0BF4FD1A1A68808A0050A602 /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FCE01A68808A0050A602 /* libOoyalaSDK.a */; };
-		0BF4FD1B1A68814D0050A602 /* SimplePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */; };
+		0BF4FD1B1A68814D0050A602 /* BasicSimplePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,10 +107,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				0BF4FD1B1A68814D0050A602 /* SimplePlayerViewController.h in CopyFiles */,
-				0B19FF2A1A3B780B003E57DF /* SampleAppPlayerViewController.h in CopyFiles */,
+				0BF4FD1B1A68814D0050A602 /* BasicSimplePlayerViewController.h in CopyFiles */,
+				0B19FF2A1A3B780B003E57DF /* BasicSampleAppPlayerViewController.h in CopyFiles */,
 				0B19FF2B1A3B780B003E57DF /* BasicPlaybackListViewController.h in CopyFiles */,
-				0B19FF011A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,18 +125,18 @@
 		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
-		0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
-		0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePlayerViewController.h; sourceTree = "<group>"; };
-		0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerViewController.m; sourceTree = "<group>"; };
+		0B19FECF1A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSampleAppPlayerViewController.h; sourceTree = "<group>"; };
+		0B19FED31A3A901F003E57DF /* BasicSampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSampleAppPlayerViewController.m; sourceTree = "<group>"; };
+		0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
+		0B19FEDD1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSimplePlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEE11A3AB4BC003E57DF /* BasicPlaybackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicPlaybackListViewController.h; sourceTree = "<group>"; };
 		0B19FEE21A3AB4BC003E57DF /* BasicPlaybackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicPlaybackListViewController.m; sourceTree = "<group>"; };
 		0B19FEF31A3AB57E003E57DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
-		0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		0B19FEF61A3AB608003E57DF /* BasicPlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicPlayerSelectionOption.h; sourceTree = "<group>"; };
+		0B19FEF71A3AB608003E57DF /* BasicPlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicPlayerSelectionOption.m; sourceTree = "<group>"; };
 		0B19FEFE1A3B7532003E57DF /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBasicPlaybackSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedPlaybackSampleAppSource.h; sourceTree = "<group>"; };
-		0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedPlaybackSampleAppSource.m; sourceTree = "<group>"; };
+		0B19FF021A3B7533003E57DF /* BasicPlaybackSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicPlaybackSampleAppSource.m; sourceTree = "<group>"; };
+		0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiscPlaybackSampleAppSource.h; sourceTree = "<group>"; };
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
@@ -282,8 +282,8 @@
 		0B19FEDB1A3AB4B4003E57DF /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				0B19FEDC1A3AB4B4003E57DF /* SimplePlayerViewController.h */,
-				0B19FEDD1A3AB4B4003E57DF /* SimplePlayerViewController.m */,
+				0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */,
+				0B19FEDD1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -309,10 +309,10 @@
 		0B19FEF51A3AB5A2003E57DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */,
-				0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */,
-				0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */,
-				0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */,
+				0B19FEF61A3AB608003E57DF /* BasicPlayerSelectionOption.h */,
+				0B19FEF71A3AB608003E57DF /* BasicPlayerSelectionOption.m */,
+				0B19FECF1A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h */,
+				0B19FED31A3A901F003E57DF /* BasicSampleAppPlayerViewController.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -320,8 +320,8 @@
 		0B19FEFF1A3B7532003E57DF /* BasicPlaybackSampleAppSource */ = {
 			isa = PBXGroup;
 			children = (
-				0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */,
-				0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */,
+				0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */,
+				0B19FF021A3B7533003E57DF /* BasicPlaybackSampleAppSource.m */,
 			);
 			path = BasicPlaybackSampleAppSource;
 			sourceTree = "<group>";
@@ -449,7 +449,7 @@
 				0BF4FCE21A68808A0050A602 /* OOAdPluginManagerProtocol.h in Headers */,
 				0BF4FCF11A68808A0050A602 /* OODefaultPlayerInfo.h in Headers */,
 				0BF4FCFD1A68808A0050A602 /* OOOoyalaAPIClient.h in Headers */,
-				0B19FEF81A3AB608003E57DF /* PlayerSelectionOption.h in Headers */,
+				0B19FEF81A3AB608003E57DF /* BasicPlayerSelectionOption.h in Headers */,
 				0BF4FD051A68808A0050A602 /* OOPlayer.h in Headers */,
 				0BF4FCE31A68808A0050A602 /* OOAdSpot.h in Headers */,
 				0BF4FCE41A68808A0050A602 /* OOAdSpotManager.h in Headers */,
@@ -467,6 +467,7 @@
 				0BF4FCF71A68808A0050A602 /* OOFCCTVRatingConfiguration.h in Headers */,
 				0BF4FD021A68808A0050A602 /* OOOrderedDictionary.h in Headers */,
 				0BF4FCFC1A68808A0050A602 /* OOOoyalaAdSpot.h in Headers */,
+				0B2459CC1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h in Headers */,
 				0BF4FCEE1A68808A0050A602 /* OOClosedCaptionsStyle.h in Headers */,
 				0BF4FCE51A68808A0050A602 /* OOAdSpotPlugin.h in Headers */,
 				0BF4FD091A68808A0050A602 /* OOReturnState.h in Headers */,
@@ -477,11 +478,11 @@
 				0BF4FCFA1A68808A0050A602 /* OOManagedAdSpot.h in Headers */,
 				0BF4FCEC1A68808A0050A602 /* OOClientId.h in Headers */,
 				0BF4FCE71A68808A0050A602 /* OOAuthorizableItem.h in Headers */,
-				0B19FEDE1A3AB4B4003E57DF /* SimplePlayerViewController.h in Headers */,
+				0B19FEDE1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h in Headers */,
 				0BF4FD031A68808A0050A602 /* OOPaginatedParentItem.h in Headers */,
 				0BF4FCF51A68808A0050A602 /* OOEmbedTokenGenerator.h in Headers */,
 				0BF4FD041A68808A0050A602 /* OOPlayableItem.h in Headers */,
-				0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */,
+				0B19FED01A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h in Headers */,
 				0BF4FD111A68808A0050A602 /* OOVASTAd.h in Headers */,
 				0BF4FCED1A68808A0050A602 /* OOClosedCaptions.h in Headers */,
 				0BF4FD061A68808A0050A602 /* OOPlayerDomain.h in Headers */,
@@ -493,10 +494,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B19FF601A3B80FB003E57DF /* PlayerSelectionOption.h in Headers */,
-				0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */,
+				0B19FF601A3B80FB003E57DF /* BasicPlayerSelectionOption.h in Headers */,
+				0B2459CD1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h in Headers */,
+				0B19FF611A3B80FB003E57DF /* BasicSampleAppPlayerViewController.h in Headers */,
 				0B19FF621A3B80FB003E57DF /* BasicPlaybackListViewController.h in Headers */,
-				0B19FF631A3B80FB003E57DF /* SimplePlayerViewController.h in Headers */,
+				0B19FF631A3B80FB003E57DF /* BasicSimplePlayerViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,9 +599,9 @@
 			files = (
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
-				0B19FEDF1A3AB4B4003E57DF /* SimplePlayerViewController.m in Sources */,
-				0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */,
-				0B19FED41A3A901F003E57DF /* SampleAppPlayerViewController.m in Sources */,
+				0B19FEDF1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m in Sources */,
+				0B19FEF91A3AB608003E57DF /* BasicPlayerSelectionOption.m in Sources */,
+				0B19FED41A3A901F003E57DF /* BasicSampleAppPlayerViewController.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* BasicPlaybackListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,11 +610,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B19FF161A3B755A003E57DF /* PlayerSelectionOption.m in Sources */,
-				0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */,
+				0B19FF161A3B755A003E57DF /* BasicPlayerSelectionOption.m in Sources */,
+				0B19FF181A3B755A003E57DF /* BasicSampleAppPlayerViewController.m in Sources */,
 				0B19FF1A1A3B755A003E57DF /* BasicPlaybackListViewController.m in Sources */,
-				0B19FF1C1A3B755A003E57DF /* SimplePlayerViewController.m in Sources */,
-				0B19FF031A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m in Sources */,
+				0B19FF1C1A3B755A003E57DF /* BasicSimplePlayerViewController.m in Sources */,
+				0B19FF031A3B7533003E57DF /* BasicPlaybackSampleAppSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,8 @@
  */
 
 #import "BasicPlaybackListViewController.h"
-#import "SimplePlayerViewController.h"
-#import "PlayerSelectionOption.h"
+#import "BasicSimplePlayerViewController.h"
+#import "BasicPlayerSelectionOption.h"
 
 @interface BasicPlaybackListViewController ()
 @property NSMutableArray *options;
@@ -20,11 +20,11 @@
   self.title = @"Basic Playback";
   return self;
 }
-- (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"HLS Video" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [SimplePlayerViewController class]]];
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"MP4 Video" embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx" viewController: [SimplePlayerViewController class]]];
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"VOD with CCs" embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww" viewController: [SimplePlayerViewController class]]];
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"4:3 Aspect Ratio" embedCode:@"FwaXZjcjrkydIftLal2cq9ymQMuvjvD8" viewController: [SimplePlayerViewController class]]];
+- (void)addAllBasicPlayerSelectionOptions {
+  [self insertNewObject: [[BasicPlayerSelectionOption alloc] initWithTitle:@"HLS Video" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [BasicSimplePlayerViewController class]]];
+    [self insertNewObject: [[BasicPlayerSelectionOption alloc] initWithTitle:@"MP4 Video" embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx" viewController: [BasicSimplePlayerViewController class]]];
+    [self insertNewObject: [[BasicPlayerSelectionOption alloc] initWithTitle:@"VOD with CCs" embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww" viewController: [BasicSimplePlayerViewController class]]];
+    [self insertNewObject: [[BasicPlayerSelectionOption alloc] initWithTitle:@"4:3 Aspect Ratio" embedCode:@"FwaXZjcjrkydIftLal2cq9ymQMuvjvD8" viewController: [BasicSimplePlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
@@ -32,10 +32,10 @@
   self.navigationController.navigationBar.translucent = NO;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
-  [self addAllPlayerSelectionOptions];
+  [self addAllBasicPlayerSelectionOptions];
 }
 
-- (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
+- (void)insertNewObject:(BasicPlayerSelectionOption *)selectionObject {
   if (!self.options) {
       self.options = [[NSMutableArray alloc] init];
   }
@@ -61,7 +61,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
 
-  PlayerSelectionOption *selection = self.options[indexPath.row];
+  BasicPlayerSelectionOption *selection = self.options[indexPath.row];
   cell.textLabel.text = [selection title];
   return cell;
 }
@@ -73,8 +73,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   // When a row is selected, load its desired PlayerViewController
-  PlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  BasicPlayerSelectionOption *selection = self.options[indexPath.row];
+  BasicSampleAppPlayerViewController *controller = [(BasicSampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
   [self.navigationController pushViewController:controller animated:YES];
 }
 
