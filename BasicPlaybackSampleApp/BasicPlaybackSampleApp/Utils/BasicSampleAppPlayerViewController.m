@@ -12,6 +12,10 @@
 #import "BasicSampleAppPlayerViewController.h"
 
 @implementation BasicSampleAppPlayerViewController
+- (IBAction)playAdsEmbedCode:(UIButton *)sender {
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.adsEmbedcodeList[self.selectedRow]];
+}
+
 - (id)initWithPlayerSelectionOption:(BasicPlayerSelectionOption *)playerSelectionOption {
   self = [super init];
   if (self) {
@@ -21,4 +25,29 @@
 }
 
 - (IBAction)onButtonClick:(id)sender {}
+
+#pragma mark -
+#pragma mark PickerView DataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+  return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+  return [self.adsList count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+  return [self.adsList objectAtIndex:row];
+}
+
+#pragma mark -
+#pragma mark PickerView Delegate
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
+       inComponent:(NSInteger)component {
+  _selectedRow = row;
+  
+}
+
 @end

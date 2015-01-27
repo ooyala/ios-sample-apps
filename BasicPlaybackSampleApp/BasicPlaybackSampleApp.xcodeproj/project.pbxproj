@@ -34,6 +34,7 @@
 		0B19FF631A3B80FB003E57DF /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */; };
 		0B2459CC1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */; };
 		0B2459CD1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */; };
+		0B37DD851A782F640087F8C2 /* PlayerAds.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B37DD841A782F640087F8C2 /* PlayerAds.xib */; };
 		0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E51A40DF9A00E7DE88 /* LaunchScreen.xib */; };
 		0B9801061A40DFD300E7DE88 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */; };
 		0B9801071A40DFD300E7DE88 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */; };
@@ -137,6 +138,7 @@
 		0B19FEFE1A3B7532003E57DF /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBasicPlaybackSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B19FF021A3B7533003E57DF /* BasicPlaybackSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicPlaybackSampleAppSource.m; sourceTree = "<group>"; };
 		0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiscPlaybackSampleAppSource.h; sourceTree = "<group>"; };
+		0B37DD841A782F640087F8C2 /* PlayerAds.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerAds.xib; sourceTree = "<group>"; };
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 		0B9801021A40DFD300E7DE88 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0B37DD841A782F640087F8C2 /* PlayerAds.xib */,
 				0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */,
 				0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */,
 				0B9801051A40DFD300E7DE88 /* TableCell.xib */,
@@ -586,6 +589,7 @@
 				0B9801061A40DFD300E7DE88 /* PlayerSimple.xib in Resources */,
 				0B9801071A40DFD300E7DE88 /* PlayerSingleButton.xib in Resources */,
 				0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */,
+				0B37DD851A782F640087F8C2 /* PlayerAds.xib in Resources */,
 				0B9801081A40DFD300E7DE88 /* TableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
