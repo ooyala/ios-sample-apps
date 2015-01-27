@@ -20,6 +20,6 @@
       location = "group:FreewheelSampleApp/FreewheelSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BasicPlaybackSampleApp copy/BasicPlaybackSampleApp.xcodeproj">
+      location = "group:BasicPlaybackSampleApp/BasicPlaybackSampleApp.xcodeproj">
    </FileRef>
 </Workspace>
