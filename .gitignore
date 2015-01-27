@@ -13,3 +13,6 @@ sdk/build/*
 xcuserdata
 profile
 *.moved-aside
+
+go_script/pkg
+go_script/bin
