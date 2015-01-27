@@ -760,16 +760,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/michael.len/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
-					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
-					"/Users/michael.len/repos/ios_sample_apps/FreewheelSampleApp/build/Debug-iphoneos",
-					/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp,
-					"copy/build/Debug-iphoneos",
-					/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp,
-					"copy/build/Debug-iphoneos",
-					"/Users/yigu/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -792,16 +783,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/michael.len/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
-					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
-					"/Users/michael.len/repos/ios_sample_apps/FreewheelSampleApp/build/Debug-iphoneos",
-					/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp,
-					"copy/build/Debug-iphoneos",
-					/Users/yigu/repos/ios_sample_apps/BasicPlaybackSampleApp,
-					"copy/build/Debug-iphoneos",
-					"/Users/yigu/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";

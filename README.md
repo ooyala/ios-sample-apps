@@ -1,4 +1,51 @@
+Ooyala SDK for iOS Sample Apps
+==================================
 
+This is a repository of sample applications for the Ooyala SDK for iOS.
+
+# Provided Sample Apps
+
+Below is a short description of the sample applications provided in the repository.
+
+## BasicPlaybackSampleApp
+
+This application is designed to illustrate very basic video playback
+
+## AdvancedPlaybackSampleApp
+
+This application was designed to illustrate some advanced functionality you can add into a Player Activity through the OoyalaSDK.
+
+## FreewheelSampleApp
+
+This application was designed to illustrate how correctly configured Freewheel assets play back using the Ooyala SDK.
+
+## IMASampleApp
+
+This application was designed to illustrate how correctly configured Google IMA assets play back using the Ooyala SDK.
+
+## CompleteSampleApp
+
+The CompleteSampleApp is a compilation of all of the other sample apps in the repo.  You must view this project through SampleApps.xcworkspace to run without modification
+
+# Make commands
+
+The different commands available for you:
+
+## `make get-latest-rc`
+
+`make get-latest-rc` will:
+
+1. delete existing librarys in `vendor` folder
+2. download the latest release candidate packages for the iOS SDK into the `vendor` folder
+3. All applications will point to the newly updated vendor folder
+
+## `make get-latest-release`
+
+`make get-latest-release` will:
+
+1. delete existing librarys in `vendor` folder
+2. download the latest release package for the iOS SDK into the `vendor` folder
+3. All applications will point to the newly updated vendor folder
 
 # How to Create a New Sample App
 1. Duplicate an originally existing sample app in Finder (use cp --preserve=links)
