@@ -12,7 +12,7 @@
 #import "BasicPlayerSelectionOption.h"
 #import "OOOoyalaPlayerViewController.h"
 
-@interface BasicSampleAppPlayerViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface BasicSampleAppPlayerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
@@ -24,15 +24,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
 
 @property (strong, nonatomic) BasicPlayerSelectionOption *playerSelectionOption;
-
-@property (strong, nonatomic) NSMutableArray *adsList;
-@property (strong, nonatomic) NSMutableArray *adsEmbedcodeList;
-
-@property (strong, nonatomic) IBOutlet UIPickerView *adsPicker;
-@property (nonatomic) NSInteger selectedRow;
-
-@property (strong, nonatomic) IBOutlet UIButton *playButton;
-- (IBAction)playAdsEmbedCode:(UIButton *)sender;
 
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
