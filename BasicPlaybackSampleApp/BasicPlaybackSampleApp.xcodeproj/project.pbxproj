@@ -13,6 +13,7 @@
 		0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8A1A2E53A6001324EE /* AVFoundation.framework */; };
 		0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
+		0B17A0ED1A78207F009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0EC1A78207F009D1C50 /* libc++.dylib */; };
 		0B19FED01A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h */; };
 		0B19FED41A3A901F003E57DF /* BasicSampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* BasicSampleAppPlayerViewController.m */; };
 		0B19FEDE1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */; };
@@ -125,6 +126,7 @@
 		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0B17A0EC1A78207F009D1C50 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B19FECF1A3A8E6C003E57DF /* BasicSampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0B19FED31A3A901F003E57DF /* BasicSampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B17A0ED1A78207F009D1C50 /* libc++.dylib in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
 				0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */,
 				0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */,
@@ -271,6 +274,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B17A0EC1A78207F009D1C50 /* libc++.dylib */,
 				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
 				0B140F8C1A2E53B0001324EE /* Security.framework */,
 				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,

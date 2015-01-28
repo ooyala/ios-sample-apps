@@ -13,6 +13,7 @@
 		0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8A1A2E53A6001324EE /* AVFoundation.framework */; };
 		0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
+		0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0E41A78203E009D1C50 /* libc++.dylib */; };
 		0B19FF6A1A3B8C75003E57DF /* CompleteSampleAppListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */; };
 		0B19FF6B1A3B8C75003E57DF /* CompleteSampleAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */; };
 		0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45BC1A6889440092F056 /* EventKit.framework */; };
@@ -124,6 +125,7 @@
 		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0B17A0E41A78203E009D1C50 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteSampleAppListViewController.h; sourceTree = "<group>"; };
 		0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteSampleAppListViewController.m; sourceTree = "<group>"; };
 		0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
 				0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
 				0B2459D11A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a in Frameworks */,
 				0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */,
@@ -302,6 +305,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B17A0E41A78203E009D1C50 /* libc++.dylib */,
 				0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */,
 				0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */,
 				0B2459CE1A72CA3500CC399A /* libBasicPlaybackSampleAppSource.a */,
