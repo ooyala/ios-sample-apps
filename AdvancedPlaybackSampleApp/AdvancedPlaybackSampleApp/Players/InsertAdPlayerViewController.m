@@ -1,18 +1,18 @@
 /**
- * @class      SimplePlayerViewController SimplePlayerViewController.m "SimplePlayerViewController.m"
+ * @class      InsertAdPlayerViewController InsertAdPlayerViewController.m "InsertAdPlayerViewController.m"
  * @brief      A Player that can be used to simply load an embed code and play it
- * @details    SimplePlayerViewController in Ooyala Sample Apps
+ * @details    InsertAdPlayerViewController in Ooyala Sample Apps
  * @date       12/12/14
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
 
-#import "SimplePlayerViewController.h"
+#import "InsertAdPlayerViewController.h"
 #import "OOOoyalaPlayerViewController.h"
 #import "OOOoyalaPlayer.h"
 #import "OOPlayerDomain.h"
 
-@interface SimplePlayerViewController ()
+@interface InsertAdPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property NSString *embedCode;
 @property NSString *nib;
@@ -20,11 +20,11 @@
 @property NSString *playerDomain;
 @end
 
-@implementation SimplePlayerViewController
+@implementation InsertAdPlayerViewController
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSingleButton";
+  self.nib = @"PlayerSimple";
   self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
   self.playerDomain = @"http://www.ooyala.com";
 
