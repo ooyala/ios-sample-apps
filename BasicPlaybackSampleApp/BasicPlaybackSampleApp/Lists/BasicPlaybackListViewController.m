@@ -22,6 +22,7 @@
   self.title = @"Basic Playback";
   return self;
 }
+
 - (void)addAllBasicPlayerSelectionOptions {
   for(long i = [self.optionList count] - 1; i >= 0; i--) {
     [self insertNewObject: [[BasicPlayerSelectionOption alloc] initWithTitle:[self.optionList objectAtIndex:i] embedCode:[self.optionEmbedCodes objectAtIndex:i] viewController: [BasicSimplePlayerViewController class]]];
@@ -29,8 +30,6 @@
 }
 
 - (void) initTitlesAndEmbedCodes {
-  
-  
   self.optionList = [[NSMutableArray alloc] initWithObjects:
                      @"HLS Video",
                      @"MP4 Video",
@@ -113,5 +112,4 @@
   BasicSampleAppPlayerViewController *controller = [(BasicSampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
   [self.navigationController pushViewController:controller animated:YES];
 }
-
 @end

@@ -74,5 +74,4 @@
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime]);
 }
-
 @end
