@@ -9,8 +9,8 @@
 
 #import "PluginPlayerViewController.h"
 #import "OOOoyalaPlayerViewController.h"
-#import "OOOoyalaPlayer.h"
 #import "OOPlayerDomain.h"
+#import "OOSamplePlugin.h"
 
 @interface PluginPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -44,11 +44,6 @@
   [super viewDidLoad];
   // Create Ooyala ViewController
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
-
-//  OOOoyalaPlayer *player = self.ooyalaPlayerViewController.player;
-  
-//  OOSamplePlugin *plugin = [[OOSamplePlugin alloc] initWithPlayer:player];
-//  [player registerPlugin:plugin];
   
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
@@ -59,6 +54,11 @@
   [self addChildViewController:_ooyalaPlayerViewController];
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  
+  
+  
+  OOSamplePlugin *plugin = [[OOSamplePlugin alloc] initWithPlayer:self.ooyalaPlayerViewController.player];
+  [self.ooyalaPlayerViewController.player registerPlugin:plugin];
 
   // Load the video
   [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
