@@ -45,6 +45,11 @@
   // Create Ooyala ViewController
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
 
+//  OOOoyalaPlayer *player = self.ooyalaPlayerViewController.player;
+  
+//  OOSamplePlugin *plugin = [[OOSamplePlugin alloc] initWithPlayer:player];
+//  [player registerPlugin:plugin];
+  
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil

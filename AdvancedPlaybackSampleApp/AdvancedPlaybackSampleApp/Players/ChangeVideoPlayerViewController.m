@@ -24,7 +24,7 @@
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSimple";
+  self.nib = @"PlayerDoubleButton";
   self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
   self.playerDomain = @"http://www.ooyala.com";
 
@@ -40,8 +40,25 @@
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
 }
 
+- (IBAction)onLeftBtnClick:(UIButton *)sender
+{
+  [self.ooyalaPlayerViewController.player setEmbedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"];
+  [self.ooyalaPlayerViewController.player play];
+}
+
+- (IBAction)onRightBtnClick:(UIButton *)sender
+{
+  [self.ooyalaPlayerViewController.player setEmbedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx"];
+  [self.ooyalaPlayerViewController.player play];
+}
+
+
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  [self.button1 setTitle:@"Play Video 1" forState:UIControlStateNormal];
+  [self.button2 setTitle:@"Play Video 2" forState:UIControlStateNormal];
+  
   // Create Ooyala ViewController
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
 

@@ -21,4 +21,10 @@
 }
 
 - (IBAction)onButtonClick:(id)sender {}
+
+- (IBAction)onLeftBtnClick:(UIButton *)sender {
+}
+
+- (IBAction)onRightBtnClick:(UIButton *)sender {
+}
 @end

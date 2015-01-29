@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasicSampleAppPlayerViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleAppPlayerViewController">
             <connections>
                 <outlet property="button1" destination="cHv-DS-i8m" id="P0h-ZH-n0z"/>
                 <outlet property="playerView" destination="xFJ-Sp-qsh" id="ZNM-Ah-Xna"/>
