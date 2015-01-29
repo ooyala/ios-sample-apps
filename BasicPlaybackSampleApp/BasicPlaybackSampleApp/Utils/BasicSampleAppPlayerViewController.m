@@ -12,6 +12,7 @@
 #import "BasicSampleAppPlayerViewController.h"
 
 @implementation BasicSampleAppPlayerViewController
+
 - (id)initWithPlayerSelectionOption:(BasicPlayerSelectionOption *)playerSelectionOption {
   self = [super init];
   if (self) {

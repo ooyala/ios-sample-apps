@@ -8,5 +8,4 @@
 #import <UIKit/UIKit.h>
 
 @interface BasicPlaybackListViewController : UITableViewController <UITableViewDelegate>
-
 @end

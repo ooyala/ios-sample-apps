@@ -10,8 +10,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BasicPlayerSelectionOption.h"
+#import "OOOoyalaPlayerViewController.h"
 
 @interface BasicSampleAppPlayerViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
@@ -22,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
 
 @property (strong, nonatomic) BasicPlayerSelectionOption *playerSelectionOption;
+
+@property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
 - (id)initWithPlayerSelectionOption:(BasicPlayerSelectionOption *)playerSelectionOption;
 

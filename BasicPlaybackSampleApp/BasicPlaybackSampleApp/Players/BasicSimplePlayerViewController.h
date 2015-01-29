@@ -11,5 +11,6 @@
 #import "BasicSampleAppPlayerViewController.h"
 
 @interface BasicSimplePlayerViewController : BasicSampleAppPlayerViewController
+
 @end
 
