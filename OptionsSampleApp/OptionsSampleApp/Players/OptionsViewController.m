@@ -94,9 +94,6 @@
 */
 
 - (IBAction)onButtonClick:(id)sender {
-  NSString *const PCODE        = @"BidTQxOqebpNk1rVsjs2sUJSTOZc";
-  NSString *const PLAYERDOMAIN = @"http://www.ooyala.com";
-
   OOOptions *options = [OOOptions new];
   if (_switch1 != nil) {
     options.showPromoImage = _switch1.on;
