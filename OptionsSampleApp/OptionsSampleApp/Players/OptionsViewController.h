@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SampleAppPlayerViewController.h"
 
-@interface OptionsViewController : UIViewController
+@interface OptionsViewController : SampleAppPlayerViewController
 
-@property NSString *embedCode;
 @property int initialTime;
 
 @end

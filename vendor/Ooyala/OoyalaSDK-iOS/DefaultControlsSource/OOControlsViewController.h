@@ -42,6 +42,9 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 - (void)updateClosedCaptionsPosition;
 
 // calculate and set visibility of CC button.
--(void)updateClosedCaptionsButton;
+- (void)updateClosedCaptionsButton;
+
+// toggle the control buttons.
+- (void)toggleControls;
 
 @end

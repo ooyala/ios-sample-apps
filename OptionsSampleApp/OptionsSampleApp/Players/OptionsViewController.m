@@ -13,43 +13,64 @@
 
 @interface OptionsViewController () <UITextFieldDelegate>
 
-@property IBOutlet UILabel *label1;
-@property IBOutlet UILabel *label2;
-@property IBOutlet UISwitch *switch1;
-@property IBOutlet UISwitch *switch2;
-@property IBOutlet UITextField *text1;
-@property IBOutlet UITextField *text2;
 @property IBOutlet UIButton *button;
 @property IBOutlet UIView *playerView;
 
 @property OOOoyalaPlayerViewController* playerViewController;
-
-- (IBAction)onButton:(id)sender;
+@property NSString *nib;
+@property NSString *pcode;
+@property NSString *playerDomain;
 
 @end
 
 @implementation OptionsViewController
 
+@synthesize switchLabel1 = _switchLabel1;
+@synthesize switchLabel2 = _switchLabel2;
+@synthesize switch1 = _switch1;
+@synthesize switch2 = _switch2;
+@synthesize text1 = _text1;
+@synthesize text2 = _text2;
+
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  if (self = [super initWithPlayerSelectionOption: playerSelectionOption]) {
+
+    if (playerSelectionOption.nib) {
+      _nib = playerSelectionOption.nib;
+    } else {
+      _nib = @"PlayerDoubleSwitch";
+    }
+    _pcode =@"BidTQxOqebpNk1rVsjs2sUJSTOZc";
+    _playerDomain = @"http://www.ooyala.com";
+  }
+  return self;
+}
+
+- (void)loadView {
+  [super loadView];
+  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   if (_switch1 != nil) {
-    _label1.text = @"ShowPromoImage";
+    _switchLabel1.text = @"ShowPromoImage";
     _switch1.on = NO;
   }
   if (_switch2 != nil) {
-    _label2.text = @"Preload";
+    _switchLabel2.text = @"Preload";
     _switch2.on = YES;
   }
 
   if (_text1 != nil) {
-    _label1.text = @"network timeout";
+    _switchLabel1.text = @"network timeout";
     _text1.text = @"60.0";
     _text1.delegate = self;
   }
 
   if (_text2 != nil) {
-    _label2.text = @"";
-    _label2.enabled = NO;
+    _switchLabel2.text = @"";
+    _switchLabel2.enabled = NO;
     _text2.enabled = NO;
   }
 
@@ -72,7 +93,7 @@
 }
 */
 
-- (IBAction)onButton:(id)sender {
+- (IBAction)onButtonClick:(id)sender {
   NSString *const PCODE        = @"BidTQxOqebpNk1rVsjs2sUJSTOZc";
   NSString *const PLAYERDOMAIN = @"http://www.ooyala.com";
 
@@ -96,7 +117,7 @@
   }
   
   _playerViewController =
-    [[OOOoyalaPlayerViewController alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYERDOMAIN] options:options];
+    [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
 
   //Setup video view
   CGRect rect = self.playerView.bounds;
@@ -104,7 +125,7 @@
   [self addChildViewController:_playerViewController];
   [self.playerView addSubview:_playerViewController.view];
 
-  [_playerViewController.player setEmbedCode:_embedCode];
+  [_playerViewController.player setEmbedCode:self.playerSelectionOption.embedCode];
   if (_initialTime > 0) {
     [_playerViewController.player playWithInitialTime:_initialTime];
   }
