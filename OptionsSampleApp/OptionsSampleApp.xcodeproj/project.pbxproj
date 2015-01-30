@@ -21,6 +21,7 @@
 		9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */; };
 		9772BFFC1A48FE8A00B255C0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */; };
 		9772BFFE1A48FE9700B255C0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFFD1A48FE9700B255C0 /* libc++.dylib */; };
+		979AC0371A7AF04A003FF0D5 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979AC0361A7AF04A003FF0D5 /* PlayerDoubleText.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		9772BFF91A48FE4E00B255C0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		9772BFFD1A48FE9700B255C0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		979AC0361A7AF04A003FF0D5 /* PlayerDoubleText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleText.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				9772BFAE1A43C11C00B255C0 /* OptionsViewController.h */,
 				9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */,
 				9772BFB41A48CC4200B255C0 /* PlayerDoubleSwitch.xib */,
+				979AC0361A7AF04A003FF0D5 /* PlayerDoubleText.xib */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9772BF8F1A43B61500B255C0 /* Main.storyboard in Resources */,
+				979AC0371A7AF04A003FF0D5 /* PlayerDoubleText.xib in Resources */,
 				9772BF941A43B61500B255C0 /* LaunchScreen.xib in Resources */,
 				9772BF911A43B61500B255C0 /* Images.xcassets in Resources */,
 				9772BFB51A48CC4200B255C0 /* PlayerDoubleSwitch.xib in Resources */,

@@ -23,11 +23,12 @@ static NSString *cellId = @"pickerCell";
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  _titles = [NSArray arrayWithObjects:@"VAST Preroll", @"VAST Midroll", @"VAST postroll", @"Plain HLS Video", @"HLS Video with initialPlayTime", nil];
+  _titles = [NSArray arrayWithObjects:@"VAST Preroll", @"VAST Midroll", @"VAST postroll", @"Plain HLS Video", @"HLS Video with initialPlayTime", @"Plain HLS Video with Timeout", nil];
   _embedCodes = [NSArray arrayWithObjects:
                  @"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c",
                  @"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa",
                  @"Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf",
+                 @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1",
                  @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1",
                  @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1", nil];
   // Uncomment the following line to preserve selection between presentations.
@@ -67,10 +68,15 @@ static NSString *cellId = @"pickerCell";
 {
   OptionsViewController *playerController;
   // Override point for customization after application launch.
-  playerController = [[OptionsViewController alloc] initWithNibName:@"PlayerDoubleSwitch" bundle:nil];
+  NSString *title = [_titles objectAtIndex:indexPath.row];
+  NSString *nibName = @"PlayerDoubleSwitch";
+  if ([title rangeOfString:@"Timeout"].location != NSNotFound) {
+    nibName = @"PlayerDoubleText";
+  }
+  playerController = [[OptionsViewController alloc] initWithNibName:nibName bundle:nil];
 
   playerController.embedCode = [_embedCodes objectAtIndex:indexPath.row];
-  NSString *title = [_titles objectAtIndex:indexPath.row];
+
   if ([title rangeOfString:@"initialPlayTime"].location != NSNotFound) {
     playerController.initialTime = 20;
   }

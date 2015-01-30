@@ -8,11 +8,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsViewController">
             <connections>
                 <outlet property="button" destination="4cZ-vq-5ZY" id="hgW-TM-O1h"/>
+                <outlet property="label1" destination="Esn-Yv-de6" id="hbK-fh-18I"/>
+                <outlet property="label2" destination="z1d-od-jpn" id="s9X-gH-xeb"/>
                 <outlet property="playerView" destination="sO5-fg-VSp" id="Cyn-V8-4dz"/>
                 <outlet property="switch1" destination="otk-qx-uxx" id="dTu-2f-CQT"/>
                 <outlet property="switch2" destination="G2e-ZZ-flQ" id="CnB-IA-xIa"/>
-                <outlet property="switchLabel1" destination="Esn-Yv-de6" id="UdR-yi-G3M"/>
-                <outlet property="switchLabel2" destination="z1d-od-jpn" id="cmh-0F-9Bx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jZ4-LY-AK3"/>
             </connections>
         </placeholder>

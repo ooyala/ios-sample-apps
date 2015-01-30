@@ -11,12 +11,14 @@
 #import "OOOoyalaPlayerViewController.h"
 #import "OOPlayerDomain.h"
 
-@interface OptionsViewController ()
+@interface OptionsViewController () <UITextFieldDelegate>
 
-@property IBOutlet UILabel *switchLabel1;
-@property IBOutlet UILabel *switchLabel2;
+@property IBOutlet UILabel *label1;
+@property IBOutlet UILabel *label2;
 @property IBOutlet UISwitch *switch1;
 @property IBOutlet UISwitch *switch2;
+@property IBOutlet UITextField *text1;
+@property IBOutlet UITextField *text2;
 @property IBOutlet UIButton *button;
 @property IBOutlet UIView *playerView;
 
@@ -30,11 +32,28 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  _switchLabel1.text = @"ShowPromoImage";
-  _switchLabel2.text = @"Preload";
+  if (_switch1 != nil) {
+    _label1.text = @"ShowPromoImage";
+    _switch1.on = NO;
+  }
+  if (_switch2 != nil) {
+    _label2.text = @"Preload";
+    _switch2.on = YES;
+  }
+
+  if (_text1 != nil) {
+    _label1.text = @"network timeout";
+    _text1.text = @"60.0";
+    _text1.delegate = self;
+  }
+
+  if (_text2 != nil) {
+    _label2.text = @"";
+    _label2.enabled = NO;
+    _text2.enabled = NO;
+  }
+
   [_button setTitle:@"Create" forState:UIControlStateNormal];
-   _switch1.on = NO;
-  _switch2.on = YES;
   self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
@@ -53,13 +72,23 @@
 }
 */
 
--(IBAction)onButton:(id)sender {
+- (IBAction)onButton:(id)sender {
   NSString *const PCODE        = @"BidTQxOqebpNk1rVsjs2sUJSTOZc";
   NSString *const PLAYERDOMAIN = @"http://www.ooyala.com";
 
   OOOptions *options = [OOOptions new];
-  options.showPromoImage = _switch1.on;
-  options.preloadContent = _switch2.on;
+  if (_switch1 != nil) {
+    options.showPromoImage = _switch1.on;
+  }
+
+  if (_switch2 != nil) {
+    options.preloadContent = _switch2.on;
+  }
+
+  if (_text1 != nil) {
+    NSTimeInterval timeout = [_text1.text floatValue];
+    options.connectionTimeout = timeout;
+  }
 
   if (_playerViewController) {
     [_playerViewController removeFromParentViewController];
@@ -82,4 +111,11 @@
   
 }
 
+#pragma mark UITextFieldDelegate
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+
+  [textField resignFirstResponder];
+  return YES;
+}
 @end
