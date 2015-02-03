@@ -30,13 +30,15 @@ static NSString *cellId = @"pickerCell";
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Postroll" embedCode:@"Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf" viewController: [OptionsViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with HLS Video" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]]];
+  PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:@"HLS Video with timeout" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]];
+  option.nib = @"PlayerDoubleText";
+  [self insertNewObject: option];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-
   [self addAllPlayerSelectionOptions];
 }
 
@@ -85,6 +87,5 @@ static NSString *cellId = @"pickerCell";
   }
   [self.navigationController pushViewController:controller animated:YES];
 }
-
 
 @end

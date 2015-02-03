@@ -89,6 +89,7 @@
 		9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */; };
 		9772BFFC1A48FE8A00B255C0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */; };
 		9772BFFE1A48FE9700B255C0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFFD1A48FE9700B255C0 /* libc++.dylib */; };
+		97B8DBAB1A7B282400C51483 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97B8DBAA1A7B282400C51483 /* PlayerDoubleText.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -193,6 +194,7 @@
 		9772BFF91A48FE4E00B255C0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		9772BFFD1A48FE9700B255C0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		97B8DBAA1A7B282400C51483 /* PlayerDoubleText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleText.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 		0BF0B0E91A67200600026FDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				97B8DBAA1A7B282400C51483 /* PlayerDoubleText.xib */,
 				0BF0B0F01A67245300026FDC /* PlayerDoubleSwitch.xib */,
 				0BF0B0EA1A67200600026FDC /* PlayerSimple.xib */,
 				0BF0B0EB1A67200600026FDC /* PlayerSingleButton.xib */,
@@ -572,6 +575,7 @@
 			files = (
 				0BF0B0EE1A67200600026FDC /* PlayerSingleButton.xib in Resources */,
 				0BF0B0ED1A67200600026FDC /* PlayerSimple.xib in Resources */,
+				97B8DBAB1A7B282400C51483 /* PlayerDoubleText.xib in Resources */,
 				0BF4FA091A685F9E0050A602 /* LaunchScreen.xib in Resources */,
 				9772BF911A43B61500B255C0 /* Images.xcassets in Resources */,
 				0BF4FA0A1A685F9E0050A602 /* Main.storyboard in Resources */,

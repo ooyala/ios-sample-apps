@@ -11,19 +11,38 @@
 #import "OOOoyalaPlayerViewController.h"
 #import "OOPlayerDomain.h"
 
-@interface OptionsViewController ()
+@interface OptionsViewController () <UITextFieldDelegate>
+
+@property IBOutlet UIButton *button;
+@property IBOutlet UIView *playerView;
+
 @property OOOoyalaPlayerViewController* playerViewController;
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
+
 @end
 
 @implementation OptionsViewController
+
+@synthesize switchLabel1 = _switchLabel1;
+@synthesize switchLabel2 = _switchLabel2;
+@synthesize switch1 = _switch1;
+@synthesize switch2 = _switch2;
+@synthesize text1 = _text1;
+@synthesize text2 = _text2;
+
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerDoubleSwitch";
-  self.pcode =@"BidTQxOqebpNk1rVsjs2sUJSTOZc";
-  self.playerDomain = @"http://www.ooyala.com";
+  if (self = [super initWithPlayerSelectionOption: playerSelectionOption]) {
+
+    if (playerSelectionOption.nib) {
+      _nib = playerSelectionOption.nib;
+    } else {
+      _nib = @"PlayerDoubleSwitch";
+    }
+    _pcode =@"BidTQxOqebpNk1rVsjs2sUJSTOZc";
+    _playerDomain = @"http://www.ooyala.com";
+  }
   return self;
 }
 
@@ -34,11 +53,28 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.switchLabel1.text = @"ShowPromoImage";
-  self.switchLabel2.text = @"Preload";
-  [self.button1 setTitle:@"Create" forState:UIControlStateNormal];
-  self.switch1.on = NO;
-  self.switch2.on = YES;
+  if (_switch1 != nil) {
+    _switchLabel1.text = @"ShowPromoImage";
+    _switch1.on = NO;
+  }
+  if (_switch2 != nil) {
+    _switchLabel2.text = @"Preload";
+    _switch2.on = YES;
+  }
+
+  if (_text1 != nil) {
+    _switchLabel1.text = @"network timeout";
+    _text1.text = @"60.0";
+    _text1.delegate = self;
+  }
+
+  if (_text2 != nil) {
+    _switchLabel2.text = @"";
+    _switchLabel2.enabled = NO;
+    _text2.enabled = NO;
+  }
+
+  [_button setTitle:@"Create" forState:UIControlStateNormal];
   self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
@@ -47,11 +83,30 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)onButtonClick:(id)sender {
+/*
+#pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)onButtonClick:(id)sender {
   OOOptions *options = [OOOptions new];
-  options.showPromoImage = self.switch1.on;
-  options.preloadContent = self.switch2.on;
+  if (_switch1 != nil) {
+    options.showPromoImage = _switch1.on;
+  }
+
+  if (_switch2 != nil) {
+    options.preloadContent = _switch2.on;
+  }
+
+  if (_text1 != nil) {
+    NSTimeInterval timeout = [_text1.text floatValue];
+    options.connectionTimeout = timeout;
+  }
 
   if (_playerViewController) {
     [_playerViewController removeFromParentViewController];
@@ -74,4 +129,11 @@
   
 }
 
+#pragma mark UITextFieldDelegate
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+
+  [textField resignFirstResponder];
+  return YES;
+}
 @end
