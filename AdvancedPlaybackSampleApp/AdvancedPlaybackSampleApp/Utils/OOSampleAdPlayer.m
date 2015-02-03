@@ -128,4 +128,7 @@
   // do nothing
 }
 
+- (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity {
+  
+}
 @end
