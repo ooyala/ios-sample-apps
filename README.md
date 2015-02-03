@@ -23,6 +23,10 @@ This application was designed to illustrate how correctly configured Freewheel a
 
 This application was designed to illustrate how correctly configured Google IMA assets play back using the Ooyala SDK.
 
+## OptionsSampleApp
+
+This application was designed to illustrate how correctly configured Options assets play back using the Ooyala SDK.
+
 ## CompleteSampleApp
 
 The CompleteSampleApp is a compilation of all of the other sample apps in the repo.  You must view this project through SampleApps.xcworkspace to run without modification
