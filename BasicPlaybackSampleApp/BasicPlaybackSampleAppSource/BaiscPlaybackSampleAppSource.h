@@ -1,9 +1,9 @@
 //
-//  AdvancedPlaybackSampleAppSource.h
-//  AdvancedPlaybackSampleAppSource
+//  BasicPlaybackSampleAppSource.h
+//  BasicPlaybackSampleAppSource
 //
-//  Created by Michael Len on 12/12/14.
-//  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+//  Created by Yi Gu on 01/12/15.
+//  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

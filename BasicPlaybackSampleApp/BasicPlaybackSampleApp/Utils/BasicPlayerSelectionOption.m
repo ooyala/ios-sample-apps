@@ -3,8 +3,8 @@
  * @brief      An object that contains the information needed to represent an example.
  * @details    An object that contains the information needed to represent an example.
  *             This object is passed between the List and the Player to transfer the information
- * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ * @date       01/12/15
+ * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "BasicPlayerSelectionOption.h"

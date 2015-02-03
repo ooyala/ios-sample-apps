@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  AdvancedPlaybackSampleApp
 //
-//  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+//  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

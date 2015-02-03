@@ -2,8 +2,8 @@
  * @class      BasicSimplePlayerViewController BasicSimplePlayerViewController.m "BasicSimplePlayerViewController.m"
  * @brief      A Player that can be used to simply load an embed code and play it
  * @details    BasicSimplePlayerViewController in Ooyala Sample Apps
- * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ * @date       01/12/15
+ * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 
