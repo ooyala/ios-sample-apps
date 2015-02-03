@@ -6,7 +6,10 @@
  */
 
 #import "AdvancedPlaybackListViewController.h"
-#import "SimplePlayerViewController.h"
+#import "PlayWithInitialTimePlayerViewController.h"
+#import "InsertAdPlayerViewController.h"
+#import "PluginPlayerViewController.h"
+#import "ChangeVideoPlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface AdvancedPlaybackListViewController ()
@@ -21,7 +24,12 @@
   return self;
 }
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic HLS Playback" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [SimplePlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Plugin Player" embedCode:@"lrZmRiMzrr8cP77PPW0W8AsjjhMJ1BBe" viewController: [PluginPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Change Video Programmatically" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [ChangeVideoPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Insert Ad at Runtime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [InsertAdPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Play With InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [PlayWithInitialTimePlayerViewController class]]];
+  
+  
 }
 
 - (void)viewDidLoad {
@@ -71,7 +79,7 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  PlayWithInitialTimePlayerViewController *controller = [(PlayWithInitialTimePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
   [self.navigationController pushViewController:controller animated:YES];
 }
 

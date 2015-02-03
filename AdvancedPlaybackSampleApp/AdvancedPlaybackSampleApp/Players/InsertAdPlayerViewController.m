@@ -1,30 +1,35 @@
 /**
- * @class      SimplePlayerViewController SimplePlayerViewController.m "SimplePlayerViewController.m"
+ * @class      InsertAdPlayerViewController InsertAdPlayerViewController.m "InsertAdPlayerViewController.m"
  * @brief      A Player that can be used to simply load an embed code and play it
- * @details    SimplePlayerViewController in Ooyala Sample Apps
+ * @details    InsertAdPlayerViewController in Ooyala Sample Apps
  * @date       12/12/14
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
 
-#import "SimplePlayerViewController.h"
+#import "InsertAdPlayerViewController.h"
 #import "OOOoyalaPlayerViewController.h"
+#import "OOManagedAdSpot.h"
+#import "OOManagedAdsPlugin.h"
+#import "OOVASTAdSpot.h"
+#import "OOOoyalaAdSpot.h"
 #import "OOOoyalaPlayer.h"
 #import "OOPlayerDomain.h"
 
-@interface SimplePlayerViewController ()
+@interface InsertAdPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property OOManagedAdsPlugin *plugin;
 @property NSString *embedCode;
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
 @end
 
-@implementation SimplePlayerViewController
+@implementation InsertAdPlayerViewController
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSingleButton";
+  self.nib = @"PlayerDoubleButton";
   self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
   self.playerDomain = @"http://www.ooyala.com";
 
@@ -40,11 +45,30 @@
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
 }
 
+- (IBAction)onLeftBtnClick:(UIButton *)sender
+{
+  OOVASTAdSpot *vastAd = [[OOVASTAdSpot alloc] initWithTime:[NSNumber numberWithFloat:[self.ooyalaPlayerViewController.player playheadTime]] clickURL:nil trackingURLs:nil vastURL:[NSURL URLWithString:@"http://xd-team.ooyala.com.s3.amazonaws.com/ads/VastAd_Preroll.xml"]];
+  [self.plugin insertAd:vastAd];
+}
+
+- (IBAction)onRightBtnClick:(UIButton *)sender
+{
+  OOOoyalaAdSpot *ooyalaAd = [[OOOoyalaAdSpot alloc] initWithTime:[NSNumber numberWithFloat:[self.ooyalaPlayerViewController.player playheadTime]] clickURL:nil trackingURLs:nil embedCode:@"Zvcmp0ZDqD6xnQVH8ZhWlxH9L9bMGDDg" api:[self.ooyalaPlayerViewController.player api]];
+  [self.plugin insertAd:ooyalaAd];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  [self.button1 setTitle:@"INSERT VAST AD" forState:UIControlStateNormal];
+  [self.button2 setTitle:@"INSERT OOYALA AD" forState:UIControlStateNormal];
+  
   // Create Ooyala ViewController
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
-
+  
+  // Create Ooyala Ads Plugin
+  self.plugin = [self.ooyalaPlayerViewController.player managedAdsPlugin];
+  
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
