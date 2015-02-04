@@ -8,9 +8,9 @@
 
 
 #import <UIKit/UIKit.h>
-#import "BasicSampleAppPlayerViewController.h"
+#import "SampleAppPlayerViewController.h"
 
-@interface BasicSimplePlayerViewController : BasicSampleAppPlayerViewController
+@interface BasicSimplePlayerViewController : SampleAppPlayerViewController
 
 @end
 

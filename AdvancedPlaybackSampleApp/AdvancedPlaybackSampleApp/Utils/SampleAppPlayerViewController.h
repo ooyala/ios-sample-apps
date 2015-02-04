@@ -15,20 +15,18 @@
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
-
 @property (weak, nonatomic) IBOutlet UILabel *switchLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *switchLabel2;
 @property (weak, nonatomic) IBOutlet UISwitch *switch1;
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
+@property (weak, nonatomic) IBOutlet UITextField *text1;
+@property (weak, nonatomic) IBOutlet UITextField *text2;
 
 @property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption;
 
 - (IBAction)onButtonClick:(id)sender;
-
-- (IBAction)onLeftBtnClick:(UIButton *)sender;
-- (IBAction)onRightBtnClick:(UIButton *)sender;
 
 @end
 
