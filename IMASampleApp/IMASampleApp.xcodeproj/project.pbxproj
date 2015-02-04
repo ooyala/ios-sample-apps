@@ -12,9 +12,12 @@
 		0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B17A0E91A78206D009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0E81A78206D009D1C50 /* libc++.dylib */; };
-		0B9801061A40DFD300E7DE88 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */; };
-		0B9801071A40DFD300E7DE88 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */; };
-		0B9801081A40DFD300E7DE88 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801051A40DFD300E7DE88 /* TableCell.xib */; };
+		0BC947FF1A81779B004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947F91A81779B004CB997 /* PlayerDoubleButton.xib */; };
+		0BC948001A81779B004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FA1A81779B004CB997 /* PlayerDoubleSwitch.xib */; };
+		0BC948011A81779B004CB997 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FB1A81779B004CB997 /* PlayerDoubleText.xib */; };
+		0BC948021A81779B004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FC1A81779B004CB997 /* PlayerSimple.xib */; };
+		0BC948031A81779B004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FD1A81779B004CB997 /* PlayerSingleButton.xib */; };
+		0BC948041A81779B004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FE1A81779B004CB997 /* TableCell.xib */; };
 		0BF4FA271A686CB40050A602 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA101A686CB40050A602 /* AppDelegate.h */; };
 		0BF4FA281A686CB40050A602 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA111A686CB40050A602 /* AppDelegate.m */; };
 		0BF4FA291A686CB40050A602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA121A686CB40050A602 /* LaunchScreen.xib */; };
@@ -137,9 +140,12 @@
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B17A0E81A78206D009D1C50 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B19FEFE1A3B7532003E57DF /* libIMASampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIMASampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
-		0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
-		0B9801051A40DFD300E7DE88 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		0BC947F91A81779B004CB997 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
+		0BC947FA1A81779B004CB997 /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
+		0BC947FB1A81779B004CB997 /* PlayerDoubleText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleText.xib; sourceTree = "<group>"; };
+		0BC947FC1A81779B004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
+		0BC947FD1A81779B004CB997 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
+		0BC947FE1A81779B004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		0BF4FA101A686CB40050A602 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0BF4FA111A686CB40050A602 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0BF4FA131A686CB40050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -273,7 +279,6 @@
 				0BF4FA241A686CB40050A602 /* IMASampleAppSource */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B9801011A40DFD300E7DE88 /* Shared */,
 				0BF4FA501A6876310050A602 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
@@ -301,21 +306,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0B9801011A40DFD300E7DE88 /* Shared */ = {
+		0BC947F81A81779B004CB997 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0B9801021A40DFD300E7DE88 /* Views */,
-			);
-			name = Shared;
-			path = ../Shared;
-			sourceTree = "<group>";
-		};
-		0B9801021A40DFD300E7DE88 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0B9801031A40DFD300E7DE88 /* PlayerSimple.xib */,
-				0B9801041A40DFD300E7DE88 /* PlayerSingleButton.xib */,
-				0B9801051A40DFD300E7DE88 /* TableCell.xib */,
+				0BC947F91A81779B004CB997 /* PlayerDoubleButton.xib */,
+				0BC947FA1A81779B004CB997 /* PlayerDoubleSwitch.xib */,
+				0BC947FB1A81779B004CB997 /* PlayerDoubleText.xib */,
+				0BC947FC1A81779B004CB997 /* PlayerSimple.xib */,
+				0BC947FD1A81779B004CB997 /* PlayerSingleButton.xib */,
+				0BC947FE1A81779B004CB997 /* TableCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +332,7 @@
 				0BF4FA1B1A686CB40050A602 /* main.m */,
 				0BF4FA1C1A686CB40050A602 /* Players */,
 				0BF4FA1F1A686CB40050A602 /* Utils */,
+				0BC947F81A81779B004CB997 /* Views */,
 			);
 			path = IMASampleApp;
 			sourceTree = "<group>";
@@ -661,12 +661,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC948031A81779B004CB997 /* PlayerSingleButton.xib in Resources */,
+				0BC948021A81779B004CB997 /* PlayerSimple.xib in Resources */,
 				0BF4FA291A686CB40050A602 /* LaunchScreen.xib in Resources */,
+				0BC948001A81779B004CB997 /* PlayerDoubleSwitch.xib in Resources */,
+				0BC948041A81779B004CB997 /* TableCell.xib in Resources */,
+				0BC947FF1A81779B004CB997 /* PlayerDoubleButton.xib in Resources */,
 				0BF4FA2A1A686CB40050A602 /* Main.storyboard in Resources */,
-				0B9801061A40DFD300E7DE88 /* PlayerSimple.xib in Resources */,
+				0BC948011A81779B004CB997 /* PlayerDoubleText.xib in Resources */,
 				0BF4FA2B1A686CB40050A602 /* Images.xcassets in Resources */,
-				0B9801071A40DFD300E7DE88 /* PlayerSingleButton.xib in Resources */,
-				0B9801081A40DFD300E7DE88 /* TableCell.xib in Resources */,
 				0BF4FA2C1A686CB40050A602 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

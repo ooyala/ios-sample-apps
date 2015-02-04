@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleAppPlayerViewController">
+            <connections>
+                <outlet property="button1" destination="cHv-DS-i8m" id="P0h-ZH-n0z"/>
+                <outlet property="playerView" destination="xFJ-Sp-qsh" id="ZNM-Ah-Xna"/>
+                <outlet property="view" destination="iN0-l3-epB" id="4xv-Fx-WZC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-DS-i8m">
+                    <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="6fw-Hz-3pe"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" priority="1" constant="120" id="Zno-nh-ird"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Zno-nh-ird"/>
+                        </mask>
+                    </variation>
+                </button>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xFJ-Sp-qsh">
+                    <rect key="frame" x="0.0" y="8" width="600" height="532"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration" label=""/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xFJ-Sp-qsh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8OX-p2-ubN"/>
+                <constraint firstItem="xFJ-Sp-qsh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Blb-Nf-7pr"/>
+                <constraint firstItem="cHv-DS-i8m" firstAttribute="top" secondItem="xFJ-Sp-qsh" secondAttribute="bottom" id="Ebh-Gx-3dc"/>
+                <constraint firstItem="cHv-DS-i8m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Eqb-By-uJs"/>
+                <constraint firstAttribute="trailing" secondItem="xFJ-Sp-qsh" secondAttribute="trailing" id="FTz-2o-HQP"/>
+                <constraint firstAttribute="trailing" secondItem="cHv-DS-i8m" secondAttribute="trailing" id="GNS-Xh-fMT"/>
+                <constraint firstAttribute="bottom" secondItem="cHv-DS-i8m" secondAttribute="bottom" id="X1L-6O-sCm"/>
+                <constraint firstItem="cHv-DS-i8m" firstAttribute="top" secondItem="xFJ-Sp-qsh" secondAttribute="bottom" constant="8" symbolic="YES" id="djO-Ez-X2X"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Ebh-Gx-3dc"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="25" y="154"/>
+        </view>
+    </objects>
+</document>

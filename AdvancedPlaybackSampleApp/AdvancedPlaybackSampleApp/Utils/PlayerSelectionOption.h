@@ -12,7 +12,8 @@
 @interface PlayerSelectionOption : NSObject
 @property NSString *embedCode;
 @property NSString *title;
+@property NSString *nib;
 @property Class viewController;
 
-- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode viewController:(Class) viewController;
+- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode viewController:(Class)viewController;
 @end
