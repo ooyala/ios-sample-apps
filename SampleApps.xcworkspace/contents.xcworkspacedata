@@ -5,21 +5,21 @@
       location = "group:AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:BasicPlaybackSampleApp/BasicPlaybackSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CompleteSampleApp/CompleteSampleApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:OptionsSampleApp/OptionsSampleApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:IMASampleApp/IMASampleApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:README.md">
    </FileRef>
    <FileRef
       location = "group:FreewheelSampleApp/FreewheelSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BasicPlaybackSampleApp/BasicPlaybackSampleApp.xcodeproj">
+      location = "group:IMASampleApp/IMASampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OptionsSampleApp/OptionsSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
    </FileRef>
 </Workspace>
