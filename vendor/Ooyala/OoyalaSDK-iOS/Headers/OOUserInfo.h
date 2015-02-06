@@ -2,8 +2,7 @@
 //  OOUserInfo.h
 //  OoyalaSDK
 //
-//  Created by Michael Len on 10/18/13.
-//  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

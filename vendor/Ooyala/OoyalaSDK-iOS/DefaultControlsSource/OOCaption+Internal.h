@@ -3,7 +3,7 @@
  * @brief      OOCaption
  * @details    OOCaption+Internal.h in OoyalaSDK
  * @date       12/12/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOCaption.h"

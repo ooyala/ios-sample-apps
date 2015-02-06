@@ -2,8 +2,7 @@
 //  OOStateNotifier.h
 //  OoyalaSDK
 //
-//  Created by Zhihui Chen on 8/15/14.
-//  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

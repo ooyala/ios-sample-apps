@@ -1,6 +1,5 @@
 //
-// Created by Jon Slenk on 8/26/14.
-// Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+//Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -3,7 +3,7 @@
  * @brief      OOPlayer
  * @details    OOPlayer.h in OoyalaSDK
  * @date       12/14/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -27,11 +27,6 @@ extern NSString *const PlayerErrorNotification;
 @property(readonly, nonatomic, strong) UIView *view;
 @property(nonatomic) BOOL completed;
 @property(readonly, nonatomic, getter = isLiveClosedCaptionsAvailable) BOOL liveClosedCaptionsAvailable;
-
-/**
- * Init the player
- */
-- (id) initWithStreams:(NSArray *)streams;
 
 - (BOOL)isPlaying;
 

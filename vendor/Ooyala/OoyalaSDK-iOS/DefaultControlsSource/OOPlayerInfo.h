@@ -2,8 +2,7 @@
 //  OOPlayerInfo.h
 //  OoyalaSDK
 //
-//  Created by Chris Leonavicius on 12/3/12.
-//  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -26,7 +25,6 @@
  WIDEVINE HLS = @"wv_hls"
  WIDEVINE MP4 = @"wv_mp4"
  WIDEVINE WVM = @"wv_wvm"
- ADOBE ACCESS HLS = @"faxs_hls"
  MS Smooth = @"smooth"
 
  return nil to not include this parameter

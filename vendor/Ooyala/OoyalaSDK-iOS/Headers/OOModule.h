@@ -2,8 +2,7 @@
 //  OOModule.h
 //  OoyalaSDK
 //
-//  Created by Chris Leonavicius on 7/10/13.
-//  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

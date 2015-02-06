@@ -2,8 +2,7 @@
 //  OOStreamPlayer.h
 //  OoyalaSDK
 //
-//  Created by Chris Leonavicius on 11/12/12.
-//  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,7 +15,7 @@
 + (id<OOPlayerInfo>) defaultPlayerInfo;
 + (void) setDefaultPlayerInfo:(id<OOPlayerInfo>) playerInfo;
 
-- (BOOL)setup:(NSArray *)streams;
+- (BOOL)setup:(NSArray *)streams parent:(OOOoyalaPlayer*)parent;
 - (id<OOPlayerInfo>)playerInfo;
 
 /**

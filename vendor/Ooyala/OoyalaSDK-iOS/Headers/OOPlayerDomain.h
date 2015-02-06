@@ -3,7 +3,7 @@
  * @brief      OOPlayerDomain
  * @details    OOPlayerDomain.h in OoyalaSDK
  * @date       05/15/14
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>

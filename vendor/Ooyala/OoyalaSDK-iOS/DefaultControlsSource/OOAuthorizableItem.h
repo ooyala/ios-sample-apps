@@ -4,7 +4,7 @@
  * @brief      OOAuthorizableItem
  * @details    OOAuthorizableItem.h in OoyalaSDK
  * @date       11/29/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>

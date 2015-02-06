@@ -2,32 +2,30 @@
 //  OOUIProgressSliderIOS7.h
 //  OoyalaSDK
 //
-//  Created by Liusha Huang on 8/22/13.
-//  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
-#import "OOUIProgressSlider.h"
 #import "OOCuePointsView.h"
 //Action at end of video
 enum
 {
-  OOUIProgressSliderModeLiveIOS7,
-  OOUIProgressSliderModeAdInLiveIOS7,
-  OOUIProgressSliderModeNormalIOS7,
-  OOUIProgressSliderModeLiveNoSrubberIOS7
+  OOUIProgressSliderModeLive,
+  OOUIProgressSliderModeAdInLive,
+  OOUIProgressSliderModeNormal,
+  OOUIProgressSliderModeLiveNoSrubber
 };
-typedef NSInteger OOUIProgressSliderModeIOS7;
+typedef NSInteger OOUIProgressSliderMode;
 
 @interface OOUIProgressSliderIOS7 : UIView<OOCuePointViewDurationDataSource> {
-  OOUIProgressSliderModeIOS7 mode;
+  OOUIProgressSliderMode mode;
 }
 
 @property (nonatomic) float duration;
 @property (nonatomic) float currentTime;
 @property (nonatomic) float currentAvailableTime;
-@property (nonatomic) OOUIProgressSliderModeIOS7 mode;
+@property (nonatomic) OOUIProgressSliderMode mode;
 @property (nonatomic) CMTimeRange seekableTimeRange;
 @property (nonatomic) UILabel *liveIndicator;
 @property (nonatomic) UISlider *scrubber;

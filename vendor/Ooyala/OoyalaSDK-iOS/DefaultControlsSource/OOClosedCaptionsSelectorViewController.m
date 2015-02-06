@@ -2,8 +2,7 @@
 //  OOClosedCaptionsSelectorViewController.m
 //  OoyalaSDK
 //
-//  Created by Michael Len on 2/6/13.
-//  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 //  This class represents the view that lets users select a closed captions, or enabling subtitles.
 //
@@ -12,7 +11,6 @@
 
 #import "OOClosedCaptionsSelectorViewController.h"
 #import "OOClosedCaptionsStyle.h"
-#import "OOInlineControlsView.h"
 #import "OOOoyalaPlayer.h"
 #import "OOOoyalaPlayerViewController.h"
 

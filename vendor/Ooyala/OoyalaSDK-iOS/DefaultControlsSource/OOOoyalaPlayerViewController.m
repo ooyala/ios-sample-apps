@@ -3,22 +3,17 @@
  * @brief      Implementation of OOOoyalaPlayerViewController
  * @details    OOOoyalaPlayerViewController.m in OoyalaSDK
  * @date       1/9/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 #import "OOOoyalaPlayerViewController.h"
-#import "OOUIProgressSlider.h"
 #import "OOClosedCaptionsSelectorBackgroundViewController.h"
-#import "OOFullScreenViewController.h"
 #import "OOFullScreenIOS7ViewController.h"
-#import "OOInlineViewController.h"
 #import "OOInlineIOS7ViewController.h"
+#import "OOFullscreenIOS7ViewController.h"
 #import "OOClosedCaptionsSelectorViewController.h"
 #import "OOOoyalaAPIClient.h"
 #import "OOPlayerDomain.h"
 #import "OODebugMode.h"
-
-#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 NSString *const TAG = @"OOOoyalaPlayerViewController";
 NSString *const OOOoyalaPlayerViewControllerFullscreenEnter = @"fullscreenEnter";
@@ -40,7 +35,6 @@ NSString *const OOOoyalaPlayerViewControllerDoneClicked = @"doneClicked";
 @property (nonatomic, strong) NSDictionary *defaultLocales;
 @property (nonatomic, strong) NSDictionary *currentLocale;
 @property (nonatomic, strong) OOClosedCaptionsSelectorViewController *selectorViewController;
-@property (nonatomic) BOOL isLiveSliderShowing;
 
 - (void)loadInline;
 - (void)loadFullscreen;
@@ -141,7 +135,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
     //Initialize CC Selector and popup helper
     selectorViewController = [[OOClosedCaptionsSelectorViewController alloc] initWithPlayer:_player];
     isFullScreenButtonShowing = YES;
-    self.isLiveSliderShowing = YES;
   }
 
   return self;
@@ -166,14 +159,10 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 
 - (void)loadFullscreen {
   if (!fullScreenViewController) {
-    fullScreenViewController = [self fullscreenViewControllerInstance];
+    fullScreenViewController = [[OOFullScreenIOS7ViewController alloc] initWithControlsType:OOOoyalaPlayerControlTypeFullScreen player:self.player overlay:_fullscreenOverlay delegate:self];
   }
-  fullScreenViewController.overlay = _fullscreenOverlay;
-  fullScreenViewController.player = self.player;
-  fullScreenViewController.delegate = self;
 
   [self presentModalViewController:fullScreenViewController animated:NO];
-  [fullScreenViewController setLiveSliderShowing:self.isLiveSliderShowing];
 
   if( [self.player isShowingAdWithCustomControls] ) {
     [fullScreenViewController hideControls];
@@ -189,11 +178,9 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 
 - (void)loadInline {
   if (!inlineViewController) {
-    inlineViewController = [self inlineViewControllerInstance];
+    inlineViewController = [[OOInlineIOS7ViewController alloc] initWithControlsType:OOOoyalaPlayerControlTypeInline player:self.player overlay:_inlineOverlay delegate:self];
   }
-  inlineViewController.overlay = _inlineOverlay;
-  inlineViewController.player = self.player;
-  inlineViewController.delegate = self;
+
   inlineViewController.view.frame = self.view.bounds;
 
   [self addChildViewController:inlineViewController];
@@ -213,9 +200,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
   if (isFullScreenButtonShowing == NO) {
     [inlineViewController setFullScreenButtonShowing:isFullScreenButtonShowing ];
   }
-
-  [inlineViewController setLiveSliderShowing:self.isLiveSliderShowing];
-
 }
 
 - (void) unloadFullscreen {
@@ -284,11 +268,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (void)setFullScreenButtonShowing:(BOOL) showing {
     isFullScreenButtonShowing = showing;
     [inlineViewController setFullScreenButtonShowing: showing];
-}
-
-- (void)setLiveSliderShowing:(BOOL) showing {
-  self.isLiveSliderShowing = showing;
-  [[self getControls] setLiveSliderShowing:showing];
 }
 
 - (OOControlsViewController *)getControls {
@@ -463,24 +442,16 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  }
 
 - (OOControlsViewController *)fullscreenViewControllerInstance {
-  if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-    return [[OOFullScreenIOS7ViewController alloc] init];
-  }
-  return [[OOFullScreenViewController alloc] init];
+  return [[OOFullScreenIOS7ViewController alloc] init];
 }
 
 - (OOControlsViewController *)inlineViewControllerInstance {
-  if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-    return [[OOInlineIOS7ViewController alloc] init];
-  }
-  return [[OOInlineViewController alloc] init];
+  return [[OOInlineIOS7ViewController alloc] init];
 }
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
 - (BOOL)prefersStatusBarHidden {
   return [self.parentViewController prefersStatusBarHidden];
 }
-#endif
 
 - (void)dealloc {
   LOG(@"OOOoyalaPlayerViewController.dealloc %@", [self description]);

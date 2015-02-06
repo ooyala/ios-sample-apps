@@ -63,6 +63,11 @@
  */
 -(void)play;
 
+/*
+ * Use the default browser like Safari on the mobile device instead of browsing in the native app.
+ */
+-(void)setUseDefaultBrowser:(BOOL)useDefaultBrowser;
+
 /**
  * Pause currently playing ad.
  * This is meant to be called only by the OOIMAAdPlayer.

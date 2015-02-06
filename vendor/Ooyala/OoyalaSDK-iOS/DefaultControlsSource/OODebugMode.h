@@ -3,7 +3,7 @@
  * @brief      OODebugMode
  * @details    OODebugMode.h in OoyalaSDK
  * @date       05/29/2014
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #define LOG(...) [OODebugMode log:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];

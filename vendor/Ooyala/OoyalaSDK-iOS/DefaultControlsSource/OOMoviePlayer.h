@@ -3,7 +3,7 @@
  * @brief      OOMoviePlayer
  * @details    OOMoviePlayer.h in OoyalaSDK
  * @date       11/21/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <AVFoundation/AVFoundation.h>
@@ -20,8 +20,7 @@
 @property(nonatomic, strong) OOStreamPlayer *basePlayer;
 @property(nonatomic) NSString *authToken;
 - (void) removeObservers;
-- (id) initWithStreams:(NSArray *)streams authToken:(NSString*)authToken;
-- (BOOL)setup:(NSArray *)streams;
+- (BOOL)setup:(NSArray *)streams parent:(OOOoyalaPlayer*)parent authToken:(NSString*)authToken;
 - (void)setBasePlayer:(OOStreamPlayer *)basePlayer withStreams:(NSArray *)streams;
 - (void)suspend;
 - (void)resume;

@@ -2,8 +2,7 @@
 //  OOFullScreenIOS7ViewControler.m
 //  OoyalaSDK
 //
-//  Created by Liusha Huang on 8/23/13.
-//  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import "OOFullScreenIOS7ViewController.h"
@@ -52,10 +51,7 @@
   }
   self.controls = [[OOFullScreenIOS7ControlsView alloc] initWithFrame:self.view.bounds];
 
-  self.controls.pauseButton.target = self.player;
-  self.controls.pauseButton.action = @selector(pause);
   self.controls.playButton.target = self.player;
-  self.controls.playButton.action = @selector(play);
 
   self.controls.nextButton.target = self.player;
   self.controls.nextButton.action = @selector(nextVideo);
@@ -66,11 +62,8 @@
   self.controls.doneButton.target = self.delegate;
   self.controls.doneButton.action = @selector(onFullscreenDoneButtonClick);
   
-  self.controls.videoGravityFillButton.target = self.delegate;
-  self.controls.videoGravityFillButton.action = @selector(switchVideoGravity);
-  
-  self.controls.videoGravityFitButton.target = self.delegate;
-  self.controls.videoGravityFitButton.action = @selector(switchVideoGravity);
+  self.controls.videoGravityButton.target = self.delegate;
+  self.controls.videoGravityButton.action = @selector(switchVideoGravity);
   
   self.controls.closedCaptionsButton.target = self.delegate;
   self.controls.closedCaptionsButton.action = @selector(closedCaptionsSelector);
@@ -139,9 +132,7 @@
 
                      [self.controls hide];
                      if (self.overlay) [self.overlay setAlpha:0];
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-                     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) [self setNeedsStatusBarAppearanceUpdate];
-#endif
+                     [self setNeedsStatusBarAppearanceUpdate];
                    }
                    completion: ^ (BOOL finished) {
                      if (self.overlay) self.overlay.hidden = YES;
@@ -174,9 +165,7 @@
 
                      [self.controls show];
                      if (self.overlay) [self.overlay setAlpha:1];
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-                     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) [self setNeedsStatusBarAppearanceUpdate];
-#endif
+                     [self setNeedsStatusBarAppearanceUpdate];
                    }
                    completion: NULL];
   [self updateClosedCaptionsPosition];
@@ -241,17 +230,19 @@
   
   //Handle state
   if (self.player.isPlaying) {
+
     if ([self.player showingAdsWithHiddenControls]) {
       [self hideControls];
-    } else if (self.controls.playButtonShowing) {
-      [self.controls setPlayButtonShowing:NO];
+    } else if (self.controls.playButton.isPlayShowing) {
+      [self.controls.playButton setIsPlayShowing:NO];
       if (self.controls.hidden == NO) {
         [self showControls];
+        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
       }
     }
-  } else {
-    if (!self.controls.playButtonShowing) {
-      [self.controls setPlayButtonShowing:YES];
+  } else if (!self.controls.playButton.isPlayShowing) {
+    [self.controls.playButton setIsPlayShowing:YES];
+    if (self.controls.hidden == NO) {
       [self showControls];
       if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
     }
@@ -286,12 +277,10 @@
   return 0;
 }
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
 - (BOOL)prefersStatusBarHidden {
   // Always hide the status bar if controls go into hiding.  Show status bar only if our owner showed it
   return isStatusBarHidden ? YES : [self.delegate prefersStatusBarHidden];
 }
-#endif
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
   return UIStatusBarStyleDefault;

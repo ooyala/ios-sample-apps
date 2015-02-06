@@ -3,7 +3,7 @@
  * @brief      OOAsyncTask
  * @details    OOAsyncTask.h in OoyalaSDK
  * @date       1/31/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>

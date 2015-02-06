@@ -3,7 +3,7 @@
  * @brief      OOPlayerAPIClient
  * @details    OOPlayerAPIClient.h in OoyalaSDK
  * @date       11/22/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -12,6 +12,7 @@
 #import "OOCallbacks.h"
 #import "OOEmbedTokenGenerator.h"
 #import "OOUserInfo.h"
+#import "OOOptions.h"
 
 @class OOContentItem;
 @class OOOoyalaAPIHelper;
@@ -34,11 +35,13 @@ typedef void (^OOHeartbeatCallback)(OOOoyalaError *error);
 @property(nonatomic, strong) OOPlayerDomain *domain; /**< The embed domain */
 @property(nonatomic, assign) NSInteger width; /**< the width of the player this API serves */
 @property(nonatomic, assign) NSInteger height; /**< the height of the player this API serves */
-@property(nonatomic, strong) id<OOEmbedTokenGenerator> embedTokenGenerator;
+@property(nonatomic, assign) id<OOEmbedTokenGenerator> embedTokenGenerator;
 @property(nonatomic) NSTimeInterval clockOffset;
 @property(nonatomic, strong) NSString *authToken;
 @property(nonatomic, assign) NSInteger heartbeatInterval;
 @property(nonatomic) OOUserInfo *userInfo;
+@property(nonatomic) OOOptions *options;
+
 /**
  * Initialize a OOPlayerAPIClient
  * @param[in] thePcode the Partner Code to use (from Backlot)
@@ -49,6 +52,19 @@ typedef void (^OOHeartbeatCallback)(OOOoyalaError *error);
 - (id)initWithPcode:(NSString *)thePcode
              domain:(OOPlayerDomain *)theDomain
 embedTokenGenerator:(id<OOEmbedTokenGenerator>)theGenerator;
+
+/**
+ * Initialize a OOPlayerAPIClient
+ * @param[in] thePcode the Partner Code to use (from Backlot)
+ * @param[in] theDomain the embed domain
+ * @param[in] theGenerator the initialized OOEmbedTokenGenerator to use
+ * @param[in] the options used by the player
+ * @returns the initialized OOPlayerAPIClient
+ */
+- (id)initWithPcode:(NSString *)thePcode
+             domain:(OOPlayerDomain *)theDomain
+embedTokenGenerator:(id<OOEmbedTokenGenerator>)theGenerator
+            options:(OOOptions *)theOptions;
 
 /**
  * Authorize an OOAuthorizableItem

@@ -2,12 +2,14 @@
 //  OOFullScreenIOS7ControlsView.h
 //  OoyalaSDK
 //
-//  Created by Liusha Huang on 8/22/13.
-//  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "OOClosedCaptionsButton.h"
+#import "OOPlayPauseButton.h"
+#import "OOVideoGravityButton.h"
 
 @class OOUIProgressSliderIOS7;
 @class OOVolumeView;
@@ -18,14 +20,12 @@
 @property (nonatomic) UIBarButtonItem *doneButton;
 @property (nonatomic) UIBarButtonItem *slider;
 @property (nonatomic) OOUIProgressSliderIOS7 *scrubberSlider;
-@property (nonatomic) UIBarButtonItem *closedCaptionsButton;
-@property (nonatomic) UIBarButtonItem *videoGravityFillButton;
-@property (nonatomic) UIBarButtonItem *videoGravityFitButton;
+@property (nonatomic) OOClosedCaptionsButton *closedCaptionsButton;
+@property (nonatomic) OOVideoGravityButton *videoGravityButton;
 
 
 @property (nonatomic) UIToolbar *bottomBarBackground;
-@property (nonatomic) UIBarButtonItem *playButton;
-@property (nonatomic) UIBarButtonItem *pauseButton;
+@property (nonatomic) OOPlayPauseButton *playButton;
 @property (nonatomic) UIBarButtonItem *nextButton;
 @property (nonatomic) UIBarButtonItem *previousButton;
 @property (nonatomic) MPVolumeView *volumeButton;

@@ -4,7 +4,7 @@
  * @brief      OOOoyalaPlayer
  * @details    OOOoyalaPlayer.h in OoyalaSDK
  * @date       11/21/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <AVFoundation/AVFoundation.h>
@@ -27,6 +27,7 @@
 @class OOStreamPlayer;
 @class OOManagedAdSpot;
 @class OOPlayerDomain;
+@class OOStreamPlayerMapping;
 @class OOFCCTVRatingConfiguration;
 @class OOFCCTVRating;
 @class OOOptions;
@@ -91,6 +92,7 @@ extern NSString *const OOOoyalaPlayerAdErrorNotification; /**< Fires when an err
 extern NSString *const OOOoyalaPlayerMetadataReadyNotification; /**< Fires when content metadata is ready to be accessed */
 extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires when close caption language changed*/
 extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
+extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
 
 @interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol>
 
@@ -120,6 +122,9 @@ extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when 
 @property (nonatomic) BOOL allowsExternalPlayback;
 @property (nonatomic) float playbackRate; /** the rate of playback. 1 is the normal speed.  Set to .5 for half speed, 2 for double speed, etc. */
 @property (readonly, nonatomic) NSString *authToken;
+@property (nonatomic) NSString *customDrmData;
+@property (nonatomic, readonly) OOStreamPlayerMapping *streamPlayerMapping;
+@property (nonatomic, readonly) NSString *pcode;
 
 /**
  * Get the managedAdsPlugin that manages OOOoyalaAdSpots and OOVASTAdSpots.
@@ -408,6 +413,13 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * @returns encryptedLoopback;
  */
 + (BOOL)encryptedLoopback;
+
+/**
+ * YES means to try to use local/debug DRM modes,
+ * NO means to use regular DRM config.
+ */
++(void)setUseDebugDRMPlayback:(BOOL)enable;
++(BOOL)useDebugDRMPlayback;
 
 /**
  * internal Ooyala use only.

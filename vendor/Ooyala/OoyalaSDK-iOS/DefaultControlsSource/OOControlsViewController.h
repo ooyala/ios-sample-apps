@@ -3,11 +3,12 @@
  * @brief      OOControlsViewController
  * @details    OOControlsViewController.h in OoyalaSDK
  * @date       2/23/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <UIKit/UIKit.h>
-#import "OOUIProgressSlider.h"
+#import "OOInlineIOS7ControlsView.h"
+#import "OOOoyalaPlayerViewController.h"
 
 @class OOOoyalaPlayer;
 
@@ -18,13 +19,16 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 @property (nonatomic, weak) OOOoyalaPlayer *player;
 @property (nonatomic, weak) UIView *overlay;
 @property (nonatomic) UIActivityIndicatorView *activityView;
-@property (nonatomic) UIView *controls;
+@property (nonatomic) OOInlineIOS7ControlsView *controls;
 @property (nonatomic) bool isVisible;
 @property (nonatomic) NSTimer *hideControlsTimer;
+
+- (id) initWithControlsType:(OOOoyalaPlayerControlType)controlsType player:(OOOoyalaPlayer *)player  overlay:(UIView *) overlay delegate:(id)delegate;
 
 - (void)showControls;
 - (void)hideControls;
 - (void)syncUI;
+
 
 //Hide and show the full screen button on the inline view
 - (void)setFullScreenButtonShowing: (BOOL) isShowing;

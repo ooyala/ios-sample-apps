@@ -3,7 +3,7 @@
  * @brief      OOVastAdPlayer
  * @details    OOVastAdPlayer.h in OoyalaSDK
  * @date       1/4/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOAdMoviePlayer.h"

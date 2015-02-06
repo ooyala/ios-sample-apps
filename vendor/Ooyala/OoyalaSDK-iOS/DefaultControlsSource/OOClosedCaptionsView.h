@@ -3,7 +3,7 @@
  * @brief      OOClosedCaptionsView
  * @details    OOClosedCaptionsView.h in OoyalaSDK
  * @date       1/6/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <UIKit/UIKit.h>

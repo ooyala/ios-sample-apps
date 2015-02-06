@@ -4,7 +4,7 @@
  * @brief      OOClientId
  * @details    OOClientId.h in OoyalaSDK
  * @date       7/29/14
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>

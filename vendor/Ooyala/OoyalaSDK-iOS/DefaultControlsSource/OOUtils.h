@@ -3,14 +3,12 @@
  * @brief      OOUtils
  * @details    OOUtils.h in OoyalaSDK
  * @date       11/22/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 #import "OOJSONKit.h"
-
-#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
 typedef enum {
   SIMULATOR,
@@ -143,6 +141,11 @@ typedef enum {
  * @returns an NSString containing the string representation of the raw decoded bytes
  */
 + (NSString *)decodeBase64ToStringWithString:(NSString *)strBase64 encoding:(NSStringEncoding)encoding;
+
+/**
+* Get a 'sufficiently unique' token (actually recycles after max int).
+*/
++ (int)getUniqueToken;
 
 /**
  * Get a SHA256 encrypted Guid as a Base64 string

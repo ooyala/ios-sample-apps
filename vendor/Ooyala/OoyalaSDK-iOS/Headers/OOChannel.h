@@ -3,7 +3,7 @@
  * @brief      OOChannel
  * @details    OOChannel.h in OoyalaSDK
  * @date       11/21/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOContentItem.h"

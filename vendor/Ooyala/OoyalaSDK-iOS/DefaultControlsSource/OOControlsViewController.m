@@ -3,13 +3,14 @@
  * @brief      Implementation of OOControlsViewController
  * @details    OOControlsViewController.m in OoyalaSDK
  * @date       2/23/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOControlsViewController.h"
 #import "OOOoyalaPlayer.h"
 #import "OOVideo.h"
 #import "OOUIUtils.h"
+#import "OOOptions.h"
 
 @interface OOUnselectableActivityIndicatorView : UIActivityIndicatorView
 @end
@@ -30,15 +31,24 @@
   __unsafe_unretained OOOoyalaPlayer *_player;
   __unsafe_unretained UIView *_overlay;
 }
-@property (nonatomic) BOOL isLiveSliderShowing;
+@property (nonatomic) OOOoyalaPlayerControlType controlsType;
+
 - (void)addObservers;
 - (void)removeObservers;
 @end
 
 @implementation OOControlsViewController
 
+- (id) initWithControlsType:(OOOoyalaPlayerControlType)controlsType player:(OOOoyalaPlayer *)player  overlay:(UIView *) overlay delegate:(id)dele{
+  self = [self init];
 
-@synthesize controls, activityView, hideControlsTimer;
+  self.controlsType = controlsType;
+  self.player = player;
+  self.delegate = dele;
+  self.overlay = overlay;
+
+  return self;
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -46,7 +56,6 @@
   self.view.backgroundColor = [UIColor blackColor];
   self.view.clipsToBounds = YES;
   self.isVisible = YES;
-  self.isLiveSliderShowing = YES;
 
   //add player's view
   [self.player.view setFrame:self.view.bounds];
@@ -59,7 +68,7 @@
   [self.view addSubview:self.activityView];
 
   //add controls
-  [self.view addSubview:controls];
+  [self.view addSubview:self.controls];
 
   //add overlay
   [self.view addSubview:self.overlay];
@@ -83,9 +92,9 @@
     return;
   }
   hasObservers = NO;
-  if (hideControlsTimer != nil) [hideControlsTimer invalidate];
-  [[NSNotificationCenter defaultCenter] removeObserver:self name:OOOoyalaPlayerStateChangedNotification object:_player];
-  [[NSNotificationCenter defaultCenter] removeObserver:self name:OOOoyalaPlayerTimeChangedNotification object:_player];
+  if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:OOOoyalaPlayerStateChangedNotification object:self.player];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:OOOoyalaPlayerTimeChangedNotification object:self.player];
 }
 
 - (void)viewDidUnload {
@@ -100,37 +109,35 @@
   [self addObservers];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
-  [self syncUI];
-  [self addObservers];
-}
+//- (void)viewDidAppear:(BOOL)animated {
+//  [super viewDidAppear:animated];
+//  [self syncUI];
+//  [self addObservers];
+//}
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   [self removeObservers];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-  [super viewDidDisappear:animated];
-  [self removeObservers];
-}
+//- (void)viewDidDisappear:(BOOL)animated {
+//  [super viewDidDisappear:animated];
+//  [self removeObservers];
+//}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   return YES;
 }
 
 - (void)hideControls {
-  if (hideControlsTimer != nil) [hideControlsTimer invalidate];
+  if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
   if (self.controls == nil) return;
 
   [UIView animateWithDuration:0.37
                    animations: ^ {
                      [self.controls setAlpha:0];
                      if (self.overlay) [self.overlay setAlpha:0];
-                     #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-                       if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) [self setNeedsStatusBarAppearanceUpdate];
-                     #endif
+                     [self setNeedsStatusBarAppearanceUpdate];
                    }
                    completion: ^ (BOOL finished) {
                      self.controls.hidden = YES;
@@ -141,21 +148,19 @@
 
 - (void)showControls {
   if (!self.isVisible) return;
-  if (hideControlsTimer != nil) [hideControlsTimer invalidate];
+  if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
   if (self.controls == nil) return;
 
   self.controls.hidden = NO;
   if (self.overlay) self.overlay.hidden = NO;
-  if (_player.isPlaying)
-    hideControlsTimer = [NSTimer scheduledTimerWithTimeInterval:CONTROLS_HIDE_TIMEOUT target:self selector:@selector(hideControls) userInfo:nil repeats:NO];
+  if (self.player.isPlaying)
+    self.hideControlsTimer = [NSTimer scheduledTimerWithTimeInterval:CONTROLS_HIDE_TIMEOUT target:self selector:@selector(hideControls) userInfo:nil repeats:NO];
 
   [UIView animateWithDuration:0.37
                    animations: ^ {
                      [self.controls setAlpha:1];
                      if (self.overlay) [self.overlay setAlpha:1];
-                     #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-                       if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) [self setNeedsStatusBarAppearanceUpdate];
-                     #endif
+                     [self setNeedsStatusBarAppearanceUpdate];
                    }
                    completion: nil];
  [self updateClosedCaptionsPosition];
@@ -188,21 +193,16 @@
 }
 
 - (void) setOverlay:(UIView *)theOverlay {
-  if(_overlay.superview) {
-    [_overlay removeFromSuperview];
+  if(self.overlay.superview) {
+    [self.overlay removeFromSuperview];
   }
 
   _overlay = theOverlay;
 
   if(self.controls.superview) {
-    [self.view addSubview:_overlay];
-    _overlay.hidden = self.controls.hidden;
+    [self.view addSubview:self.overlay];
+    self.overlay.hidden = self.controls.hidden;
   }
-}
-
-
-- (void)setLiveSliderShowing:(BOOL) isShowing {
-  self.isLiveSliderShowing = isShowing;
 }
 
 - (OOUIProgressSliderMode) sliderMode {
@@ -211,7 +211,7 @@
   }
   
   if (self.player.currentItem.live) {
-    if (!self.isLiveSliderShowing) {
+    if (![self.player.options showLiveContentScrubber]) {
       return OOUIProgressSliderModeLiveNoSrubber;
     }
     return OOUIProgressSliderModeLive;

@@ -2,8 +2,7 @@
 //  OOWidevinePlayer.h
 //  OoyalaSDK
 //
-//  Created by Chris Leonavicius on 8/2/12.
-//  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import "OOMoviePlayer.h"

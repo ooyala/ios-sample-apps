@@ -2,12 +2,13 @@
 //  OOInlineIOS7ViewController.m
 //  OoyalaSDK
 //
-//  Created by Liusha Huang on 8/22/13.
-//  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import "OOInlineIOS7ViewController.h"
 #import "OOOoyalaPlayer+Internal.h"
+#import "OOOoyalaPlayer.h"
+#import "OOOoyalaPlayerViewController.h"
 #import "OOInlineIOS7ControlsView.h"
 #import "OOUIProgressSliderIOS7.h"
 #import "OOVideo.h"
@@ -28,6 +29,7 @@
 
 @dynamic controls;
 
+
 - (void)viewDidLoad {
   if (self.player == nil) {
     LOG(@"viewDidLoad while player is nil");
@@ -39,12 +41,18 @@
   //add controls
   self.controls = [[OOInlineIOS7ControlsView alloc] initWithFrame:self.view.bounds];
 
-  self.controls.pauseButton.target = self.player;
-  self.controls.pauseButton.action = @selector(pause);
-  
+  [self initializeCoreControls];
+
+  [self initializeFullscreenControls];
+
+  [self initializeInlineControls];
+
+  [super viewDidLoad];
+}
+
+- (void) initializeCoreControls {
   self.controls.playButton.target = self.player;
-  self.controls.playButton.action = @selector(play);
-  
+
   self.controls.closedCaptionsButton.target = self.delegate;
   self.controls.closedCaptionsButton.action = @selector(closedCaptionsSelector);
   
@@ -55,6 +63,7 @@
   [self.controls.scrubberSlider.scrubber addTarget:self action:@selector(onScrubbingChanged) forControlEvents:UIControlEventValueChanged];
   [self.controls.scrubberSlider.scrubber addTarget:self action:@selector(onScrubbingEnded) forControlEvents:UIControlEventTouchUpInside];
   [self.controls.scrubberSlider.scrubber addTarget:self action:@selector(onScrubbingEnded) forControlEvents:UIControlEventTouchUpOutside];
+
   [super viewDidLoad];
 
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAdsLoaded:) name:OOOoyalaPlayerAdsLoadedNotification object:self.player];
@@ -65,6 +74,22 @@
   dispatch_async( dispatch_get_main_queue(), ^{
     [self syncUI];
   });
+}
+
+- (void) initializeFullscreenControls {
+  self.controls.doneButton.target = self.delegate;
+  self.controls.doneButton.action = @selector(onFullscreenDoneButtonClick);
+
+  self.controls.videoGravityFillButton.target = self.delegate;
+  self.controls.videoGravityFillButton.action = @selector(switchVideoGravity);
+
+  self.controls.videoGravityFitButton.target = self.delegate;
+  self.controls.videoGravityFitButton.action = @selector(switchVideoGravity);
+}
+
+- (void)initializeInlineControls {
+  self.controls.fullscreenButton.target = self.delegate;
+  self.controls.fullscreenButton.action = @selector(showFullscreen);
 }
 
 - (void)onScrubbingStarted {
@@ -134,24 +159,27 @@
   }
   
   //Handle state
+  [self.controls setIsPlayShowing:!self.player.isPlaying];
+
   if (self.player.isPlaying) {
+
     if ([self.player showingAdsWithHiddenControls]) {
       [self hideControls];
-    } else if (self.controls.playButtonShowing) {
-      [self.controls setPlayButtonShowing:NO];
+    } else if (self.controls.playButton.isPlayShowing) {
+      [self.controls.playButton setIsPlayShowing:NO];
       if (self.controls.hidden == NO) {
         [self showControls];
+        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
       }
     }
-  } else {
-    if (!self.controls.playButtonShowing) {
-      [self.controls setPlayButtonShowing:YES];
-      [self showControls];
-      if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+  } else if (!self.controls.playButton.isPlayShowing) {
+      [self.controls.playButton setIsPlayShowing:YES];
+      if (self.controls.hidden == NO) {
+        [self showControls];
+        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
     }
   }
-  
-  
+
   self.controls.scrubberSlider.scrubber.userInteractionEnabled = self.player.seekable;
 
   if ((self.player.state == OOOoyalaPlayerStateLoading) && seeking == NO)
@@ -179,9 +207,7 @@
                    animations: ^ {
                      [self.controls hide];
                      if (self.overlay) [self.overlay setAlpha:0];
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-                     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) [self setNeedsStatusBarAppearanceUpdate];
-#endif
+                     [self setNeedsStatusBarAppearanceUpdate];
                    }
                    completion: ^ (BOOL finished) {
                      if (self.overlay) self.overlay.hidden = YES;
@@ -208,9 +234,7 @@
                    animations: ^ {
                      [self.controls show];
                      if (self.overlay) [self.overlay setAlpha:1];
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
-                     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) [self setNeedsStatusBarAppearanceUpdate];
-#endif
+                     [self setNeedsStatusBarAppearanceUpdate];
                    }
                    completion: NULL];
 	[self updateClosedCaptionsPosition];
@@ -223,6 +247,7 @@
 - (void)viewDidAppear:(BOOL)animated {
   [self updateClosedCaptionsPosition];
 }
+
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
   [self updateClosedCaptionsPosition];
 }

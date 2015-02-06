@@ -3,7 +3,7 @@
  * @brief      OOConstants
  * @details    OOConstants.h in OoyalaSDK
  * @date       11/23/11
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 extern void OOOoyalaPlayerSetEnvironment(NSInteger e);
@@ -147,9 +147,9 @@ extern NSString *const OO_SEPARATOR_COLON;                    /**< Colon ":" */
 extern NSString *const OO_DELIVERY_TYPE_HLS;                  /**< The delivery_type value for hls */
 extern NSString *const OO_DELIVERY_TYPE_MP4;                  /**< The delivery_type value for mp4 */
 extern NSString *const OO_DELIVERY_TYPE_REMOTE_ASSET;         /**< The delivery_type calue for remote assets */
-extern NSString *const OO_DELIVERY_TYPE_FAXS_HLS;             /**< The delivery_type value for faxs encrypted content */
 extern NSString *const OO_DELIVERY_TYPE_WV_WVM;               /**< The delivery_type value for widevine encrypted content */
 extern NSString *const OO_DELIVERY_TYPE_WV_HLS;               /**< The delivery_type value for widevine encrypted content */
+extern NSString *const OO_DELIVERY_TYPE_SMOOTH;               /**< The delivery_type value for PlayReady Smooth encrypted content */
 
 extern NSInteger const OO_DEFAULT_AD_TIME_SECONDS;            /**< The default time (in seconds) an Ad should run at if not specified */
 

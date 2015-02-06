@@ -1,13 +1,13 @@
-/**
- * @class      OOUIProgressSlider OOUIProgressSlider.h "OOUIProgressSlider.h"
- * @brief      OOUIProgressSlider
- * @details    OOUIProgressSlider.h in OoyalaSDK
- * @date       1/9/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
- */
+//
+//  OOUIProgressSliderIOS7.h
+//  OoyalaSDK
+//
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+//
+
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
-
+#import "OOCuePointsView.h"
 //Action at end of video
 enum
 {
@@ -18,8 +18,7 @@ enum
 };
 typedef NSInteger OOUIProgressSliderMode;
 
-
-@interface OOUIProgressSlider : UIView {
+@interface OOUIProgressSliderIOS7 : UIView<OOCuePointViewDurationDataSource> {
   OOUIProgressSliderMode mode;
 }
 
@@ -28,11 +27,14 @@ typedef NSInteger OOUIProgressSliderMode;
 @property (nonatomic) float currentAvailableTime;
 @property (nonatomic) OOUIProgressSliderMode mode;
 @property (nonatomic) CMTimeRange seekableTimeRange;
-
+@property (nonatomic) UILabel *liveIndicator;
 @property (nonatomic) UISlider *scrubber;
-
+@property (nonatomic) NSSet *cuePointsAtSeconds; /**< NSNumber int seconds */
 
 - (void)updateTimeDisplay;
 
 - (Float64)scrubberAbsoluteValue;
+
+- (void)drawLiveIndicator;
+
 @end

@@ -3,7 +3,7 @@
  * @brief      OOOoyalaPlayerViewController
  * @details    OOOoyalaPlayerViewController.h in OoyalaSDK
  * @date       1/9/12
- * @copyright  Copyright (c) 2012 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <UIKit/UIKit.h>
@@ -23,14 +23,12 @@ extern NSString *const OOOoyalaPlayerViewControllerFullscreenExit;
  */
 @interface OOOoyalaPlayerViewController : UIViewController
 
-enum
-{
+typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
   /** an inline player, expandable to fullscreen */
   OOOoyalaPlayerControlTypeInline,
   /** a fullscreen player, not shrinkable to inline */
   OOOoyalaPlayerControlTypeFullScreen
 };
-typedef NSInteger OOOoyalaPlayerControlType;
 
 @property (nonatomic, readonly) OOOoyalaPlayerControlType initialControlType; // initial state
 @property (nonatomic, strong) OOOoyalaPlayer *player;
