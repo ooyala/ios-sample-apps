@@ -126,6 +126,32 @@
 		0BC948DD1A84509F004CB997 /* OOVASTWrapperAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC9489A1A84509F004CB997 /* OOVASTWrapperAd.h */; };
 		0BC948DE1A84509F004CB997 /* OOVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC9489B1A84509F004CB997 /* OOVideo.h */; };
 		0BC948DF1A84509F004CB997 /* OOVideoGravityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC9489C1A84509F004CB997 /* OOVideoGravityButton.h */; };
+		0BC94BF21A84719D004CB997 /* CustomControlsPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */; };
+		0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */; };
+		0BCA694C1A848E6400225119 /* OOControlsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA693C1A848E6400225119 /* OOControlsViewController.h */; };
+		0BCA694D1A848E6400225119 /* OOControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA693D1A848E6400225119 /* OOControlsViewController.m */; };
+		0BCA694E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA693E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h */; };
+		0BCA694F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA693F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m */; };
+		0BCA69501A848E6400225119 /* OOFullScreenIOS7ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69401A848E6400225119 /* OOFullScreenIOS7ViewController.h */; };
+		0BCA69511A848E6400225119 /* OOFullScreenIOS7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69411A848E6400225119 /* OOFullScreenIOS7ViewController.m */; };
+		0BCA69521A848E6400225119 /* OOImagesIOS7.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69421A848E6400225119 /* OOImagesIOS7.h */; };
+		0BCA69531A848E6400225119 /* OOImagesIOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69431A848E6400225119 /* OOImagesIOS7.m */; };
+		0BCA69541A848E6400225119 /* CustomControlsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69441A848E6400225119 /* CustomControlsView.h */; };
+		0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69451A848E6400225119 /* CustomControlsView.m */; };
+		0BCA69561A848E6400225119 /* CustomControlsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69461A848E6400225119 /* CustomControlsViewController.h */; };
+		0BCA69571A848E6400225119 /* CustomControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69471A848E6400225119 /* CustomControlsViewController.m */; };
+		0BCA695A1A848E6400225119 /* OOUIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA694A1A848E6400225119 /* OOUIUtils.h */; };
+		0BCA695B1A848E6400225119 /* OOUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA694B1A848E6400225119 /* OOUIUtils.m */; };
+		0BCA695D1A84907600225119 /* OOCuePointsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA695C1A84907600225119 /* OOCuePointsView.h */; };
+		0BCA695E1A8495AF00225119 /* PluginPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC4211A79A93B0085BC97 /* PluginPlayerViewController.m */; };
+		0BCA695F1A8495B200225119 /* CustomControlsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */; };
+		0BCA69601A8495BF00225119 /* InsertAdPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC41F1A79A93B0085BC97 /* InsertAdPlayerViewController.m */; };
+		0BCA69651A8495D400225119 /* CustomControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69451A848E6400225119 /* CustomControlsView.m */; };
+		0BCA69661A8495D800225119 /* CustomControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69471A848E6400225119 /* CustomControlsViewController.m */; };
+		0BCA69681A8495ED00225119 /* ChangeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC41D1A79A93B0085BC97 /* ChangeVideoPlayerViewController.m */; };
+		0BCA696C1A84965F00225119 /* OOSampleAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */; };
+		0BCA696D1A84965F00225119 /* OOSampleAdSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A81A7AEEBD00F0EC32 /* OOSampleAdSpot.m */; };
+		0BCA696E1A84965F00225119 /* OOSamplePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333AA1A7AEEBD00F0EC32 /* OOSamplePlugin.m */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* PlayWithInitialTimePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
 		0BFBF0C51A7AD6E300278506 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7AC4421A7A26F70085BC97 /* Foundation.framework */; };
@@ -262,6 +288,23 @@
 		0BC9489A1A84509F004CB997 /* OOVASTWrapperAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTWrapperAd.h; sourceTree = "<group>"; };
 		0BC9489B1A84509F004CB997 /* OOVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVideo.h; sourceTree = "<group>"; };
 		0BC9489C1A84509F004CB997 /* OOVideoGravityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVideoGravityButton.h; sourceTree = "<group>"; };
+		0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsPlayerViewController.h; sourceTree = "<group>"; };
+		0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsPlayerViewController.m; sourceTree = "<group>"; };
+		0BCA693C1A848E6400225119 /* OOControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOControlsViewController.h; sourceTree = "<group>"; };
+		0BCA693D1A848E6400225119 /* OOControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOControlsViewController.m; sourceTree = "<group>"; };
+		0BCA693E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFullScreenIOS7ControlsView.h; sourceTree = "<group>"; };
+		0BCA693F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOFullScreenIOS7ControlsView.m; sourceTree = "<group>"; };
+		0BCA69401A848E6400225119 /* OOFullScreenIOS7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFullScreenIOS7ViewController.h; sourceTree = "<group>"; };
+		0BCA69411A848E6400225119 /* OOFullScreenIOS7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOFullScreenIOS7ViewController.m; sourceTree = "<group>"; };
+		0BCA69421A848E6400225119 /* OOImagesIOS7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOImagesIOS7.h; sourceTree = "<group>"; };
+		0BCA69431A848E6400225119 /* OOImagesIOS7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOImagesIOS7.m; sourceTree = "<group>"; };
+		0BCA69441A848E6400225119 /* CustomControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsView.h; sourceTree = "<group>"; };
+		0BCA69451A848E6400225119 /* CustomControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsView.m; sourceTree = "<group>"; };
+		0BCA69461A848E6400225119 /* CustomControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsViewController.h; sourceTree = "<group>"; };
+		0BCA69471A848E6400225119 /* CustomControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsViewController.m; sourceTree = "<group>"; };
+		0BCA694A1A848E6400225119 /* OOUIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOUIUtils.h; sourceTree = "<group>"; };
+		0BCA694B1A848E6400225119 /* OOUIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOUIUtils.m; sourceTree = "<group>"; };
+		0BCA695C1A84907600225119 /* OOCuePointsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OOCuePointsView.h; path = "../../../vendor/Ooyala/OoyalaSDK-iOS/Headers/OOCuePointsView.h"; sourceTree = "<group>"; };
 		0BF4FCE01A68808A0050A602 /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,6 +403,8 @@
 		0B19FEDB1A3AB4B4003E57DF /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */,
+				0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */,
 				0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */,
 				0B19FEDD1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.m */,
 				0B7AC41E1A79A93B0085BC97 /* InsertAdPlayerViewController.h */,
@@ -393,8 +438,9 @@
 		0B19FEF51A3AB5A2003E57DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */,
+				0BC94BF41A847534004CB997 /* Controls */,
 				0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */,
+				0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */,
 				0B7333A71A7AEEBD00F0EC32 /* OOSampleAdSpot.h */,
 				0B7333A81A7AEEBD00F0EC32 /* OOSampleAdSpot.m */,
 				0B7333A91A7AEEBD00F0EC32 /* OOSamplePlugin.h */,
@@ -432,6 +478,7 @@
 		0BC948591A84509F004CB997 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				0BCA695C1A84907600225119 /* OOCuePointsView.h */,
 				0BC9485A1A84509F004CB997 /* iOS7ScrubberSliderFraming.h */,
 				0BC9485B1A84509F004CB997 /* OOAdPlugin.h */,
 				0BC9485C1A84509F004CB997 /* OOAdPluginManagerProtocol.h */,
@@ -503,6 +550,27 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		0BC94BF41A847534004CB997 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				0BCA693C1A848E6400225119 /* OOControlsViewController.h */,
+				0BCA693D1A848E6400225119 /* OOControlsViewController.m */,
+				0BCA693E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h */,
+				0BCA693F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m */,
+				0BCA69401A848E6400225119 /* OOFullScreenIOS7ViewController.h */,
+				0BCA69411A848E6400225119 /* OOFullScreenIOS7ViewController.m */,
+				0BCA69421A848E6400225119 /* OOImagesIOS7.h */,
+				0BCA69431A848E6400225119 /* OOImagesIOS7.m */,
+				0BCA69441A848E6400225119 /* CustomControlsView.h */,
+				0BCA69451A848E6400225119 /* CustomControlsView.m */,
+				0BCA69461A848E6400225119 /* CustomControlsViewController.h */,
+				0BCA69471A848E6400225119 /* CustomControlsViewController.m */,
+				0BCA694A1A848E6400225119 /* OOUIUtils.h */,
+				0BCA694B1A848E6400225119 /* OOUIUtils.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		0BF4FCA51A68808A0050A602 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,14 +587,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC94BF21A84719D004CB997 /* CustomControlsPlayerViewController.h in Headers */,
 				0BC948CA1A84509F004CB997 /* OOPlayPauseButton.h in Headers */,
 				0BC948D91A84509F004CB997 /* OOVASTLinearAd.h in Headers */,
 				0BC948C21A84509F004CB997 /* OOOptions.h in Headers */,
 				0BC948D01A84509F004CB997 /* OOStreamPlayer.h in Headers */,
 				0BC948A31A84509F004CB997 /* OOAdSpotPlugin.h in Headers */,
+				0BCA69541A848E6400225119 /* CustomControlsView.h in Headers */,
 				0BC948AD1A84509F004CB997 /* OOClosedCaptionsButton.h in Headers */,
 				0BC948AB1A84509F004CB997 /* OOClientId.h in Headers */,
+				0BCA69521A848E6400225119 /* OOImagesIOS7.h in Headers */,
 				0BC948A91A84509F004CB997 /* OOChannel.h in Headers */,
+				0BCA694C1A848E6400225119 /* OOControlsViewController.h in Headers */,
 				0BC948CE1A84509F004CB997 /* OOStateNotifier.h in Headers */,
 				0BC948DF1A84509F004CB997 /* OOVideoGravityButton.h in Headers */,
 				0BC948A51A84509F004CB997 /* OOAuthorizableItem.h in Headers */,
@@ -578,6 +650,7 @@
 				0BC948C31A84509F004CB997 /* OOOrderedDictionary.h in Headers */,
 				0BC948B21A84509F004CB997 /* OODynamicChannel.h in Headers */,
 				0BC948DB1A84509F004CB997 /* OOVASTStream.h in Headers */,
+				0BCA695A1A848E6400225119 /* OOUIUtils.h in Headers */,
 				0BC948B71A84509F004CB997 /* OOFCCTVRatingConfiguration.h in Headers */,
 				0BC9489D1A84509F004CB997 /* iOS7ScrubberSliderFraming.h in Headers */,
 				0B7AC4241A79A93B0085BC97 /* InsertAdPlayerViewController.h in Headers */,
@@ -586,13 +659,17 @@
 				0BC948D61A84509F004CB997 /* OOVASTAd.h in Headers */,
 				0BC948C11A84509F004CB997 /* OOOoyalaPlayerViewController.h in Headers */,
 				0BC948BB1A84509F004CB997 /* OOManagedAdSpot.h in Headers */,
+				0BCA695D1A84907600225119 /* OOCuePointsView.h in Headers */,
 				0BC948A61A84509F004CB997 /* OOBufferView.h in Headers */,
+				0BCA69501A848E6400225119 /* OOFullScreenIOS7ViewController.h in Headers */,
+				0BCA694E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h in Headers */,
 				0BC948C61A84509F004CB997 /* OOPlayer.h in Headers */,
 				0BC948C91A84509F004CB997 /* OOPlayerProtocol.h in Headers */,
 				0BC948A11A84509F004CB997 /* OOAdSpot.h in Headers */,
 				0BC948D21A84509F004CB997 /* OOStreamPlayerMappingPredicate.h in Headers */,
 				0BC948BD1A84509F004CB997 /* OOOoyalaAdSpot.h in Headers */,
 				0BC948C81A84509F004CB997 /* OOPlayerInfo.h in Headers */,
+				0BCA69561A848E6400225119 /* CustomControlsViewController.h in Headers */,
 				0BC948AA1A84509F004CB997 /* OOChannelSet.h in Headers */,
 				0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */,
 				0B7333AD1A7AEEBD00F0EC32 /* OOSampleAdSpot.h in Headers */,
@@ -708,16 +785,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCA694F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m in Sources */,
+				0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */,
+				0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				0B7333AE1A7AEEBD00F0EC32 /* OOSampleAdSpot.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
+				0BCA695B1A848E6400225119 /* OOUIUtils.m in Sources */,
+				0BCA694D1A848E6400225119 /* OOControlsViewController.m in Sources */,
+				0BCA69571A848E6400225119 /* CustomControlsViewController.m in Sources */,
 				0B19FEDF1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.m in Sources */,
 				0B7AC4271A79A93B0085BC97 /* PluginPlayerViewController.m in Sources */,
 				0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */,
 				0B19FED41A3A901F003E57DF /* SampleAppPlayerViewController.m in Sources */,
+				0BCA69511A848E6400225119 /* OOFullScreenIOS7ViewController.m in Sources */,
 				0B7AC4231A79A93B0085BC97 /* ChangeVideoPlayerViewController.m in Sources */,
 				0B7333AC1A7AEEBD00F0EC32 /* OOSampleAdPlayer.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* AdvancedPlaybackListViewController.m in Sources */,
+				0BCA69531A848E6400225119 /* OOImagesIOS7.m in Sources */,
 				0B7333B01A7AEEBD00F0EC32 /* OOSamplePlugin.m in Sources */,
 				0B7AC4251A79A93B0085BC97 /* InsertAdPlayerViewController.m in Sources */,
 			);
@@ -727,11 +812,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCA696C1A84965F00225119 /* OOSampleAdPlayer.m in Sources */,
+				0BCA696D1A84965F00225119 /* OOSampleAdSpot.m in Sources */,
+				0BCA696E1A84965F00225119 /* OOSamplePlugin.m in Sources */,
+				0BCA695F1A8495B200225119 /* CustomControlsPlayerViewController.m in Sources */,
+				0BCA69681A8495ED00225119 /* ChangeVideoPlayerViewController.m in Sources */,
 				0B19FF161A3B755A003E57DF /* PlayerSelectionOption.m in Sources */,
 				0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */,
 				0B19FF1A1A3B755A003E57DF /* AdvancedPlaybackListViewController.m in Sources */,
 				0B19FF1C1A3B755A003E57DF /* PlayWithInitialTimePlayerViewController.m in Sources */,
 				0B19FF031A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m in Sources */,
+				0BCA695E1A8495AF00225119 /* PluginPlayerViewController.m in Sources */,
+				0BCA69601A8495BF00225119 /* InsertAdPlayerViewController.m in Sources */,
+				0BCA69661A8495D800225119 /* CustomControlsViewController.m in Sources */,
+				0BCA69651A8495D400225119 /* CustomControlsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
