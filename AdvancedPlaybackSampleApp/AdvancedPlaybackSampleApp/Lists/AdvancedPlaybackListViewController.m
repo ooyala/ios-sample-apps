@@ -10,6 +10,7 @@
 #import "InsertAdPlayerViewController.h"
 #import "PluginPlayerViewController.h"
 #import "ChangeVideoPlayerViewController.h"
+#import "CustomControlsPlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface AdvancedPlaybackListViewController ()
@@ -28,8 +29,7 @@
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Change Video Programmatically" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [ChangeVideoPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Insert Ad at Runtime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [InsertAdPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Play With InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [PlayWithInitialTimePlayerViewController class]]];
-  
-  
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [CustomControlsPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
