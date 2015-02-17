@@ -1,4 +1,6 @@
 package main
+
+import "errors"
 import ol "mobile.ooyala.com/common/log"
 import gl "log"
 import "log"
@@ -39,7 +41,7 @@ func main() {
 	sdkFolderPath := *configArgs.Path
 
 	if sdkFolderPath == "" {
-		sdkFolderPath = "/Users/yigu/repos/ios-sdk/"
+		util.Die(errors.New("ERROR: no path passed in"), l)
 	}
 
 	// if the sdk from target location really exists
