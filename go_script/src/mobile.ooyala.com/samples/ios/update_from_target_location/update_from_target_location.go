@@ -25,8 +25,8 @@ func loadFlags(l *gl.Logger) (args.Config, error) {
 }
 
 func main() {
-	l, err := ol.NewFileAndStdoutLoggerNow(MakeFileAbs("/tmp/android-sample-apps.get_latest_rc"))
-	ol.ColorizedPrintln(l, "GetLatestRc")
+	l, err := ol.NewFileAndStdoutLoggerNow(MakeFileAbs("/tmp/ios-sample-apps.update_from_target_location"))
+	ol.ColorizedPrintln(l, "ios update from target location")
 	util.MaybeDie(err, nil)
 
 	rootDir, err := util.ToDirAbs(MakeDirRel("."))
