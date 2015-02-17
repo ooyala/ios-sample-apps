@@ -44,24 +44,23 @@ func main() {
 		util.Die(errors.New("ERROR: no path passed in"), l)
 	}
 
-	// if the sdk from target location really exists
-	if exist, err := sdksExist(sdkFolderPath + zipConfig.CoreSDKFileNameStr, sdkFolderPath + zipConfig.FreewheelSDKFileNameStr, sdkFolderPath + zipConfig.IMASDKFileNameStr); exist == true && err == nil {
-		removeOldOoyalaVendorFolders(config, l)
+	checkSdkExist(sdkFolderPath, zipConfig, l)
 
-		copyFromTargetFolders(config, zipConfig, sdkFolderPath, l)
+	removeOldOoyalaVendorFolders(config, l)
 
-		unzipNewRCPackages(config, zipConfig, l)
+	copyFromTargetFolders(config, zipConfig, sdkFolderPath, l)
 
-		removeZipFiles(config, zipConfig, l)
+	unzipNewRCPackages(config, zipConfig, l)
 
-		//TEMPORARY: Remove all sample apps provided in the packages, until the sample apps are no longer included
-		util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaCoreFolderPath, MakeFileName("SampleApps"))), l);
-		util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaCoreFolderPath, MakeFileName("APIDocs"))), l);
-		util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaFreewheelFolderPath, MakeFileName("FreewheelSampleApp"))), l);
-		util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaFreewheelFolderPath, MakeFileName("APIDocs"))), l);
-		util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaIMAFolderPath,MakeFileName("IMASampleApp"))), l);
-		util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaIMAFolderPath, MakeFileName("APIDocs"))), l);
-	}
+	removeZipFiles(config, zipConfig, l)
+
+	//TEMPORARY: Remove all sample apps provided in the packages, until the sample apps are no longer included
+	util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaCoreFolderPath, MakeFileName("SampleApps"))), l);
+	util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaCoreFolderPath, MakeFileName("APIDocs"))), l);
+	util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaFreewheelFolderPath, MakeFileName("FreewheelSampleApp"))), l);
+	util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaFreewheelFolderPath, MakeFileName("APIDocs"))), l);
+	util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaIMAFolderPath,MakeFileName("IMASampleApp"))), l);
+	util.DeletePath(MakeFileAbs(Join(config.VendorOoyalaIMAFolderPath, MakeFileName("APIDocs"))), l);
 }
 
 func removeOldOoyalaVendorFolders(config vc.Config, l *log.Logger) {
@@ -87,13 +86,13 @@ func copyFromTargetFolders(config vc.Config, zipConfig zc.Config, sdkFolderPath 
 
 func unzipNewRCPackages(config vc.Config, zipConfig zc.Config, l *log.Logger) {
 	ol.ColorizedMethodPrintln(l)
-	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.CoreSDKFileNameStr}, l)
+	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip -o " + zipConfig.CoreSDKFileNameStr}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.FreewheelSDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip -o " + zipConfig.FreewheelSDKFileNameStr}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.IMASDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip -o " + zipConfig.IMASDKFileNameStr}, l)
 	util.MaybeDie(err, l)
 }
 
@@ -109,17 +108,13 @@ func removeZipFiles(config vc.Config, zipConfig zc.Config, l *log.Logger) {
 	util.MaybeDie(err, l)
 }
 
-func sdksExist(CoreSDKTargetPath string, FreewheelSDKTargetPath string, IMASDKTargetPath string) (bool, error) {
-    _, err := os.Stat(CoreSDKTargetPath)
-    if os.IsNotExist(err) { return false, nil }
-
-    _, err = os.Stat(FreewheelSDKTargetPath)
-    if os.IsNotExist(err) { return false, nil }
-
-    _, err = os.Stat(IMASDKTargetPath)
-    if os.IsNotExist(err) { return false, nil }
-
-    if err == nil { return true, nil }
-
-    return false, err
-}
+func checkSdkExist(sdkFolderPathStr string, zipConfig zc.Config, l *log.Logger) {
+     _, err := os.Stat(sdkFolderPathStr + zipConfig.CoreSDKFileNameStr)
+     util.MaybeDie(err, l)
+ 
+     _, err = os.Stat(sdkFolderPathStr + zipConfig.FreewheelSDKFileNameStr)
+     util.MaybeDie(err, l)
+ 
+     _, err = os.Stat(sdkFolderPathStr + zipConfig.IMASDKFileNameStr)
+     util.MaybeDie(err, l)
+ }
