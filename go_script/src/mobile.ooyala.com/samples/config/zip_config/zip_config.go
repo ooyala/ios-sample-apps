@@ -45,7 +45,6 @@ func MakeiOSConfig(rootPath DirAbs, logger *log.Logger) Config {
 		CoreSDKURL:                      "https://ooyala.box.com/shared/static/trtptb6942ikglrdeq5e.zip",
 		FreewheelSDKURL:                 "https://ooyala.box.com/shared/static/yx9lnfj19v6hgzaach5u.zip",
 		IMASDKURL:                       "https://ooyala.box.com/shared/static/13to4ii3o3pgpzjvlaep.zip",
-
 	}
 	util.RequireFullStructOrDie(c, logger)
 	return c
