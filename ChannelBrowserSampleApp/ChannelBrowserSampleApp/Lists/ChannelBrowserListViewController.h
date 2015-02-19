@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ChannelBrowserListViewController.h
 //  ChannelBrowserSampleApp
 //
 //  Created by Zhihui Chen on 2/18/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ChannelBrowserListViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end
-
