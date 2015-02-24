@@ -31,8 +31,8 @@
   
   if (apiClient == nil) {
     // Do any additional setup after loading the view.
-    NSString *APIKEY = @"R2d3I6s06RyB712DN0_2GsQS-R-Y.nCFrd";
-    NSString *SECRETKEY = @"UpmPCeDJspTKqLHO5IyZSRbsSiC7AM_rAqGztDRN";
+    NSString *APIKEY = @"PUT YOUR API KEY HERE";
+    NSString *SECRETKEY = @"PUT YOUR SECRET HERE";
     NSString *PCODE =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
     NSString *PLAYER_DOMAIN = @"http://www.ooyala.com";
     OOPlayerDomain *playerDomain = [[OOPlayerDomain alloc] initWithString:PLAYER_DOMAIN];
