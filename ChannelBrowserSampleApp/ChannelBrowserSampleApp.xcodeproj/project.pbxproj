@@ -18,7 +18,15 @@
 		9751C8631A95717900C7364F /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9751C8611A95717900C7364F /* TableCell.xib */; };
 		9751C8671A95722700C7364F /* ChannelBrowserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* ChannelBrowserListViewController.m */; };
 		9751C8731A9572C000C7364F /* ChannelBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelBrowserViewController.m */; };
-		9751C8761A9572E300C7364F /* PlayerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8751A9572E300C7364F /* PlayerDetailViewController.m */; };
+		979BB20E1A9BD691001EB8BF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB20D1A9BD691001EB8BF /* PlayerSelectionOption.m */; };
+		979BB2121A9BE32D001EB8BF /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979BB2111A9BE32D001EB8BF /* ChannelCell.xib */; };
+		979BB2151A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB2141A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m */; };
+		979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */; };
+		979BB21B1A9BE737001EB8BF /* ChannelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelDetailViewController.m */; };
+		979BB21D1A9C03B6001EB8BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */; };
+		979BB2201A9C0B43001EB8BF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21F1A9C0B43001EB8BF /* libc++.dylib */; };
+		979BB2221A9C0B54001EB8BF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2211A9C0B54001EB8BF /* libxml2.dylib */; };
+		979BB2241A9C0B83001EB8BF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +126,19 @@
 		9751C8661A95722700C7364F /* ChannelBrowserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelBrowserListViewController.m; sourceTree = "<group>"; };
 		9751C8711A9572C000C7364F /* ChannelBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelBrowserViewController.h; sourceTree = "<group>"; };
 		9751C8721A9572C000C7364F /* ChannelBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelBrowserViewController.m; sourceTree = "<group>"; };
-		9751C8741A9572E300C7364F /* PlayerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailViewController.h; sourceTree = "<group>"; };
-		9751C8751A9572E300C7364F /* PlayerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailViewController.m; sourceTree = "<group>"; };
+		979BB20C1A9BD691001EB8BF /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
+		979BB20D1A9BD691001EB8BF /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		979BB2111A9BE32D001EB8BF /* ChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelCell.xib; sourceTree = "<group>"; };
+		979BB2131A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelBrowserTableViewCell.h; sourceTree = "<group>"; };
+		979BB2141A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelBrowserTableViewCell.m; sourceTree = "<group>"; };
+		979BB2161A9BE6FB001EB8BF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
+		979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
+		979BB2191A9BE737001EB8BF /* ChannelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelDetailViewController.h; sourceTree = "<group>"; };
+		979BB21A1A9BE737001EB8BF /* ChannelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelDetailViewController.m; sourceTree = "<group>"; };
+		979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		979BB21F1A9C0B43001EB8BF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		979BB2211A9C0B54001EB8BF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +146,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979BB2241A9C0B83001EB8BF /* MediaPlayer.framework in Frameworks */,
+				979BB2221A9C0B54001EB8BF /* libxml2.dylib in Frameworks */,
+				979BB2201A9C0B43001EB8BF /* libc++.dylib in Frameworks */,
+				979BB21D1A9C03B6001EB8BF /* SystemConfiguration.framework in Frameworks */,
 				9751C85E1A956D8700C7364F /* libOoyalaSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +167,10 @@
 		9751C7E51A956C5300C7364F = {
 			isa = PBXGroup;
 			children = (
+				979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */,
+				979BB2211A9C0B54001EB8BF /* libxml2.dylib */,
+				979BB21F1A9C0B43001EB8BF /* libc++.dylib */,
+				979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */,
 				9751C8171A956D8700C7364F /* VendorLibraries */,
 				9751C7F01A956C5300C7364F /* ChannelBrowserSampleApp */,
 				9751C80A1A956C5300C7364F /* ChannelBrowserSampleAppTests */,
@@ -163,15 +190,16 @@
 		9751C7F01A956C5300C7364F /* ChannelBrowserSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				9751C8681A95723800C7364F /* Players */,
-				9751C8641A95720600C7364F /* Lists */,
-				9751C85F1A95717900C7364F /* Views */,
 				9751C7F51A956C5300C7364F /* AppDelegate.h */,
 				9751C7F61A956C5300C7364F /* AppDelegate.m */,
-				9751C7FB1A956C5300C7364F /* Main.storyboard */,
 				9751C7FE1A956C5300C7364F /* Images.xcassets */,
 				9751C8001A956C5300C7364F /* LaunchScreen.xib */,
+				9751C8641A95720600C7364F /* Lists */,
+				9751C7FB1A956C5300C7364F /* Main.storyboard */,
+				9751C8681A95723800C7364F /* Players */,
 				9751C7F11A956C5300C7364F /* Supporting Files */,
+				979BB20B1A9BD691001EB8BF /* Utils */,
+				9751C85F1A95717900C7364F /* Views */,
 			);
 			path = ChannelBrowserSampleApp;
 			sourceTree = "<group>";
@@ -291,6 +319,7 @@
 			children = (
 				9751C8601A95717900C7364F /* PlayerSimple.xib */,
 				9751C8611A95717900C7364F /* TableCell.xib */,
+				979BB2111A9BE32D001EB8BF /* ChannelCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,10 +338,23 @@
 			children = (
 				9751C8711A9572C000C7364F /* ChannelBrowserViewController.h */,
 				9751C8721A9572C000C7364F /* ChannelBrowserViewController.m */,
-				9751C8741A9572E300C7364F /* PlayerDetailViewController.h */,
-				9751C8751A9572E300C7364F /* PlayerDetailViewController.m */,
+				979BB2131A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.h */,
+				979BB2141A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m */,
+				979BB2191A9BE737001EB8BF /* ChannelDetailViewController.h */,
+				979BB21A1A9BE737001EB8BF /* ChannelDetailViewController.m */,
 			);
 			path = Players;
+			sourceTree = "<group>";
+		};
+		979BB20B1A9BD691001EB8BF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				979BB2161A9BE6FB001EB8BF /* SampleAppPlayerViewController.h */,
+				979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */,
+				979BB20C1A9BD691001EB8BF /* PlayerSelectionOption.h */,
+				979BB20D1A9BD691001EB8BF /* PlayerSelectionOption.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +442,7 @@
 				9751C8021A956C5300C7364F /* LaunchScreen.xib in Resources */,
 				9751C7FF1A956C5300C7364F /* Images.xcassets in Resources */,
 				9751C8631A95717900C7364F /* TableCell.xib in Resources */,
+				979BB2121A9BE32D001EB8BF /* ChannelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +460,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9751C8761A9572E300C7364F /* PlayerDetailViewController.m in Sources */,
 				9751C7F71A956C5300C7364F /* AppDelegate.m in Sources */,
+				979BB20E1A9BD691001EB8BF /* PlayerSelectionOption.m in Sources */,
 				9751C8731A9572C000C7364F /* ChannelBrowserViewController.m in Sources */,
+				979BB21B1A9BE737001EB8BF /* ChannelDetailViewController.m in Sources */,
 				9751C8671A95722700C7364F /* ChannelBrowserListViewController.m in Sources */,
+				979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */,
+				979BB2151A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m in Sources */,
 				9751C7F41A956C5300C7364F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +668,7 @@
 				9751C8131A956C5300C7364F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9751C8141A956C5300C7364F /* Build configuration list for PBXNativeTarget "ChannelBrowserSampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -630,6 +677,7 @@
 				9751C8161A956C5300C7364F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

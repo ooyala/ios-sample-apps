@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlayerSelectionOption.h"
 
-@interface ChannelBrowserViewController : UIViewController
+@interface ChannelBrowserViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic) PlayerSelectionOption *option;
 
 @end
