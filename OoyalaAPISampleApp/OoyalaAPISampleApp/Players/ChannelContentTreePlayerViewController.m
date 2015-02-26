@@ -1,12 +1,11 @@
-//
-//  ChannelBrowserViewController.m
-//  ChannelBrowserSampleApp
-//
-//  Created by Zhihui Chen on 2/18/15.
-//  Copyright (c) 2015 ooyala. All rights reserved.
-//
+/**
+ * @class      ChannelBrowserViewController ChannelBrowserViewController.m "ChannelBrowserViewController.m"
+ * @brief      A view that displays the list of videos in a channel
+ * @date       12/12/14
+ * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ */
 
-#import "ChannelBrowserViewController.h"
+#import "ChannelContentTreePlayerViewController.h"
 #import "OOOoyalaAPIClient.h"
 #import "OOPlayerDomain.h"
 #import "OODebugMode.h"
@@ -14,17 +13,17 @@
 #import "OOChannel.h"
 #import "OOVideo.h"
 #import "OOOrderedDictionary.h"
-#import "ChannelBrowserTableViewCell.h"
-#import "ChannelDetailViewController.h"
+#import "ChannelContentTreeTableViewCell.h"
+#import "ChannelContentTreeDetailViewController.h"
 
-@interface ChannelBrowserViewController () {
+@interface ChannelContentTreePlayerViewController () {
   OOOrderedDictionary *videos;
   OOOoyalaAPIClient *apiClient;
 }
 
 @end
 
-@implementation ChannelBrowserViewController
+@implementation ChannelContentTreePlayerViewController
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.tableView registerNib:[UINib nibWithNibName:@"ChannelCell" bundle:nil] forCellReuseIdentifier:@"ChannelCell"];
@@ -68,7 +67,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  ChannelBrowserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChannelCell" forIndexPath:indexPath];
+  ChannelContentTreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChannelCell" forIndexPath:indexPath];
   OOVideo *video = [videos objectAtIndex:indexPath.row];
   NSString *imageUrl = video.promoImageURL;
   [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
@@ -92,8 +91,8 @@
 {
   // When a row is selected, load its desired PlayerViewController
   OOVideo *video = [videos objectAtIndex:indexPath.row];
-  PlayerSelectionOption *selection = [[PlayerSelectionOption alloc] initWithTitle:video.title embedCode:video.embedCode viewController:[ChannelDetailViewController class]];
-  ChannelDetailViewController *controller = [[ChannelDetailViewController alloc] initWithPlayerSelectionOption:selection];
+  PlayerSelectionOption *selection = [[PlayerSelectionOption alloc] initWithTitle:video.title embedCode:video.embedCode viewController:[ChannelContentTreeDetailViewController class]];
+  ChannelContentTreeDetailViewController *controller = [[ChannelContentTreeDetailViewController alloc] initWithPlayerSelectionOption:selection];
   [self.navigationController pushViewController:controller animated:YES];
 }
 

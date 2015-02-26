@@ -20,6 +20,9 @@
       location = "group:OptionsSampleApp/OptionsSampleApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:OoyalaAPISampleApp/OoyalaAPISampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:README.md">
    </FileRef>
 </Workspace>

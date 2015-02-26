@@ -121,6 +121,8 @@
 		0BC949961A8450D4004CB997 /* libOoyalaFreewheelSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC9493C1A8450D3004CB997 /* libOoyalaFreewheelSDK.a */; };
 		0BC949971A8450D4004CB997 /* libOoyalaIMASDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC9493D1A8450D3004CB997 /* libOoyalaIMASDK.a */; };
 		0BC949981A8450D4004CB997 /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC9493E1A8450D3004CB997 /* libOoyalaSDK.a */; };
+		0BDC4BE51A9FA47B00576639 /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BDC4BE41A9FA47B00576639 /* ChannelCell.xib */; };
+		0BDC4BE71A9FA56F00576639 /* libOoyalaAPISampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDC4BE61A9FA56F00576639 /* libOoyalaAPISampleAppSource.a */; };
 		0BF4F9FD1A68514F0050A602 /* libOptionsSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */; };
 		0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */; };
 		0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA4C1A68730A0050A602 /* WebKit.framework */; };
@@ -248,6 +250,9 @@
 		0BC9493C1A8450D3004CB997 /* libOoyalaFreewheelSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaFreewheelSDK.a; sourceTree = "<group>"; };
 		0BC9493D1A8450D3004CB997 /* libOoyalaIMASDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaIMASDK.a; sourceTree = "<group>"; };
 		0BC9493E1A8450D3004CB997 /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaSDK.a; sourceTree = "<group>"; };
+		0BDC4BE21A9FA40800576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaAPISampleAppSource.a; path = "../ChannelBrowserSampleApp/build/Debug-iphoneos/libOoyalaAPISampleAppSource.a"; sourceTree = "<group>"; };
+		0BDC4BE41A9FA47B00576639 /* ChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelCell.xib; sourceTree = "<group>"; };
+		0BDC4BE61A9FA56F00576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaAPISampleAppSource.a; path = "../OoyalaAPISampleApp/build/Debug-iphoneos/libOoyalaAPISampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOptionsSampleAppSource.a; path = "../OptionsSampleApp/build/Debug-iphoneos/libOptionsSampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMASampleAppSource.a; path = "../IMASampleApp/build/Debug-iphoneos/libIMASampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4FA4C1A68730A0050A602 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -259,27 +264,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
-				0BC949981A8450D4004CB997 /* libOoyalaSDK.a in Frameworks */,
+				0BDC4BE71A9FA56F00576639 /* libOoyalaAPISampleAppSource.a in Frameworks */,
 				0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
 				0B2459D11A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a in Frameworks */,
 				0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */,
-				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
+				0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */,
+				0BF4F9FD1A68514F0050A602 /* libOptionsSampleAppSource.a in Frameworks */,
+				0BC949981A8450D4004CB997 /* libOoyalaSDK.a in Frameworks */,
 				0BC949971A8450D4004CB997 /* libOoyalaIMASDK.a in Frameworks */,
+				0BC949951A8450D4004CB997 /* libGoogleIMA3.a in Frameworks */,
+				0BC949961A8450D4004CB997 /* libOoyalaFreewheelSDK.a in Frameworks */,
+				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
 				0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */,
+				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
 				0B1E45BF1A68894B0092F056 /* libxml2.dylib in Frameworks */,
 				0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */,
 				0BF4FA4F1A6873120050A602 /* libz.dylib in Frameworks */,
 				0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */,
-				0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */,
-				0BF4F9FD1A68514F0050A602 /* libOptionsSampleAppSource.a in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
 				0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */,
 				0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */,
-				0BC949961A8450D4004CB997 /* libOoyalaFreewheelSDK.a in Frameworks */,
 				0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */,
 				0BC9493F1A8450D3004CB997 /* AdManager.framework in Frameworks */,
-				0BC949951A8450D4004CB997 /* libGoogleIMA3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +335,8 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BDC4BE61A9FA56F00576639 /* libOoyalaAPISampleAppSource.a */,
+				0BDC4BE21A9FA40800576639 /* libOoyalaAPISampleAppSource.a */,
 				0B17A0E41A78203E009D1C50 /* libc++.dylib */,
 				0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */,
 				0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */,
@@ -378,6 +386,7 @@
 				0BC947E11A817768004CB997 /* PlayerDoubleText.xib */,
 				0BC947E21A817768004CB997 /* PlayerSimple.xib */,
 				0BC947E31A817768004CB997 /* PlayerSingleButton.xib */,
+				0BDC4BE41A9FA47B00576639 /* ChannelCell.xib */,
 				0BC947E41A817768004CB997 /* TableCell.xib */,
 			);
 			path = Views;
@@ -668,6 +677,7 @@
 			files = (
 				0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */,
 				0BC947E91A817768004CB997 /* PlayerSingleButton.xib in Resources */,
+				0BDC4BE51A9FA47B00576639 /* ChannelCell.xib in Resources */,
 				0BC947E71A817768004CB997 /* PlayerDoubleText.xib in Resources */,
 				0BC947E61A817768004CB997 /* PlayerDoubleSwitch.xib in Resources */,
 				0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */,
@@ -804,6 +814,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/michael.len/repos/ios_sample_apps/ChannelBrowserSampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/OoyalaAPISampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -827,6 +841,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/michael.len/repos/ios_sample_apps/ChannelBrowserSampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/IMASampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/OptionsSampleApp/build/Debug-iphoneos",
+					"/Users/michael.len/repos/ios_sample_apps/OoyalaAPISampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";

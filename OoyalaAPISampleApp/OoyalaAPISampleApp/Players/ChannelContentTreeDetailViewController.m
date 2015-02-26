@@ -1,17 +1,16 @@
-//
-//  ChannelDetailViewController.m
-//  ChannelBrowserSampleApp
-//
-//  Created by Zhihui Chen on 2/23/15.
-//  Copyright (c) 2015 ooyala. All rights reserved.
-//
+/**
+ * @class      ChannelContentTreeDetailViewController ChannelContentTreeDetailViewController.m "ChannelContentTreeDetailViewController.m"
+ * @brief      A view that plays video after selecting from the channel list
+ * @date       12/12/14
+ * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ */
 
-#import "ChannelDetailViewController.h"
+#import "ChannelContentTreeDetailViewController.h"
 #import "OOOoyalaPlayerViewController.h"
 #import "OOPlayerDomain.h"
 #import "OODebugMode.h"
 
-@interface ChannelDetailViewController () {
+@interface ChannelContentTreeDetailViewController () {
   NSString *embedCode;
   NSString *nib;
   NSString *pcode;
@@ -22,7 +21,7 @@
 
 @end
 
-@implementation ChannelDetailViewController
+@implementation ChannelContentTreeDetailViewController
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   if (self = [super initWithPlayerSelectionOption:playerSelectionOption]) {

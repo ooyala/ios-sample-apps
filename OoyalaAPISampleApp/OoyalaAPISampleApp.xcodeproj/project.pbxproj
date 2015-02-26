@@ -7,40 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BDC4BC61A9F9F7300576639 /* OoyalaAPISampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0BDC4BC51A9F9F7300576639 /* OoyalaAPISampleAppSource.h */; };
+		0BDC4BC81A9F9F7300576639 /* OoyalaAPISampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BC71A9F9F7300576639 /* OoyalaAPISampleAppSource.m */; };
+		0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */; };
+		0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */; };
+		0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
+		0BDC4BE01A9FA3D800576639 /* ChannelContentTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */; };
+		0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */; };
 		9751C7F41A956C5300C7364F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C7F31A956C5300C7364F /* main.m */; };
 		9751C7F71A956C5300C7364F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C7F61A956C5300C7364F /* AppDelegate.m */; };
 		9751C7FD1A956C5300C7364F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9751C7FB1A956C5300C7364F /* Main.storyboard */; };
 		9751C7FF1A956C5300C7364F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9751C7FE1A956C5300C7364F /* Images.xcassets */; };
 		9751C8021A956C5300C7364F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9751C8001A956C5300C7364F /* LaunchScreen.xib */; };
-		9751C80E1A956C5300C7364F /* ChannelBrowserSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C80D1A956C5300C7364F /* ChannelBrowserSampleAppTests.m */; };
 		9751C85E1A956D8700C7364F /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9751C85D1A956D8700C7364F /* libOoyalaSDK.a */; };
 		9751C8621A95717900C7364F /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9751C8601A95717900C7364F /* PlayerSimple.xib */; };
 		9751C8631A95717900C7364F /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9751C8611A95717900C7364F /* TableCell.xib */; };
-		9751C8671A95722700C7364F /* ChannelBrowserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* ChannelBrowserListViewController.m */; };
-		9751C8731A9572C000C7364F /* ChannelBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelBrowserViewController.m */; };
+		9751C8671A95722700C7364F /* OoyalaAPIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */; };
+		9751C8731A9572C000C7364F /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */; };
 		979BB20E1A9BD691001EB8BF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB20D1A9BD691001EB8BF /* PlayerSelectionOption.m */; };
 		979BB2121A9BE32D001EB8BF /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979BB2111A9BE32D001EB8BF /* ChannelCell.xib */; };
-		979BB2151A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB2141A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m */; };
 		979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */; };
-		979BB21B1A9BE737001EB8BF /* ChannelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelDetailViewController.m */; };
+		979BB21B1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
 		979BB21D1A9C03B6001EB8BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */; };
 		979BB2201A9C0B43001EB8BF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21F1A9C0B43001EB8BF /* libc++.dylib */; };
 		979BB2221A9C0B54001EB8BF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2211A9C0B54001EB8BF /* libxml2.dylib */; };
 		979BB2241A9C0B83001EB8BF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9751C8081A956C5300C7364F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9751C7E61A956C5300C7364F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9751C7ED1A956C5300C7364F;
-			remoteInfo = ChannelBrowserSampleApp;
+/* Begin PBXCopyFilesBuildPhase section */
+		0BDC4BC11A9F9F7300576639 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0BDC4BC61A9F9F7300576639 /* OoyalaAPISampleAppSource.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9751C7EE1A956C5300C7364F /* ChannelBrowserSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChannelBrowserSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BDC4BC31A9F9F7300576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOoyalaAPISampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BDC4BC51A9F9F7300576639 /* OoyalaAPISampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OoyalaAPISampleAppSource.h; sourceTree = "<group>"; };
+		0BDC4BC71A9F9F7300576639 /* OoyalaAPISampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OoyalaAPISampleAppSource.m; sourceTree = "<group>"; };
+		0BDC4BDE1A9FA3D800576639 /* ChannelContentTreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreeTableViewCell.h; sourceTree = "<group>"; };
+		0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreeTableViewCell.m; sourceTree = "<group>"; };
+		9751C7EE1A956C5300C7364F /* OoyalaAPISampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OoyalaAPISampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9751C7F21A956C5300C7364F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9751C7F31A956C5300C7364F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9751C7F51A956C5300C7364F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,9 +61,6 @@
 		9751C7FC1A956C5300C7364F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9751C7FE1A956C5300C7364F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9751C8011A956C5300C7364F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9751C8071A956C5300C7364F /* ChannelBrowserSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChannelBrowserSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9751C80C1A956C5300C7364F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9751C80D1A956C5300C7364F /* ChannelBrowserSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelBrowserSampleAppTests.m; sourceTree = "<group>"; };
 		9751C8191A956D8700C7364F /* iOS7ScrubberSliderFraming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS7ScrubberSliderFraming.h; sourceTree = "<group>"; };
 		9751C81A1A956D8700C7364F /* OOAdPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdPlugin.h; sourceTree = "<group>"; };
 		9751C81B1A956D8700C7364F /* OOAdPluginManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdPluginManagerProtocol.h; sourceTree = "<group>"; };
@@ -122,19 +132,17 @@
 		9751C85D1A956D8700C7364F /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaSDK.a; sourceTree = "<group>"; };
 		9751C8601A95717900C7364F /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		9751C8611A95717900C7364F /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		9751C8651A95722700C7364F /* ChannelBrowserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelBrowserListViewController.h; sourceTree = "<group>"; };
-		9751C8661A95722700C7364F /* ChannelBrowserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelBrowserListViewController.m; sourceTree = "<group>"; };
-		9751C8711A9572C000C7364F /* ChannelBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelBrowserViewController.h; sourceTree = "<group>"; };
-		9751C8721A9572C000C7364F /* ChannelBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelBrowserViewController.m; sourceTree = "<group>"; };
+		9751C8651A95722700C7364F /* OoyalaAPIListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaAPIListViewController.h; sourceTree = "<group>"; };
+		9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaAPIListViewController.m; sourceTree = "<group>"; };
+		9751C8711A9572C000C7364F /* ChannelContentTreePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreePlayerViewController.h; sourceTree = "<group>"; };
+		9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreePlayerViewController.m; sourceTree = "<group>"; };
 		979BB20C1A9BD691001EB8BF /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		979BB20D1A9BD691001EB8BF /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		979BB2111A9BE32D001EB8BF /* ChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelCell.xib; sourceTree = "<group>"; };
-		979BB2131A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelBrowserTableViewCell.h; sourceTree = "<group>"; };
-		979BB2141A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelBrowserTableViewCell.m; sourceTree = "<group>"; };
 		979BB2161A9BE6FB001EB8BF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
-		979BB2191A9BE737001EB8BF /* ChannelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelDetailViewController.h; sourceTree = "<group>"; };
-		979BB21A1A9BE737001EB8BF /* ChannelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelDetailViewController.m; sourceTree = "<group>"; };
+		979BB2191A9BE737001EB8BF /* ChannelContentTreeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreeDetailViewController.h; sourceTree = "<group>"; };
+		979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreeDetailViewController.m; sourceTree = "<group>"; };
 		979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		979BB21F1A9C0B43001EB8BF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		979BB2211A9C0B54001EB8BF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -142,6 +150,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0BDC4BC01A9F9F7300576639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9751C7EB1A956C5300C7364F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,26 +169,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9751C8041A956C5300C7364F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9751C7E51A956C5300C7364F = {
+		0BDC4BBE1A9F9F1600576639 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */,
 				979BB2211A9C0B54001EB8BF /* libxml2.dylib */,
 				979BB21F1A9C0B43001EB8BF /* libc++.dylib */,
 				979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BDC4BC41A9F9F7300576639 /* OoyalaAPISampleAppSource */ = {
+			isa = PBXGroup;
+			children = (
+				0BDC4BC51A9F9F7300576639 /* OoyalaAPISampleAppSource.h */,
+				0BDC4BC71A9F9F7300576639 /* OoyalaAPISampleAppSource.m */,
+			);
+			path = OoyalaAPISampleAppSource;
+			sourceTree = "<group>";
+		};
+		9751C7E51A956C5300C7364F = {
+			isa = PBXGroup;
+			children = (
 				9751C8171A956D8700C7364F /* VendorLibraries */,
-				9751C7F01A956C5300C7364F /* ChannelBrowserSampleApp */,
-				9751C80A1A956C5300C7364F /* ChannelBrowserSampleAppTests */,
+				9751C7F01A956C5300C7364F /* OoyalaAPISampleApp */,
+				0BDC4BC41A9F9F7300576639 /* OoyalaAPISampleAppSource */,
+				0BDC4BBE1A9F9F1600576639 /* Frameworks */,
 				9751C7EF1A956C5300C7364F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -181,27 +206,27 @@
 		9751C7EF1A956C5300C7364F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9751C7EE1A956C5300C7364F /* ChannelBrowserSampleApp.app */,
-				9751C8071A956C5300C7364F /* ChannelBrowserSampleAppTests.xctest */,
+				9751C7EE1A956C5300C7364F /* OoyalaAPISampleApp.app */,
+				0BDC4BC31A9F9F7300576639 /* libOoyalaAPISampleAppSource.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9751C7F01A956C5300C7364F /* ChannelBrowserSampleApp */ = {
+		9751C7F01A956C5300C7364F /* OoyalaAPISampleApp */ = {
 			isa = PBXGroup;
 			children = (
 				9751C7F51A956C5300C7364F /* AppDelegate.h */,
 				9751C7F61A956C5300C7364F /* AppDelegate.m */,
 				9751C7FE1A956C5300C7364F /* Images.xcassets */,
 				9751C8001A956C5300C7364F /* LaunchScreen.xib */,
-				9751C8641A95720600C7364F /* Lists */,
 				9751C7FB1A956C5300C7364F /* Main.storyboard */,
+				9751C8641A95720600C7364F /* Lists */,
 				9751C8681A95723800C7364F /* Players */,
 				9751C7F11A956C5300C7364F /* Supporting Files */,
 				979BB20B1A9BD691001EB8BF /* Utils */,
 				9751C85F1A95717900C7364F /* Views */,
 			);
-			path = ChannelBrowserSampleApp;
+			path = OoyalaAPISampleApp;
 			sourceTree = "<group>";
 		};
 		9751C7F11A956C5300C7364F /* Supporting Files */ = {
@@ -209,23 +234,6 @@
 			children = (
 				9751C7F21A956C5300C7364F /* Info.plist */,
 				9751C7F31A956C5300C7364F /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9751C80A1A956C5300C7364F /* ChannelBrowserSampleAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				9751C80D1A956C5300C7364F /* ChannelBrowserSampleAppTests.m */,
-				9751C80B1A956C5300C7364F /* Supporting Files */,
-			);
-			path = ChannelBrowserSampleAppTests;
-			sourceTree = "<group>";
-		};
-		9751C80B1A956C5300C7364F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9751C80C1A956C5300C7364F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -327,8 +335,8 @@
 		9751C8641A95720600C7364F /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				9751C8651A95722700C7364F /* ChannelBrowserListViewController.h */,
-				9751C8661A95722700C7364F /* ChannelBrowserListViewController.m */,
+				9751C8651A95722700C7364F /* OoyalaAPIListViewController.h */,
+				9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -336,12 +344,10 @@
 		9751C8681A95723800C7364F /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				9751C8711A9572C000C7364F /* ChannelBrowserViewController.h */,
-				9751C8721A9572C000C7364F /* ChannelBrowserViewController.m */,
-				979BB2131A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.h */,
-				979BB2141A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m */,
-				979BB2191A9BE737001EB8BF /* ChannelDetailViewController.h */,
-				979BB21A1A9BE737001EB8BF /* ChannelDetailViewController.m */,
+				9751C8711A9572C000C7364F /* ChannelContentTreePlayerViewController.h */,
+				9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */,
+				979BB2191A9BE737001EB8BF /* ChannelContentTreeDetailViewController.h */,
+				979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -349,6 +355,8 @@
 		979BB20B1A9BD691001EB8BF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0BDC4BDE1A9FA3D800576639 /* ChannelContentTreeTableViewCell.h */,
+				0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */,
 				979BB2161A9BE6FB001EB8BF /* SampleAppPlayerViewController.h */,
 				979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */,
 				979BB20C1A9BD691001EB8BF /* PlayerSelectionOption.h */,
@@ -360,9 +368,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9751C7ED1A956C5300C7364F /* ChannelBrowserSampleApp */ = {
+		0BDC4BC21A9F9F7300576639 /* OoyalaAPISampleAppSource */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9751C8111A956C5300C7364F /* Build configuration list for PBXNativeTarget "ChannelBrowserSampleApp" */;
+			buildConfigurationList = 0BDC4BD41A9F9F7300576639 /* Build configuration list for PBXNativeTarget "OoyalaAPISampleAppSource" */;
+			buildPhases = (
+				0BDC4BBF1A9F9F7300576639 /* Sources */,
+				0BDC4BC01A9F9F7300576639 /* Frameworks */,
+				0BDC4BC11A9F9F7300576639 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OoyalaAPISampleAppSource;
+			productName = OoyalaAPISampleAppSource;
+			productReference = 0BDC4BC31A9F9F7300576639 /* libOoyalaAPISampleAppSource.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9751C7ED1A956C5300C7364F /* OoyalaAPISampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9751C8111A956C5300C7364F /* Build configuration list for PBXNativeTarget "OoyalaAPISampleApp" */;
 			buildPhases = (
 				9751C7EA1A956C5300C7364F /* Sources */,
 				9751C7EB1A956C5300C7364F /* Frameworks */,
@@ -372,28 +397,10 @@
 			);
 			dependencies = (
 			);
-			name = ChannelBrowserSampleApp;
+			name = OoyalaAPISampleApp;
 			productName = ChannelBrowserSampleApp;
-			productReference = 9751C7EE1A956C5300C7364F /* ChannelBrowserSampleApp.app */;
+			productReference = 9751C7EE1A956C5300C7364F /* OoyalaAPISampleApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		9751C8061A956C5300C7364F /* ChannelBrowserSampleAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9751C8141A956C5300C7364F /* Build configuration list for PBXNativeTarget "ChannelBrowserSampleAppTests" */;
-			buildPhases = (
-				9751C8031A956C5300C7364F /* Sources */,
-				9751C8041A956C5300C7364F /* Frameworks */,
-				9751C8051A956C5300C7364F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9751C8091A956C5300C7364F /* PBXTargetDependency */,
-			);
-			name = ChannelBrowserSampleAppTests;
-			productName = ChannelBrowserSampleAppTests;
-			productReference = 9751C8071A956C5300C7364F /* ChannelBrowserSampleAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -404,16 +411,15 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = ooyala;
 				TargetAttributes = {
+					0BDC4BC21A9F9F7300576639 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					9751C7ED1A956C5300C7364F = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					9751C8061A956C5300C7364F = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 9751C7ED1A956C5300C7364F;
-					};
 				};
 			};
-			buildConfigurationList = 9751C7E91A956C5300C7364F /* Build configuration list for PBXProject "ChannelBrowserSampleApp" */;
+			buildConfigurationList = 9751C7E91A956C5300C7364F /* Build configuration list for PBXProject "OoyalaAPISampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -426,8 +432,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9751C7ED1A956C5300C7364F /* ChannelBrowserSampleApp */,
-				9751C8061A956C5300C7364F /* ChannelBrowserSampleAppTests */,
+				9751C7ED1A956C5300C7364F /* OoyalaAPISampleApp */,
+				0BDC4BC21A9F9F7300576639 /* OoyalaAPISampleAppSource */,
 			);
 		};
 /* End PBXProject section */
@@ -446,48 +452,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9751C8051A956C5300C7364F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0BDC4BBF1A9F9F7300576639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */,
+				0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */,
+				0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */,
+				0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */,
+				0BDC4BC81A9F9F7300576639 /* OoyalaAPISampleAppSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9751C7EA1A956C5300C7364F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9751C7F71A956C5300C7364F /* AppDelegate.m in Sources */,
+				0BDC4BE01A9FA3D800576639 /* ChannelContentTreeTableViewCell.m in Sources */,
 				979BB20E1A9BD691001EB8BF /* PlayerSelectionOption.m in Sources */,
-				9751C8731A9572C000C7364F /* ChannelBrowserViewController.m in Sources */,
-				979BB21B1A9BE737001EB8BF /* ChannelDetailViewController.m in Sources */,
-				9751C8671A95722700C7364F /* ChannelBrowserListViewController.m in Sources */,
+				9751C8731A9572C000C7364F /* ChannelContentTreePlayerViewController.m in Sources */,
+				979BB21B1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m in Sources */,
+				9751C8671A95722700C7364F /* OoyalaAPIListViewController.m in Sources */,
 				979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */,
-				979BB2151A9BE4B5001EB8BF /* ChannelBrowserTableViewCell.m in Sources */,
 				9751C7F41A956C5300C7364F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9751C8031A956C5300C7364F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9751C80E1A956C5300C7364F /* ChannelBrowserSampleAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9751C8091A956C5300C7364F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9751C7ED1A956C5300C7364F /* ChannelBrowserSampleApp */;
-			targetProxy = 9751C8081A956C5300C7364F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9751C7FB1A956C5300C7364F /* Main.storyboard */ = {
@@ -509,6 +504,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0BDC4BD51A9F9F7300576639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0BDC4BD61A9F9F7300576639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		9751C80F1A956C5300C7364F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -597,7 +614,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OoyalaAPISampleApp;
 			};
 			name = Debug;
 		};
@@ -611,48 +628,22 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		9751C8151A956C5300C7364F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ChannelBrowserSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChannelBrowserSampleApp.app/ChannelBrowserSampleApp";
-			};
-			name = Debug;
-		};
-		9751C8161A956C5300C7364F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ChannelBrowserSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChannelBrowserSampleApp.app/ChannelBrowserSampleApp";
+				PRODUCT_NAME = OoyalaAPISampleApp;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9751C7E91A956C5300C7364F /* Build configuration list for PBXProject "ChannelBrowserSampleApp" */ = {
+		0BDC4BD41A9F9F7300576639 /* Build configuration list for PBXNativeTarget "OoyalaAPISampleAppSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BDC4BD51A9F9F7300576639 /* Debug */,
+				0BDC4BD61A9F9F7300576639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9751C7E91A956C5300C7364F /* Build configuration list for PBXProject "OoyalaAPISampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9751C80F1A956C5300C7364F /* Debug */,
@@ -661,20 +652,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9751C8111A956C5300C7364F /* Build configuration list for PBXNativeTarget "ChannelBrowserSampleApp" */ = {
+		9751C8111A956C5300C7364F /* Build configuration list for PBXNativeTarget "OoyalaAPISampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9751C8121A956C5300C7364F /* Debug */,
 				9751C8131A956C5300C7364F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9751C8141A956C5300C7364F /* Build configuration list for PBXNativeTarget "ChannelBrowserSampleAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9751C8151A956C5300C7364F /* Debug */,
-				9751C8161A956C5300C7364F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

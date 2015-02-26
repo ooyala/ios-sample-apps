@@ -1,22 +1,21 @@
-//
-//  ChannelBrowserListViewController.m
-//  ChannelBrowserSampleApp
-//
-//  Created by Zhihui Chen on 2/18/15.
-//  Copyright (c) 2015 ooyala. All rights reserved.
-//
+/**
+ * @class      OoyalaAPIListViewController OoyalaAPIListViewController.m "OoyalaAPIListViewController.m"
+ * @brief      A list of playback examples that demonstrate usage of the Ooyala APIs
+ * @date       12/12/14
+ * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ */
 
-#import "ChannelBrowserListViewController.h"
-#import "ChannelBrowserViewController.h"
+#import "OoyalaAPIListViewController.h"
+#import "ChannelContentTreePlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
-@interface ChannelBrowserListViewController ()
+@interface OoyalaAPIListViewController ()
 
 @property NSArray *channelList;
 
 @end
 
-@implementation ChannelBrowserListViewController
+@implementation OoyalaAPIListViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -24,7 +23,7 @@
 
   if (_channelList == nil) {
     PlayerSelectionOption *option =
-      [[PlayerSelectionOption alloc] initWithTitle:@"Sample Channel" embedCode:@"txaGRiMzqQZSmFpMML92QczdIYUrcYVe" viewController:[ChannelBrowserViewController class]];
+      [[PlayerSelectionOption alloc] initWithTitle:@"Content Tree for Channel" embedCode:@"txaGRiMzqQZSmFpMML92QczdIYUrcYVe" viewController:[ChannelContentTreePlayerViewController class]];
     _channelList = [NSArray arrayWithObjects:option, nil];
   }
 }
@@ -60,7 +59,7 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.channelList[indexPath.row];
-  ChannelBrowserViewController *controller = (ChannelBrowserViewController *)[[selection viewController] new];
+  ChannelContentTreePlayerViewController *controller = (ChannelContentTreePlayerViewController *)[[selection viewController] new];
   controller.option = selection;
   [self.navigationController pushViewController:controller animated:YES];
 }
