@@ -152,7 +152,7 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)generator
 /**
  * Synchronously fetch the content tree for a set of embed codes, with the specified ad set
  * @param[in] embedCodes an NSArray containing the embed codes to fetch the content tree for
- * @param[in] adSetCode an NSString containing the ad set code for the ad set to dynamically assign
+ * @param[in] (possibly nil) adSetCode an NSString containing the ad set code for the ad set to dynamically assign
  * @param[out] error the error if there was any
  * @returns the root OOContentItem if the content tree exists, nil if not or if there were errors
  */
@@ -161,7 +161,7 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)generator
 /**
  * Asynchronously fetch the content tree for a set of embed codes, with the specified ad set
  * @param[in] embedCodes an NSArray containing the embed codes to fetch the content tree for
- * @param[in] adSetCode an NSString containing the ad set code for the ad set to dynamically assign
+ * @param[in] (possibly nil) adSetCode an NSString containing the ad set code for the ad set to dynamically assign
  * @param[in] callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  * @returns an object that can be passed to OOOoyalaAPIClient.cancel: to cancel this request
  */

@@ -7,7 +7,6 @@
 
 #import "OOFullScreenIOS7ViewController.h"
 #import "OOFullScreenIOS7ControlsView.h"
-#import "OOOoyalaPlayer+Internal.h"
 #import "OOUIProgressSliderIOS7.h"
 #import "OOVideo.h"
 #import "OOUIUtils.h"
@@ -121,7 +120,10 @@
     return;
   }
   isStatusBarHidden = YES;
-  if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+  if (self.hideControlsTimer != nil) {
+    [self.hideControlsTimer invalidate];
+    self.hideControlsTimer = nil;
+  }
   if (self.controls == nil) return;
   [UIView animateWithDuration:0.37
                    animations: ^ {
@@ -142,13 +144,18 @@
 }
 
 - (void)showControls {
-  if (self.player == nil || [self.player showingAdsWithHiddenControls]) {
+  if (self.player == nil || [self showingAdsWithHiddenControls]) {
     LOG(@"showControls while player is nil");
     return;
   }
   if (!self.isVisible) return;
   isStatusBarHidden = NO;
-  if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+
+  if (self.hideControlsTimer != nil) {
+    [self.hideControlsTimer invalidate];
+    self.hideControlsTimer = nil;
+  }
+
   if (self.controls == nil) return;
 
   self.controls.hidden = NO;
@@ -231,20 +238,26 @@
   //Handle state
   if (self.player.isPlaying) {
 
-    if ([self.player showingAdsWithHiddenControls]) {
+    if ([self showingAdsWithHiddenControls]) {
       [self hideControls];
     } else if (self.controls.playButton.isPlayShowing) {
       [self.controls.playButton setIsPlayShowing:NO];
       if (self.controls.hidden == NO) {
         [self showControls];
-        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+        if (self.hideControlsTimer != nil) {
+          [self.hideControlsTimer invalidate];
+          self.hideControlsTimer = nil;
+        }
       }
     }
   } else if (!self.controls.playButton.isPlayShowing) {
     [self.controls.playButton setIsPlayShowing:YES];
     if (self.controls.hidden == NO) {
       [self showControls];
-      if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+      if (self.hideControlsTimer != nil) {
+        [self.hideControlsTimer invalidate];
+        self.hideControlsTimer = nil;
+      }
     }
   }
 
@@ -329,6 +342,9 @@
   [self.player updateClosedCaptionsViewPosition:self.controls.bottomBarBackground.frame withControlsHide:self.controls.hidden];
 }
 
+- (BOOL)showingAdsWithHiddenControls {
+  return (self.player.isShowingAd && !self.player.options.showAdsControls);
+}
 
 // These three methods decleared in OOOoyalaPlayerViewController. Here is for resolving the warnings
 -(void)onFullscreenDoneButtonClick {}
@@ -337,5 +353,11 @@
 }
 -(void)closedCaptionsSelector{}
 
-- (void)dealloc {}
+- (void)dealloc {
+  LOG(@"OOFullScreenIOS7ViewController dealloc");
+  if (self.hideControlsTimer != nil) {
+    [self.hideControlsTimer invalidate];
+    self.hideControlsTimer = nil;
+  }
+}
 @end

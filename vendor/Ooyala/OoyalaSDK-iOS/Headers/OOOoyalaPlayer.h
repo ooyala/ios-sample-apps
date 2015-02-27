@@ -58,6 +58,8 @@ typedef enum
   OOOoyalaPlayerEnvironmentProduction,
   /** Ooyala staging environment */
   OOOoyalaPlayerEnvironmentStaging,
+  /** Ooyala next-staging environment */
+  OOOoyalaPlayerEnvironmentNextStaging,
   /** Ooyala local environment */
   OOOoyalaPlayerEnvironmentLocal
 } OOOoyalaPlayerEnvironment;
@@ -215,7 +217,7 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 /**
  * Reinitializes the player with a new embedCode and sets the ad set dynamically.
  * @param[in] embedCode the embed code to use
- * @param[in] adSetCode the ad set code to use
+ * @param[in] (possibly nil) adSetCode the ad set code to use
  * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setEmbedCode:(NSString *)embedCode adSetCode:(NSString *)adSetCode;
@@ -223,7 +225,7 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 /**
  * Reinitializes the player with the new embedCodes (as an array) and sets the ad set dynamically.
  * @param[in] embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
- * @param[in] adSetCode the ad set code to use.
+ * @param[in] (possibly nil) adSetCode the ad set code to use.
  * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setEmbedCodes:(NSArray *)embedCodes adSetCode:(NSString *)adSetCode;
