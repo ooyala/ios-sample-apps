@@ -9,6 +9,7 @@
 #import "AdobePassListViewController.h"
 #import "PlayerSelectionOption.h"
 #import "AdobePassPlayerViewController.h"
+#import "DeviceManagementPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 
 @interface AdobePassListViewController ()
@@ -21,21 +22,8 @@
 
 - (id)init {
   self = [super init];
-  self.title = @"AdobePass Sample App";
+  self.title = @"Content Protection Sample App";
   return self;
-}
-
-- (void) initTitlesAndEmbedCodes {
-  self.optionList = [[NSMutableArray alloc] initWithObjects: @"HLS Video", nil];
-
-  self.optionEmbedCodes = [[NSMutableArray alloc] initWithObjects: @"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G",nil];
-
-}
-
-- (void)addAllBasicPlayerSelectionOptions {
-  for(long i = [self.optionList count] - 1; i >= 0; i--) {
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:[self.optionList objectAtIndex:i] embedCode:[self.optionEmbedCodes objectAtIndex:i] viewController: [AdobePassPlayerViewController class]]];
-  }
 }
 
 - (void)viewDidLoad {
@@ -43,8 +31,8 @@
   self.navigationController.navigationBar.translucent = NO;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
-  [self initTitlesAndEmbedCodes];
-  [self addAllBasicPlayerSelectionOptions];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Adobe Pass" embedCode:@"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G" viewController: [AdobePassPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unplayable)" embedCode:@"" viewController: [DeviceManagementPlayerViewController class]]];
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
@@ -64,14 +52,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+  // Return the number of rows in the section.
     return self.options.count;
 }
 
