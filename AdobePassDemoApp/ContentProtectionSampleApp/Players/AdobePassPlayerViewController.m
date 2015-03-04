@@ -70,7 +70,7 @@
 
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
-
+  [self.button1 removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
   [self addChildViewController:self.ooyalaPlayerViewController];
   self.ooyalaPlayerViewController.view.hidden = YES;
 

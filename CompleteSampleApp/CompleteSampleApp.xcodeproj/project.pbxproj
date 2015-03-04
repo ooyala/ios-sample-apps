@@ -23,25 +23,26 @@
 		0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */; };
 		0B2459D11A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */; };
 		0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */; };
-		0B24B8BE1AA6953B00F131C3 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8A81AA6953B00F131C3 /* AccessEnabler.h */; };
-		0B24B8BF1AA6953B00F131C3 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8A91AA6953B00F131C3 /* AccessEnablerConstants.h */; };
-		0B24B8C01AA6953B00F131C3 /* ClientVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8AA1AA6953B00F131C3 /* ClientVersion.h */; };
-		0B24B8C11AA6953B00F131C3 /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8AB1AA6953B00F131C3 /* Context.h */; };
-		0B24B8C21AA6953B00F131C3 /* CookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8AC1AA6953B00F131C3 /* CookieManager.h */; };
-		0B24B8C31AA6953B00F131C3 /* DeviceID.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8AD1AA6953B00F131C3 /* DeviceID.h */; };
-		0B24B8C41AA6953B00F131C3 /* EntitlementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8AE1AA6953B00F131C3 /* EntitlementDelegate.h */; };
-		0B24B8C51AA6953B00F131C3 /* NSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8AF1AA6953B00F131C3 /* NSUtils.h */; };
-		0B24B8C61AA6953B00F131C3 /* ServerAPIVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B01AA6953B00F131C3 /* ServerAPIVersion.h */; };
-		0B24B8C71AA6953B00F131C3 /* AuthenticationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B21AA6953B00F131C3 /* AuthenticationToken.h */; };
-		0B24B8C81AA6953B00F131C3 /* AuthorizationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B31AA6953B00F131C3 /* AuthorizationToken.h */; };
-		0B24B8C91AA6953B00F131C3 /* MVPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B41AA6953B00F131C3 /* MVPD.h */; };
-		0B24B8CA1AA6953B00F131C3 /* Requestor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B51AA6953B00F131C3 /* Requestor.h */; };
-		0B24B8CB1AA6953B00F131C3 /* UserMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B61AA6953B00F131C3 /* UserMetadata.h */; };
-		0B24B8CC1AA6953B00F131C3 /* ConnectionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B81AA6953B00F131C3 /* ConnectionsManager.h */; };
-		0B24B8CD1AA6953B00F131C3 /* NSURLConnectionWithTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8B91AA6953B00F131C3 /* NSURLConnectionWithTag.h */; };
-		0B24B8CE1AA6953B00F131C3 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8BB1AA6953B00F131C3 /* StorageManager.h */; };
-		0B24B8CF1AA6953B00F131C3 /* libAccessEnabler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B8BD1AA6953B00F131C3 /* libAccessEnabler.a */; };
-		0B24B8D11AA6959F00F131C3 /* libAdobePassSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B8D01AA6959F00F131C3 /* libAdobePassSampleAppSource.a */; };
+		0B24B8D51AA698A700F131C3 /* libContentProtectionSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B8D41AA698A700F131C3 /* libContentProtectionSampleAppSource.a */; };
+		0B24B8F61AA69FFC00F131C3 /* adobepass.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 0B24B8DD1AA69FFC00F131C3 /* adobepass.p12 */; };
+		0B24B8F71AA69FFC00F131C3 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E01AA69FFC00F131C3 /* AccessEnabler.h */; };
+		0B24B8F81AA69FFC00F131C3 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E11AA69FFC00F131C3 /* AccessEnablerConstants.h */; };
+		0B24B8F91AA69FFC00F131C3 /* ClientVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E21AA69FFC00F131C3 /* ClientVersion.h */; };
+		0B24B8FA1AA69FFC00F131C3 /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E31AA69FFC00F131C3 /* Context.h */; };
+		0B24B8FB1AA69FFC00F131C3 /* CookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E41AA69FFC00F131C3 /* CookieManager.h */; };
+		0B24B8FC1AA69FFC00F131C3 /* DeviceID.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E51AA69FFC00F131C3 /* DeviceID.h */; };
+		0B24B8FD1AA69FFC00F131C3 /* EntitlementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E61AA69FFC00F131C3 /* EntitlementDelegate.h */; };
+		0B24B8FE1AA69FFC00F131C3 /* NSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E71AA69FFC00F131C3 /* NSUtils.h */; };
+		0B24B8FF1AA69FFC00F131C3 /* ServerAPIVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E81AA69FFC00F131C3 /* ServerAPIVersion.h */; };
+		0B24B9001AA69FFC00F131C3 /* AuthenticationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8EA1AA69FFC00F131C3 /* AuthenticationToken.h */; };
+		0B24B9011AA69FFC00F131C3 /* AuthorizationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8EB1AA69FFC00F131C3 /* AuthorizationToken.h */; };
+		0B24B9021AA69FFC00F131C3 /* MVPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8EC1AA69FFC00F131C3 /* MVPD.h */; };
+		0B24B9031AA69FFC00F131C3 /* Requestor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8ED1AA69FFC00F131C3 /* Requestor.h */; };
+		0B24B9041AA69FFC00F131C3 /* UserMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8EE1AA69FFC00F131C3 /* UserMetadata.h */; };
+		0B24B9051AA69FFC00F131C3 /* ConnectionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8F01AA69FFC00F131C3 /* ConnectionsManager.h */; };
+		0B24B9061AA69FFC00F131C3 /* NSURLConnectionWithTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8F11AA69FFC00F131C3 /* NSURLConnectionWithTag.h */; };
+		0B24B9071AA69FFC00F131C3 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8F31AA69FFC00F131C3 /* StorageManager.h */; };
+		0B24B9081AA69FFC00F131C3 /* libAccessEnabler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B8F51AA69FFC00F131C3 /* libAccessEnabler.a */; };
 		0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E21A40DF7000E7DE88 /* Main.storyboard */; };
 		0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801111A40E02000E7DE88 /* LaunchScreen.xib */; };
 		0BC947E51A817768004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947DF1A817768004CB997 /* PlayerDoubleButton.xib */; };
@@ -168,25 +169,27 @@
 		0B2459CE1A72CA3500CC399A /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp copy/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
 		0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp copy/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
 		0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
-		0B24B8A81AA6953B00F131C3 /* AccessEnabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnabler.h; sourceTree = "<group>"; };
-		0B24B8A91AA6953B00F131C3 /* AccessEnablerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnablerConstants.h; sourceTree = "<group>"; };
-		0B24B8AA1AA6953B00F131C3 /* ClientVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientVersion.h; sourceTree = "<group>"; };
-		0B24B8AB1AA6953B00F131C3 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
-		0B24B8AC1AA6953B00F131C3 /* CookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookieManager.h; sourceTree = "<group>"; };
-		0B24B8AD1AA6953B00F131C3 /* DeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceID.h; sourceTree = "<group>"; };
-		0B24B8AE1AA6953B00F131C3 /* EntitlementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitlementDelegate.h; sourceTree = "<group>"; };
-		0B24B8AF1AA6953B00F131C3 /* NSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUtils.h; sourceTree = "<group>"; };
-		0B24B8B01AA6953B00F131C3 /* ServerAPIVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIVersion.h; sourceTree = "<group>"; };
-		0B24B8B21AA6953B00F131C3 /* AuthenticationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationToken.h; sourceTree = "<group>"; };
-		0B24B8B31AA6953B00F131C3 /* AuthorizationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationToken.h; sourceTree = "<group>"; };
-		0B24B8B41AA6953B00F131C3 /* MVPD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVPD.h; sourceTree = "<group>"; };
-		0B24B8B51AA6953B00F131C3 /* Requestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requestor.h; sourceTree = "<group>"; };
-		0B24B8B61AA6953B00F131C3 /* UserMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMetadata.h; sourceTree = "<group>"; };
-		0B24B8B81AA6953B00F131C3 /* ConnectionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsManager.h; sourceTree = "<group>"; };
-		0B24B8B91AA6953B00F131C3 /* NSURLConnectionWithTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionWithTag.h; sourceTree = "<group>"; };
-		0B24B8BB1AA6953B00F131C3 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
-		0B24B8BD1AA6953B00F131C3 /* libAccessEnabler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAccessEnabler.a; sourceTree = "<group>"; };
 		0B24B8D01AA6959F00F131C3 /* libAdobePassSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdobePassSampleAppSource.a; path = "../AdobePassDemoApp/build/Debug-iphoneos/libAdobePassSampleAppSource.a"; sourceTree = "<group>"; };
+		0B24B8D41AA698A700F131C3 /* libContentProtectionSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libContentProtectionSampleAppSource.a; path = "../AdobePassDemoApp/build/Debug-iphoneos/libContentProtectionSampleAppSource.a"; sourceTree = "<group>"; };
+		0B24B8DD1AA69FFC00F131C3 /* adobepass.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = adobepass.p12; sourceTree = "<group>"; };
+		0B24B8E01AA69FFC00F131C3 /* AccessEnabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnabler.h; sourceTree = "<group>"; };
+		0B24B8E11AA69FFC00F131C3 /* AccessEnablerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnablerConstants.h; sourceTree = "<group>"; };
+		0B24B8E21AA69FFC00F131C3 /* ClientVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientVersion.h; sourceTree = "<group>"; };
+		0B24B8E31AA69FFC00F131C3 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		0B24B8E41AA69FFC00F131C3 /* CookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookieManager.h; sourceTree = "<group>"; };
+		0B24B8E51AA69FFC00F131C3 /* DeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceID.h; sourceTree = "<group>"; };
+		0B24B8E61AA69FFC00F131C3 /* EntitlementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitlementDelegate.h; sourceTree = "<group>"; };
+		0B24B8E71AA69FFC00F131C3 /* NSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUtils.h; sourceTree = "<group>"; };
+		0B24B8E81AA69FFC00F131C3 /* ServerAPIVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIVersion.h; sourceTree = "<group>"; };
+		0B24B8EA1AA69FFC00F131C3 /* AuthenticationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationToken.h; sourceTree = "<group>"; };
+		0B24B8EB1AA69FFC00F131C3 /* AuthorizationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationToken.h; sourceTree = "<group>"; };
+		0B24B8EC1AA69FFC00F131C3 /* MVPD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVPD.h; sourceTree = "<group>"; };
+		0B24B8ED1AA69FFC00F131C3 /* Requestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requestor.h; sourceTree = "<group>"; };
+		0B24B8EE1AA69FFC00F131C3 /* UserMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMetadata.h; sourceTree = "<group>"; };
+		0B24B8F01AA69FFC00F131C3 /* ConnectionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsManager.h; sourceTree = "<group>"; };
+		0B24B8F11AA69FFC00F131C3 /* NSURLConnectionWithTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionWithTag.h; sourceTree = "<group>"; };
+		0B24B8F31AA69FFC00F131C3 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
+		0B24B8F51AA69FFC00F131C3 /* libAccessEnabler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAccessEnabler.a; sourceTree = "<group>"; };
 		0B9800E31A40DF7000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B9801121A40E02000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
@@ -297,7 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B24B8D11AA6959F00F131C3 /* libAdobePassSampleAppSource.a in Frameworks */,
+				0B24B8D51AA698A700F131C3 /* libContentProtectionSampleAppSource.a in Frameworks */,
 				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
 				0BC949981A8450D4004CB997 /* libOoyalaSDK.a in Frameworks */,
 				0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
@@ -312,12 +315,12 @@
 				0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */,
 				0BF4FA411A6871C00050A602 /* libIMASampleAppSource.a in Frameworks */,
 				0BF4F9FD1A68514F0050A602 /* libOptionsSampleAppSource.a in Frameworks */,
+				0B24B9081AA69FFC00F131C3 /* libAccessEnabler.a in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
 				0B140F8D1A2E53B0001324EE /* Security.framework in Frameworks */,
 				0B140F8B1A2E53A6001324EE /* AVFoundation.framework in Frameworks */,
 				0BC949961A8450D4004CB997 /* libOoyalaFreewheelSDK.a in Frameworks */,
 				0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */,
-				0B24B8CF1AA6953B00F131C3 /* libAccessEnabler.a in Frameworks */,
 				0BC9493F1A8450D3004CB997 /* AdManager.framework in Frameworks */,
 				0BC949951A8450D4004CB997 /* libGoogleIMA3.a in Frameworks */,
 			);
@@ -369,6 +372,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B24B8D41AA698A700F131C3 /* libContentProtectionSampleAppSource.a */,
 				0B24B8D01AA6959F00F131C3 /* libAdobePassSampleAppSource.a */,
 				0B17A0E41A78203E009D1C50 /* libc++.dylib */,
 				0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */,
@@ -411,75 +415,76 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
-		0B24B8A51AA6953B00F131C3 /* AccessEnabler */ = {
+		0B24B8DC1AA69FFC00F131C3 /* AccessEnabler */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8A61AA6953B00F131C3 /* headers */,
-				0B24B8BC1AA6953B00F131C3 /* lib */,
+				0B24B8DD1AA69FFC00F131C3 /* adobepass.p12 */,
+				0B24B8DE1AA69FFC00F131C3 /* headers */,
+				0B24B8F41AA69FFC00F131C3 /* lib */,
 			);
 			path = AccessEnabler;
 			sourceTree = "<group>";
 		};
-		0B24B8A61AA6953B00F131C3 /* headers */ = {
+		0B24B8DE1AA69FFC00F131C3 /* headers */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8A71AA6953B00F131C3 /* api */,
-				0B24B8B11AA6953B00F131C3 /* model */,
-				0B24B8B71AA6953B00F131C3 /* network */,
-				0B24B8BA1AA6953B00F131C3 /* storage */,
+				0B24B8DF1AA69FFC00F131C3 /* api */,
+				0B24B8E91AA69FFC00F131C3 /* model */,
+				0B24B8EF1AA69FFC00F131C3 /* network */,
+				0B24B8F21AA69FFC00F131C3 /* storage */,
 			);
 			path = headers;
 			sourceTree = "<group>";
 		};
-		0B24B8A71AA6953B00F131C3 /* api */ = {
+		0B24B8DF1AA69FFC00F131C3 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8A81AA6953B00F131C3 /* AccessEnabler.h */,
-				0B24B8A91AA6953B00F131C3 /* AccessEnablerConstants.h */,
-				0B24B8AA1AA6953B00F131C3 /* ClientVersion.h */,
-				0B24B8AB1AA6953B00F131C3 /* Context.h */,
-				0B24B8AC1AA6953B00F131C3 /* CookieManager.h */,
-				0B24B8AD1AA6953B00F131C3 /* DeviceID.h */,
-				0B24B8AE1AA6953B00F131C3 /* EntitlementDelegate.h */,
-				0B24B8AF1AA6953B00F131C3 /* NSUtils.h */,
-				0B24B8B01AA6953B00F131C3 /* ServerAPIVersion.h */,
+				0B24B8E01AA69FFC00F131C3 /* AccessEnabler.h */,
+				0B24B8E11AA69FFC00F131C3 /* AccessEnablerConstants.h */,
+				0B24B8E21AA69FFC00F131C3 /* ClientVersion.h */,
+				0B24B8E31AA69FFC00F131C3 /* Context.h */,
+				0B24B8E41AA69FFC00F131C3 /* CookieManager.h */,
+				0B24B8E51AA69FFC00F131C3 /* DeviceID.h */,
+				0B24B8E61AA69FFC00F131C3 /* EntitlementDelegate.h */,
+				0B24B8E71AA69FFC00F131C3 /* NSUtils.h */,
+				0B24B8E81AA69FFC00F131C3 /* ServerAPIVersion.h */,
 			);
 			path = api;
 			sourceTree = "<group>";
 		};
-		0B24B8B11AA6953B00F131C3 /* model */ = {
+		0B24B8E91AA69FFC00F131C3 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8B21AA6953B00F131C3 /* AuthenticationToken.h */,
-				0B24B8B31AA6953B00F131C3 /* AuthorizationToken.h */,
-				0B24B8B41AA6953B00F131C3 /* MVPD.h */,
-				0B24B8B51AA6953B00F131C3 /* Requestor.h */,
-				0B24B8B61AA6953B00F131C3 /* UserMetadata.h */,
+				0B24B8EA1AA69FFC00F131C3 /* AuthenticationToken.h */,
+				0B24B8EB1AA69FFC00F131C3 /* AuthorizationToken.h */,
+				0B24B8EC1AA69FFC00F131C3 /* MVPD.h */,
+				0B24B8ED1AA69FFC00F131C3 /* Requestor.h */,
+				0B24B8EE1AA69FFC00F131C3 /* UserMetadata.h */,
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		0B24B8B71AA6953B00F131C3 /* network */ = {
+		0B24B8EF1AA69FFC00F131C3 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8B81AA6953B00F131C3 /* ConnectionsManager.h */,
-				0B24B8B91AA6953B00F131C3 /* NSURLConnectionWithTag.h */,
+				0B24B8F01AA69FFC00F131C3 /* ConnectionsManager.h */,
+				0B24B8F11AA69FFC00F131C3 /* NSURLConnectionWithTag.h */,
 			);
 			path = network;
 			sourceTree = "<group>";
 		};
-		0B24B8BA1AA6953B00F131C3 /* storage */ = {
+		0B24B8F21AA69FFC00F131C3 /* storage */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8BB1AA6953B00F131C3 /* StorageManager.h */,
+				0B24B8F31AA69FFC00F131C3 /* StorageManager.h */,
 			);
 			path = storage;
 			sourceTree = "<group>";
 		};
-		0B24B8BC1AA6953B00F131C3 /* lib */ = {
+		0B24B8F41AA69FFC00F131C3 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8BD1AA6953B00F131C3 /* libAccessEnabler.a */,
+				0B24B8F51AA69FFC00F131C3 /* libAccessEnabler.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -500,7 +505,7 @@
 		0BC948E01A8450D3004CB997 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8A51AA6953B00F131C3 /* AccessEnabler */,
+				0B24B8DC1AA69FFC00F131C3 /* AccessEnabler */,
 				0BC948E11A8450D3004CB997 /* AdManager.framework */,
 				0BC948E21A8450D3004CB997 /* FreewheelHeaders */,
 				0BC948E41A8450D3004CB997 /* GoogleIMAHeaders */,
@@ -635,24 +640,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BC949781A8450D4004CB997 /* OOPlayer.h in Headers */,
-				0B24B8C31AA6953B00F131C3 /* DeviceID.h in Headers */,
+				0B24B8FC1AA69FFC00F131C3 /* DeviceID.h in Headers */,
 				0BC949651A8450D4004CB997 /* OOEmbeddedSecureURLGenerator.h in Headers */,
-				0B24B8C61AA6953B00F131C3 /* ServerAPIVersion.h in Headers */,
+				0B24B8FF1AA69FFC00F131C3 /* ServerAPIVersion.h in Headers */,
 				0BC9496C1A8450D4004CB997 /* OOManagedAdsPlugin.h in Headers */,
-				0B24B8C41AA6953B00F131C3 /* EntitlementDelegate.h in Headers */,
+				0B24B8FD1AA69FFC00F131C3 /* EntitlementDelegate.h in Headers */,
 				0BC9495C1A8450D3004CB997 /* OOChannelSet.h in Headers */,
 				0BC9494D1A8450D3004CB997 /* IMAContentPlayhead.h in Headers */,
 				0BC9495D1A8450D3004CB997 /* OOClientId.h in Headers */,
 				0BC949401A8450D3004CB997 /* OOFreewheelManager.h in Headers */,
 				0BC949491A8450D3004CB997 /* IMAAdsRenderingSettings.h in Headers */,
 				0BC949681A8450D4004CB997 /* OOFCCTVRating.h in Headers */,
-				0B24B8CB1AA6953B00F131C3 /* UserMetadata.h in Headers */,
-				0B24B8CA1AA6953B00F131C3 /* Requestor.h in Headers */,
-				0B24B8C71AA6953B00F131C3 /* AuthenticationToken.h in Headers */,
+				0B24B9041AA69FFC00F131C3 /* UserMetadata.h in Headers */,
+				0B24B9031AA69FFC00F131C3 /* Requestor.h in Headers */,
+				0B24B9001AA69FFC00F131C3 /* AuthenticationToken.h in Headers */,
 				0BC9496E1A8450D4004CB997 /* OOModule.h in Headers */,
 				0BC949801A8450D4004CB997 /* OOStateNotifier.h in Headers */,
 				0BC9498F1A8450D4004CB997 /* OOVASTWrapperAd.h in Headers */,
-				0B24B8CD1AA6953B00F131C3 /* NSURLConnectionWithTag.h in Headers */,
+				0B24B9061AA69FFC00F131C3 /* NSURLConnectionWithTag.h in Headers */,
 				0BC949571A8450D3004CB997 /* OOAuthorizableItem.h in Headers */,
 				0BC949811A8450D4004CB997 /* OOStream.h in Headers */,
 				0BC949541A8450D3004CB997 /* OOAdSpotManager.h in Headers */,
@@ -670,18 +675,18 @@
 				0BC9498E1A8450D4004CB997 /* OOVASTUtils.h in Headers */,
 				0BC9497C1A8450D4004CB997 /* OOPlayPauseButton.h in Headers */,
 				0BC949871A8450D4004CB997 /* OOUserInfo.h in Headers */,
-				0B24B8C91AA6953B00F131C3 /* MVPD.h in Headers */,
+				0B24B9021AA69FFC00F131C3 /* MVPD.h in Headers */,
 				0BC9496D1A8450D4004CB997 /* OOManagedAdSpot.h in Headers */,
 				0BC949631A8450D4004CB997 /* OODefaultPlayerInfo.h in Headers */,
 				0BC949911A8450D4004CB997 /* OOVideoGravityButton.h in Headers */,
-				0B24B8C81AA6953B00F131C3 /* AuthorizationToken.h in Headers */,
+				0B24B9011AA69FFC00F131C3 /* AuthorizationToken.h in Headers */,
 				0BC949741A8450D4004CB997 /* OOOptions.h in Headers */,
 				0BC949751A8450D4004CB997 /* OOOrderedDictionary.h in Headers */,
 				0BC9495F1A8450D3004CB997 /* OOClosedCaptionsButton.h in Headers */,
 				0BC9498C1A8450D4004CB997 /* OOVASTSequenceItem.h in Headers */,
 				0BC949511A8450D3004CB997 /* OOAdPluginManagerProtocol.h in Headers */,
 				0BC949761A8450D4004CB997 /* OOPaginatedParentItem.h in Headers */,
-				0B24B8BF1AA6953B00F131C3 /* AccessEnablerConstants.h in Headers */,
+				0B24B8F81AA69FFC00F131C3 /* AccessEnablerConstants.h in Headers */,
 				0BC949931A8450D4004CB997 /* OOIMAAdSpot.h in Headers */,
 				0BC949941A8450D4004CB997 /* OOIMAManager.h in Headers */,
 				0BC9498B1A8450D4004CB997 /* OOVASTLinearAd.h in Headers */,
@@ -707,15 +712,15 @@
 				0BC949581A8450D3004CB997 /* OOBufferView.h in Headers */,
 				0BC949791A8450D4004CB997 /* OOPlayerDomain.h in Headers */,
 				0BC949891A8450D4004CB997 /* OOVASTAdData.h in Headers */,
-				0B24B8CC1AA6953B00F131C3 /* ConnectionsManager.h in Headers */,
+				0B24B9051AA69FFC00F131C3 /* ConnectionsManager.h in Headers */,
 				0BC9494F1A8450D3004CB997 /* iOS7ScrubberSliderFraming.h in Headers */,
 				0BC9495B1A8450D3004CB997 /* OOChannel.h in Headers */,
-				0B24B8CE1AA6953B00F131C3 /* StorageManager.h in Headers */,
+				0B24B9071AA69FFC00F131C3 /* StorageManager.h in Headers */,
 				0BC949471A8450D3004CB997 /* IMAAdsLoader.h in Headers */,
 				0BC949731A8450D4004CB997 /* OOOoyalaPlayerViewController.h in Headers */,
 				0BC949411A8450D3004CB997 /* IMAAd.h in Headers */,
 				0BC949641A8450D4004CB997 /* OODynamicChannel.h in Headers */,
-				0B24B8C01AA6953B00F131C3 /* ClientVersion.h in Headers */,
+				0B24B8F91AA69FFC00F131C3 /* ClientVersion.h in Headers */,
 				0BC949461A8450D3004CB997 /* IMAAdPodInfo.h in Headers */,
 				0BC949701A8450D4004CB997 /* OOOoyalaAPIClient.h in Headers */,
 				0BC949721A8450D4004CB997 /* OOOoyalaPlayer.h in Headers */,
@@ -724,18 +729,18 @@
 				0BC9494C1A8450D3004CB997 /* IMACompanionAdSlot.h in Headers */,
 				0BC9497B1A8450D4004CB997 /* OOPlayerProtocol.h in Headers */,
 				0BC9495A1A8450D3004CB997 /* OOCaption.h in Headers */,
-				0B24B8C21AA6953B00F131C3 /* CookieManager.h in Headers */,
+				0B24B8FB1AA69FFC00F131C3 /* CookieManager.h in Headers */,
 				0BC9495E1A8450D3004CB997 /* OOClosedCaptions.h in Headers */,
 				0BC9497F1A8450D4004CB997 /* OOSignatureGenerator.h in Headers */,
 				0BC949661A8450D4004CB997 /* OOEmbeddedSignatureGenerator.h in Headers */,
 				0BC949601A8450D3004CB997 /* OOClosedCaptionsStyle.h in Headers */,
 				0BC949441A8450D3004CB997 /* IMAAdEvent.h in Headers */,
-				0B24B8C51AA6953B00F131C3 /* NSUtils.h in Headers */,
-				0B24B8BE1AA6953B00F131C3 /* AccessEnabler.h in Headers */,
+				0B24B8FE1AA69FFC00F131C3 /* NSUtils.h in Headers */,
+				0B24B8F71AA69FFC00F131C3 /* AccessEnabler.h in Headers */,
 				0BC949861A8450D4004CB997 /* OOUIProgressSliderIOS7.h in Headers */,
 				0BC949591A8450D3004CB997 /* OOCallbacks.h in Headers */,
 				0B19FF6A1A3B8C75003E57DF /* CompleteSampleAppListViewController.h in Headers */,
-				0B24B8C11AA6953B00F131C3 /* Context.h in Headers */,
+				0B24B8FA1AA69FFC00F131C3 /* Context.h in Headers */,
 				0BC949901A8450D4004CB997 /* OOVideo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,6 +804,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */,
+				0B24B8F61AA69FFC00F131C3 /* adobepass.p12 in Resources */,
 				0BC947E91A817768004CB997 /* PlayerSingleButton.xib in Resources */,
 				0BC947E71A817768004CB997 /* PlayerDoubleText.xib in Resources */,
 				0BC947E61A817768004CB997 /* PlayerDoubleSwitch.xib in Resources */,
@@ -937,7 +943,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
-					"/Users/michael.len/repos/ios_sample_apps/AdobePassDemoApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -962,7 +967,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
-					"/Users/michael.len/repos/ios_sample_apps/AdobePassDemoApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";

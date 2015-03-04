@@ -39,25 +39,26 @@
 		0B24B8771AA6948800F131C3 /* AdobePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B84D1AA6827200F131C3 /* AdobePassViewController.m */; };
 		0B24B8781AA6948800F131C3 /* MvpdLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B84F1AA6827200F131C3 /* MvpdLoginViewController.m */; };
 		0B24B8791AA6948800F131C3 /* MvpdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8511AA6827200F131C3 /* MvpdTableViewController.m */; };
-		0B24B8931AA6950000F131C3 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B87D1AA6950000F131C3 /* AccessEnabler.h */; };
-		0B24B8941AA6950000F131C3 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B87E1AA6950000F131C3 /* AccessEnablerConstants.h */; };
-		0B24B8951AA6950000F131C3 /* ClientVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B87F1AA6950000F131C3 /* ClientVersion.h */; };
-		0B24B8961AA6950000F131C3 /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8801AA6950000F131C3 /* Context.h */; };
-		0B24B8971AA6950000F131C3 /* CookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8811AA6950000F131C3 /* CookieManager.h */; };
-		0B24B8981AA6950000F131C3 /* DeviceID.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8821AA6950000F131C3 /* DeviceID.h */; };
-		0B24B8991AA6950000F131C3 /* EntitlementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8831AA6950000F131C3 /* EntitlementDelegate.h */; };
-		0B24B89A1AA6950000F131C3 /* NSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8841AA6950000F131C3 /* NSUtils.h */; };
-		0B24B89B1AA6950000F131C3 /* ServerAPIVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8851AA6950000F131C3 /* ServerAPIVersion.h */; };
-		0B24B89C1AA6950000F131C3 /* AuthenticationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8871AA6950000F131C3 /* AuthenticationToken.h */; };
-		0B24B89D1AA6950000F131C3 /* AuthorizationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8881AA6950000F131C3 /* AuthorizationToken.h */; };
-		0B24B89E1AA6950000F131C3 /* MVPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8891AA6950000F131C3 /* MVPD.h */; };
-		0B24B89F1AA6950000F131C3 /* Requestor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B88A1AA6950000F131C3 /* Requestor.h */; };
-		0B24B8A01AA6950000F131C3 /* UserMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B88B1AA6950000F131C3 /* UserMetadata.h */; };
-		0B24B8A11AA6950000F131C3 /* ConnectionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B88D1AA6950000F131C3 /* ConnectionsManager.h */; };
-		0B24B8A21AA6950000F131C3 /* NSURLConnectionWithTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B88E1AA6950000F131C3 /* NSURLConnectionWithTag.h */; };
-		0B24B8A31AA6950000F131C3 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8901AA6950000F131C3 /* StorageManager.h */; };
-		0B24B8A41AA6950000F131C3 /* libAccessEnabler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B8921AA6950000F131C3 /* libAccessEnabler.a */; };
-		0B24B8D31AA6971200F131C3 /* adobepass.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 0B24B8D21AA6970A00F131C3 /* adobepass.p12 */; };
+		0B24B8D61AA6998500F131C3 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8531AA6827200F131C3 /* Util.m */; };
+		0B24B9231AA6A01C00F131C3 /* adobepass.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 0B24B90A1AA6A01C00F131C3 /* adobepass.p12 */; };
+		0B24B9241AA6A01C00F131C3 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B90D1AA6A01C00F131C3 /* AccessEnabler.h */; };
+		0B24B9251AA6A01C00F131C3 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B90E1AA6A01C00F131C3 /* AccessEnablerConstants.h */; };
+		0B24B9261AA6A01C00F131C3 /* ClientVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B90F1AA6A01C00F131C3 /* ClientVersion.h */; };
+		0B24B9271AA6A01C00F131C3 /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9101AA6A01C00F131C3 /* Context.h */; };
+		0B24B9281AA6A01C00F131C3 /* CookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9111AA6A01C00F131C3 /* CookieManager.h */; };
+		0B24B9291AA6A01C00F131C3 /* DeviceID.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9121AA6A01C00F131C3 /* DeviceID.h */; };
+		0B24B92A1AA6A01C00F131C3 /* EntitlementDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9131AA6A01C00F131C3 /* EntitlementDelegate.h */; };
+		0B24B92B1AA6A01C00F131C3 /* NSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9141AA6A01C00F131C3 /* NSUtils.h */; };
+		0B24B92C1AA6A01C00F131C3 /* ServerAPIVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9151AA6A01C00F131C3 /* ServerAPIVersion.h */; };
+		0B24B92D1AA6A01C00F131C3 /* AuthenticationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9171AA6A01C00F131C3 /* AuthenticationToken.h */; };
+		0B24B92E1AA6A01C00F131C3 /* AuthorizationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9181AA6A01C00F131C3 /* AuthorizationToken.h */; };
+		0B24B92F1AA6A01C00F131C3 /* MVPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9191AA6A01C00F131C3 /* MVPD.h */; };
+		0B24B9301AA6A01C00F131C3 /* Requestor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B91A1AA6A01C00F131C3 /* Requestor.h */; };
+		0B24B9311AA6A01C00F131C3 /* UserMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B91B1AA6A01C00F131C3 /* UserMetadata.h */; };
+		0B24B9321AA6A01C00F131C3 /* ConnectionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B91D1AA6A01C00F131C3 /* ConnectionsManager.h */; };
+		0B24B9331AA6A01C00F131C3 /* NSURLConnectionWithTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B91E1AA6A01C00F131C3 /* NSURLConnectionWithTag.h */; };
+		0B24B9341AA6A01C00F131C3 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B9201AA6A01C00F131C3 /* StorageManager.h */; };
+		0B24B9351AA6A01C00F131C3 /* libAccessEnabler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B9221AA6A01C00F131C3 /* libAccessEnabler.a */; };
 		0B7AC43D1A7A26BA0085BC97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7AC43C1A7A26BA0085BC97 /* CoreGraphics.framework */; };
 		0B7AC4411A7A26EA0085BC97 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */; };
 		0B7AC4451A7A27090085BC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7AC4441A7A27090085BC97 /* UIKit.framework */; };
@@ -191,25 +192,25 @@
 		0B24B86D1AA6838100F131C3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0B24B86F1AA68ED100F131C3 /* AdobePassPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdobePassPlayerViewController.h; sourceTree = "<group>"; };
 		0B24B8701AA68ED100F131C3 /* AdobePassPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdobePassPlayerViewController.m; sourceTree = "<group>"; };
-		0B24B87D1AA6950000F131C3 /* AccessEnabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnabler.h; sourceTree = "<group>"; };
-		0B24B87E1AA6950000F131C3 /* AccessEnablerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnablerConstants.h; sourceTree = "<group>"; };
-		0B24B87F1AA6950000F131C3 /* ClientVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientVersion.h; sourceTree = "<group>"; };
-		0B24B8801AA6950000F131C3 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
-		0B24B8811AA6950000F131C3 /* CookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookieManager.h; sourceTree = "<group>"; };
-		0B24B8821AA6950000F131C3 /* DeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceID.h; sourceTree = "<group>"; };
-		0B24B8831AA6950000F131C3 /* EntitlementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitlementDelegate.h; sourceTree = "<group>"; };
-		0B24B8841AA6950000F131C3 /* NSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUtils.h; sourceTree = "<group>"; };
-		0B24B8851AA6950000F131C3 /* ServerAPIVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIVersion.h; sourceTree = "<group>"; };
-		0B24B8871AA6950000F131C3 /* AuthenticationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationToken.h; sourceTree = "<group>"; };
-		0B24B8881AA6950000F131C3 /* AuthorizationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationToken.h; sourceTree = "<group>"; };
-		0B24B8891AA6950000F131C3 /* MVPD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVPD.h; sourceTree = "<group>"; };
-		0B24B88A1AA6950000F131C3 /* Requestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requestor.h; sourceTree = "<group>"; };
-		0B24B88B1AA6950000F131C3 /* UserMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMetadata.h; sourceTree = "<group>"; };
-		0B24B88D1AA6950000F131C3 /* ConnectionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsManager.h; sourceTree = "<group>"; };
-		0B24B88E1AA6950000F131C3 /* NSURLConnectionWithTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionWithTag.h; sourceTree = "<group>"; };
-		0B24B8901AA6950000F131C3 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
-		0B24B8921AA6950000F131C3 /* libAccessEnabler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAccessEnabler.a; sourceTree = "<group>"; };
-		0B24B8D21AA6970A00F131C3 /* adobepass.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; name = adobepass.p12; path = ../adobepass.p12; sourceTree = "<group>"; };
+		0B24B90A1AA6A01C00F131C3 /* adobepass.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = adobepass.p12; sourceTree = "<group>"; };
+		0B24B90D1AA6A01C00F131C3 /* AccessEnabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnabler.h; sourceTree = "<group>"; };
+		0B24B90E1AA6A01C00F131C3 /* AccessEnablerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnablerConstants.h; sourceTree = "<group>"; };
+		0B24B90F1AA6A01C00F131C3 /* ClientVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientVersion.h; sourceTree = "<group>"; };
+		0B24B9101AA6A01C00F131C3 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		0B24B9111AA6A01C00F131C3 /* CookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookieManager.h; sourceTree = "<group>"; };
+		0B24B9121AA6A01C00F131C3 /* DeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceID.h; sourceTree = "<group>"; };
+		0B24B9131AA6A01C00F131C3 /* EntitlementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitlementDelegate.h; sourceTree = "<group>"; };
+		0B24B9141AA6A01C00F131C3 /* NSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUtils.h; sourceTree = "<group>"; };
+		0B24B9151AA6A01C00F131C3 /* ServerAPIVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAPIVersion.h; sourceTree = "<group>"; };
+		0B24B9171AA6A01C00F131C3 /* AuthenticationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationToken.h; sourceTree = "<group>"; };
+		0B24B9181AA6A01C00F131C3 /* AuthorizationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationToken.h; sourceTree = "<group>"; };
+		0B24B9191AA6A01C00F131C3 /* MVPD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVPD.h; sourceTree = "<group>"; };
+		0B24B91A1AA6A01C00F131C3 /* Requestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requestor.h; sourceTree = "<group>"; };
+		0B24B91B1AA6A01C00F131C3 /* UserMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMetadata.h; sourceTree = "<group>"; };
+		0B24B91D1AA6A01C00F131C3 /* ConnectionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsManager.h; sourceTree = "<group>"; };
+		0B24B91E1AA6A01C00F131C3 /* NSURLConnectionWithTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionWithTag.h; sourceTree = "<group>"; };
+		0B24B9201AA6A01C00F131C3 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
+		0B24B9221AA6A01C00F131C3 /* libAccessEnabler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAccessEnabler.a; sourceTree = "<group>"; };
 		0B7AC43C1A7A26BA0085BC97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0B7AC43E1A7A26CA0085BC97 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -312,7 +313,7 @@
 				0B24B86E1AA6838100F131C3 /* libxml2.dylib in Frameworks */,
 				FF86C2841A9C0E3F00C328A9 /* AdSupport.framework in Frameworks */,
 				FF86C1F51A9BF24800C328A9 /* libOoyalaSDK.a in Frameworks */,
-				0B24B8A41AA6950000F131C3 /* libAccessEnabler.a in Frameworks */,
+				0B24B9351AA6A01C00F131C3 /* libAccessEnabler.a in Frameworks */,
 				0BFBF0C51A7AD6E300278506 /* Foundation.framework in Frameworks */,
 				0B7AC4461A7A27220085BC97 /* CFNetwork.framework in Frameworks */,
 				0B7AC4451A7A27090085BC97 /* UIKit.framework in Frameworks */,
@@ -376,75 +377,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0B24B87A1AA6950000F131C3 /* AccessEnabler */ = {
+		0B24B9091AA6A01C00F131C3 /* AccessEnabler */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B87B1AA6950000F131C3 /* headers */,
-				0B24B8911AA6950000F131C3 /* lib */,
+				0B24B90A1AA6A01C00F131C3 /* adobepass.p12 */,
+				0B24B90B1AA6A01C00F131C3 /* headers */,
+				0B24B9211AA6A01C00F131C3 /* lib */,
 			);
 			path = AccessEnabler;
 			sourceTree = "<group>";
 		};
-		0B24B87B1AA6950000F131C3 /* headers */ = {
+		0B24B90B1AA6A01C00F131C3 /* headers */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B87C1AA6950000F131C3 /* api */,
-				0B24B8861AA6950000F131C3 /* model */,
-				0B24B88C1AA6950000F131C3 /* network */,
-				0B24B88F1AA6950000F131C3 /* storage */,
+				0B24B90C1AA6A01C00F131C3 /* api */,
+				0B24B9161AA6A01C00F131C3 /* model */,
+				0B24B91C1AA6A01C00F131C3 /* network */,
+				0B24B91F1AA6A01C00F131C3 /* storage */,
 			);
 			path = headers;
 			sourceTree = "<group>";
 		};
-		0B24B87C1AA6950000F131C3 /* api */ = {
+		0B24B90C1AA6A01C00F131C3 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B87D1AA6950000F131C3 /* AccessEnabler.h */,
-				0B24B87E1AA6950000F131C3 /* AccessEnablerConstants.h */,
-				0B24B87F1AA6950000F131C3 /* ClientVersion.h */,
-				0B24B8801AA6950000F131C3 /* Context.h */,
-				0B24B8811AA6950000F131C3 /* CookieManager.h */,
-				0B24B8821AA6950000F131C3 /* DeviceID.h */,
-				0B24B8831AA6950000F131C3 /* EntitlementDelegate.h */,
-				0B24B8841AA6950000F131C3 /* NSUtils.h */,
-				0B24B8851AA6950000F131C3 /* ServerAPIVersion.h */,
+				0B24B90D1AA6A01C00F131C3 /* AccessEnabler.h */,
+				0B24B90E1AA6A01C00F131C3 /* AccessEnablerConstants.h */,
+				0B24B90F1AA6A01C00F131C3 /* ClientVersion.h */,
+				0B24B9101AA6A01C00F131C3 /* Context.h */,
+				0B24B9111AA6A01C00F131C3 /* CookieManager.h */,
+				0B24B9121AA6A01C00F131C3 /* DeviceID.h */,
+				0B24B9131AA6A01C00F131C3 /* EntitlementDelegate.h */,
+				0B24B9141AA6A01C00F131C3 /* NSUtils.h */,
+				0B24B9151AA6A01C00F131C3 /* ServerAPIVersion.h */,
 			);
 			path = api;
 			sourceTree = "<group>";
 		};
-		0B24B8861AA6950000F131C3 /* model */ = {
+		0B24B9161AA6A01C00F131C3 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8871AA6950000F131C3 /* AuthenticationToken.h */,
-				0B24B8881AA6950000F131C3 /* AuthorizationToken.h */,
-				0B24B8891AA6950000F131C3 /* MVPD.h */,
-				0B24B88A1AA6950000F131C3 /* Requestor.h */,
-				0B24B88B1AA6950000F131C3 /* UserMetadata.h */,
+				0B24B9171AA6A01C00F131C3 /* AuthenticationToken.h */,
+				0B24B9181AA6A01C00F131C3 /* AuthorizationToken.h */,
+				0B24B9191AA6A01C00F131C3 /* MVPD.h */,
+				0B24B91A1AA6A01C00F131C3 /* Requestor.h */,
+				0B24B91B1AA6A01C00F131C3 /* UserMetadata.h */,
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		0B24B88C1AA6950000F131C3 /* network */ = {
+		0B24B91C1AA6A01C00F131C3 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B88D1AA6950000F131C3 /* ConnectionsManager.h */,
-				0B24B88E1AA6950000F131C3 /* NSURLConnectionWithTag.h */,
+				0B24B91D1AA6A01C00F131C3 /* ConnectionsManager.h */,
+				0B24B91E1AA6A01C00F131C3 /* NSURLConnectionWithTag.h */,
 			);
 			path = network;
 			sourceTree = "<group>";
 		};
-		0B24B88F1AA6950000F131C3 /* storage */ = {
+		0B24B91F1AA6A01C00F131C3 /* storage */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8901AA6950000F131C3 /* StorageManager.h */,
+				0B24B9201AA6A01C00F131C3 /* StorageManager.h */,
 			);
 			path = storage;
 			sourceTree = "<group>";
 		};
-		0B24B8911AA6950000F131C3 /* lib */ = {
+		0B24B9211AA6A01C00F131C3 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8921AA6950000F131C3 /* libAccessEnabler.a */,
+				0B24B9221AA6A01C00F131C3 /* libAccessEnabler.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -527,7 +529,7 @@
 		0BF4FCA51A68808A0050A602 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B87A1AA6950000F131C3 /* AccessEnabler */,
+				0B24B9091AA6A01C00F131C3 /* AccessEnabler */,
 				0BC948591A84509F004CB997 /* Headers */,
 				0BF4FCE01A68808A0050A602 /* libOoyalaSDK.a */,
 			);
@@ -585,7 +587,6 @@
 		FF86C19F1A9BF06700C328A9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0B24B8D21AA6970A00F131C3 /* adobepass.p12 */,
 				0B24B84B1AA6827200F131C3 /* AdobePassUiDelegate.h */,
 				0B24B84C1AA6827200F131C3 /* AdobePassViewController.h */,
 				0B24B84D1AA6827200F131C3 /* AdobePassViewController.m */,
@@ -629,35 +630,35 @@
 				0BC948D01A84509F004CB997 /* OOStreamPlayer.h in Headers */,
 				0BC948A31A84509F004CB997 /* OOAdSpotPlugin.h in Headers */,
 				0B24B8631AA682B500F131C3 /* SampleAppPlayerViewController.h in Headers */,
-				0B24B8971AA6950000F131C3 /* CookieManager.h in Headers */,
-				0B24B89C1AA6950000F131C3 /* AuthenticationToken.h in Headers */,
+				0B24B9281AA6A01C00F131C3 /* CookieManager.h in Headers */,
+				0B24B92D1AA6A01C00F131C3 /* AuthenticationToken.h in Headers */,
 				0BC948AD1A84509F004CB997 /* OOClosedCaptionsButton.h in Headers */,
 				0BC948AB1A84509F004CB997 /* OOClientId.h in Headers */,
 				0BC948A91A84509F004CB997 /* OOChannel.h in Headers */,
 				0BC948CE1A84509F004CB997 /* OOStateNotifier.h in Headers */,
 				0BC948DF1A84509F004CB997 /* OOVideoGravityButton.h in Headers */,
 				0BC948A51A84509F004CB997 /* OOAuthorizableItem.h in Headers */,
-				0B24B8981AA6950000F131C3 /* DeviceID.h in Headers */,
+				0B24B9291AA6A01C00F131C3 /* DeviceID.h in Headers */,
 				0BC948DE1A84509F004CB997 /* OOVideo.h in Headers */,
 				0B24B8541AA6827200F131C3 /* AdobePassUiDelegate.h in Headers */,
-				0B24B8931AA6950000F131C3 /* AccessEnabler.h in Headers */,
-				0B24B8A31AA6950000F131C3 /* StorageManager.h in Headers */,
+				0B24B9241AA6A01C00F131C3 /* AccessEnabler.h in Headers */,
+				0B24B9341AA6A01C00F131C3 /* StorageManager.h in Headers */,
 				0BC948CD1A84509F004CB997 /* OOSignatureGenerator.h in Headers */,
-				0B24B89A1AA6950000F131C3 /* NSUtils.h in Headers */,
+				0B24B92B1AA6A01C00F131C3 /* NSUtils.h in Headers */,
 				0BC948B91A84509F004CB997 /* OOLifeCycle.h in Headers */,
 				0BC948D31A84509F004CB997 /* OOTransparentToolbar.h in Headers */,
-				0B24B8A01AA6950000F131C3 /* UserMetadata.h in Headers */,
+				0B24B9311AA6A01C00F131C3 /* UserMetadata.h in Headers */,
 				FF86C1C01A9BF06700C328A9 /* ContentProtectionSampleAppSource.h in Headers */,
 				0BC948A21A84509F004CB997 /* OOAdSpotManager.h in Headers */,
-				0B24B89D1AA6950000F131C3 /* AuthorizationToken.h in Headers */,
+				0B24B92E1AA6A01C00F131C3 /* AuthorizationToken.h in Headers */,
 				0BC948C41A84509F004CB997 /* OOPaginatedParentItem.h in Headers */,
 				0BC948BC1A84509F004CB997 /* OOModule.h in Headers */,
-				0B24B8941AA6950000F131C3 /* AccessEnablerConstants.h in Headers */,
+				0B24B9251AA6A01C00F131C3 /* AccessEnablerConstants.h in Headers */,
 				FF86C1C21A9BF06700C328A9 /* AppDelegate.h in Headers */,
 				0BC948BF1A84509F004CB997 /* OOOoyalaError.h in Headers */,
 				0BC948C71A84509F004CB997 /* OOPlayerDomain.h in Headers */,
 				0BC948AF1A84509F004CB997 /* OOContentItem.h in Headers */,
-				0B24B8A21AA6950000F131C3 /* NSURLConnectionWithTag.h in Headers */,
+				0B24B9331AA6A01C00F131C3 /* NSURLConnectionWithTag.h in Headers */,
 				0BC948B11A84509F004CB997 /* OODefaultPlayerInfo.h in Headers */,
 				0BC9489F1A84509F004CB997 /* OOAdPluginManagerProtocol.h in Headers */,
 				0B24B8591AA6827200F131C3 /* MvpdTableViewController.h in Headers */,
@@ -665,10 +666,10 @@
 				0BC948D11A84509F004CB997 /* OOStreamPlayerMappingCreator.h in Headers */,
 				0BC948D81A84509F004CB997 /* OOVASTAdSpot.h in Headers */,
 				0BC948DC1A84509F004CB997 /* OOVASTUtils.h in Headers */,
-				0B24B8A11AA6950000F131C3 /* ConnectionsManager.h in Headers */,
+				0B24B9321AA6A01C00F131C3 /* ConnectionsManager.h in Headers */,
 				0BC948A41A84509F004CB997 /* OOAnalytics.h in Headers */,
 				0BC948A81A84509F004CB997 /* OOCaption.h in Headers */,
-				0B24B89F1AA6950000F131C3 /* Requestor.h in Headers */,
+				0B24B9301AA6A01C00F131C3 /* Requestor.h in Headers */,
 				0BC948CF1A84509F004CB997 /* OOStream.h in Headers */,
 				0BC948B31A84509F004CB997 /* OOEmbeddedSecureURLGenerator.h in Headers */,
 				0BC948C01A84509F004CB997 /* OOOoyalaPlayer.h in Headers */,
@@ -686,7 +687,7 @@
 				0BC948CC1A84509F004CB997 /* OOSecureURLGenerator.h in Headers */,
 				0BC948BE1A84509F004CB997 /* OOOoyalaAPIClient.h in Headers */,
 				0BC948DD1A84509F004CB997 /* OOVASTWrapperAd.h in Headers */,
-				0B24B8961AA6950000F131C3 /* Context.h in Headers */,
+				0B24B9271AA6A01C00F131C3 /* Context.h in Headers */,
 				0BC948B61A84509F004CB997 /* OOFCCTVRating.h in Headers */,
 				0BC948B81A84509F004CB997 /* OOFullscreenButton.h in Headers */,
 				0BC948BA1A84509F004CB997 /* OOManagedAdsPlugin.h in Headers */,
@@ -699,12 +700,12 @@
 				0BC948DB1A84509F004CB997 /* OOVASTStream.h in Headers */,
 				0BC948B71A84509F004CB997 /* OOFCCTVRatingConfiguration.h in Headers */,
 				0BC9489D1A84509F004CB997 /* iOS7ScrubberSliderFraming.h in Headers */,
-				0B24B89E1AA6950000F131C3 /* MVPD.h in Headers */,
+				0B24B92F1AA6A01C00F131C3 /* MVPD.h in Headers */,
 				0BC948B41A84509F004CB997 /* OOEmbeddedSignatureGenerator.h in Headers */,
 				0B24B8551AA6827200F131C3 /* AdobePassViewController.h in Headers */,
 				0BC948D61A84509F004CB997 /* OOVASTAd.h in Headers */,
 				0BC948C11A84509F004CB997 /* OOOoyalaPlayerViewController.h in Headers */,
-				0B24B89B1AA6950000F131C3 /* ServerAPIVersion.h in Headers */,
+				0B24B92C1AA6A01C00F131C3 /* ServerAPIVersion.h in Headers */,
 				0BC948BB1A84509F004CB997 /* OOManagedAdSpot.h in Headers */,
 				0BCA695D1A84907600225119 /* OOCuePointsView.h in Headers */,
 				0BC948A61A84509F004CB997 /* OOBufferView.h in Headers */,
@@ -712,10 +713,10 @@
 				0BC948C91A84509F004CB997 /* OOPlayerProtocol.h in Headers */,
 				0BC948A11A84509F004CB997 /* OOAdSpot.h in Headers */,
 				0BC948D21A84509F004CB997 /* OOStreamPlayerMappingPredicate.h in Headers */,
-				0B24B8991AA6950000F131C3 /* EntitlementDelegate.h in Headers */,
+				0B24B92A1AA6A01C00F131C3 /* EntitlementDelegate.h in Headers */,
 				0B24B8611AA682B500F131C3 /* PlayerSelectionOption.h in Headers */,
 				0B24B8711AA68ED100F131C3 /* AdobePassPlayerViewController.h in Headers */,
-				0B24B8951AA6950000F131C3 /* ClientVersion.h in Headers */,
+				0B24B9261AA6A01C00F131C3 /* ClientVersion.h in Headers */,
 				0BC948BD1A84509F004CB997 /* OOOoyalaAdSpot.h in Headers */,
 				0B24B8571AA6827200F131C3 /* MvpdLoginViewController.h in Headers */,
 				0BC948C81A84509F004CB997 /* OOPlayerInfo.h in Headers */,
@@ -818,9 +819,9 @@
 				FF86C1F21A9BF06700C328A9 /* TableCell.xib in Resources */,
 				FF86C1ED1A9BF06700C328A9 /* PlayerDoubleButton.xib in Resources */,
 				FF86C1C61A9BF06700C328A9 /* Images.xcassets in Resources */,
-				0B24B8D31AA6971200F131C3 /* adobepass.p12 in Resources */,
 				FF86C1EF1A9BF06700C328A9 /* PlayerDoubleText.xib in Resources */,
 				FF86C1C41A9BF06700C328A9 /* LaunchScreen.xib in Resources */,
+				0B24B9231AA6A01C00F131C3 /* adobepass.p12 in Resources */,
 				FF86C1C51A9BF06700C328A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -851,6 +852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B24B8D61AA6998500F131C3 /* Util.m in Sources */,
 				0B24B8731AA6948800F131C3 /* ContentProtectionSampleAppSource.m in Sources */,
 				0B24B8741AA6948800F131C3 /* ContentProtectionListViewController.m in Sources */,
 				0B24B8751AA6948800F131C3 /* AdobePassPlayerViewController.m in Sources */,
@@ -971,8 +973,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-					"$(PROJECT_DIR)/AdobePassDemoApp/AccessEnabler/lib",
+					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -991,8 +992,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-					"$(PROJECT_DIR)/AdobePassDemoApp/AccessEnabler/lib",
+					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
 				);
 				ONLY_ACTIVE_ARCH = YES;
