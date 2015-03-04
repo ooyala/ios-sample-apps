@@ -11,7 +11,7 @@
       location = "group:CompleteSampleApp/CompleteSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AdobePassDemoApp/ContentProtectionSampleApp.xcodeproj">
+      location = "group:ContentProtectionSampleApp/ContentProtectionSampleApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:FreewheelSampleApp/FreewheelSampleApp.xcodeproj">

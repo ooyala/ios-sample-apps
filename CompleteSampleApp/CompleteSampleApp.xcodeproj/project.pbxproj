@@ -23,7 +23,6 @@
 		0B1E45C81A6889D50092F056 /* libFreewheelSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */; };
 		0B2459D11A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */; };
 		0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */; };
-		0B24B8D51AA698A700F131C3 /* libContentProtectionSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B8D41AA698A700F131C3 /* libContentProtectionSampleAppSource.a */; };
 		0B24B8F61AA69FFC00F131C3 /* adobepass.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 0B24B8DD1AA69FFC00F131C3 /* adobepass.p12 */; };
 		0B24B8F71AA69FFC00F131C3 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E01AA69FFC00F131C3 /* AccessEnabler.h */; };
 		0B24B8F81AA69FFC00F131C3 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8E11AA69FFC00F131C3 /* AccessEnablerConstants.h */; };
@@ -43,6 +42,7 @@
 		0B24B9061AA69FFC00F131C3 /* NSURLConnectionWithTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8F11AA69FFC00F131C3 /* NSURLConnectionWithTag.h */; };
 		0B24B9071AA69FFC00F131C3 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8F31AA69FFC00F131C3 /* StorageManager.h */; };
 		0B24B9081AA69FFC00F131C3 /* libAccessEnabler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B8F51AA69FFC00F131C3 /* libAccessEnabler.a */; };
+		0B24B9371AA6A09900F131C3 /* libContentProtectionSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B9361AA6A09900F131C3 /* libContentProtectionSampleAppSource.a */; };
 		0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E21A40DF7000E7DE88 /* Main.storyboard */; };
 		0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801111A40E02000E7DE88 /* LaunchScreen.xib */; };
 		0BC947E51A817768004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947DF1A817768004CB997 /* PlayerDoubleButton.xib */; };
@@ -190,6 +190,7 @@
 		0B24B8F11AA69FFC00F131C3 /* NSURLConnectionWithTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionWithTag.h; sourceTree = "<group>"; };
 		0B24B8F31AA69FFC00F131C3 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
 		0B24B8F51AA69FFC00F131C3 /* libAccessEnabler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAccessEnabler.a; sourceTree = "<group>"; };
+		0B24B9361AA6A09900F131C3 /* libContentProtectionSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libContentProtectionSampleAppSource.a; path = "../../../Library/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos/libContentProtectionSampleAppSource.a"; sourceTree = "<group>"; };
 		0B9800E31A40DF7000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B9801121A40E02000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
@@ -300,7 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B24B8D51AA698A700F131C3 /* libContentProtectionSampleAppSource.a in Frameworks */,
+				0B24B9371AA6A09900F131C3 /* libContentProtectionSampleAppSource.a in Frameworks */,
 				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
 				0BC949981A8450D4004CB997 /* libOoyalaSDK.a in Frameworks */,
 				0B2459D31A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
@@ -372,6 +373,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B24B9361AA6A09900F131C3 /* libContentProtectionSampleAppSource.a */,
 				0B24B8D41AA698A700F131C3 /* libContentProtectionSampleAppSource.a */,
 				0B24B8D01AA6959F00F131C3 /* libAdobePassSampleAppSource.a */,
 				0B17A0E41A78203E009D1C50 /* libc++.dylib */,
@@ -943,6 +945,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -967,6 +970,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
