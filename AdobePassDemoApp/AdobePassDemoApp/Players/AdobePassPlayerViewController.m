@@ -44,7 +44,6 @@
     [self.button1 setTitle:@"Login" forState:UIControlStateNormal];
     [self.button1 removeTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
     [self.button1 addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
-    [self.ooyalaPlayerViewController.player setEmbedCode:@"none"]; //set to dummy embed code
     self.ooyalaPlayerViewController.view.hidden = YES;
   }
 }
@@ -61,7 +60,13 @@
                                                              delegate:self];
   [self addChildViewController:self.passController];
 
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self.passController];
+
+
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:self.ooyalaPlayerViewController.player];
 
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
@@ -76,7 +81,7 @@
 
 - (void)onRightBtnClick:(id)sender {
   //[ooController.player setEmbedCode:@"5icXRvNDrl9kxzF_58oV79ApUNRffoLR"];
-  [self.ooyalaPlayerViewController.player setEmbedCode:@"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G"];
+  [self.ooyalaPlayerViewController.player setEmbedCode:@"h0NGNxczpVZm5WeI-iwEHGgGcCoipQJy"];
   [self.ooyalaPlayerViewController.player play];
 }
 
@@ -86,6 +91,19 @@
 
 - (void)logout {
   [self.passController logout];
+}
+
+- (void) notificationHandler:(NSNotification*) notification {
+
+  // Ignore TimeChangedNotificiations for shorter logs
+  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    return;
+  }
+
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+        [notification name],
+        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+        [self.ooyalaPlayerViewController.player playheadTime]);
 }
 
 @end
