@@ -14,6 +14,7 @@
 #import "FreewheelPlaybackListViewcontroller.h"
 #import "OoyalaAPIListViewController.h"
 #import "PlayerSelectionOption.h"
+#import "ContentProtectionListViewController.h"
 
 
 #pragma mark - List Selection Option
@@ -51,6 +52,7 @@
  *
  */
 - (void)addAllPlayerSelectionOptions {
+  [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"ContentProtectionSampleApp" listViewController: [ContentProtectionListViewController class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"AdvancedPlaybackSampleApp" listViewController: [AdvancedPlaybackListViewController class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"OptionsSampleApp" listViewController: [OptionsListTableViewController class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"IMASampleApp" listViewController: [IMAPlaybackListViewcontroller class]]];
