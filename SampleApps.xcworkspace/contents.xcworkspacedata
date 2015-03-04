@@ -22,4 +22,7 @@
    <FileRef
       location = "group:README.md">
    </FileRef>
+   <FileRef
+      location = "group:AdobePassDemoApp/AdobePassSampleApp.xcodeproj">
+   </FileRef>
 </Workspace>
