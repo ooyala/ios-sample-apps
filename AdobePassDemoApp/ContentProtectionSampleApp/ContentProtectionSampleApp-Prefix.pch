@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'AdobePassDemoApp' target in the 'AdobePassDemoApp' project
+// Prefix header for all source files of the 'ContentProtectionSampleApp' target in the 'ContentProtectionSampleApp' project
 //
 
 #import <Availability.h>

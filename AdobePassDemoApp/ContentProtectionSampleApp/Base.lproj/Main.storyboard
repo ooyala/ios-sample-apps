@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Adobe Pass List View Controller-->
+        <!--Content Protection List View Controller-->
         <scene sceneID="PAD-gN-F98">
             <objects>
-                <tableViewController id="oww-At-Hus" customClass="AdobePassListViewController" sceneMemberID="viewController">
+                <tableViewController id="oww-At-Hus" customClass="ContentProtectionListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Vsg-5s-RNR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

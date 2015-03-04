@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  AdvancedPlaybackSampleApp
+//  ContentProtectionSampleApp
 //
 //  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
 //

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AdobePassDemoApp/AdobePassSampleApp.xcodeproj">
+      location = "group:AdobePassDemoApp/ContentProtectionSampleApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp.xcodeproj">

@@ -1,24 +1,24 @@
 //
-//  AdobePassListViewController.m
-//  AdobePassDemoApp
+//  ContentProtectionListViewController.m
+//  ContentProtectionListViewController
 //
 //  Created by Liusha Huang on 2/23/15.
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import "AdobePassListViewController.h"
+#import "ContentProtectionListViewController.h"
 #import "PlayerSelectionOption.h"
 #import "AdobePassPlayerViewController.h"
 #import "DeviceManagementPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 
-@interface AdobePassListViewController ()
+@interface ContentProtectionListViewController ()
 @property NSMutableArray *options;
 @property NSMutableArray *optionList;
 @property NSMutableArray *optionEmbedCodes;
 @end
 
-@implementation AdobePassListViewController
+@implementation ContentProtectionListViewController
 
 - (id)init {
   self = [super init];
