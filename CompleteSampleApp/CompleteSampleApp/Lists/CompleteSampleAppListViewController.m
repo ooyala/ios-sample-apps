@@ -12,6 +12,7 @@
 #import "OptionsListTableViewController.h"
 #import "IMAPlaybackListViewcontroller.h"
 #import "FreewheelPlaybackListViewcontroller.h"
+#import "OoyalaAPIListViewController.h"
 #import "PlayerSelectionOption.h"
 #import "ContentProtectionListViewController.h"
 
@@ -57,6 +58,7 @@
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"IMASampleApp" listViewController: [IMAPlaybackListViewcontroller class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"FreewheelSampleApp" listViewController: [FreewheelPlaybackListViewcontroller class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"BasicPlaybackSampleApp" listViewController: [BasicPlaybackListViewController class]]];
+  [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"OoyalaAPISampleApp" listViewController: [OoyalaAPIListViewController class]]];
 }
 
 - (void)viewDidLoad {
