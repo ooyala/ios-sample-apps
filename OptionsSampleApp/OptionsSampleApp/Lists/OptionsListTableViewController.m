@@ -7,6 +7,7 @@
 //
 
 #import "OptionsListTableViewController.h"
+#import "TVRatingsPlayerViewController.h"
 #import "OptionsViewController.h"
 #import "PlayerSelectionOption.h"
 
@@ -33,6 +34,8 @@ static NSString *cellId = @"pickerCell";
   PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:@"HLS Video with timeout" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]];
   option.nib = @"PlayerDoubleText";
   [self insertNewObject: option];
+
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"TV Ratings Configuration" embedCode:@"c4eHZjcjqNetoCDCmzY_ApifO3qBuWpi" viewController: [TVRatingsPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {

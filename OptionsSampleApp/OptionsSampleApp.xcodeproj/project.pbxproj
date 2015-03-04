@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B24B84A1AA66D6700F131C3 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
 		0BC9480C1A8177E2004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948061A8177E2004CB997 /* PlayerDoubleButton.xib */; };
 		0BC9480D1A8177E2004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948071A8177E2004CB997 /* PlayerDoubleSwitch.xib */; };
 		0BC9480E1A8177E2004CB997 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948081A8177E2004CB997 /* PlayerDoubleText.xib */; };
@@ -81,21 +82,23 @@
 		0BC94BED1A846FDE004CB997 /* OOVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA91A846FDE004CB997 /* OOVideo.h */; };
 		0BC94BEE1A846FDE004CB997 /* OOVideoGravityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BAA1A846FDE004CB997 /* OOVideoGravityButton.h */; };
 		0BC94BEF1A846FDE004CB997 /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC94BAB1A846FDE004CB997 /* libOoyalaSDK.a */; };
+		0BDC4C1A1AA5037D00576639 /* OptionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDC4C181AA5037D00576639 /* OptionsViewController.h */; };
+		0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
 		0BF0B0E61A671E4300026FDC /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0B0E31A671E4300026FDC /* PlayerSelectionOption.m */; };
 		0BF0B0E71A671E4300026FDC /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0B0E51A671E4300026FDC /* SampleAppPlayerViewController.m */; };
 		0BF4F9E41A6850CE0050A602 /* OptionsSampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0BF4F9E31A6850CE0050A602 /* OptionsSampleAppSource.h */; };
 		0BF4F9E61A6850CE0050A602 /* OptionsSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4F9E51A6850CE0050A602 /* OptionsSampleAppSource.m */; };
 		0BF4F9F81A6850FD0050A602 /* OptionsListTableViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */; };
-		0BF4F9F91A6851060050A602 /* OptionsViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772BFAE1A43C11C00B255C0 /* OptionsViewController.h */; };
+		0BF4F9F91A6851060050A602 /* TVRatingsPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772BFAE1A43C11C00B255C0 /* TVRatingsPlayerViewController.h */; };
 		0BF4F9FE1A6852030050A602 /* OptionsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */; };
-		0BF4F9FF1A6852090050A602 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */; };
+		0BF4F9FF1A6852090050A602 /* TVRatingsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFAF1A43C11C00B255C0 /* TVRatingsPlayerViewController.m */; };
 		0BF4FA011A6852290050A602 /* OptionsListTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */; };
 		0BF4FA091A685F9E0050A602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA051A685F9E0050A602 /* LaunchScreen.xib */; };
 		0BF4FA0A1A685F9E0050A602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA071A685F9E0050A602 /* Main.storyboard */; };
 		9772BF861A43B61500B255C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF851A43B61500B255C0 /* main.m */; };
 		9772BF891A43B61500B255C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF881A43B61500B255C0 /* AppDelegate.m */; };
 		9772BF911A43B61500B255C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9772BF901A43B61500B255C0 /* Images.xcassets */; };
-		9772BFB01A43C11C00B255C0 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */; };
+		9772BFB01A43C11C00B255C0 /* TVRatingsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFAF1A43C11C00B255C0 /* TVRatingsPlayerViewController.m */; };
 		9772BFB31A43C15E00B255C0 /* OptionsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */; };
 		9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFF51A48EF8800B255C0 /* MediaPlayer.framework */; };
 		9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */; };
@@ -110,7 +113,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				0BF4F9F91A6851060050A602 /* OptionsViewController.h in CopyFiles */,
+				0BF4F9F91A6851060050A602 /* TVRatingsPlayerViewController.h in CopyFiles */,
 				0BF4F9F81A6850FD0050A602 /* OptionsListTableViewController.h in CopyFiles */,
 				0BF4F9E41A6850CE0050A602 /* OptionsSampleAppSource.h in CopyFiles */,
 			);
@@ -193,6 +196,8 @@
 		0BC94BA91A846FDE004CB997 /* OOVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVideo.h; sourceTree = "<group>"; };
 		0BC94BAA1A846FDE004CB997 /* OOVideoGravityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVideoGravityButton.h; sourceTree = "<group>"; };
 		0BC94BAB1A846FDE004CB997 /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaSDK.a; sourceTree = "<group>"; };
+		0BDC4C181AA5037D00576639 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		0BDC4C191AA5037D00576639 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		0BF0B0E21A671E4300026FDC /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0BF0B0E31A671E4300026FDC /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BF0B0E41A671E4300026FDC /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
@@ -208,8 +213,8 @@
 		9772BF871A43B61500B255C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9772BF881A43B61500B255C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9772BF901A43B61500B255C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9772BFAE1A43C11C00B255C0 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
-		9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		9772BFAE1A43C11C00B255C0 /* TVRatingsPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVRatingsPlayerViewController.h; sourceTree = "<group>"; };
+		9772BFAF1A43C11C00B255C0 /* TVRatingsPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVRatingsPlayerViewController.m; sourceTree = "<group>"; };
 		9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsListTableViewController.h; sourceTree = "<group>"; };
 		9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsListTableViewController.m; sourceTree = "<group>"; };
 		9772BFF51A48EF8800B255C0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -436,8 +441,10 @@
 		9772BFAA1A43B6C000B255C0 /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				9772BFAE1A43C11C00B255C0 /* OptionsViewController.h */,
-				9772BFAF1A43C11C00B255C0 /* OptionsViewController.m */,
+				0BDC4C181AA5037D00576639 /* OptionsViewController.h */,
+				0BDC4C191AA5037D00576639 /* OptionsViewController.m */,
+				9772BFAE1A43C11C00B255C0 /* TVRatingsPlayerViewController.h */,
+				9772BFAF1A43C11C00B255C0 /* TVRatingsPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -473,6 +480,7 @@
 				0BC94BE81A846FDE004CB997 /* OOVASTLinearAd.h in Headers */,
 				0BC94BB81A846FDE004CB997 /* OOChannel.h in Headers */,
 				0BC94BC01A846FDE004CB997 /* OODefaultPlayerInfo.h in Headers */,
+				0BDC4C1A1AA5037D00576639 /* OptionsViewController.h in Headers */,
 				0BC94BB41A846FDE004CB997 /* OOAuthorizableItem.h in Headers */,
 				0BC94BCE1A846FDE004CB997 /* OOOoyalaError.h in Headers */,
 				0BC94BB61A846FDE004CB997 /* OOCallbacks.h in Headers */,
@@ -626,7 +634,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BF4F9FF1A6852090050A602 /* OptionsViewController.m in Sources */,
+				0B24B84A1AA66D6700F131C3 /* OptionsViewController.m in Sources */,
+				0BF4F9FF1A6852090050A602 /* TVRatingsPlayerViewController.m in Sources */,
 				0BF4F9FE1A6852030050A602 /* OptionsListTableViewController.m in Sources */,
 				0BF4F9E61A6850CE0050A602 /* OptionsSampleAppSource.m in Sources */,
 			);
@@ -636,11 +645,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9772BFB01A43C11C00B255C0 /* OptionsViewController.m in Sources */,
+				9772BFB01A43C11C00B255C0 /* TVRatingsPlayerViewController.m in Sources */,
 				9772BF891A43B61500B255C0 /* AppDelegate.m in Sources */,
 				9772BFB31A43C15E00B255C0 /* OptionsListTableViewController.m in Sources */,
 				0BF0B0E61A671E4300026FDC /* PlayerSelectionOption.m in Sources */,
 				9772BF861A43B61500B255C0 /* main.m in Sources */,
+				0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */,
 				0BF0B0E71A671E4300026FDC /* SampleAppPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
