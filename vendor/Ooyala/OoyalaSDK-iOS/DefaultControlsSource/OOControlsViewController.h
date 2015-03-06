@@ -33,8 +33,6 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 //Hide and show the full screen button on the inline view
 - (void)setFullScreenButtonShowing: (BOOL) isShowing;
 
-- (void)setLiveSliderShowing:(BOOL) isShowing;
-
 - (OOUIProgressSliderMode) sliderMode;
 
 // Change the language of controls when close caption changed

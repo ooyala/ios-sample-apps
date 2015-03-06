@@ -6,7 +6,6 @@
 //
 
 #import "OOInlineIOS7ViewController.h"
-#import "OOOoyalaPlayer+Internal.h"
 #import "OOOoyalaPlayer.h"
 #import "OOOoyalaPlayerViewController.h"
 #import "OOInlineIOS7ControlsView.h"
@@ -163,20 +162,26 @@
 
   if (self.player.isPlaying) {
 
-    if ([self.player showingAdsWithHiddenControls]) {
+    if ([self showingAdsWithHiddenControls]) {
       [self hideControls];
     } else if (self.controls.playButton.isPlayShowing) {
       [self.controls.playButton setIsPlayShowing:NO];
       if (self.controls.hidden == NO) {
         [self showControls];
-        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+        if (self.hideControlsTimer != nil) {
+          [self.hideControlsTimer invalidate];
+          self.hideControlsTimer = nil;
+        }
       }
     }
   } else if (!self.controls.playButton.isPlayShowing) {
       [self.controls.playButton setIsPlayShowing:YES];
       if (self.controls.hidden == NO) {
         [self showControls];
-        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+        if (self.hideControlsTimer != nil) {
+          [self.hideControlsTimer invalidate];
+          self.hideControlsTimer = nil;
+        }
     }
   }
 
@@ -200,7 +205,10 @@
     return;
   }
 
-  if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+  if (self.hideControlsTimer != nil) {
+    [self.hideControlsTimer invalidate];
+    self.hideControlsTimer = nil;
+  }
   if (self.controls == nil) return;
 
   [UIView animateWithDuration:0.37
@@ -217,12 +225,15 @@
 }
 
 - (void)showControls {
-  if (self.player == nil || [self.player showingAdsWithHiddenControls]) {
+  if (self.player == nil || [self showingAdsWithHiddenControls]) {
     LOG(@"showControls while player is nil");
     return;
   }
   if (!self.isVisible) return;
-  if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
+  if (self.hideControlsTimer != nil) {
+    [self.hideControlsTimer invalidate];
+    self.hideControlsTimer = nil;
+  }
   if (self.controls == nil) return;
 
   self.controls.hidden = NO;
@@ -274,6 +285,10 @@
   }
 }
 
+- (BOOL)showingAdsWithHiddenControls {
+  return (self.player.isShowingAd && !self.player.options.showAdsControls);
+}
+
 - (void)updateClosedCaptionsPosition {
   if (self.player == nil) {
     LOG(@"updateClosedCaptionsPosition while player is nil");
@@ -283,6 +298,11 @@
 }
 
 - (void)dealloc {
+  LOG(@"OOInlineIOS7ViewController  dealloc");
+  if (self.hideControlsTimer != nil) {
+    [self.hideControlsTimer invalidate];
+    self.hideControlsTimer = nil;
+  }
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

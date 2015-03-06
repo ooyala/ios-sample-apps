@@ -181,11 +181,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (void)setFullScreenButtonShowing: (BOOL) showing;
 
 /**
- * Sets visibility of scrubber while watching live streams
- * @param[in] showing YES if you want to show the scrubber, NO otherwise (default YES) */
-- (void)setLiveSliderShowing: (BOOL) showing;
-
-/**
  * Sets the ViewController used to display controls in fullscreen mode
  * @param[in] the initialized ViewController to use
  */
