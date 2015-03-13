@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Play" id="xEG-BN-S1D">
+                            <color key="backgroundColor" red="0.91424046349999999" green="0.61333583579999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="play" destination="AgC-eL-Hgc" id="Klx-zV-daC"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Pause" id="rHc-o4-SsL">
+                            <color key="backgroundColor" red="0.15011546470000001" green="0.58869056060000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pause" destination="AgC-eL-Hgc" id="qct-m4-rUk"/>
+                            </connections>
+                        </button>
+                        <label width="133" height="38" alignment="left" text="Playhead" textAlignment="left" id="DOz-Fq-DaQ">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="button" destination="xEG-BN-S1D" id="HVr-Rb-Q5m"/>
+                        <outlet property="label" destination="DOz-Fq-DaQ" id="mCn-lj-KT5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-60" y="605"/>
+        </scene>
+    </scenes>
+</document>
