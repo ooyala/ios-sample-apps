@@ -48,7 +48,9 @@
     NSLog(@"%@ %@",replyInfo, error);
     NSLog(@"playheadTime = %@", [replyInfo objectForKey:@"playheadTime"]);
     CGFloat playheadTime = [[replyInfo objectForKey:@"playheadTime"] doubleValue];
-    [self.label setText:[NSString stringWithFormat:@"playheadTime = %0.0f", playheadTime]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:playheadTime < 3600 ? @"m:ss" : @"H:mm:ss"];
+    [self.label setText:[NSString stringWithFormat:@"Playhead: %@", [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:playheadTime]]]];
   }];
 }
 
