@@ -11,9 +11,9 @@ import . "mobile.ooyala.com/common/path"
 type Config struct {
 	RootPath         DirAbs
 
-	CoreSDKFileNameStr      string
-	FreewheelSDKFileNameStr string
-	IMASDKFileNameStr       string
+	CoreSDKFileName		    FileName
+	FreewheelSDKFileName	FileName
+	IMASDKFileName          FileName
 
 	CoreSDKCandidateURL      string
 	FreewheelSDKCandidateURL string
@@ -34,9 +34,10 @@ func MakeiOSConfig(rootPath DirAbs, logger *log.Logger) Config {
 	c := Config {
 		RootPath: rootPath,
 
-		CoreSDKFileNameStr:              ooyalaCoreDirName.S + ".zip",
-		FreewheelSDKFileNameStr:         ooyalaFWDirName.S + ".zip",
-		IMASDKFileNameStr:               ooyalaIMADirName.S + ".zip",
+
+		IMASDKFileName:                 MakeFileName(ooyalaCoreDirName.S + ".zip"),
+		FreewheelSDKFileName:           MakeFileName(ooyalaFWDirName.S + ".zip"),
+		CoreSDKFileName:                MakeFileName(ooyalaIMADirName.S + ".zip"),
 
 		CoreSDKCandidateURL:             "https://ooyala.box.com/shared/static/gs38fwznlseia502342j.zip",
 		FreewheelSDKCandidateURL:        "https://ooyala.box.com/shared/static/opgc8csoav78ethzf47e.zip",
@@ -60,9 +61,9 @@ func MakeAndroidConfig(platformName string, rootPath DirAbs, logger *log.Logger)
 	c := Config {
 		RootPath: rootPath,
 
-		CoreSDKFileNameStr:              ooyalaCoreDirName.S + ".zip",
-		FreewheelSDKFileNameStr:         ooyalaFWDirName.S + ".zip",
-		IMASDKFileNameStr:               ooyalaIMADirName.S + ".zip",
+		IMASDKFileName:                 MakeFileName(ooyalaCoreDirName.S + ".zip"),
+		FreewheelSDKFileName:           MakeFileName(ooyalaFWDirName.S + ".zip"),
+		CoreSDKFileName:                MakeFileName(ooyalaIMADirName.S + ".zip"),
 
 		CoreSDKCandidateURL:             "https://ooyala.box.com/shared/static/inodnnnxaq3fwnzhid44.zip",
 		FreewheelSDKCandidateURL:        "https://ooyala.box.com/shared/static/cmbyzhg8gxh3mqhaiv5c.zip",

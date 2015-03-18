@@ -43,37 +43,37 @@ func removeOldOoyalaVendorFolders(config vc.Config, l *log.Logger) {
 
 func downloadNewRCPackages(config vc.Config, zipConfig zc.Config, l *log.Logger) {
 	ol.ColorizedMethodPrintln(l)
-	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"wget '" + zipConfig.CoreSDKCandidateURL + "' --progress=bar -O " + zipConfig.CoreSDKFileNameStr}, l)
+	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"wget '" + zipConfig.CoreSDKCandidateURL + "' --progress=bar -O " + zipConfig.CoreSDKFileName.S}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"wget '" + zipConfig.FreewheelSDKCandidateURL + "' --progress=bar -O " + zipConfig.FreewheelSDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"wget '" + zipConfig.FreewheelSDKCandidateURL + "' --progress=bar -O " + zipConfig.FreewheelSDKFileName.S}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"wget '" + zipConfig.IMASDKCandidateURL + "' --progress=bar -O " + zipConfig.IMASDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"wget '" + zipConfig.IMASDKCandidateURL + "' --progress=bar -O " + zipConfig.IMASDKFileName.S}, l)
 	util.MaybeDie(err, l)
 }
 
 
 func unzipNewRCPackages(config vc.Config, zipConfig zc.Config, l *log.Logger) {
 	ol.ColorizedMethodPrintln(l)
-	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.CoreSDKFileNameStr}, l)
+	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.CoreSDKFileName.S}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.FreewheelSDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.FreewheelSDKFileName.S}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.IMASDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"unzip " + zipConfig.IMASDKFileName.S}, l)
 	util.MaybeDie(err, l)
 }
 
 func removeZipFiles(config vc.Config, zipConfig zc.Config, l *log.Logger) {
 	ol.ColorizedMethodPrintln(l)
-	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"rm " + zipConfig.CoreSDKFileNameStr}, l)
+	err := util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"rm " + zipConfig.CoreSDKFileName.S}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"rm " + zipConfig.FreewheelSDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"rm " + zipConfig.FreewheelSDKFileName.S}, l)
 	util.MaybeDie(err, l)
 
-	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"rm " + zipConfig.IMASDKFileNameStr}, l)
+	err = util.RunBashCommandsInDir(config.VendorOoyalaRootFolderPath, []string{"rm " + zipConfig.IMASDKFileName.S}, l)
 	util.MaybeDie(err, l)
 }
