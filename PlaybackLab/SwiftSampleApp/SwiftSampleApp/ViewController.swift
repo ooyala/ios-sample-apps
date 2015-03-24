@@ -19,7 +19,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var playerView: UIView!
   @IBOutlet var textView: UITextView!
   
-  let EMBED_CODE = "lrZmRiMzrr8cP77PPW0W8AsjjhMJ1BBe"
+  let EMBED_CODE = "Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
   let PCODE = "Z5Mm06XeZlcDlfU_1R9v_L2KwYG6"
   let PLAYERDOMAIN = "http://www.ooyala.com"
   
