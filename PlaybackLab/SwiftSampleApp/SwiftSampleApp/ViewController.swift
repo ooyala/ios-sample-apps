@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
   required init(coder aDecoder: NSCoder) {
     formatter = NSDateFormatter()
     ooyalaPlayerViewController = OOOoyalaPlayerViewController()
@@ -44,26 +43,46 @@ class ViewController: UIViewController {
     self.view.addSubview(textView)
     textView.text = "LOG:"
     
+    // Hide Keyboard by setting the size of keyboard to (0, 0)
+    var keyboardView = UIView(frame: CGRectMake(0, 0, 0, 0))
+    textView.inputView = keyboardView
+    
     // Setup time format
-    let locale = NSLocale.currentLocale()
-    let dateFormat = NSDateFormatter.dateFormatFromTemplate("yyyy-MM-dd", options: 0, locale: locale)
-    formatter.dateFormat = dateFormat
+    let zone  = NSTimeZone.localTimeZone()
+    formatter.timeZone = zone
+    formatter.dateFormat = "\nyyyy-MM-dd HH:mm:ss \n"
     
     // Load the video
     ooyalaPlayerViewController.player.setEmbedCode(EMBED_CODE)
-    //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector(notificationHandler()), name: nil, object: ooyalaPlayerViewController.player)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "notificationHandler:", name: nil, object: ooyalaPlayerViewController.player)
   }
   
   func onPlayerError(notification: NSNotification){
     NSLog("Error: %@", ooyalaPlayerViewController.player.error)
   }
-  
+
   func notificationHandler(notification: NSNotification) {
     var name = notification.name
     if name == OOOoyalaPlayerTimeChangedNotification {
       return
     }
     
+    var timer = NSDate()
+    var timeStamp = formatter.stringFromDate(timer)
+    timeStamp = timeStamp.substringToIndex(advance(timeStamp.endIndex, -2))
+    
+    if name == OOOoyalaPlayerErrorNotification {
+      var error = ooyalaPlayerViewController.player.view.description
+      textView.insertText(timeStamp + ", Error: ," + error)
+    } else if name == OOOoyalaPlayerStateChangedNotification {
+      var state = ooyalaPlayerViewController.player.state()
+      var currentState = OOOoyalaPlayer.playerStateToString(state)
+      textView.insertText(timeStamp + ", State: ," + currentState)
+    } else {
+      textView.insertText(timeStamp + ", ," + name)
+    }
+    textView.insertText("\n")
+    textView.scrollRangeToVisible(NSMakeRange(countElements(textView.text), 0))
   }
   
   override func viewWillAppear(animated: Bool) {

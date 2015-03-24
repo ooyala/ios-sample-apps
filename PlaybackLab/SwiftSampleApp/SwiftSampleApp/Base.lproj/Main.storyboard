@@ -55,36 +55,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZD-32-Mqd">
-                                <rect key="frame" x="0.0" y="64" width="600" height="336"/>
+                                <rect key="frame" x="-4" y="64" width="608" height="336"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhl-dL-x6J">
-                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <rect key="frame" x="-4" y="400" width="608" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uhl-dL-x6J" firstAttribute="leading" secondItem="Ykq-yJ-jP9" secondAttribute="leadingMargin" constant="-16" id="8C3-3Y-k0E"/>
+                            <constraint firstItem="uhl-dL-x6J" firstAttribute="leading" secondItem="Ykq-yJ-jP9" secondAttribute="leadingMargin" constant="-20" id="8C3-3Y-k0E"/>
                             <constraint firstItem="F4U-Zl-v6t" firstAttribute="top" secondItem="fZD-32-Mqd" secondAttribute="bottom" constant="200" id="A5O-Tw-6PI"/>
                             <constraint firstItem="F4U-Zl-v6t" firstAttribute="top" secondItem="uhl-dL-x6J" secondAttribute="bottom" id="E33-mX-kA9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uhl-dL-x6J" secondAttribute="trailing" constant="-16" id="GM3-O5-yQu"/>
-                            <constraint firstItem="uhl-dL-x6J" firstAttribute="leading" secondItem="Ykq-yJ-jP9" secondAttribute="leadingMargin" id="KIQ-NT-E2f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uhl-dL-x6J" secondAttribute="trailing" constant="-20" id="GM3-O5-yQu"/>
                             <constraint firstItem="fZD-32-Mqd" firstAttribute="top" secondItem="CsW-Zd-dzp" secondAttribute="bottom" id="TJW-HM-3xU"/>
-                            <constraint firstItem="fZD-32-Mqd" firstAttribute="leading" secondItem="Ykq-yJ-jP9" secondAttribute="leadingMargin" constant="-16" id="a5d-we-tYP"/>
+                            <constraint firstItem="fZD-32-Mqd" firstAttribute="leading" secondItem="Ykq-yJ-jP9" secondAttribute="leadingMargin" constant="-20" id="a5d-we-tYP"/>
                             <constraint firstItem="uhl-dL-x6J" firstAttribute="top" secondItem="fZD-32-Mqd" secondAttribute="bottom" id="mws-Gv-aJI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fZD-32-Mqd" secondAttribute="trailing" constant="-16" id="q0Q-wy-3dH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fZD-32-Mqd" secondAttribute="trailing" constant="-20" id="q0Q-wy-3dH"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="KIQ-NT-E2f"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="W1P-rQ-xTG"/>
                     <connections>
                         <outlet property="playerView" destination="fZD-32-Mqd" id="JUz-jc-maP"/>
                         <outlet property="textView" destination="uhl-dL-x6J" id="CtS-Pj-3Nb"/>
