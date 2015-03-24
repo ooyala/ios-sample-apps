@@ -8,11 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		0B193ABB1AC109A500EFFE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193ABA1AC109A500EFFE17 /* AppDelegate.swift */; };
-		0B193ABD1AC109A500EFFE17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193ABC1AC109A500EFFE17 /* ViewController.swift */; };
+		0B193ABD1AC109A500EFFE17 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193ABC1AC109A500EFFE17 /* BaseViewController.swift */; };
 		0B193AC01AC109A500EFFE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B193ABE1AC109A500EFFE17 /* Main.storyboard */; };
 		0B193AC21AC109A500EFFE17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B193AC11AC109A500EFFE17 /* Images.xcassets */; };
 		0B193AC51AC109A500EFFE17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B193AC31AC109A500EFFE17 /* LaunchScreen.xib */; };
 		0B193AD11AC109A500EFFE17 /* SwiftSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193AD01AC109A500EFFE17 /* SwiftSampleAppTests.swift */; };
+		0B193ADD1AC1173C00EFFE17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193ADC1AC1173C00EFFE17 /* ViewController.swift */; };
+		0B193ADF1AC117F800EFFE17 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193ADE1AC117F800EFFE17 /* CoreMedia.framework */; };
+		0B193AE11AC1182D00EFFE17 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */; };
+		0B193AE41AC1184500EFFE17 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */; };
+		0B193AE51AC1184500EFFE17 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */; };
+		0B193AE71AC1185800EFFE17 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE61AC1185800EFFE17 /* OoyalaSDK.framework */; };
+		0B193AE91AC1186D00EFFE17 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */; };
+		0B193AEB1AC1187A00EFFE17 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEA1AC1187A00EFFE17 /* Security.framework */; };
+		0B193AED1AC1188B00EFFE17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */; };
+		0B193AEF1AC1189A00EFFE17 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEE1AC1189A00EFFE17 /* CoreText.framework */; };
+		0B193AF11AC118A900EFFE17 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF01AC118A900EFFE17 /* AdSupport.framework */; };
+		0B193AF31AC118B700EFFE17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF21AC118B700EFFE17 /* QuartzCore.framework */; };
+		0B193AF51AC118BE00EFFE17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF41AC118BE00EFFE17 /* UIKit.framework */; };
+		0B193AF71AC118CA00EFFE17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF61AC118CA00EFFE17 /* Foundation.framework */; };
+		0B193AF91AC118D500EFFE17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */; };
+		0B193AFB1AC118E100EFFE17 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AFA1AC118E100EFFE17 /* libxml2.dylib */; };
+		0B193AFD1AC118F400EFFE17 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AFC1AC118F400EFFE17 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +46,31 @@
 		0B193AB51AC109A500EFFE17 /* SwiftSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B193AB91AC109A500EFFE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B193ABA1AC109A500EFFE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B193ABC1AC109A500EFFE17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B193ABC1AC109A500EFFE17 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0B193ABF1AC109A500EFFE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B193AC11AC109A500EFFE17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B193AC41AC109A500EFFE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0B193ACA1AC109A500EFFE17 /* SwiftSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B193ACF1AC109A500EFFE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B193AD01AC109A500EFFE17 /* SwiftSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSampleAppTests.swift; sourceTree = "<group>"; };
+		0B193ADC1AC1173C00EFFE17 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B193ADE1AC117F800EFFE17 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0B193AE61AC1185800EFFE17 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0B193AEA1AC1187A00EFFE17 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0B193AEE1AC1189A00EFFE17 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0B193AF01AC118A900EFFE17 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		0B193AF21AC118B700EFFE17 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0B193AF41AC118BE00EFFE17 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0B193AF61AC118CA00EFFE17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0B193AFA1AC118E100EFFE17 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		0B193AFC1AC118F400EFFE17 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		0B193AFF1AC11A5400EFFE17 /* SwiftSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +78,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B193AFD1AC118F400EFFE17 /* libc++.dylib in Frameworks */,
+				0B193AFB1AC118E100EFFE17 /* libxml2.dylib in Frameworks */,
+				0B193AF91AC118D500EFFE17 /* CoreGraphics.framework in Frameworks */,
+				0B193AF71AC118CA00EFFE17 /* Foundation.framework in Frameworks */,
+				0B193AF51AC118BE00EFFE17 /* UIKit.framework in Frameworks */,
+				0B193AF31AC118B700EFFE17 /* QuartzCore.framework in Frameworks */,
+				0B193AF11AC118A900EFFE17 /* AdSupport.framework in Frameworks */,
+				0B193AEF1AC1189A00EFFE17 /* CoreText.framework in Frameworks */,
+				0B193AED1AC1188B00EFFE17 /* AVFoundation.framework in Frameworks */,
+				0B193AEB1AC1187A00EFFE17 /* Security.framework in Frameworks */,
+				0B193AE91AC1186D00EFFE17 /* SystemConfiguration.framework in Frameworks */,
+				0B193AE71AC1185800EFFE17 /* OoyalaSDK.framework in Frameworks */,
+				0B193AE41AC1184500EFFE17 /* MediaAccessibility.framework in Frameworks */,
+				0B193AE51AC1184500EFFE17 /* MediaPlayer.framework in Frameworks */,
+				0B193AE11AC1182D00EFFE17 /* CFNetwork.framework in Frameworks */,
+				0B193ADF1AC117F800EFFE17 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0B193AB71AC109A500EFFE17 /* SwiftSampleApp */,
+				0B193AFE1AC118FB00EFFE17 /* Frameworks */,
 				0B193ACD1AC109A500EFFE17 /* SwiftSampleAppTests */,
 				0B193AB61AC109A500EFFE17 /* Products */,
 			);
@@ -78,7 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				0B193ABA1AC109A500EFFE17 /* AppDelegate.swift */,
-				0B193ABC1AC109A500EFFE17 /* ViewController.swift */,
+				0B193ABC1AC109A500EFFE17 /* BaseViewController.swift */,
+				0B193ADC1AC1173C00EFFE17 /* ViewController.swift */,
+				0B193AFF1AC11A5400EFFE17 /* SwiftSampleApp-Bridging-Header.h */,
 				0B193ABE1AC109A500EFFE17 /* Main.storyboard */,
 				0B193AC11AC109A500EFFE17 /* Images.xcassets */,
 				0B193AC31AC109A500EFFE17 /* LaunchScreen.xib */,
@@ -110,6 +164,29 @@
 				0B193ACF1AC109A500EFFE17 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B193AFE1AC118FB00EFFE17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B193AFC1AC118F400EFFE17 /* libc++.dylib */,
+				0B193AFA1AC118E100EFFE17 /* libxml2.dylib */,
+				0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */,
+				0B193AF61AC118CA00EFFE17 /* Foundation.framework */,
+				0B193AF41AC118BE00EFFE17 /* UIKit.framework */,
+				0B193AF21AC118B700EFFE17 /* QuartzCore.framework */,
+				0B193AF01AC118A900EFFE17 /* AdSupport.framework */,
+				0B193AEE1AC1189A00EFFE17 /* CoreText.framework */,
+				0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */,
+				0B193AEA1AC1187A00EFFE17 /* Security.framework */,
+				0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */,
+				0B193AE61AC1185800EFFE17 /* OoyalaSDK.framework */,
+				0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */,
+				0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */,
+				0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */,
+				0B193ADE1AC117F800EFFE17 /* CoreMedia.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B193ABD1AC109A500EFFE17 /* ViewController.swift in Sources */,
+				0B193ADD1AC1173C00EFFE17 /* ViewController.swift in Sources */,
+				0B193ABD1AC109A500EFFE17 /* BaseViewController.swift in Sources */,
 				0B193ABB1AC109A500EFFE17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +416,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/OoyalaSDK.framework/Headers",
+				);
 				INFOPLIST_FILE = SwiftSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SwiftSampleApp/SwiftSampleApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -348,9 +436,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/OoyalaSDK.framework/Headers",
+				);
 				INFOPLIST_FILE = SwiftSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SwiftSampleApp/SwiftSampleApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
