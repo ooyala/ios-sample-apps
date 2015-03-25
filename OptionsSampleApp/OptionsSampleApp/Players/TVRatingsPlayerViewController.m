@@ -7,10 +7,10 @@
 //
 
 #import "TVRatingsPlayerViewController.h"
-#import "OOOptions.h"
-#import "OOFCCTVRatingConfiguration.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOPlayerDomain.h"
+#import <OoyalaSDK/OOOptions.h>
+#import <OoyalaSDK/OOFCCTVRatingConfiguration.h>
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
 
 @interface TVRatingsPlayerViewController () <UITextFieldDelegate>
 
@@ -87,8 +87,9 @@
                                                                                                     opacity:OOFCCTVRATINGCONFIGURATION_DEFAULT_OPACITY];
   options.tvRatingConfiguration = tvRatingConfig;
 
-  _playerViewController =
-  [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
+  // Create Ooyala ViewController
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
+  _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   //Setup video view
   CGRect rect = self.playerView.bounds;

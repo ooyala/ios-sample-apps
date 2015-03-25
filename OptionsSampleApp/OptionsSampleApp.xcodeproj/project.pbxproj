@@ -8,80 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0B24B84A1AA66D6700F131C3 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
+		0B9458A91AC32CDB000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458A81AC32CDB000DD545 /* OoyalaSDK.framework */; };
+		0B9459211AC33AD2000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458A81AC32CDB000DD545 /* OoyalaSDK.framework */; };
 		0BC9480C1A8177E2004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948061A8177E2004CB997 /* PlayerDoubleButton.xib */; };
 		0BC9480D1A8177E2004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948071A8177E2004CB997 /* PlayerDoubleSwitch.xib */; };
 		0BC9480E1A8177E2004CB997 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948081A8177E2004CB997 /* PlayerDoubleText.xib */; };
 		0BC9480F1A8177E2004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948091A8177E2004CB997 /* PlayerSimple.xib */; };
 		0BC948101A8177E2004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9480A1A8177E2004CB997 /* PlayerSingleButton.xib */; };
 		0BC948111A8177E2004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9480B1A8177E2004CB997 /* TableCell.xib */; };
-		0BC94BAC1A846FDE004CB997 /* iOS7ScrubberSliderFraming.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B681A846FDE004CB997 /* iOS7ScrubberSliderFraming.h */; };
-		0BC94BAD1A846FDE004CB997 /* OOAdPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B691A846FDE004CB997 /* OOAdPlugin.h */; };
-		0BC94BAE1A846FDE004CB997 /* OOAdPluginManagerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B6A1A846FDE004CB997 /* OOAdPluginManagerProtocol.h */; };
-		0BC94BAF1A846FDE004CB997 /* OOAdsLearnMoreButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B6B1A846FDE004CB997 /* OOAdsLearnMoreButton.h */; };
-		0BC94BB01A846FDE004CB997 /* OOAdSpot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B6C1A846FDE004CB997 /* OOAdSpot.h */; };
-		0BC94BB11A846FDE004CB997 /* OOAdSpotManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B6D1A846FDE004CB997 /* OOAdSpotManager.h */; };
-		0BC94BB21A846FDE004CB997 /* OOAdSpotPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B6E1A846FDE004CB997 /* OOAdSpotPlugin.h */; };
-		0BC94BB31A846FDE004CB997 /* OOAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B6F1A846FDE004CB997 /* OOAnalytics.h */; };
-		0BC94BB41A846FDE004CB997 /* OOAuthorizableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B701A846FDE004CB997 /* OOAuthorizableItem.h */; };
-		0BC94BB51A846FDE004CB997 /* OOBufferView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B711A846FDE004CB997 /* OOBufferView.h */; };
-		0BC94BB61A846FDE004CB997 /* OOCallbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B721A846FDE004CB997 /* OOCallbacks.h */; };
-		0BC94BB71A846FDE004CB997 /* OOCaption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B731A846FDE004CB997 /* OOCaption.h */; };
-		0BC94BB81A846FDE004CB997 /* OOChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B741A846FDE004CB997 /* OOChannel.h */; };
-		0BC94BB91A846FDE004CB997 /* OOChannelSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B751A846FDE004CB997 /* OOChannelSet.h */; };
-		0BC94BBA1A846FDE004CB997 /* OOClientId.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B761A846FDE004CB997 /* OOClientId.h */; };
-		0BC94BBB1A846FDE004CB997 /* OOClosedCaptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B771A846FDE004CB997 /* OOClosedCaptions.h */; };
-		0BC94BBC1A846FDE004CB997 /* OOClosedCaptionsButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B781A846FDE004CB997 /* OOClosedCaptionsButton.h */; };
-		0BC94BBD1A846FDE004CB997 /* OOClosedCaptionsStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B791A846FDE004CB997 /* OOClosedCaptionsStyle.h */; };
-		0BC94BBE1A846FDE004CB997 /* OOContentItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B7A1A846FDE004CB997 /* OOContentItem.h */; };
-		0BC94BBF1A846FDE004CB997 /* OODebugMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B7B1A846FDE004CB997 /* OODebugMode.h */; };
-		0BC94BC01A846FDE004CB997 /* OODefaultPlayerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B7C1A846FDE004CB997 /* OODefaultPlayerInfo.h */; };
-		0BC94BC11A846FDE004CB997 /* OODynamicChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B7D1A846FDE004CB997 /* OODynamicChannel.h */; };
-		0BC94BC21A846FDE004CB997 /* OOEmbeddedSecureURLGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B7E1A846FDE004CB997 /* OOEmbeddedSecureURLGenerator.h */; };
-		0BC94BC31A846FDE004CB997 /* OOEmbeddedSignatureGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B7F1A846FDE004CB997 /* OOEmbeddedSignatureGenerator.h */; };
-		0BC94BC41A846FDE004CB997 /* OOEmbedTokenGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B801A846FDE004CB997 /* OOEmbedTokenGenerator.h */; };
-		0BC94BC51A846FDE004CB997 /* OOFCCTVRating.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B811A846FDE004CB997 /* OOFCCTVRating.h */; };
-		0BC94BC61A846FDE004CB997 /* OOFCCTVRatingConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B821A846FDE004CB997 /* OOFCCTVRatingConfiguration.h */; };
-		0BC94BC71A846FDE004CB997 /* OOFullscreenButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B831A846FDE004CB997 /* OOFullscreenButton.h */; };
-		0BC94BC81A846FDE004CB997 /* OOLifeCycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B841A846FDE004CB997 /* OOLifeCycle.h */; };
-		0BC94BC91A846FDE004CB997 /* OOManagedAdsPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B851A846FDE004CB997 /* OOManagedAdsPlugin.h */; };
-		0BC94BCA1A846FDE004CB997 /* OOManagedAdSpot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B861A846FDE004CB997 /* OOManagedAdSpot.h */; };
-		0BC94BCB1A846FDE004CB997 /* OOModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B871A846FDE004CB997 /* OOModule.h */; };
-		0BC94BCC1A846FDE004CB997 /* OOOoyalaAdSpot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B881A846FDE004CB997 /* OOOoyalaAdSpot.h */; };
-		0BC94BCD1A846FDE004CB997 /* OOOoyalaAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B891A846FDE004CB997 /* OOOoyalaAPIClient.h */; };
-		0BC94BCE1A846FDE004CB997 /* OOOoyalaError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B8A1A846FDE004CB997 /* OOOoyalaError.h */; };
-		0BC94BCF1A846FDE004CB997 /* OOOoyalaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B8B1A846FDE004CB997 /* OOOoyalaPlayer.h */; };
-		0BC94BD01A846FDE004CB997 /* OOOoyalaPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B8C1A846FDE004CB997 /* OOOoyalaPlayerViewController.h */; };
-		0BC94BD11A846FDE004CB997 /* OOOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B8D1A846FDE004CB997 /* OOOptions.h */; };
-		0BC94BD21A846FDE004CB997 /* OOOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B8E1A846FDE004CB997 /* OOOrderedDictionary.h */; };
-		0BC94BD31A846FDE004CB997 /* OOPaginatedParentItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B8F1A846FDE004CB997 /* OOPaginatedParentItem.h */; };
-		0BC94BD41A846FDE004CB997 /* OOPlayableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B901A846FDE004CB997 /* OOPlayableItem.h */; };
-		0BC94BD51A846FDE004CB997 /* OOPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B911A846FDE004CB997 /* OOPlayer.h */; };
-		0BC94BD61A846FDE004CB997 /* OOPlayerDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B921A846FDE004CB997 /* OOPlayerDomain.h */; };
-		0BC94BD71A846FDE004CB997 /* OOPlayerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B931A846FDE004CB997 /* OOPlayerInfo.h */; };
-		0BC94BD81A846FDE004CB997 /* OOPlayerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B941A846FDE004CB997 /* OOPlayerProtocol.h */; };
-		0BC94BD91A846FDE004CB997 /* OOPlayPauseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B951A846FDE004CB997 /* OOPlayPauseButton.h */; };
-		0BC94BDA1A846FDE004CB997 /* OOReturnState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B961A846FDE004CB997 /* OOReturnState.h */; };
-		0BC94BDB1A846FDE004CB997 /* OOSecureURLGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B971A846FDE004CB997 /* OOSecureURLGenerator.h */; };
-		0BC94BDC1A846FDE004CB997 /* OOSignatureGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B981A846FDE004CB997 /* OOSignatureGenerator.h */; };
-		0BC94BDD1A846FDE004CB997 /* OOStateNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B991A846FDE004CB997 /* OOStateNotifier.h */; };
-		0BC94BDE1A846FDE004CB997 /* OOStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B9A1A846FDE004CB997 /* OOStream.h */; };
-		0BC94BDF1A846FDE004CB997 /* OOStreamPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B9B1A846FDE004CB997 /* OOStreamPlayer.h */; };
-		0BC94BE01A846FDE004CB997 /* OOStreamPlayerMappingCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B9C1A846FDE004CB997 /* OOStreamPlayerMappingCreator.h */; };
-		0BC94BE11A846FDE004CB997 /* OOStreamPlayerMappingPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B9D1A846FDE004CB997 /* OOStreamPlayerMappingPredicate.h */; };
-		0BC94BE21A846FDE004CB997 /* OOTransparentToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B9E1A846FDE004CB997 /* OOTransparentToolbar.h */; };
-		0BC94BE31A846FDE004CB997 /* OOUIProgressSliderIOS7.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94B9F1A846FDE004CB997 /* OOUIProgressSliderIOS7.h */; };
-		0BC94BE41A846FDE004CB997 /* OOUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA01A846FDE004CB997 /* OOUserInfo.h */; };
-		0BC94BE51A846FDE004CB997 /* OOVASTAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA11A846FDE004CB997 /* OOVASTAd.h */; };
-		0BC94BE61A846FDE004CB997 /* OOVASTAdData.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA21A846FDE004CB997 /* OOVASTAdData.h */; };
-		0BC94BE71A846FDE004CB997 /* OOVASTAdSpot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA31A846FDE004CB997 /* OOVASTAdSpot.h */; };
-		0BC94BE81A846FDE004CB997 /* OOVASTLinearAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA41A846FDE004CB997 /* OOVASTLinearAd.h */; };
-		0BC94BE91A846FDE004CB997 /* OOVASTSequenceItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA51A846FDE004CB997 /* OOVASTSequenceItem.h */; };
-		0BC94BEA1A846FDE004CB997 /* OOVASTStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA61A846FDE004CB997 /* OOVASTStream.h */; };
-		0BC94BEB1A846FDE004CB997 /* OOVASTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA71A846FDE004CB997 /* OOVASTUtils.h */; };
-		0BC94BEC1A846FDE004CB997 /* OOVASTWrapperAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA81A846FDE004CB997 /* OOVASTWrapperAd.h */; };
-		0BC94BED1A846FDE004CB997 /* OOVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BA91A846FDE004CB997 /* OOVideo.h */; };
-		0BC94BEE1A846FDE004CB997 /* OOVideoGravityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BAA1A846FDE004CB997 /* OOVideoGravityButton.h */; };
-		0BC94BEF1A846FDE004CB997 /* libOoyalaSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC94BAB1A846FDE004CB997 /* libOoyalaSDK.a */; };
 		0BDC4C1A1AA5037D00576639 /* OptionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDC4C181AA5037D00576639 /* OptionsViewController.h */; };
 		0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
 		0BF0B0E61A671E4300026FDC /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0B0E31A671E4300026FDC /* PlayerSelectionOption.m */; };
@@ -122,80 +56,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B9458A81AC32CDB000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0BC948061A8177E2004CB997 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
 		0BC948071A8177E2004CB997 /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
 		0BC948081A8177E2004CB997 /* PlayerDoubleText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleText.xib; sourceTree = "<group>"; };
 		0BC948091A8177E2004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0BC9480A1A8177E2004CB997 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BC9480B1A8177E2004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		0BC94B681A846FDE004CB997 /* iOS7ScrubberSliderFraming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS7ScrubberSliderFraming.h; sourceTree = "<group>"; };
-		0BC94B691A846FDE004CB997 /* OOAdPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdPlugin.h; sourceTree = "<group>"; };
-		0BC94B6A1A846FDE004CB997 /* OOAdPluginManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdPluginManagerProtocol.h; sourceTree = "<group>"; };
-		0BC94B6B1A846FDE004CB997 /* OOAdsLearnMoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdsLearnMoreButton.h; sourceTree = "<group>"; };
-		0BC94B6C1A846FDE004CB997 /* OOAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdSpot.h; sourceTree = "<group>"; };
-		0BC94B6D1A846FDE004CB997 /* OOAdSpotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdSpotManager.h; sourceTree = "<group>"; };
-		0BC94B6E1A846FDE004CB997 /* OOAdSpotPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAdSpotPlugin.h; sourceTree = "<group>"; };
-		0BC94B6F1A846FDE004CB997 /* OOAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAnalytics.h; sourceTree = "<group>"; };
-		0BC94B701A846FDE004CB997 /* OOAuthorizableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOAuthorizableItem.h; sourceTree = "<group>"; };
-		0BC94B711A846FDE004CB997 /* OOBufferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOBufferView.h; sourceTree = "<group>"; };
-		0BC94B721A846FDE004CB997 /* OOCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCallbacks.h; sourceTree = "<group>"; };
-		0BC94B731A846FDE004CB997 /* OOCaption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCaption.h; sourceTree = "<group>"; };
-		0BC94B741A846FDE004CB997 /* OOChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOChannel.h; sourceTree = "<group>"; };
-		0BC94B751A846FDE004CB997 /* OOChannelSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOChannelSet.h; sourceTree = "<group>"; };
-		0BC94B761A846FDE004CB997 /* OOClientId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOClientId.h; sourceTree = "<group>"; };
-		0BC94B771A846FDE004CB997 /* OOClosedCaptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOClosedCaptions.h; sourceTree = "<group>"; };
-		0BC94B781A846FDE004CB997 /* OOClosedCaptionsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOClosedCaptionsButton.h; sourceTree = "<group>"; };
-		0BC94B791A846FDE004CB997 /* OOClosedCaptionsStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOClosedCaptionsStyle.h; sourceTree = "<group>"; };
-		0BC94B7A1A846FDE004CB997 /* OOContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOContentItem.h; sourceTree = "<group>"; };
-		0BC94B7B1A846FDE004CB997 /* OODebugMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OODebugMode.h; sourceTree = "<group>"; };
-		0BC94B7C1A846FDE004CB997 /* OODefaultPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OODefaultPlayerInfo.h; sourceTree = "<group>"; };
-		0BC94B7D1A846FDE004CB997 /* OODynamicChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OODynamicChannel.h; sourceTree = "<group>"; };
-		0BC94B7E1A846FDE004CB997 /* OOEmbeddedSecureURLGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOEmbeddedSecureURLGenerator.h; sourceTree = "<group>"; };
-		0BC94B7F1A846FDE004CB997 /* OOEmbeddedSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOEmbeddedSignatureGenerator.h; sourceTree = "<group>"; };
-		0BC94B801A846FDE004CB997 /* OOEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOEmbedTokenGenerator.h; sourceTree = "<group>"; };
-		0BC94B811A846FDE004CB997 /* OOFCCTVRating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFCCTVRating.h; sourceTree = "<group>"; };
-		0BC94B821A846FDE004CB997 /* OOFCCTVRatingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFCCTVRatingConfiguration.h; sourceTree = "<group>"; };
-		0BC94B831A846FDE004CB997 /* OOFullscreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFullscreenButton.h; sourceTree = "<group>"; };
-		0BC94B841A846FDE004CB997 /* OOLifeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOLifeCycle.h; sourceTree = "<group>"; };
-		0BC94B851A846FDE004CB997 /* OOManagedAdsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOManagedAdsPlugin.h; sourceTree = "<group>"; };
-		0BC94B861A846FDE004CB997 /* OOManagedAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOManagedAdSpot.h; sourceTree = "<group>"; };
-		0BC94B871A846FDE004CB997 /* OOModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOModule.h; sourceTree = "<group>"; };
-		0BC94B881A846FDE004CB997 /* OOOoyalaAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaAdSpot.h; sourceTree = "<group>"; };
-		0BC94B891A846FDE004CB997 /* OOOoyalaAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaAPIClient.h; sourceTree = "<group>"; };
-		0BC94B8A1A846FDE004CB997 /* OOOoyalaError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaError.h; sourceTree = "<group>"; };
-		0BC94B8B1A846FDE004CB997 /* OOOoyalaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaPlayer.h; sourceTree = "<group>"; };
-		0BC94B8C1A846FDE004CB997 /* OOOoyalaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOoyalaPlayerViewController.h; sourceTree = "<group>"; };
-		0BC94B8D1A846FDE004CB997 /* OOOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOptions.h; sourceTree = "<group>"; };
-		0BC94B8E1A846FDE004CB997 /* OOOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOOrderedDictionary.h; sourceTree = "<group>"; };
-		0BC94B8F1A846FDE004CB997 /* OOPaginatedParentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPaginatedParentItem.h; sourceTree = "<group>"; };
-		0BC94B901A846FDE004CB997 /* OOPlayableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayableItem.h; sourceTree = "<group>"; };
-		0BC94B911A846FDE004CB997 /* OOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayer.h; sourceTree = "<group>"; };
-		0BC94B921A846FDE004CB997 /* OOPlayerDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayerDomain.h; sourceTree = "<group>"; };
-		0BC94B931A846FDE004CB997 /* OOPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayerInfo.h; sourceTree = "<group>"; };
-		0BC94B941A846FDE004CB997 /* OOPlayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayerProtocol.h; sourceTree = "<group>"; };
-		0BC94B951A846FDE004CB997 /* OOPlayPauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOPlayPauseButton.h; sourceTree = "<group>"; };
-		0BC94B961A846FDE004CB997 /* OOReturnState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOReturnState.h; sourceTree = "<group>"; };
-		0BC94B971A846FDE004CB997 /* OOSecureURLGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSecureURLGenerator.h; sourceTree = "<group>"; };
-		0BC94B981A846FDE004CB997 /* OOSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSignatureGenerator.h; sourceTree = "<group>"; };
-		0BC94B991A846FDE004CB997 /* OOStateNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStateNotifier.h; sourceTree = "<group>"; };
-		0BC94B9A1A846FDE004CB997 /* OOStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStream.h; sourceTree = "<group>"; };
-		0BC94B9B1A846FDE004CB997 /* OOStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStreamPlayer.h; sourceTree = "<group>"; };
-		0BC94B9C1A846FDE004CB997 /* OOStreamPlayerMappingCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStreamPlayerMappingCreator.h; sourceTree = "<group>"; };
-		0BC94B9D1A846FDE004CB997 /* OOStreamPlayerMappingPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOStreamPlayerMappingPredicate.h; sourceTree = "<group>"; };
-		0BC94B9E1A846FDE004CB997 /* OOTransparentToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOTransparentToolbar.h; sourceTree = "<group>"; };
-		0BC94B9F1A846FDE004CB997 /* OOUIProgressSliderIOS7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOUIProgressSliderIOS7.h; sourceTree = "<group>"; };
-		0BC94BA01A846FDE004CB997 /* OOUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOUserInfo.h; sourceTree = "<group>"; };
-		0BC94BA11A846FDE004CB997 /* OOVASTAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTAd.h; sourceTree = "<group>"; };
-		0BC94BA21A846FDE004CB997 /* OOVASTAdData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTAdData.h; sourceTree = "<group>"; };
-		0BC94BA31A846FDE004CB997 /* OOVASTAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTAdSpot.h; sourceTree = "<group>"; };
-		0BC94BA41A846FDE004CB997 /* OOVASTLinearAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTLinearAd.h; sourceTree = "<group>"; };
-		0BC94BA51A846FDE004CB997 /* OOVASTSequenceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTSequenceItem.h; sourceTree = "<group>"; };
-		0BC94BA61A846FDE004CB997 /* OOVASTStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTStream.h; sourceTree = "<group>"; };
-		0BC94BA71A846FDE004CB997 /* OOVASTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTUtils.h; sourceTree = "<group>"; };
-		0BC94BA81A846FDE004CB997 /* OOVASTWrapperAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVASTWrapperAd.h; sourceTree = "<group>"; };
-		0BC94BA91A846FDE004CB997 /* OOVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVideo.h; sourceTree = "<group>"; };
-		0BC94BAA1A846FDE004CB997 /* OOVideoGravityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOVideoGravityButton.h; sourceTree = "<group>"; };
-		0BC94BAB1A846FDE004CB997 /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOoyalaSDK.a; sourceTree = "<group>"; };
 		0BDC4C181AA5037D00576639 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		0BDC4C191AA5037D00576639 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		0BF0B0E21A671E4300026FDC /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
@@ -229,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9459211AC33AD2000DD545 /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,17 +104,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9458A91AC32CDB000DD545 /* OoyalaSDK.framework in Frameworks */,
+				9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */,
+				9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */,
 				9772BFFE1A48FE9700B255C0 /* libc++.dylib in Frameworks */,
 				9772BFFC1A48FE8A00B255C0 /* libxml2.dylib in Frameworks */,
-				9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */,
-				0BC94BEF1A846FDE004CB997 /* libOoyalaSDK.a in Frameworks */,
-				9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B9458A71AC32CDB000DD545 /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				0B9458A81AC32CDB000DD545 /* OoyalaSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
 		0BC948051A8177E2004CB997 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,89 +134,6 @@
 				0BC9480B1A8177E2004CB997 /* TableCell.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0BC94B661A846FDE004CB997 /* VendorLibraries */ = {
-			isa = PBXGroup;
-			children = (
-				0BC94B671A846FDE004CB997 /* Headers */,
-				0BC94BAB1A846FDE004CB997 /* libOoyalaSDK.a */,
-			);
-			path = VendorLibraries;
-			sourceTree = "<group>";
-		};
-		0BC94B671A846FDE004CB997 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				0BC94B681A846FDE004CB997 /* iOS7ScrubberSliderFraming.h */,
-				0BC94B691A846FDE004CB997 /* OOAdPlugin.h */,
-				0BC94B6A1A846FDE004CB997 /* OOAdPluginManagerProtocol.h */,
-				0BC94B6B1A846FDE004CB997 /* OOAdsLearnMoreButton.h */,
-				0BC94B6C1A846FDE004CB997 /* OOAdSpot.h */,
-				0BC94B6D1A846FDE004CB997 /* OOAdSpotManager.h */,
-				0BC94B6E1A846FDE004CB997 /* OOAdSpotPlugin.h */,
-				0BC94B6F1A846FDE004CB997 /* OOAnalytics.h */,
-				0BC94B701A846FDE004CB997 /* OOAuthorizableItem.h */,
-				0BC94B711A846FDE004CB997 /* OOBufferView.h */,
-				0BC94B721A846FDE004CB997 /* OOCallbacks.h */,
-				0BC94B731A846FDE004CB997 /* OOCaption.h */,
-				0BC94B741A846FDE004CB997 /* OOChannel.h */,
-				0BC94B751A846FDE004CB997 /* OOChannelSet.h */,
-				0BC94B761A846FDE004CB997 /* OOClientId.h */,
-				0BC94B771A846FDE004CB997 /* OOClosedCaptions.h */,
-				0BC94B781A846FDE004CB997 /* OOClosedCaptionsButton.h */,
-				0BC94B791A846FDE004CB997 /* OOClosedCaptionsStyle.h */,
-				0BC94B7A1A846FDE004CB997 /* OOContentItem.h */,
-				0BC94B7B1A846FDE004CB997 /* OODebugMode.h */,
-				0BC94B7C1A846FDE004CB997 /* OODefaultPlayerInfo.h */,
-				0BC94B7D1A846FDE004CB997 /* OODynamicChannel.h */,
-				0BC94B7E1A846FDE004CB997 /* OOEmbeddedSecureURLGenerator.h */,
-				0BC94B7F1A846FDE004CB997 /* OOEmbeddedSignatureGenerator.h */,
-				0BC94B801A846FDE004CB997 /* OOEmbedTokenGenerator.h */,
-				0BC94B811A846FDE004CB997 /* OOFCCTVRating.h */,
-				0BC94B821A846FDE004CB997 /* OOFCCTVRatingConfiguration.h */,
-				0BC94B831A846FDE004CB997 /* OOFullscreenButton.h */,
-				0BC94B841A846FDE004CB997 /* OOLifeCycle.h */,
-				0BC94B851A846FDE004CB997 /* OOManagedAdsPlugin.h */,
-				0BC94B861A846FDE004CB997 /* OOManagedAdSpot.h */,
-				0BC94B871A846FDE004CB997 /* OOModule.h */,
-				0BC94B881A846FDE004CB997 /* OOOoyalaAdSpot.h */,
-				0BC94B891A846FDE004CB997 /* OOOoyalaAPIClient.h */,
-				0BC94B8A1A846FDE004CB997 /* OOOoyalaError.h */,
-				0BC94B8B1A846FDE004CB997 /* OOOoyalaPlayer.h */,
-				0BC94B8C1A846FDE004CB997 /* OOOoyalaPlayerViewController.h */,
-				0BC94B8D1A846FDE004CB997 /* OOOptions.h */,
-				0BC94B8E1A846FDE004CB997 /* OOOrderedDictionary.h */,
-				0BC94B8F1A846FDE004CB997 /* OOPaginatedParentItem.h */,
-				0BC94B901A846FDE004CB997 /* OOPlayableItem.h */,
-				0BC94B911A846FDE004CB997 /* OOPlayer.h */,
-				0BC94B921A846FDE004CB997 /* OOPlayerDomain.h */,
-				0BC94B931A846FDE004CB997 /* OOPlayerInfo.h */,
-				0BC94B941A846FDE004CB997 /* OOPlayerProtocol.h */,
-				0BC94B951A846FDE004CB997 /* OOPlayPauseButton.h */,
-				0BC94B961A846FDE004CB997 /* OOReturnState.h */,
-				0BC94B971A846FDE004CB997 /* OOSecureURLGenerator.h */,
-				0BC94B981A846FDE004CB997 /* OOSignatureGenerator.h */,
-				0BC94B991A846FDE004CB997 /* OOStateNotifier.h */,
-				0BC94B9A1A846FDE004CB997 /* OOStream.h */,
-				0BC94B9B1A846FDE004CB997 /* OOStreamPlayer.h */,
-				0BC94B9C1A846FDE004CB997 /* OOStreamPlayerMappingCreator.h */,
-				0BC94B9D1A846FDE004CB997 /* OOStreamPlayerMappingPredicate.h */,
-				0BC94B9E1A846FDE004CB997 /* OOTransparentToolbar.h */,
-				0BC94B9F1A846FDE004CB997 /* OOUIProgressSliderIOS7.h */,
-				0BC94BA01A846FDE004CB997 /* OOUserInfo.h */,
-				0BC94BA11A846FDE004CB997 /* OOVASTAd.h */,
-				0BC94BA21A846FDE004CB997 /* OOVASTAdData.h */,
-				0BC94BA31A846FDE004CB997 /* OOVASTAdSpot.h */,
-				0BC94BA41A846FDE004CB997 /* OOVASTLinearAd.h */,
-				0BC94BA51A846FDE004CB997 /* OOVASTSequenceItem.h */,
-				0BC94BA61A846FDE004CB997 /* OOVASTStream.h */,
-				0BC94BA71A846FDE004CB997 /* OOVASTUtils.h */,
-				0BC94BA81A846FDE004CB997 /* OOVASTWrapperAd.h */,
-				0BC94BA91A846FDE004CB997 /* OOVideo.h */,
-				0BC94BAA1A846FDE004CB997 /* OOVideoGravityButton.h */,
-			);
-			path = Headers;
 			sourceTree = "<group>";
 		};
 		0BF0B0E11A671E4300026FDC /* Utils */ = {
@@ -391,7 +184,7 @@
 				0BF4F9E21A6850CE0050A602 /* OptionsSampleAppSource */,
 				0BF4FA021A685F2F0050A602 /* Frameworks */,
 				9772BF811A43B61500B255C0 /* Products */,
-				0BC94B661A846FDE004CB997 /* VendorLibraries */,
+				0B9458A71AC32CDB000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -456,74 +249,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC94BAE1A846FDE004CB997 /* OOAdPluginManagerProtocol.h in Headers */,
-				0BC94BDF1A846FDE004CB997 /* OOStreamPlayer.h in Headers */,
-				0BC94BBB1A846FDE004CB997 /* OOClosedCaptions.h in Headers */,
-				0BC94BE51A846FDE004CB997 /* OOVASTAd.h in Headers */,
-				0BC94BC11A846FDE004CB997 /* OODynamicChannel.h in Headers */,
-				0BC94BE31A846FDE004CB997 /* OOUIProgressSliderIOS7.h in Headers */,
-				0BC94BC81A846FDE004CB997 /* OOLifeCycle.h in Headers */,
-				0BC94BD41A846FDE004CB997 /* OOPlayableItem.h in Headers */,
-				0BC94BCB1A846FDE004CB997 /* OOModule.h in Headers */,
-				0BC94BC71A846FDE004CB997 /* OOFullscreenButton.h in Headers */,
-				0BC94BD51A846FDE004CB997 /* OOPlayer.h in Headers */,
-				0BC94BDD1A846FDE004CB997 /* OOStateNotifier.h in Headers */,
-				0BC94BCA1A846FDE004CB997 /* OOManagedAdSpot.h in Headers */,
-				0BC94BB31A846FDE004CB997 /* OOAnalytics.h in Headers */,
-				0BC94BC91A846FDE004CB997 /* OOManagedAdsPlugin.h in Headers */,
-				0BC94BE01A846FDE004CB997 /* OOStreamPlayerMappingCreator.h in Headers */,
-				0BC94BEB1A846FDE004CB997 /* OOVASTUtils.h in Headers */,
-				0BC94BEE1A846FDE004CB997 /* OOVideoGravityButton.h in Headers */,
-				0BC94BDE1A846FDE004CB997 /* OOStream.h in Headers */,
-				0BC94BD71A846FDE004CB997 /* OOPlayerInfo.h in Headers */,
-				0BC94BC21A846FDE004CB997 /* OOEmbeddedSecureURLGenerator.h in Headers */,
-				0BC94BE81A846FDE004CB997 /* OOVASTLinearAd.h in Headers */,
-				0BC94BB81A846FDE004CB997 /* OOChannel.h in Headers */,
-				0BC94BC01A846FDE004CB997 /* OODefaultPlayerInfo.h in Headers */,
 				0BDC4C1A1AA5037D00576639 /* OptionsViewController.h in Headers */,
-				0BC94BB41A846FDE004CB997 /* OOAuthorizableItem.h in Headers */,
-				0BC94BCE1A846FDE004CB997 /* OOOoyalaError.h in Headers */,
-				0BC94BB61A846FDE004CB997 /* OOCallbacks.h in Headers */,
-				0BC94BBC1A846FDE004CB997 /* OOClosedCaptionsButton.h in Headers */,
-				0BC94BE91A846FDE004CB997 /* OOVASTSequenceItem.h in Headers */,
-				0BC94BC51A846FDE004CB997 /* OOFCCTVRating.h in Headers */,
-				0BC94BD81A846FDE004CB997 /* OOPlayerProtocol.h in Headers */,
-				0BC94BEC1A846FDE004CB997 /* OOVASTWrapperAd.h in Headers */,
-				0BC94BBE1A846FDE004CB997 /* OOContentItem.h in Headers */,
-				0BC94BCC1A846FDE004CB997 /* OOOoyalaAdSpot.h in Headers */,
-				0BC94BD01A846FDE004CB997 /* OOOoyalaPlayerViewController.h in Headers */,
-				0BC94BE11A846FDE004CB997 /* OOStreamPlayerMappingPredicate.h in Headers */,
-				0BC94BB01A846FDE004CB997 /* OOAdSpot.h in Headers */,
-				0BC94BD61A846FDE004CB997 /* OOPlayerDomain.h in Headers */,
-				0BC94BE41A846FDE004CB997 /* OOUserInfo.h in Headers */,
-				0BC94BBF1A846FDE004CB997 /* OODebugMode.h in Headers */,
-				0BC94BDB1A846FDE004CB997 /* OOSecureURLGenerator.h in Headers */,
-				0BC94BC31A846FDE004CB997 /* OOEmbeddedSignatureGenerator.h in Headers */,
-				0BC94BDC1A846FDE004CB997 /* OOSignatureGenerator.h in Headers */,
-				0BC94BAD1A846FDE004CB997 /* OOAdPlugin.h in Headers */,
-				0BC94BD21A846FDE004CB997 /* OOOrderedDictionary.h in Headers */,
-				0BC94BC61A846FDE004CB997 /* OOFCCTVRatingConfiguration.h in Headers */,
-				0BC94BBD1A846FDE004CB997 /* OOClosedCaptionsStyle.h in Headers */,
-				0BC94BB51A846FDE004CB997 /* OOBufferView.h in Headers */,
-				0BC94BCF1A846FDE004CB997 /* OOOoyalaPlayer.h in Headers */,
-				0BC94BED1A846FDE004CB997 /* OOVideo.h in Headers */,
-				0BC94BB21A846FDE004CB997 /* OOAdSpotPlugin.h in Headers */,
-				0BC94BB91A846FDE004CB997 /* OOChannelSet.h in Headers */,
-				0BC94BBA1A846FDE004CB997 /* OOClientId.h in Headers */,
-				0BC94BAC1A846FDE004CB997 /* iOS7ScrubberSliderFraming.h in Headers */,
-				0BC94BD31A846FDE004CB997 /* OOPaginatedParentItem.h in Headers */,
-				0BC94BD91A846FDE004CB997 /* OOPlayPauseButton.h in Headers */,
-				0BC94BB71A846FDE004CB997 /* OOCaption.h in Headers */,
-				0BC94BE71A846FDE004CB997 /* OOVASTAdSpot.h in Headers */,
-				0BC94BDA1A846FDE004CB997 /* OOReturnState.h in Headers */,
-				0BC94BC41A846FDE004CB997 /* OOEmbedTokenGenerator.h in Headers */,
-				0BC94BAF1A846FDE004CB997 /* OOAdsLearnMoreButton.h in Headers */,
-				0BC94BE61A846FDE004CB997 /* OOVASTAdData.h in Headers */,
-				0BC94BD11A846FDE004CB997 /* OOOptions.h in Headers */,
-				0BC94BB11A846FDE004CB997 /* OOAdSpotManager.h in Headers */,
-				0BC94BCD1A846FDE004CB997 /* OOOoyalaAPIClient.h in Headers */,
-				0BC94BEA1A846FDE004CB997 /* OOVASTStream.h in Headers */,
-				0BC94BE21A846FDE004CB997 /* OOTransparentToolbar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +406,10 @@
 		0BF4F9F31A6850CF0050A602 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -693,6 +423,10 @@
 		0BF4F9F41A6850CF0050A602 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -783,6 +517,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = OptionsSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -798,6 +536,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = OptionsSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

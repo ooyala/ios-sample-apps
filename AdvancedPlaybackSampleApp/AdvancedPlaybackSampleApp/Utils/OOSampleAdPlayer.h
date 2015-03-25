@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "OOPlayerProtocol.h"
-#import "OOLifeCycle.h"
+#import <OoyalaSDK/OOPlayerProtocol.h>
+#import <OoyalaSDK/OOLifeCycle.h>
+#import <OoyalaSDK/OOStateNotifier.h>
 #import "OOSampleAdSpot.h"
-#import "OOStateNotifier.h"
 
 @interface OOSampleAdPlayer : UILabel <OOLifeCycle, OOPlayerProtocol>
 

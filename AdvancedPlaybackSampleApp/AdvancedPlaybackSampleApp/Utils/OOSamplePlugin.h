@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OOAdPlugin.h"
-#import "OOOoyalaPlayer.h"
+#import <OoyalaSDK/OOAdPlugin.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
 
 @interface OOSamplePlugin : NSObject <OOAdPlugin>
 

@@ -8,10 +8,10 @@
 
 
 #import "IMAPlayerViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOOoyalaPlayer.h"
-#import "OOPlayerDomain.h"
-#import "OOIMAManager.h"
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaIMASDK/OOIMAManager.h>
 
 @interface IMAPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -44,8 +44,10 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
   // Create Ooyala ViewController
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)

@@ -6,13 +6,13 @@
  */
 
 #import "ChannelContentTreePlayerViewController.h"
-#import "OOOoyalaAPIClient.h"
-#import "OOPlayerDomain.h"
-#import "OODebugMode.h"
-#import "OOOoyalaError.h"
-#import "OOChannel.h"
-#import "OOVideo.h"
-#import "OOOrderedDictionary.h"
+#import <OoyalaSDK/OOOoyalaAPIClient.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OOOoyalaError.h>
+#import <OoyalaSDK/OOChannel.h>
+#import <OoyalaSDK/OOVideo.h>
+#import <OoyalaSDK/OOOrderedDictionary.h>
 #import "ChannelContentTreeTableViewCell.h"
 #import "ChannelContentTreeDetailViewController.h"
 

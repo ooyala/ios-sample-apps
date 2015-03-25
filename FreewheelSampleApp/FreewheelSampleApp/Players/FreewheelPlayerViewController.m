@@ -8,10 +8,10 @@
 
 
 #import "FreewheelPlayerViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOOoyalaPlayer.h"
-#import "OOPlayerDomain.h"
-#import "OOFreewheelManager.h"
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaFreewheelSDK/OOFreewheelManager.h>
 
 @interface FreewheelPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -44,8 +44,10 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
   // Create Ooyala ViewController
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)

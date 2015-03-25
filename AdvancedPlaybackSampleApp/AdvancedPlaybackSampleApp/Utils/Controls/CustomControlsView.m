@@ -8,7 +8,7 @@
 #import "CustomControlsView.h"
 #import "OOImagesIOS7.h"
 #import "OOUIUtils.h"
-#import "iOS7ScrubberSliderFraming.h"
+#import <OoyalaSDK/iOS7ScrubberSliderFraming.h>
 
 @interface CustomControlsView() {
 }

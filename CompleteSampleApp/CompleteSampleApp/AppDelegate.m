@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 
 #import "CompleteSampleAppListViewController.h"
-#import "OOOoyalaPlayerViewController.h"
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 @interface AppDelegate () <UINavigationControllerDelegate>
 
 @end

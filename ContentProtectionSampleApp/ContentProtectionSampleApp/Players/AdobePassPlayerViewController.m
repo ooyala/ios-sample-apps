@@ -8,8 +8,8 @@
 
 #import "AdobePassPlayerViewController.h"
 #import "AdobePassViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOPlayerDomain.h"
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
 
 @interface AdobePassPlayerViewController () <AdobePassViewControllerDelegate>
 @property NSString *embedCode;
@@ -60,8 +60,10 @@
                                                              delegate:self];
   [self addChildViewController:self.passController];
 
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self.passController];
 
+  // Create Ooyala ViewController
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self.passController];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
