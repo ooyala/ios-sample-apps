@@ -19,6 +19,8 @@ NSString *const TAG = @"OOOoyalaPlayerViewController";
 NSString *const OOOoyalaPlayerViewControllerFullscreenEnter = @"fullscreenEnter";
 NSString *const OOOoyalaPlayerViewControllerFullscreenExit = @"fullscreenExit";
 NSString *const OOOoyalaPlayerViewControllerDoneClicked = @"doneClicked";
+NSString *const OOOoyalaPlayerViewControllerInlineViewVisible = @"fullscreenViewVisible";
+NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible = @"inlineViewVisible";
 
 @interface OOOoyalaPlayerViewController() {
   BOOL initialLoad;
@@ -55,65 +57,6 @@ static NSDictionary *currentLocale = nil;
 @synthesize player, initialControlType, fullScreenViewController, inlineViewController;
 @synthesize defaultLocales, currentLocale;
 @synthesize selectorViewController;
-
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode
-                                                             domain:domain]];
-}
-
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-            options:(OOOptions *)options {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode domain:domain options:options]];
-}
-
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-        controlType:(OOOoyalaPlayerControlType)_controlType {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode
-                                                             domain:domain]
-                  controlType:_controlType];
-}
-
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode
-                                                             domain:domain
-                                                embedTokenGenerator:embedTokenGenerator]];
-}
-
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
-        controlType:(OOOoyalaPlayerControlType)_controlType {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode
-                                                             domain:domain
-                                                embedTokenGenerator:embedTokenGenerator]
-                  controlType:_controlType];
-}
-
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
-        controlType:(OOOoyalaPlayerControlType)_controlType
-            options:(OOOptions*)options {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithPcode:pcode
-                                                             domain:domain
-                                                embedTokenGenerator:embedTokenGenerator
-                                                            options:options]
-                  controlType:_controlType];
-}
-
-- (id)initWithOoyalaAPIClient:(OOOoyalaAPIClient *)client {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithOoyalaAPIClient:client]];
-}
-
-- (id)initWithOoyalaAPIClient:(OOOoyalaAPIClient *)client
-                  controlType:(OOOoyalaPlayerControlType)_controlType {
-  return [self initWithPlayer:[[OOOoyalaPlayer alloc] initWithOoyalaAPIClient:client] controlType:_controlType];
-}
 
 - (id)initWithPlayer:(OOOoyalaPlayer *)_player {
   return [self initWithPlayer:_player controlType:OOOoyalaPlayerControlTypeInline];

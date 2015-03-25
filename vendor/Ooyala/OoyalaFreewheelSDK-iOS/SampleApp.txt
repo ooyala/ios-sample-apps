@@ -1,0 +1,2 @@
+The FreewheelSampleApp is no longer provided within this package.
+You can download the FreewheelSampleApp from our iOS Sample App Github Repository: https://github.com/ooyala/ios-sample-apps

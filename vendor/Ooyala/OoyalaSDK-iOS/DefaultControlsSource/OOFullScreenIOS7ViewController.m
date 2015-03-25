@@ -187,6 +187,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [self updateClosedCaptionsPosition];
+  [[NSNotificationCenter defaultCenter] postNotificationName:OOOoyalaPlayerViewControllerFullscreenViewVisible object:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -215,13 +216,8 @@
     self.controls.showsAirPlayButton = self.player.allowsExternalPlayback;
   }
 
-  // handle gravity
-  if(self.player.videoGravity == OOOoyalaPlayerVideoGravityResizeAspect) {
-    [self.controls setGravityFillButtonShowing:YES];
-  } else {
-    [self.controls setGravityFillButtonShowing:NO];
-  }
-  
+  [self updateVideoGravityButton];
+
   // Handle LIVE streams
   self.controls.scrubberSlider.mode = [super sliderMode];
   
@@ -270,6 +266,16 @@
 	}
 
   self.controls.scrubberSlider.cuePointsAtSeconds = [self.player getCuePointsAtSecondsForCurrentPlayer];
+}
+
+-(void) updateVideoGravityButton {
+  if( self.player.supportsVideoGravityButton ) {
+    self.controls.videoGravityButtonShowing = YES;
+    self.controls.isGravityFilled = self.player.videoGravity != OOOoyalaPlayerVideoGravityResizeAspect;
+  }
+  else {
+    self.controls.videoGravityButtonShowing = NO;
+  }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
