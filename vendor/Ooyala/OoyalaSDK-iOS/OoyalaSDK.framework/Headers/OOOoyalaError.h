@@ -27,7 +27,10 @@ typedef enum {
   OOOoyalaErrorCodeDeviceLimitReached, /**<  During DRM Rights Acquisition, the server reported that the device limit has been reached*/
   OOOoyalaErrorCodeDeviceBindingFailed, /**<  During DRM Rights Acquisition, the server reported that device binding failed */
   OOOoyalaErrorCodeDeviceIdTooLong, /**<  During DRM Rights Acquisition, the server reported the device id was too long */
-  OOOoyalaErrorCodeDeviceGenericDrmError, /** < There was some unknown error during the DRM workflow */
+  OOOoyalaErrorCodeDeviceGenericDrmError, /**< There was some unknown error during the DRM workflow */
+  OOOoyalaErrorCodeDrmDownloadFailedError, /**< Failed to download a required file during the DRM workflow */
+  OOOoyalaErrorCodeDrmPersonalizationFailedError, /**< Failed to complete device personalization during the DRM workflow */
+  OOOoyalaErrorCodeDrmAcquireRightsFailedError, /**< Failed to get rights for asset during the DRM workflow */
 } OOOoyalaErrorCode;
 
 

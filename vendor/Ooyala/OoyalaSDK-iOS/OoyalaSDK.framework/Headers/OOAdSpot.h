@@ -15,6 +15,9 @@
 /** time to play the ad in second */
 @property NSNumber *time;
 
+/** the priority to distinguish ad spots of same time, adspot having a smaller priority will be played first */
+@property int priority;
+
 /**
  * Initialize an ad spot with time
  * @param[in] t the ad spot time
