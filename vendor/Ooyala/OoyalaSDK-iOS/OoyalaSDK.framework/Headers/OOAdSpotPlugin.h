@@ -21,7 +21,7 @@
 
 @interface OOAdSpotPlugin : NSObject<OOAdPlugin>
 
-@property (readonly) Float64 lastAdModeTime;
+@property (nonatomic) Float64 lastAdModeTime;
 @property (readonly) OOAdSpotManager *adSpotManager;
 @property (nonatomic, weak) id<OOAdSpotPluginDelegate> delegate;
 
