@@ -104,5 +104,17 @@ class ViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
+  
+  func play() {
+    ooyalaPlayerViewController.player.play()
+  }
+  
+  func pause() {
+    ooyalaPlayerViewController.player.pause()
+  }
+  
+  func getPlayhead() -> Float64 {
+    return ooyalaPlayerViewController.player.playheadTime()
+  }
 
 }
