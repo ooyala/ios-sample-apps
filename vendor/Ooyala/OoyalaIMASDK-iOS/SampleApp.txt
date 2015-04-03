@@ -1,0 +1,2 @@
+The IMASampleApp is no longer provided within this package.
+You can download the IMASampleApp from our iOS Sample App Github Repository: https://github.com/ooyala/ios-sample-apps

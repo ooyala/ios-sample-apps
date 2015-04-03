@@ -7,12 +7,12 @@
  */
 #import <QuartzCore/QuartzCore.h>
 #import "OOFullScreenIOS7ControlsView.h"
-#import "OOTransparentToolbar.h"
-#import "OOUIProgressSliderIOS7.h"
+#import <OoyalaSDK/OOTransparentToolbar.h>
+#import <OoyalaSDK/OOUIProgressSliderIOS7.h>
 #import "OOImagesIOS7.h"
 #import "OOUIUtils.h"
-#import "iOS7ScrubberSliderFraming.h"
-#import "OOOoyalaPlayerViewController.h"
+#import <OoyalaSDK/iOS7ScrubberSliderFraming.h>
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 
 @interface OOFullScreenIOS7ControlsView() {
 }

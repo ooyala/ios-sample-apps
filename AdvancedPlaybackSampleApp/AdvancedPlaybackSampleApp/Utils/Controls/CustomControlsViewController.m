@@ -6,14 +6,14 @@
 //
 
 #import "CustomControlsViewController.h"
-#import "OOOoyalaPlayer.h"
-#import "OOOoyalaPlayerViewController.h"
 #import "CustomControlsView.h"
-#import "OOUIProgressSliderIOS7.h"
-#import "OOVideo.h"
 #import "OOUIUtils.h"
-#import "OODebugMode.h"
-#import "OOOptions.h"
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOUIProgressSliderIOS7.h>
+#import <OoyalaSDK/OOVideo.h>
+#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OOOptions.h>
 
 @interface CustomControlsViewController() {
   BOOL wasPlaying;

@@ -33,7 +33,8 @@
 
 @property (nonatomic) BOOL playButtonShowing;
 @property (nonatomic) BOOL showsAirPlayButton;
-@property (nonatomic) BOOL gravityFillButtonShowing;
+@property (nonatomic) BOOL isGravityFilled;
+@property (nonatomic) BOOL videoGravityButtonShowing;
 @property (nonatomic) BOOL closedCaptionsButtonShowing;
 
 - (void)hide;

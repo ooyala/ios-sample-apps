@@ -9,10 +9,10 @@
 
 #import "DeviceManagementPlayerViewController.h"
 #import "AdobePassViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOPlayerDomain.h"
-#import "OOooyalaError.h"
-#import "OOEmbeddedSecureURLGenerator.h"
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OOooyalaError.h>
+#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 
 @interface DeviceManagementPlayerViewController () <OOEmbedTokenGenerator>
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -60,8 +60,10 @@
 }
 
 - (void)viewDidLoad {
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
 
+  // Create Ooyala ViewController
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationReceived:)

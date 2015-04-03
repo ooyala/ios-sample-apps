@@ -282,17 +282,20 @@
  * Update Top bar when someting is added or removed
  */
 - (void) updateNavigationBar {
-  NSArray *items;
-
-  if (_closedCaptionsButtonShowing) {
-    items = [[NSArray alloc] initWithObjects: _flexibleSpace, _doneButton, _slider, _closedCaptionsButton, _flexibleSpace,  _videoGravityButton, _flexibleSpace, nil];
-  } else {
-    items = [[NSArray alloc] initWithObjects: _flexibleSpace, _doneButton, _slider, _videoGravityButton, _flexibleSpace, nil];
+  NSMutableArray *items = [NSMutableArray new];
+  [items addObject:_flexibleSpace];
+  [items addObject:_doneButton];
+  [items addObject:_slider];
+  if(_closedCaptionsButtonShowing) {
+    [items addObject:_closedCaptionsButton];
+    [items addObject:_flexibleSpace];
   }
-
+  if(_videoGravityButtonShowing) {
+    [items addObject:_videoGravityButton];
+  }
+  [items addObject:_flexibleSpace];
   [_navigationBar setItems:items animated:NO];
   _slider.customView.frame = [self calculateScrubberSliderFrame];
-
   [self setNeedsLayout];
 }
 
@@ -321,8 +324,15 @@
   [self updateNavigationBar];
   
 }
-- (void)setGravityFillButtonShowing:(BOOL)showing {
-  [_videoGravityButton setIsGravityFillShowing:showing];
+- (void)setIsGravityFilled:(BOOL)isFilled {
+  [_videoGravityButton setIsGravityFillShowing:!isFilled];
+}
+
+-(void)setVideoGravityButtonShowing:(BOOL)showing {
+  if(_videoGravityButtonShowing != showing) {
+    _videoGravityButtonShowing = showing;
+    [self updateNavigationBar];
+  }
 }
 
 - (void)hide {

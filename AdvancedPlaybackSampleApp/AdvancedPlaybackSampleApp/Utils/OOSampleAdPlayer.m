@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 
-#import "OOSampleAdPlayer.h"
+#import"OOSampleAdPlayer.h"
 
 #define DURATION 5
 #define REFRESH_RATE 0.25

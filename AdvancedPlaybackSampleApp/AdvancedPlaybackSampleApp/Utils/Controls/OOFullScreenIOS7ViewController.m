@@ -7,11 +7,11 @@
 
 #import "OOFullScreenIOS7ViewController.h"
 #import "OOFullScreenIOS7ControlsView.h"
-#import "OOUIProgressSliderIOS7.h"
-#import "OOVideo.h"
 #import "OOUIUtils.h"
-#import "OODebugMode.h"
-#import "OOOptions.h"
+#import <OoyalaSDK/OOUIProgressSliderIOS7.h>
+#import <OoyalaSDK/OOVideo.h>
+#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OOOptions.h>
 
 @interface OOFullScreenIOS7ViewController ()
 

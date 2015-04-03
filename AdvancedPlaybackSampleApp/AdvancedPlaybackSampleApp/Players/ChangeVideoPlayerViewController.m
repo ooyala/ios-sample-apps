@@ -8,9 +8,10 @@
 
 
 #import "ChangeVideoPlayerViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOOoyalaPlayer.h"
-#import "OOPlayerDomain.h"
+
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
 
 @interface ChangeVideoPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -58,9 +59,10 @@
   
   [self.button1 setTitle:@"Play Video 1" forState:UIControlStateNormal];
   [self.button2 setTitle:@"Play Video 2" forState:UIControlStateNormal];
-  
+
   // Create Ooyala ViewController
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)

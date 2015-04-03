@@ -7,9 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import "OOClosedCaptionsButton.h"
-#import "OOPlayPauseButton.h"
-#import "OOVideoGravityButton.h"
+#import <OoyalaSDK/OOClosedCaptionsButton.h>
+#import <OoyalaSDK/OOPlayPauseButton.h>
+#import <OoyalaSDK/OOVideoGravityButton.h>
 
 @class OOUIProgressSliderIOS7;
 @class OOVolumeView;

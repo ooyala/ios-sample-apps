@@ -257,6 +257,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [self updateClosedCaptionsPosition];
+  [[NSNotificationCenter defaultCenter] postNotificationName:OOOoyalaPlayerViewControllerInlineViewVisible object:self];
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {

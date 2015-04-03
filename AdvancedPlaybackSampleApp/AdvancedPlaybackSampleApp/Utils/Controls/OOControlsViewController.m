@@ -6,11 +6,11 @@
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import "OOControlsViewController.h"
-#import "OOOoyalaPlayer.h"
-#import "OOVideo.h"
+#import <OOControlsViewController.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOVideo.h>
+#import <OoyalaSDK/OOOptions.h>
 #import "OOUIUtils.h"
-#import "OOOptions.h"
 
 @interface OOUnselectableActivityIndicatorView : UIActivityIndicatorView
 @end

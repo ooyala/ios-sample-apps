@@ -6,9 +6,9 @@
  */
 
 #import "ChannelContentTreeDetailViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOPlayerDomain.h"
-#import "OODebugMode.h"
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OODebugMode.h>
 
 @interface ChannelContentTreeDetailViewController () {
   NSString *embedCode;
@@ -43,7 +43,8 @@
     // Do any additional setup after loading the view.
 
   // Create Ooyala ViewController
-  ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:pcode domain:[[OOPlayerDomain alloc] initWithString:playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:pcode domain:[[OOPlayerDomain alloc] initWithString:playerDomain]];
+  ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)

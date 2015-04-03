@@ -8,13 +8,14 @@
 
 
 #import "InsertAdPlayerViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOManagedAdSpot.h"
-#import "OOManagedAdsPlugin.h"
-#import "OOVASTAdSpot.h"
-#import "OOOoyalaAdSpot.h"
-#import "OOOoyalaPlayer.h"
-#import "OOPlayerDomain.h"
+
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OOManagedAdSpot.h>
+#import <OoyalaSDK/OOManagedAdsPlugin.h>
+#import <OoyalaSDK/OOVASTAdSpot.h>
+#import <OoyalaSDK/OOOoyalaAdSpot.h>
 
 @interface InsertAdPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -62,9 +63,10 @@
   
   [self.button1 setTitle:@"INSERT VAST AD" forState:UIControlStateNormal];
   [self.button2 setTitle:@"INSERT OOYALA AD" forState:UIControlStateNormal];
-  
+
   // Create Ooyala ViewController
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
   // Create Ooyala Ads Plugin
   self.plugin = [self.ooyalaPlayerViewController.player managedAdsPlugin];

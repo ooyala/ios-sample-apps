@@ -6,9 +6,9 @@
 //
 
 #import "SimplePlayerViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOOoyalaPlayer.h"
-#import "OOPlayerDomain.h"
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
 
 @interface SimplePlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;

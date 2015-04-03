@@ -8,10 +8,11 @@
 
 
 #import "CustomControlsPlayerViewController.h"
-#import "OOOoyalaPlayerViewController.h"
-#import "OOOoyalaPlayer.h"
-#import "OOPlayerDomain.h"
 #import "CustomControlsViewController.h"
+
+#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
 
 /**
  * This player has code which utilizes our DefaultControlsSource for custom controls.
@@ -50,7 +51,8 @@
   [super viewDidLoad];
   
   // Create Ooyala ViewController
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   // Use our CustomControlsViewController as the InlineViewController
   [self.ooyalaPlayerViewController setInlineViewController:[[CustomControlsViewController alloc] initWithControlsType:OOOoyalaPlayerControlTypeInline player:self.ooyalaPlayerViewController.player overlay:nil delegate:self.ooyalaPlayerViewController]];
