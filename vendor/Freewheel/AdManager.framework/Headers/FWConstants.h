@@ -329,6 +329,12 @@ FW_EXTERN NSString *const FW_NOTIFICATION_VIDEO_DISPLAY_BASE_FRAME_CHANGED;
 FW_EXTERN NSString *const FW_NOTIFICATION_EXTENSION_LOADED;
 
 /**
+ *	Notification broadcasted when user press menu button while ad is airplaying. <br>
+ *	Player/App should pause the current playing slot, and give user a way to resume the ad playback by invoke [slot resume]
+ */
+FW_EXTERN NSString *const FW_NOTIFICATION_EXTERNALPLAYBACK_INTERRUPTED;
+
+/**
  * Ad unit: preroll
  *
  * See Also:
