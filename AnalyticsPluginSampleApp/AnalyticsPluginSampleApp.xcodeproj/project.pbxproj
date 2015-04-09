@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		970B980D1A1AD5D90091AD38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 970B980C1A1AD5D90091AD38 /* main.m */; };
+		970B98101A1AD5D90091AD38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 970B980F1A1AD5D90091AD38 /* AppDelegate.m */; };
+		970B98161A1AD5D90091AD38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970B98141A1AD5D90091AD38 /* Main.storyboard */; };
+		970B98181A1AD5D90091AD38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970B98171A1AD5D90091AD38 /* Images.xcassets */; };
+		970B981B1A1AD5D90091AD38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 970B98191A1AD5D90091AD38 /* LaunchScreen.xib */; };
+		970B98731A1AD82D0091AD38 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B98721A1AD82D0091AD38 /* libsqlite3.dylib */; };
+		970B98751A1AD85D0091AD38 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B98741A1AD85D0091AD38 /* libc++.dylib */; };
+		970B98771A1AD8790091AD38 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B98761A1AD8790091AD38 /* libxml2.dylib */; };
+		970B98791A1AD89C0091AD38 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B98781A1AD89C0091AD38 /* AdSupport.framework */; };
+		970B987B1A1AD8A40091AD38 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B987A1A1AD8A40091AD38 /* CoreLocation.framework */; };
+		970B987D1A1AD8B00091AD38 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B987C1A1AD8B00091AD38 /* SystemConfiguration.framework */; };
+		970B987F1A1AD8DC0091AD38 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B987E1A1AD8DC0091AD38 /* MediaPlayer.framework */; };
+		9772C0431A64B24B00B255C0 /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772C0421A64B24B00B255C0 /* SelectorViewController.m */; };
+		9784D01D1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01A1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework */; };
+		9784D01E1AD5D316002F2ECD /* NielsenAppApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */; };
+		9784D01F1AD5D316002F2ECD /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */; };
+		9784D0281AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9784D0221AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.m */; };
+		9784D0291AD5D7CE002F2ECD /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9784D0251AD5D7CE002F2ECD /* SampleAppPlayerViewController.m */; };
+		9784D02A1AD5D7CE002F2ECD /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9784D0271AD5D7CE002F2ECD /* PlayerSimple.xib */; };
+		9784D02E1AD5D9CB002F2ECD /* NielsenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9784D02D1AD5D9CB002F2ECD /* NielsenPlayerViewController.m */; };
+		9784D0311AD5DDCD002F2ECD /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 9784D0301AD5DDCD002F2ECD /* PlayerSelectionOption.m */; };
+		9784D0331AD5EE79002F2ECD /* OoyalaNielsenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D0321AD5EE79002F2ECD /* OoyalaNielsenSDK.framework */; };
+		9784D0351AD5F089002F2ECD /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9784D0341AD5F089002F2ECD /* TableCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		970B98071A1AD5D90091AD38 /* AnalyticsPluginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalyticsPluginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		970B980B1A1AD5D90091AD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		970B980C1A1AD5D90091AD38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		970B980E1A1AD5D90091AD38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		970B980F1A1AD5D90091AD38 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		970B98151A1AD5D90091AD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		970B98171A1AD5D90091AD38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		970B981A1A1AD5D90091AD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		970B98721A1AD82D0091AD38 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		970B98741A1AD85D0091AD38 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		970B98761A1AD8790091AD38 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		970B98781A1AD89C0091AD38 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		970B987A1A1AD8A40091AD38 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		970B987C1A1AD8B00091AD38 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		970B987E1A1AD8DC0091AD38 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		9772C0411A64B24B00B255C0 /* SelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorViewController.h; sourceTree = "<group>"; };
+		9772C0421A64B24B00B255C0 /* SelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorViewController.m; sourceTree = "<group>"; };
+		9784D01A1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "NielsenAppApi-cpp11.framework"; sourceTree = "<group>"; };
+		9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NielsenAppApi.framework; sourceTree = "<group>"; };
+		9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		9784D0211AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NielsenPlaybackListViewcontroller.h; sourceTree = "<group>"; };
+		9784D0221AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NielsenPlaybackListViewcontroller.m; sourceTree = "<group>"; };
+		9784D0241AD5D7CE002F2ECD /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
+		9784D0251AD5D7CE002F2ECD /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
+		9784D0271AD5D7CE002F2ECD /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
+		9784D02C1AD5D9CB002F2ECD /* NielsenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NielsenPlayerViewController.h; sourceTree = "<group>"; };
+		9784D02D1AD5D9CB002F2ECD /* NielsenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NielsenPlayerViewController.m; sourceTree = "<group>"; };
+		9784D02F1AD5DDCD002F2ECD /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
+		9784D0301AD5DDCD002F2ECD /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		9784D0321AD5EE79002F2ECD /* OoyalaNielsenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaNielsenSDK.framework; path = "../../vendor/Ooyala/OoyalaNielsenSDK-iOS/OoyalaNielsenSDK.framework"; sourceTree = "<group>"; };
+		9784D0341AD5F089002F2ECD /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		970B98041A1AD5D90091AD38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				970B987F1A1AD8DC0091AD38 /* MediaPlayer.framework in Frameworks */,
+				970B987D1A1AD8B00091AD38 /* SystemConfiguration.framework in Frameworks */,
+				970B987B1A1AD8A40091AD38 /* CoreLocation.framework in Frameworks */,
+				970B98791A1AD89C0091AD38 /* AdSupport.framework in Frameworks */,
+				9784D01D1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework in Frameworks */,
+				9784D0331AD5EE79002F2ECD /* OoyalaNielsenSDK.framework in Frameworks */,
+				970B98771A1AD8790091AD38 /* libxml2.dylib in Frameworks */,
+				9784D01E1AD5D316002F2ECD /* NielsenAppApi.framework in Frameworks */,
+				970B98751A1AD85D0091AD38 /* libc++.dylib in Frameworks */,
+				9784D01F1AD5D316002F2ECD /* OoyalaSDK.framework in Frameworks */,
+				970B98731A1AD82D0091AD38 /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		970B97FE1A1AD5D90091AD38 = {
+			isa = PBXGroup;
+			children = (
+				9784D0191AD5D316002F2ECD /* VendorLibraries */,
+				970B98781A1AD89C0091AD38 /* AdSupport.framework */,
+				970B987A1A1AD8A40091AD38 /* CoreLocation.framework */,
+				970B987E1A1AD8DC0091AD38 /* MediaPlayer.framework */,
+				970B987C1A1AD8B00091AD38 /* SystemConfiguration.framework */,
+				970B98091A1AD5D90091AD38 /* AnalyticsPluginSampleApp */,
+				970B986B1A1AD7860091AD38 /* framework */,
+				970B98081A1AD5D90091AD38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		970B98081A1AD5D90091AD38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				970B98071A1AD5D90091AD38 /* AnalyticsPluginSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		970B98091A1AD5D90091AD38 /* AnalyticsPluginSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				9784D02B1AD5D9CB002F2ECD /* Players */,
+				9784D0201AD5D7CE002F2ECD /* Lists */,
+				9784D0231AD5D7CE002F2ECD /* Utils */,
+				9784D0261AD5D7CE002F2ECD /* Views */,
+				9772C0411A64B24B00B255C0 /* SelectorViewController.h */,
+				9772C0421A64B24B00B255C0 /* SelectorViewController.m */,
+				970B980E1A1AD5D90091AD38 /* AppDelegate.h */,
+				970B980F1A1AD5D90091AD38 /* AppDelegate.m */,
+				970B98141A1AD5D90091AD38 /* Main.storyboard */,
+				970B98171A1AD5D90091AD38 /* Images.xcassets */,
+				970B98191A1AD5D90091AD38 /* LaunchScreen.xib */,
+				970B980A1A1AD5D90091AD38 /* Supporting Files */,
+			);
+			path = AnalyticsPluginSampleApp;
+			sourceTree = "<group>";
+		};
+		970B980A1A1AD5D90091AD38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				970B980B1A1AD5D90091AD38 /* Info.plist */,
+				970B980C1A1AD5D90091AD38 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		970B986B1A1AD7860091AD38 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				970B98761A1AD8790091AD38 /* libxml2.dylib */,
+				970B98741A1AD85D0091AD38 /* libc++.dylib */,
+				970B98721A1AD82D0091AD38 /* libsqlite3.dylib */,
+			);
+			name = framework;
+			sourceTree = "<group>";
+		};
+		9784D0191AD5D316002F2ECD /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				9784D0321AD5EE79002F2ECD /* OoyalaNielsenSDK.framework */,
+				9784D01A1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework */,
+				9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */,
+				9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
+		9784D0201AD5D7CE002F2ECD /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				9784D0211AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.h */,
+				9784D0221AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.m */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		9784D0231AD5D7CE002F2ECD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9784D02F1AD5DDCD002F2ECD /* PlayerSelectionOption.h */,
+				9784D0301AD5DDCD002F2ECD /* PlayerSelectionOption.m */,
+				9784D0241AD5D7CE002F2ECD /* SampleAppPlayerViewController.h */,
+				9784D0251AD5D7CE002F2ECD /* SampleAppPlayerViewController.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9784D0261AD5D7CE002F2ECD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9784D0341AD5F089002F2ECD /* TableCell.xib */,
+				9784D0271AD5D7CE002F2ECD /* PlayerSimple.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9784D02B1AD5D9CB002F2ECD /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				9784D02C1AD5D9CB002F2ECD /* NielsenPlayerViewController.h */,
+				9784D02D1AD5D9CB002F2ECD /* NielsenPlayerViewController.m */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		970B98061A1AD5D90091AD38 /* AnalyticsPluginSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 970B982A1A1AD5D90091AD38 /* Build configuration list for PBXNativeTarget "AnalyticsPluginSampleApp" */;
+			buildPhases = (
+				970B98031A1AD5D90091AD38 /* Sources */,
+				970B98041A1AD5D90091AD38 /* Frameworks */,
+				970B98051A1AD5D90091AD38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnalyticsPluginSampleApp;
+			productName = AnalyticsPluginSampleApp;
+			productReference = 970B98071A1AD5D90091AD38 /* AnalyticsPluginSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		970B97FF1A1AD5D90091AD38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ooyala;
+				TargetAttributes = {
+					970B98061A1AD5D90091AD38 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 970B98021A1AD5D90091AD38 /* Build configuration list for PBXProject "AnalyticsPluginSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 970B97FE1A1AD5D90091AD38;
+			productRefGroup = 970B98081A1AD5D90091AD38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				970B98061A1AD5D90091AD38 /* AnalyticsPluginSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		970B98051A1AD5D90091AD38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9784D02A1AD5D7CE002F2ECD /* PlayerSimple.xib in Resources */,
+				970B98161A1AD5D90091AD38 /* Main.storyboard in Resources */,
+				970B981B1A1AD5D90091AD38 /* LaunchScreen.xib in Resources */,
+				970B98181A1AD5D90091AD38 /* Images.xcassets in Resources */,
+				9784D0351AD5F089002F2ECD /* TableCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		970B98031A1AD5D90091AD38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9784D02E1AD5D9CB002F2ECD /* NielsenPlayerViewController.m in Sources */,
+				9784D0281AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.m in Sources */,
+				9784D0311AD5DDCD002F2ECD /* PlayerSelectionOption.m in Sources */,
+				970B98101A1AD5D90091AD38 /* AppDelegate.m in Sources */,
+				970B980D1A1AD5D90091AD38 /* main.m in Sources */,
+				9772C0431A64B24B00B255C0 /* SelectorViewController.m in Sources */,
+				9784D0291AD5D7CE002F2ECD /* SampleAppPlayerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		970B98141A1AD5D90091AD38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				970B98151A1AD5D90091AD38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		970B98191A1AD5D90091AD38 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				970B981A1A1AD5D90091AD38 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		970B98281A1AD5D90091AD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		970B98291A1AD5D90091AD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		970B982B1A1AD5D90091AD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					../../vendor/Nielsen,
+					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/zchen/repos/ios-sdk/submodules/ios_sample_apps/vendor/Ooyala/OoyalaNielsenSDK-iOS",
+				);
+				INFOPLIST_FILE = AnalyticsPluginSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		970B982C1A1AD5D90091AD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					../../vendor/Nielsen,
+					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/zchen/repos/ios-sdk/submodules/ios_sample_apps/vendor/Ooyala/OoyalaNielsenSDK-iOS",
+				);
+				INFOPLIST_FILE = AnalyticsPluginSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		970B98021A1AD5D90091AD38 /* Build configuration list for PBXProject "AnalyticsPluginSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				970B98281A1AD5D90091AD38 /* Debug */,
+				970B98291A1AD5D90091AD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		970B982A1A1AD5D90091AD38 /* Build configuration list for PBXNativeTarget "AnalyticsPluginSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				970B982B1A1AD5D90091AD38 /* Debug */,
+				970B982C1A1AD5D90091AD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 970B97FF1A1AD5D90091AD38 /* Project object */;
+}
