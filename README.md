@@ -19,7 +19,7 @@ All applications in this repository should be automatically importable, compilab
 1. Clone this repository onto your computer: `git clone https://github.com/ooyala/ios-sample-apps.git`
 1. Open the repository directory, and navigate to ios-sample-apps/BasicPlaybackSampleApp
 1. Open BasicPlaybackSampleApp.xcodeproj
-1. Navigate to android-sample-apps/BasicPlaybackSampleApp. Press Choose, or OK
+1. Navigate to ios-sample-apps/BasicPlaybackSampleApp. Press Choose, or OK
 1. Observe the target is set to "BasicPlaybackSampleApp". Select either a connected device or simulator to run on
 1. Press the play button to run the application
 1. When the application loads, you will have a list of videos to choose from.  Pick any of them to view video playback
