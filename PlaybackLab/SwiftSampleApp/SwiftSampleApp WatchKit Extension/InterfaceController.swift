@@ -13,7 +13,7 @@ import Foundation
 class InterfaceController: WKInterfaceController {
 
   @IBOutlet var LabelPlayhead: WKInterfaceLabel!
-  var timer:NSTimer = NSTimer()
+  var timer:NSTimer? = NSTimer()
   
   override func awakeWithContext(context: AnyObject?) {
       super.awakeWithContext(context)
@@ -32,27 +32,30 @@ class InterfaceController: WKInterfaceController {
   }
 
   @IBAction func play() {
-    
+    if timer == nil  {
+      timer = NSTimer.scheduledTimerWithTimeInterval(0.25, target: self, selector: "updatePlayheadTime", userInfo: nil, repeats: true)
+    }
     
     // Send count to parent application
     var strAction = "play"
     var dictAppData: NSDictionary = NSDictionary(object: strAction, forKey: "action")
     
     // Handle receiver in app delegate or parent app
-    WKInterfaceController.openParentApplication(dictAppData, reply: { (replyInfo, error) -> Void in
+    WKInterfaceController.openParentApplication(dictAppData as [NSObject : AnyObject], reply: { (replyInfo, error) -> Void in
        println("\(replyInfo), \(error)")
     })
   }
   
   @IBAction func pause() {
-    
+    timer!.invalidate()
+    timer = nil
     
     // Send count to parent application
     var strAction = "pause"
     var dictAppData: NSDictionary = NSDictionary(object: strAction, forKey: "action")
     
     // Handle receiver in app delegate or parent app
-    WKInterfaceController.openParentApplication(dictAppData, reply: { (replyInfo, error) -> Void in
+    WKInterfaceController.openParentApplication(dictAppData as [NSObject : AnyObject], reply: { (replyInfo, error) -> Void in
       println("\(replyInfo), \(error)")
     })
   }
@@ -62,7 +65,7 @@ class InterfaceController: WKInterfaceController {
     var dictAppData: NSDictionary = NSDictionary(object: strAction, forKey: "action")
     
     // Handle receiver in app delegate or parent app
-    WKInterfaceController.openParentApplication(dictAppData, reply: { (replyInfo, error) -> Void in
+    WKInterfaceController.openParentApplication(dictAppData as [NSObject : AnyObject], reply: { (replyInfo, error) -> Void in
       var playheadTime = replyInfo["playheadTime"]
       
       println("\(replyInfo), \(error)")
