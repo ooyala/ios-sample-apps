@@ -41,9 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
   
-  func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: NSDictionary, reply: (([NSObject : AnyObject]!) -> Void)!) {
-    var action:NSString = userInfo.objectForKey("action") as NSString
-    var vc: ViewController = (self.window?.rootViewController as UINavigationController).visibleViewController as ViewController
+  func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+    let info = userInfo as NSDictionary?
+    var action:NSString = info!.objectForKey("action") as! NSString
+    var vc: ViewController = (self.window?.rootViewController as! UINavigationController).visibleViewController as! ViewController
     
     if vc.isKindOfClass(ViewController) {
       if action == "play" {

@@ -82,7 +82,7 @@ class ViewController: UIViewController {
       textView.insertText(timeStamp + ", ," + name)
     }
     textView.insertText("\n")
-    textView.scrollRangeToVisible(NSMakeRange(countElements(textView.text), 0))
+    textView.scrollRangeToVisible(NSMakeRange(count(textView.text), 0))
   }
   
   override func viewWillAppear(animated: Bool) {
