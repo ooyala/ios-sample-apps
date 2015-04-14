@@ -82,7 +82,7 @@ class ViewController: UIViewController {
       textView.insertText(timeStamp + ", ," + name)
     }
     textView.insertText("\n")
-    textView.scrollRangeToVisible(NSMakeRange(countElements(textView.text), 0))
+    textView.scrollRangeToVisible(NSMakeRange(count(textView.text), 0))
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -103,6 +103,18 @@ class ViewController: UIViewController {
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+  
+  func play() {
+    ooyalaPlayerViewController.player.play()
+  }
+  
+  func pause() {
+    ooyalaPlayerViewController.player.pause()
+  }
+  
+  func getPlayhead() -> Float64 {
+    return ooyalaPlayerViewController.player.playheadTime()
   }
 
 }

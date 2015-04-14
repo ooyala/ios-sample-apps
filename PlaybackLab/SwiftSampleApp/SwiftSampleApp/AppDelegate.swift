@@ -40,7 +40,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
-
+  
+  func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+    let info = userInfo as NSDictionary?
+    var action:NSString = info!.objectForKey("action") as! NSString
+    var vc: ViewController = (self.window?.rootViewController as! UINavigationController).visibleViewController as! ViewController
+    
+    if vc.isKindOfClass(ViewController) {
+      if action == "play" {
+        vc.play()
+        reply(["action play executed":"YES"])
+      }else if action == "pause" {
+        vc.pause()
+        reply(["action pause executed":"YES"]);
+      }else {
+        var playhead = vc.getPlayhead()
+        reply(["playheadTime":playhead]);
+      }
+    }else {
+      reply(["action executed":"NO"])
+    }
+  }
+  
 
 }
 
