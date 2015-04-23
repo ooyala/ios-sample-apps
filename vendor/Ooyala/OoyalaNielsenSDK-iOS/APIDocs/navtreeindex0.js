@@ -1,0 +1,21 @@
+var NAVTREEINDEX0 =
+{
+"_nielsen_app_api_8h_source.html":[1,0,0,0,0,0,0],
+"_o_o_nielsen_plugin_8h_source.html":[1,0,1],
+"annotated.html":[0,0],
+"classes.html":[0,1],
+"dir_040b98694b9eb847b693fc434a315182.html":[1,0,0],
+"dir_3bd301bd8a6bfb9a4e8f9082171f6ded.html":[1,0,0,0,0],
+"dir_6b68a81b81d3929b95a59b14201ff3f9.html":[1,0,0,0],
+"dir_80cfde990b166bbbf3862c5f46ffe234.html":[1,0,0,0,0,0],
+"files.html":[1,0],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"functions_prop.html":[0,2,2],
+"index.html":[],
+"interface_o_o_nielsen_plugin.html":[0,0,0],
+"interface_o_o_nielsen_plugin.html#a03224847be4065164fdd64ae84ce86f9":[0,0,0,0],
+"interface_o_o_nielsen_plugin.html#a151085b17589b9a2c4ae134db54ce92a":[0,0,0,1],
+"interface_o_o_nielsen_plugin.html#ac7907f0f68764fbb8b00c4a46b27e2ef":[0,0,0,2],
+"pages.html":[]
+};
