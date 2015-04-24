@@ -278,11 +278,10 @@
 }
 
 - (void)updateClosedCaptionsPosition {
-  if (self.player == nil) {
-    LOG(@"updateClosedCaptionsPosition while player is nil");
-    return;
+  if ([self.delegate isKindOfClass:[OOOoyalaPlayerViewController class]]) {
+    OOOoyalaPlayerViewController *controller = self.delegate;
+    [controller updateClosedCaptionsViewPosition:self.controls.bottomBarBackground.frame withControlsHide:self.controls.hidden];
   }
-  [self.player updateClosedCaptionsViewPosition:self.controls.navigationBar.frame withControlsHide:self.controls.hidden];
 }
 
 - (void)dealloc {
