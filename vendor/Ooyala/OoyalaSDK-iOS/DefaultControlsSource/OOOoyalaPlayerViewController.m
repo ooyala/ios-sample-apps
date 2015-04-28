@@ -334,6 +334,8 @@ static NSDictionary *currentLocale = nil;
   if (fullScreenViewController) {
     [fullScreenViewController changeButtonLanguage:_closedCaptionsLanguage];
   }
+
+  [self refreshClosedCaptionsView];
 }
 
 // Choose a default language when there is not specific dialect for that language
@@ -435,9 +437,7 @@ static NSDictionary *currentLocale = nil;
 }
 
 - (void)onStateChanged:(NSNotification *)notification {
-  if (self.player.state == OOOoyalaPlayerStatePlaying && !self.player.isShowingAd) {
-    [self addClosedCaptionsView];
-  }
+  [self refreshClosedCaptionsView];
 }
 
 - (void)addClosedCaptionsView {
@@ -447,6 +447,14 @@ static NSDictionary *currentLocale = nil;
     _closedCaptionsView = [[OOClosedCaptionsView alloc] initWithFrame:self.player.videoRect];
     _closedCaptionsView.style = _closedCaptionsStyle;
     [player.view addSubview:_closedCaptionsView];
+  }
+}
+
+- (void)refreshClosedCaptionsView {
+  if (self.player.isShowingAd) {
+    [self removeClosedCaptionsView];
+  } else {
+    [self addClosedCaptionsView];
   }
 }
 
