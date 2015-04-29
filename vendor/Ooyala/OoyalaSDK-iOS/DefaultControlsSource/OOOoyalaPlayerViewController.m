@@ -446,6 +446,7 @@ static NSDictionary *currentLocale = nil;
   if (self.player.currentItem.hasClosedCaptions && _closedCaptionsLanguage) {
     _closedCaptionsView = [[OOClosedCaptionsView alloc] initWithFrame:self.player.videoRect];
     _closedCaptionsView.style = _closedCaptionsStyle;
+    [[self getControls] updateClosedCaptionsPosition];
     [player.view addSubview:_closedCaptionsView];
   }
 }
