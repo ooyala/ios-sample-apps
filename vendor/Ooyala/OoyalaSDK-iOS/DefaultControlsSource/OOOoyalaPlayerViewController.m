@@ -14,6 +14,10 @@
 #import "OOOoyalaAPIClient.h"
 #import "OOPlayerDomain.h"
 #import "OODebugMode.h"
+#import "OOClosedCaptionsView.h"
+#import "OOVideo.h"
+#import "OOCaption.h"
+#import "OOClosedCaptions.h"
 
 NSString *const TAG = @"OOOoyalaPlayerViewController";
 NSString *const OOOoyalaPlayerViewControllerFullscreenEnter = @"fullscreenEnter";
@@ -30,6 +34,7 @@ NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible = @"inlineView
 @private
   BOOL isClosedCaptionsEnabled;
   BOOL isFullScreenButtonShowing;
+  OOClosedCaptionsStyle *_closedCaptionsStyle;
 }
 
 @property (nonatomic, strong) OOControlsViewController *fullScreenViewController;
@@ -37,6 +42,7 @@ NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible = @"inlineView
 @property (nonatomic, strong) NSDictionary *defaultLocales;
 @property (nonatomic, strong) NSDictionary *currentLocale;
 @property (nonatomic, strong) OOClosedCaptionsSelectorViewController *selectorViewController;
+@property(nonatomic, strong) OOClosedCaptionsView *closedCaptionsView;
 
 - (void)loadInline;
 - (void)loadFullscreen;
@@ -68,16 +74,32 @@ static NSDictionary *currentLocale = nil;
     player = _player;
     initialLoad = YES;
 
-    // change the language in the button when the close caption language changed
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLanguage:) name:OOOoyalaPlayerLanguageChangedNotification object: nil];
-
     [OODebugMode assert:self.initialControlType == OOOoyalaPlayerControlTypeInline || self.initialControlType == OOOoyalaPlayerControlTypeFullScreen tag:TAG message:[NSString stringWithFormat:@"unexpected: %ld", (long)self.initialControlType]];
     initialControlType = _controlType;
     fullscreenQueued = initialControlType == OOOoyalaPlayerControlTypeFullScreen ? YES : NO;
 
     //Initialize CC Selector and popup helper
-    selectorViewController = [[OOClosedCaptionsSelectorViewController alloc] initWithPlayer:_player];
+    selectorViewController = [[OOClosedCaptionsSelectorViewController alloc] initWithViewController:self];
     isFullScreenButtonShowing = YES;
+    // Set Closed Caption style
+    _closedCaptionsStyle = [OOClosedCaptionsStyle new];
+    //listen to UIApplicationDidEnterBackgroundNotification
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onApplicationDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onPlayheadUpdated:)
+                                                 name:OOOoyalaPlayerTimeChangedNotification
+                                               object:player];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onStateChanged:)
+                                                 name:OOOoyalaPlayerStateChangedNotification
+                                               object:player];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onAdStarted:)
+                                                 name:OOOoyalaPlayerAdStartedNotification
+                                               object:player];
+
   }
 
   return self;
@@ -257,11 +279,6 @@ static NSDictionary *currentLocale = nil;
   }
 }
 
-  //Set the language on OOOoyalaPlayer
-- (void)setClosedCaptionsLanguage:(NSString *)language {
-  [player setClosedCaptionsLanguage:language];
-}
-
 - (void)determineControlType {
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
     initialControlType = OOOoyalaPlayerControlTypeFullScreen;
@@ -302,21 +319,23 @@ static NSDictionary *currentLocale = nil;
   inlineViewController = controller;
 }
 
-- (void)changeLanguage:(NSNotification *)notification {
+- (void)changeLanguage {
   if(!defaultLocales) {
     [OOOoyalaPlayerViewController loadDefaultLocale];
   }
-  NSString* language = [notification object];
-  if (language == nil) {
+
+  if (_closedCaptionsLanguage == nil) {
     [OOOoyalaPlayerViewController loadDeviceLanguage];
-  } else if ([defaultLocales objectForKey:language]) {
-    [OOOoyalaPlayerViewController useLanguageStrings:[OOOoyalaPlayerViewController getLanguageSettings:language]];
+  } else if ([defaultLocales objectForKey:_closedCaptionsLanguage]) {
+    [OOOoyalaPlayerViewController useLanguageStrings:[OOOoyalaPlayerViewController getLanguageSettings:_closedCaptionsLanguage]];
   } else {
-    [OOOoyalaPlayerViewController chooseBackupLanguage:language];
+    [OOOoyalaPlayerViewController chooseBackupLanguage:_closedCaptionsLanguage];
   }
   if (fullScreenViewController) {
-    [fullScreenViewController changeButtonLanguage:language];
+    [fullScreenViewController changeButtonLanguage:_closedCaptionsLanguage];
   }
+
+  [self refreshClosedCaptionsView];
 }
 
 // Choose a default language when there is not specific dialect for that language
@@ -398,6 +417,99 @@ static NSDictionary *currentLocale = nil;
 
 - (void)dealloc {
   LOG(@"OOOoyalaPlayerViewController.dealloc %@", [self description]);
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark ClosedCaptions
+- (void)onApplicationDidBecomeActive:(NSNotification *)notification {
+  if (self.closedCaptionsView != nil) {
+    [_closedCaptionsStyle updateStyle];
+    [self.closedCaptionsView setStyle:_closedCaptionsStyle];
+  }
+}
+
+- (void)onPlayheadUpdated:(NSNotification *)notification {
+  [self displayCurrentClosedCaption];
+}
+
+- (void)onAdStarted:(NSNotification *)notification {
+  [self removeClosedCaptionsView];
+}
+
+- (void)onStateChanged:(NSNotification *)notification {
+  [self refreshClosedCaptionsView];
+}
+
+- (void)addClosedCaptionsView {
+  [self removeClosedCaptionsView];
+
+  if (self.player.currentItem.hasClosedCaptions && _closedCaptionsLanguage) {
+    _closedCaptionsView = [[OOClosedCaptionsView alloc] initWithFrame:self.player.videoRect];
+    _closedCaptionsView.style = _closedCaptionsStyle;
+    [[self getControls] updateClosedCaptionsPosition];
+    [player.view addSubview:_closedCaptionsView];
+  }
+}
+
+- (void)refreshClosedCaptionsView {
+  if (self.player.isShowingAd) {
+    [self removeClosedCaptionsView];
+  } else {
+    [self addClosedCaptionsView];
+  }
+}
+
+- (void)removeClosedCaptionsView {
+  if (_closedCaptionsView) {
+    [_closedCaptionsView removeFromSuperview];
+    _closedCaptionsView = nil;
+  }
+}
+
+- (void)displayCurrentClosedCaption {
+  if (_closedCaptionsLanguage != nil && self.player.currentItem.hasClosedCaptions) {
+    if (_closedCaptionsView.caption == nil || self.player.playheadTime < _closedCaptionsView.caption.begin || self.player.playheadTime > _closedCaptionsView.caption.end) {
+      OOCaption *caption =
+        [self.player.currentItem.closedCaptions captionForLanguage:_closedCaptionsLanguage time:self.player.playheadTime];
+      _closedCaptionsView.caption = caption;
+    }
+  } else {
+    _closedCaptionsView.caption = nil;
+  }
+}
+
+- (void)setClosedCaptionsPresentationStyle: (OOClosedCaptionPresentation) presentationStyle {
+  self.closedCaptionsStyle.presentation = presentationStyle;
+  [self.closedCaptionsView setStyle:self.closedCaptionsStyle];
+}
+
+- (void)setClosedCaptionsLanguage:(NSString *)language {
+  _closedCaptionsLanguage = language;
+
+  if([language isEqualToString: OOLiveClosedCaptionsLanguage]) {
+    [self.player setLiveClosedCaptionsEnabled: YES];
+    return;
+  }
+
+  if(language == nil) {
+    [self.player setLiveClosedCaptionsEnabled: NO];
+    [self removeClosedCaptionsView];
+  }
+  [[NSNotificationCenter defaultCenter] postNotificationName:OOOoyalaPlayerLanguageChangedNotification object:language];
+  [self changeLanguage];
+
+  [_closedCaptionsView setCaption:nil];
+  [self displayCurrentClosedCaption];
+}
+
+- (void)updateClosedCaptionsViewPosition:(CGRect)bottomControlsRect withControlsHide:(BOOL)hidden {
+  CGRect videoRect = [self.player videoRect];
+  if (!hidden) {
+    if (bottomControlsRect.origin.y < videoRect.origin.y + videoRect.size.height) {
+      videoRect.size.height = videoRect.size.height - (videoRect.origin.y + videoRect.size.height - bottomControlsRect.origin.y);
+    }
+  }
+  [self.closedCaptionsView setFrame:videoRect];
 }
 
 @end

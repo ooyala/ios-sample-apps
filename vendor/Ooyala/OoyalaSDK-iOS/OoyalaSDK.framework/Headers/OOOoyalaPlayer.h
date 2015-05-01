@@ -97,7 +97,7 @@ extern NSString *const OOOoyalaPlayerMetadataReadyNotification; /**< Fires when 
 extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires when close caption language changed*/
 extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
 extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
-
+extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live closed captions */
 
 /**
  * The OoyalaPlayer is the heart of the playback system.
@@ -122,9 +122,7 @@ extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when r
  */
 @property(readonly, nonatomic) BOOL isAudioOnlyStreamPlaying;
 @property(readonly, nonatomic, getter = isClosedCaptionsTrackAvailable) BOOL closedCaptionsTrackAvailable;
-@property(nonatomic, strong) OOClosedCaptionsStyle *closedCaptionsStyle; /**< The OOClosedCaptionsStyle to use when displaying closed captions */
 @property(nonatomic, strong) OOCurrentItemChangedCallback currentItemChangedCallback; /**< A callback that will be called every time the current item is changed */
-@property(nonatomic, strong) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
 @property(nonatomic, strong) OOStreamPlayer *basePlayer; /**< the base player to use for displaying content.  Defaults to OOBaseStreamPlayer. */
 
 @property (nonatomic) OOOoyalaPlayerActionAtEnd actionAtEnd; /**< the OOOoyalaPlayerActionAtEnd to perform when the current item finishes playing. */
@@ -359,14 +357,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (NSArray *)availableClosedCaptionsLanguages;
 
 /**
- * Set the closed caption with given language
- */
-- (void)setClosedCaptionsLanguage:(NSString *)language;
-
-
-- (void)setClosedCaptionsPresentationStyle: (OOClosedCaptionPresentation) presentationStyle;
-
-/**
  * Get the current bitrate
  * @returns a double indicating the current bitrate in bytes
  */
@@ -406,13 +396,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * @param[in] adClass the ad class
  */
 - (void)registerAdPlayer:(Class)adPlayerClass forType:(Class)adClass;
-
-/**
- * update closed caption view position
- * @param[in] bottomControlsRect the bottom controls rect
- * @param[in] hidden YES if the bottom control is hidden, NO if it is not hidden
- */
-- (void)updateClosedCaptionsViewPosition:(CGRect)bottomControlsRect withControlsHide:(BOOL)hidden;
 
 /**
  * @returns the video rect
@@ -464,5 +447,11 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * Return an OoyalaAPIClient
  */
 - (OOOoyalaAPIClient *)api;
+
+/** 
+ * turn on or turn off live closed captions, if any
+ * @param[in] enabled YES if enabled, NO if disabled
+ */
+- (void)setLiveClosedCaptionsEnabled:(BOOL)enabled;
 
 @end

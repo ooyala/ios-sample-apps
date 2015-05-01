@@ -7,7 +7,7 @@
 
 #import "OOInlineIOS7ViewController.h"
 #import "OOOoyalaPlayer.h"
-#import "OOOoyalaPlayerViewController.h"
+//#import "OOOoyalaPlayerViewController.h"
 #import "OOInlineIOS7ControlsView.h"
 #import "OOUIProgressSliderIOS7.h"
 #import "OOVideo.h"
@@ -295,7 +295,10 @@
     LOG(@"updateClosedCaptionsPosition while player is nil");
     return;
   }
-  [self.player updateClosedCaptionsViewPosition:self.controls.navigationBar.frame withControlsHide:self.controls.hidden];
+  if ([self.delegate isKindOfClass:[OOOoyalaPlayerViewController class]]) {
+    OOOoyalaPlayerViewController *controller = self.delegate;
+    [controller updateClosedCaptionsViewPosition:self.controls.navigationBar.frame withControlsHide:self.controls.hidden];
+  }
 }
 
 - (void)dealloc {

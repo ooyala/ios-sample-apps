@@ -18,6 +18,7 @@ extern NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible;
 @class OOOoyalaAPIClient;
 @class OOControlsViewController;
 @class OOPlayerDomain;
+@class OOClosedCaptionsStyle;
 
 /**
  * Main ViewController class for Ooyala player.
@@ -37,6 +38,10 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
 
 @property (nonatomic, strong) UIView *inlineOverlay;
 @property (nonatomic, strong) UIView *fullscreenOverlay;
+
+@property(nonatomic, strong) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
+@property(nonatomic, strong) OOClosedCaptionsStyle *closedCaptionsStyle; /**< The OOClosedCaptionsStyle to use when displaying closed captions */
+
 
 /**
  * Get the fullscreen state
@@ -115,5 +120,12 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
  * @param[in] controller the initialized ViewController to use
  */
 - (void)setInlineViewController:(OOControlsViewController *)controller;
+
+/**
+ * update closed caption view position
+ * @param[in] bottomControlsRect the bottom controls rect
+ * @param[in] hidden YES if the bottom control is hidden, NO if it is not hidden
+ */
+- (void)updateClosedCaptionsViewPosition:(CGRect)bottomControlsRect withControlsHide:(BOOL)hidden;
 
 @end

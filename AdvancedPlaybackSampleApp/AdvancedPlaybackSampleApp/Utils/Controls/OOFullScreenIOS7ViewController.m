@@ -321,11 +321,10 @@
 }
 
 - (void)updateClosedCaptionsPosition {
-  if (self.player == nil) {
-    NSLog(@"Fullscreen View Controller: Trying to update Closed Captions without having a valid player");
-    return;
+  if ([self.delegate isKindOfClass:[OOOoyalaPlayerViewController class]]) {
+    OOOoyalaPlayerViewController *controller = self.delegate;
+    [controller updateClosedCaptionsViewPosition:self.controls.bottomBarBackground.frame withControlsHide:self.controls.hidden];
   }
-  [self.player updateClosedCaptionsViewPosition:self.controls.bottomBarBackground.frame withControlsHide:self.controls.hidden];
 }
 
 - (BOOL)showingAdsWithHiddenControls {
