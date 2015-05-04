@@ -76,6 +76,8 @@ NSString * const SFCODE = @"PUT YOUR SFCODE HERE";
 - (IBAction)onOptButton:(id)sender {
   UIViewController *webController = [UIViewController new];
   UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+  webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+  webView.scalesPageToFit = YES;
   NielsenAppApi *api = [_nielsenPlugin getNielsenAppApi];
   NSString *optOutUrl = [api optOutURLString];
   [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:optOutUrl]]];
