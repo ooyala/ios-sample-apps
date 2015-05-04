@@ -23,9 +23,12 @@
 }
 - (void)addAllPlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Demo" embedCode:@"84aDVmcTqN3FrdLXClZgJq-GfFEDhS1a" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Live" embedCode:@"p4ZXNwdDrfdg2vz04LdpbRg94XXb7d_c" viewController: [NielsenPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Demo" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48" viewController: [NielsenPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-WithAds" embedCode:@"x3YjJzczqREV-5RDiemsrdqki1FYu2NT" viewController: [NielsenPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-14min" embedCode:@"JyanIxdDoj9MhKbVEmTJEG8O4QF5xExb" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Live" embedCode:@"RuZXNwdDpcWdrXskPkw73Mosq6sw6Fux" viewController: [NielsenPlayerViewController class]]];
+
 }
 
 - (void)viewDidLoad {
