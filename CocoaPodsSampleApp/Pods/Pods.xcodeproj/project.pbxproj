@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F053AA95CC4BD7DA4C10384 /* Pods-BasicPlaybackSampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B42E35C566D534E48EBF2D3 /* Pods-BasicPlaybackSampleApp-dummy.m */; };
+		A4E2332B295392783FB9FF82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1932DB5703367E1FA56152 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0016979091349FA71CD0810D /* OOContentItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOContentItem.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOContentItem.h"; sourceTree = "<group>"; };
+		0305771CA6142C2F437A107A /* OOPlayableItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOPlayableItem.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOPlayableItem.h"; sourceTree = "<group>"; };
+		0913A3414A8D158F55BD8D77 /* OODynamicChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OODynamicChannel.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OODynamicChannel.h"; sourceTree = "<group>"; };
+		0A7EB5417D16E5872699CCC5 /* OOOoyalaError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOOoyalaError.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOOoyalaError.h"; sourceTree = "<group>"; };
+		0CF2BD48F7F702C8DD984C43 /* OOVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVideo.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVideo.h"; sourceTree = "<group>"; };
+		0F14345F684D9C9CFC3F5CAA /* OOOoyalaAdSpot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOOoyalaAdSpot.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOOoyalaAdSpot.h"; sourceTree = "<group>"; };
+		11EF7A5F98D6FA78D5C958A3 /* OOReturnState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOReturnState.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOReturnState.h"; sourceTree = "<group>"; };
+		1202B0DFAA8C5C3986047961 /* OOPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOPlayer.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOPlayer.h"; sourceTree = "<group>"; };
+		172B53191735C9873568EB9E /* OOFullscreenButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOFullscreenButton.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOFullscreenButton.h"; sourceTree = "<group>"; };
+		17BD56EFAA77DEB9A60599D4 /* OOPaginatedParentItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOPaginatedParentItem.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOPaginatedParentItem.h"; sourceTree = "<group>"; };
+		1CF71C7D2336EA18C2B37EE1 /* OOVASTLinearAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTLinearAd.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTLinearAd.h"; sourceTree = "<group>"; };
+		1DB2CAF79FEF16EE43F79995 /* OOStreamPlayerMappingPredicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOStreamPlayerMappingPredicate.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOStreamPlayerMappingPredicate.h"; sourceTree = "<group>"; };
+		1E712E228B9BB5C3B388FFDF /* OOVideoGravityButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVideoGravityButton.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVideoGravityButton.h"; sourceTree = "<group>"; };
+		20C67CECCD910D9ABC55073B /* OOPlayerInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOPlayerInfo.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOPlayerInfo.h"; sourceTree = "<group>"; };
+		21A433312BD33D95E85CC189 /* OOEmbeddedSignatureGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOEmbeddedSignatureGenerator.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOEmbeddedSignatureGenerator.h"; sourceTree = "<group>"; };
+		24EC0DE417F440C036430FD9 /* OOAdSpotManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAdSpotManager.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAdSpotManager.h"; sourceTree = "<group>"; };
+		255F2EBE9BC58A6337FF3B55 /* OOClosedCaptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOClosedCaptions.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOClosedCaptions.h"; sourceTree = "<group>"; };
+		2A151C5DC5EB33AD25009C56 /* OOOrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOOrderedDictionary.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOOrderedDictionary.h"; sourceTree = "<group>"; };
+		2BB5ADE8B47E85863243DFB5 /* OOOoyalaAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOOoyalaAPIClient.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOOoyalaAPIClient.h"; sourceTree = "<group>"; };
+		2CC65425BCD7FE7DA24C3BB0 /* OOModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOModule.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOModule.h"; sourceTree = "<group>"; };
+		2DF27FC584C39D34775E4B0A /* OOVASTStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTStream.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTStream.h"; sourceTree = "<group>"; };
+		2E0AF9C8D37E11915C006F54 /* Pods-BasicPlaybackSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BasicPlaybackSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3390AA42623424BE8BD6DDFA /* OOLifeCycle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOLifeCycle.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOLifeCycle.h"; sourceTree = "<group>"; };
+		37CD932022F93BF351EBD427 /* OOAuthorizableItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAuthorizableItem.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAuthorizableItem.h"; sourceTree = "<group>"; };
+		39E96976E59FE2BA173F8BDC /* Pods-BasicPlaybackSampleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BasicPlaybackSampleApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		3BC7874CFB5DC5F05BC70EF3 /* OOStreamPlayerMappingCreator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOStreamPlayerMappingCreator.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOStreamPlayerMappingCreator.h"; sourceTree = "<group>"; };
+		3D8B80626F4946F6390A4D7A /* OOAdSpotPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAdSpotPlugin.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAdSpotPlugin.h"; sourceTree = "<group>"; };
+		3F7188FBB51658AC7453CD49 /* OOManagedAdSpot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOManagedAdSpot.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOManagedAdSpot.h"; sourceTree = "<group>"; };
+		407C447A97373EDF1F32B1A3 /* Pods-BasicPlaybackSampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BasicPlaybackSampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49CCC1A31BAB3582FA0E2D50 /* OODefaultPlayerInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OODefaultPlayerInfo.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OODefaultPlayerInfo.h"; sourceTree = "<group>"; };
+		4FF48C490298D2A89EE3833B /* OOSecureURLGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOSecureURLGenerator.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOSecureURLGenerator.h"; sourceTree = "<group>"; };
+		5068B0E262E95CE921D58490 /* OOClosedCaptionsButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOClosedCaptionsButton.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOClosedCaptionsButton.h"; sourceTree = "<group>"; };
+		51556DDEA5D1A971C596B9BA /* OOClosedCaptionsSelectorBackgroundViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOClosedCaptionsSelectorBackgroundViewController.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOClosedCaptionsSelectorBackgroundViewController.h"; sourceTree = "<group>"; };
+		5AAA70C0191D62A26D62EDA2 /* OOOoyalaPlayerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOOoyalaPlayerViewController.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOOoyalaPlayerViewController.h"; sourceTree = "<group>"; };
+		5F657BA7F76885E3167553FE /* OOBufferView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOBufferView.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOBufferView.h"; sourceTree = "<group>"; };
+		6128AE6F9D693450F85BD663 /* OOChannelSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOChannelSet.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOChannelSet.h"; sourceTree = "<group>"; };
+		65DB0F186D0D18BFFD4E516B /* OOStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOStream.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOStream.h"; sourceTree = "<group>"; };
+		6B9A30E75D57790FB3587C49 /* OOEmbeddedSecureURLGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOEmbeddedSecureURLGenerator.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOEmbeddedSecureURLGenerator.h"; sourceTree = "<group>"; };
+		711068BF40E569843BA2EA84 /* OOStateNotifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOStateNotifier.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOStateNotifier.h"; sourceTree = "<group>"; };
+		742972175B659755F554AC7C /* OOCaption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOCaption.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOCaption.h"; sourceTree = "<group>"; };
+		7A3A73AA98C2617B440E2124 /* OOCuePointsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOCuePointsView.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOCuePointsView.h"; sourceTree = "<group>"; };
+		7CDAF48FE50B20306D517EA8 /* OOAdsLearnMoreButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAdsLearnMoreButton.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAdsLearnMoreButton.h"; sourceTree = "<group>"; };
+		7DE6105D9A0CE8C4E9CFB14E /* OOVASTAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTAd.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTAd.h"; sourceTree = "<group>"; };
+		7FFF7D5023A147768B371FF1 /* OOVASTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTUtils.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTUtils.h"; sourceTree = "<group>"; };
+		855422A921FB3775A925EC45 /* OOFCCTVRatingConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOFCCTVRatingConfiguration.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOFCCTVRatingConfiguration.h"; sourceTree = "<group>"; };
+		889E728BBEA0867EF0BA6E01 /* OOClientId.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOClientId.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOClientId.h"; sourceTree = "<group>"; };
+		89D02F33DE9F6D60B7D03274 /* OOVASTAdData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTAdData.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTAdData.h"; sourceTree = "<group>"; };
+		8BCF365151D6EF0869CB67F5 /* OOManagedAdsPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOManagedAdsPlugin.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOManagedAdsPlugin.h"; sourceTree = "<group>"; };
+		8BE0F0734A03FE7D667C5EB1 /* OOTransparentToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOTransparentToolbar.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOTransparentToolbar.h"; sourceTree = "<group>"; };
+		91407590A39E67EA28B8DCA7 /* OOUserInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOUserInfo.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOUserInfo.h"; sourceTree = "<group>"; };
+		92C87DDEAEA5DF8FB7457AE6 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95D8603C18945789D9A1D7CE /* OOStreamPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOStreamPlayer.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOStreamPlayer.h"; sourceTree = "<group>"; };
+		97496D01D6896A13881FD856 /* OOVASTSequenceItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTSequenceItem.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTSequenceItem.h"; sourceTree = "<group>"; };
+		984DE229AD3A23491A4A7650 /* OOChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOChannel.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOChannel.h"; sourceTree = "<group>"; };
+		9B42E35C566D534E48EBF2D3 /* Pods-BasicPlaybackSampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BasicPlaybackSampleApp-dummy.m"; sourceTree = "<group>"; };
+		9ED00139E29E62AF4BE7E1D8 /* OOClosedCaptionsStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOClosedCaptionsStyle.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOClosedCaptionsStyle.h"; sourceTree = "<group>"; };
+		9F019854214B8E5A921F3D70 /* OOEmbedTokenGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOEmbedTokenGenerator.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOEmbedTokenGenerator.h"; sourceTree = "<group>"; };
+		AE660BD356E10468FA488BB0 /* OOVASTAdSpot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTAdSpot.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTAdSpot.h"; sourceTree = "<group>"; };
+		BCC789F9EEF2ADB9940CF172 /* OOVASTWrapperAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOVASTWrapperAd.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOVASTWrapperAd.h"; sourceTree = "<group>"; };
+		BE7889860A2EF9199590389C /* OOPlayPauseButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOPlayPauseButton.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOPlayPauseButton.h"; sourceTree = "<group>"; };
+		C36CEA00F55D99986BE2C6C9 /* OOFCCTVRating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOFCCTVRating.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOFCCTVRating.h"; sourceTree = "<group>"; };
+		C5FA2C20FC7C96B91AF5B57A /* libOoyalaSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
+		C7E702640895B96AAB41FDFD /* Pods-BasicPlaybackSampleApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BasicPlaybackSampleApp-resources.sh"; sourceTree = "<group>"; };
+		C915D3287708C004C748E46A /* OOCallbacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOCallbacks.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOCallbacks.h"; sourceTree = "<group>"; };
+		C9B7C8A9872C2BC75D3CD554 /* OODebugMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OODebugMode.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OODebugMode.h"; sourceTree = "<group>"; };
+		CA1932DB5703367E1FA56152 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D29F76711FB03B8D5224F015 /* OOOoyalaPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOOoyalaPlayer.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOOoyalaPlayer.h"; sourceTree = "<group>"; };
+		D91EC9B1783FB1E5A3AA7C74 /* OOAdSpot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAdSpot.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAdSpot.h"; sourceTree = "<group>"; };
+		DAFE98D05B32F2C348528BFC /* Pods-BasicPlaybackSampleApp-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BasicPlaybackSampleApp-environment.h"; sourceTree = "<group>"; };
+		DDEF7AC23A866A896B4C9463 /* OOPlayerDomain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOPlayerDomain.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOPlayerDomain.h"; sourceTree = "<group>"; };
+		DE0513073E67612A359FFFEA /* OOAdPluginManagerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAdPluginManagerProtocol.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAdPluginManagerProtocol.h"; sourceTree = "<group>"; };
+		E6C79531B5A9C89B10B34D88 /* libPods-BasicPlaybackSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicPlaybackSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7EDAE2C03E46862EECB1C25 /* OOUIProgressSliderIOS7.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOUIProgressSliderIOS7.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOUIProgressSliderIOS7.h"; sourceTree = "<group>"; };
+		EB92A3FC6E96FAB3E393CDBA /* OOAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAnalytics.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAnalytics.h"; sourceTree = "<group>"; };
+		ED8F83FC5CD4495932D28924 /* OOOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOOptions.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOOptions.h"; sourceTree = "<group>"; };
+		ED93268DAD72904B1E4E0A97 /* OOSignatureGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOSignatureGenerator.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOSignatureGenerator.h"; sourceTree = "<group>"; };
+		EFEE9D70F0BF4E2C501746DF /* OOAdPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOAdPlugin.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAdPlugin.h"; sourceTree = "<group>"; };
+		F5D4AA9774A5275B38CE4E68 /* iOS7ScrubberSliderFraming.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iOS7ScrubberSliderFraming.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/iOS7ScrubberSliderFraming.h"; sourceTree = "<group>"; };
+		FC29A13D1D20C6DE4BCCAE45 /* OOPlayerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOPlayerProtocol.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOPlayerProtocol.h"; sourceTree = "<group>"; };
+		FDABCBFCA9A080838F9764F0 /* OOClosedCaptionsSelectorViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OOClosedCaptionsSelectorViewController.h; path = "vendor/Ooyala/OoyalaSDK-iOS/Headers/OOClosedCaptionsSelectorViewController.h"; sourceTree = "<group>"; };
+		FDC7DBF5BA0C329BFC8E051B /* Pods-BasicPlaybackSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BasicPlaybackSampleApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A41E2AB5E36E3C3C98D0D01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E2332B295392783FB9FF82 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D56959A27B26CCB1AE48A51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6C79531B5A9C89B10B34D88 /* libPods-BasicPlaybackSampleApp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BC61485264BEDAFC4284D37 /* OoyalaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EFEE9D70F0BF4E2C501746DF /* OOAdPlugin.h */,
+				DE0513073E67612A359FFFEA /* OOAdPluginManagerProtocol.h */,
+				D91EC9B1783FB1E5A3AA7C74 /* OOAdSpot.h */,
+				24EC0DE417F440C036430FD9 /* OOAdSpotManager.h */,
+				3D8B80626F4946F6390A4D7A /* OOAdSpotPlugin.h */,
+				7CDAF48FE50B20306D517EA8 /* OOAdsLearnMoreButton.h */,
+				EB92A3FC6E96FAB3E393CDBA /* OOAnalytics.h */,
+				37CD932022F93BF351EBD427 /* OOAuthorizableItem.h */,
+				5F657BA7F76885E3167553FE /* OOBufferView.h */,
+				C915D3287708C004C748E46A /* OOCallbacks.h */,
+				742972175B659755F554AC7C /* OOCaption.h */,
+				984DE229AD3A23491A4A7650 /* OOChannel.h */,
+				6128AE6F9D693450F85BD663 /* OOChannelSet.h */,
+				889E728BBEA0867EF0BA6E01 /* OOClientId.h */,
+				255F2EBE9BC58A6337FF3B55 /* OOClosedCaptions.h */,
+				5068B0E262E95CE921D58490 /* OOClosedCaptionsButton.h */,
+				51556DDEA5D1A971C596B9BA /* OOClosedCaptionsSelectorBackgroundViewController.h */,
+				FDABCBFCA9A080838F9764F0 /* OOClosedCaptionsSelectorViewController.h */,
+				9ED00139E29E62AF4BE7E1D8 /* OOClosedCaptionsStyle.h */,
+				0016979091349FA71CD0810D /* OOContentItem.h */,
+				7A3A73AA98C2617B440E2124 /* OOCuePointsView.h */,
+				C9B7C8A9872C2BC75D3CD554 /* OODebugMode.h */,
+				49CCC1A31BAB3582FA0E2D50 /* OODefaultPlayerInfo.h */,
+				0913A3414A8D158F55BD8D77 /* OODynamicChannel.h */,
+				9F019854214B8E5A921F3D70 /* OOEmbedTokenGenerator.h */,
+				6B9A30E75D57790FB3587C49 /* OOEmbeddedSecureURLGenerator.h */,
+				21A433312BD33D95E85CC189 /* OOEmbeddedSignatureGenerator.h */,
+				C36CEA00F55D99986BE2C6C9 /* OOFCCTVRating.h */,
+				855422A921FB3775A925EC45 /* OOFCCTVRatingConfiguration.h */,
+				172B53191735C9873568EB9E /* OOFullscreenButton.h */,
+				3390AA42623424BE8BD6DDFA /* OOLifeCycle.h */,
+				3F7188FBB51658AC7453CD49 /* OOManagedAdSpot.h */,
+				8BCF365151D6EF0869CB67F5 /* OOManagedAdsPlugin.h */,
+				2CC65425BCD7FE7DA24C3BB0 /* OOModule.h */,
+				2BB5ADE8B47E85863243DFB5 /* OOOoyalaAPIClient.h */,
+				0F14345F684D9C9CFC3F5CAA /* OOOoyalaAdSpot.h */,
+				0A7EB5417D16E5872699CCC5 /* OOOoyalaError.h */,
+				D29F76711FB03B8D5224F015 /* OOOoyalaPlayer.h */,
+				5AAA70C0191D62A26D62EDA2 /* OOOoyalaPlayerViewController.h */,
+				ED8F83FC5CD4495932D28924 /* OOOptions.h */,
+				2A151C5DC5EB33AD25009C56 /* OOOrderedDictionary.h */,
+				17BD56EFAA77DEB9A60599D4 /* OOPaginatedParentItem.h */,
+				BE7889860A2EF9199590389C /* OOPlayPauseButton.h */,
+				0305771CA6142C2F437A107A /* OOPlayableItem.h */,
+				1202B0DFAA8C5C3986047961 /* OOPlayer.h */,
+				DDEF7AC23A866A896B4C9463 /* OOPlayerDomain.h */,
+				20C67CECCD910D9ABC55073B /* OOPlayerInfo.h */,
+				FC29A13D1D20C6DE4BCCAE45 /* OOPlayerProtocol.h */,
+				11EF7A5F98D6FA78D5C958A3 /* OOReturnState.h */,
+				4FF48C490298D2A89EE3833B /* OOSecureURLGenerator.h */,
+				ED93268DAD72904B1E4E0A97 /* OOSignatureGenerator.h */,
+				711068BF40E569843BA2EA84 /* OOStateNotifier.h */,
+				65DB0F186D0D18BFFD4E516B /* OOStream.h */,
+				95D8603C18945789D9A1D7CE /* OOStreamPlayer.h */,
+				3BC7874CFB5DC5F05BC70EF3 /* OOStreamPlayerMappingCreator.h */,
+				1DB2CAF79FEF16EE43F79995 /* OOStreamPlayerMappingPredicate.h */,
+				8BE0F0734A03FE7D667C5EB1 /* OOTransparentToolbar.h */,
+				E7EDAE2C03E46862EECB1C25 /* OOUIProgressSliderIOS7.h */,
+				91407590A39E67EA28B8DCA7 /* OOUserInfo.h */,
+				7DE6105D9A0CE8C4E9CFB14E /* OOVASTAd.h */,
+				89D02F33DE9F6D60B7D03274 /* OOVASTAdData.h */,
+				AE660BD356E10468FA488BB0 /* OOVASTAdSpot.h */,
+				1CF71C7D2336EA18C2B37EE1 /* OOVASTLinearAd.h */,
+				97496D01D6896A13881FD856 /* OOVASTSequenceItem.h */,
+				2DF27FC584C39D34775E4B0A /* OOVASTStream.h */,
+				7FFF7D5023A147768B371FF1 /* OOVASTUtils.h */,
+				BCC789F9EEF2ADB9940CF172 /* OOVASTWrapperAd.h */,
+				0CF2BD48F7F702C8DD984C43 /* OOVideo.h */,
+				1E712E228B9BB5C3B388FFDF /* OOVideoGravityButton.h */,
+				F5D4AA9774A5275B38CE4E68 /* iOS7ScrubberSliderFraming.h */,
+				E0465B79C697B8D7305852B6 /* Frameworks */,
+			);
+			path = OoyalaSDK;
+			sourceTree = "<group>";
+		};
+		44E1BBFEECB97A93DB22841D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E83881D3C4973EED65411C6C /* Pods-BasicPlaybackSampleApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		58323BA6918AE3F8AF87A201 = {
+			isa = PBXGroup;
+			children = (
+				92C87DDEAEA5DF8FB7457AE6 /* Podfile */,
+				E50B60C0C439990623D20B73 /* Frameworks */,
+				7911B1E242007FFE08A8AB4B /* Pods */,
+				1D56959A27B26CCB1AE48A51 /* Products */,
+				44E1BBFEECB97A93DB22841D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7911B1E242007FFE08A8AB4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BC61485264BEDAFC4284D37 /* OoyalaSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E0465B79C697B8D7305852B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA2C20FC7C96B91AF5B57A /* libOoyalaSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E50B60C0C439990623D20B73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F00E08AFC24A16943AA36BE3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E83881D3C4973EED65411C6C /* Pods-BasicPlaybackSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				407C447A97373EDF1F32B1A3 /* Pods-BasicPlaybackSampleApp-acknowledgements.markdown */,
+				39E96976E59FE2BA173F8BDC /* Pods-BasicPlaybackSampleApp-acknowledgements.plist */,
+				9B42E35C566D534E48EBF2D3 /* Pods-BasicPlaybackSampleApp-dummy.m */,
+				DAFE98D05B32F2C348528BFC /* Pods-BasicPlaybackSampleApp-environment.h */,
+				C7E702640895B96AAB41FDFD /* Pods-BasicPlaybackSampleApp-resources.sh */,
+				2E0AF9C8D37E11915C006F54 /* Pods-BasicPlaybackSampleApp.debug.xcconfig */,
+				FDC7DBF5BA0C329BFC8E051B /* Pods-BasicPlaybackSampleApp.release.xcconfig */,
+			);
+			name = "Pods-BasicPlaybackSampleApp";
+			path = "Target Support Files/Pods-BasicPlaybackSampleApp";
+			sourceTree = "<group>";
+		};
+		F00E08AFC24A16943AA36BE3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CA1932DB5703367E1FA56152 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F09C5272565F3309FAE5CAF /* Pods-BasicPlaybackSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3EAA8480F0360CC7553275 /* Build configuration list for PBXNativeTarget "Pods-BasicPlaybackSampleApp" */;
+			buildPhases = (
+				812C1EE3233979AB842FABF8 /* Sources */,
+				2A41E2AB5E36E3C3C98D0D01 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BasicPlaybackSampleApp";
+			productName = "Pods-BasicPlaybackSampleApp";
+			productReference = E6C79531B5A9C89B10B34D88 /* libPods-BasicPlaybackSampleApp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F98B60FF63CBACA624C070B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = A886297DB23757046FA27AE2 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58323BA6918AE3F8AF87A201;
+			productRefGroup = 1D56959A27B26CCB1AE48A51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F09C5272565F3309FAE5CAF /* Pods-BasicPlaybackSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		812C1EE3233979AB842FABF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F053AA95CC4BD7DA4C10384 /* Pods-BasicPlaybackSampleApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B348CE952448DFA77F29CDBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6C48D6F5708231C7E2977DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC7DBF5BA0C329BFC8E051B /* Pods-BasicPlaybackSampleApp.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F27CEBB5ED91734E33B62F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E0AF9C8D37E11915C006F54 /* Pods-BasicPlaybackSampleApp.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F43EA5CE16152EBA28E5A7B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A886297DB23757046FA27AE2 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43EA5CE16152EBA28E5A7B4 /* Debug */,
+				B348CE952448DFA77F29CDBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3EAA8480F0360CC7553275 /* Build configuration list for PBXNativeTarget "Pods-BasicPlaybackSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27CEBB5ED91734E33B62F8A /* Debug */,
+				E6C48D6F5708231C7E2977DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F98B60FF63CBACA624C070B /* Project object */;
+}

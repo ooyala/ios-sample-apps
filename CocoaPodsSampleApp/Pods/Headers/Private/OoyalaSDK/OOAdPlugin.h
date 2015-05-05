@@ -1,0 +1,1 @@
+../../../OoyalaSDK/vendor/Ooyala/OoyalaSDK-iOS/Headers/OOAdPlugin.h
