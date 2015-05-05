@@ -25,7 +25,6 @@
 		0B9458AB1AC3353E000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458AA1AC3353E000DD545 /* libxml2.dylib */; };
 		0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
-		0B94591C1AC33AA2000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457D31AC32C64000DD545 /* OoyalaSDK.framework */; };
 		0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E51A40DF9A00E7DE88 /* LaunchScreen.xib */; };
 		0BC947D81A817756004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947D21A817756004CB997 /* PlayerDoubleButton.xib */; };
 		0BC947D91A817756004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947D31A817756004CB997 /* PlayerDoubleSwitch.xib */; };
@@ -39,7 +38,6 @@
 		0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* BasicSimplePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */; };
-		F6D82859D8F7F97CB7BA77DD /* libPods-BasicPlaybackSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84507F5C74A2F12DC8F46EE3 /* libPods-BasicPlaybackSampleApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +73,6 @@
 		0B19FEFE1A3B7532003E57DF /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBasicPlaybackSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B19FF021A3B7533003E57DF /* BasicPlaybackSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicPlaybackSampleAppSource.m; sourceTree = "<group>"; };
 		0B2459CB1A71F01100CC399A /* BaiscPlaybackSampleAppSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiscPlaybackSampleAppSource.h; sourceTree = "<group>"; };
-		0B9457D31AC32C64000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B9458AA1AC3353E000DD545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BC947D21A817756004CB997 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
@@ -88,9 +85,6 @@
 		0BC948131A81B627004CB997 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
-		1E7B731B4A04FC2AC1C219C4 /* Pods-BasicPlaybackSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlaybackSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasicPlaybackSampleApp/Pods-BasicPlaybackSampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		84507F5C74A2F12DC8F46EE3 /* libPods-BasicPlaybackSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicPlaybackSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9891D64E4972FB49B93F0034 /* Pods-BasicPlaybackSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlaybackSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasicPlaybackSampleApp/Pods-BasicPlaybackSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +96,6 @@
 				0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */,
 				0B17A0ED1A78207F009D1C50 /* libc++.dylib in Frameworks */,
 				0B9458AB1AC3353E000DD545 /* libxml2.dylib in Frameworks */,
-				F6D82859D8F7F97CB7BA77DD /* libPods-BasicPlaybackSampleApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B94591C1AC33AA2000DD545 /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,8 +116,6 @@
 				0B19FEFF1A3B7532003E57DF /* BasicPlaybackSampleAppSource */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B9457D21AC32C64000DD545 /* VendorLibraries */,
-				A4CD0DED7423B09A78DF8CAE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,7 +161,6 @@
 				0B140F8C1A2E53B0001324EE /* Security.framework */,
 				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
 				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
-				84507F5C74A2F12DC8F46EE3 /* libPods-BasicPlaybackSampleApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,14 +212,6 @@
 			path = BasicPlaybackSampleAppSource;
 			sourceTree = "<group>";
 		};
-		0B9457D21AC32C64000DD545 /* VendorLibraries */ = {
-			isa = PBXGroup;
-			children = (
-				0B9457D31AC32C64000DD545 /* OoyalaSDK.framework */,
-			);
-			path = VendorLibraries;
-			sourceTree = "<group>";
-		};
 		0BC947D11A817756004CB997 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,15 +223,6 @@
 				0BC947D71A817756004CB997 /* TableCell.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A4CD0DED7423B09A78DF8CAE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9891D64E4972FB49B93F0034 /* Pods-BasicPlaybackSampleApp.debug.xcconfig */,
-				1E7B731B4A04FC2AC1C219C4 /* Pods-BasicPlaybackSampleApp.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,12 +257,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B140F791A2E4709001324EE /* Build configuration list for PBXNativeTarget "BasicPlaybackSampleApp" */;
 			buildPhases = (
-				0E545AC610FADD8D3165E499 /* Check Pods Manifest.lock */,
 				0B140F4F1A2E4709001324EE /* Sources */,
 				0B140F501A2E4709001324EE /* Frameworks */,
 				0B140F511A2E4709001324EE /* Resources */,
 				0B140FA11A2E6438001324EE /* Headers */,
-				D6F0D87062E5BEDA490034FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,39 +342,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0E545AC610FADD8D3165E499 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D6F0D87062E5BEDA490034FE /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasicPlaybackSampleApp/Pods-BasicPlaybackSampleApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B140F4F1A2E4709001324EE /* Sources */ = {
@@ -532,7 +469,6 @@
 		};
 		0B140F7A1A2E4709001324EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9891D64E4972FB49B93F0034 /* Pods-BasicPlaybackSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -555,7 +491,6 @@
 		};
 		0B140F7B1A2E4709001324EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E7B731B4A04FC2AC1C219C4 /* Pods-BasicPlaybackSampleApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
