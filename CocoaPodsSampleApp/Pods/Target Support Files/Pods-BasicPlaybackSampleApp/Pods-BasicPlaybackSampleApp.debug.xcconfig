@@ -1,0 +1,7 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/OoyalaSDK"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/OoyalaSDK/vendor/Ooyala/OoyalaSDK-iOS"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/OoyalaSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"OoyalaSDK" -l"c++" -l"xml2" -l"z" -framework "AVFoundation" -framework "CoreMedia" -framework "MediaAccessibility" -framework "MediaPlayer" -framework "QuartzCore" -framework "SystemConfiguration"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
