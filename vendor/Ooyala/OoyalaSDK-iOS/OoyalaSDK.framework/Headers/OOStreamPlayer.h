@@ -10,8 +10,11 @@
 #import "OOPlayer.h"
 #import "OOPlayerInfo.h"
 
-@interface OOStreamPlayer : OOPlayer
-@property OOSeekStyle seekStyle;
+@interface OOStreamPlayer : OOPlayer {
+  @protected
+  OOSeekStyle _seekStyle;
+}
+@property (nonatomic, readonly) OOSeekStyle seekStyle;
 + (id<OOPlayerInfo>) defaultPlayerInfo;
 + (void) setDefaultPlayerInfo:(id<OOPlayerInfo>) playerInfo;
 
