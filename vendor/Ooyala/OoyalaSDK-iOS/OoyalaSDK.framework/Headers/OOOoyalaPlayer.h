@@ -27,6 +27,7 @@
 @class OOStreamPlayer;
 @class OOManagedAdSpot;
 @class OOPlayerDomain;
+@class OOChromecastPlugin;
 @class OOStreamPlayerMapping;
 @class OOFCCTVRatingConfiguration;
 @class OOFCCTVRating;
@@ -155,6 +156,13 @@ extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live clo
  * @returns the string that represents the SDK version
  */
 + (NSString *)version;
+
+/**
+ * Initialize an OOOoyalaPlayer with the given parameters
+ * @param[in] apiClient the initialized OOOoyalaAPIClient to use
+ * @returns the initialized OOOoyalaPlayer
+ */
+- (id)initWithOoyalaAPIClient:(OOOoyalaAPIClient *)apiClient;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -437,10 +445,17 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOStateNotifier *)createStateNotifier;
 
+- (void)initCastManager:(OOChromecastPlugin *)castPlugin;
+
+- (void)requestCastMode;
+
+- (void)exitCastModeWithEmbedCode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying;
+
+- (BOOL)isInCastMode;
 /**
-* Return a collection of the times at which to show cue points.
-* E.g. for the content player, show when ads are scheduled to play.
-*/
+ * Return a collection of the times at which to show cue points.
+ * E.g. for the content player, show when ads are scheduled to play.
+ */
 -(NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSecondsForCurrentPlayer;
 
 /**
