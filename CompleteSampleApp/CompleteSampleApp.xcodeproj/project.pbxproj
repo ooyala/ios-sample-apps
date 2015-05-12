@@ -13,6 +13,8 @@
 		0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0E41A78203E009D1C50 /* libc++.dylib */; };
 		0B19FF6A1A3B8C75003E57DF /* CompleteSampleAppListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */; };
 		0B19FF6B1A3B8C75003E57DF /* CompleteSampleAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */; };
+		0B1AFB751B02C6C400347DFA /* libNPAWSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */; };
+		0B1AFB771B02C76400347DFA /* YouboraMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB761B02C76400347DFA /* YouboraMedia.framework */; };
 		0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45BC1A6889440092F056 /* EventKit.framework */; };
 		0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C01A6889510092F056 /* MessageUI.framework */; };
 		0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C21A68895A0092F056 /* AdSupport.framework */; };
@@ -88,6 +90,8 @@
 		0B17A0E41A78203E009D1C50 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteSampleAppListViewController.h; sourceTree = "<group>"; };
 		0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteSampleAppListViewController.m; sourceTree = "<group>"; };
+		0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNPAWSampleAppSource.a; path = ../NPAWSampleApp/build/Debug/libNPAWSampleAppSource.a; sourceTree = "<group>"; };
+		0B1AFB761B02C76400347DFA /* YouboraMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraMedia.framework; sourceTree = "<group>"; };
 		0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
 		0B1E45BC1A6889440092F056 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		0B1E45BE1A68894B0092F056 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -164,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1AFB751B02C6C400347DFA /* libNPAWSampleAppSource.a in Frameworks */,
 				0B9459151AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
 				0B9459161AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a in Frameworks */,
 				0B9459171AC33A40000DD545 /* libFreewheelSampleAppSource.a in Frameworks */,
@@ -175,6 +180,7 @@
 				0B94590C1AC33A1C000DD545 /* OoyalaIMASDK.framework in Frameworks */,
 				0B94590D1AC33A1C000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
+				0B1AFB771B02C76400347DFA /* YouboraMedia.framework in Frameworks */,
 				0B9457CB1AC2A5D8000DD545 /* libxml2.dylib in Frameworks */,
 				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
 				0B9458FB1AC33A1C000DD545 /* AdManager.framework in Frameworks */,
@@ -234,6 +240,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */,
 				0B94590F1AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a */,
 				0B9459101AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a */,
 				0B9459111AC33A40000DD545 /* libFreewheelSampleAppSource.a */,
@@ -286,6 +293,7 @@
 		0B9458B91AC33A1C000DD545 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				0B1AFB761B02C76400347DFA /* YouboraMedia.framework */,
 				0B9458BA1AC33A1C000DD545 /* AccessEnabler */,
 				0B9458D41AC33A1C000DD545 /* AdManager.framework */,
 				0B9458D51AC33A1C000DD545 /* GoogleIMAHeaders */,
@@ -648,7 +656,6 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos",
-					"/Users/michael.len/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -674,7 +681,6 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos",
-					"/Users/michael.len/repos/ios_sample_apps/AdvancedPlaybackSampleApp/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
