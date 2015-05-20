@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Liusha Huang. All rights reserved.
 //
 
-#import <OoyalaCastSDK/OOCastMiniControllerView.h>
 #import "ViewController.h"
 #import "PlayerViewController.h"
 #import "Utils.h"
 #import "CustomizedMiniControllerView.h"
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaCastSDK/OOCastMiniControllerView.h>
 #import <OoyalaCastSDK/OOChromecastPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
 

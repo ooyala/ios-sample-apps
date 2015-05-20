@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */; };
+		0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */; };
+		0B1AFB821B0C026E00347DFA /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FA1B0A607D00575391 /* GoogleCast.framework */; };
 		FF21F07C19CB5ABC00FE9D07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21F07B19CB5ABC00FE9D07 /* main.m */; };
 		FF21F07F19CB5ABC00FE9D07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21F07E19CB5ABC00FE9D07 /* AppDelegate.m */; };
 		FF21F08219CB5ABC00FE9D07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF21F08119CB5ABC00FE9D07 /* ViewController.m */; };
@@ -33,9 +36,6 @@
 		FF49D20F19CBAB91001B156F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */; };
 		FF49D21119CBABA2001B156F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D21019CBABA2001B156F /* libc++.dylib */; };
 		FF49D21319CBABAE001B156F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D21219CBABAE001B156F /* libxml2.dylib */; };
-		FF4A92FD1B0A607D00575391 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FA1B0A607D00575391 /* GoogleCast.framework */; };
-		FF4A92FE1B0A607D00575391 /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */; };
-		FF4A92FF1B0A607D00575391 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */; };
 		FF74F49A19D4B1A90064645E /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = FF74F49819D4B1A90064645E /* pause.png */; };
 		FF74F49B19D4B1A90064645E /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = FF74F49919D4B1A90064645E /* play.png */; };
 		FF74F4A619D4B3480064645E /* ooyala_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FF74F4A519D4B3480064645E /* ooyala_logo.png */; };
@@ -103,9 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF4A92FD1B0A607D00575391 /* GoogleCast.framework in Frameworks */,
-				FF4A92FE1B0A607D00575391 /* OoyalaCastSDK.framework in Frameworks */,
-				FF4A92FF1B0A607D00575391 /* OoyalaSDK.framework in Frameworks */,
+				0B1AFB821B0C026E00347DFA /* GoogleCast.framework in Frameworks */,
+				0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */,
+				0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */,
 				FF49D21319CBABAE001B156F /* libxml2.dylib in Frameworks */,
 				FF49D21119CBABA2001B156F /* libc++.dylib in Frameworks */,
 				FF49D20F19CBAB91001B156F /* SystemConfiguration.framework in Frameworks */,
@@ -477,21 +477,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GoogleCastFramework-2.4.0-Release",
 					"$(PROJECT_DIR)",
-					"/Users/liusha.huang/repos/ios_sample_apps/vendor/GoogleCastFramework-2.4.0-Release",
-					"/Users/liusha.huang/repos/ios_sample_apps/vendor/Ooyala/OoyalaCastSDK-iOS",
-					"/Users/liusha.huang/repos/ios_sample_apps/vendor/Ooyala/OoyalaSDK-iOS",
+					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = OoyalaChromecastSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Headers/TestApp",
-					"/Users/liusha.huang/repos/ios-sdk/sdk/OoyalaSDK/Classes/Internal/Players",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lstdc++",
@@ -508,21 +500,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GoogleCastFramework-2.4.0-Release",
 					"$(PROJECT_DIR)",
-					"/Users/liusha.huang/repos/ios_sample_apps/vendor/GoogleCastFramework-2.4.0-Release",
-					"/Users/liusha.huang/repos/ios_sample_apps/vendor/Ooyala/OoyalaCastSDK-iOS",
-					"/Users/liusha.huang/repos/ios_sample_apps/vendor/Ooyala/OoyalaSDK-iOS",
+					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = OoyalaChromecastSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Headers/TestApp",
-					"/Users/liusha.huang/repos/ios-sdk/sdk/OoyalaSDK/Classes/Internal/Players",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lstdc++",
