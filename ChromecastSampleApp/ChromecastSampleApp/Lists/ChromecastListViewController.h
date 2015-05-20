@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ChromecastListViewController.h
 //  OoyalaChromecastSampleApp
 //
 //  Created by Liusha Huang on 9/18/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <OoyalaCastSDK/OOChromecastPlugin.h>
 
-@interface ViewController : UITableViewController <OOCastPluginDelegate>
+@interface ChromecastListViewController : UITableViewController <OOCastPluginDelegate>
 
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Liusha Huang. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ChromecastListViewController.h"
 #import "PlayerViewController.h"
 #import "Utils.h"
 #import "CustomizedMiniControllerView.h"
@@ -16,7 +16,7 @@
 #import <OoyalaCastSDK/OOChromecastPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
 
-@interface ViewController ()
+@interface ChromecastListViewController ()
 @property(nonatomic, strong) NSMutableArray *mediaList;
 @property(nonatomic, strong) NSDictionary *currentMediaInfo;
 @property(nonatomic, strong) OOChromecastPlugin *castPlugin;
@@ -28,7 +28,7 @@
 @property (strong, nonatomic) NSMutableArray *cells;
 @end
 
-@implementation ViewController
+@implementation ChromecastListViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
