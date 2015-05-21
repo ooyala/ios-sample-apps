@@ -141,13 +141,6 @@
 
 #pragma mark - Table View
 
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-//    self.bottomMiniControllerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - self.bottomMiniControllerView.frame.size.height + scrollView.contentOffset.y, self.bottomMiniControllerView.frame.size.width, self.bottomMiniControllerView.frame.size.height);
-//  [scrollView bringSubviewToFront:self.bottomMiniControllerView];
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1;
 }
@@ -188,7 +181,7 @@
   [mediaInfo1 setObject:@"wxaWd5bTrJFI--Ga7TgbJtzcPrbzENBV" forKey:@"embedcode"];
   [mediaInfo1 setObject:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz" forKey:@"pcode"];
   [mediaInfo1 setObject:@"http://www.ooyala.com" forKey:@"domain"];
-  [mediaInfo1 setObject:@"Test 1.mp4" forKey:@"title"];
+  [mediaInfo1 setObject:@"CHROMECAST TEST1.mp4" forKey:@"title"];
   [mediaInfo1 setObject:@"http://ak.c.ooyala.com/wxaWd5bTrJFI--Ga7TgbJtzcPrbzENBV/3Gduepif0T1UGY8H4xMDoxOmFkOxyVqc" forKey:@"imgurl"];
   [mediaInfo1 setObject:@"Description" forKey:@"description"];
 
@@ -196,7 +189,7 @@
   [mediaInfo2 setObject:@"IzNGg3bzoHHjEfnJP-fj2jB0-oci0Jnm" forKey:@"embedcode"];
   [mediaInfo2 setObject:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz" forKey:@"pcode"];
   [mediaInfo2 setObject:@"http://www.ooyala.com" forKey:@"domain"];
-  [mediaInfo2 setObject:@"Test 2.mp4" forKey:@"title"];
+  [mediaInfo2 setObject:@"DOGMOVIE.mp4" forKey:@"title"];
   [mediaInfo2 setObject:@"http://ak.c.ooyala.com/IzNGg3bzoHHjEfnJP-fj2jB0-oci0Jnm/Ut_HKthATH4eww8X4xMDoxOjBrO-I4W8" forKey:@"imgurl"];
   [mediaInfo2 setObject:@"Description" forKey:@"description"];
 
@@ -204,7 +197,7 @@
   [mediaInfo3 setObject:@"xiNmg3bzpFkkwsYqkb5UtGvNOpcwiOCS" forKey:@"embedcode"];
   [mediaInfo3 setObject:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz" forKey:@"pcode"];
   [mediaInfo3 setObject:@"http://www.ooyala.com" forKey:@"domain"];
-  [mediaInfo3 setObject:@"Test 3.mp4" forKey:@"title"];
+  [mediaInfo3 setObject:@"HAPPYFIT2.mp4" forKey:@"title"];
   [mediaInfo3 setObject:@"http://ak.c.ooyala.com/xiNmg3bzpFkkwsYqkb5UtGvNOpcwiOCS/Ut_HKthATH4eww8X4xMDoxOnNpOxmary" forKey:@"imgurl"];
   [mediaInfo3 setObject:@"Description" forKey:@"description"];
 
@@ -212,7 +205,7 @@
   [mediaInfo4 setObject:@"Y4OWg3bzoNtSZ9TOg3wl9BPUspXZiMYc" forKey:@"embedcode"];
   [mediaInfo4 setObject:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz" forKey:@"pcode"];
   [mediaInfo4 setObject:@"http://www.ooyala.com" forKey:@"domain"];
-  [mediaInfo4 setObject:@"Test 4.mp4" forKey:@"title"];
+  [mediaInfo4 setObject:@"WEIRDAD.mp4" forKey:@"title"];
   [mediaInfo4 setObject:@"http://ak.c.ooyala.com/Y4OWg3bzoNtSZ9TOg3wl9BPUspXZiMYc/3Gduepif0T1UGY8H4xMDoxOjBmO230Ws" forKey:@"imgurl"];
   [mediaInfo4 setObject:@"Description" forKey:@"description"];
 
@@ -220,7 +213,7 @@
   [mediaInfo5 setObject:@"o0OWg3bzrLBNfadaXSaCA7HbknPLFRPP" forKey:@"embedcode"];
   [mediaInfo5 setObject:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz" forKey:@"pcode"];
   [mediaInfo5 setObject:@"http://www.ooyala.com" forKey:@"domain"];
-  [mediaInfo5 setObject:@"Test 5.mp4" forKey:@"title"];
+  [mediaInfo5 setObject:@"HEINZ.mp4" forKey:@"title"];
   [mediaInfo5 setObject:@"http://ak.c.ooyala.com/o0OWg3bzrLBNfadaXSaCA7HbknPLFRPP/3Gduepif0T1UGY8H4xMDoxOjBrO-I4W8" forKey:@"imgurl"];
   [mediaInfo5 setObject:@"Description" forKey:@"description"];
 
