@@ -58,6 +58,7 @@
   // Init the castPlugin in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castPlugin];
   [self.ooyalaPlayer setEmbedCode:embedcode];
+  [self.ooyalaPlayer play];
 }
 
 - (void)onCastModeEnter {
