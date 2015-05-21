@@ -447,7 +447,7 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 
 - (void)initCastManager:(OOChromecastPlugin *)castPlugin;
 
-- (void)requestCastMode;
+- (void)switchToCastMode;
 
 - (void)exitCastModeWithEmbedCode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying;
 
