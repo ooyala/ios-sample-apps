@@ -17,13 +17,13 @@
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
 
 @interface ChromecastListViewController ()
+@property(nonatomic, strong) IBOutlet UINavigationItem *navigationBar;
 @property(nonatomic, strong) NSMutableArray *mediaList;
 @property(nonatomic, strong) NSDictionary *currentMediaInfo;
 @property(nonatomic, strong) OOChromecastPlugin *castPlugin;
-@property (strong, nonatomic) IBOutlet UINavigationItem *navigationBar;
+
 @property (strong, nonatomic) UIBarButtonItem *castButton;
 @property (strong, nonatomic) OOCastMiniControllerView *miniControllerView;
-
 @property (strong, nonatomic) OOCastMiniControllerView *bottomMiniControllerView;
 @property (strong, nonatomic) NSMutableArray *cells;
 @end
@@ -60,7 +60,6 @@
 - (void)dismissMiniController {
   [self.miniControllerView dismiss];
   [self.navigationController setToolbarHidden:YES animated:YES];
-  [self.tableView reloadData];
 }
 
 - (void)initPlayerViewControllerwithEmbedcode {
@@ -69,8 +68,8 @@
   if (![self.navigationController.topViewController isKindOfClass:[PlayerViewController class]]) {
     for (NSMutableDictionary *mediaInfo in self.mediaList) {
       if ([[mediaInfo valueForKey:@"embedcode"] isEqualToString:embedcode]) {
-        self.currentMediaInfo = mediaInfo;
         [self dismissMiniController];
+        self.currentMediaInfo = mediaInfo;
         [self performSegueWithIdentifier:@"play" sender:self];
       }
     }
@@ -83,7 +82,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   self.castPlugin.delegate = self;
-  [self.tableView reloadData];
   if ([self.castPlugin isInCastMode]) {
     [self displayMiniController];
   }
@@ -134,7 +132,6 @@
         [cell setNeedsLayout];
       });
     });
-
     [self.cells addObject:cell];
   }
 }
@@ -149,21 +146,12 @@
   return [self.mediaList count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   return [self.cells objectAtIndex:indexPath.row];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 125;
-}
-
-  // The event handling method
-- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
-  CGPoint location = [recognizer locationInView:[recognizer.view superview]];
-  NSLog(@"Click location = %@", NSStringFromCGPoint(location));
-  [self performSegueWithIdentifier:@"play" sender:self];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

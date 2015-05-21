@@ -16,6 +16,8 @@
 
 @interface PlayerViewController ()
 @property (strong, nonatomic) IBOutlet UINavigationItem *navigationBar;
+@property (strong, nonatomic) IBOutlet UIView *videoView;
+@property (strong, nonatomic) IBOutlet UIView *mediaDetailView;
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (strong, nonatomic) OOOoyalaPlayer *ooyalaPlayer;
 @property (strong, nonatomic) OOChromecastPlugin *castPlugin;
@@ -32,7 +34,6 @@
   
   UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castPlugin getCastButton]];
   self.navigationBar.rightBarButtonItem = leftbutton;
-
 
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
   NSString *pcode = [self.mediaInfo valueForKey:@"pcode"];
@@ -95,12 +96,6 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-  //[self.ooyalaPlayerViewController.view removeFromSuperview];
   [super viewWillDisappear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 @end

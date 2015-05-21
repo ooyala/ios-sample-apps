@@ -10,10 +10,5 @@
 #import <OoyalaCastSDK/OOChromecastPlugin.h>
 
 @interface PlayerViewController : UIViewController <OOCastPluginDelegate>
-@property (strong, nonatomic) IBOutlet UIView *videoView;
-@property (strong, nonatomic) IBOutlet UIView *mediaDetailView;
 @property (strong, nonatomic) NSDictionary *mediaInfo;
-
-
-
 @end
