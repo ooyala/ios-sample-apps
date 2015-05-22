@@ -60,7 +60,7 @@ NSString * const USER_ID = @"pkArmh";
                                              object:self.ooyalaPlayerViewController.player];
 
   // initialize youbora plugin
-  self.youbora = [[Youbora alloc] initWithSystemId:SYSTEM_ID userID:USER_ID playerInstance:self.ooyalaPlayerViewController options:nil];
+  self.youbora = [[Youbora alloc] initWithSystemId:SYSTEM_ID userID:USER_ID playerInstance:player options:nil];
 
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];
@@ -70,7 +70,7 @@ NSString * const USER_ID = @"pkArmh";
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   [self.ooyalaPlayerViewController.player play];
-  
+
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
