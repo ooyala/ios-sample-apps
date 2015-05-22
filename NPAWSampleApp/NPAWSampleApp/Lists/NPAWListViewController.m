@@ -21,34 +21,21 @@
 
 - (id)init {
   self = [super init];
-  self.title = @"Basic Playback";
+  self.title = @"NPAW Youbora Integration";
   return self;
 }
 
-- (void)addAllBasicPlayerSelectionOptions {
-  for(long i = [self.optionList count] - 1; i >= 0; i--) {
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:[self.optionList objectAtIndex:i] embedCode:[self.optionEmbedCodes objectAtIndex:i] viewController: [NPAWDefaultPlayerViewController class]]];
-  }
-}
+- (void)addAllPlayerSelectionOptions {
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic NPAW Youbura Integration" embedCode: @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [NPAWDefaultPlayerViewController class]]];
 
-- (void) initTitlesAndEmbedCodes {
-  self.optionList = [[NSMutableArray alloc] initWithObjects:
-                     @"HLS Video",
-                     nil];
-  
-  self.optionEmbedCodes = [[NSMutableArray alloc] initWithObjects:
-                           @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1",
-                           nil];
-  
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-  
-  [self initTitlesAndEmbedCodes];
-  [self addAllBasicPlayerSelectionOptions];
+
+  [self addAllPlayerSelectionOptions];
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
