@@ -124,7 +124,6 @@ extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live clo
 @property(readonly, nonatomic) BOOL isAudioOnlyStreamPlaying;
 @property(readonly, nonatomic, getter = isClosedCaptionsTrackAvailable) BOOL closedCaptionsTrackAvailable;
 @property(nonatomic, strong) OOCurrentItemChangedCallback currentItemChangedCallback; /**< A callback that will be called every time the current item is changed */
-@property(nonatomic, strong) OOStreamPlayer *basePlayer; /**< the base player to use for displaying content.  Defaults to OOBaseStreamPlayer. */
 
 @property (nonatomic) OOOoyalaPlayerActionAtEnd actionAtEnd; /**< the OOOoyalaPlayerActionAtEnd to perform when the current item finishes playing. */
 @property (readonly, nonatomic, getter = isExternalPlaybackActive) BOOL externalPlaybackActive;
