@@ -4,7 +4,7 @@
 target 'BasicPlaybackSampleApp' do
 
 source 'https://github.com/ooyala/ios-sdk-podspecs.git'
-pod 'OoyalaSDK', '~> 3.5.0'
+pod 'OoyalaSDK', '~> 4.1.1'
 
 end
 
