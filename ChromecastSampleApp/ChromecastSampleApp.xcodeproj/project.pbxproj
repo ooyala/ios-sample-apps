@@ -436,6 +436,7 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lstdc++",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = ChromecastSampleApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,6 +461,7 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lstdc++",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = ChromecastSampleApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
