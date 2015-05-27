@@ -34,6 +34,8 @@
 		0B1AFB721B02C58D00347DFA /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB701B02C58D00347DFA /* OoyalaSDK.framework */; };
 		0B1AFB731B02C58D00347DFA /* YouboraMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */; };
 		0B1AFB781B02C82300347DFA /* YouboraMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */; };
+		0B89E18D1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */; };
+		0B89E18E1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
 		0B9458AB1AC3353E000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458AA1AC3353E000DD545 /* libxml2.dylib */; };
 		0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
@@ -70,6 +72,8 @@
 		0B1AFB571B02C50500347DFA /* libNPAWSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNPAWSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1AFB701B02C58D00347DFA /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraMedia.framework; sourceTree = "<group>"; };
+		0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAWOptionalMetadataPlayerViewController.h; sourceTree = "<group>"; };
+		0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAWOptionalMetadataPlayerViewController.m; sourceTree = "<group>"; };
 		0B9458AA1AC3353E000DD545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -162,6 +166,8 @@
 			children = (
 				0B1AFB2A1B02BAAB00347DFA /* NPAWDefaultPlayerViewController.h */,
 				0B1AFB2B1B02BAAB00347DFA /* NPAWDefaultPlayerViewController.m */,
+				0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */,
+				0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1AFB3E1B02BAAB00347DFA /* NPAWListViewController.h in Headers */,
+				0B89E18D1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h in Headers */,
 				0B1AFB431B02BAAB00347DFA /* PlayerSelectionOption.h in Headers */,
 				0B1AFB451B02BAAB00347DFA /* SampleAppPlayerViewController.h in Headers */,
 				0B1AFB411B02BAAB00347DFA /* NPAWDefaultPlayerViewController.h in Headers */,
@@ -323,6 +330,7 @@
 				0B1AFB3F1B02BAAB00347DFA /* NPAWListViewController.m in Sources */,
 				0B1AFB441B02BAAB00347DFA /* PlayerSelectionOption.m in Sources */,
 				0B1AFB461B02BAAB00347DFA /* SampleAppPlayerViewController.m in Sources */,
+				0B89E18E1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m in Sources */,
 				0B1AFB401B02BAAB00347DFA /* main.m in Sources */,
 				0B1AFB421B02BAAB00347DFA /* NPAWDefaultPlayerViewController.m in Sources */,
 				0B1AFB391B02BAAB00347DFA /* AppDelegate.m in Sources */,
