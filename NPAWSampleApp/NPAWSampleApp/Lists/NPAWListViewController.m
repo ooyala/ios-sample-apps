@@ -7,6 +7,7 @@
 
 #import "NPAWListViewController.h"
 #import "NPAWDefaultPlayerViewController.h"
+#import "NPAWOptionalMetadataPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 
 #import "PlayerSelectionOption.h"
@@ -27,6 +28,7 @@
 
 - (void)addAllPlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic NPAW Youbura Integration" embedCode: @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [NPAWDefaultPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"NPAW with Optional Metadata" embedCode: @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [NPAWOptionalMetadataPlayerViewController class]]];
 
 }
 
