@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  OoyalaChromecastSampleApp
+//  ChromecastSampleApp
 //
 //  Created by Liusha Huang on 9/18/14.
 //  Copyright (c) 2014 Liusha Huang. All rights reserved.
@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   //[Utils cleanupLocalFiles];
-  self.castManager = [OOCastManager getCastPluginWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castManager = [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
   self.castManager.delegate = self;
 
   UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
@@ -93,7 +93,7 @@
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castPlugin:self.castManager];
+  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager];
   [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
