@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OOChromecastPlugin.h"
+#import "OOCastManager.h"
 #import "OOCastMiniControllerProtocol.h"
 
 @interface OOCastMenuViewController : UITableViewController
 
 /**
- * Initiate and return a OOCastMenuViewController with given castPlugin
+ * Initiate and return a OOCastMenuViewController with given OOCastManager
  */
-- (id)initWithCastPlugin:(OOChromecastPlugin *)castPlugin;
+- (id)initWithCastManager:(OOCastManager *)castManager;
 
 @end

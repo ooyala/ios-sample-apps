@@ -12,12 +12,12 @@
 @protocol OOCastManagerProtocol <NSObject>
 
 /**
- * Return YES if the ChromeCastPlugin is connected to a cast device
+ * Return YES if the OOCastManager is connected to a cast device
  */
 - (BOOL)isConnectedToChromecast;
 
 /**
- *  Return the castPlayer related to this ChromeCastPlugin
+ *  Return the castPlayer related to this OOCastManager
  */
 - (id)getCastPlayer;
 

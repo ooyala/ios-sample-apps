@@ -27,7 +27,7 @@
 @class OOStreamPlayer;
 @class OOManagedAdSpot;
 @class OOPlayerDomain;
-@class OOChromecastPlugin;
+@class OOCastManager;
 @class OOStreamPlayerMapping;
 @class OOFCCTVRatingConfiguration;
 @class OOFCCTVRating;
@@ -444,7 +444,7 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOStateNotifier *)createStateNotifier;
 
-- (void)initCastManager:(OOChromecastPlugin *)castPlugin;
+- (void)initCastManager:(OOCastManager *)castManager;
 
 - (void)switchToCastMode;
 

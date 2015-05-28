@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "OOCastMiniControllerProtocol.h"
 
-@class OOChromecastPlugin;
+@class OOCastManager;
 
 @interface OOCastMiniControllerView : UIView<OOCastMiniControllerProtocol>
 
 @property(nonatomic, strong) UITableViewCell *cell;
 
-- (id)initWithFrame:(CGRect)frame castPlugin:(OOChromecastPlugin *)castPlugin;
+- (id)initWithFrame:(CGRect)frame castManager:(OOCastManager *)castManager;
 @end

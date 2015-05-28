@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <OoyalaSDK/OOPlayerProtocol.h>
 
-@class OOChromecastPlugin;
+@class OOCastManager;
 
 @protocol OOCastMiniControllerProtocol <NSObject>
 
 /**
- * This is called when the play/pause button need to update by OOCastPlugin
+ * This is called when the play/pause button need to update by OOCastManager
  * Show pause button if the given state is OOOoyalaPlayerStatePlaying
  */
 - (void)updatePlayState:(BOOL)isPlaying;
