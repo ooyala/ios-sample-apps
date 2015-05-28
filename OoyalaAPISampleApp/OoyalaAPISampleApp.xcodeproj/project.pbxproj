@@ -484,6 +484,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
 			};
 			name = Debug;
@@ -502,6 +503,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
 			};
 			name = Release;

@@ -528,6 +528,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -547,6 +548,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
