@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  OoyalaChromecastSampleApp
+//  ChromecastSampleApp
 //
 //  Created by Liusha Huang on 9/18/14.
 //  Copyright (c) 2014 Liusha Huang. All rights reserved.
@@ -13,14 +13,14 @@
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
-#import <OoyalaCastSDK/OOChromecastPlayer.h>
+#import <OoyalaCastSDK/OOCastPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
 
 @interface ChromecastListViewController ()
 @property(nonatomic, strong) IBOutlet UINavigationItem *navigationBar;
 @property(nonatomic, strong) NSMutableArray *mediaList;
 @property(nonatomic, strong) NSDictionary *currentMediaInfo;
-@property(nonatomic, strong) OOChromecastPlugin *castPlugin;
+@property(nonatomic, strong) OOCastManager *castManager;
 
 @property (strong, nonatomic) UIBarButtonItem *castButton;
 @property (strong, nonatomic) OOCastMiniControllerView *miniControllerView;
@@ -33,19 +33,19 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   //[Utils cleanupLocalFiles];
-  self.castPlugin = [OOChromecastPlugin getCastPluginWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
-  self.castPlugin.delegate = self;
+  self.castManager = [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castManager.delegate = self;
 
-  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castPlugin getCastButton]];
+  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
   self.navigationBar.rightBarButtonItem = rightButton;
   [self buildMediaDictionary];
   [self buildTableViewCells];
   
-  [self.castPlugin disconnectFromOoyalaPlayer];
+  [self.castManager disconnectFromOoyalaPlayer];
 
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissMiniController) name:OOChromecastPluginDidDisconnectNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissMiniController) name:OOCastManagerDidDisconnectNotification object:nil];
 
-  [[NSNotificationCenter defaultCenter] addObserverForName:OOChromecastMiniControllerClickedNotification
+  [[NSNotificationCenter defaultCenter] addObserverForName:OOCastMiniControllerClickedNotification
                                                     object:nil
                                                      queue:nil
                                                 usingBlock:^(NSNotification *note) {
@@ -64,7 +64,7 @@
 
 - (void)initPlayerViewControllerwithEmbedcode {
   NSLog(@"Mini Controller click received");
-  NSString *embedcode = self.castPlugin.castPlayer.embedCode;
+  NSString *embedcode = self.castManager.castPlayer.embedCode;
   if (![self.navigationController.topViewController isKindOfClass:[PlayerViewController class]]) {
     for (NSMutableDictionary *mediaInfo in self.mediaList) {
       if ([[mediaInfo valueForKey:@"embedcode"] isEqualToString:embedcode]) {
@@ -81,8 +81,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  self.castPlugin.delegate = self;
-  if ([self.castPlugin isInCastMode]) {
+  self.castManager.delegate = self;
+  if ([self.castManager isInCastMode]) {
     [self displayMiniController];
   }
 }
@@ -93,8 +93,8 @@
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castPlugin:self.castPlugin];
-  [self.castPlugin.castPlayer registerMiniController:self.bottomMiniControllerView];
+  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager];
+  [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
   UIBarButtonItem *miniController = [[UIBarButtonItem alloc] initWithCustomView:self.bottomMiniControllerView];
