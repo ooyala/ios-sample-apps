@@ -60,7 +60,7 @@
 
   // Load the video
   [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [_ooyalaPlayerViewController.player play];
+  [_ooyalaPlayerViewController.player playWithInitialTime:20];
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
