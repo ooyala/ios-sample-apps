@@ -7,12 +7,12 @@
 //
 
 #import "CustomizedMiniControllerView.h"
-#import <OoyalaCastSDK/OOChromecastPlugin.h>
-#import <OoyalaCastSDK/OOChromecastPlayer.h>
+#import <OoyalaCastSDK/OOCastManager.h>
+#import <OoyalaCastSDK/OOCastPlayer.h>
 
 @interface CustomizedMiniControllerView()
 
-@property(nonatomic, strong) OOChromecastPlugin *castPlugin;
+@property(nonatomic, strong) OOCastManager *castPlugin;
 
 @property(nonatomic, strong) UIImage *playImage;
 @property(nonatomic, strong) UIImage *pauseImage;

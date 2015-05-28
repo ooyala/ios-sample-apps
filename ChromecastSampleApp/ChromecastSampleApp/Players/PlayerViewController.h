@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <OoyalaCastSDK/OOChromecastPlugin.h>
+#import <OoyalaCastSDK/OOcastManager.h>
 
 @interface PlayerViewController : UIViewController <OOCastPluginDelegate>
 @property (strong, nonatomic) NSDictionary *mediaInfo;
