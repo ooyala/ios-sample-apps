@@ -502,6 +502,7 @@
 					/Users/michael.len/repos/ios_sample_apps/ContentProtectionSampleApp/VendorLibraries,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FreewheelSampleApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,6 +531,7 @@
 					/Users/michael.len/repos/ios_sample_apps/ContentProtectionSampleApp/VendorLibraries,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FreewheelSampleApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
