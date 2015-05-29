@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <OoyalaCastSDK/OOCastManager.h>
+#import <OoyalaCastSDK/OOChromecastPlugin.h>
 
 @interface ChromecastListViewController : UITableViewController <OOCastPluginDelegate>
 

@@ -7,6 +7,7 @@
 //
 
 #import "PlayerViewController.h"
+#import <OoyalaCastSDK/OOChromeCastPlugin.h>
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
@@ -19,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIView *mediaDetailView;
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (strong, nonatomic) OOOoyalaPlayer *ooyalaPlayer;
-@property (strong, nonatomic) OOCastManager *castPlugin;
+@property (strong, nonatomic) OOChromecastPlugin *castPlugin;
 @end
 
 @implementation PlayerViewController
@@ -28,7 +29,7 @@
   [super viewDidLoad];
 
   // Fetch castPlugin and castButton
-  self.castPlugin = [OOCastManager getCastPluginWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castPlugin = [OOChromecastPlugin getCastPluginWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
   self.castPlugin.delegate = self;
   
   UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castPlugin getCastButton]];
@@ -48,11 +49,11 @@
   [self.videoView addSubview:self.ooyalaPlayerViewController.view];
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(onCastModeEnter)
-                                               name:OOCastEnterCastModeNotification
+                                               name:OOChromecastEnterCastModeNotification
                                              object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(onCastModeExit)
-                                               name:OOCastExitCastModeNotification
+                                               name:OOChromecastExitCastModeNotification
                                              object:nil];
 
   // Init the castPlugin in the ooyalaPlayer
