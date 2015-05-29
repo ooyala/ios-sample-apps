@@ -12,7 +12,6 @@
 		0B1AFB821B0C026E00347DFA /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FA1B0A607D00575391 /* GoogleCast.framework */; };
 		0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */; };
 		0B1AFBDB1B0C09BB00347DFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC31B0C09BB00347DFA /* LaunchScreen.xib */; };
-		0B1AFBDC1B0C09BB00347DFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC51B0C09BB00347DFA /* Main.storyboard */; };
 		0B1AFBDD1B0C09BB00347DFA /* ooyala_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC81B0C09BB00347DFA /* ooyala_logo.png */; };
 		0B1AFBDE1B0C09BB00347DFA /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC91B0C09BB00347DFA /* pause.png */; };
 		0B1AFBDF1B0C09BB00347DFA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFBCA1B0C09BB00347DFA /* play.png */; };
@@ -31,6 +30,7 @@
 		FF21F0E019CB7A2100FE9D07 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D819CB7A2100FE9D07 /* MediaPlayer.framework */; };
 		FF21F0E119CB7A2100FE9D07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D919CB7A2100FE9D07 /* QuartzCore.framework */; };
 		FF21F0E219CB7A2100FE9D07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0DA19CB7A2100FE9D07 /* Security.framework */; };
+		FF4264A01B18D79900CED97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF42649E1B18D79900CED97A /* Main.storyboard */; };
 		FF49D20319CBAB28001B156F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20219CBAB28001B156F /* MessageUI.framework */; };
 		FF49D20519CBAB3F001B156F /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20419CBAB3F001B156F /* EventKit.framework */; };
 		FF49D20719CBAB50001B156F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20619CBAB50001B156F /* libz.dylib */; };
@@ -46,7 +46,6 @@
 		0B1AFBC11B0C09BB00347DFA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B1AFBC41B0C09BB00347DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0B1AFBC61B0C09BB00347DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B1AFBC81B0C09BB00347DFA /* ooyala_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ooyala_logo.png; sourceTree = "<group>"; };
 		0B1AFBC91B0C09BB00347DFA /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		0B1AFBCA1B0C09BB00347DFA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		FF21F0D819CB7A2100FE9D07 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		FF21F0D919CB7A2100FE9D07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FF21F0DA19CB7A2100FE9D07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FF42649F1B18D79900CED97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ChromecastSampleApp/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		FF49D1FE19CBA9C6001B156F /* libWViPhoneAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWViPhoneAPI.a; path = ../../sdk/OoyalaSDK/Classes/Internal/Players/libWViPhoneAPI.a; sourceTree = "<group>"; };
 		FF49D20219CBAB28001B156F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FF49D20419CBAB3F001B156F /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -176,7 +176,7 @@
 		0B1AFBD91B0C09BB00347DFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0B1AFBC51B0C09BB00347DFA /* Main.storyboard */,
+				FF42649E1B18D79900CED97A /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,9 +292,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4264A01B18D79900CED97A /* Main.storyboard in Resources */,
 				0B1AFBDB1B0C09BB00347DFA /* LaunchScreen.xib in Resources */,
 				0B1AFBDF1B0C09BB00347DFA /* play.png in Resources */,
-				0B1AFBDC1B0C09BB00347DFA /* Main.storyboard in Resources */,
 				0B1AFBE01B0C09BB00347DFA /* Images.xcassets in Resources */,
 				0B1AFBDE1B0C09BB00347DFA /* pause.png in Resources */,
 				0B1AFBDD1B0C09BB00347DFA /* ooyala_logo.png in Resources */,
@@ -329,13 +329,12 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		0B1AFBC51B0C09BB00347DFA /* Main.storyboard */ = {
+		FF42649E1B18D79900CED97A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0B1AFBC61B0C09BB00347DFA /* Base */,
+				FF42649F1B18D79900CED97A /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
