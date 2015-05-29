@@ -23,8 +23,8 @@
 		0B24B8621AA682B500F131C3 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B85E1AA682B500F131C3 /* PlayerSelectionOption.m */; };
 		0B24B8631AA682B500F131C3 /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B85F1AA682B500F131C3 /* SampleAppPlayerViewController.h */; };
 		0B24B8641AA682B500F131C3 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8601AA682B500F131C3 /* SampleAppPlayerViewController.m */; };
-		0B24B8671AA682CC00F131C3 /* DeviceManagementPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8651AA682CC00F131C3 /* DeviceManagementPlayerViewController.h */; };
-		0B24B8681AA682CC00F131C3 /* DeviceManagementPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8661AA682CC00F131C3 /* DeviceManagementPlayerViewController.m */; };
+		0B24B8671AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8651AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.h */; };
+		0B24B8681AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8661AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.m */; };
 		0B24B86B1AA682DC00F131C3 /* ContentProtectionListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B24B8691AA682DC00F131C3 /* ContentProtectionListViewController.h */; };
 		0B24B86C1AA682DC00F131C3 /* ContentProtectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B86A1AA682DC00F131C3 /* ContentProtectionListViewController.m */; };
 		0B24B86E1AA6838100F131C3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24B86D1AA6838100F131C3 /* libxml2.dylib */; };
@@ -33,11 +33,14 @@
 		0B24B8731AA6948800F131C3 /* ContentProtectionSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FF86C1861A9BF06700C328A9 /* ContentProtectionSampleAppSource.m */; };
 		0B24B8741AA6948800F131C3 /* ContentProtectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B86A1AA682DC00F131C3 /* ContentProtectionListViewController.m */; };
 		0B24B8751AA6948800F131C3 /* AdobePassPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8701AA68ED100F131C3 /* AdobePassPlayerViewController.m */; };
-		0B24B8761AA6948800F131C3 /* DeviceManagementPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8661AA682CC00F131C3 /* DeviceManagementPlayerViewController.m */; };
+		0B24B8761AA6948800F131C3 /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8661AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.m */; };
 		0B24B8771AA6948800F131C3 /* AdobePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B84D1AA6827200F131C3 /* AdobePassViewController.m */; };
 		0B24B8781AA6948800F131C3 /* MvpdLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B84F1AA6827200F131C3 /* MvpdLoginViewController.m */; };
 		0B24B8791AA6948800F131C3 /* MvpdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8511AA6827200F131C3 /* MvpdTableViewController.m */; };
 		0B24B8D61AA6998500F131C3 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8531AA6827200F131C3 /* Util.m */; };
+		0B89E1DC1B18033400306176 /* DeviceManagementPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B89E1DA1B18033400306176 /* DeviceManagementPlayerViewController.h */; };
+		0B89E1DD1B18033400306176 /* DeviceManagementPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E1DB1B18033400306176 /* DeviceManagementPlayerViewController.m */; };
+		0B89E1DE1B1803EF00306176 /* DeviceManagementPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E1DB1B18033400306176 /* DeviceManagementPlayerViewController.m */; };
 		0B9457F11AC32C76000DD545 /* adobepass.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 0B9457D71AC32C76000DD545 /* adobepass.p12 */; };
 		0B9457F21AC32C76000DD545 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9457DA1AC32C76000DD545 /* AccessEnabler.h */; };
 		0B9457F31AC32C76000DD545 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9457DB1AC32C76000DD545 /* AccessEnablerConstants.h */; };
@@ -111,8 +114,8 @@
 		0B24B85E1AA682B500F131C3 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		0B24B85F1AA682B500F131C3 /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0B24B8601AA682B500F131C3 /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
-		0B24B8651AA682CC00F131C3 /* DeviceManagementPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManagementPlayerViewController.h; sourceTree = "<group>"; };
-		0B24B8661AA682CC00F131C3 /* DeviceManagementPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceManagementPlayerViewController.m; sourceTree = "<group>"; };
+		0B24B8651AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaPlayerTokenPlayerViewController.h; sourceTree = "<group>"; };
+		0B24B8661AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaPlayerTokenPlayerViewController.m; sourceTree = "<group>"; };
 		0B24B8691AA682DC00F131C3 /* ContentProtectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentProtectionListViewController.h; sourceTree = "<group>"; };
 		0B24B86A1AA682DC00F131C3 /* ContentProtectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentProtectionListViewController.m; sourceTree = "<group>"; };
 		0B24B86D1AA6838100F131C3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 		0B7AC4421A7A26F70085BC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B7AC4441A7A27090085BC97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B7AC4481A7A296B0085BC97 /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "../vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
+		0B89E1DA1B18033400306176 /* DeviceManagementPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManagementPlayerViewController.h; sourceTree = "<group>"; };
+		0B89E1DB1B18033400306176 /* DeviceManagementPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceManagementPlayerViewController.m; sourceTree = "<group>"; };
 		0B9457D71AC32C76000DD545 /* adobepass.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = adobepass.p12; sourceTree = "<group>"; };
 		0B9457DA1AC32C76000DD545 /* AccessEnabler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnabler.h; sourceTree = "<group>"; };
 		0B9457DB1AC32C76000DD545 /* AccessEnablerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessEnablerConstants.h; sourceTree = "<group>"; };
@@ -354,8 +359,10 @@
 			children = (
 				0B24B86F1AA68ED100F131C3 /* AdobePassPlayerViewController.h */,
 				0B24B8701AA68ED100F131C3 /* AdobePassPlayerViewController.m */,
-				0B24B8651AA682CC00F131C3 /* DeviceManagementPlayerViewController.h */,
-				0B24B8661AA682CC00F131C3 /* DeviceManagementPlayerViewController.m */,
+				0B89E1DA1B18033400306176 /* DeviceManagementPlayerViewController.h */,
+				0B89E1DB1B18033400306176 /* DeviceManagementPlayerViewController.m */,
+				0B24B8651AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.h */,
+				0B24B8661AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -411,11 +418,12 @@
 				FF86C1C21A9BF06700C328A9 /* AppDelegate.h in Headers */,
 				0B9457F31AC32C76000DD545 /* AccessEnablerConstants.h in Headers */,
 				0B24B8591AA6827200F131C3 /* MvpdTableViewController.h in Headers */,
+				0B89E1DC1B18033400306176 /* DeviceManagementPlayerViewController.h in Headers */,
 				0B9457F91AC32C76000DD545 /* NSUtils.h in Headers */,
 				FF86C2771A9C0D7700C328A9 /* ContentProtectionSampleApp-Prefix.pch in Headers */,
 				0B9457FB1AC32C76000DD545 /* AuthenticationToken.h in Headers */,
 				0B24B86B1AA682DC00F131C3 /* ContentProtectionListViewController.h in Headers */,
-				0B24B8671AA682CC00F131C3 /* DeviceManagementPlayerViewController.h in Headers */,
+				0B24B8671AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.h in Headers */,
 				0B9457F81AC32C76000DD545 /* EntitlementDelegate.h in Headers */,
 				0B24B8551AA6827200F131C3 /* AdobePassViewController.h in Headers */,
 				0B9457F71AC32C76000DD545 /* DeviceID.h in Headers */,
@@ -541,10 +549,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B24B8681AA682CC00F131C3 /* DeviceManagementPlayerViewController.m in Sources */,
+				0B24B8681AA682CC00F131C3 /* OoyalaPlayerTokenPlayerViewController.m in Sources */,
 				FF86C1C31A9BF06700C328A9 /* AppDelegate.m in Sources */,
 				0B24B85C1AA6827200F131C3 /* Util.m in Sources */,
 				0B24B86C1AA682DC00F131C3 /* ContentProtectionListViewController.m in Sources */,
+				0B89E1DD1B18033400306176 /* DeviceManagementPlayerViewController.m in Sources */,
 				0B24B8561AA6827200F131C3 /* AdobePassViewController.m in Sources */,
 				FF86C1CA1A9BF06700C328A9 /* main.m in Sources */,
 				0B24B8581AA6827200F131C3 /* MvpdLoginViewController.m in Sources */,
@@ -560,11 +569,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B89E1DE1B1803EF00306176 /* DeviceManagementPlayerViewController.m in Sources */,
 				0B24B8D61AA6998500F131C3 /* Util.m in Sources */,
 				0B24B8731AA6948800F131C3 /* ContentProtectionSampleAppSource.m in Sources */,
 				0B24B8741AA6948800F131C3 /* ContentProtectionListViewController.m in Sources */,
 				0B24B8751AA6948800F131C3 /* AdobePassPlayerViewController.m in Sources */,
-				0B24B8761AA6948800F131C3 /* DeviceManagementPlayerViewController.m in Sources */,
+				0B24B8761AA6948800F131C3 /* OoyalaPlayerTokenPlayerViewController.m in Sources */,
 				0B24B8771AA6948800F131C3 /* AdobePassViewController.m in Sources */,
 				0B24B8781AA6948800F131C3 /* MvpdLoginViewController.m in Sources */,
 				0B24B8791AA6948800F131C3 /* MvpdTableViewController.m in Sources */,

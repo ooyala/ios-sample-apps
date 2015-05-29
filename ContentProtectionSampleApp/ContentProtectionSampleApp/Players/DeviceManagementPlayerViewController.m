@@ -60,6 +60,7 @@
 }
 
 - (void)viewDidLoad {
+  [super viewDidLoad];
 
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
@@ -72,10 +73,7 @@
 
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
-
   [self addChildViewController:self.ooyalaPlayerViewController];
-  self.ooyalaPlayerViewController.view.hidden = YES;
-
 
   [self.ooyalaPlayerViewController.player setEmbedCode:@"h0NGNxczpVZm5WeI-iwEHGgGcCoipQJy"];
   [self.ooyalaPlayerViewController.player play];

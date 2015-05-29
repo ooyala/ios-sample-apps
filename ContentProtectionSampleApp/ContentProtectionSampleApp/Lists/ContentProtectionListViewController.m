@@ -9,6 +9,7 @@
 #import "ContentProtectionListViewController.h"
 #import "PlayerSelectionOption.h"
 #import "AdobePassPlayerViewController.h"
+#import "OoyalaPlayerTokenPlayerViewController.h"
 #import "DeviceManagementPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 
@@ -32,7 +33,8 @@
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Adobe Pass" embedCode:@"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G" viewController: [AdobePassPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unplayable)" embedCode:@"" viewController: [DeviceManagementPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unconfigured)" embedCode:@"" viewController: [DeviceManagementPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Player Token (Unconfigured)" embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52" viewController: [OoyalaPlayerTokenPlayerViewController class]]];
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
