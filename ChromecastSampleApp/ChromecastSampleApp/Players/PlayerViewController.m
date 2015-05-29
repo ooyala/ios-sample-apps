@@ -1,6 +1,6 @@
 //
 //  PlayerViewController.m
-//  ChromecastSampleApp
+//  OoyalaChromecastSampleApp
 //
 //  Created by Liusha Huang on 9/18/14.
 //  Copyright (c) 2014 Liusha Huang. All rights reserved.
@@ -19,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIView *mediaDetailView;
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (strong, nonatomic) OOOoyalaPlayer *ooyalaPlayer;
-@property (strong, nonatomic) OOCastManager *castManager;
+@property (strong, nonatomic) OOCastManager *castPlugin;
 @end
 
 @implementation PlayerViewController
@@ -27,11 +27,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  // Fetch castManager and castButton
-  self.castManager = [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
-  self.castManager.delegate = self;
+  // Fetch castPlugin and castButton
+  self.castPlugin = [OOCastManager getCastPluginWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castPlugin.delegate = self;
   
-  UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
+  UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castPlugin getCastButton]];
   self.navigationBar.rightBarButtonItem = leftbutton;
 
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
@@ -55,10 +55,10 @@
                                                name:OOCastExitCastModeNotification
                                              object:nil];
 
-  // Init the castManager in the ooyalaPlayer
-  [self.ooyalaPlayer initCastManager:self.castManager];
+  // Init the castPlugin in the ooyalaPlayer
+  [self.ooyalaPlayer initCastManager:self.castPlugin];
   [self.ooyalaPlayer setEmbedCode:embedcode];
-  if (![self.castManager isInCastMode]){
+  if (![self.castPlugin isInCastMode]){
     [self.ooyalaPlayer play];
   }
 }
@@ -93,7 +93,7 @@
   textView.textAlignment = NSTextAlignmentCenter;
   [videoView addSubview:textView];
   textView.center = self.videoView.center;
-  [self.castManager setCastModeVideoView:videoView];
+  [self.castPlugin setCastModeVideoView:videoView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

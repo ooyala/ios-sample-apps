@@ -1,6 +1,6 @@
 //
 //  CustomizedMiniControllerView.m
-//  ChromecastSampleApp
+//  OoyalaChromecastSampleApp
 //
 //  Created by Liusha Huang on 9/25/14.
 //  Copyright (c) 2014 Liusha Huang. All rights reserved.
@@ -12,7 +12,7 @@
 
 @interface CustomizedMiniControllerView()
 
-@property(nonatomic, strong) OOCastManager *castManager;
+@property(nonatomic, strong) OOCastManager *castPlugin;
 
 @property(nonatomic, strong) UIImage *playImage;
 @property(nonatomic, strong) UIImage *pauseImage;
@@ -28,22 +28,22 @@
 }
 */
 
-- (id)initWithFrame:(CGRect)frame castManager:(OOCastManager *)castManager
+- (id)initWithFrame:(CGRect)frame castPlugin:(OOChromecastPlugin *)castPlugin
 {
   self = [super initWithFrame:frame];
   if (self) {
-    self.castManager = castManager;
+    self.castPlugin = castPlugin;
     self.cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     self.cell.backgroundColor = [UIColor lightGrayColor];
     self.cell.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    self.cell.textLabel.text = self.castManager.castPlayer.castItemTitle;
-    self.cell.detailTextLabel.text = self.castManager.castPlayer.castItemTitle;
+    self.cell.textLabel.text = self.castPlugin.castPlayer.castItemTitle;
+    self.cell.detailTextLabel.text = self.castPlugin.castPlayer.castItemTitle;
     self.cell.selectionStyle = UITableViewCellSelectionStyleNone;
     // Accessory is the play/pause button.
     self.pauseImage = [UIImage imageNamed:@"pause.png"];
     self.playImage = [UIImage imageNamed:@"play.png"];
-    BOOL playing = (self.castManager.castPlayer.state == OOOoyalaPlayerStatePlaying ||
-                    self.castManager.castPlayer.state == OOOoyalaPlayerStateLoading);
+    BOOL playing = (self.castPlugin.castPlayer.state == OOOoyalaPlayerStatePlaying ||
+                    self.castPlugin.castPlayer.state == OOOoyalaPlayerStateLoading);
     UIImage *buttonImage = (playing ? self.pauseImage : self.playImage);
     CGRect buttonFrame = CGRectMake(0, 0,  self.frame.size.height * 2 / 3, self.frame.size.height * 2 / 3);
     UIButton *button = [[UIButton alloc] initWithFrame:buttonFrame];
@@ -63,10 +63,10 @@
 }
 
 - (void)playPausePressed:(id)sender {
-  if (self.castManager.castPlayer.state == OOOoyalaPlayerStatePlaying) {
-    [self.castManager.castPlayer pause];
+  if (self.castPlugin.castPlayer.state == OOOoyalaPlayerStatePlaying) {
+    [self.castPlugin.castPlayer pause];
   } else {
-    [self.castManager.castPlayer play];
+    [self.castPlugin.castPlayer play];
   }
 
 }
