@@ -75,25 +75,52 @@
   return [Utils currentTopUIViewController];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    UIImage *image = [UIImage imageWithData:[Utils getDataFromImageURL:[self.mediaInfo objectForKey:@"imgurl"]]];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      UIImageView *mediaImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
+      mediaImageView.image = image;UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
+      textView.userInteractionEnabled = NO;
+      NSString *videoTitle = [self.mediaInfo objectForKey:@"title"];
+      NSString *videoDescription = [self.mediaInfo objectForKey:@"description"];
+      textView.text = [NSString stringWithFormat:@"\n\n Title: %@ \n\n Description: %@", videoTitle, videoDescription];
+      [textView setFont:[UIFont boldSystemFontOfSize:30]];
+      textView.textColor = [UIColor whiteColor];
+      textView.backgroundColor = [UIColor clearColor];
+      textView.textAlignment = NSTextAlignmentCenter;
+      textView.center = self.videoView.center;
 
-  UIView *videoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
-  videoView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin;
-  videoView.backgroundColor = [UIColor redColor];
-  UITextView *textView = [[UITextView alloc] initWithFrame:videoView.frame];
-  textView.userInteractionEnabled = NO;
-  textView.backgroundColor = [UIColor clearColor];
-  textView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-  NSString *videoTitle = [self.mediaInfo objectForKey:@"title"];
-  NSString *videoDescription = [self.mediaInfo objectForKey:@"description"];
-  textView.text = [NSString stringWithFormat:@"\n\n Title: %@ \n\n Description: %@", videoTitle, videoDescription];
-  [textView setFont:[UIFont boldSystemFontOfSize:30]];
-  textView.textColor = [UIColor whiteColor];
-  textView.textAlignment = NSTextAlignmentCenter;
-  [videoView addSubview:textView];
-  textView.center = self.videoView.center;
-  [self.castManager setCastModeVideoView:videoView];
+      [mediaImageView addSubview:textView];
+
+      [textView setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+      NSLayoutConstraint *width =[NSLayoutConstraint
+                                  constraintWithItem:textView
+                                  attribute:NSLayoutAttributeWidth
+                                  relatedBy:0
+                                  toItem:mediaImageView
+                                  attribute:NSLayoutAttributeWidth
+                                  multiplier:1.0
+                                  constant:0];
+
+      NSLayoutConstraint *height =[NSLayoutConstraint
+                                   constraintWithItem:textView
+                                   attribute:NSLayoutAttributeHeight
+                                   relatedBy:0
+                                   toItem:mediaImageView
+                                   attribute:NSLayoutAttributeHeight
+                                   multiplier:1.0
+                                   constant:0];
+      [mediaImageView addConstraint:width];
+      [mediaImageView addConstraint:height];
+
+
+      [self.castManager setCastModeVideoView:mediaImageView];
+    });
+  });
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

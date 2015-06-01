@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3dR-We-72h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3dR-We-72h">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -109,57 +109,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IvK-wG-j9Z">
-                                <rect key="frame" x="0.0" y="64" width="600" height="541"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlU-pW-egY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IvK-wG-j9Z" firstAttribute="top" secondItem="89S-ig-Dfv" secondAttribute="bottom" id="0i2-Ro-OlH"/>
-                            <constraint firstItem="IvK-wG-j9Z" firstAttribute="leading" secondItem="imO-2l-6ga" secondAttribute="leading" id="QoA-7g-qnG"/>
-                            <constraint firstAttribute="trailing" secondItem="IvK-wG-j9Z" secondAttribute="trailing" id="RU4-Ut-ror"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="IvK-wG-j9Z" secondAttribute="bottom" constant="-5" id="fbe-QJ-kvI"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="IvK-wG-j9Z" secondAttribute="bottom" constant="-5" id="sB3-Pb-AH7"/>
-                            <constraint firstItem="IvK-wG-j9Z" firstAttribute="leading" secondItem="imO-2l-6ga" secondAttribute="leading" id="t5h-RJ-8K2"/>
-                            <constraint firstItem="sHu-wj-dSO" firstAttribute="top" secondItem="IvK-wG-j9Z" secondAttribute="bottom" constant="108" id="wX2-fw-yyE"/>
-                            <constraint firstAttribute="trailing" secondItem="IvK-wG-j9Z" secondAttribute="trailing" id="xkH-wL-d81"/>
-                            <constraint firstItem="IvK-wG-j9Z" firstAttribute="top" secondItem="89S-ig-Dfv" secondAttribute="bottom" id="zqr-cK-ZOh"/>
+                            <constraint firstItem="PlU-pW-egY" firstAttribute="bottom" secondItem="sHu-wj-dSO" secondAttribute="top" id="25m-CP-8Je"/>
+                            <constraint firstAttribute="trailing" secondItem="PlU-pW-egY" secondAttribute="trailing" id="4VF-UF-jYR"/>
+                            <constraint firstItem="PlU-pW-egY" firstAttribute="leading" secondItem="imO-2l-6ga" secondAttribute="leading" id="Dbf-T4-czn"/>
+                            <constraint firstItem="PlU-pW-egY" firstAttribute="top" secondItem="89S-ig-Dfv" secondAttribute="bottom" id="Pud-fx-6u6"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="0i2-Ro-OlH"/>
-                                <exclude reference="QoA-7g-qnG"/>
-                                <exclude reference="sB3-Pb-AH7"/>
-                                <exclude reference="xkH-wL-d81"/>
-                                <exclude reference="wX2-fw-yyE"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <include reference="wX2-fw-yyE"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="0i2-Ro-OlH"/>
-                                <include reference="QoA-7g-qnG"/>
-                                <exclude reference="RU4-Ut-ror"/>
-                                <exclude reference="fbe-QJ-kvI"/>
-                                <include reference="sB3-Pb-AH7"/>
-                                <exclude reference="t5h-RJ-8K2"/>
-                                <include reference="xkH-wL-d81"/>
-                                <exclude reference="zqr-cK-ZOh"/>
-                                <exclude reference="wX2-fw-yyE"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="PlayerView" id="FzV-oi-Bl8">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="0Hw-u0-oE9"/>
                     </navigationItem>
                     <connections>
                         <outlet property="navigationBar" destination="FzV-oi-Bl8" id="iYg-3J-oKT"/>
-                        <outlet property="videoView" destination="IvK-wG-j9Z" id="qSA-0Y-vpr"/>
+                        <outlet property="videoView" destination="PlU-pW-egY" id="vU1-v0-nlo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJg-9S-dpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
