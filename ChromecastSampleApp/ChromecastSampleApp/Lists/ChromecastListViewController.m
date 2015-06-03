@@ -204,7 +204,14 @@
   [mediaInfo5 setObject:@"HEINZ.mp4" forKey:@"title"];
   [mediaInfo5 setObject:@"http://ak.c.ooyala.com/o0OWg3bzrLBNfadaXSaCA7HbknPLFRPP/3Gduepif0T1UGY8H4xMDoxOjBrO-I4W8" forKey:@"imgurl"];
   [mediaInfo5 setObject:@"Description" forKey:@"description"];
-
+  
+  NSMutableDictionary *mediaInfo6 = [[NSMutableDictionary alloc] init];
+  [mediaInfo6 setObject:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52" forKey:@"embedcode"];
+  [mediaInfo6 setObject:@"c0cTkxOqALQviQIGAHWY5hP0q9gU" forKey:@"pcode"];
+  [mediaInfo6 setObject:@"http://www.ooyala.com" forKey:@"domain"];
+  [mediaInfo6 setObject:@"Ooyala Player Token" forKey:@"title"];
+  [mediaInfo6 setObject:@"http://ak.c.ooyala.com/IzNGg3bzoHHjEfnJP-fj2jB0-oci0Jnm/Ut_HKthATH4eww8X4xMDoxOjBrO-I4W8" forKey:@"imgurl"];
+  [mediaInfo6 setObject:@"Description" forKey:@"description"];
 
 
   self.mediaList = [[NSMutableArray alloc] init];
@@ -213,6 +220,7 @@
   [self.mediaList addObject:mediaInfo3];
   [self.mediaList addObject:mediaInfo4];
   [self.mediaList addObject:mediaInfo5];
+  [self.mediaList addObject:mediaInfo6];
 }
 
 @end

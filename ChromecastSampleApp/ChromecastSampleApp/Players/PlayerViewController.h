@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <OoyalaCastSDK/OOcastManager.h>
 
-@interface PlayerViewController : UIViewController <OOCastManagerDelegate>
+@interface PlayerViewController : UIViewController <OOCastManagerDelegate, OOEmbedTokenGenerator>
 @property (strong, nonatomic) NSDictionary *mediaInfo;
 @end
