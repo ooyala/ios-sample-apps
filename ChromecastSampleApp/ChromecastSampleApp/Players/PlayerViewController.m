@@ -11,6 +11,7 @@
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OOVideo.h>
 #import "Utils.h"
 
 
@@ -30,6 +31,8 @@
 @property NSString *apiKey;
 @property NSString *secret;
 @property NSString *accountId;
+
+@property UIImageView *castPlaybackView;
 @end
 
 @implementation PlayerViewController
@@ -58,13 +61,20 @@
   self.playerDomain = [self.mediaInfo valueForKey:@"domain"];
   self.embedCode = [self.mediaInfo valueForKey:@"embedcode"];
 
-
   self.ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:self.ooyalaPlayer];
 
   [self.ooyalaPlayerViewController.view setFrame:self.videoView.bounds];
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.videoView addSubview:self.ooyalaPlayerViewController.view];
+
+  self.castPlaybackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
+  [self.castManager setCastModeVideoView:self.castPlaybackView];
+
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:_ooyalaPlayerViewController.player];
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(onCastModeEnter)
                                                name:OOCastEnterCastModeNotification
@@ -82,6 +92,20 @@
   }
 }
 
+- (void) notificationHandler:(NSNotification*) notification {
+  // Ignore TimeChangedNotificiations for shorter logs
+  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    return;
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
+    [self configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem];
+  }
+
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+        [notification name],
+        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+        [self.ooyalaPlayerViewController.player playheadTime]);
+}
 - (void)onCastModeEnter {
   [self.ooyalaPlayerViewController setFullScreenButtonShowing:false];
 }
@@ -96,56 +120,78 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    UIImage *image = [UIImage imageWithData:[Utils getDataFromImageURL:[self.mediaInfo objectForKey:@"imgurl"]]];
-    dispatch_sync(dispatch_get_main_queue(), ^{
-      UIImageView *mediaImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
-      mediaImageView.image = image;UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
-      textView.userInteractionEnabled = NO;
-      NSString *videoTitle = [self.mediaInfo objectForKey:@"title"];
-      NSString *videoDescription = [self.mediaInfo objectForKey:@"description"];
-      textView.text = [NSString stringWithFormat:@"\n\n Title: %@ \n\n Description: %@", videoTitle, videoDescription];
-      [textView setFont:[UIFont boldSystemFontOfSize:30]];
-      textView.textColor = [UIColor whiteColor];
-      textView.backgroundColor = [UIColor clearColor];
-      textView.textAlignment = NSTextAlignmentCenter;
-      textView.center = self.videoView.center;
-
-      [mediaImageView addSubview:textView];
-
-      [textView setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-      NSLayoutConstraint *width =[NSLayoutConstraint
-                                  constraintWithItem:textView
-                                  attribute:NSLayoutAttributeWidth
-                                  relatedBy:0
-                                  toItem:mediaImageView
-                                  attribute:NSLayoutAttributeWidth
-                                  multiplier:1.0
-                                  constant:0];
-
-      NSLayoutConstraint *height =[NSLayoutConstraint
-                                   constraintWithItem:textView
-                                   attribute:NSLayoutAttributeHeight
-                                   relatedBy:0
-                                   toItem:mediaImageView
-                                   attribute:NSLayoutAttributeHeight
-                                   multiplier:1.0
-                                   constant:0];
-      [mediaImageView addConstraint:width];
-      [mediaImageView addConstraint:height];
-
-
-      [self.castManager setCastModeVideoView:mediaImageView];
-    });
-  });
-
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
 }
 
+/**
+ * Use the currentItem from OoyalaPlayer to create a CastPlayerView, to be shown during cast playback
+ * Shows the title, description, and promo image url
+ */
+- (void)configureCastPlaybackViewBasedOnItem:(OOVideo *)item {
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    UIImage *image = [UIImage imageWithData:[Utils getDataFromImageURL:item.promoImageURL]];
+    NSString *videoTitle = item.title;
+    NSString *videoDescription = item.itemDescription;
+
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      self.castPlaybackView.image = image;
+      [self.castPlaybackView.layer setBorderColor:[UIColor redColor].CGColor];
+      [self.castPlaybackView.layer setBorderWidth:5.0];
+      self.castPlaybackView.contentMode = UIViewContentModeScaleAspectFit;
+
+      UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
+      textView.userInteractionEnabled = NO;
+      textView.text = [NSString stringWithFormat:@"\n\n Title: %@ \n\n Description: %@", videoTitle, videoDescription];
+      [textView setFont:[UIFont boldSystemFontOfSize:30]];
+      textView.textColor = [UIColor whiteColor];
+      textView.backgroundColor = [UIColor clearColor];
+      textView.textAlignment = NSTextAlignmentCenter;
+      textView.center = self.videoView.center;
+      [textView setTranslatesAutoresizingMaskIntoConstraints:NO];
+      [self.castPlaybackView addSubview:textView];
+
+      NSLayoutConstraint *w =[NSLayoutConstraint
+                              constraintWithItem:textView
+                              attribute:NSLayoutAttributeWidth
+                              relatedBy:0
+                              toItem:self.castPlaybackView
+                              attribute:NSLayoutAttributeWidth
+                              multiplier:1.0
+                              constant:0];
+      NSLayoutConstraint *h =[NSLayoutConstraint
+                              constraintWithItem:textView
+                              attribute:NSLayoutAttributeHeight
+                              relatedBy:0
+                              toItem:self.castPlaybackView
+                              attribute:NSLayoutAttributeHeight
+                              multiplier:1.0
+                              constant:0];
+      NSLayoutConstraint *t = [NSLayoutConstraint
+                               constraintWithItem:textView
+                               attribute:NSLayoutAttributeTop
+                               relatedBy:NSLayoutRelationEqual
+                               toItem:self.castPlaybackView
+                               attribute:NSLayoutAttributeTop
+                               multiplier:1.0f
+                               constant:0.f];
+      NSLayoutConstraint *l = [NSLayoutConstraint
+                               constraintWithItem:textView
+                               attribute:NSLayoutAttributeLeading
+                               relatedBy:NSLayoutRelationEqual
+                               toItem:self.castPlaybackView
+                               attribute:NSLayoutAttributeLeading
+                               multiplier:1.0f
+                               constant:0.f];
+      [self.castPlaybackView addConstraint:w];
+      [self.castPlaybackView addConstraint:h];
+      [self.castPlaybackView addConstraint:t];
+      [self.castPlaybackView addConstraint:l];
+    });
+  });
+}
 
 /*
  * Get the Ooyala Player Token to play the embed code.
