@@ -118,4 +118,10 @@
  */
 - (Float64)duration;
 
+/**
+ * Whether discovery UI is enabled for this item
+ * @returns YES if discovery is enabled, NO otherwise
+ */
+- (BOOL)discoveryEnabled;
+
 @end

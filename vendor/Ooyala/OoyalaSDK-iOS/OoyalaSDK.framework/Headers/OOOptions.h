@@ -6,6 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "OODiscoveryOptions.h"
 
 @class OOFCCTVRatingConfiguration;
 
@@ -20,6 +21,7 @@
 @property (nonatomic) BOOL showAdsControls; /** If set to YES, show ads controls (show the scrubber) during ad playback. Default: YES */
 @property (nonatomic) BOOL preloadContent; /** If set to YES, load the content when the required information and authorization is available.If set to NO,  load the content after the pre-roll (if a pre-roll is available). Default: YES */
 @property (nonatomic) BOOL showPromoImage; /** If set to YES, show the promo image if a promo image is available. Default: NO */
+@property (nonatomic) OODiscoveryOptions *discoveryOptions; /** discovery options for discovery UI. */
 @property (nonatomic) NSTimeInterval connectionTimeout; /** The timeout value for network requests. Default: 60.0 seconds */
 
 /**
@@ -38,6 +40,7 @@
                                showAdsControls:(BOOL)showAdsControls
                                 preloadContent:(BOOL)preloadContent
                                 showPromoImage:(BOOL)showPromoImage
+                              discoveryOptions:(OODiscoveryOptions *)discoveryOptions
                              connectionTimeout:(NSTimeInterval)connectionTimeout;
 
 @end

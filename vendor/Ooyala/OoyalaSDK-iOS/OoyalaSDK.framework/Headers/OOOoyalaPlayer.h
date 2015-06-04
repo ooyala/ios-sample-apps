@@ -99,6 +99,7 @@ extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires whe
 extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
 extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
 extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live closed captions */
+extern NSString *const OODiscoveryResultsReceivedNotification; /**< Fires when discovery results is received. */
 
 /**
  * The OoyalaPlayer is the heart of the playback system.

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 @class OOOoyalaPlayer;
+@protocol OOEmbedTokenGenerator;
+
 
 @protocol OOCastManagerProtocol <NSObject>
 
@@ -36,6 +38,7 @@
  */
 - (void)enterCastModeWithEmbedCode:(NSString *)embedCode
                initialPlayheadTime:(Float64)playhead
-                         isPlaying:(BOOL)isPlaying;
+                         isPlaying:(BOOL)isPlaying
+               embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
 
 @end

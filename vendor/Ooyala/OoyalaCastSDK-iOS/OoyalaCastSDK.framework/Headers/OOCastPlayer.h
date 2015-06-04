@@ -34,7 +34,7 @@
 
 - (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription seekable:(BOOL)isSeekable;
 
-- (void)enterCastMode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying;
+- (void)enterCastMode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying embedToken:(NSString *)embedToken;
 
 - (void)registerMiniController:(id<OOCastMiniControllerProtocol>) miniController;
 
