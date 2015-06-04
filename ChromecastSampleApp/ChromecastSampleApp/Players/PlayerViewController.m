@@ -57,9 +57,9 @@
   self.navigationBar.rightBarButtonItem = leftbutton;
 
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
-  self.pcode = [self.mediaInfo valueForKey:@"pcode"];
-  self.playerDomain = [self.mediaInfo valueForKey:@"domain"];
-  self.embedCode = [self.mediaInfo valueForKey:@"embedcode"];
+  self.pcode = self.mediaInfo.pcode;
+  self.playerDomain = self.mediaInfo.domain;
+  self.embedCode = self.mediaInfo.embedCode;
 
   self.ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:self.ooyalaPlayer];
