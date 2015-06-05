@@ -30,9 +30,11 @@
 
 @property(nonatomic, weak) OOCastManager *castManager;
 
+- (id) init __attribute__((unavailable("use initWithNamespace:appNamespace")));
+
 - (void)initStateNotifier:(OOStateNotifier *)stateNotifier;
 
-- (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription seekable:(BOOL)isSeekable;
+- (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription;
 
 - (void)enterCastMode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying embedToken:(NSString *)embedToken;
 
