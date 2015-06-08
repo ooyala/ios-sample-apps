@@ -141,39 +141,37 @@
 
 - (void)buildMediaDictionary {
   self.mediaList = [[NSMutableArray alloc] init];
-  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Chromecast Test 1"
-                                                                          embedCode:@"wxaWd5bTrJFI--Ga7TgbJtzcPrbzENBV"
-                                                                              pcode:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz"
+  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"HLS Asset"
+                                                                          embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
-  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Dog Movie"
-                                                                          embedCode:@"IzNGg3bzoHHjEfnJP-fj2jB0-oci0Jnm"
-                                                                              pcode:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz"
+  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"MP4 Video"
+                                                                          embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx"
+                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
-  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Happy Feet"
-                                                                          embedCode:@"xiNmg3bzpFkkwsYqkb5UtGvNOpcwiOCS"
-                                                                              pcode:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz"
+  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Encrypted HLS Asset"
+                                                                          embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"
+                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
-  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Beer Advertisement"
-                                                                          embedCode:@"Y4OWg3bzoNtSZ9TOg3wl9BPUspXZiMYc"
-                                                                              pcode:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz"
-                                                                             domain:@"http://www.ooyala.com"
-                                                                     viewController:[PlayerViewController class]]];
-  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Heinz Advertisement"
-                                                                          embedCode:@"o0OWg3bzrLBNfadaXSaCA7HbknPLFRPP"
-                                                                              pcode:@"pxY3gwYjrEiFX9bh9_AKCPNbfLH7czoz"
-                                                                             domain:@"http://www.ooyala.com"
-                                                                     viewController:[PlayerViewController class]]];
-  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Ooyala Player Token Asset"
-                                                                          embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
+  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"4:3 Aspect Ratio"
+                                                                          embedCode:@"FwaXZjcjrkydIftLal2cq9ymQMuvjvD8"
                                                                               pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
 
+  //This asset will not be configured correctly. To test your OPT-enabled assets, you need:
+  // 1. an OPT-enabled embed code (set here)
+  // 2. the correlating PCode (set here)
+  // 3. an API Key and Secret for the provider to locally-sign the authorization (set in the PlayerViewController)
+  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Ooyala Player Token Asset (unconfigured)"
+                                                                          embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
+                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                             domain:@"http://www.ooyala.com"
+                                                                     viewController:[PlayerViewController class]]];
 }
-
 
 - (void)buildTableViewCells {
   if (self.cells == nil) {
