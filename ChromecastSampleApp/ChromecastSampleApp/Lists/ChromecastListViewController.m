@@ -156,11 +156,6 @@
                                                                               pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
-  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"4:3 Aspect Ratio"
-                                                                          embedCode:@"FwaXZjcjrkydIftLal2cq9ymQMuvjvD8"
-                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                             domain:@"http://www.ooyala.com"
-                                                                     viewController:[PlayerViewController class]]];
 
   //This asset will not be configured correctly. To test your OPT-enabled assets, you need:
   // 1. an OPT-enabled embed code (set here)
