@@ -87,9 +87,7 @@
   // Init the castManager in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castManager];
   [self.ooyalaPlayer setEmbedCode:self.embedCode];
-  if (![self.castManager isInCastMode]){
-    [self.ooyalaPlayer play];
-  }
+  [self.ooyalaPlayer play];
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
