@@ -156,6 +156,11 @@
                                                                               pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
+  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Playready Smooth with Clear HLS Backup"
+                                                                          embedCode:@"pkMm1rdTqIAxx9DQ4-8Hyp9P_AHRe4pt"
+                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                             domain:@"http://www.ooyala.com"
+                                                                     viewController:[PlayerViewController class]]];
 
   //This asset will not be configured correctly. To test your OPT-enabled assets, you need:
   // 1. an OPT-enabled embed code (set here)
