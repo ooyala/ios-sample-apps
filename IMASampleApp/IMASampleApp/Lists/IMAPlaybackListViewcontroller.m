@@ -8,6 +8,7 @@
 
 #import "IMAPlaybackListViewcontroller.h"
 #import "IMAPlayerViewController.h"
+#import "IMACustomConfiguredPlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface IMAPlaybackListViewcontroller ()
@@ -31,6 +32,7 @@
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Pre-Mid-Post" embedCode:@"ZrOTE3cDoXo2sLOWzQPxjS__M-Qk32Co" viewController: [IMAPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Skippable" embedCode:@"FhbGRjbzq8tfaoA3dhfxc2Qs0-RURJfO" viewController: [IMAPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre, Mid and Post Skippable" embedCode:@"10NjE3cDpj8nUzYiV1PnFsjC6nEvPQAE" viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Client-side configured IMA Ads" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [IMACustomConfiguredPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
