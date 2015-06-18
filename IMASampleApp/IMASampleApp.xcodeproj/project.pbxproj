@@ -45,8 +45,8 @@
 		0BF4FA2D1A686CB40050A602 /* IMAPlaybackListViewcontroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA191A686CB40050A602 /* IMAPlaybackListViewcontroller.h */; };
 		0BF4FA2E1A686CB40050A602 /* IMAPlaybackListViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1A1A686CB40050A602 /* IMAPlaybackListViewcontroller.m */; };
 		0BF4FA2F1A686CB40050A602 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1B1A686CB40050A602 /* main.m */; };
-		0BF4FA301A686CB40050A602 /* IMAPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA1D1A686CB40050A602 /* IMAPlayerViewController.h */; };
-		0BF4FA311A686CB40050A602 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1E1A686CB40050A602 /* IMAPlayerViewController.m */; };
+		0BF4FA301A686CB40050A602 /* IMACustomConfiguredPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA1D1A686CB40050A602 /* IMACustomConfiguredPlayerViewController.h */; };
+		0BF4FA311A686CB40050A602 /* IMACustomConfiguredPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1E1A686CB40050A602 /* IMACustomConfiguredPlayerViewController.m */; };
 		0BF4FA321A686CB40050A602 /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA201A686CB40050A602 /* PlayerSelectionOption.h */; };
 		0BF4FA331A686CB40050A602 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA211A686CB40050A602 /* PlayerSelectionOption.m */; };
 		0BF4FA341A686CB40050A602 /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA221A686CB40050A602 /* SampleAppPlayerViewController.h */; };
@@ -55,9 +55,13 @@
 		0BF4FA371A686CB40050A602 /* IMASampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA261A686CB40050A602 /* IMASampleAppSource.m */; };
 		0BF4FA3D1A686FBC0050A602 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA3C1A686FBC0050A602 /* WebKit.framework */; };
 		0BF4FA421A6871F10050A602 /* IMAPlaybackListViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1A1A686CB40050A602 /* IMAPlaybackListViewcontroller.m */; };
-		0BF4FA431A6871F10050A602 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1E1A686CB40050A602 /* IMAPlayerViewController.m */; };
+		0BF4FA431A6871F10050A602 /* IMACustomConfiguredPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1E1A686CB40050A602 /* IMACustomConfiguredPlayerViewController.m */; };
 		0BF4FA441A6871F10050A602 /* IMASampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA261A686CB40050A602 /* IMASampleAppSource.m */; };
 		0BF4FA451A6872130050A602 /* IMAPlaybackListViewcontroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA191A686CB40050A602 /* IMAPlaybackListViewcontroller.h */; };
+		0BFFF6C31B33395B00D72444 /* IMAPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */; };
+		0BFFF6C41B33395B00D72444 /* IMAPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */; };
+		0BFFF6C51B33395B00D72444 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */; };
+		0BFFF6C61B33395B00D72444 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,8 +117,8 @@
 		0BF4FA191A686CB40050A602 /* IMAPlaybackListViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPlaybackListViewcontroller.h; sourceTree = "<group>"; };
 		0BF4FA1A1A686CB40050A602 /* IMAPlaybackListViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAPlaybackListViewcontroller.m; sourceTree = "<group>"; };
 		0BF4FA1B1A686CB40050A602 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0BF4FA1D1A686CB40050A602 /* IMAPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPlayerViewController.h; sourceTree = "<group>"; };
-		0BF4FA1E1A686CB40050A602 /* IMAPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAPlayerViewController.m; sourceTree = "<group>"; };
+		0BF4FA1D1A686CB40050A602 /* IMACustomConfiguredPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMACustomConfiguredPlayerViewController.h; sourceTree = "<group>"; };
+		0BF4FA1E1A686CB40050A602 /* IMACustomConfiguredPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMACustomConfiguredPlayerViewController.m; sourceTree = "<group>"; };
 		0BF4FA201A686CB40050A602 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0BF4FA211A686CB40050A602 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BF4FA221A686CB40050A602 /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		0BF4FA261A686CB40050A602 /* IMASampleAppSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMASampleAppSource.m; sourceTree = "<group>"; };
 		0BF4FA3C1A686FBC0050A602 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0BF4FA3E1A68702A0050A602 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPlayerViewController.h; sourceTree = "<group>"; };
+		0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAPlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,8 +269,10 @@
 		0BF4FA1C1A686CB40050A602 /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				0BF4FA1D1A686CB40050A602 /* IMAPlayerViewController.h */,
-				0BF4FA1E1A686CB40050A602 /* IMAPlayerViewController.m */,
+				0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */,
+				0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */,
+				0BF4FA1D1A686CB40050A602 /* IMACustomConfiguredPlayerViewController.h */,
+				0BF4FA1E1A686CB40050A602 /* IMACustomConfiguredPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -306,13 +314,14 @@
 				0B9458511AC32CB3000DD545 /* IMAAdError.h in Headers */,
 				0B94585B1AC32CB3000DD545 /* IMAContentPlayhead.h in Headers */,
 				0BF4FA2D1A686CB40050A602 /* IMAPlaybackListViewcontroller.h in Headers */,
-				0BF4FA301A686CB40050A602 /* IMAPlayerViewController.h in Headers */,
+				0BF4FA301A686CB40050A602 /* IMACustomConfiguredPlayerViewController.h in Headers */,
 				0B9458541AC32CB3000DD545 /* IMAAdPodInfo.h in Headers */,
 				0B94585A1AC32CB3000DD545 /* IMACompanionAdSlot.h in Headers */,
 				0B9458501AC32CB3000DD545 /* IMAAdDisplayContainer.h in Headers */,
 				0BF4FA361A686CB40050A602 /* IMASampleAppSource.h in Headers */,
 				0B9458561AC32CB3000DD545 /* IMAAdsManager.h in Headers */,
 				0BF4FA341A686CB40050A602 /* SampleAppPlayerViewController.h in Headers */,
+				0BFFF6C31B33395B00D72444 /* IMAPlayerViewController.h in Headers */,
 				0B9458571AC32CB3000DD545 /* IMAAdsRenderingSettings.h in Headers */,
 				0B9458581AC32CB3000DD545 /* IMAAdsRequest.h in Headers */,
 				0B94584F1AC32CB3000DD545 /* IMAAd.h in Headers */,
@@ -323,6 +332,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BFFF6C41B33395B00D72444 /* IMAPlayerViewController.h in Headers */,
 				0BF4FA451A6872130050A602 /* IMAPlaybackListViewcontroller.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,11 +439,12 @@
 			files = (
 				0BF4FA371A686CB40050A602 /* IMASampleAppSource.m in Sources */,
 				0BF4FA2E1A686CB40050A602 /* IMAPlaybackListViewcontroller.m in Sources */,
-				0BF4FA311A686CB40050A602 /* IMAPlayerViewController.m in Sources */,
+				0BF4FA311A686CB40050A602 /* IMACustomConfiguredPlayerViewController.m in Sources */,
 				0BF4FA2F1A686CB40050A602 /* main.m in Sources */,
 				0BF4FA331A686CB40050A602 /* PlayerSelectionOption.m in Sources */,
 				0BF4FA281A686CB40050A602 /* AppDelegate.m in Sources */,
 				0BF4FA351A686CB40050A602 /* SampleAppPlayerViewController.m in Sources */,
+				0BFFF6C51B33395B00D72444 /* IMAPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,8 +453,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF4FA421A6871F10050A602 /* IMAPlaybackListViewcontroller.m in Sources */,
-				0BF4FA431A6871F10050A602 /* IMAPlayerViewController.m in Sources */,
+				0BF4FA431A6871F10050A602 /* IMACustomConfiguredPlayerViewController.m in Sources */,
 				0BF4FA441A6871F10050A602 /* IMASampleAppSource.m in Sources */,
+				0BFFF6C61B33395B00D72444 /* IMAPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

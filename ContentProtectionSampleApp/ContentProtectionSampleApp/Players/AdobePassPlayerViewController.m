@@ -54,6 +54,7 @@
 }
 
 - (void)viewDidLoad {
+  [super viewDidLoad];
   self.passController = [[AdobePassViewController alloc] initWithRequestor:@"AdobeBEAST"
                                                              keystore:@"adobepass"
                                                               keypass:@"adobepass"
