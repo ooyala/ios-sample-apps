@@ -146,6 +146,11 @@
                                                                               pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
+  [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
+                                                                          embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
+                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                             domain:@"http://www.ooyala.com"
+                                                                     viewController:[PlayerViewController class]]];
   [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"MP4 Video"
                                                                           embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx"
                                                                               pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
