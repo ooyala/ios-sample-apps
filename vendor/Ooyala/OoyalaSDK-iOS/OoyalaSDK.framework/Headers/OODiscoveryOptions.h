@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, OODiscoveryType) {
 @interface OODiscoveryOptions : NSObject
 
 @property OODiscoveryType type; /** the discovery type. Default: similar assets */
+@property int limit; /** limit of discovery results */
 @property NSTimeInterval timeout; /** the timeout value for http connections. Default: 60 seconds */
 
 /**
@@ -35,6 +36,7 @@ typedef NS_ENUM(NSUInteger, OODiscoveryType) {
  * @returns the initialized OOOptions
  */
 - (instancetype) initWithType:(OODiscoveryType)type
+                        limit:(int)limit
                       timeout:(NSTimeInterval)timeout;
 
 @end

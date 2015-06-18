@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class OOOoyalaPlayer;
 @protocol OOEmbedTokenGenerator;
-
+@class OOCastModeOptions;
 
 @protocol OOCastManagerProtocol <NSObject>
 
@@ -34,11 +34,8 @@
 - (BOOL)isInCastMode;
 
 /**
- * Enter cast mode with given embedCode, playhead, and player state
+ * Enter cast mode with given OOCastModeOptions object
  */
-- (void)enterCastModeWithEmbedCode:(NSString *)embedCode
-               initialPlayheadTime:(Float64)playhead
-                         isPlaying:(BOOL)isPlaying
-               embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
+- (void)enterCastModeWithOptions:(OOCastModeOptions *)options;
 
 @end

@@ -99,7 +99,6 @@ extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires whe
 extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
 extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
 extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live closed captions */
-extern NSString *const OODiscoveryResultsReceivedNotification; /**< Fires when discovery results is received. */
 
 /**
  * The OoyalaPlayer is the heart of the playback system.
@@ -118,7 +117,7 @@ extern NSString *const OODiscoveryResultsReceivedNotification; /**< Fires when d
 @property(nonatomic) BOOL seekable; /**< Whether or not the Videos that OOOoyalaPlayer plays are seekable */
 @property(nonatomic) BOOL adsSeekable; /**< Whether or not the Ads that OOOoyalaPlayer plays are seekable */
 @property(readonly, nonatomic) OOSeekStyle seekStyle;
-
+@property(nonatomic, strong) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
 /**
  * Get whether the player is playing the audio only stream in an m3u8
  */
@@ -462,11 +461,5 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * Return an OoyalaAPIClient
  */
 - (OOOoyalaAPIClient *)api;
-
-/** 
- * turn on or turn off live closed captions, if any
- * @param[in] enabled YES if enabled, NO if disabled
- */
-- (void)setLiveClosedCaptionsEnabled:(BOOL)enabled;
 
 @end

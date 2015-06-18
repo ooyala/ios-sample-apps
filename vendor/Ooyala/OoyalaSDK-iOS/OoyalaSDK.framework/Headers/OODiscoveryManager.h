@@ -23,19 +23,38 @@ typedef void(^OODiscoveryResultsCallback)(NSArray *results, OOOoyalaError *error
 
 /**
  * get the discovery results
- * @param[in] type the discovery result type;
+ * @param[in] option the discovery option;
  * @param[in] embedCode the embed code for discovery type similar assets, ignored for other discovery types
  * @param[in] pcode the pcode
  * @param[in] parameters the parameters as key value pair
  *  for a detailed list and examples of valid parameters, please refer to
  *  http://support.ooyala.com/developers/documentation/concepts/content_discovery_summary_of_routes.html
  * @param[in] callback the callback function that handles discovery results.the callback might not be called on the main thread.
- * @param[in] timeout
  */
 + (void)getResults:(OODiscoveryOptions *)options
          embedCode:(NSString *)embedCode
              pcode:(NSString *)pcode
         parameters:(NSDictionary *)parameters
           callback:(OODiscoveryResultsCallback)callback;
+
+/**
+ * send discovery feedback impression when discovery is shown to user
+ * @param[in] options the discovery options
+ * @param[in] bucketInfo the bucket info id
+ */
++ (void)sendImpression:(OODiscoveryOptions *)options
+            bucketInfo:(NSString *)bucketInfo
+                 pcode:(NSString *)pcode
+            parameters:(NSDictionary *)parameters;
+
+/**
+ * send discovery feedback click when user clicks to play an item
+ * @param[in] bucketInfo the bucket info id
+ * @param[in] options the discovery options
+ */
++ (void)sendClick:(OODiscoveryOptions *)options
+       bucketInfo:(NSString *)bucketInfo
+            pcode:(NSString *)pcode
+       parameters:(NSDictionary *)parameters;
 
 @end

@@ -13,6 +13,7 @@
 #import "OOCastMiniControllerProtocol.h"
 
 @class OOCastManager;
+@class OOCastModeOptions;
 
 @interface OOCastPlayer : GCKCastChannel<OOPlayerProtocol>
 
@@ -36,7 +37,7 @@
 
 - (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription;
 
-- (void)enterCastMode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying embedToken:(NSString *)embedToken;
+- (void)enterCastModeWithOptions:(OOCastModeOptions *)options embedToken:(NSString *)embedToken;
 
 - (void)registerMiniController:(id<OOCastMiniControllerProtocol>) miniController;
 

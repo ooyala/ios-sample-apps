@@ -91,6 +91,8 @@ typedef enum
 
 - (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity;
 
+- (void)setClosedCaptionsLanguage:(NSString *)language;
+
 /**
  * This returns the player state
  *
