@@ -26,6 +26,8 @@
 /** Text string to appear */
 @property(readonly, nonatomic, strong) NSString *text;
 
+-(id)initWithBegin:(Float64)begin_ end:(Float64)end_ text:(NSString*)text_;
+
 /** @internal
  * Initialize a OOCaption using the specified xml (subclasses should override this)
  * @param[in] xml the OOTBXMLElement containing the p xml element to use to initialize this OOCaption

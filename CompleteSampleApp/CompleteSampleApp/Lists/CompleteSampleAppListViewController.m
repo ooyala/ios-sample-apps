@@ -15,6 +15,7 @@
 #import "OoyalaAPIListViewController.h"
 #import "PlayerSelectionOption.h"
 #import "ContentProtectionListViewController.h"
+#import "NPAWListViewController.h"
 
 
 #pragma mark - List Selection Option
@@ -59,6 +60,7 @@
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"FreewheelSampleApp" listViewController: [FreewheelPlaybackListViewcontroller class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"BasicPlaybackSampleApp" listViewController: [BasicPlaybackListViewController class]]];
   [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"OoyalaAPISampleApp" listViewController: [OoyalaAPIListViewController class]]];
+  [self insertNewObject: [[ListSelectionOption alloc] initWithTitle:@"NPAWSampleApp" listViewController: [NPAWListViewController class]]];
 }
 
 - (void)viewDidLoad {

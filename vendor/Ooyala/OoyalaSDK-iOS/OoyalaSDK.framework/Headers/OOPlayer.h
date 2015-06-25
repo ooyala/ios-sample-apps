@@ -34,8 +34,6 @@ extern NSString *const PlayerErrorNotification;
 
 - (BOOL)isAudioOnlyStreamPlaying;
 
-- (void) setLiveClosedCaptionsEnabled:(BOOL)enabled;
-
 - (CMTimeRange) seekableTimeRange;
 
 -(CGRect)videoRect;

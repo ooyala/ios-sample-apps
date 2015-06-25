@@ -1,18 +1,18 @@
 //
 //  CustomizedMiniControllerView.m
-//  OoyalaChromecastSampleApp
+//  ChromecastSampleApp
 //
 //  Created by Liusha Huang on 9/25/14.
 //  Copyright (c) 2014 Liusha Huang. All rights reserved.
 //
 
 #import "CustomizedMiniControllerView.h"
-#import <OoyalaCastSDK/OOChromecastPlugin.h>
-#import <OoyalaCastSDK/OOChromecastPlayer.h>
+#import <OoyalaCastSDK/OOCastManager.h>
+#import <OoyalaCastSDK/OOCastPlayer.h>
 
 @interface CustomizedMiniControllerView()
 
-@property(nonatomic, strong) OOChromecastPlugin *castPlugin;
+@property(nonatomic, strong) OOCastManager *castManager;
 
 @property(nonatomic, strong) UIImage *playImage;
 @property(nonatomic, strong) UIImage *pauseImage;
@@ -28,22 +28,22 @@
 }
 */
 
-- (id)initWithFrame:(CGRect)frame castPlugin:(OOChromecastPlugin *)castPlugin
+- (id)initWithFrame:(CGRect)frame castManager:(OOCastManager *)castManager
 {
   self = [super initWithFrame:frame];
   if (self) {
-    self.castPlugin = castPlugin;
+    self.castManager = castManager;
     self.cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     self.cell.backgroundColor = [UIColor lightGrayColor];
     self.cell.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    self.cell.textLabel.text = self.castPlugin.castPlayer.castItemTitle;
-    self.cell.detailTextLabel.text = self.castPlugin.castPlayer.castItemTitle;
+    self.cell.textLabel.text = self.castManager.castPlayer.castItemTitle;
+    self.cell.detailTextLabel.text = self.castManager.castPlayer.castItemTitle;
     self.cell.selectionStyle = UITableViewCellSelectionStyleNone;
     // Accessory is the play/pause button.
     self.pauseImage = [UIImage imageNamed:@"pause.png"];
     self.playImage = [UIImage imageNamed:@"play.png"];
-    BOOL playing = (self.castPlugin.castPlayer.state == OOOoyalaPlayerStatePlaying ||
-                    self.castPlugin.castPlayer.state == OOOoyalaPlayerStateLoading);
+    BOOL playing = (self.castManager.castPlayer.state == OOOoyalaPlayerStatePlaying ||
+                    self.castManager.castPlayer.state == OOOoyalaPlayerStateLoading);
     UIImage *buttonImage = (playing ? self.pauseImage : self.playImage);
     CGRect buttonFrame = CGRectMake(0, 0,  self.frame.size.height * 2 / 3, self.frame.size.height * 2 / 3);
     UIButton *button = [[UIButton alloc] initWithFrame:buttonFrame];
@@ -63,10 +63,10 @@
 }
 
 - (void)playPausePressed:(id)sender {
-  if (self.castPlugin.castPlayer.state == OOOoyalaPlayerStatePlaying) {
-    [self.castPlugin.castPlayer pause];
+  if (self.castManager.castPlayer.state == OOOoyalaPlayerStatePlaying) {
+    [self.castManager.castPlayer pause];
   } else {
-    [self.castPlugin.castPlayer play];
+    [self.castManager.castPlayer play];
   }
 
 }

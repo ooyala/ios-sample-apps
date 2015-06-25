@@ -39,7 +39,6 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
 @property (nonatomic, strong) UIView *inlineOverlay;
 @property (nonatomic, strong) UIView *fullscreenOverlay;
 
-@property(nonatomic, strong) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
 @property(nonatomic, strong) OOClosedCaptionsStyle *closedCaptionsStyle; /**< The OOClosedCaptionsStyle to use when displaying closed captions */
 
 
