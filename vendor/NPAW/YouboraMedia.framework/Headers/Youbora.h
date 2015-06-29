@@ -16,13 +16,13 @@
 
 @interface Youbora: NSObject
 
-@property (nonatomic, strong) OOOoyalaPlayer* player;
+@property (nonatomic, strong) OOOoyalaPlayerViewController* playerController;
 @property (nonatomic, assign) BOOL connected;
 
 - (NSString*)contentURL;
 - (int)currentPlaybackTime;
 - (void)updateYouboraMetadata:(NSDictionary *)metadata;
-- (id)initWithSystemId:(NSString*)SYSTEM_ID userID:(NSString*)USER_ID playerInstance:(OOOoyalaPlayer*)playerInstance options:(NSDictionary*)options;
+- (id)initWithSystemId:(NSString*)SYSTEM_ID userID:(NSString*)USER_ID playerInstance:(OOOoyalaPlayerViewController*)playerInstance options:(NSDictionary*)options;
 - (void)stop;
 - (void)pauseSession;
 - (void)restartSession;
