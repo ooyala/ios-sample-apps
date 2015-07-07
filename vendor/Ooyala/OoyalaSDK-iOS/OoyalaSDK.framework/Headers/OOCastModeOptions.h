@@ -16,11 +16,13 @@
 @property(nonatomic, readonly) BOOL isPlaying;
 @property(nonatomic, readonly) id<OOEmbedTokenGenerator> embedTokenGenerator;
 @property(nonatomic, readonly) NSString * ccLanguage;
+@property(nonatomic, readonly) NSString * authToken;
 
 - (id)initWithEmbedCode:(NSString *)embedCode
     initialPlayheadTime:(Float64)playhead
               isPlaying:(BOOL)isPlaying
     embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
-             ccLanguage:(NSString *)ccLanguage;
+             ccLanguage:(NSString *)ccLanguage
+              authToken:(NSString *)authToken;
 @end
 
