@@ -16,6 +16,7 @@
 @interface DiscoveryListViewController ()
 
 @property NSArray *discoveryResults;
+@property NSArray *discoveryOptions;
 
 @end
 
@@ -42,14 +43,19 @@ NSString *PCODE = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
     self.discoveryResults = [NSArray arrayWithObjects:momentumResults, popularResults, similarResults, nil];
   }
 
-  for (NSUInteger type = OODiscoveryTypeMomentum; type <= OODiscoveryTypeSimilarAssets; ++type) {
-    OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:type limit:10 timeout:60];
+  if (self.discoveryOptions == nil) {
+    OODiscoveryOptions *momentumOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypeMomentum limit:10 timeout:60];
+    OODiscoveryOptions *popularOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
+    OODiscoveryOptions *similarOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypeSimilarAssets limit:10 timeout:60];
+    self.discoveryOptions = [NSArray arrayWithObjects:momentumOptions, popularOptions, similarOptions, nil];
+  }
 
-    [OODiscoveryManager getResults:discoveryOptions embedCode:self.embedCode pcode:PCODE parameters:nil callback:^(NSArray *results, OOOoyalaError *error) {
+  for (NSUInteger index = 0; index < self.discoveryOptions.count; ++index) {
+    [OODiscoveryManager getResults:self.discoveryOptions[index] embedCode:self.embedCode pcode:PCODE parameters:nil callback:^(NSArray *results, OOOoyalaError *error) {
       if (error) {
         LOG(@"discovery request failed, error is %@", error.description);
       } else {
-        [self insertDiscoveryResults:results toArray:self.discoveryResults[type]];
+        [self insertDiscoveryResults:results toArray:self.discoveryResults[index]];
         [self.tableView reloadData];
       }
     }];
@@ -114,6 +120,7 @@ NSString *PCODE = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
   NSString *name = [dict objectForKey:@"name" ];
   NSString *imageUrl = [dict objectForKey:@"preview_image_url"];
   NSNumber *duration = [NSNumber numberWithDouble:[[dict objectForKey:@"duration"] doubleValue] / 1000];
+  NSString *bucketInfo = [dict objectForKey:@"bucket_info"];
 
   if (imageUrl && imageUrl.length > 0) {
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
@@ -122,6 +129,8 @@ NSString *PCODE = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
   }
   cell.duration.text = [duration stringValue];
   cell.title.text = name;
+  // send impression feedback
+  [OODiscoveryManager sendImpression:self.discoveryOptions[indexPath.section] bucketInfo:bucketInfo pcode:PCODE parameters:nil];
   return cell;
 }
 
@@ -133,10 +142,15 @@ NSString *PCODE = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
   NSDictionary *dict = self.discoveryResults[indexPath.section][indexPath.row];
   NSString *name = [dict objectForKey:@"name" ];
   NSString *embedCode = [dict objectForKey:@"embed_code"];
+  NSString *bucketInfo = [dict objectForKey:@"bucket_info"];
+
 
   PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:name embedCode:embedCode viewController:[ChannelContentTreeDetailViewController class]];
   ChannelContentTreeDetailViewController *controller = [[ChannelContentTreeDetailViewController alloc] initWithPlayerSelectionOption:option];
   [self.navigationController pushViewController:controller animated:YES];
+  // send click feedback
+  // send impression feedback
+  [OODiscoveryManager sendClick:self.discoveryOptions[indexPath.section] bucketInfo:bucketInfo pcode:PCODE parameters:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
