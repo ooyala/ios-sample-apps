@@ -8,7 +8,8 @@
 
 #import "DiscoveryListViewController.h"
 #import "PlayerSelectionOption.h"
-#import "BasicSimplePlayerViewController.h"
+#import "ChannelContentTreeDetailViewController.h"
+#import "ChannelContentTreeTableViewCell.h"
 #import <OoyalaSDK/OODiscoveryManager.h>
 #import <OoyalaSDK/OODebugMode.h>
 
@@ -21,7 +22,7 @@
 @implementation DiscoveryListViewController
 
 NSString *PCODE = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
-NSString *EMBEDCODE = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
+
 
 - (id)init {
   self = [super init];
@@ -32,7 +33,7 @@ NSString *EMBEDCODE = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil] forCellReuseIdentifier:@"TableCell"];
+  [self.tableView registerNib:[UINib nibWithNibName:@"ChannelCell" bundle:nil] forCellReuseIdentifier:@"ChannelCell"];
 
   if (self.discoveryResults == nil) {
     NSMutableArray *momentumResults = [NSMutableArray array];
@@ -44,7 +45,7 @@ NSString *EMBEDCODE = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
   for (NSUInteger type = OODiscoveryTypeMomentum; type <= OODiscoveryTypeSimilarAssets; ++type) {
     OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:type limit:10 timeout:60];
 
-    [OODiscoveryManager getResults:discoveryOptions embedCode:EMBEDCODE pcode:PCODE parameters:nil callback:^(NSArray *results, OOOoyalaError *error) {
+    [OODiscoveryManager getResults:discoveryOptions embedCode:self.embedCode pcode:PCODE parameters:nil callback:^(NSArray *results, OOOoyalaError *error) {
       if (error) {
         LOG(@"discovery request failed, error is %@", error.description);
       } else {
@@ -65,8 +66,8 @@ NSString *EMBEDCODE = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
     NSString *bucketInfo = [dict objectForKey:@"bucket_info"];
 
     LOG(@"receive discovery result name %@, embedCode %@, imageUrl %@, duration %@, bucketInfo %@", name, embedCode, imageUrl, [duration stringValue], bucketInfo);
-    PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:name embedCode:embedCode viewController:[BasicSimplePlayerViewController class]];
-    [array addObject:option];
+
+    [array addObject:dict];
   }
 }
 
@@ -108,9 +109,19 @@ NSString *EMBEDCODE = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
-  PlayerSelectionOption *selection = self.discoveryResults[indexPath.section][indexPath.row];
-  cell.textLabel.text = [selection title];
+  ChannelContentTreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChannelCell" forIndexPath:indexPath];
+  NSDictionary *dict = self.discoveryResults[indexPath.section][indexPath.row];
+  NSString *name = [dict objectForKey:@"name" ];
+  NSString *imageUrl = [dict objectForKey:@"preview_image_url"];
+  NSNumber *duration = [NSNumber numberWithDouble:[[dict objectForKey:@"duration"] doubleValue] / 1000];
+
+  if (imageUrl && imageUrl.length > 0) {
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+      cell.thumbnail.image = [UIImage imageWithData:data];
+    }];
+  }
+  cell.duration.text = [duration stringValue];
+  cell.title.text = name;
   return cell;
 }
 
@@ -119,8 +130,18 @@ NSString *EMBEDCODE = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  PlayerSelectionOption *selection = self.discoveryResults[indexPath.section][indexPath.row];
-  SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  NSDictionary *dict = self.discoveryResults[indexPath.section][indexPath.row];
+  NSString *name = [dict objectForKey:@"name" ];
+  NSString *embedCode = [dict objectForKey:@"embed_code"];
+
+  PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:name embedCode:embedCode viewController:[ChannelContentTreeDetailViewController class]];
+  ChannelContentTreeDetailViewController *controller = [[ChannelContentTreeDetailViewController alloc] initWithPlayerSelectionOption:option];
   [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return 106.0;
+}
+
 @end

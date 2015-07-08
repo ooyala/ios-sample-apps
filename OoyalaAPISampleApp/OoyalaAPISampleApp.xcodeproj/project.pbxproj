@@ -33,6 +33,7 @@
 		979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */; };
 		979BB21B1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
 		979BB2221A9C0B54001EB8BF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2211A9C0B54001EB8BF /* libxml2.dylib */; };
+		97DFF0D21B4CB25300B1C9FC /* DiscoveryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +81,8 @@
 		979BB21F1A9C0B43001EB8BF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		979BB2211A9C0B54001EB8BF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		97DFF0D01B4CB25300B1C9FC /* DiscoveryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveryListViewController.h; sourceTree = "<group>"; };
+		97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveryListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 		9751C8641A95720600C7364F /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				97DFF0D01B4CB25300B1C9FC /* DiscoveryListViewController.h */,
+				97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */,
 				9751C8651A95722700C7364F /* OoyalaAPIListViewController.h */,
 				9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */,
 			);
@@ -334,6 +339,7 @@
 				979BB20E1A9BD691001EB8BF /* PlayerSelectionOption.m in Sources */,
 				9751C8731A9572C000C7364F /* ChannelContentTreePlayerViewController.m in Sources */,
 				979BB21B1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m in Sources */,
+				97DFF0D21B4CB25300B1C9FC /* DiscoveryListViewController.m in Sources */,
 				9751C8671A95722700C7364F /* OoyalaAPIListViewController.m in Sources */,
 				979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */,
 				9751C7F41A956C5300C7364F /* main.m in Sources */,

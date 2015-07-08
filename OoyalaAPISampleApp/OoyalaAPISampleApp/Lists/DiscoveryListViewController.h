@@ -10,4 +10,6 @@
 
 @interface DiscoveryListViewController : UITableViewController
 
+@property NSString *embedCode;
+
 @end

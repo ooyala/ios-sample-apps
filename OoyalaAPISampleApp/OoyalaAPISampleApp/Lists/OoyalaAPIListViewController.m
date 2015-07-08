@@ -7,6 +7,7 @@
 
 #import "OoyalaAPIListViewController.h"
 #import "ChannelContentTreePlayerViewController.h"
+#import "DiscoveryListViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface OoyalaAPIListViewController ()
@@ -22,9 +23,11 @@
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil] forCellReuseIdentifier:@"TableCell"];
 
   if (_channelList == nil) {
-    PlayerSelectionOption *option =
+    PlayerSelectionOption *option1 =
       [[PlayerSelectionOption alloc] initWithTitle:@"Content Tree for Channel" embedCode:@"txaGRiMzqQZSmFpMML92QczdIYUrcYVe" viewController:[ChannelContentTreePlayerViewController class]];
-    _channelList = [NSArray arrayWithObjects:option, nil];
+    PlayerSelectionOption *option2 =
+      [[PlayerSelectionOption alloc] initWithTitle:@"Discovery Results" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController:[DiscoveryListViewController class]];
+    _channelList = [NSArray arrayWithObjects:option1, option2, nil];
   }
 }
 
@@ -59,8 +62,13 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.channelList[indexPath.row];
-  ChannelContentTreePlayerViewController *controller = (ChannelContentTreePlayerViewController *)[[selection viewController] new];
-  controller.option = selection;
+  UIViewController *controller = (UIViewController *)[[selection viewController] new];
+
+  if ([controller isKindOfClass:[ChannelContentTreePlayerViewController class]]) {
+    ((ChannelContentTreePlayerViewController *)controller).option = selection;
+  } else if ([controller isKindOfClass:[DiscoveryListViewController class]]) {
+    ((DiscoveryListViewController *)controller).embedCode = selection.embedCode;
+  }
   [self.navigationController pushViewController:controller animated:YES];
 }
 

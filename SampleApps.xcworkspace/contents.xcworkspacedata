@@ -34,7 +34,4 @@
    <FileRef
       location = "group:README.md">
    </FileRef>
-   <FileRef
-      location = "group:DiscoverySampleApp/DiscoverySampleApp.xcodeproj">
-   </FileRef>
 </Workspace>
