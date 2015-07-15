@@ -88,8 +88,10 @@ extern NSString *const OOOoyalaPlayerPlayStartedNotification; /**< Fires when pl
 extern NSString *const OOOoyalaplayerLicenseAcquisitionNotification; /**< Fires after a successful license acquisition */
 extern NSString *const OOOoyalaPlayerPlayCompletedNotification; /**< Fires when play completes */
 extern NSString *const OOOoyalaPlayerCurrentItemChangedNotification; /**< Fires when the current item changes */
+extern NSString *const OOOoyalaPlayerAdPodStartedNotification; /**< Fires when an ad pod containing one ore more ads starts playing */
 extern NSString *const OOOoyalaPlayerAdStartedNotification; /**< Fires when an ad starts playing */
 extern NSString *const OOOoyalaPlayerAdCompletedNotification; /**< Fires when an ad completes playing */
+extern NSString *const OOOoyalaPlayerAdPodCompletedNotification; /**< Fires when all ads in the ad pod is completed */
 extern NSString *const OOOoyalaPlayerAdsLoadedNotification; /**< Fires when ads are done loading */
 extern NSString *const OOOoyalaPlayerAdSkippedNotification; /**< Fires when an ad is skipped */
 extern NSString *const OOOoyalaPlayerErrorNotification; /**< Fires when an error occurs */
@@ -378,6 +380,11 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * Skips the currently playing ad (if one is playing. does nothing if not)
  */
 - (void)skipAd;
+
+/**
+ * Click on the currently playing ad
+ */
+- (void)clickAd;
 
 /**
  * current seekable range for main video.

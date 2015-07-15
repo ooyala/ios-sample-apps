@@ -16,6 +16,7 @@
 @protocol OOAdSpotPluginDelegate
 
 - (BOOL)playAd:(OOAdSpot *)ad;
+- (void)onError;
 
 @end
 

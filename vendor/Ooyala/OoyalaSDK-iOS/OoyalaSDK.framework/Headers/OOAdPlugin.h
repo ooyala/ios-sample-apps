@@ -83,6 +83,11 @@
 - (void)skipAd;
 
 /**
+ * This is called when the ad is clicked.
+ */
+- (void)clickAd;
+
+/**
  * @return non-nil (possibly empty) array of cue point times for ads.
  */
 - (NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSeconds;
