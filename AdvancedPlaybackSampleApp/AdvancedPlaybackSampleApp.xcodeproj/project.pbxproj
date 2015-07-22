@@ -30,6 +30,12 @@
 		0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
 		0B19FF621A3B80FB003E57DF /* AdvancedPlaybackListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* AdvancedPlaybackListViewController.h */; };
 		0B19FF631A3B80FB003E57DF /* PlayWithInitialTimePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
+		0B4111511B604C0D00DF47AB /* CustomOverlayPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B41114F1B604C0D00DF47AB /* CustomOverlayPlayerViewController.h */; };
+		0B4111521B604C0D00DF47AB /* CustomOverlayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */; };
+		0B4111551B604C7800DF47AB /* CustomOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B4111531B604C7800DF47AB /* CustomOverlayView.h */; };
+		0B4111561B604C7800DF47AB /* CustomOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111541B604C7800DF47AB /* CustomOverlayView.m */; };
+		0B4111571B6051AF00DF47AB /* CustomOverlayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */; };
+		0B4111581B6051AF00DF47AB /* CustomOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111541B604C7800DF47AB /* CustomOverlayView.m */; };
 		0B7333AB1A7AEEBD00F0EC32 /* OOSampleAdPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */; };
 		0B7333AC1A7AEEBD00F0EC32 /* OOSampleAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */; };
 		0B7333AD1A7AEEBD00F0EC32 /* OOSampleAdSpot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7333A71A7AEEBD00F0EC32 /* OOSampleAdSpot.h */; };
@@ -121,6 +127,10 @@
 		0B19FEFE1A3B7532003E57DF /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdvancedPlaybackSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedPlaybackSampleAppSource.h; sourceTree = "<group>"; };
 		0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedPlaybackSampleAppSource.m; sourceTree = "<group>"; };
+		0B41114F1B604C0D00DF47AB /* CustomOverlayPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayPlayerViewController.h; sourceTree = "<group>"; };
+		0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayPlayerViewController.m; sourceTree = "<group>"; };
+		0B4111531B604C7800DF47AB /* CustomOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayView.h; sourceTree = "<group>"; };
+		0B4111541B604C7800DF47AB /* CustomOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayView.m; sourceTree = "<group>"; };
 		0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSampleAdPlayer.h; sourceTree = "<group>"; };
 		0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOSampleAdPlayer.m; sourceTree = "<group>"; };
 		0B7333A71A7AEEBD00F0EC32 /* OOSampleAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSampleAdSpot.h; sourceTree = "<group>"; };
@@ -265,6 +275,8 @@
 				0B7AC41D1A79A93B0085BC97 /* ChangeVideoPlayerViewController.m */,
 				0B7AC4201A79A93B0085BC97 /* PluginPlayerViewController.h */,
 				0B7AC4211A79A93B0085BC97 /* PluginPlayerViewController.m */,
+				0B41114F1B604C0D00DF47AB /* CustomOverlayPlayerViewController.h */,
+				0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -301,6 +313,8 @@
 				0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */,
 				0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */,
 				0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */,
+				0B4111531B604C7800DF47AB /* CustomOverlayView.h */,
+				0B4111541B604C7800DF47AB /* CustomOverlayView.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,6 +386,7 @@
 				0B19FEE31A3AB4BC003E57DF /* AdvancedPlaybackListViewController.h in Headers */,
 				0B7333AF1A7AEEBD00F0EC32 /* OOSamplePlugin.h in Headers */,
 				0B7AC4221A79A93B0085BC97 /* ChangeVideoPlayerViewController.h in Headers */,
+				0B4111511B604C0D00DF47AB /* CustomOverlayPlayerViewController.h in Headers */,
 				0B7333AB1A7AEEBD00F0EC32 /* OOSampleAdPlayer.h in Headers */,
 				0BCA695A1A848E6400225119 /* OOUIUtils.h in Headers */,
 				0B7AC4241A79A93B0085BC97 /* InsertAdPlayerViewController.h in Headers */,
@@ -380,6 +395,7 @@
 				0BCA694E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h in Headers */,
 				0BCA69561A848E6400225119 /* CustomControlsViewController.h in Headers */,
 				0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */,
+				0B4111551B604C7800DF47AB /* CustomOverlayView.h in Headers */,
 				0B7333AD1A7AEEBD00F0EC32 /* OOSampleAdSpot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BCA694F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m in Sources */,
+				0B4111561B604C7800DF47AB /* CustomOverlayView.m in Sources */,
 				0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */,
 				0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
@@ -507,6 +524,7 @@
 				0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */,
 				0B19FED41A3A901F003E57DF /* SampleAppPlayerViewController.m in Sources */,
 				0BCA69511A848E6400225119 /* OOFullScreenIOS7ViewController.m in Sources */,
+				0B4111521B604C0D00DF47AB /* CustomOverlayPlayerViewController.m in Sources */,
 				0B7AC4231A79A93B0085BC97 /* ChangeVideoPlayerViewController.m in Sources */,
 				0B7333AC1A7AEEBD00F0EC32 /* OOSampleAdPlayer.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* AdvancedPlaybackListViewController.m in Sources */,
@@ -520,6 +538,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4111571B6051AF00DF47AB /* CustomOverlayPlayerViewController.m in Sources */,
+				0B4111581B6051AF00DF47AB /* CustomOverlayView.m in Sources */,
 				0BCA696C1A84965F00225119 /* OOSampleAdPlayer.m in Sources */,
 				0BCA696D1A84965F00225119 /* OOSampleAdSpot.m in Sources */,
 				0BCA696E1A84965F00225119 /* OOSamplePlugin.m in Sources */,
