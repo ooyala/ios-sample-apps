@@ -106,5 +106,6 @@ typedef enum
 @property (nonatomic)           float rate; // playback rate
 @property (nonatomic, readonly) double bitrate;
 @property (nonatomic, readonly) BOOL supportsVideoGravityButton;
+@property (nonatomic, readonly, getter = isLiveClosedCaptionsAvailable) BOOL liveClosedCaptionsAvailable;
 
 @end
