@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOAdSpotPlugin.h>
 
 @class OOOoyalaPlayerViewController;
+@class OOOoyalaPlayer;
 @class OOContentItem;
 @class OOStateNotifier;
 
@@ -35,6 +36,13 @@
  * @return the initialized OOFreewheelManager
  */
 - (id)initWithOoyalaPlayerViewController:(OOOoyalaPlayerViewController *)viewController;
+
+/**
+ * Initialize a OOFreewheelManager using the OOOoyalaPlayer
+ * @param[in] player the OOOoylaPlayer
+ * @return the initialized OOFreewheelManager
+ */
+- (id)initWithOoyalaPlayer:(OOOoyalaPlayer *)player;
 
 /**
  * Sets the Freewheel ad parameters to override values from Backlot and Backdoor.

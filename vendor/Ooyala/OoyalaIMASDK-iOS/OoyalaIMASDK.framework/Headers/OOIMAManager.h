@@ -12,6 +12,7 @@
 
 @class OOOoyalaPlayerViewController;
 @class OOStateNotifier;
+@class OOOoyalaPlayer;
 
 @protocol OOIMAManagerDelegate
 -(void)adsReady;
@@ -35,11 +36,11 @@
 @property(nonatomic) NSString *adUrlOverride;
 
 /**
- * Initialize a OOIMAManager using the OOOoyalaPlayerViewController
- * @param[in] viewController the OOOoylaPlayerViewController control the OOOoyalaPlayer's View
+ * Initialize a OOIMAManager using the OOOoyalaPlayer
+ * @param[in] player the OOOoylaPlayer
  * @returns the initialized OOIMAManager
  */
-- (id)initWithOoyalaPlayerViewController:(OOOoyalaPlayerViewController *)viewController;
+- (instancetype)initWithOoyalaPlayer:(OOOoyalaPlayer *)player;
 
 /**
  * Add a compnanionSlot to AdsPlayer
