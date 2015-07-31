@@ -16,6 +16,7 @@
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
 #import <OoyalaCastSDK/OOCastPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
+#import "OOCastManagerFetcher.h"
 
 @interface ChromecastListViewController ()
 @property(nonatomic, strong) IBOutlet UINavigationItem *navigationBar;
@@ -34,7 +35,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   //[Utils cleanupLocalFiles];
-  self.castManager = [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
 
   UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
