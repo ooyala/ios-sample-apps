@@ -10,12 +10,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ChromecastPlayerSelectionOption : NSObject
-@property NSString *embedCode;
-@property NSString *title;
-@property NSString *pcode;
-@property NSString *domain;
-@property NSString *nib;
-@property Class viewController;
+@property (readonly) NSString *embedCode;
+@property (readonly) NSString *title;
+@property (readonly) NSString *pcode;
+@property (readonly) NSString *domain;
+@property (readonly) NSString *nib;
+@property (readonly) Class viewController;
+@property BOOL startPlaying;
 
 - (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode: (NSString *)pcode domain:(NSString *)domain viewController:(Class)viewController;
 @end

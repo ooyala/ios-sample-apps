@@ -16,6 +16,9 @@
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
 #import <OoyalaCastSDK/OOCastPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
+#import "OOCastManagerFetcher.h"
+
+#define VIDEO_VIEW_SEGUE @"videoView"
 
 @interface ChromecastListViewController ()
 @property(nonatomic, strong) IBOutlet UINavigationItem *navigationBar;
@@ -34,7 +37,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   //[Utils cleanupLocalFiles];
-  self.castManager = [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
 
   UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
@@ -79,7 +82,8 @@
       if ([mediaInfo.embedCode isEqualToString:embedcode]) {
         [self dismissMiniController];
         self.currentMediaInfo = mediaInfo;
-        [self performSegueWithIdentifier:@"play" sender:self];
+        self.currentMediaInfo.startPlaying = self.castManager.castPlayer.state == OOOoyalaPlayerStatePlaying;
+        [self performSegueWithIdentifier:VIDEO_VIEW_SEGUE sender:self];
       }
     }
   }
@@ -132,7 +136,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Display the media details view.
   self.currentMediaInfo = [self.mediaList objectAtIndex:indexPath.row];
-  [self performSegueWithIdentifier:@"play" sender:self];
+  [self performSegueWithIdentifier:VIDEO_VIEW_SEGUE sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

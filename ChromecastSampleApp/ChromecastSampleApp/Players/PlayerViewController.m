@@ -13,7 +13,7 @@
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOVideo.h>
 #import "Utils.h"
-
+#import "OOCastManagerFetcher.h"
 
 @interface PlayerViewController ()
 @property (strong, nonatomic) IBOutlet UINavigationItem *navigationBar;
@@ -50,7 +50,7 @@
   self.accountId = @"accountId";
 
   // Fetch castManager and castButton
-  self.castManager = [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
   
   UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
@@ -87,7 +87,9 @@
   // Init the castManager in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castManager];
   [self.ooyalaPlayer setEmbedCode:self.embedCode];
-  [self.ooyalaPlayer play];
+  if( self.mediaInfo.startPlaying ) {
+    [self.ooyalaPlayer play];
+  }
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
