@@ -1,4 +1,4 @@
-//
+                                                                                                        //
 //  ViewController.m
 //  ChromecastSampleApp
 //
@@ -44,24 +44,18 @@
   [self buildTableViewCells];
   
   [self.castManager disconnectFromOoyalaPlayer];
-
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissMiniController) name:OOCastManagerDidDisconnectNotification object:nil];
-
-  [[NSNotificationCenter defaultCenter] addObserverForName:OOCastMiniControllerClickedNotification
-                                                    object:nil
-                                                     queue:nil
-                                                usingBlock:^(NSNotification *note) {
-                                                  [self initPlayerViewControllerwithEmbedcode];
-                                                }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
   [self dismissMiniController];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissMiniController) name:OOCastManagerDidDisconnectNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(miniControllerClicked) name:OOCastMiniControllerClickedNotification object:nil];
   self.castManager.delegate = self;
   if ([self.castManager isInCastMode]) {
     [self displayMiniController];
@@ -112,6 +106,11 @@
   [self.miniControllerView dismiss];
   [self.navigationController setToolbarHidden:YES animated:YES];
 }
+
+-(void)miniControllerClicked {
+  [self initPlayerViewControllerwithEmbedcode];
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
