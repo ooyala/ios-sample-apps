@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOVideo.h>
+#import <OoyalaCastSDK/OOCastPlayer.h>
 #import "Utils.h"
 #import "OOCastManagerFetcher.h"
 
@@ -74,7 +75,9 @@
   // Init the castManager in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castManager];
   [self.ooyalaPlayer setEmbedCode:self.embedCode];
-  [self.ooyalaPlayer play];
+  if( self.castManager.castPlayer.state != OOOoyalaPlayerStatePaused ) {
+    [self.ooyalaPlayer play];
+  }
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
