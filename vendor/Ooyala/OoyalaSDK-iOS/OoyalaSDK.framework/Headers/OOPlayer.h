@@ -28,7 +28,6 @@ extern NSString *const PlayerErrorNotification;
 @property(readonly, nonatomic, strong) OOOoyalaError *playerError; /**< The OOPlayer's current error if it exists */
 @property(readonly, nonatomic, strong) UIView *view;
 @property(nonatomic) BOOL completed;
-@property(readonly, nonatomic, getter = isLiveClosedCaptionsAvailable) BOOL liveClosedCaptionsAvailable;
 
 - (BOOL)isPlaying;
 
