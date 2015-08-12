@@ -12,8 +12,9 @@
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOVideo.h>
+#import <OoyalaCastSDK/OOCastPlayer.h>
 #import "Utils.h"
-
+#import "OOCastManagerFetcher.h"
 
 @interface PlayerViewController ()
 @property (strong, nonatomic) IBOutlet UINavigationItem *navigationBar;
@@ -50,7 +51,7 @@
   self.accountId = @"accountId";
 
   // Fetch castManager and castButton
-  self.castManager = [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
+  self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
   
   UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
@@ -71,23 +72,12 @@
   self.castPlaybackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
   [self.castManager setCastModeVideoView:self.castPlaybackView];
 
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:_ooyalaPlayerViewController.player];
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(onCastModeEnter)
-                                               name:OOCastEnterCastModeNotification
-                                             object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(onCastModeExit)
-                                               name:OOCastExitCastModeNotification
-                                             object:nil];
-
   // Init the castManager in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castManager];
   [self.ooyalaPlayer setEmbedCode:self.embedCode];
-  [self.ooyalaPlayer play];
+  if( self.castManager.castPlayer.state != OOOoyalaPlayerStatePaused ) {
+    [self.ooyalaPlayer play];
+  }
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
@@ -118,10 +108,23 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:_ooyalaPlayerViewController.player];
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(onCastModeEnter)
+                                               name:OOCastEnterCastModeNotification
+                                             object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(onCastModeExit)
+                                               name:OOCastExitCastModeNotification
+                                             object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /**
