@@ -62,4 +62,10 @@ extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when 
  * Set the videoView to be displayed on ooyalaPlayer during casting
  */
 - (void)setCastModeVideoView:(UIView *)castView;
+
+/**
+ * Provide key-value pairs that will be passed to the Receiver upon Cast Playback. Anything
+ * added to this will overwrite anything set by default in the init.
+ */
+- (void)setAdditionalInitParams:(NSDictionary *)params;
 @end

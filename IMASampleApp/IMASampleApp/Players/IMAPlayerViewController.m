@@ -59,7 +59,7 @@
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
 
-  self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayerViewController:self.ooyalaPlayerViewController];
+  self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:player];
 
 
   // Load the video
