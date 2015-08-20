@@ -10,7 +10,6 @@
 #import "IMAAdEvent.h"
 #import "IMAAdsLoader.h"
 
-@class OOOoyalaPlayerViewController;
 @class OOStateNotifier;
 @class OOOoyalaPlayer;
 
