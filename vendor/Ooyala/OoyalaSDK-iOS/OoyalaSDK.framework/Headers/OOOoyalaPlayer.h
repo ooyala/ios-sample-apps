@@ -470,4 +470,10 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOOoyalaAPIClient *)api;
 
+/**
+ * destroy the player, stop all ads and content play
+ * NOTE: the ooyalaplayer is no longer userful after this call
+ */
+- (void)destroy;
+
 @end
