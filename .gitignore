@@ -16,3 +16,13 @@ profile
 
 go_script/pkg
 go_script/bin
+
+
+**/OoyalaSecurePlayerSDK-iOS
+**/OoyalaSecurePlayerSDK.framework
+**/SecurePlayer.framework
+**/SecurePlayer/Resources
+**/Resources/*.dat
+**/Resources/*.xml
+**/Resources/*.cfg
+
