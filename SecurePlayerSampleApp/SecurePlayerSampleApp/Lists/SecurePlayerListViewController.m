@@ -1,7 +1,6 @@
 /**
- * @class      BasicPlaybackListViewController BasicPlaybackListViewController.m "BasicPlaybackListViewController.m"
- * @brief      A list of playback examples that demonstrate basic playback
- * @date       01/12/15
+ * @class      SecurePlayerListViewController SecurePlayerListViewController.m "SecurePlayerListViewController.m"
+ * @brief      A list of playback examples that demonstrate playback using the SecurePlayer Integration
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
@@ -25,25 +24,16 @@
   return self;
 }
 
-//
-//[self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
-//                                                                        embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
-//                                                                            pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-//                                                                           domain:@"http://www.ooyala.com"
-//                                                                   viewController:[PlayerViewController class]]];
-////[[OOEmbedCodeRow alloc] initWithName:@"Clear HLS Live Stream" pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7" embedCode:@"Rva245YTpHWP-9bchhJL25BMl1shI2fG"],
-//[[OOEmbedCodeRow alloc] initWithName:@"" pcode:@"" embedCode:@""],
-//[[OOEmbedCodeRow alloc] initWithName:@"" pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7" embedCode:@""],
-//[[OOEmbedCodeRow alloc] initWithName:@"" pcode:@"" embedCode:@""],
-//[[OOEmbedCodeRow alloc] initWithName:@"" pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m" embedCode: @""],
-//[[OOEmbedCodeRow alloc] initWithName:@"" pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m" embedCode:@""],
-//[[OOEmbedCodeRow alloc] initWithName:@"" pcode:@"" embedCode:@""],
-//[[OOEmbedCodeRow alloc] initWithName:@"" pcode:@"" embedCode:@""],
-//[[OOEmbedCodeRow alloc] initWithName:@"VOD  with Closed Captions"pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m" embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"],
-- (void)addAllBasicPlayerSelectionOptions {
-//  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"HLS Video" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [SecurePlayerPlayerViewController class]]];
+- (void)addAllSecurePlayerSelectionOptions {
   [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
                                                                   embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                      pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
+                                                                     domain:@"http://www.ooyala.com"
+                                                             viewController:[SecurePlayerPlayerViewController class]]];
+
+
+  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Ooyala Encrypted HLS VOD"
+                                                                  embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
@@ -95,7 +85,7 @@
   self.navigationController.navigationBar.translucent = NO;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
-  [self addAllBasicPlayerSelectionOptions];
+  [self addAllSecurePlayerSelectionOptions];
 }
 
 - (void)insertNewObject:(SecurePlayerSelectionOption *)selectionObject {

@@ -1,8 +1,7 @@
 /**
- * @class      BasicSimplePlayerViewController BasicSimplePlayerViewController.m "BasicSimplePlayerViewController.m"
+ * @class      SecurePlayerPlayerViewController SecurePlayerPlayerViewController.m "SecurePlayerPlayerViewController.m"
  * @brief      A Player that can be used to simply load an embed code and play it
- * @details    BasicSimplePlayerViewController in Ooyala Sample Apps
- * @date       01/12/15
+ * @details    SecurePlayerPlayerViewController in Ooyala Sample Apps
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
@@ -30,12 +29,12 @@
 - (id)initWithPlayerSelectionOption:(SecurePlayerSelectionOption *)playerSelectionOption {
   self = [super init];
   self.nib = @"PlayerSimple";
-  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
-  self.playerDomain = @"http://www.ooyala.com";
   
   if (playerSelectionOption) {
     self.embedCode = playerSelectionOption.embedCode;
     self.title = playerSelectionOption.title;
+    self.pcode = playerSelectionOption.pcode;
+    self.playerDomain= playerSelectionOption.domain;
   }
   return self;
 }
