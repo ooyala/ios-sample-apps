@@ -14,19 +14,18 @@
 /**
  * A set of `OOCaption`s associated with specific content movie
  */
-@interface OOClosedCaptions : NSObject {
-@protected
-  NSMutableArray *languages;
-  NSURL *url;
-  NSString *defaultLanguage;
-}
+@interface OOClosedCaptions : NSObject
 
 /** List of available langauges */
-@property(readonly, nonatomic, strong) NSMutableArray *languages;
+@property(readonly, nonatomic) NSArray *languages;
 /** Default close caption langauge */
-@property(readonly, nonatomic, strong) NSString *defaultLanguage;
+@property(readonly, nonatomic) NSString *defaultLanguage;
 /** URL of the close captions source file */
 @property(readonly, nonatomic, strong) NSURL *url;
+/** the vtt caption dictionary*/
+@property(readonly, nonatomic, strong) NSDictionary *vttCaptions;
+
+- (instancetype)init __attribute__((unavailable("use initWithDictionary:")));
 
 /**
  * INTERNAL
@@ -35,7 +34,7 @@
  * @param[in] data the NSDictionary containing the data to use to initialize this OOClosedCaptions
  * @returns the initialized OOClosedCaptions
  */
-- (id)initWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithDictionary:(NSDictionary *)data;
 
 /**
  * INTERNAL
@@ -45,6 +44,14 @@
  * @returns a OOReturnState based on if the data matched or not (or parsing failed)
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+
+/**
+ * INTERNAL
+ * @internal
+ * Update the OOClosedCaptions using the vtt data
+ * @param[in] data the NSDictionary containing the data to use to update this OOClosedCaptions
+ */
+- (void)updateWithVttDictionary:(NSDictionary *)data;
 
 /**
  * INTERNAL
