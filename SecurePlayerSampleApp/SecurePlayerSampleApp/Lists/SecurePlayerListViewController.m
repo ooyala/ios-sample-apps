@@ -7,6 +7,7 @@
 #import "SecurePlayerListViewController.h"
 #import "SecurePlayerPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
+#import "SecurePlayerOPTPlayerViewController.h"
 
 #import "SecurePlayerSelectionOption.h"
 

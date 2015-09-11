@@ -20,6 +20,8 @@
 		0B19FF621A3B80FB003E57DF /* SecurePlayerListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEE11A3AB4BC003E57DF /* SecurePlayerListViewController.h */; };
 		0B19FF631A3B80FB003E57DF /* SecurePlayerPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */; };
 		0B9457D41AC32C64000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457D31AC32C64000DD545 /* OoyalaSDK.framework */; };
+		0B92BC981BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B92BC961BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h */; };
+		0B92BC991BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92BC971BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m */; };
 		0B9458AB1AC3353E000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458AA1AC3353E000DD545 /* libxml2.dylib */; };
 		0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
@@ -94,6 +96,8 @@
 		0B19FEE21A3AB4BC003E57DF /* SecurePlayerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurePlayerListViewController.m; sourceTree = "<group>"; };
 		0B19FEF31A3AB57E003E57DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B19FEFE1A3B7532003E57DF /* libSecurePlayerSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSecurePlayerSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B92BC961BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecurePlayerOPTPlayerViewController.h; path = SecurePlayerSampleApp/Players/SecurePlayerOPTPlayerViewController.h; sourceTree = SOURCE_ROOT; };
+		0B92BC971BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecurePlayerOPTPlayerViewController.m; path = SecurePlayerSampleApp/Players/SecurePlayerOPTPlayerViewController.m; sourceTree = SOURCE_ROOT; };
 		0B9457D31AC32C64000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B9458AA1AC3353E000DD545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 		0B19FEDB1A3AB4B4003E57DF /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				0B92BC961BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h */,
+				0B92BC971BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m */,
 				0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */,
 				0B19FEDD1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.m */,
 			);
@@ -337,6 +343,7 @@
 				0BD849F61B910165006CB6D0 /* SecurePlayerSelectionOption.h in Headers */,
 				0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */,
 				0B19FEDE1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h in Headers */,
+				0B92BC981BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h in Headers */,
 				0BD84A271B912588006CB6D0 /* PlayerSelectionOption.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
+				0B92BC991BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m in Sources */,
 				0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */,
 				0BD84A281B912588006CB6D0 /* PlayerSelectionOption.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
