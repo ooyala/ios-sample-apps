@@ -4,11 +4,10 @@
  */
 
 #import <Foundation/Foundation.h>
-
 #import <OoyalaSDK/OOAdPlugin.h>
-#import "IMAAd.h"
-#import "IMAAdEvent.h"
-#import "IMAAdsLoader.h"
+#import <UIKit/UIKit.h>
+
+@protocol IMAAdPlaybackInfo;
 
 @class OOStateNotifier;
 @class OOOoyalaPlayer;

@@ -33,7 +33,13 @@
 -(OOOoyalaPlayerState)state;
 
 /**
- * Schedule a non-repeated Timer to update current Playback time based on content playback every 0.25 second
+ * Start a Timer to update current Playback time based on content playback every 0.25 second
  */
--(void)schedulePlaybackTimeUpdate;
+-(void)startSelfUpdateTimer;
+
+/**
+ * Stop the timer
+ */
+-(void)stopSelfUpdateTimer;
+
 @end
