@@ -25,6 +25,7 @@
 @property (strong, nonatomic) OOCastManager *castManager;
 
 @property NSString *embedCode;
+@property NSString *embedCode2;
 @property NSString *pcode;
 @property NSString *playerDomain;
 
@@ -40,7 +41,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
+  
   /*
    * The API Key and Secret should not be saved inside your applciation (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
@@ -49,32 +50,38 @@
   self.apiKey = @"fill me in";
   self.secret = @"fill me in";
   self.accountId = @"accountId";
-
+  
   // Fetch castManager and castButton
   self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
   
   UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
   self.navigationBar.rightBarButtonItem = leftbutton;
-
+  
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
   self.pcode = self.mediaInfo.pcode;
   self.playerDomain = self.mediaInfo.domain;
   self.embedCode = self.mediaInfo.embedCode;
+  self.embedCode2 = self.mediaInfo.embedCode2;
 
   self.ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:self.ooyalaPlayer];
-
+  
   [self.ooyalaPlayerViewController.view setFrame:self.videoView.bounds];
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.videoView addSubview:self.ooyalaPlayerViewController.view];
-
+  
   self.castPlaybackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
   [self.castManager setCastModeVideoView:self.castPlaybackView];
-
+  
   // Init the castManager in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castManager];
-  [self.ooyalaPlayer setEmbedCode:self.embedCode];
+  
+  [self play:self.embedCode];
+}
+
+-(void) play:(NSString*)embedCode {
+  [self.ooyalaPlayer setEmbedCode:embedCode];
   if( self.castManager.castPlayer.state != OOOoyalaPlayerStatePaused ) {
     [self.ooyalaPlayer play];
   }
@@ -87,6 +94,9 @@
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
     [self configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem];
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification] && self.embedCode2) {
+    [self play:self.embedCode2];
   }
 
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
