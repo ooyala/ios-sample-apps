@@ -11,6 +11,7 @@
 
 @interface ChromecastPlayerSelectionOption : NSObject
 @property NSString *embedCode;
+@property NSString *embedCode2;
 @property NSString *title;
 @property NSString *pcode;
 @property NSString *domain;
@@ -18,4 +19,6 @@
 @property Class viewController;
 
 - (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode: (NSString *)pcode domain:(NSString *)domain viewController:(Class)viewController;
+- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode embedCode2:(NSString *)embedCode2 pcode: (NSString *)pcode domain:(NSString *)domain viewController:(Class)viewController;
+
 @end
