@@ -14,7 +14,6 @@
 
 @protocol OOIMAManagerDelegate
 -(void)adsReady;
--(void)playStarted; // as opposed to the play being queued up for later.
 -(void)onError;
 @end
 
@@ -22,7 +21,6 @@
 
 @property(nonatomic, weak) id<OOIMAManagerDelegate> delegate;
 @property(nonatomic, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
-@property(nonatomic, readonly) UIView *imaAdView;
 @property(readonly) OOStateNotifier *stateNotifier;
 
 /**

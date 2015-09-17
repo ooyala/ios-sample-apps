@@ -6,8 +6,7 @@
 #import "OOAdMoviePlayer.h"
 #import "OOIMAManager.h"
 
-@interface OOIMAAdPlayer : OOAdMoviePlayer <OOIMAManagerDelegate>
-
+@interface OOIMAAdPlayer : NSObject<OOPlayerProtocol, OOIMAManagerDelegate>
 
 /**
  * Initialize a OOIMAAdPlayer using the given OOIMAManager
@@ -15,12 +14,6 @@
  * @returns the initialized OOIMAAdPlayer
  */
 - (id)initWithIMAManager:(OOIMAManager *)imaManager;
-
-/**
- * Set the frame of this OOIMAAdPlayer to be the given CGRect
- * @param[in] frame the frame to be set
- */
--(void)setFrame:(CGRect)frame;
 
 /**
  * Resume content playback
