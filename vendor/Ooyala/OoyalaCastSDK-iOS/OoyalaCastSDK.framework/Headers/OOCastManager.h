@@ -32,8 +32,6 @@ extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when 
 
 @property(nonatomic, strong) GCKDevice *selectedDevice;
 
-@property(nonatomic, strong) OOCastPlayer *castPlayer;
-
 @property(nonatomic, readonly) BOOL isInCastMode;
 
 @property(nonatomic, weak) id<OOCastManagerDelegate> delegate;
