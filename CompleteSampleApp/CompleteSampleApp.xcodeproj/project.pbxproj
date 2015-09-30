@@ -39,21 +39,6 @@
 		0B9458F91AC33A1C000DD545 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458D11AC33A1C000DD545 /* StorageManager.h */; };
 		0B9458FA1AC33A1C000DD545 /* libAccessEnabler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458D31AC33A1C000DD545 /* libAccessEnabler.a */; };
 		0B9458FB1AC33A1C000DD545 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458D41AC33A1C000DD545 /* AdManager.framework */; };
-		0B9458FC1AC33A1C000DD545 /* IMAAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458D61AC33A1C000DD545 /* IMAAd.h */; };
-		0B9458FD1AC33A1C000DD545 /* IMAAdDisplayContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458D71AC33A1C000DD545 /* IMAAdDisplayContainer.h */; };
-		0B9458FE1AC33A1C000DD545 /* IMAAdError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458D81AC33A1C000DD545 /* IMAAdError.h */; };
-		0B9458FF1AC33A1C000DD545 /* IMAAdEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458D91AC33A1C000DD545 /* IMAAdEvent.h */; };
-		0B9459001AC33A1C000DD545 /* IMAAdPlaybackInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458DA1AC33A1C000DD545 /* IMAAdPlaybackInfo.h */; };
-		0B9459011AC33A1C000DD545 /* IMAAdPodInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458DB1AC33A1C000DD545 /* IMAAdPodInfo.h */; };
-		0B9459021AC33A1C000DD545 /* IMAAdsLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458DC1AC33A1C000DD545 /* IMAAdsLoader.h */; };
-		0B9459031AC33A1C000DD545 /* IMAAdsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458DD1AC33A1C000DD545 /* IMAAdsManager.h */; };
-		0B9459041AC33A1C000DD545 /* IMAAdsRenderingSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458DE1AC33A1C000DD545 /* IMAAdsRenderingSettings.h */; };
-		0B9459051AC33A1C000DD545 /* IMAAdsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458DF1AC33A1C000DD545 /* IMAAdsRequest.h */; };
-		0B9459061AC33A1C000DD545 /* IMAAVPlayerContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458E01AC33A1C000DD545 /* IMAAVPlayerContentPlayhead.h */; };
-		0B9459071AC33A1C000DD545 /* IMACompanionAdSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458E11AC33A1C000DD545 /* IMACompanionAdSlot.h */; };
-		0B9459081AC33A1C000DD545 /* IMAContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458E21AC33A1C000DD545 /* IMAContentPlayhead.h */; };
-		0B9459091AC33A1C000DD545 /* IMAUiElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458E31AC33A1C000DD545 /* IMAUiElements.h */; };
-		0B94590A1AC33A1C000DD545 /* libGoogleIMA3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458E41AC33A1C000DD545 /* libGoogleIMA3.a */; };
 		0B94590B1AC33A1C000DD545 /* OoyalaFreewheelSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458E51AC33A1C000DD545 /* OoyalaFreewheelSDK.framework */; };
 		0B94590C1AC33A1C000DD545 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458E61AC33A1C000DD545 /* OoyalaIMASDK.framework */; };
 		0B94590D1AC33A1C000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458E71AC33A1C000DD545 /* OoyalaSDK.framework */; };
@@ -66,6 +51,7 @@
 		0B94591A1AC33A40000DD545 /* libOptionsSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */; };
 		0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E21A40DF7000E7DE88 /* Main.storyboard */; };
 		0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801111A40E02000E7DE88 /* LaunchScreen.xib */; };
+		0BC8CF9D1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9C1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework */; settings = {ASSET_TAGS = (); }; };
 		0BC947E51A817768004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947DF1A817768004CB997 /* PlayerDoubleButton.xib */; };
 		0BC947E61A817768004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947E01A817768004CB997 /* PlayerDoubleSwitch.xib */; };
 		0BC947E71A817768004CB997 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947E11A817768004CB997 /* PlayerDoubleText.xib */; };
@@ -122,21 +108,6 @@
 		0B9458D11AC33A1C000DD545 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
 		0B9458D31AC33A1C000DD545 /* libAccessEnabler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAccessEnabler.a; sourceTree = "<group>"; };
 		0B9458D41AC33A1C000DD545 /* AdManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdManager.framework; sourceTree = "<group>"; };
-		0B9458D61AC33A1C000DD545 /* IMAAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAd.h; sourceTree = "<group>"; };
-		0B9458D71AC33A1C000DD545 /* IMAAdDisplayContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdDisplayContainer.h; sourceTree = "<group>"; };
-		0B9458D81AC33A1C000DD545 /* IMAAdError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdError.h; sourceTree = "<group>"; };
-		0B9458D91AC33A1C000DD545 /* IMAAdEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdEvent.h; sourceTree = "<group>"; };
-		0B9458DA1AC33A1C000DD545 /* IMAAdPlaybackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdPlaybackInfo.h; sourceTree = "<group>"; };
-		0B9458DB1AC33A1C000DD545 /* IMAAdPodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdPodInfo.h; sourceTree = "<group>"; };
-		0B9458DC1AC33A1C000DD545 /* IMAAdsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsLoader.h; sourceTree = "<group>"; };
-		0B9458DD1AC33A1C000DD545 /* IMAAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsManager.h; sourceTree = "<group>"; };
-		0B9458DE1AC33A1C000DD545 /* IMAAdsRenderingSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsRenderingSettings.h; sourceTree = "<group>"; };
-		0B9458DF1AC33A1C000DD545 /* IMAAdsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsRequest.h; sourceTree = "<group>"; };
-		0B9458E01AC33A1C000DD545 /* IMAAVPlayerContentPlayhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAVPlayerContentPlayhead.h; sourceTree = "<group>"; };
-		0B9458E11AC33A1C000DD545 /* IMACompanionAdSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMACompanionAdSlot.h; sourceTree = "<group>"; };
-		0B9458E21AC33A1C000DD545 /* IMAContentPlayhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAContentPlayhead.h; sourceTree = "<group>"; };
-		0B9458E31AC33A1C000DD545 /* IMAUiElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAUiElements.h; sourceTree = "<group>"; };
-		0B9458E41AC33A1C000DD545 /* libGoogleIMA3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleIMA3.a; sourceTree = "<group>"; };
 		0B9458E51AC33A1C000DD545 /* OoyalaFreewheelSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaFreewheelSDK.framework; sourceTree = "<group>"; };
 		0B9458E61AC33A1C000DD545 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaIMASDK.framework; sourceTree = "<group>"; };
 		0B9458E71AC33A1C000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
@@ -149,6 +120,7 @@
 		0B9800E31A40DF7000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B9801121A40E02000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
+		0BC8CF9C1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
 		0BC947DF1A817768004CB997 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
 		0BC947E01A817768004CB997 /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
 		0BC947E11A817768004CB997 /* PlayerDoubleText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleText.xib; sourceTree = "<group>"; };
@@ -185,10 +157,10 @@
 				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
 				0B9458FB1AC33A1C000DD545 /* AdManager.framework in Frameworks */,
 				0B9458FA1AC33A1C000DD545 /* libAccessEnabler.a in Frameworks */,
-				0B94590A1AC33A1C000DD545 /* libGoogleIMA3.a in Frameworks */,
 				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
 				0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */,
 				0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */,
+				0BC8CF9D1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */,
 				0BF4FA4F1A6873120050A602 /* libz.dylib in Frameworks */,
 			);
@@ -295,9 +267,8 @@
 			children = (
 				0B1AFB761B02C76400347DFA /* YouboraMedia.framework */,
 				0B9458BA1AC33A1C000DD545 /* AccessEnabler */,
+				0BC8CF9C1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework */,
 				0B9458D41AC33A1C000DD545 /* AdManager.framework */,
-				0B9458D51AC33A1C000DD545 /* GoogleIMAHeaders */,
-				0B9458E41AC33A1C000DD545 /* libGoogleIMA3.a */,
 				0B9458E51AC33A1C000DD545 /* OoyalaFreewheelSDK.framework */,
 				0B9458E61AC33A1C000DD545 /* OoyalaIMASDK.framework */,
 				0B9458E71AC33A1C000DD545 /* OoyalaSDK.framework */,
@@ -379,27 +350,6 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
-		0B9458D51AC33A1C000DD545 /* GoogleIMAHeaders */ = {
-			isa = PBXGroup;
-			children = (
-				0B9458D61AC33A1C000DD545 /* IMAAd.h */,
-				0B9458D71AC33A1C000DD545 /* IMAAdDisplayContainer.h */,
-				0B9458D81AC33A1C000DD545 /* IMAAdError.h */,
-				0B9458D91AC33A1C000DD545 /* IMAAdEvent.h */,
-				0B9458DA1AC33A1C000DD545 /* IMAAdPlaybackInfo.h */,
-				0B9458DB1AC33A1C000DD545 /* IMAAdPodInfo.h */,
-				0B9458DC1AC33A1C000DD545 /* IMAAdsLoader.h */,
-				0B9458DD1AC33A1C000DD545 /* IMAAdsManager.h */,
-				0B9458DE1AC33A1C000DD545 /* IMAAdsRenderingSettings.h */,
-				0B9458DF1AC33A1C000DD545 /* IMAAdsRequest.h */,
-				0B9458E01AC33A1C000DD545 /* IMAAVPlayerContentPlayhead.h */,
-				0B9458E11AC33A1C000DD545 /* IMACompanionAdSlot.h */,
-				0B9458E21AC33A1C000DD545 /* IMAContentPlayhead.h */,
-				0B9458E31AC33A1C000DD545 /* IMAUiElements.h */,
-			);
-			path = GoogleIMAHeaders;
-			sourceTree = "<group>";
-		};
 		0BC947DE1A817768004CB997 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,30 +371,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B9458FC1AC33A1C000DD545 /* IMAAd.h in Headers */,
 				0B9458F41AC33A1C000DD545 /* MVPD.h in Headers */,
 				0B9458F81AC33A1C000DD545 /* NSURLConnectionWithTag.h in Headers */,
-				0B9459021AC33A1C000DD545 /* IMAAdsLoader.h in Headers */,
-				0B9459071AC33A1C000DD545 /* IMACompanionAdSlot.h in Headers */,
 				0B9458F91AC33A1C000DD545 /* StorageManager.h in Headers */,
-				0B9459061AC33A1C000DD545 /* IMAAVPlayerContentPlayhead.h in Headers */,
-				0B9459031AC33A1C000DD545 /* IMAAdsManager.h in Headers */,
 				0B9458ED1AC33A1C000DD545 /* CookieManager.h in Headers */,
 				0B9458EE1AC33A1C000DD545 /* DeviceID.h in Headers */,
-				0B9458FD1AC33A1C000DD545 /* IMAAdDisplayContainer.h in Headers */,
 				0B9458E91AC33A1C000DD545 /* AccessEnabler.h in Headers */,
 				0B9458F11AC33A1C000DD545 /* ServerAPIVersion.h in Headers */,
-				0B9458FE1AC33A1C000DD545 /* IMAAdError.h in Headers */,
-				0B9458FF1AC33A1C000DD545 /* IMAAdEvent.h in Headers */,
-				0B9459081AC33A1C000DD545 /* IMAContentPlayhead.h in Headers */,
-				0B9459051AC33A1C000DD545 /* IMAAdsRequest.h in Headers */,
-				0B9459041AC33A1C000DD545 /* IMAAdsRenderingSettings.h in Headers */,
 				0B9458EA1AC33A1C000DD545 /* AccessEnablerConstants.h in Headers */,
 				0B9458EB1AC33A1C000DD545 /* ClientVersion.h in Headers */,
-				0B9459001AC33A1C000DD545 /* IMAAdPlaybackInfo.h in Headers */,
 				0B9458F01AC33A1C000DD545 /* NSUtils.h in Headers */,
 				0B9458F71AC33A1C000DD545 /* ConnectionsManager.h in Headers */,
-				0B9459091AC33A1C000DD545 /* IMAUiElements.h in Headers */,
 				0B9458EC1AC33A1C000DD545 /* Context.h in Headers */,
 				0B9458F51AC33A1C000DD545 /* Requestor.h in Headers */,
 				0B9458F31AC33A1C000DD545 /* AuthorizationToken.h in Headers */,
@@ -452,7 +389,6 @@
 				0B9458F61AC33A1C000DD545 /* UserMetadata.h in Headers */,
 				0B9458EF1AC33A1C000DD545 /* EntitlementDelegate.h in Headers */,
 				0B9458F21AC33A1C000DD545 /* AuthenticationToken.h in Headers */,
-				0B9459011AC33A1C000DD545 /* IMAAdPodInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

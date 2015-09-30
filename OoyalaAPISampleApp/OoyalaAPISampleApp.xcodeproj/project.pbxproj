@@ -12,6 +12,7 @@
 		0B9458B01AC33843000DD545 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21F1A9C0B43001EB8BF /* libc++.dylib */; };
 		0B9458B21AC338A7000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */; };
 		0B9459201AC33ACB000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */; };
+		0BC8CF9E1BBC83A100F61C1A /* DiscoveryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */; };
 		0BDC4BC61A9F9F7300576639 /* OoyalaAPISampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0BDC4BC51A9F9F7300576639 /* OoyalaAPISampleAppSource.h */; };
 		0BDC4BC81A9F9F7300576639 /* OoyalaAPISampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BC71A9F9F7300576639 /* OoyalaAPISampleAppSource.m */; };
 		0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */; };
@@ -322,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC8CF9E1BBC83A100F61C1A /* DiscoveryListViewController.m in Sources */,
 				0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */,
 				0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */,
 				0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */,
