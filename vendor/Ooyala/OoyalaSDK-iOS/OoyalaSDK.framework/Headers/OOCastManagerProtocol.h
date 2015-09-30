@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class OOOoyalaPlayer;
+@class OOCastPlayer;
 @protocol OOEmbedTokenGenerator;
 @class OOCastModeOptions;
 
@@ -21,7 +22,7 @@
 /**
  *  Return the castPlayer related to this OOCastManager
  */
-- (id)getCastPlayer;
+@property (nonatomic, readonly) OOCastPlayer *castPlayer;
 
 /**
  * Register the OOCastManager to ooyalaPlayer

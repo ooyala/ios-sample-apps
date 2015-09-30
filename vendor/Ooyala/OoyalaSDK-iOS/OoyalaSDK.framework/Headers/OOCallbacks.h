@@ -53,4 +53,16 @@ typedef void(^OOFetchMoreChildrenCallback)(NSRange range, OOOoyalaError *error);
  */
 typedef void(^OOObjectFromBacklotAPICallback)(NSObject *object);
 
+/**
+ * The callback used for authorization requests
+ * @param[in] error the OOOoyalaError if one occurred
+ */
+typedef void (^OOAuthorizeCallback)(OOOoyalaError *error);
+
+/**
+ * The callback used for heartbeat requests
+ * @param[in] error the OOOoyalaError if one occurred
+ */
+typedef void (^OOHeartbeatCallback)(OOOoyalaError *error);
+
 #endif

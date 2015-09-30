@@ -14,6 +14,7 @@
 
 @class OOCastManager;
 @class OOCastModeOptions;
+@class OOOoyalaPlayer;
 
 @interface OOCastPlayer : GCKCastChannel<OOPlayerProtocol>
 
@@ -34,6 +35,8 @@
 - (id) init __attribute__((unavailable("use initWithNamespace:appNamespace")));
 
 - (void)initStateNotifier:(OOStateNotifier *)stateNotifier;
+
+- (void)registerWithOoyalaPlayer:(OOOoyalaPlayer*)ooyalaPlayer;
 
 - (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription;
 
