@@ -1,0 +1,16 @@
+framework module GoogleInteractiveMediaAds {
+  umbrella header "GoogleInteractiveMediaAds.h"
+
+  export *
+  module * { export * }
+
+  link framework "AdSupport"
+  link framework "AVFoundation"
+  link framework "CoreGraphics"
+  link framework "CoreMedia"
+  link framework "Foundation"
+  link framework "MediaPlayer"
+  link framework "SystemConfiguration"
+  link framework "UIKit"
+  link framework "WebKit"
+}

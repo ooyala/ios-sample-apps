@@ -10,26 +10,12 @@
 		0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B17A0E91A78206D009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0E81A78206D009D1C50 /* libc++.dylib */; };
-		0B94584F1AC32CB3000DD545 /* IMAAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B94583E1AC32CB3000DD545 /* IMAAd.h */; };
-		0B9458501AC32CB3000DD545 /* IMAAdDisplayContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B94583F1AC32CB3000DD545 /* IMAAdDisplayContainer.h */; };
-		0B9458511AC32CB3000DD545 /* IMAAdError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458401AC32CB3000DD545 /* IMAAdError.h */; };
-		0B9458521AC32CB3000DD545 /* IMAAdEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458411AC32CB3000DD545 /* IMAAdEvent.h */; };
-		0B9458531AC32CB3000DD545 /* IMAAdPlaybackInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458421AC32CB3000DD545 /* IMAAdPlaybackInfo.h */; };
-		0B9458541AC32CB3000DD545 /* IMAAdPodInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458431AC32CB3000DD545 /* IMAAdPodInfo.h */; };
-		0B9458551AC32CB3000DD545 /* IMAAdsLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458441AC32CB3000DD545 /* IMAAdsLoader.h */; };
-		0B9458561AC32CB3000DD545 /* IMAAdsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458451AC32CB3000DD545 /* IMAAdsManager.h */; };
-		0B9458571AC32CB3000DD545 /* IMAAdsRenderingSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458461AC32CB3000DD545 /* IMAAdsRenderingSettings.h */; };
-		0B9458581AC32CB3000DD545 /* IMAAdsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458471AC32CB3000DD545 /* IMAAdsRequest.h */; };
-		0B9458591AC32CB3000DD545 /* IMAAVPlayerContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458481AC32CB3000DD545 /* IMAAVPlayerContentPlayhead.h */; };
-		0B94585A1AC32CB3000DD545 /* IMACompanionAdSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458491AC32CB3000DD545 /* IMACompanionAdSlot.h */; };
-		0B94585B1AC32CB3000DD545 /* IMAContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B94584A1AC32CB3000DD545 /* IMAContentPlayhead.h */; };
-		0B94585C1AC32CB3000DD545 /* IMAUiElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B94584B1AC32CB3000DD545 /* IMAUiElements.h */; };
-		0B94585D1AC32CB3000DD545 /* libGoogleIMA3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94584C1AC32CB3000DD545 /* libGoogleIMA3.a */; };
 		0B94585E1AC32CB3000DD545 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94584D1AC32CB3000DD545 /* OoyalaIMASDK.framework */; };
 		0B94585F1AC32CB3000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94584E1AC32CB3000DD545 /* OoyalaSDK.framework */; };
 		0B9458AD1AC3361F000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458AC1AC3361F000DD545 /* libxml2.dylib */; };
 		0B9458B81AC339AB000DD545 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA3E1A68702A0050A602 /* libz.dylib */; };
 		0B94591F1AC33ABF000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94584E1AC32CB3000DD545 /* OoyalaSDK.framework */; };
+		0BC8CF9B1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9A1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework */; settings = {ASSET_TAGS = (); }; };
 		0BC947FF1A81779B004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947F91A81779B004CB997 /* PlayerDoubleButton.xib */; };
 		0BC948001A81779B004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FA1A81779B004CB997 /* PlayerDoubleSwitch.xib */; };
 		0BC948011A81779B004CB997 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FB1A81779B004CB997 /* PlayerDoubleText.xib */; };
@@ -84,24 +70,10 @@
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B17A0E81A78206D009D1C50 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B19FEFE1A3B7532003E57DF /* libIMASampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIMASampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B94583E1AC32CB3000DD545 /* IMAAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAd.h; sourceTree = "<group>"; };
-		0B94583F1AC32CB3000DD545 /* IMAAdDisplayContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdDisplayContainer.h; sourceTree = "<group>"; };
-		0B9458401AC32CB3000DD545 /* IMAAdError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdError.h; sourceTree = "<group>"; };
-		0B9458411AC32CB3000DD545 /* IMAAdEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdEvent.h; sourceTree = "<group>"; };
-		0B9458421AC32CB3000DD545 /* IMAAdPlaybackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdPlaybackInfo.h; sourceTree = "<group>"; };
-		0B9458431AC32CB3000DD545 /* IMAAdPodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdPodInfo.h; sourceTree = "<group>"; };
-		0B9458441AC32CB3000DD545 /* IMAAdsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsLoader.h; sourceTree = "<group>"; };
-		0B9458451AC32CB3000DD545 /* IMAAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsManager.h; sourceTree = "<group>"; };
-		0B9458461AC32CB3000DD545 /* IMAAdsRenderingSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsRenderingSettings.h; sourceTree = "<group>"; };
-		0B9458471AC32CB3000DD545 /* IMAAdsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAdsRequest.h; sourceTree = "<group>"; };
-		0B9458481AC32CB3000DD545 /* IMAAVPlayerContentPlayhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAAVPlayerContentPlayhead.h; sourceTree = "<group>"; };
-		0B9458491AC32CB3000DD545 /* IMACompanionAdSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMACompanionAdSlot.h; sourceTree = "<group>"; };
-		0B94584A1AC32CB3000DD545 /* IMAContentPlayhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAContentPlayhead.h; sourceTree = "<group>"; };
-		0B94584B1AC32CB3000DD545 /* IMAUiElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAUiElements.h; sourceTree = "<group>"; };
-		0B94584C1AC32CB3000DD545 /* libGoogleIMA3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleIMA3.a; sourceTree = "<group>"; };
 		0B94584D1AC32CB3000DD545 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaIMASDK.framework; sourceTree = "<group>"; };
 		0B94584E1AC32CB3000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B9458AC1AC3361F000DD545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		0BC8CF9A1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
 		0BC947F91A81779B004CB997 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
 		0BC947FA1A81779B004CB997 /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
 		0BC947FB1A81779B004CB997 /* PlayerDoubleText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleText.xib; sourceTree = "<group>"; };
@@ -138,12 +110,12 @@
 			files = (
 				0B94585F1AC32CB3000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B94585E1AC32CB3000DD545 /* OoyalaIMASDK.framework in Frameworks */,
+				0BC8CF9B1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
 				0B9458AD1AC3361F000DD545 /* libxml2.dylib in Frameworks */,
 				0B9458B81AC339AB000DD545 /* libz.dylib in Frameworks */,
 				0B17A0E91A78206D009D1C50 /* libc++.dylib in Frameworks */,
-				0B94585D1AC32CB3000DD545 /* libGoogleIMA3.a in Frameworks */,
 				0BF4FA3D1A686FBC0050A602 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,33 +169,11 @@
 		0B94583C1AC32CB3000DD545 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				0B94583D1AC32CB3000DD545 /* GoogleIMAHeaders */,
-				0B94584C1AC32CB3000DD545 /* libGoogleIMA3.a */,
+				0BC8CF9A1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework */,
 				0B94584D1AC32CB3000DD545 /* OoyalaIMASDK.framework */,
 				0B94584E1AC32CB3000DD545 /* OoyalaSDK.framework */,
 			);
 			path = VendorLibraries;
-			sourceTree = "<group>";
-		};
-		0B94583D1AC32CB3000DD545 /* GoogleIMAHeaders */ = {
-			isa = PBXGroup;
-			children = (
-				0B94583E1AC32CB3000DD545 /* IMAAd.h */,
-				0B94583F1AC32CB3000DD545 /* IMAAdDisplayContainer.h */,
-				0B9458401AC32CB3000DD545 /* IMAAdError.h */,
-				0B9458411AC32CB3000DD545 /* IMAAdEvent.h */,
-				0B9458421AC32CB3000DD545 /* IMAAdPlaybackInfo.h */,
-				0B9458431AC32CB3000DD545 /* IMAAdPodInfo.h */,
-				0B9458441AC32CB3000DD545 /* IMAAdsLoader.h */,
-				0B9458451AC32CB3000DD545 /* IMAAdsManager.h */,
-				0B9458461AC32CB3000DD545 /* IMAAdsRenderingSettings.h */,
-				0B9458471AC32CB3000DD545 /* IMAAdsRequest.h */,
-				0B9458481AC32CB3000DD545 /* IMAAVPlayerContentPlayhead.h */,
-				0B9458491AC32CB3000DD545 /* IMACompanionAdSlot.h */,
-				0B94584A1AC32CB3000DD545 /* IMAContentPlayhead.h */,
-				0B94584B1AC32CB3000DD545 /* IMAUiElements.h */,
-			);
-			path = GoogleIMAHeaders;
 			sourceTree = "<group>";
 		};
 		0BC947F81A81779B004CB997 /* Views */ = {
@@ -304,27 +254,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B9458591AC32CB3000DD545 /* IMAAVPlayerContentPlayhead.h in Headers */,
-				0B9458531AC32CB3000DD545 /* IMAAdPlaybackInfo.h in Headers */,
 				0BF4FA271A686CB40050A602 /* AppDelegate.h in Headers */,
-				0B94585C1AC32CB3000DD545 /* IMAUiElements.h in Headers */,
-				0B9458551AC32CB3000DD545 /* IMAAdsLoader.h in Headers */,
-				0B9458521AC32CB3000DD545 /* IMAAdEvent.h in Headers */,
 				0BF4FA321A686CB40050A602 /* PlayerSelectionOption.h in Headers */,
-				0B9458511AC32CB3000DD545 /* IMAAdError.h in Headers */,
-				0B94585B1AC32CB3000DD545 /* IMAContentPlayhead.h in Headers */,
 				0BF4FA2D1A686CB40050A602 /* IMAPlaybackListViewcontroller.h in Headers */,
 				0BF4FA301A686CB40050A602 /* IMACustomConfiguredPlayerViewController.h in Headers */,
-				0B9458541AC32CB3000DD545 /* IMAAdPodInfo.h in Headers */,
-				0B94585A1AC32CB3000DD545 /* IMACompanionAdSlot.h in Headers */,
-				0B9458501AC32CB3000DD545 /* IMAAdDisplayContainer.h in Headers */,
 				0BF4FA361A686CB40050A602 /* IMASampleAppSource.h in Headers */,
-				0B9458561AC32CB3000DD545 /* IMAAdsManager.h in Headers */,
 				0BF4FA341A686CB40050A602 /* SampleAppPlayerViewController.h in Headers */,
 				0BFFF6C31B33395B00D72444 /* IMAPlayerViewController.h in Headers */,
-				0B9458571AC32CB3000DD545 /* IMAAdsRenderingSettings.h in Headers */,
-				0B9458581AC32CB3000DD545 /* IMAAdsRequest.h in Headers */,
-				0B94584F1AC32CB3000DD545 /* IMAAd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

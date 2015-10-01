@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : 0,
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3362A32F-491E-4255-AC8E-A118E14D651D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : "..",
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : "ios_sample_apps\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SampleApps",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SampleApps.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.services.ooyala.net:playback-app\/ios-sdk",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/ios-sample-apps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A"
+    }
+  ]
+}
