@@ -32,8 +32,6 @@ extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when 
 
 @property(nonatomic, strong) GCKDevice *selectedDevice;
 
-@property(nonatomic, readonly) BOOL isInCastMode;
-
 @property(nonatomic, weak) id<OOCastManagerDelegate> delegate;
 
 /**
@@ -50,11 +48,6 @@ extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when 
  * Return the cast button
  */
 - (UIButton *)getCastButton;
-
-/**
- *  Return the castPlayer related to this OOCastManager
- */
-- (OOCastPlayer *)getCastPlayer;
 
 /**
  * Set the videoView to be displayed on ooyalaPlayer during casting

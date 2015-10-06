@@ -32,7 +32,7 @@
 /**
  * Return YES if is in castMode
  */
-- (BOOL)isInCastMode;
+@property(nonatomic, readonly) BOOL isInCastMode;
 
 /**
  * Enter cast mode with given OOCastModeOptions object

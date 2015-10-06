@@ -16,7 +16,7 @@
 @class OOCastModeOptions;
 @class OOOoyalaPlayer;
 
-@interface OOCastPlayer : GCKCastChannel<OOPlayerProtocol>
+@interface OOCastPlayer : GCKCastChannel<OOPlayerProtocol, GCKMediaControlChannelDelegate>
 
 @property(nonatomic, strong) OOStateNotifier *stateNotifier;
 
@@ -30,9 +30,9 @@
 
 @property(nonatomic, strong) NSString *castItemPromoImg;
 
-@property(nonatomic, weak) OOCastManager *castManager;
-
-- (id) init __attribute__((unavailable("use initWithNamespace:appNamespace")));
+- (id)init __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
+- (id)initWithNamespace:(NSString *)appNamespace __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
+- (id)initWithNamespace:(NSString *)appNamespace deviceManager:(GCKDeviceManager *)deviceManager castManager:(OOCastManager *)castManager;
 
 - (void)initStateNotifier:(OOStateNotifier *)stateNotifier;
 
