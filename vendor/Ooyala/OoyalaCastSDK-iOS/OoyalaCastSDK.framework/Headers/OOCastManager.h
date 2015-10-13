@@ -19,8 +19,7 @@
 @end
 
 
-extern NSString *const OOCastManagerFailToConnectNotification; /**< Fires when a OOCastManager fails to connect to a chromecast device*/
-extern NSString *const OOCastDeviceLostNotification; /**< Fires when a chromecast device lost*/
+// was never used: extern NSString *const OOCastManagerFailToConnectNotification; /**< Fires when a OOCastManager fails to connect to a chromecast device*/
 extern NSString *const OOCastManagerDidDisconnectNotification; /**< Fires when a OOCastManager disconnects from chromecast device*/
 extern NSString *const OOCastEnterCastModeNotification; /**< Fires when enter cast mode*/
 extern NSString *const OOCastExitCastModeNotification; /**< Fires when exit cast mode*/
