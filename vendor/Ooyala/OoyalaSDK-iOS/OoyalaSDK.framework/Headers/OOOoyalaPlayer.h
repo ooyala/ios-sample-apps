@@ -378,6 +378,13 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (NSArray *)availableClosedCaptionsLanguages;
 
 /**
+ * Get the short code from the natural language name. Example: name="english", code="en".
+ * @param name is the long name, from availableClosedCaptionsLanguages.
+ * @return the short cc code. If the reverse mapping fails, the original name parameter value is returned.
+ */
+-(NSString*)languageNameToLanguageCode:(NSString*)name;
+
+/**
  * Get the current bitrate
  * @returns a double indicating the current bitrate in bytes
  */
@@ -480,11 +487,5 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * Return an OoyalaAPIClient
  */
 - (OOOoyalaAPIClient *)api;
-
-/**
- * destroy the player, stop all ads and content play
- * NOTE: the ooyalaplayer is no longer userful after this call
- */
-- (void)destroy;
 
 @end

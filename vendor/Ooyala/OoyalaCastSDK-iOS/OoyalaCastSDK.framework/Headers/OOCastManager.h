@@ -19,8 +19,7 @@
 @end
 
 
-extern NSString *const OOCastManagerFailToConnectNotification; /**< Fires when a OOCastManager fails to connect to a chromecast device*/
-extern NSString *const OOCastDeviceLostNotification; /**< Fires when a chromecast device lost*/
+// was never used: extern NSString *const OOCastManagerFailToConnectNotification; /**< Fires when a OOCastManager fails to connect to a chromecast device*/
 extern NSString *const OOCastManagerDidDisconnectNotification; /**< Fires when a OOCastManager disconnects from chromecast device*/
 extern NSString *const OOCastEnterCastModeNotification; /**< Fires when enter cast mode*/
 extern NSString *const OOCastExitCastModeNotification; /**< Fires when exit cast mode*/
@@ -31,8 +30,6 @@ extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when 
 @property(nonatomic, strong) GCKDeviceScanner* deviceScanner;
 
 @property(nonatomic, strong) GCKDevice *selectedDevice;
-
-@property(nonatomic, readonly) BOOL isInCastMode;
 
 @property(nonatomic, weak) id<OOCastManagerDelegate> delegate;
 
@@ -50,11 +47,6 @@ extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when 
  * Return the cast button
  */
 - (UIButton *)getCastButton;
-
-/**
- *  Return the castPlayer related to this OOCastManager
- */
-- (OOCastPlayer *)getCastPlayer;
 
 /**
  * Set the videoView to be displayed on ooyalaPlayer during casting

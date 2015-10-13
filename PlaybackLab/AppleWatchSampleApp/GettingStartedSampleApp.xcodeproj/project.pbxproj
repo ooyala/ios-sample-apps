@@ -686,8 +686,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					"/Users/liusha.huang/Downloads/OoyalaSDK-iOS",
-					5,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -708,8 +706,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
-					"/Users/liusha.huang/Downloads/OoyalaSDK-iOS",
-					5,
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -845,6 +841,7 @@
 				FFA11C5E1A96618600AC143F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFA11C5F1A96618600AC143F /* Build configuration list for PBXNativeTarget "GettingStartedSampleApp WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -853,6 +850,7 @@
 				FFA11C611A96618600AC143F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
