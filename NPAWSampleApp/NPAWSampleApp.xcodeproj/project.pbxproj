@@ -13,7 +13,6 @@
 		0B1AFB3A1B02BAAB00347DFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFB1F1B02BAAB00347DFA /* LaunchScreen.xib */; };
 		0B1AFB3B1B02BAAB00347DFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFB211B02BAAB00347DFA /* Main.storyboard */; };
 		0B1AFB3C1B02BAAB00347DFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFB231B02BAAB00347DFA /* Images.xcassets */; };
-		0B1AFB3D1B02BAAB00347DFA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFB241B02BAAB00347DFA /* Info.plist */; };
 		0B1AFB3E1B02BAAB00347DFA /* NPAWListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B1AFB261B02BAAB00347DFA /* NPAWListViewController.h */; };
 		0B1AFB3F1B02BAAB00347DFA /* NPAWListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFB271B02BAAB00347DFA /* NPAWListViewController.m */; };
 		0B1AFB401B02BAAB00347DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFB281B02BAAB00347DFA /* main.m */; };
@@ -273,7 +272,7 @@
 		0B140F4B1A2E4709001324EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
@@ -311,7 +310,6 @@
 				0B1AFB481B02BAAB00347DFA /* PlayerDoubleSwitch.xib in Resources */,
 				0B1AFB3C1B02BAAB00347DFA /* Images.xcassets in Resources */,
 				0B1AFB3B1B02BAAB00347DFA /* Main.storyboard in Resources */,
-				0B1AFB3D1B02BAAB00347DFA /* Info.plist in Resources */,
 				0B1AFB4A1B02BAAB00347DFA /* PlayerSimple.xib in Resources */,
 				0B1AFB491B02BAAB00347DFA /* PlayerDoubleText.xib in Resources */,
 				0B1AFB4C1B02BAAB00347DFA /* TableCell.xib in Resources */,
@@ -391,6 +389,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -466,6 +465,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NPAWSampleApp;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -488,6 +488,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NPAWSampleApp;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";

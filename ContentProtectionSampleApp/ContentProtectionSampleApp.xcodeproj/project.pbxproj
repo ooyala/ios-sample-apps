@@ -70,7 +70,6 @@
 		FF86C1C41A9BF06700C328A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18A1A9BF06700C328A9 /* LaunchScreen.xib */; };
 		FF86C1C51A9BF06700C328A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18C1A9BF06700C328A9 /* Main.storyboard */; };
 		FF86C1C61A9BF06700C328A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18E1A9BF06700C328A9 /* Images.xcassets */; };
-		FF86C1C71A9BF06700C328A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18F1A9BF06700C328A9 /* Info.plist */; };
 		FF86C1CA1A9BF06700C328A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF86C1931A9BF06700C328A9 /* main.m */; };
 		FF86C1ED1A9BF06700C328A9 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BA1A9BF06700C328A9 /* PlayerDoubleButton.xib */; };
 		FF86C1EE1A9BF06700C328A9 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BB1A9BF06700C328A9 /* PlayerDoubleSwitch.xib */; };
@@ -493,7 +492,7 @@
 		0B140F4B1A2E4709001324EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
@@ -530,7 +529,6 @@
 			files = (
 				FF86C1F11A9BF06700C328A9 /* PlayerSingleButton.xib in Resources */,
 				FF86C1F01A9BF06700C328A9 /* PlayerSimple.xib in Resources */,
-				FF86C1C71A9BF06700C328A9 /* Info.plist in Resources */,
 				FF86C1EE1A9BF06700C328A9 /* PlayerDoubleSwitch.xib in Resources */,
 				FF86C1F21A9BF06700C328A9 /* TableCell.xib in Resources */,
 				FF86C1ED1A9BF06700C328A9 /* PlayerDoubleButton.xib in Resources */,
@@ -624,6 +622,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -703,6 +702,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ContentProtectionSampleApp;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -728,6 +728,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ContentProtectionSampleApp;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";

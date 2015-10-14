@@ -27,7 +27,6 @@
 		0BF4FA291A686CB40050A602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA121A686CB40050A602 /* LaunchScreen.xib */; };
 		0BF4FA2A1A686CB40050A602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA141A686CB40050A602 /* Main.storyboard */; };
 		0BF4FA2B1A686CB40050A602 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA161A686CB40050A602 /* Images.xcassets */; };
-		0BF4FA2C1A686CB40050A602 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA171A686CB40050A602 /* Info.plist */; };
 		0BF4FA2D1A686CB40050A602 /* IMAPlaybackListViewcontroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA191A686CB40050A602 /* IMAPlaybackListViewcontroller.h */; };
 		0BF4FA2E1A686CB40050A602 /* IMAPlaybackListViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1A1A686CB40050A602 /* IMAPlaybackListViewcontroller.m */; };
 		0BF4FA2F1A686CB40050A602 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA1B1A686CB40050A602 /* main.m */; };
@@ -318,7 +317,7 @@
 		0B140F4B1A2E4709001324EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
@@ -362,7 +361,6 @@
 				0BF4FA2A1A686CB40050A602 /* Main.storyboard in Resources */,
 				0BC948011A81779B004CB997 /* PlayerDoubleText.xib in Resources */,
 				0BF4FA2B1A686CB40050A602 /* Images.xcassets in Resources */,
-				0BF4FA2C1A686CB40050A602 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +436,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -518,6 +517,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = IMASampleApp;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -545,6 +545,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = IMASampleApp;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
