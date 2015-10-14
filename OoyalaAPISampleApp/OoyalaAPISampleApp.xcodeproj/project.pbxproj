@@ -272,7 +272,7 @@
 		9751C7E61A956C5300C7364F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ooyala;
 				TargetAttributes = {
 					0BDC4BC21A9F9F7300576639 = {
@@ -421,6 +421,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -496,6 +497,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
 			};
 			name = Debug;
@@ -516,6 +518,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
 			};
 			name = Release;
