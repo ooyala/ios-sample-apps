@@ -13,8 +13,6 @@
 		0B9458B21AC338A7000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */; };
 		0B9459201AC33ACB000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */; };
 		0BC8CF9E1BBC83A100F61C1A /* DiscoveryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */; };
-		0BDC4BC61A9F9F7300576639 /* OoyalaAPISampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0BDC4BC51A9F9F7300576639 /* OoyalaAPISampleAppSource.h */; };
-		0BDC4BC81A9F9F7300576639 /* OoyalaAPISampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BC71A9F9F7300576639 /* OoyalaAPISampleAppSource.m */; };
 		0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */; };
 		0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */; };
 		0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
@@ -44,7 +42,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				0BDC4BC61A9F9F7300576639 /* OoyalaAPISampleAppSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +50,6 @@
 /* Begin PBXFileReference section */
 		0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0BDC4BC31A9F9F7300576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOoyalaAPISampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BDC4BC51A9F9F7300576639 /* OoyalaAPISampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OoyalaAPISampleAppSource.h; sourceTree = "<group>"; };
-		0BDC4BC71A9F9F7300576639 /* OoyalaAPISampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OoyalaAPISampleAppSource.m; sourceTree = "<group>"; };
 		0BDC4BDE1A9FA3D800576639 /* ChannelContentTreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreeTableViewCell.h; sourceTree = "<group>"; };
 		0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreeTableViewCell.m; sourceTree = "<group>"; };
 		9751C7EE1A956C5300C7364F /* OoyalaAPISampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OoyalaAPISampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,20 +124,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0BDC4BC41A9F9F7300576639 /* OoyalaAPISampleAppSource */ = {
-			isa = PBXGroup;
-			children = (
-				0BDC4BC51A9F9F7300576639 /* OoyalaAPISampleAppSource.h */,
-				0BDC4BC71A9F9F7300576639 /* OoyalaAPISampleAppSource.m */,
-			);
-			path = OoyalaAPISampleAppSource;
-			sourceTree = "<group>";
-		};
 		9751C7E51A956C5300C7364F = {
 			isa = PBXGroup;
 			children = (
 				9751C7F01A956C5300C7364F /* OoyalaAPISampleApp */,
-				0BDC4BC41A9F9F7300576639 /* OoyalaAPISampleAppSource */,
 				0BDC4BBE1A9F9F1600576639 /* Frameworks */,
 				9751C7EF1A956C5300C7364F /* Products */,
 				0B9458601AC32CC4000DD545 /* VendorLibraries */,
@@ -328,7 +313,6 @@
 				0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */,
 				0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */,
 				0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */,
-				0BDC4BC81A9F9F7300576639 /* OoyalaAPISampleAppSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

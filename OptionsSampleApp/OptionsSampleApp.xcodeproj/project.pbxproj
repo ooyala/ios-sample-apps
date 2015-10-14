@@ -20,8 +20,6 @@
 		0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
 		0BF0B0E61A671E4300026FDC /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0B0E31A671E4300026FDC /* PlayerSelectionOption.m */; };
 		0BF0B0E71A671E4300026FDC /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0B0E51A671E4300026FDC /* SampleAppPlayerViewController.m */; };
-		0BF4F9E41A6850CE0050A602 /* OptionsSampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0BF4F9E31A6850CE0050A602 /* OptionsSampleAppSource.h */; };
-		0BF4F9E61A6850CE0050A602 /* OptionsSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4F9E51A6850CE0050A602 /* OptionsSampleAppSource.m */; };
 		0BF4F9F81A6850FD0050A602 /* OptionsListTableViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */; };
 		0BF4F9F91A6851060050A602 /* TVRatingsPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9772BFAE1A43C11C00B255C0 /* TVRatingsPlayerViewController.h */; };
 		0BF4F9FE1A6852030050A602 /* OptionsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */; };
@@ -49,7 +47,6 @@
 			files = (
 				0BF4F9F91A6851060050A602 /* TVRatingsPlayerViewController.h in CopyFiles */,
 				0BF4F9F81A6850FD0050A602 /* OptionsListTableViewController.h in CopyFiles */,
-				0BF4F9E41A6850CE0050A602 /* OptionsSampleAppSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,8 +67,6 @@
 		0BF0B0E41A671E4300026FDC /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0BF0B0E51A671E4300026FDC /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0BF4F9E11A6850CE0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOptionsSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BF4F9E31A6850CE0050A602 /* OptionsSampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionsSampleAppSource.h; sourceTree = "<group>"; };
-		0BF4F9E51A6850CE0050A602 /* OptionsSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionsSampleAppSource.m; sourceTree = "<group>"; };
 		0BF4FA061A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BF4FA081A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		9772BF801A43B61500B255C0 /* OptionsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,15 +142,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		0BF4F9E21A6850CE0050A602 /* OptionsSampleAppSource */ = {
-			isa = PBXGroup;
-			children = (
-				0BF4F9E31A6850CE0050A602 /* OptionsSampleAppSource.h */,
-				0BF4F9E51A6850CE0050A602 /* OptionsSampleAppSource.m */,
-			);
-			path = OptionsSampleAppSource;
-			sourceTree = "<group>";
-		};
 		0BF4FA021A685F2F0050A602 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				9772BF821A43B61500B255C0 /* OptionsSampleApp */,
-				0BF4F9E21A6850CE0050A602 /* OptionsSampleAppSource */,
 				0BF4FA021A685F2F0050A602 /* Frameworks */,
 				9772BF811A43B61500B255C0 /* Products */,
 				0B9458A71AC32CDB000DD545 /* VendorLibraries */,
@@ -363,7 +348,6 @@
 				0B24B84A1AA66D6700F131C3 /* OptionsViewController.m in Sources */,
 				0BF4F9FF1A6852090050A602 /* TVRatingsPlayerViewController.m in Sources */,
 				0BF4F9FE1A6852030050A602 /* OptionsListTableViewController.m in Sources */,
-				0BF4F9E61A6850CE0050A602 /* OptionsSampleAppSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,8 +18,6 @@
 		0B19FEE41A3AB4BC003E57DF /* AdvancedPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* AdvancedPlaybackListViewController.m */; };
 		0B19FEF81A3AB608003E57DF /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */; };
 		0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */; };
-		0B19FF011A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */; };
-		0B19FF031A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */; };
 		0B19FF161A3B755A003E57DF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */; };
 		0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */; };
 		0B19FF1A1A3B755A003E57DF /* AdvancedPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FEE21A3AB4BC003E57DF /* AdvancedPlaybackListViewController.m */; };
@@ -98,7 +96,6 @@
 				0BF4FD1B1A68814D0050A602 /* PlayWithInitialTimePlayerViewController.h in CopyFiles */,
 				0B19FF2A1A3B780B003E57DF /* SampleAppPlayerViewController.h in CopyFiles */,
 				0B19FF2B1A3B780B003E57DF /* AdvancedPlaybackListViewController.h in CopyFiles */,
-				0B19FF011A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +122,6 @@
 		0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B19FEF71A3AB608003E57DF /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		0B19FEFE1A3B7532003E57DF /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAdvancedPlaybackSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedPlaybackSampleAppSource.h; sourceTree = "<group>"; };
-		0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedPlaybackSampleAppSource.m; sourceTree = "<group>"; };
 		0B41114F1B604C0D00DF47AB /* CustomOverlayPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayPlayerViewController.h; sourceTree = "<group>"; };
 		0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayPlayerViewController.m; sourceTree = "<group>"; };
 		0B4111531B604C7800DF47AB /* CustomOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayView.h; sourceTree = "<group>"; };
@@ -203,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				0B140F551A2E4709001324EE /* AdvancedPlaybackSampleApp */,
-				0B19FEFF1A3B7532003E57DF /* AdvancedPlaybackSampleAppSource */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
 				0B9457CF1AC32C5B000DD545 /* VendorLibraries */,
@@ -317,15 +311,6 @@
 				0B4111541B604C7800DF47AB /* CustomOverlayView.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		0B19FEFF1A3B7532003E57DF /* AdvancedPlaybackSampleAppSource */ = {
-			isa = PBXGroup;
-			children = (
-				0B19FF001A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.h */,
-				0B19FF021A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m */,
-			);
-			path = AdvancedPlaybackSampleAppSource;
 			sourceTree = "<group>";
 		};
 		0B9457CF1AC32C5B000DD545 /* VendorLibraries */ = {
@@ -549,7 +534,6 @@
 				0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */,
 				0B19FF1A1A3B755A003E57DF /* AdvancedPlaybackListViewController.m in Sources */,
 				0B19FF1C1A3B755A003E57DF /* PlayWithInitialTimePlayerViewController.m in Sources */,
-				0B19FF031A3B7533003E57DF /* AdvancedPlaybackSampleAppSource.m in Sources */,
 				0BCA695E1A8495AF00225119 /* PluginPlayerViewController.m in Sources */,
 				0BCA69601A8495BF00225119 /* InsertAdPlayerViewController.m in Sources */,
 				0BCA69661A8495D800225119 /* CustomControlsViewController.m in Sources */,
