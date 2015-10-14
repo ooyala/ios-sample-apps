@@ -178,10 +178,9 @@
 		0B140F4A1A2E4709001324EE = {
 			isa = PBXGroup;
 			children = (
-				0BD84A161B91179A006CB6D0 /* Resources */,
 				0B140F551A2E4709001324EE /* SecurePlayerSampleApp */,
-				0B19FEFF1A3B7532003E57DF /* SecurePlayerSampleAppSource */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
+				0BD84A161B91179A006CB6D0 /* Resources */,
 				0B140F541A2E4709001324EE /* Products */,
 				0B9457D21AC32C64000DD545 /* VendorLibraries */,
 			);
@@ -285,13 +284,6 @@
 				0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		0B19FEFF1A3B7532003E57DF /* SecurePlayerSampleAppSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SecurePlayerSampleAppSource;
 			sourceTree = "<group>";
 		};
 		0B9457D21AC32C64000DD545 /* VendorLibraries */ = {
