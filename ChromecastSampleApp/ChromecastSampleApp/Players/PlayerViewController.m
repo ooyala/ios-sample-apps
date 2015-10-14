@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOVideo.h>
+#import <OoyalaSDK/OODebugMode.h>
 #import <OoyalaCastSDK/OOCastPlayer.h>
 #import "Utils.h"
 #import "OOCastManagerFetcher.h"
@@ -112,12 +113,20 @@
   [self.ooyalaPlayerViewController setFullScreenButtonShowing:true];
 }
 
+-(void) onCastManagerNotification:(NSNotification*)notification {
+  LOG( @"onCastManagerNotification: %@", notification );
+}
+
 - (UIViewController *)currentTopUIViewController {
   return [Utils currentTopUIViewController];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(onCastManagerNotification:)
+                                               name:nil
+                                             object:self.castManager];
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
