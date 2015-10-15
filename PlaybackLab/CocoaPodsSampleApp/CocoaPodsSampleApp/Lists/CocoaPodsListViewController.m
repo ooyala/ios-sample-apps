@@ -1,23 +1,24 @@
 /**
- * @class      BasicPlaybackListViewController BasicPlaybackListViewController.m "BasicPlaybackListViewController.m"
- * @brief      A list of playback examples that demonstrate basic playback
+ * @class      CocoaPodsListViewController CocoaPodsListViewController.m "CocoaPodsListViewController.m"
+ * @brief      The BasicPlaybackSampleApp, repurposed to demonstrate CocoaPods integration
  * @date       01/12/15
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import "BasicPlaybackListViewController.h"
+
+#import "CocoaPodsListViewController.h"
 #import "BasicSimplePlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 
 #import "PlayerSelectionOption.h"
 
-@interface BasicPlaybackListViewController ()
+@interface CocoaPodsListViewController ()
 @property NSMutableArray *options;
 @property NSMutableArray *optionList;
 @property NSMutableArray *optionEmbedCodes;
 @end
 
-@implementation BasicPlaybackListViewController
+@implementation CocoaPodsListViewController
 
 - (id)init {
   self = [super init];
