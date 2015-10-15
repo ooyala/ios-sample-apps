@@ -482,7 +482,6 @@
 		};
 		0B140F7A1A2E4709001324EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1B1F93E06E8793C33ADE8D1 /* Pods-BasicPlaybackSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -507,7 +506,6 @@
 		};
 		0B140F7B1A2E4709001324EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F47A081809CBD8B6A82B72EE /* Pods-BasicPlaybackSampleApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
