@@ -1,14 +1,14 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '6.0'
 
-target 'BasicPlaybackSampleApp' do
+target 'CocoaPodsSampleApp' do
 
 source 'https://github.com/ooyala/ios-sdk-podspecs.git'
-pod 'OoyalaSDK', '~> 4.1.1'
+pod 'OoyalaSDK', '~> 4.5.0'
 
 end
 
-target 'BasicPlaybackSampleAppSource' do
+target 'CocoaPodsSampleAppSource' do
 
 end
 

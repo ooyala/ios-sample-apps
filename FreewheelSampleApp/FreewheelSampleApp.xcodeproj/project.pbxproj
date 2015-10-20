@@ -11,6 +11,7 @@
 		0B109F931A6F34F7009A8DF3 /* FreewheelPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FD2B1A6884A10050A602 /* FreewheelPlayerViewController.m */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B17A0EB1A782075009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0EA1A782075009D1C50 /* libc++.dylib */; };
+		0B203EB01BD076AF00CB92D0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		0B9458391AC32CA0000DD545 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458351AC32CA0000DD545 /* AdManager.framework */; };
 		0B94583A1AC32CA0000DD545 /* OoyalaFreewheelSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458361AC32CA0000DD545 /* OoyalaFreewheelSDK.framework */; };
 		0B94583B1AC32CA0000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458371AC32CA0000DD545 /* OoyalaSDK.framework */; };
@@ -101,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B203EB01BD076AF00CB92D0 /* MediaPlayer.framework in Frameworks */,
 				0B94583A1AC32CA0000DD545 /* OoyalaFreewheelSDK.framework in Frameworks */,
 				0B94583B1AC32CA0000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
