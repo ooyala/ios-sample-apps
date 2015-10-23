@@ -87,7 +87,7 @@
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager];
+  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
   [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
@@ -104,6 +104,10 @@
 
 - (void)dismissMiniController {
   [self.miniControllerView dismiss];
+  [self.navigationController setToolbarHidden:YES animated:YES];
+}
+
+-(void)onDismissMiniController:(id<OOCastMiniControllerProtocol>)miniControllerView {
   [self.navigationController setToolbarHidden:YES animated:YES];
 }
 

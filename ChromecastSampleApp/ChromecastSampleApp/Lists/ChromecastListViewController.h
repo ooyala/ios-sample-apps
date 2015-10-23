@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <OoyalaCastSDK/OOCastManager.h>
+#import <OoyalaCastSDK/OOCastMiniControllerProtocol.h>
 
-@interface ChromecastListViewController : UITableViewController <OOCastManagerDelegate>
+@interface ChromecastListViewController : UITableViewController <OOCastManagerDelegate,OOCastMiniControllerDelegate>
 
 
 @end
