@@ -16,6 +16,7 @@
  */
 @interface OOAnalytics : NSObject <UIWebViewDelegate>
 
+@property(nonatomic) BOOL enabled; /**< @internal YES to allow sending analytics, NO to silence them. Default is YES. */
 @property(readonly, nonatomic) BOOL ready;  /**< @internal YES if OOAnalytics is ready to accept events, NO if not */
 @property(readonly, nonatomic) BOOL failed; /**< @internal YES if OOAnalytics failed to load, NO if not */
 @property(nonatomic, strong) NSString *userAgent;

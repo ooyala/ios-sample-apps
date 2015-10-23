@@ -39,4 +39,10 @@
  */
 - (void)enterCastModeWithOptions:(OOCastModeOptions *)options;
 
+/**
+ * Force casting to forget the asset (i.e. embed code), so the next
+ * play will re-init the receiver.
+ */
+-(void) forceAssetRejoin;
+
 @end

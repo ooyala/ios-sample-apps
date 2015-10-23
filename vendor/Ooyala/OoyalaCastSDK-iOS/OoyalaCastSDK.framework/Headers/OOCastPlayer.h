@@ -47,4 +47,6 @@
 - (void)deregisterMiniController:(id<OOCastMiniControllerProtocol>)miniController;
 
 - (void)onExitCastMode;
+
+-(void) forceAssetRejoin;
 @end

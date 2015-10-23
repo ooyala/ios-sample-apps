@@ -10,7 +10,7 @@
 #import "OOCastManager.h"
 #import "OOCastMiniControllerProtocol.h"
 
-@interface OOCastMenuViewController : UITableViewController
+@interface OOCastMenuViewController : UITableViewController<OOCastMiniControllerDelegate>
 
 /**
  * Initiate and return a OOCastMenuViewController with given OOCastManager

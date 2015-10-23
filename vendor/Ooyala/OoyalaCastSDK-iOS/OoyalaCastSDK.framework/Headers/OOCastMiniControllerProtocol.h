@@ -10,6 +10,7 @@
 #import <OoyalaSDK/OOPlayerProtocol.h>
 
 @class OOCastManager;
+@class OOCastMiniControllerView;
 
 @protocol OOCastMiniControllerProtocol <NSObject>
 
@@ -20,7 +21,12 @@
 - (void)updatePlayState:(BOOL)isPlaying;
 
 /**
- * This is called when we disconnect from the chromecast device
+ * This is called when we disconnect from the chromecast device.
+ * Can also be used e.g. by app code to explicitly remove the MiniController.
  */
 - (void)dismiss;
+@end
+
+@protocol OOCastMiniControllerDelegate <NSObject>
+-(void)onDismissMiniController:(id<OOCastMiniControllerProtocol>)miniControllerView;
 @end

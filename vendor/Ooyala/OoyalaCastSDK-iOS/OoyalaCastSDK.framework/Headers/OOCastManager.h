@@ -18,12 +18,11 @@
 - (UIViewController *) currentTopUIViewController;
 @end
 
-
-// was never used: extern NSString *const OOCastManagerFailToConnectNotification; /**< Fires when a OOCastManager fails to connect to a chromecast device*/
 extern NSString *const OOCastManagerDidDisconnectNotification; /**< Fires when a OOCastManager disconnects from chromecast device*/
 extern NSString *const OOCastEnterCastModeNotification; /**< Fires when enter cast mode*/
 extern NSString *const OOCastExitCastModeNotification; /**< Fires when exit cast mode*/
 extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when a mini controller is clicked*/
+extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors*/
 
 @interface OOCastManager : UIViewController<OOCastManagerProtocol, GCKDeviceScannerListener,GCKDeviceManagerDelegate,GCKMediaControlChannelDelegate, UIActionSheetDelegate>
 
