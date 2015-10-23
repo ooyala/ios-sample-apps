@@ -11,6 +11,7 @@
 #import "Utils.h"
 #import "CustomizedMiniControllerView.h"
 #import "ChromecastPlayerSelectionOption.h"
+#import <OoyalaSDK/OODebugMode.h>
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
@@ -28,6 +29,8 @@
 @property (strong, nonatomic) OOCastMiniControllerView *miniControllerView;
 @property (strong, nonatomic) OOCastMiniControllerView *bottomMiniControllerView;
 @property (strong, nonatomic) NSMutableArray *cells;
+
+@property (nonatomic) NSIndexPath *lastSelected;
 @end
 
 @implementation ChromecastListViewController
@@ -67,16 +70,10 @@
 }
 
 - (void)initPlayerViewControllerwithEmbedcode {
-  NSLog(@"Mini Controller click received");
-  NSString *embedcode = self.castManager.castPlayer.embedCode;
-  if (![self.navigationController.topViewController isKindOfClass:[PlayerViewController class]]) {
-    for (ChromecastPlayerSelectionOption *mediaInfo in self.mediaList) {
-      if ([mediaInfo.embedCode isEqualToString:embedcode]) {
-        [self dismissMiniController];
-        self.currentMediaInfo = mediaInfo;
-        [self performSegueWithIdentifier:@"play" sender:self];
-      }
-    }
+  if (self.lastSelected && ![self.navigationController.topViewController isKindOfClass:[PlayerViewController class]]) {
+    self.currentMediaInfo = [self.mediaList objectAtIndex:self.lastSelected.row];
+    [self dismissMiniController];
+    [self performSegueWithIdentifier:@"play" sender:self];
   }
 }
 
@@ -107,10 +104,6 @@
   [self.navigationController setToolbarHidden:YES animated:YES];
 }
 
--(void)onDismissMiniController:(id<OOCastMiniControllerProtocol>)miniControllerView {
-  [self.navigationController setToolbarHidden:YES animated:YES];
-}
-
 -(void)miniControllerClicked {
   [self initPlayerViewControllerwithEmbedcode];
 }
@@ -135,6 +128,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Display the media details view.
+  self.lastSelected = indexPath;
   self.currentMediaInfo = [self.mediaList objectAtIndex:indexPath.row];
   [self performSegueWithIdentifier:@"play" sender:self];
 }
