@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultSkinPlayerViewController">
+            <connections>
+                <outlet property="textLabel" destination="fxJ-4U-Ozw" id="pg0-eH-HU5"/>
+                <outlet property="videoView" destination="gQc-XE-FRz" id="Bj9-3h-M69"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qjd-Wp-FIZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxJ-4U-Ozw">
+                    <rect key="frame" x="23" y="572" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gQc-XE-FRz">
+                    <rect key="frame" x="100" y="0.0" width="400" height="480"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="cbN-KB-BVQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gQc-XE-FRz" secondAttribute="bottom" constant="120" id="54J-rm-8QD"/>
+                <constraint firstItem="fxJ-4U-Ozw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="cN8-8V-5jE"/>
+                <constraint firstAttribute="centerX" secondItem="gQc-XE-FRz" secondAttribute="centerX" id="jC3-4v-fQW"/>
+                <constraint firstAttribute="bottom" secondItem="fxJ-4U-Ozw" secondAttribute="bottom" constant="8" id="s8I-aU-2wV"/>
+                <constraint firstItem="gQc-XE-FRz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zM3-7D-D5A"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
