@@ -98,6 +98,7 @@
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification] && self.embedCode2) {
     [self play:self.embedCode2];
+    self.embedCode2 = nil;
   }
 
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
