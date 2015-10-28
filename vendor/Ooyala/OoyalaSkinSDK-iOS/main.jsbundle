@@ -5576,7 +5576,7 @@ NodeHandle.injection.injectImplementation(UniversalWorkerNodeHandle);}
 module.exports = {
 inject:inject};
 });
-__d('InitializeJavaScriptAppEngine',["RCTDebugComponentOwnership","RCTDeviceEventEmitter","PerformanceLogger","ExceptionsManager","ErrorUtils","ExceptionsManager","Platform","checkFlowAtRuntime","JSTimers","NativeModules","Promise","XMLHttpRequest","FormData","fetch","Geolocation","WebSocket","BridgeProfiling","regenerator/runtime.js"],function(global, require, module, exports) {  require(
+__d('InitializeJavaScriptAppEngine',["RCTDebugComponentOwnership","RCTDeviceEventEmitter","PerformanceLogger","regenerator/runtime.js","ExceptionsManager","ErrorUtils","ExceptionsManager","Platform","checkFlowAtRuntime","JSTimers","NativeModules","Promise","XMLHttpRequest","FormData","fetch","Geolocation","WebSocket","BridgeProfiling"],function(global, require, module, exports) {  require(
 
 
 
@@ -28991,7 +28991,7 @@ this.emit(arg.eventType,arg.data,arg.didEmitCallback);}}}]);return NavigationEve
 
 module.exports = NavigationEventEmitter;
 });
-__d('NavigatorBreadcrumbNavigationBar',["NavigatorBreadcrumbNavigationBarStyles","NavigatorNavigationBarStyles","React","StaticContainer.react","StyleSheet","View","invariant","immutable/dist/immutable.js"],function(global, require, module, exports) {  'use strict';
+__d('NavigatorBreadcrumbNavigationBar',["NavigatorBreadcrumbNavigationBarStyles","NavigatorNavigationBarStyles","React","StaticContainer.react","StyleSheet","View","immutable/dist/immutable.js","invariant"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -53263,7 +53263,7 @@ console.log("ran",keys.length,"tests.");}}};
 
 module.exports = ResponsiveDesignManager;
 });
-__d('OoyalaSkin/EndScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/constants.js","OoyalaSkin/controlBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/infoPanel.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/EndScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/controlBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/infoPanel.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
 StyleSheet=
@@ -53507,7 +53507,7 @@ __d('OoyalaSkin/style/progressBarStyles.json',[],function(global, require, modul
   }
 };
 });
-__d('OoyalaSkin/controlBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json","OoyalaSkin/widgets/controlBarWidgets.js","OoyalaSkin/collapsingBarUtils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/controlBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/controlBarWidgets.js","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json"],function(global, require, module, exports) {  'use strict';
 
 
 
