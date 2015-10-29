@@ -41,7 +41,7 @@ If you'd like to take another extra step, try _following these steps to update t
     * Default localization files (Add to app bundle)
     * Default skin-config.json (Add to app bundle)
     * main.jsbundle (Add to app bundle)
-3. Link JavascriptCore library to your binary
+3. Link JavascriptCore, Social, and MessageUI Frameworks to your binary
 4. In Build Settings, ensure the Other Linker Flag "-ObjC" is enabled
 
 5. Modify your PlayerViewController to use the new OOSkinViewController
@@ -82,7 +82,7 @@ If you'd like to take another extra step, try _following these steps to update t
     - Ojbective-C code
         * Should use the OOSkinViewController
         * Should use main.jsbundle as the jsCodeLocaiton
-    - JavascriptCore
+    - JavascriptCore, Social, and MessageUI Frameworks
         * Should be linked
     - Other Linker Flags
         * Should have -ObjC

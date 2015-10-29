@@ -10,7 +10,6 @@
 		0B345ADC1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B345ADB1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets */; };
 		0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824241B2B7EB600D718AB /* AppDelegate.m */; };
 		0B7824301B2B7EB600D718AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7824251B2B7EB600D718AB /* LaunchScreen.xib */; };
-		0B7824331B2B7EB600D718AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B78242A1B2B7EB600D718AB /* Info.plist */; };
 		0B7824351B2B7EB600D718AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78242C1B2B7EB600D718AB /* main.m */; };
 		0B7824461B2B82C000D718AB /* OoyalaSkinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824451B2B82C000D718AB /* OoyalaSkinListViewController.m */; };
 		0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824491B2B834F00D718AB /* PlayerSelectionOption.m */; };
@@ -36,7 +35,10 @@
 		0B8E7F441BE03D0E0078155C /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B8E7F3C1BE03D0E0078155C /* skin.json */; settings = {ASSET_TAGS = (); }; };
 		0B8E7F451BE03D0E0078155C /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 0B8E7F3D1BE03D0E0078155C /* validate.js */; settings = {ASSET_TAGS = (); }; };
 		0B8E7F461BE03D0E0078155C /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B8E7F3E1BE03D0E0078155C /* zh.json */; settings = {ASSET_TAGS = (); }; };
-		0BB8E7981BE03E1600003E2D /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BB8E7971BE03E1600003E2D /* main.jsbundle */; settings = {ASSET_TAGS = (); }; };
+		0BB8E7A51BE0438300003E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8E7A41BE0438300003E2D /* README.md */; settings = {ASSET_TAGS = (); }; };
+		0BB8E7AA1BE0440600003E2D /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BB8E7A91BE0440600003E2D /* main.jsbundle */; settings = {ASSET_TAGS = (); }; };
+		0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AB1BE0449000003E2D /* Social.framework */; };
+		0BB8E7AE1BE0449500003E2D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AD1BE0449500003E2D /* MessageUI.framework */; };
 		0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */; };
 		0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */; };
 		0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */; };
@@ -91,7 +93,10 @@
 		0B8E7F3C1BE03D0E0078155C /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
 		0B8E7F3D1BE03D0E0078155C /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		0B8E7F3E1BE03D0E0078155C /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
-		0BB8E7971BE03E1600003E2D /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
+		0BB8E7A41BE0438300003E2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0BB8E7A91BE0440600003E2D /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
+		0BB8E7AB1BE0449000003E2D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0BB8E7AD1BE0449500003E2D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TallPlayerView.xib; sourceTree = "<group>"; };
 		0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallSkinPlayerView.xib; sourceTree = "<group>"; };
 		0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidePlayerView.xib; sourceTree = "<group>"; };
@@ -124,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB8E7AE1BE0449500003E2D /* MessageUI.framework in Frameworks */,
+				0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */,
 				97B22E4E1BD05D1900D89589 /* AdSupport.framework in Frameworks */,
 				97930E291B6995CB009B3512 /* WebKit.framework in Frameworks */,
 				0B8E7F1E1BDED4C40078155C /* OoyalaSDK.framework in Frameworks */,
@@ -243,10 +250,10 @@
 			path = "../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config";
 			sourceTree = "<group>";
 		};
-		0BD9FCA81B4DEE91001E0CAB /* VendorLibraries */ = {
+		0BB8E7A81BE043FB00003E2D /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				0BB8E7971BE03E1600003E2D /* main.jsbundle */,
+				0BB8E7A91BE0440600003E2D /* main.jsbundle */,
 				0B8E7F1F1BDED4CC0078155C /* OoyalaSkinSDK.framework */,
 				0B8E7F1D1BDED4C40078155C /* OoyalaSDK.framework */,
 				0B8E7F1B1BDED4BD0078155C /* OoyalaIMASDK.framework */,
@@ -254,21 +261,19 @@
 				0B8E7F171BDED4AA0078155C /* GoogleInteractiveMediaAds.framework */,
 				0B8E7F151BDED49C0078155C /* AdManager.framework */,
 			);
-			path = VendorLibraries;
+			name = VendorLibraries;
 			sourceTree = "<group>";
 		};
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				97B22E4D1BD05D1900D89589 /* AdSupport.framework */,
-				97930E281B6995CB009B3512 /* WebKit.framework */,
-				97930E261B699595009B3512 /* EventKit.framework */,
 				0B345ADB1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets */,
 				0B7824221B2B7EB600D718AB /* OoyalaSkinSampleApp */,
-				0BD9FCA81B4DEE91001E0CAB /* VendorLibraries */,
+				0BB8E7A81BE043FB00003E2D /* VendorLibraries */,
 				0B8E7F251BDED4F80078155C /* Fonts */,
 				972ED7581AE1827B005043DC /* frameworks */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				0BB8E7A41BE0438300003E2D /* README.md */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -285,6 +290,11 @@
 		972ED7581AE1827B005043DC /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BB8E7AD1BE0449500003E2D /* MessageUI.framework */,
+				0BB8E7AB1BE0449000003E2D /* Social.framework */,
+				97B22E4D1BD05D1900D89589 /* AdSupport.framework */,
+				97930E281B6995CB009B3512 /* WebKit.framework */,
+				97930E261B699595009B3512 /* EventKit.framework */,
 				972ED77D1AE184CE005043DC /* libz.dylib */,
 				97DE27B11B212BCD0071DBFE /* libc++.dylib */,
 				97DE27AF1B212BC00071DBFE /* libc++abi.dylib */,
@@ -319,7 +329,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Facebook;
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "OoyalaSkinSampleApp" */;
@@ -351,8 +361,8 @@
 				0B8E7F281BDED4F80078155C /* alice.ttf in Resources */,
 				0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */,
 				0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */,
+				0BB8E7AA1BE0440600003E2D /* main.jsbundle in Resources */,
 				0B7824541B2B83AB00D718AB /* Main.storyboard in Resources */,
-				0BB8E7981BE03E1600003E2D /* main.jsbundle in Resources */,
 				0B345ADC1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets in Resources */,
 				0B8E7F3F1BE03D0E0078155C /* en.json in Resources */,
 				0B7824571B2B841800D718AB /* TableCell.xib in Resources */,
@@ -364,7 +374,6 @@
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
 				0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */,
 				0B7824671B2FA0BD00D718AB /* DefaultSkinPlayerView.xib in Resources */,
-				0B7824331B2B7EB600D718AB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +396,7 @@
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
 				0B8E7F421BE03D0E0078155C /* README.md in Sources */,
 				97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */,
+				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
 				97930C191B670D9F009B3512 /* FreewheelTestsListViewController.m in Sources */,
 				0B78245B1B2B855500D718AB /* DefaultSkinPlayerViewController.m in Sources */,
 			);
@@ -427,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaSkinSampleApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -444,6 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaSkinSampleApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,6 +481,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
