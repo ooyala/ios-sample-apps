@@ -4,31 +4,23 @@
 //
 //  Copyright (c) 2014 Nice. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
-#import <OoyalaSDK/OOOoyalaError.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOVideo.h>
-#import <OoyalaSDK/OOStream.h>
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-
+#import <OoyalaSDK/OOPlayerDomain.h>
 
 @interface Youbora: NSObject
 
-@property (nonatomic, strong) OOOoyalaPlayer* player;
+@property (nonatomic, weak) OOOoyalaPlayer* player;
 @property (nonatomic, assign) BOOL connected;
 
-- (NSString*)contentURL;
-- (int)currentPlaybackTime;
-- (void)updateYouboraMetadata:(NSDictionary *)metadata;
-- (id)initWithSystemId:(NSString*)SYSTEM_ID userID:(NSString*)USER_ID playerInstance:(OOOoyalaPlayer*)playerInstance options:(NSDictionary*)options;
+- (id)initWithSystemId:(NSString*)SYSTEM_ID userID:(NSString*)USER_ID playerInstance:(OOOoyalaPlayer*)playerInstance options:(NSDictionary*)options httpSecure:(BOOL)httpSecure;
 - (void)stop;
 - (void)pauseSession;
 - (void)restartSession;
+- (void)updateYouboraMetadata:(NSDictionary *)metadata;
 
-+ (void)load:(NSString*)system user:(NSString*)user isLiveResource:(BOOL)isLive metadata:(NSDictionary*)metadata transaction:(NSString *)trans analyticsActive:(BOOL)analyticsActive;
-+ (void)dismissPlayerViewController:(Youbora*)playerVC;
-- (NSDictionary*)prepareMetadata:(NSURL *)url;
+- (NSString*)contentURL;
+- (int)currentPlaybackTime;
 
 @end
