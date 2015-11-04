@@ -100,6 +100,7 @@ extern NSString *const OOOoyalaPlayerMetadataReadyNotification; /**< Fires when 
 extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires when close caption language changed*/
 extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
 extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
+extern NSString *const OOOoyalaPlayerEmbedCodeSetNotification; /**< Fires when setEmbedCode is getting called */
 extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live closed captions */
 
 /**
