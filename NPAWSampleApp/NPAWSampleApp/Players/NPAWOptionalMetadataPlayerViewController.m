@@ -64,7 +64,7 @@
   NSDictionary *customMetadata = [self generateNpawCustomMetadata];
 
   // initialize youbora plugin
-  self.youbora = [[Youbora alloc] initWithSystemId:self.npawSystemId userID:self.npawUserId playerInstance:player options:customMetadata];
+  self.youbora = [[Youbora alloc] initWithSystemId:self.npawSystemId userID:self.npawUserId playerInstance:player options:customMetadata httpSecure:NO];
 
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];
