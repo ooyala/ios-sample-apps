@@ -223,7 +223,6 @@
   NSMutableDictionary* params = [NSMutableDictionary dictionary];
 
   params[@"account_id"] = self.accountId;
-  params[@"override_syndication_group"] = @"override_all_synd_groups";
   NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
 
   OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
