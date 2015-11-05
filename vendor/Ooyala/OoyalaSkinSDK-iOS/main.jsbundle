@@ -1375,7 +1375,7 @@ throw new TypeError(
 
 var index=findIndex.call(this,predicate,context);
 return index === -1?undefined:this[index];}});}})();
-__d('OoyalaSkin/index.ios.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/ooyalaSkinCore.js","NativeModules"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/index.ios.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/ooyalaSkinCore.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -5208,7 +5208,7 @@ NodeHandle.injection.injectImplementation(UniversalWorkerNodeHandle);}
 module.exports = {
 inject:inject};
 });
-__d('InitializeJavaScriptAppEngine',["RCTDebugComponentOwnership","RCTDeviceEventEmitter","PerformanceLogger","regenerator/runtime.js","ExceptionsManager","ErrorUtils","ExceptionsManager","Platform","checkFlowAtRuntime","JSTimers","NativeModules","Promise","XMLHttpRequest","FormData","fetch","Geolocation","WebSocket","BridgeProfiling"],function(global, require, module, exports) {  var _extends=Object.assign || function(target){for(var i=1;i < arguments.length;i++) {var source=arguments[i];for(var key in source) {if(Object.prototype.hasOwnProperty.call(source,key)){target[key] = source[key];}}}return target;};
+__d('InitializeJavaScriptAppEngine',["RCTDebugComponentOwnership","RCTDeviceEventEmitter","PerformanceLogger","ExceptionsManager","ErrorUtils","ExceptionsManager","Platform","checkFlowAtRuntime","JSTimers","NativeModules","Promise","XMLHttpRequest","FormData","fetch","Geolocation","WebSocket","BridgeProfiling","regenerator/runtime.js"],function(global, require, module, exports) {  var _extends=Object.assign || function(target){for(var i=1;i < arguments.length;i++) {var source=arguments[i];for(var key in source) {if(Object.prototype.hasOwnProperty.call(source,key)){target[key] = source[key];}}}return target;};
 
 
 
@@ -29995,7 +29995,7 @@ this.emit(arg.eventType,arg.data,arg.didEmitCallback);}}}]);return NavigationEve
 
 module.exports = NavigationEventEmitter;
 });
-__d('NavigatorBreadcrumbNavigationBar',["NavigatorBreadcrumbNavigationBarStyles","NavigatorNavigationBarStylesAndroid","NavigatorNavigationBarStylesIOS","Platform","React","StyleSheet","View","immutable/dist/immutable.js","invariant"],function(global, require, module, exports) {  'use strict';
+__d('NavigatorBreadcrumbNavigationBar',["NavigatorBreadcrumbNavigationBarStyles","NavigatorNavigationBarStylesAndroid","NavigatorNavigationBarStylesIOS","Platform","React","StyleSheet","View","invariant","immutable/dist/immutable.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -32707,7 +32707,7 @@ var groups=(isOrdered(iterable)?OrderedMap():src_Map__Map()).asMutable();
 iterable.__iterate(function(v,k){
 groups.update(
 grouper.call(context,v,k,iterable),
-function(a){return (a = a || [],a.push(isKeyedIter?[k,v]:v),a);});});
+function(a){return a = a || [],a.push(isKeyedIter?[k,v]:v),a;});});
 
 
 var coerce=iterableClass(iterable);
@@ -33114,7 +33114,7 @@ return iterations;};
 
 zipSequence.__iteratorUncached = function(type,reverse){
 var iterators=iters.map(function(i)
-{return (i = Iterable(i),getIterator(reverse?i.reverse():i));});
+{return i = Iterable(i),getIterator(reverse?i.reverse():i);});
 
 var iterations=0;
 var isDone=false;
@@ -36191,8 +36191,8 @@ return reify(this,flattenFactory(this,depth,false));},
 
 get:function(index,notSetValue){
 index = wrapIndex(this,index);
-return index < 0 || (this.size === Infinity || 
-this.size !== undefined && index > this.size)?
+return index < 0 || this.size === Infinity || 
+this.size !== undefined && index > this.size?
 notSetValue:
 this.find(function(_,key){return key === index;},undefined,notSetValue);},
 
@@ -54135,7 +54135,7 @@ NONE:0};
 
 module.exports = {UI_SIZES:UI_SIZES,BUTTON_NAMES:BUTTON_NAMES,IMG_URLS:IMG_URLS,SCREEN_TYPES:SCREEN_TYPES,OOSTATES:OOSTATES,LOG_LEVEL:LOG_LEVEL};
 });
-__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/discoveryPanel.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/discoveryPanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -54220,6 +54220,11 @@ OOSocialShare.onSocialButtonPress({
 'link':this.skin.state.hostedAtUrl},
 
 function(results){Log.log(results);});};
+
+
+OoyalaSkinCore.prototype.onSocialAlertDismiss = function(){
+this.skin.setState({alertTitle:''});
+this.skin.setState({alertMessage:''});};
 
 
 OoyalaSkinCore.prototype.pauseOnOptions = function(){
@@ -54441,7 +54446,7 @@ console.log("render error screen");
 return (
 React.createElement(ErrorScreen,{
 error:this.skin.state.error,
-localizableStrings:this.skin.props.localizableStrings,
+localizableStrings:this.skin.props.localization,
 locale:this.skin.props.locale}));};
 
 
@@ -54468,13 +54473,13 @@ lastPressedTime:this.skin.state.lastPressedTime,
 config:{
 controlBar:this.skin.props.controlBar,
 buttons:this.skin.props.buttons.mobileContent,
-upNextScreen:this.skin.props.upNextScreen,
+upNext:this.skin.props.upNext,
 icons:this.skin.props.icons,
 adScreen:this.skin.props.adScreen},
 
 nextVideo:this.skin.state.nextVideo,
 upNextDismissed:this.skin.state.upNextDismissed,
-localizableStrings:this.skin.props.localizableStrings,
+localizableStrings:this.skin.props.localization,
 locale:this.skin.props.locale}));};
 
 
@@ -54489,7 +54494,7 @@ onSelect:function(value){return _this5.onLanguageSelected(value);},
 onDismiss:this.onOverlayDismissed,
 width:this.skin.state.width,
 height:this.skin.state.height,
-config:{localizableStrings:this.skin.props.localizableStrings,
+config:{localizableStrings:this.skin.props.localization,
 locale:this.skin.props.locale,
 icons:this.skin.props.icons}}));};
 
@@ -54498,13 +54503,14 @@ icons:this.skin.props.icons}}));};
 OoyalaSkinCore.prototype.renderSocialOptions = function(){var _this6=this;
 return (
 React.createElement(SharePanel,{
-socialButtons:this.skin.props.sharing,
+socialButtons:this.skin.props.shareScreen,
 onSocialButtonPress:function(socialType){return _this6.onSocialButtonPress(socialType);},
+onSocialAlertDismiss:function(){return _this6.onSocialAlertDismiss();},
 width:this.skin.state.width,
 height:this.skin.state.height,
 alertTitle:this.skin.state.alertTitle,
 alertMessage:this.skin.state.alertMessage,
-localizableStrings:this.skin.props.localizableStrings,
+localizableStrings:this.skin.props.localization,
 locale:this.skin.props.locale}));},
 
 
@@ -54516,7 +54522,7 @@ return null;}
 return (
 React.createElement(DiscoveryPanel,{
 config:this.skin.props.discoveryScreen,
-localizableStrings:this.skin.props.localizableStrings,
+localizableStrings:this.skin.props.localization,
 locale:this.skin.props.locale,
 dataSource:this.skin.state.discoveryResults,
 onRowAction:function(info){return _this7.onDiscoveryRow(info);},
@@ -54559,7 +54565,7 @@ panel:panel,
 buttonSelected:this.skin.state.buttonSelected,
 onOptionButtonPress:function(buttonName){return _this8.onOptionButtonPress(buttonName);},
 config:{
-moreOptions:this.skin.props.moreOptions,
+moreOptionsScreen:this.skin.props.moreOptionsScreen,
 buttons:this.skin.props.buttons.mobileContent,
 icons:this.skin.props.icons,
 
@@ -55430,7 +55436,7 @@ console.log("ran",keys.length,"tests.");}}};
 
 module.exports = ResponsiveDesignManager;
 });
-__d('OoyalaSkin/EndScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/controlBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/infoPanel.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/EndScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/constants.js","OoyalaSkin/controlBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/infoPanel.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
 StyleSheet=
@@ -55493,12 +55499,10 @@ handleTouchEnd:function(event){
 this.toggleControlBar();},
 
 
-_renderDiscoveryScreen:function(progressBar,controlBar){
+_renderDiscoveryScreen:function(){
 return (
 React.createElement(View,{style:styles.fullscreenContainer},
-this.props.discoveryPanel,
-progressBar,
-controlBar));},
+this.props.discoveryPanel));},
 
 
 
@@ -55565,7 +55569,7 @@ icons:this.props.config.icons}});
 
 if(this.props.config.endScreen.screenToShowOnEnd == 'discovery' && 
 this.props.discoveryPanel){
-return this._renderDiscoveryScreen(progressBar,controlBar);}else 
+return this._renderDiscoveryScreen();}else 
 {
 return this._renderDefaultScreen(progressBar,controlBar);}}});
 
@@ -55674,7 +55678,7 @@ __d('OoyalaSkin/style/progressBarStyles.json',[],function(global, require, modul
   }
 };
 });
-__d('OoyalaSkin/controlBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/controlBarWidgets.js","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/controlBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json","OoyalaSkin/widgets/controlBarWidgets.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -55778,7 +55782,7 @@ var controlBarWidgets=[];
 var widgetOptions={
 playPause:{
 onPress:this.onPlayPausePress,
-style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle],
+style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle.active],
 playIcon:this.props.config.icons.play,
 pauseIcon:this.props.config.icons.pause,
 replayIcon:this.props.config.icons.replay,
@@ -55786,7 +55790,7 @@ primaryActionButton:this.props.primaryButton},
 
 volume:{
 onPress:this.onVolumePress,
-style:this.state.showVolume?[styles.icon,{"fontSize":iconFontSize},styles.iconHighlighted,this.props.config.controlBar.iconStyle]:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle],
+style:this.state.showVolume?[styles.icon,{"fontSize":iconFontSize},styles.iconHighlighted,this.props.config.controlBar.iconStyle.active]:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle.active],
 iconOn:this.props.config.icons.volume,
 iconOff:this.props.config.icons.volumeOff,
 showVolume:this.state.showVolume,
@@ -55800,27 +55804,27 @@ durationString:this.getDurationString()},
 
 fullscreen:{
 onPress:this.onFullscreenPress,
-style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle],
+style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle.active],
 icon:this.props.fullscreen?this.props.config.icons.compress:this.props.config.icons.expand},
 
 moreOptions:{
 onPress:this.onMorePress,
-style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle],
+style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle.active],
 icon:this.props.config.icons.ellipsis},
 
 discovery:{
 onPress:this.onDiscoveryPress,
-style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle],
+style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle.active],
 icon:this.props.config.icons.discovery},
 
 share:{
 onPress:this.onSocialSharePress,
-style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle],
+style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle.active],
 icon:this.props.config.icons.share},
 
 closedCaption:{
 onPress:this.onClosedCaptionsPress,
-style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle],
+style:[styles.icon,{"fontSize":iconFontSize},this.props.config.controlBar.iconStyle.active],
 icon:this.props.config.icons.cc},
 
 watermark:{
@@ -55984,6 +55988,10 @@ bitrateSelectorWidget:function(options){
 return null;},
 
 
+liveWidget:function(options){
+
+return null;},
+
 render:function(){
 
 var widgetsMap={
@@ -55997,7 +56005,8 @@ var widgetsMap={
 "watermark":this.watermarkWidget,
 "share":this.shareWidget,
 "closedCaption":this.closedCaptionWidget,
-"bitrateSelector":this.bitrateSelectorWidget};
+"bitrateSelector":this.bitrateSelectorWidget,
+"live":this.liveWidget};
 
 if(this.props.widgetType.name in widgetsMap){
 var widgetOptions=this.props.options[this.props.widgetType.name];
@@ -56054,7 +56063,10 @@ return valid;},
 
 _collapse:function(barWidth,orderedItems){
 var r={fit:orderedItems.slice(),overflow:[]};
-var usedWidth=orderedItems.reduce(function(p,c,i,a){return p + c.minWidth;},0);
+var usedWidth=orderedItems.reduce(function(p,c,i,a){
+if(c.minWidth)return p + c.minWidth;
+return p;},
+0);
 for(var i=orderedItems.length - 1;i >= 0;--i) {
 var item=orderedItems[i];
 if(this._isOnlyInMoreOptions(item)){
@@ -56090,200 +56102,7 @@ return usedWidth;},
 
 
 _isOverflow:function(item){
-return item.whenDoesNotFit && item.whenDoesNotFit == "moveToMoreOptions";},
-
-
-TestSuite:{
-Assert:function(){
-var b=arguments[0];
-if(!b){
-throw new Error('ASSERTION FAILED: ' + JSON.stringify(arguments));}},
-
-
-AssertStrictEquals:function(){
-var o1=arguments[0];
-var o2=arguments[1];
-if(o1 !== o2){
-var errorMessage='ASSERTION FAILED: ' + JSON.stringify(o1) + ' !== ' + JSON.stringify(o2);
-if(arguments.length > 2){
-errorMessage += " (" + JSON.stringify(Array.prototype.slice.call(arguments,2)) + ")";}
-
-throw new Error(errorMessage);}},
-
-
-
-
-
-B1_Fixed100:{name:"b1",location:"controlBar",whenDoesNotFit:"keep",minWidth:100},
-B2_Fixed1:{name:"b2",location:"controlBar",whenDoesNotFit:"keep",minWidth:1},
-B3_Fixed1:{name:"b3",location:"controlBar",whenDoesNotFit:"keep",minWidth:1},
-B4_Collapsing100:{name:"b4",location:"controlBar",whenDoesNotFit:"moveToMoreOptions",minWidth:100},
-B5_Collapsing1:{name:"b5",location:"controlBar",whenDoesNotFit:"moveToMoreOptions",minWidth:1},
-B6_Collapsing1:{name:"b6",location:"controlBar",whenDoesNotFit:"moveToMoreOptions",minWidth:1},
-B7_MoreOptions100:{name:"b7",location:"moreOptions",minWidth:100},
-B8_None100:{name:"b7",location:"",minWidth:100},
-
-TestOverflow_overflowMoreOptionsDoesntCount:function(){
-var oi=[this.B5_Collapsing1,this.B7_MoreOptions100];
-var results=CollapsingBarUtils.collapse(100,oi);
-this.AssertStrictEquals(results.overflow.length,1,results);
-this.AssertStrictEquals(results.overflow[0],this.B7_MoreOptions100,results);},
-
-
-TestOverflow_overflowMoreOptionsFits:function(){
-var oi=[this.B7_MoreOptions100];
-var results=CollapsingBarUtils.collapse(100,oi);
-this.AssertStrictEquals(results.overflow.toString(),oi.toString(),results);},
-
-
-TestOverflow_overflowMoreOptionsDoesNotFit:function(){
-var oi=[this.B7_MoreOptions100];
-var results=CollapsingBarUtils.collapse(1,oi);
-this.AssertStrictEquals(results.overflow.toString(),oi.toString(),results);},
-
-
-TestOverflow_overflowAppearanceNoneFits:function(){
-var oi=[this.B8_None100];
-var results=CollapsingBarUtils.collapse(100,oi);
-this.AssertStrictEquals(results.overflow.length,0,results);},
-
-
-TestOverflow_overflowAppearanceNoneDoesNotFit:function(){
-var oi=[this.B8_None100];
-var results=CollapsingBarUtils.collapse(1,oi);
-this.AssertStrictEquals(results.overflow.length,0,results);},
-
-
-TestOverflow_overflowAliasOnlyOnce:function(){
-var oi=[this.B5_Collapsing1,this.B6_Collapsing1,this.B5_Collapsing1];
-var results=CollapsingBarUtils.collapse(2,oi);
-this.AssertStrictEquals(results.overflow.length,1,results);
-this.AssertStrictEquals(results.overflow[0],this.B5_Collapsing1,results);},
-
-
-TestOverflow_overflowFixedMixed:function(){
-var oi=[this.B1_Fixed100,this.B5_Collapsing1];
-var results=CollapsingBarUtils.collapse(1,oi);
-this.AssertStrictEquals(results.overflow.length,1,results);
-this.AssertStrictEquals(results.overflow[0],this.B5_Collapsing1,results);},
-
-
-TestOverflow_overflowFixedSingle:function(){
-var oi=[this.B1_Fixed100];
-var results=CollapsingBarUtils.collapse(1,oi);
-this.AssertStrictEquals(results.overflow.length,0,results);},
-
-
-TestFit_fixedPreferred:function(){
-var oi=[this.B2_Fixed1,this.B5_Collapsing1,this.B3_Fixed1];
-var results=CollapsingBarUtils.collapse(2,oi);
-this.AssertStrictEquals(results.fit.length,2,results);
-this.Assert(results.fit.indexOf(this.B5_Collapsing1) == -1,results);},
-
-
-TestFit_merging:function(){
-var oi=[this.B2_Fixed1,this.B5_Collapsing1,this.B3_Fixed1];
-var results=CollapsingBarUtils.collapse(100,oi);
-this.AssertStrictEquals(results.fit.length,3,results);
-this.AssertStrictEquals(results.fit.toString(),oi.toString(),results);},
-
-
-TestFit_revKeepFixed:function(){
-var results=CollapsingBarUtils.collapse(100,[this.B4_Collapsing100,this.B1_Fixed100]);
-this.AssertStrictEquals(results.fit.length,1,results);
-this.AssertStrictEquals(results.fit[0],this.B1_Fixed100,results);},
-
-
-TestFit_keepFixed:function(){
-var results=CollapsingBarUtils.collapse(100,[this.B1_Fixed100,this.B4_Collapsing100]);
-this.AssertStrictEquals(results.fit.length,1,results);
-this.AssertStrictEquals(results.fit[0],this.B1_Fixed100,results);},
-
-
-TestFit_revOneCollapsableFits:function(){
-var results=CollapsingBarUtils.collapse(100,[this.B5_Collapsing1,this.B4_Collapsing100]);
-this.AssertStrictEquals(results.fit.length,1,results);
-this.AssertStrictEquals(results.fit[0],this.B5_Collapsing1,results);},
-
-
-TestFit_oneCollapsableFits:function(){
-var results=CollapsingBarUtils.collapse(100,[this.B4_Collapsing100,this.B5_Collapsing1]);
-this.AssertStrictEquals(results.fit.length,1,results);
-this.AssertStrictEquals(results.fit[0],this.B4_Collapsing100,results);},
-
-
-TestFit_collapsableFits:function(){
-var results=CollapsingBarUtils.collapse(100,[this.B4_Collapsing100]);
-this.AssertStrictEquals(results.fit.length,1,results);
-this.AssertStrictEquals(results.fit[0],this.B4_Collapsing100,results);},
-
-
-TestFit_allFixedFit:function(){
-var results=CollapsingBarUtils.collapse(100,[this.B2_Fixed1,this.B3_Fixed1]);
-this.AssertStrictEquals(results.fit.length,2,results);
-this.AssertStrictEquals(results.fit[0],this.B2_Fixed1,results);
-this.AssertStrictEquals(results.fit[1],this.B3_Fixed1,results);},
-
-
-TestFit_revOneFixedFits_twoFixed:function(){
-var oi=[this.B2_Fixed1,this.B1_Fixed100];
-var results=CollapsingBarUtils.collapse(100,oi);
-this.AssertStrictEquals(results.fit.length,2,results);
-this.AssertStrictEquals(results.fit.toString(),oi.toString(),results);},
-
-
-TestFit_oneFixedFits_twoFixed:function(){
-var oi=[this.B1_Fixed100,this.B2_Fixed1];
-var results=CollapsingBarUtils.collapse(100,oi);
-this.AssertStrictEquals(results.fit.length,2,results);
-this.AssertStrictEquals(results.fit.toString(),oi.toString(),results);},
-
-
-TestFit_keepItemMeetingSpec:function(){
-var results=CollapsingBarUtils.collapse(100,[this.B2_Fixed1]);
-this.AssertStrictEquals(results.fit.length,1,results);},
-
-
-TestFit_discardInvalidItem_overflow:function(){
-var results=CollapsingBarUtils.collapse(100,[{name:"b1",appearance:"controlBar"}]);
-this.AssertStrictEquals(results.overflow.length,0,results);},
-
-
-TestFit_discardInvalidItem_fit:function(){
-var results=CollapsingBarUtils.collapse(100,[{name:"b1",appearance:"controlBar"}]);
-this.AssertStrictEquals(results.fit.length,0,results);},
-
-
-TestFit_discardInvalidItemsInZeroSpace:function(){
-var results=CollapsingBarUtils.collapse(0,[this.B2_Fixed1,{name:"b1",appearance:"controlBar"}]);
-this.AssertStrictEquals(results.fit.length,1,results);},
-
-
-TestFit_variousEdgeCasesDoNotExplode:function(){
-var sizes=[undefined,null,-1,0,-4096,4096];
-var items=[undefined,null,[],["foo"]];
-for(var si=0;si < sizes.length;++si) {
-for(var ii=0;ii < items.length;++ii) {
-
-CollapsingBarUtils.collapse(sizes[si],items[ii]);}}},
-
-
-
-
-Run:function(){
-var keys=Object.keys(this).sort();
-for(var i=0;i < keys.length;++i) {
-var k=keys[i];
-var isFunction=typeof this[k] == "function";
-var isTest=k.indexOf("Test") == 0;
-if(isFunction && isTest){
-console.log("+++",k);
-this[k]();
-console.log("---",k,"PASS!");}}
-
-
-console.log("ran",keys.length,"tests.");}}};
-
+return item.whenDoesNotFit && item.whenDoesNotFit == "moveToMoreOptions";}};
 
 
 
@@ -56452,7 +56271,7 @@ getDescription:function(){
 if(this.props.error && this.props.error.description){
 var localizedDescription=
 Utils.localizedString(this.props.locale,this.props.error.description,this.props.localizableStrings);
-Log.error("localized desc:" + localizedDescription);
+Log.warn("ERROR: localized description:" + localizedDescription);
 return (
 React.createElement(Text,{style:styles.description},
 localizedDescription));}
@@ -56880,7 +56699,7 @@ Animated.parallel([
 Animated.timing(
 this.state.translateY,
 {
-toValue:(this.props.height - this.props.config.moreOptions.iconSize) / 2,
+toValue:(this.props.height - this.props.config.moreOptionsScreen.iconSize) / 2,
 duration:700,
 delay:0}),
 
@@ -56945,13 +56764,13 @@ for(var i=0;i < buttons.length;i++) {
 var button=buttons[i];
 
 var moreOptionButton;
-var buttonOpacity=this.props.config.moreOptions.iconStyle.opacity;
+var buttonOpacity=this.props.config.moreOptionsScreen.iconStyle.active.opacity;
 var buttonIcon=this._renderIcon(button.name);
-var buttonStyle=[styles.icon,this.props.config.moreOptions.iconStyle,buttonOpacity];
+var buttonStyle=[styles.icon,this.props.config.moreOptionsScreen.iconStyle.active,buttonOpacity];
 
 
 if(buttonOpacity === undefined || buttonIcon === undefined || buttonStyle === undefined){
-Log.error("ERROR: skipping unsupported More Options button ",button);
+Log.warn("Warning: skipping unsupported More Options button ",button);
 continue;}
 
 
@@ -56961,7 +56780,7 @@ f(buttonName);};})(
 
 button.name,this.onOptionPress);
 
-moreOptionButton = this._renderButton(buttonStyle,buttonIcon.fontString,onOptionPress,this.props.config.moreOptions.iconSize,this.props.config.moreOptions.color,buttonIcon.fontFamilyName);
+moreOptionButton = this._renderButton(buttonStyle,buttonIcon.fontString,onOptionPress,this.props.config.moreOptionsScreen.iconSize,this.props.config.moreOptionsScreen.color,buttonIcon.fontFamilyName);
 
 moreOptionButtons.push(moreOptionButton);}},
 
@@ -56994,8 +56813,7 @@ return buttonIcon;},
 render:function(){
 var moreOptionButtons=[];
 this._renderMoreOptionButtons(moreOptionButtons);
-
-var dismissButton=this._renderButton(styles.iconDismiss,this.props.config.icons.dismiss.fontString,this.onDismissPress,dismissButtonSize,this.props.config.moreOptions.color,this.props.config.icons.dismiss.fontFamilyName);
+var dismissButton=this._renderButton(styles.iconDismiss,this.props.config.icons.dismiss.fontString,this.onDismissPress,dismissButtonSize,this.props.config.moreOptionsScreen.color,this.props.config.icons.dismiss.fontFamilyName);
 
 var moreOptionRow;
 var rowAnimationStyle={transform:[{translateY:this.state.translateY}],opacity:this.state.buttonOpacity};
@@ -57104,6 +56922,7 @@ var SharePanel=React.createClass({displayName:'SharePanel',
 propTypes:{
 socialButtons:React.PropTypes.array,
 onSocialButtonPress:React.PropTypes.func,
+onSocialAlertDismiss:React.PropTypes.func,
 width:React.PropTypes.number,
 height:React.PropTypes.number,
 alertTitle:React.PropTypes.string,
@@ -57135,18 +56954,23 @@ onSocialButtonPress:function(serviceType){
 this.props.onSocialButtonPress(serviceType);},
 
 
+onSocialAlertDismiss:function(){
+Log.log('Ok Pressed!');
+this.props.onSocialAlertDismiss();},
+
+
 render:function(){
 var sharePanel;
 var socialButtons=[];
 
 var postShareSuccessAlert;
 
-if(this.props.alertTitle != ""){
+if(this.props.alertTitle !== ""){
 postShareSuccessAlert = AlertIOS.alert(
 this.props.alertTitle,
 this.props.alertMessage,
 [
-{text:'Ok',onPress:function(){return Log.log('Ok Pressed!');}}]);}
+{text:'Ok',onPress:this.onSocialAlertDismiss}]);}
 
 
 
@@ -57418,7 +57242,7 @@ locale:this.props.locale});},
 _renderPlaceholder:function(){var _this2=this;
 var placeholder;
 if(this.state.showSharePanel){
-var socialButtonsArray=this.props.sharing;
+var socialButtonsArray=this.props.shareScreen;
 placeholder = 
 React.createElement(View,{
 style:styles.fullscreenContainer},
@@ -57453,7 +57277,7 @@ return null;}
 
 return React.createElement(UpNext,{
 config:{
-upNext:this.props.config.upNextScreen,
+upNext:this.props.config.upNext,
 icons:this.props.config.icons},
 
 ad:this.props.ad,

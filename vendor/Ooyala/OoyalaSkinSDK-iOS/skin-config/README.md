@@ -1,19 +1,20 @@
-# Alice Skin Config
+# Skin Config
+A series of JSON files that can be used to configure Ooyala's new cross-platform Skin UI.. These files define:
 
-## Installing the node validator
-```
-npm install
-```
+1. *skin.json:* A configuration that is applied to the OoyalaSkinSDK, which outlines the desired look and feel of the user interface.  You can modify this file to suit the needs of your application
+2. *skin-schema.json:* A JSON schema that defines all of the possible options for the skin.json
+3. *[language].json:* A series of files that represent the localization of all strings used in our Skin UI (i.e. en.json, zh.json)
+
+## Installing and Running the node Validator
+You can use the JSON Schema to validate the correctness of your skin.json configuration. To validate your configuration against the JSON schema:
+
+    npm install
+    node ./validate.js <schema> <data>
+
 
 To add the git hook in order to automatically verify the skin when committing, run
 ```
 ./add-githook-validate
-```
-
-## Running the node validator manually
-To apply the test of a JSON schema against a JSON data file:
-```
-node ./validate.js <schema> <data>
 ```
 
 ## Online validator

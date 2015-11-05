@@ -2,8 +2,33 @@
   "description" : "Base UI Configuration for the Ooyala Player. See also: https://facebook.github.io/react and https://facebook.github.io/react-native.",
   "type" : "object",
   "additionalProperties" : false,
-  "required": ["localizableStrings"], // TODO: update this to be right (requires discussion).
+  "required": ["localization"],
   "properties" : {
+    "general": { // TODO: I'd like to get rid of this. There's only the watermark in here.
+      "description" : "Configuration of things that do not appear in only one part of the UI.",
+      "type": "object",
+      "properties": {
+        "watermark": {
+          "type": "object",
+          "additionalProperties" : false,
+          "properties" : {
+            "imageResource" : { "$ref" : "#/definitions/image" }
+          }
+        }
+      }
+    },
+    "localization" : {
+      "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
+      "type" : "object",
+      "properties": {
+        "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
+        "availableLanguageFile" : {
+          "type": "array",
+          "items": {"type": "object", "pattern": "^[a-z]{2}$"}
+        }
+      },
+      "required" : ["defaultLanguage"]
+    },
     "startScreen" : {
       "description" : "The screen displayed after an asset loads, but before playback begins.",
       "type" : "object",
@@ -81,18 +106,101 @@
         "showDescription" : { "type" : "boolean" }
       }
     },
-    "buttons" : {
-      "description" : "Defines the buttons that can appear on the controlBar and/or the moreOptions panel. Desktop and Mobile platforms can be configured individually.",
+    "adScreen" : {
+      "description" : "The screen to show during ads playback",
       "type" : "object",
-      "additionalProperties" : false,
-      // TODO: should we really require both? For our own UX yes, but what about for 3rd parties who only care about 1 platform?
-      "required" : ["desktop", "mobile"],
       "properties" : {
-        // TODO: should these have any requirements about their length?
-        "desktopContent" : { "$ref" : "#/definitions/buttonArray" },
-        "desktopAd" : { "$ref" : "#/definitions/buttonArray" },
-        "mobileContent" : { "$ref" : "#/definitions/buttonArray" },
-        "mobileAd" : { "$ref" : "#/definitions/buttonArray" }
+        "showAdMarquee" : { "type" : "boolean" },
+        "showControlBar" : { "type" : "boolean"}
+      }
+    },
+    "discoveryScreen" : {
+      "description" : "The screen showing other recommended content.",
+      "type" : "object",
+      "properties" : {
+        "panelTitle" : {
+          "type" : "object",
+          "additionalProperties" : false,
+          "required" : [ "titleFont" ],
+          "properties" : {
+            "titleFont" : {
+              "type": "object",
+              "description" : "The font of the title",
+              "$ref" : "#/definitions/fontStyle"
+            }
+          }
+        },
+        "contentTitle" : {
+          "description" : "The setting for discovery content title",
+          "type" : "object",
+          "additionalProperties" : false,
+          "required" : [ "show", "font" ],
+          "properties" :  {
+            "show": {"type" : "boolean"},
+            "font" : {"$ref" : "#/definitions/fontStyle"}
+          }
+        },
+        "contentDuration": {
+          "description" : "The setting for discovery content duration",
+          "type" : "object",
+          "additionalProperties" : false,
+          "required" : [ "show", "font"],
+          "properties" : {
+            "show": {"type" : "boolean"},
+            "font" : {"$ref" : "#/definitions/fontStyle"}
+          }
+        }
+      }
+    },
+    "shareScreen": {
+      "description" : "The list of sharing buttons (e.g. Twitter, Facebook, etc.).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties" : false,
+        "properties": {
+          "buttonName": { "type": "string" },
+          "icon" : {"$ref" : "#/definitions/icon"}
+        }
+      }
+    },
+    "moreOptionsScreen": {
+      "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
+      "type": "object",
+      "required" : ["iconSize", "color"], // TODO: anything else? Are there defaults in code for the opacities?
+      "additionalProperties" : false,
+      "patternProperties" : {
+        "brightOpacity": {"type": "number"},
+        "darkOpacity": {"type": "number"}
+      },
+      "properties": {
+        "iconSize": {"type": "number"},
+        "color": {"$ref": "#/definitions/color"},
+        "iconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        }
+      }
+    },
+    "closedCaptionOptions" : {
+      "description" : "Settings regarding closed captioning.",
+      "type" : "object",
+      "properties" : {
+        // TODO: What is "defaultEnabled"? Mobile doesn't use it anywhere.
+        "defaultEnabled" : { "type" : "boolean" },
+        "defaultLanguage" : { "type" : "string" }
+      }
+    },
+    "upNext" : {
+      "description" : "The screen to show as an asset is ending, indicating what assets can follow.",
+      "type" : "object",
+      "properties" : {
+        // TODO: showUpNext could be folded into timeToShow using "oneOf".
+        "showUpNext" : { "type" : "boolean" },
+        "timeToShow": {
+          "type" : "string",
+          "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
+        }
       }
     },
     "controlBar" : {
@@ -120,136 +228,25 @@
         }
       }
     },
-    "sharing": {
-      "description" : "The list of sharing buttons (e.g. Twitter, Facebook, etc.).",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties" : false,
-        "properties": {
-          "buttonName": { "type": "string" },
-          "icon" : {"$ref" : "#/definitions/icon"}
-        }
-      }
-    },
-    "general": { // TODO: I'd like to get rid of this. There's only the watermark in here.
-      "description" : "Configuration of things that do not appear in only one part of the UI.",
-      "type": "object",
-      "properties": {
-        "watermark": {
-          "type": "object",
-          "additionalProperties" : false,
-          "properties" : {
-            "imageResource" : { "$ref" : "#/definitions/image" }
-          }
-        }
-      }
-    },
-    "upNextScreen" : {
-      "description" : "The screen to show as an asset is ending, indicating what assets can follow.",
+    "buttons" : {
+      "description" : "Defines the buttons that can appear on the controlBar and/or the moreOptions panel. Desktop and Mobile platforms can be configured individually.",
       "type" : "object",
-      "properties" : {
-        // TODO: showUpNext could be folded into timeToShow using "oneOf".
-        "showUpNext" : { "type" : "boolean" },
-        "timeToShow": {
-          "type" : "string",
-          "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
-        }
-      }
-    },
-    "adScreen" : {
-      "description" : "The screen to show during ads playback",
-      "type" : "object",
-      "properties" : {
-        "showAdMarquee" : { "type" : "boolean" },
-        "showControlBar" : { "type" : "boolean"}
-      }
-    },
-    "moreOptions": {
-      "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
-      "type": "object",
-      "required" : ["iconSize", "color"], // TODO: anything else? Are there defaults in code for the opacities?
       "additionalProperties" : false,
-      "patternProperties" : {
-        "brightOpacity": {"type": "number"},
-        "darkOpacity": {"type": "number"}
-      },
-      "properties": {
-        "iconStyle" : {
-          "description" : "Default color is white with an opacity of 1",
-          "$ref" : "#/definitions/iconStyle"
-        },
-        "iconSize": {"type": "number"},
-        "color": {"$ref": "#/definitions/color"}
-      }
-    },
-    "discoveryScreen" : {
-      "description" : "The screen showing other recommended content.",
-      "type" : "object",
+      // TODO: should we really require both? For our own UX yes, but what about for 3rd parties who only care about 1 platform?
+      "required" : ["desktopContent", "mobileContent"],
       "properties" : {
-        "panelTitle" : { 
-          "type" : "object",
-          "additionalProperties" : false,
-          "required" : [ "text", "imageResource", "showImage" ],
-          "properties" : {
-            "text" : { "type": "string" },
-            "imageResource" : { "$ref" : "#/definitions/image" },
-            "showImage" : { "type" : "boolean" }
-          }
-        },
-        "titleFont" : {
-          "description" : "The font of the title",
-          "$ref" : "#/definitions/fontStyle"
-        },
-        "contentTitle" : {
-          "description" : "The setting for discovery content title",
-          "type" : "object",
-          "additionalProperties" : false,
-          "required" : [ "show", "font" ],
-          "properties" :  {
-            "show": {"type" : "boolean"},
-            "font" : {"$ref" : "#/definitions/fontStyle"}
-          }
-        },
-        "contentDuration": {
-          "description" : "The setting for discovery content duration",
-          "type" : "object",
-          "additionalProperties" : false,
-          "required" : [ "show", "font"],
-          "properties" : {
-            "show": {"type" : "boolean"},
-            "font" : {"$ref" : "#/definitions/fontStyle"}
-          }
-        }
-      }
-    },
-    "ccOptions" : {
-      "description" : "Settings regarding closed captioning.",
-      "type" : "object",
-      "properties" : {
-        // TODO: What is "defaultEnabled"? Mobile doesn't use it anywhere.
-        "defaultEnabled" : { "type" : "boolean" },
-        "defaultLanguage" : { "type" : "string" }
+        // TODO: should these have any requirements about their length?
+        "desktopContent" : { "$ref" : "#/definitions/buttonArray" },
+        "desktopAd" : { "$ref" : "#/definitions/buttonArray" },
+        "mobileContent" : { "$ref" : "#/definitions/buttonArray" },
+        "mobileAd" : { "$ref" : "#/definitions/buttonArray" }
       }
     },
     "icons" : {
-      "description" : "The set of all required icons, for rendering all the various buttons' states for Mobile",
+      "description" : "The set of all required icons, for rendering all the various buttons' states.",
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
-      "required" : ["play", "pause", "volume", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
-    },
-    "localizableStrings" : {
-      "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
-      "type" : "object",
-      "properties": {
-        "language" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
-        "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
-        "languages" : {
-          "type": "array",
-          "items": {"type": "string", "pattern": "^[a-z]{2}$"}
-        }
-      },
-      "required" : ["default"] 
+      "required" : ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
     }
   },
   "definitions": {
@@ -301,7 +298,7 @@
     "buttonNames" : {
       "description" : "These are the only buttons currently supported by the UI SDK.",
       "additionalProperties" : false,
-      "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector", "quality"]
+      "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector", "quality", "live"]
     },
     "buttonArray" : {
       "description" : "Used to list the buttons for a single platform (desktop vs. mobile).",
@@ -338,6 +335,22 @@
         },
         "opacity" : {
           "type" : "number"
+        },
+        "active": {
+          "color" : {
+            "type" : "string"
+          },
+          "opacity" : {
+            "type" : "number"
+          }
+        },
+        "inactive": {
+          "color" : {
+            "type" : "string"
+          },
+          "opacity" : {
+            "type" : "number"
+          }
         },
         "shadowColor" : {
           "type" : "string"
