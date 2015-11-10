@@ -54135,7 +54135,7 @@ NONE:0};
 
 module.exports = {UI_SIZES:UI_SIZES,BUTTON_NAMES:BUTTON_NAMES,IMG_URLS:IMG_URLS,SCREEN_TYPES:SCREEN_TYPES,OOSTATES:OOSTATES,LOG_LEVEL:LOG_LEVEL};
 });
-__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/discoveryPanel.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js","OoyalaSkin/discoveryPanel.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -54181,6 +54181,7 @@ var listenerDefinitions=[
 ['timeChanged',function(event){return _this.onTimeChange(event);}],
 ['currentItemChanged',function(event){return _this.onCurrentItemChange(event);}],
 ['frameChanged',function(event){return _this.onFrameChange(event);}],
+['volumeChanged',function(event){return _this.onVolumeChanged(event);}],
 ['playCompleted',function(event){return _this.onPlayComplete(event);}],
 ['stateChanged',function(event){return _this.onStateChange(event);}],
 ['discoveryResultsReceived',function(event){return _this.onDiscoveryResult(event);}],
@@ -54400,7 +54401,7 @@ this.skin.setState({alertTitle:e.title});
 this.skin.setState({alertMessage:e.message});};
 
 
-OoyalaSkinCore.prototype.onVolumeChange = function(e){
+OoyalaSkinCore.prototype.onVolumeChanged = function(e){
 this.skin.setState({volume:e.volume});};
 
 
@@ -54461,6 +54462,7 @@ ad:this.skin.state.ad,
 live:this.skin.state.live,
 width:this.skin.state.width,
 height:this.skin.state.height,
+volume:this.skin.state.volume,
 fullscreen:this.skin.state.fullscreen,
 onPress:function(value){return _this4.handlePress(value);},
 onScrub:function(value){return _this4.handleScrub(value);},
