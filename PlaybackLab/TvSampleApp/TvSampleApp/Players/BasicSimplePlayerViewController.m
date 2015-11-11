@@ -8,9 +8,11 @@
 
 
 #import "BasicSimplePlayerViewController.h"
+#import "PlayerSelectionOption.h"
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
+#import <UIKit/UIScreen.h>
 
 @interface BasicSimplePlayerViewController ()
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -23,26 +25,30 @@
 
 @implementation BasicSimplePlayerViewController
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSimple";
+//- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+//  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+//  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
+//  self.playerDomain = @"http://www.ooyala.com";
+//  self.embedCode = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
+//  
+//  if (self.playerSelectionOption) {
+//    self.embedCode = self.playerSelectionOption.embedCode;
+//    self.title = self.playerSelectionOption.title;
+//  }
+//  return self;
+//}
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
   self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
   self.playerDomain = @"http://www.ooyala.com";
-  
+  self.embedCode = @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1";
+
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
   }
-  return self;
-}
-
-- (void)loadView {
-  [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
-}
-
-- (void)viewDidLoad {
-  [super viewDidLoad];
 
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
@@ -57,6 +63,7 @@
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  self.playerView.frame = CGRectMake(0, 0, self.playerView.frame.size.width, [UIScreen mainScreen].bounds.size.height);
   
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];

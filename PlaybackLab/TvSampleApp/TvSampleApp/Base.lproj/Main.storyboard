@@ -19,6 +19,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="THU-WB-Spz" kind="show" identifier="playback" id="ZlV-ed-tlm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="571" y="-44"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic Simple Player View Controller-->
         <scene sceneID="bVI-fv-BFe">
             <objects>
-                <viewController id="THU-WB-Spz" sceneMemberID="viewController">
+                <viewController id="THU-WB-Spz" customClass="BasicSimplePlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l5A-xC-TSb"/>
                         <viewControllerLayoutGuide type="bottom" id="IU5-n2-0KZ"/>
@@ -43,7 +46,17 @@
                     <view key="view" contentMode="scaleToFill" id="FDX-n3-31B">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-JV-EQe">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="uFo-JV-EQe" id="1Wn-f1-VPA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1P9-zT-U8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

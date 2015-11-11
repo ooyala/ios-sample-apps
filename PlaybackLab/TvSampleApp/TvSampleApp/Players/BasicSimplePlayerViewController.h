@@ -8,9 +8,13 @@
 
 
 #import <UIKit/UIKit.h>
-#import "SampleAppPlayerViewController.h"
 
-@interface BasicSimplePlayerViewController : SampleAppPlayerViewController
+@class PlayerSelectionOption;
+
+@interface BasicSimplePlayerViewController : UIViewController
+
+@property(weak, nonatomic) IBOutlet UIView *playerView;
+@property(nonatomic) PlayerSelectionOption *playerSelectionOption;
 
 @end
 

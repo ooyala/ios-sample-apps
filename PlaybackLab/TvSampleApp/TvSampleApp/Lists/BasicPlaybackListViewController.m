@@ -7,7 +7,6 @@
 
 #import "BasicPlaybackListViewController.h"
 #import "BasicSimplePlayerViewController.h"
-#import "SampleAppPlayerViewController.h"
 
 #import "PlayerSelectionOption.h"
 
@@ -84,11 +83,14 @@
   return NO;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  // When a row is selected, load its desired PlayerViewController
-  PlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller = [(BasicSimplePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
-  [self.navigationController pushViewController:controller animated:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  [self performSegueWithIdentifier:@"playback" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+  PlayerSelectionOption *option = self.options[path.row];
+  BasicSimplePlayerViewController *playerViewController = (BasicSimplePlayerViewController *)segue.destinationViewController;
+  [playerViewController setPlayerSelectionOption:option];
 }
 @end
