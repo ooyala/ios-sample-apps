@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="QC9-3j-K0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="Om6-oE-os1">
+            <objects>
+                <tableViewController id="BpS-Y8-M5c" customClass="BasicPlaybackListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="AeQ-3C-OVh">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gU0-Nm-i3r">
+                                <rect key="frame" x="0.0" y="199" width="1880" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gU0-Nm-i3r" id="rf6-O0-OSg">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="THU-WB-Spz" kind="show" identifier="playback" id="ZlV-ed-tlm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BpS-Y8-M5c" id="utb-ZX-huT"/>
+                            <outlet property="delegate" destination="BpS-Y8-M5c" id="f9E-RU-PuZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="dd1-Qm-j8S"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReQ-ge-s04" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="571" y="-44"/>
+        </scene>
+        <!--Basic Simple Player View Controller-->
+        <scene sceneID="bVI-fv-BFe">
+            <objects>
+                <viewController id="THU-WB-Spz" customClass="BasicSimplePlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l5A-xC-TSb"/>
+                        <viewControllerLayoutGuide type="bottom" id="IU5-n2-0KZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FDX-n3-31B">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-JV-EQe">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="uFo-JV-EQe" id="1Wn-f1-VPA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1P9-zT-U8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="1413"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sTG-WD-f9e">
+            <objects>
+                <navigationController id="QC9-3j-K0r" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bTV-Dh-bWT">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BpS-Y8-M5c" kind="relationship" relationship="rootViewController" id="hgP-E8-qJv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGV-pO-60r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1569" y="-44"/>
+        </scene>
+    </scenes>
+</document>
