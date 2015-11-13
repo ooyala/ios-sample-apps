@@ -10054,8 +10054,9 @@ __d('regenerator/runtime.js',[],function(global, require, module, exports) {  !
 
 var hasOwn=Object.prototype.hasOwnProperty;
 var undefined;
-var iteratorSymbol=
-typeof Symbol === "function" && Symbol.iterator || "@@iterator";
+var $Symbol=typeof Symbol === "function"?Symbol:{};
+var iteratorSymbol=$Symbol.iterator || "@@iterator";
+var toStringTagSymbol=$Symbol.toStringTag || "@@toStringTag";
 
 var inModule=typeof module === "object";
 var runtime=global.regeneratorRuntime;
@@ -10125,7 +10126,7 @@ function GeneratorFunctionPrototype(){}
 var Gp=GeneratorFunctionPrototype.prototype = Generator.prototype;
 GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
 GeneratorFunctionPrototype.constructor = GeneratorFunction;
-GeneratorFunction.displayName = "GeneratorFunction";
+GeneratorFunctionPrototype[toStringTagSymbol] = GeneratorFunction.displayName = "GeneratorFunction";
 
 
 
@@ -10151,7 +10152,10 @@ runtime.mark = function(genFun){
 if(Object.setPrototypeOf){
 Object.setPrototypeOf(genFun,GeneratorFunctionPrototype);}else 
 {
-genFun.__proto__ = GeneratorFunctionPrototype;}
+genFun.__proto__ = GeneratorFunctionPrototype;
+if(!(toStringTagSymbol in genFun)){
+genFun[toStringTagSymbol] = "GeneratorFunction";}}
+
 
 genFun.prototype = Object.create(Gp);
 return genFun;};
@@ -10413,6 +10417,8 @@ defineIteratorMethods(Gp);
 Gp[iteratorSymbol] = function(){
 return this;};
 
+
+Gp[toStringTagSymbol] = "Generator";
 
 Gp.toString = function(){
 return "[object Generator]";};
@@ -54135,7 +54141,7 @@ NONE:0};
 
 module.exports = {UI_SIZES:UI_SIZES,BUTTON_NAMES:BUTTON_NAMES,IMG_URLS:IMG_URLS,SCREEN_TYPES:SCREEN_TYPES,OOSTATES:OOSTATES,LOG_LEVEL:LOG_LEVEL};
 });
-__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js","OoyalaSkin/discoveryPanel.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/discoveryPanel.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js"],function(global, require, module, exports) {  'use strict';
 
 
 
