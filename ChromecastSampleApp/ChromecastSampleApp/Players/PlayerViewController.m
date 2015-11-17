@@ -158,6 +158,7 @@
     NSString *videoDescription = item.itemDescription;
 
     dispatch_sync(dispatch_get_main_queue(), ^{
+      [[self.castPlaybackView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
       self.castPlaybackView.image = image;
       [self.castPlaybackView.layer setBorderColor:[UIColor redColor].CGColor];
       [self.castPlaybackView.layer setBorderWidth:5.0];
