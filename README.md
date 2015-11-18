@@ -31,6 +31,16 @@ The Complete Sample App is a project that combines all of the sample apps in the
 Note: Opening "CompleteSampleApp.xcodeproj" will not work, as it requires all of the other projects in the workspace.  
 
 
+# Using the QR Scan Code functionality
+
+Some Sample Apps provide a "Scan Code" option.  This option allows you to create a QR Code that can be parsed by the application to make running your own assets easier.
+
+1. Go to [http://www.qr-code-generator.com/](http://www.qr-code-generator.com/)
+1. Put your embed code and pcode into the text box, separated with a semicolon like: `JiOTdrdzqAujYa5qvnOxszbrTEuU5HMt;c0cTkxOqALQviQIGAHWY5hP0q9gU`
+1. Press Generate QR Code
+1. In the sample app, choose "Scan Code" option
+1. Point your device's camera towards the QR code. The application should pick up the QR Code and put the information into a player immediately.
+
 # Using the Sample App Repository for filing support issues
 
 If you have a bug within your own application, the Sample App Repository is a great way to help isolate the issue to Ooyala code. we recommend the following steps.
