@@ -8,6 +8,7 @@
 #import "BasicPlaybackListViewController.h"
 #import "BasicSimplePlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
+#import "QRScannerViewController.h"
 
 #import "PlayerSelectionOption.h"
 
@@ -38,6 +39,7 @@
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Ad Mid-roll" embedCode:@"xhcmp0ZDpnDB2-hXvH7TsYVQKEk_89di" viewController: [BasicSimplePlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Ad Post-roll" embedCode:@"Rjcmp0ZDr5yFbZPEfLZKUveR_2JzZjMO" viewController: [BasicSimplePlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Multi Ad combination" embedCode:@"Ftcmp0ZDoz8tALmhPcN2vMzCdg7YU9lc" viewController: [BasicSimplePlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Scan Code" embedCode:@"" viewController: [BasicSimplePlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
@@ -87,7 +89,12 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller = [(BasicSimplePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  SampleAppPlayerViewController *controller;
+  if (selection.embedCode.length > 0) {
+    controller = [(BasicSimplePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  } else {
+    controller = [[QRScannerViewController alloc] initWithPlayerSelectionOption:selection];
+  }
   [self.navigationController pushViewController:controller animated:YES];
 }
 @end
