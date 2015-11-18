@@ -8,8 +8,8 @@
 #import "SecurePlayerPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 #import "SecurePlayerOPTPlayerViewController.h"
-
-#import "SecurePlayerSelectionOption.h"
+#import "PlayerSelectionOption.h"
+#import "QRScannerViewController.h"
 
 @interface SecurePlayerListViewController ()
 @property NSMutableArray *options;
@@ -26,54 +26,54 @@
 }
 
 - (void)addAllSecurePlayerSelectionOptions {
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
                                                                   embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
 
 
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Ooyala Encrypted HLS VOD"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Encrypted HLS VOD"
                                                                   embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Ooyala Clear HLS VOD"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Clear HLS VOD"
                                                                   embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Microsoft Clear Smooth VOD"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Microsoft Clear Smooth VOD"
                                                                   embedCode:@"1nNGk2bTq5ECsz5cRlZ4ONAAk96drr6T"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Microsoft Playready Smooth VOD"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Microsoft Playready Smooth VOD"
                                                                   embedCode:@"V2NWk2bTpI1ac0IaicMaFuMcIrmE9U-_"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Ooyala Playready HLS VOD with Closed Captions"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Playready HLS VOD with Closed Captions"
                                                                   embedCode:@"xrcGYydDq1wU7nSmX7AQB3Uq4Fu3BjuE"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Ooyala Playready Smooth VOD"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Playready Smooth VOD"
                                                                   embedCode:@"5jNzJuazpFtKmloYZQmgPeC_tqDKHX9r"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Device Limit(Unconfigured)"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Limit(Unconfigured)"
                                                                   embedCode:@"0xNmpoczpeNkx6Pq8ZOPwPUu6CuzFKeY"
                                                                       pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@"Device Bind to Entitlement"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Bind to Entitlement"
                                                                   embedCode:@"Q3NmpoczpUH__SVSKRI0BbFl3A9CtHSL"
                                                                       pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[SecurePlayerSelectionOption alloc] initWithTitle:@""
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Scan code"
                                                                   embedCode:@""
                                                                       pcode:@""
                                                                      domain:@"http://www.ooyala.com"
@@ -89,7 +89,7 @@
   [self addAllSecurePlayerSelectionOptions];
 }
 
-- (void)insertNewObject:(SecurePlayerSelectionOption *)selectionObject {
+- (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
   if (!self.options) {
     self.options = [[NSMutableArray alloc] init];
   }
@@ -127,8 +127,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   // When a row is selected, load its desired PlayerViewController
-  SecurePlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller = [(SecurePlayerPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  PlayerSelectionOption *selection = self.options[indexPath.row];
+  SampleAppPlayerViewController *controller;
+  if (selection.embedCode.length > 0) {
+    controller = [(SecurePlayerPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  } else {
+    controller = [[QRScannerViewController alloc] initWithPlayerSelectionOption:selection];
+  }
   [self.navigationController pushViewController:controller animated:YES];
 }
 @end

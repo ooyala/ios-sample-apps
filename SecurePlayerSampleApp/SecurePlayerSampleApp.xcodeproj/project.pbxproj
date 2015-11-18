@@ -35,8 +35,6 @@
 		0BC947DD1A817756004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947D71A817756004CB997 /* TableCell.xib */; };
 		0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */; };
 		0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */; };
-		0BD849F61B910165006CB6D0 /* SecurePlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD849F41B910165006CB6D0 /* SecurePlayerSelectionOption.h */; };
-		0BD849F71B910165006CB6D0 /* SecurePlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD849F51B910165006CB6D0 /* SecurePlayerSelectionOption.m */; };
 		0BD849FA1B911275006CB6D0 /* OoyalaSecurePlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849F81B911275006CB6D0 /* OoyalaSecurePlayerSDK.framework */; };
 		0BD849FB1B911275006CB6D0 /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849F91B911275006CB6D0 /* SecurePlayer.framework */; };
 		0BD849FD1B911512006CB6D0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849FC1B911512006CB6D0 /* libz.dylib */; };
@@ -63,6 +61,8 @@
 		0BD84A281B912588006CB6D0 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* SecurePlayerPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */; };
+		9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */; };
+		9782DB021BFC1E9E0094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,8 +109,6 @@
 		0BC947D71A817756004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
-		0BD849F41B910165006CB6D0 /* SecurePlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurePlayerSelectionOption.h; sourceTree = "<group>"; };
-		0BD849F51B910165006CB6D0 /* SecurePlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurePlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BD849F81B911275006CB6D0 /* OoyalaSecurePlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSecurePlayerSDK.framework; sourceTree = "<group>"; };
 		0BD849F91B911275006CB6D0 /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurePlayer.framework; sourceTree = "<group>"; };
 		0BD849FC1B911512006CB6D0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -134,6 +132,8 @@
 		0BD84A1D1B91179A006CB6D0 /* zgpriv.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = zgpriv.dat; sourceTree = "<group>"; };
 		0BD84A251B912588006CB6D0 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
+		9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,10 +276,10 @@
 		0B19FEF51A3AB5A2003E57DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */,
+				9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */,
 				0BD84A251B912588006CB6D0 /* PlayerSelectionOption.h */,
 				0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */,
-				0BD849F41B910165006CB6D0 /* SecurePlayerSelectionOption.h */,
-				0BD849F51B910165006CB6D0 /* SecurePlayerSelectionOption.m */,
 				0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */,
 				0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */,
 			);
@@ -332,11 +332,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B19FEE31A3AB4BC003E57DF /* SecurePlayerListViewController.h in Headers */,
-				0BD849F61B910165006CB6D0 /* SecurePlayerSelectionOption.h in Headers */,
 				0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */,
 				0B19FEDE1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h in Headers */,
 				0B92BC981BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h in Headers */,
 				0BD84A271B912588006CB6D0 /* PlayerSelectionOption.h in Headers */,
+				9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,13 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9782DB021BFC1E9E0094A660 /* QRScannerViewController.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				0B92BC991BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m in Sources */,
 				0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */,
 				0BD84A281B912588006CB6D0 /* PlayerSelectionOption.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 				0B19FEDF1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.m in Sources */,
-				0BD849F71B910165006CB6D0 /* SecurePlayerSelectionOption.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* SecurePlayerListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

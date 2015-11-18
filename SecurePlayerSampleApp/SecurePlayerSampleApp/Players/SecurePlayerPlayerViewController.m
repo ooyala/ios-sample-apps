@@ -13,7 +13,7 @@
 #import <OoyalaSDK/OOStreamPlayer.h>
 #import <OoyalaSecurePlayerSDK/OOOoyalaSecurePlayerSDK.h>
 
-#import "SecurePlayerSelectionOption.h" 
+#import "PlayerSelectionOption.h" 
 
 @interface SecurePlayerPlayerViewController ()
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -26,7 +26,7 @@
 
 @implementation SecurePlayerPlayerViewController
 
-- (id)initWithPlayerSelectionOption:(SecurePlayerSelectionOption *)playerSelectionOption {
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super init];
   self.nib = @"PlayerSimple";
   

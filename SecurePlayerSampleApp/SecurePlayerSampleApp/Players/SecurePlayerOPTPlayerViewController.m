@@ -13,8 +13,6 @@
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import <OoyalaSecurePlayerSDK/OOOoyalaSecurePlayerSDK.h>
 
-#import "SecurePlayerSelectionOption.h"
-
 /**
  * This activity illustrates how you use Ooyala Player Token.
  * Ooyala Player Token can also be used in conjunction with the following security mechanisms
@@ -48,7 +46,7 @@
 
 @implementation SecurePlayerOPTPlayerViewController
 
-- (id)initWithPlayerSelectionOption:(SecurePlayerSelectionOption *)playerSelectionOption {
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super init];
   self.nib = @"PlayerSimple";
 
