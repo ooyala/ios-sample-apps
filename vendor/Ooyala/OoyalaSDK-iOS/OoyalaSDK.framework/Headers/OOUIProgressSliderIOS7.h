@@ -13,7 +13,8 @@ enum
   OOUIProgressSliderModeLive,
   OOUIProgressSliderModeAdInLive,
   OOUIProgressSliderModeNormal,
-  OOUIProgressSliderModeLiveNoSrubber
+  OOUIProgressSliderModeLiveNoSrubber,
+  OOUIProgressSliderModeElapsedDuration
 };
 typedef NSInteger OOUIProgressSliderMode;
 

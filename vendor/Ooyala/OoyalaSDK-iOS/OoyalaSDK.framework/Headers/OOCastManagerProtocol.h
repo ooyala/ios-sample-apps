@@ -35,6 +35,14 @@
 @property(nonatomic, readonly) BOOL isInCastMode;
 
 /**
+ * Return YES if it is reasonable to show a minicontroller. NO means
+ * that the UI should not show / should hide any minicontrollers because
+ * the underlying Casting state cannot support it. Do not cache the
+ * result of this call but poll it when needed.
+ */
+@property(nonatomic, readonly) BOOL isMiniControllerInteractionAvailable;
+
+/**
  * Enter cast mode with given OOCastModeOptions object
  */
 - (void)enterCastModeWithOptions:(OOCastModeOptions *)options;
