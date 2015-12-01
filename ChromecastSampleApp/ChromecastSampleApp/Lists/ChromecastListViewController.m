@@ -59,7 +59,7 @@
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissMiniController) name:OOCastManagerDidDisconnectNotification object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(miniControllerClicked) name:OOCastMiniControllerClickedNotification object:nil];
   self.castManager.delegate = self;
-  if ([self.castManager isInCastMode]) {
+  if ([self.castManager isMiniControllerInteractionAvailable]) {
     [self displayMiniController];
   }
 }
