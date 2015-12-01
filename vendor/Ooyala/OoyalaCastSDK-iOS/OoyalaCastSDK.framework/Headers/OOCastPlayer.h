@@ -30,7 +30,7 @@
 
 @property(nonatomic, strong) NSString *castItemPromoImg;
 
-@property (nonatomic, readonly) BOOL didComplete;
+@property (nonatomic, readonly) BOOL isMiniControllerInteractionAvailable;
 
 - (id)init __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
 - (id)initWithNamespace:(NSString *)appNamespace __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
