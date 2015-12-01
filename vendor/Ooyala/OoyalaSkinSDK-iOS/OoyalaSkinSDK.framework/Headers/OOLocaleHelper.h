@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT NSString * const kLocalizableStrings;
-FOUNDATION_EXPORT NSString * const kLocale;
-
 @interface OOLocaleHelper : NSObject
 
 + (NSString *)preferredLanguageId;
 
-+ (NSString *)localizedStringFromDictionary:(NSDictionary *)config forKey:(NSString *)key;
++ (NSString *)localizedString:(NSDictionary *)localizableStrings locale:(NSString *)locale forKey:(NSString *)key;
 
 @end

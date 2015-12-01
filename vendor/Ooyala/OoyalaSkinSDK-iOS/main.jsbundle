@@ -1375,7 +1375,7 @@ throw new TypeError(
 
 var index=findIndex.call(this,predicate,context);
 return index === -1?undefined:this[index];}});}})();
-__d('OoyalaSkin/index.ios.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/ooyalaSkinCore.js","NativeModules"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/index.ios.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/ooyalaSkinCore.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -5208,7 +5208,7 @@ NodeHandle.injection.injectImplementation(UniversalWorkerNodeHandle);}
 module.exports = {
 inject:inject};
 });
-__d('InitializeJavaScriptAppEngine',["RCTDebugComponentOwnership","RCTDeviceEventEmitter","PerformanceLogger","regenerator/runtime.js","ExceptionsManager","ErrorUtils","ExceptionsManager","Platform","checkFlowAtRuntime","JSTimers","NativeModules","Promise","XMLHttpRequest","FormData","fetch","Geolocation","WebSocket","BridgeProfiling"],function(global, require, module, exports) {  var _extends=Object.assign || function(target){for(var i=1;i < arguments.length;i++) {var source=arguments[i];for(var key in source) {if(Object.prototype.hasOwnProperty.call(source,key)){target[key] = source[key];}}}return target;};
+__d('InitializeJavaScriptAppEngine',["RCTDebugComponentOwnership","RCTDeviceEventEmitter","PerformanceLogger","ExceptionsManager","ErrorUtils","ExceptionsManager","Platform","checkFlowAtRuntime","JSTimers","NativeModules","Promise","XMLHttpRequest","FormData","fetch","Geolocation","WebSocket","BridgeProfiling","regenerator/runtime.js"],function(global, require, module, exports) {  var _extends=Object.assign || function(target){for(var i=1;i < arguments.length;i++) {var source=arguments[i];for(var key in source) {if(Object.prototype.hasOwnProperty.call(source,key)){target[key] = source[key];}}}return target;};
 
 
 
@@ -14778,7 +14778,7 @@ _this.readyState === _this.OPEN && _this._closeWebSocket(id);})];}}]);return Web
 
 module.exports = WebSocket;
 });
-__d('WebSocketBase',["event-target-shim/lib/EventTarget.js"],function(global, require, module, exports) {  'use strict';var _createClass=(function(){function defineProperties(target,props){for(var i=0;i < props.length;i++) {var descriptor=props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if('value' in descriptor)descriptor.writable = true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};})();var _get=function get(object,property,receiver){if(object === null)object = Function.prototype;var desc=Object.getOwnPropertyDescriptor(object,property);if(desc === undefined){var parent=Object.getPrototypeOf(object);if(parent === null){return undefined;}else {return get(parent,property,receiver);}}else if('value' in desc){return desc.value;}else {var getter=desc.get;if(getter === undefined){return undefined;}return getter.call(receiver);}};function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function');}}function _inherits(subClass,superClass){if(typeof superClass !== 'function' && superClass !== null){throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__ = superClass;}
+__d('WebSocketBase',["event-target-shim/lib/event-target.js"],function(global, require, module, exports) {  'use strict';var _createClass=(function(){function defineProperties(target,props){for(var i=0;i < props.length;i++) {var descriptor=props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if('value' in descriptor)descriptor.writable = true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};})();var _get=function get(object,property,receiver){if(object === null)object = Function.prototype;var desc=Object.getOwnPropertyDescriptor(object,property);if(desc === undefined){var parent=Object.getPrototypeOf(object);if(parent === null){return undefined;}else {return get(parent,property,receiver);}}else if('value' in desc){return desc.value;}else {var getter=desc.get;if(getter === undefined){return undefined;}return getter.call(receiver);}};function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function');}}function _inherits(subClass,superClass){if(typeof superClass !== 'function' && superClass !== null){throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__ = superClass;}
 
 
 
@@ -14790,7 +14790,7 @@ __d('WebSocketBase',["event-target-shim/lib/EventTarget.js"],function(global, re
 
 
 
-var EventTarget=require('event-target-shim/lib/EventTarget.js');var 
+var EventTarget=require('event-target-shim/lib/event-target.js');var 
 
 
 
@@ -14877,26 +14877,69 @@ throw new Error('Subclass must define sendArrayBufferImpl method');}}]);return W
 
 module.exports = WebSocketBase;
 });
-__d('event-target-shim/lib/EventTarget.js',["event-target-shim/lib/commons.js","event-target-shim/lib/CustomEventTarget.js","event-target-shim/lib/EventWrapper.js"],function(global, require, module, exports) {  "use strict";
-
-Object.defineProperty(exports,"__esModule",{
-value:true});
-
-exports["default"] = EventTarget;
-
-var _commons=require("event-target-shim/lib/commons.js");
-
-var _CustomEventTarget=require("event-target-shim/lib/CustomEventTarget.js");
-
-var _EventWrapper=require("event-target-shim/lib/EventWrapper.js");
-
-var HAS_EVENTTARGET_INTERFACE=typeof window !== "undefined" && typeof window.EventTarget !== "undefined";
-
-function EventTarget(){
-for(var _len=arguments.length,types=Array(_len),_key=0;_key < _len;_key++) {
-types[_key] = arguments[_key];}
+__d('event-target-shim/lib/event-target.js',["event-target-shim/lib/commons.js","event-target-shim/lib/custom-event-target.js","event-target-shim/lib/event-wrapper.js"],function(global, require, module, exports) {  "use strict";
 
 
+
+
+
+
+
+
+
+
+
+var Commons=require("event-target-shim/lib/commons.js");
+var CustomEventTarget=require("event-target-shim/lib/custom-event-target.js");
+var EventWrapper=require("event-target-shim/lib/event-wrapper.js");
+var LISTENERS=Commons.LISTENERS;
+var newNode=Commons.newNode;
+var defineCustomEventTarget=CustomEventTarget.defineCustomEventTarget;
+var createEventWrapper=EventWrapper.createEventWrapper;
+var STOP_IMMEDIATE_PROPAGATION_FLAG=EventWrapper.STOP_IMMEDIATE_PROPAGATION_FLAG;
+
+
+
+
+
+
+
+
+
+
+
+var HAS_EVENTTARGET_INTERFACE=
+typeof window !== "undefined" && 
+typeof window.EventTarget !== "undefined";
+
+
+
+
+
+
+
+
+var CAPTURE=1;
+
+
+
+
+
+
+
+var BUBBLE=2;
+
+
+
+
+
+
+
+
+
+
+
+var EventTarget=module.exports = function EventTarget(){
 if(this instanceof EventTarget){
 
 
@@ -14907,20 +14950,29 @@ if(this instanceof EventTarget){
 
 
 
-Object.defineProperty(this,_commons.LISTENERS,{value:Object.create(null)});}else 
-if(types.length > 0){
+Object.defineProperty(this,LISTENERS,{value:Object.create(null)});}else 
+
+if(arguments.length > 0){
+var types=Array(arguments.length);
+for(var i=0;i < arguments.length;++i) {
+types[i] = arguments[i];}
 
 
 
 
 
-return (0,_CustomEventTarget.defineCustomEventTarget)(EventTarget,types);}else 
+
+
+return defineCustomEventTarget(EventTarget,types);}else 
+
 {
-throw new TypeError("Cannot call a class as a function");}}
+throw new TypeError("Cannot call a class as a function");}};
 
 
 
-EventTarget.prototype = Object.create((HAS_EVENTTARGET_INTERFACE?window.EventTarget:Object).prototype,{
+EventTarget.prototype = Object.create(
+(HAS_EVENTTARGET_INTERFACE?window.EventTarget:Object).prototype,
+{
 constructor:{
 value:EventTarget,
 writable:true,
@@ -14928,9 +14980,7 @@ configurable:true},
 
 
 addEventListener:{
-value:function addEventListener(type,listener){
-var capture=arguments[2] === undefined?false:arguments[2];
-
+value:function addEventListener(type,listener,capture){
 if(listener == null){
 return false;}
 
@@ -14938,10 +14988,10 @@ if(typeof listener !== "function"){
 throw new TypeError("listener should be a function.");}
 
 
-var kind=capture?_commons.CAPTURE:_commons.BUBBLE;
-var node=this[_commons.LISTENERS][type];
+var kind=capture?CAPTURE:BUBBLE;
+var node=this[LISTENERS][type];
 if(node == null){
-this[_commons.LISTENERS][type] = (0,_commons.newNode)(listener,kind);
+this[LISTENERS][type] = newNode(listener,kind);
 return true;}
 
 
@@ -14955,7 +15005,7 @@ prev = node;
 node = node.next;}
 
 
-prev.next = (0,_commons.newNode)(listener,kind);
+prev.next = newNode(listener,kind);
 return true;},
 
 configurable:true,
@@ -14963,20 +15013,19 @@ writable:true},
 
 
 removeEventListener:{
-value:function removeEventListener(type,listener){
-var capture=arguments[2] === undefined?false:arguments[2];
-
+value:function removeEventListener(type,listener,capture){
 if(listener == null){
 return false;}
 
 
-var kind=capture?_commons.CAPTURE:_commons.BUBBLE;
+var kind=capture?CAPTURE:BUBBLE;
 var prev=null;
-var node=this[_commons.LISTENERS][type];
+var node=this[LISTENERS][type];
 while(node != null) {
 if(node.listener === listener && node.kind === kind){
 if(prev == null){
-this[_commons.LISTENERS][type] = node.next;}else 
+this[LISTENERS][type] = node.next;}else 
+
 {
 prev.next = node.next;}
 
@@ -14996,75 +15045,132 @@ writable:true},
 dispatchEvent:{
 value:function dispatchEvent(event){
 
-var node=this[_commons.LISTENERS][event.type];
+var node=this[LISTENERS][event.type];
 if(node == null){
 return true;}
 
 
 
-event = (0,_EventWrapper.createEventWrapper)(event,this);
+var wrapped=createEventWrapper(event,this);
 
 
 
 while(node != null) {
-node.listener.call(this,event);
-if(event[_EventWrapper.STOP_IMMEDIATE_PROPAGATION_FLAG]){
+node.listener.call(this,wrapped);
+if(wrapped[STOP_IMMEDIATE_PROPAGATION_FLAG]){
 break;}
 
 node = node.next;}
 
 
-return !event.defaultPrevented;},
+return !wrapped.defaultPrevented;},
 
 configurable:true,
 writable:true}});
-
-
-module.exports = exports["default"];
 });
 __d('event-target-shim/lib/commons.js',[],function(global, require, module, exports) {  "use strict";
 
-Object.defineProperty(exports,"__esModule",{
-value:true});
 
-exports.newNode = newNode;
-var symbol=typeof Symbol !== "undefined"?Symbol:function Symbol(name){
+
+
+
+
+
+
+
+
+
+
+
+
+var createUniqueKey=exports.createUniqueKey = typeof Symbol !== "undefined"?
+Symbol:
+function createUniqueKey(name){
 return "[[" + name + "_" + Math.random().toFixed(8).slice(2) + "]]";};
 
 
-exports.symbol = symbol;
-var LISTENERS=symbol("listeners");
-exports.LISTENERS = LISTENERS;
-var CAPTURE=1;
-exports.CAPTURE = CAPTURE;
-var BUBBLE=2;
-exports.BUBBLE = BUBBLE;
+
+
+
+
+
+
+exports.LISTENERS = createUniqueKey("listeners");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exports.newNode = function newNode(listener,kind){
+return {listener:listener,kind:kind,next:null};};
+});
+__d('event-target-shim/lib/custom-event-target.js',["event-target-shim/lib/commons.js"],function(global, require, module, exports) {  "use strict";
+
+
+
+
+
+
+
+
+
+
+
+var Commons=require("event-target-shim/lib/commons.js");
+var LISTENERS=Commons.LISTENERS;
+var newNode=Commons.newNode;
+
+
+
+
+
+
+
+
+
+
+
 var ATTRIBUTE=3;
 
-exports.ATTRIBUTE = ATTRIBUTE;
 
 
-function newNode(listener,kind){
-return {listener:listener,kind:kind,next:null};}
-});
-__d('event-target-shim/lib/CustomEventTarget.js',["event-target-shim/lib/commons.js"],function(global, require, module, exports) {  "use strict";
 
-Object.defineProperty(exports,"__esModule",{
-value:true});
 
-exports.defineCustomEventTarget = defineCustomEventTarget;
 
-var _commons=require("event-target-shim/lib/commons.js");
+
+
+
+
+
 
 function getAttributeListener(eventTarget,type){
-var node=eventTarget[_commons.LISTENERS][type];
+var node=eventTarget[LISTENERS][type];
 while(node != null) {
-if(node.kind === _commons.ATTRIBUTE){
+if(node.kind === ATTRIBUTE){
 return node.listener;}
 
 node = node.next;}
 
 return null;}
+
+
+
+
+
+
+
+
 
 
 function setAttributeListener(eventTarget,type,listener){
@@ -15073,14 +15179,16 @@ throw new TypeError("listener should be a function.");}
 
 
 var prev=null;
-var node=eventTarget[_commons.LISTENERS][type];
+var node=eventTarget[LISTENERS][type];
 while(node != null) {
-if(node.kind === _commons.ATTRIBUTE){
+if(node.kind === ATTRIBUTE){
 
 if(prev == null){
-eventTarget[_commons.LISTENERS][type] = node.next;}else 
+eventTarget[LISTENERS][type] = node.next;}else 
+
 {
 prev.next = node.next;}}else 
+
 
 {
 prev = node;}
@@ -15092,14 +15200,26 @@ node = node.next;}
 
 if(listener != null){
 if(prev == null){
-eventTarget[_commons.LISTENERS][type] = (0,_commons.newNode)(listener,_commons.ATTRIBUTE);}else 
+eventTarget[LISTENERS][type] = newNode(listener,ATTRIBUTE);}else 
+
 {
-prev.next = (0,_commons.newNode)(listener,_commons.ATTRIBUTE);}}}
+prev.next = newNode(listener,ATTRIBUTE);}}}
 
 
 
 
-function defineCustomEventTarget(EventTargetBase,types){
+
+
+
+
+
+
+
+
+
+
+
+exports.defineCustomEventTarget = function(EventTargetBase,types){
 function EventTarget(){
 EventTargetBase.call(this);}
 
@@ -15114,12 +15234,8 @@ writable:true}};
 
 types.forEach(function(type){
 descripter["on" + type] = {
-get:function get(){
-return getAttributeListener(this,type);},
-
-set:function set(listener){
-setAttributeListener(this,type,listener);},
-
+get:function(){return getAttributeListener(this,type);},
+set:function(listener){setAttributeListener(this,type,listener);},
 configurable:true,
 enumerable:true};});
 
@@ -15127,25 +15243,59 @@ enumerable:true};});
 
 EventTarget.prototype = Object.create(EventTargetBase.prototype,descripter);
 
-return EventTarget;}
+return EventTarget;};
 });
-__d('event-target-shim/lib/EventWrapper.js',["event-target-shim/lib/commons.js"],function(global, require, module, exports) {  "use strict";
+__d('event-target-shim/lib/event-wrapper.js',["event-target-shim/lib/commons.js"],function(global, require, module, exports) {  "use strict";
 
-Object.defineProperty(exports,"__esModule",{
-value:true});
 
-exports.createEventWrapper = createEventWrapper;
 
-var _commons=require("event-target-shim/lib/commons.js");
 
-var STOP_IMMEDIATE_PROPAGATION_FLAG=(0,_commons.symbol)("stop_immediate_propagation_flag");
 
-exports.STOP_IMMEDIATE_PROPAGATION_FLAG = STOP_IMMEDIATE_PROPAGATION_FLAG;
-var CANCELED_FLAG=(0,_commons.symbol)("canceled_flag");
-var ORIGINAL_EVENT=(0,_commons.symbol)("original_event");
 
-var wrapperPrototypeDefinition={
-stopPropagation:{
+
+
+
+
+
+var createUniqueKey=require("event-target-shim/lib/commons.js").createUniqueKey;
+
+
+
+
+
+
+
+
+
+
+
+var STOP_IMMEDIATE_PROPAGATION_FLAG=
+createUniqueKey("stop_immediate_propagation_flag");
+
+
+
+
+
+
+
+var CANCELED_FLAG=createUniqueKey("canceled_flag");
+
+
+
+
+
+
+
+var ORIGINAL_EVENT=createUniqueKey("original_event");
+
+
+
+
+
+
+
+var wrapperPrototypeDefinition=Object.freeze({
+stopPropagation:Object.freeze({
 value:function stopPropagation(){
 var e=this[ORIGINAL_EVENT];
 if(typeof e.stopPropagation === "function"){
@@ -15153,10 +15303,10 @@ e.stopPropagation();}},
 
 
 writable:true,
-configurable:true},
+configurable:true}),
 
 
-stopImmediatePropagation:{
+stopImmediatePropagation:Object.freeze({
 value:function stopImmediatePropagation(){
 this[STOP_IMMEDIATE_PROPAGATION_FLAG] = true;
 
@@ -15166,10 +15316,10 @@ e.stopImmediatePropagation();}},
 
 
 writable:true,
-configurable:true},
+configurable:true}),
 
 
-preventDefault:{
+preventDefault:Object.freeze({
 value:function preventDefault(){
 if(this.cancelable === true){
 this[CANCELED_FLAG] = true;}
@@ -15181,22 +15331,38 @@ e.preventDefault();}},
 
 
 writable:true,
-configurable:true},
+configurable:true}),
 
 
-defaultPrevented:{
-get:function get(){
-return this[CANCELED_FLAG];},
-
+defaultPrevented:Object.freeze({
+get:function defaultPrevented(){return this[CANCELED_FLAG];},
 enumerable:true,
-configurable:true}};
+configurable:true})});
 
 
 
-function createEventWrapper(event,eventTarget){
-var timeStamp=typeof event.timeStamp === "number"?event.timeStamp:Date.now();
 
-var props={
+
+
+
+exports.STOP_IMMEDIATE_PROPAGATION_FLAG = STOP_IMMEDIATE_PROPAGATION_FLAG;
+
+
+
+
+
+
+
+
+
+
+
+
+exports.createEventWrapper = function createEventWrapper(event,eventTarget){
+var timeStamp=
+typeof event.timeStamp === "number"?event.timeStamp:Date.now();
+
+var propertyDefinition={
 type:{value:event.type,enumerable:true},
 target:{value:eventTarget,enumerable:true},
 currentTarget:{value:eventTarget,enumerable:true},
@@ -15206,16 +15372,18 @@ cancelable:{value:Boolean(event.cancelable),enumerable:true},
 timeStamp:{value:timeStamp,enumerable:true},
 isTrusted:{value:false,enumerable:true}};
 
+propertyDefinition[STOP_IMMEDIATE_PROPAGATION_FLAG] = {value:false,writable:true};
+propertyDefinition[CANCELED_FLAG] = {value:false,writable:true};
+propertyDefinition[ORIGINAL_EVENT] = {value:event};
+
+
 if(typeof event.detail !== "undefined"){
-props.detail = {value:event.detail,enumerable:true};}
+propertyDefinition.detail = {value:event.detail,enumerable:true};}
 
 
-var retv=Object.create(Object.create(event,wrapperPrototypeDefinition),props);
-Object.defineProperty(retv,STOP_IMMEDIATE_PROPAGATION_FLAG,{value:false,writable:true});
-Object.defineProperty(retv,CANCELED_FLAG,{value:false,writable:true});
-Object.defineProperty(retv,ORIGINAL_EVENT,{value:event});
-
-return retv;}
+return Object.create(
+Object.create(event,wrapperPrototypeDefinition),
+propertyDefinition);};
 });
 __d('WebSocketEvent',[],function(global, require, module, exports) {  'use strict';function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError('Cannot call a class as a function');}}var 
 
@@ -54141,7 +54309,7 @@ NONE:0};
 
 module.exports = {UI_SIZES:UI_SIZES,BUTTON_NAMES:BUTTON_NAMES,IMG_URLS:IMG_URLS,SCREEN_TYPES:SCREEN_TYPES,OOSTATES:OOSTATES,LOG_LEVEL:LOG_LEVEL};
 });
-__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js","OoyalaSkin/discoveryPanel.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/discoveryPanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -54585,7 +54753,7 @@ controlBarWidth:this.skin.state.width}}));};
 
 module.exports = OoyalaSkinCore;
 });
-__d('OoyalaSkin/StartScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/style/startScreenStyles.json","OoyalaSkin/constants.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/VideoViewPlayPause.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/StartScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/startScreenStyles.json","OoyalaSkin/constants.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/VideoViewPlayPause.js","OoyalaSkin/responsiveDesignManager.js"],function(global, require, module, exports) {  var 
 React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
@@ -54804,10 +54972,8 @@ return minus + t;},
 
 
 localizedString:function(preferredLocale,stringId,localizableStrings){
-Log.verbose("preferredLocale: " + preferredLocale + ", stringId: " + stringId + ", localizableStrings:");
-Log.verbose(localizableStrings);
-
-var defaultLocale=localizableStrings["defaultLanguage"]?localizableStrings["defaultLanguage"]:"en";
+Log.verbose("preferredLocale" + preferredLocale + "stringId" + stringId + "localizableStrings" + localizableStrings);
+var defaultLocale=localizableStrings["default"]?localizableStrings["defaultLanguage"]:"en";
 
 if(localizableStrings[preferredLocale] && localizableStrings[preferredLocale][stringId]){
 return localizableStrings[preferredLocale][stringId];}
@@ -54950,7 +55116,7 @@ __d('OoyalaSkin/style/startScreenStyles.json',[],function(global, require, modul
 }
 ;
 });
-__d('OoyalaSkin/widgets/RectButton.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/widgets/style/RectButtonStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/widgets/RectButton.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/RectButtonStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 StyleSheet=
 
@@ -55050,7 +55216,7 @@ __d('OoyalaSkin/widgets/style/RectButtonStyles.json',[],function(global, require
   }
 };
 });
-__d('OoyalaSkin/widgets/VideoViewPlayPause.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/widgets/style/RectButtonStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/widgets/VideoViewPlayPause.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/RectButtonStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 ActivityIndicatorIOS=
 
@@ -55446,7 +55612,7 @@ console.log("ran",keys.length,"tests.");}}};
 
 module.exports = ResponsiveDesignManager;
 });
-__d('OoyalaSkin/EndScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/controlBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/infoPanel.js","OoyalaSkin/constants.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/EndScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/constants.js","OoyalaSkin/controlBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/infoPanel.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
 StyleSheet=
@@ -55636,7 +55802,7 @@ __d('OoyalaSkin/style/endScreenStyles.json',[],function(global, require, module,
   },
 };
 });
-__d('OoyalaSkin/progressBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/style/progressBarStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/progressBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/progressBarStyles.json"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -55688,7 +55854,7 @@ __d('OoyalaSkin/style/progressBarStyles.json',[],function(global, require, modul
   }
 };
 });
-__d('OoyalaSkin/controlBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/widgets/controlBarWidgets.js","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/controlBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json","OoyalaSkin/widgets/controlBarWidgets.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -56197,7 +56363,7 @@ waterMarkImage));}});
 
 module.exports = WaterMark;
 });
-__d('OoyalaSkin/infoPanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/style/infoPanelStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/infoPanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/infoPanelStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 StyleSheet=
 
@@ -56242,7 +56408,7 @@ __d('OoyalaSkin/style/infoPanelStyles.json',[],function(global, require, module,
   }
 };
 });
-__d('OoyalaSkin/ErrorScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/style/errorScreenStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/ErrorScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/style/errorScreenStyles.json"],function(global, require, module, exports) {  var 
 React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
@@ -56473,21 +56639,21 @@ renderHeader:function(){
 var title;
 if(this.props.config.panelTitle){
 if(this.props.config.panelTitle.imageUri && this.props.config.panelTitle.showImage){
-return React.createElement(Image,{style:styles.waterMarkImage,source:{uri:this.props.config.panelTitle.imageUri}});}}
+return React.createElement(Image,{style:styles.waterMarkImage,source:{uri:this.props.config.panelTitle.imageUri}});}else 
+if(this.props.config.panelTitle.text){
+title = Utils.localizedString(this.props.locale,"Discover",this.props.localizableStrings);}}
 
 
-
-title = Utils.localizedString(this.props.locale,"Discovery",this.props.localizableStrings);
 return (
 React.createElement(View,{style:styles.panelTitle},
-React.createElement(Text,{style:[styles.panelTitleText,this.props.config.panelTitle.titleFont]},title)));}});
+React.createElement(Text,{style:[styles.panelTitleText,this.props.config.titleFont]},title)));}});
 
 
 
 
 module.exports = DiscoveryPanel;
 });
-__d('OoyalaSkin/widgets/ResponsiveList.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/widgets/style/ResponsiveListStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/widgets/ResponsiveList.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/ResponsiveListStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 StyleSheet=
 
@@ -56598,9 +56764,7 @@ __d('OoyalaSkin/style/discoveryPanelStyles.json',[],function(global, require, mo
   "panelTitleText": {
     "padding": 10,
     "textAlign": "left",
-    "margin": 10,
-    "fontWeight": "bold",
-    "textAlign": "left"
+    "margin": 10
   },
   "container": {
     "flex": 1,
@@ -56655,7 +56819,7 @@ __d('OoyalaSkin/style/discoveryPanelStyles.json',[],function(global, require, mo
   },
 };
 });
-__d('OoyalaSkin/MoreOptionScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/index.ios.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/style/moreOptionScreenStyles.json","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/MoreOptionScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/index.ios.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/constants.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/style/moreOptionScreenStyles.json","OoyalaSkin/collapsingBarUtils.js"],function(global, require, module, exports) {  'use strict';
 
 var React=require('react-native/Libraries/react-native/react-native.js');var 
 
@@ -56911,7 +57075,7 @@ __d('OoyalaSkin/style/moreOptionScreenStyles.json',[],function(global, require, 
   },
 };
 });
-__d('OoyalaSkin/sharePanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/style/sharePanelStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/sharePanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/log.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/style/sharePanelStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 Animated=
 
@@ -57105,7 +57269,7 @@ __d('OoyalaSkin/style/sharePanelStyles.json',[],function(global, require, module
   },
 };
 });
-__d('OoyalaSkin/videoView.js',["react-native/Libraries/react-native/react-native.js","Dimensions","OoyalaSkin/bottomOverlay.js","OoyalaSkin/closedCaptionsView.js","OoyalaSkin/sharePanel.js","OoyalaSkin/adBar.js","OoyalaSkin/upNext.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/VideoViewPlayPause.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/style/videoViewStyles.json","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/videoView.js',["react-native/Libraries/react-native/react-native.js","Dimensions","OoyalaSkin/bottomOverlay.js","OoyalaSkin/closedCaptionsView.js","OoyalaSkin/sharePanel.js","OoyalaSkin/adBar.js","OoyalaSkin/upNext.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/VideoViewPlayPause.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/style/videoViewStyles.json","OoyalaSkin/responsiveDesignManager.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -57395,7 +57559,7 @@ this._renderBottomOverlay()));}});
 
 module.exports = VideoView;
 });
-__d('OoyalaSkin/bottomOverlay.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/progressBar.js","OoyalaSkin/controlBar.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/bottomOverlayStyles.json","OoyalaSkin/style/progressBarStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/bottomOverlay.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/utils.js","OoyalaSkin/progressBar.js","OoyalaSkin/controlBar.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/bottomOverlayStyles.json","OoyalaSkin/style/progressBarStyles.json"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -57625,7 +57789,7 @@ captionJSON:React.PropTypes.object};
 var OOClosedCaptionsView=requireNativeComponent('OOClosedCaptionsView',ClosedCaptionsView);
 module.exports = ClosedCaptionsView;
 });
-__d('OoyalaSkin/adBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/style/adBarStyles.json","OoyalaSkin/constants.js","OoyalaSkin/utils.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/adBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/style/adBarStyles.json","OoyalaSkin/constants.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -57770,7 +57934,7 @@ __d('OoyalaSkin/style/adBarStyles.json',[],function(global, require, module, exp
 }
 ;
 });
-__d('OoyalaSkin/upNext.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/style/upNext.json","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/CircularStatus.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/upNext.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/upNext.json","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/CircularStatus.js","OoyalaSkin/responsiveDesignManager.js"],function(global, require, module, exports) {  var 
 React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
@@ -57934,7 +58098,7 @@ __d('OoyalaSkin/style/upNext.json',[],function(global, require, module, exports)
 }
 ;
 });
-__d('OoyalaSkin/widgets/CircularStatus.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/widgets/style/CircularStatus.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/widgets/CircularStatus.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/CircularStatus.json"],function(global, require, module, exports) {  var 
 
 
 
@@ -58042,7 +58206,7 @@ __d('OoyalaSkin/style/videoViewStyles.json',[],function(global, require, module,
 }
 ;
 });
-__d('OoyalaSkin/languageSelectionPanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/widgets/ToggleSwitch.js","OoyalaSkin/closedCaptionsView.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/languageSelectionPreview.js","OoyalaSkin/style/languageSelectionPanelStyles.json","OoyalaSkin/utils.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/languageSelectionPanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/widgets/ToggleSwitch.js","OoyalaSkin/closedCaptionsView.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/languageSelectionPreview.js","OoyalaSkin/utils.js","OoyalaSkin/style/languageSelectionPanelStyles.json"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -58179,7 +58343,7 @@ var styles=require('OoyalaSkin/utils.js').getStyles(require('OoyalaSkin/style/la
 
 module.exports = LanguageSelectionPanel;
 });
-__d('OoyalaSkin/widgets/ToggleSwitch.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/widgets/style/ToggleSwitchStyles.json","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/widgets/ToggleSwitch.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/ToggleSwitchStyles.json"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -58248,7 +58412,7 @@ __d('OoyalaSkin/widgets/style/ToggleSwitchStyles.json',[],function(global, requi
   },
 };
 });
-__d('OoyalaSkin/languageSelectionPreview.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/style/languageSelectionPanelStyles.json","OoyalaSkin/constants.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/languageSelectionPreview.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/languageSelectionPanelStyles.json","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 var React=require('react-native/Libraries/react-native/react-native.js');var 
 
