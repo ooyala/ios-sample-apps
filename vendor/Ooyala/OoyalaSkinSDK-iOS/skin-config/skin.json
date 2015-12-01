@@ -189,7 +189,7 @@
   "icons": {
     "play": {"fontFamilyName": "alice", "fontString": "\u0068", "fontStyleClass": "icon icon-play"},
     "pause": {"fontFamilyName": "alice", "fontString": "\u0067", "fontStyleClass": "icon icon-pause"},
-    "volume": {"fontFamilyName": "alice", "fontString": "\u0061", "fontStyleClass": "icon icon-volume-desktop"},
+    "volume": {"fontFamilyName": "alice", "fontString": "\u0062", "fontStyleClass": "icon icon-volume-desktop"},
     "volumeOff": {"fontFamilyName": "alice", "fontString": "\u0070", "fontStyleClass": "icon icon-volume-desktop"},
     "expand": {"fontFamilyName": "alice", "fontString": "\u0069", "fontStyleClass": "icon icon-resize-large"},
     "compress": {"fontFamilyName": "alice", "fontString": "\u006a", "fontStyleClass": "icon icon-resize-small"},
