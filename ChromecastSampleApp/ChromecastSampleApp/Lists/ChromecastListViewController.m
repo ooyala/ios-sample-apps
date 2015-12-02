@@ -25,8 +25,7 @@
 @property(nonatomic, strong) OOCastManager *castManager;
 
 @property (strong, nonatomic) UIBarButtonItem *castButton;
-@property (strong, nonatomic) OOCastMiniControllerView *miniControllerView;
-@property (strong, nonatomic) OOCastMiniControllerView *bottomMiniControllerView;
+@property (strong, nonatomic) CustomizedMiniControllerView *bottomMiniControllerView;
 @property (strong, nonatomic) NSMutableArray *cells;
 
 @property (nonatomic) NSIndexPath *lastSelected;
@@ -83,7 +82,7 @@
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
+  self.bottomMiniControllerView = [[CustomizedMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
   [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
@@ -99,7 +98,6 @@
 }
 
 - (void)dismissMiniController {
-  [self.miniControllerView dismiss];
   [self.navigationController setToolbarHidden:YES animated:YES];
 }
 

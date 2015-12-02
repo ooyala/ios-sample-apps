@@ -11,9 +11,8 @@
 #import <OoyalaCastSDK/OOCastPlayer.h>
 
 @interface CustomizedMiniControllerView()
-
 @property(nonatomic, strong) OOCastManager *castManager;
-
+@property(nonatomic, weak) id<OOCastMiniControllerDelegate> delegate;
 @property(nonatomic, strong) UIImage *playImage;
 @property(nonatomic, strong) UIImage *pauseImage;
 @end
@@ -28,11 +27,11 @@
 }
 */
 
-- (id)initWithFrame:(CGRect)frame castManager:(OOCastManager *)castManager
-{
+- (id)initWithFrame:(CGRect)frame castManager:(OOCastManager *)castManager delegate:(id<OOCastMiniControllerDelegate>)delegate {
   self = [super initWithFrame:frame];
   if (self) {
     self.castManager = castManager;
+    self.delegate = delegate;
     self.cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     self.cell.backgroundColor = [UIColor lightGrayColor];
     self.cell.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
@@ -82,5 +81,8 @@
   [((UIButton *)self.cell.accessoryView) setBackgroundImage:buttonImage forState:UIControlStateNormal];
 }
 
-
+- (void)dismiss {
+  [self removeFromSuperview];
+  [self.delegate onDismissMiniController:self];
+}
 @end
