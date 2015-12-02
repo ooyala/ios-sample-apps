@@ -8,9 +8,6 @@
 #import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
 
-@class SecurePlayerSelectionOption;
-
 @interface SecurePlayerOPTPlayerViewController : SampleAppPlayerViewController
-- (id)initWithPlayerSelectionOption:(SecurePlayerSelectionOption *)playerSelectionOption;
 
 @end

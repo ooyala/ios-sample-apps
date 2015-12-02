@@ -33,6 +33,10 @@
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
   }
+
+  if (self.playerSelectionOption.pcode) {
+    self.pcode = self.playerSelectionOption.pcode;
+  }
   return self;
 }
 
