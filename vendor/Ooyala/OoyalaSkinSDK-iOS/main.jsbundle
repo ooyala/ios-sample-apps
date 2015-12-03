@@ -1375,7 +1375,7 @@ throw new TypeError(
 
 var index=findIndex.call(this,predicate,context);
 return index === -1?undefined:this[index];}});}})();
-__d('OoyalaSkin/index.ios.js',["react-native/Libraries/react-native/react-native.js","NativeModules","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/ooyalaSkinCore.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/index.ios.js',["OoyalaSkin/log.js","NativeModules","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/ooyalaSkinCore.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -30171,7 +30171,7 @@ this.emit(arg.eventType,arg.data,arg.didEmitCallback);}}}]);return NavigationEve
 
 module.exports = NavigationEventEmitter;
 });
-__d('NavigatorBreadcrumbNavigationBar',["NavigatorBreadcrumbNavigationBarStyles","NavigatorNavigationBarStylesAndroid","NavigatorNavigationBarStylesIOS","Platform","React","StyleSheet","View","invariant","immutable/dist/immutable.js"],function(global, require, module, exports) {  'use strict';
+__d('NavigatorBreadcrumbNavigationBar',["NavigatorBreadcrumbNavigationBarStyles","NavigatorNavigationBarStylesAndroid","NavigatorNavigationBarStylesIOS","Platform","React","StyleSheet","View","immutable/dist/immutable.js","invariant"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -54258,6 +54258,7 @@ CC_PREVIEW_HEIGHT:80};
 
 
 var BUTTON_NAMES={
+PLAY:'Play',
 PLAY_PAUSE:'PlayPause',
 FULLSCREEN:'Fullscreen',
 MORE:'More',
@@ -54316,7 +54317,7 @@ NONE:0};
 
 module.exports = {UI_SIZES:UI_SIZES,BUTTON_NAMES:BUTTON_NAMES,IMG_URLS:IMG_URLS,SCREEN_TYPES:SCREEN_TYPES,OOSTATES:OOSTATES,LOG_LEVEL:LOG_LEVEL,PLATFORMS:PLATFORMS};
 });
-__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","Dimensions","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/discoveryPanel.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/ooyalaSkinCore.js',["react-native/Libraries/react-native/react-native.js","Dimensions","NativeModules","OoyalaSkin/StartScreen.js","OoyalaSkin/EndScreen.js","OoyalaSkin/ErrorScreen.js","OoyalaSkin/discoveryPanel.js","OoyalaSkin/MoreOptionScreen.js","OoyalaSkin/sharePanel.js","OoyalaSkin/log.js","OoyalaSkin/constants.js","OoyalaSkin/videoView.js","OoyalaSkin/languageSelectionPanel.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -54346,7 +54347,8 @@ var Constants=require('OoyalaSkin/constants.js');var
 BUTTON_NAMES=
 
 
-Constants.BUTTON_NAMES;var SCREEN_TYPES=Constants.SCREEN_TYPES;var OOSTATES=Constants.OOSTATES;
+
+Constants.BUTTON_NAMES;var SCREEN_TYPES=Constants.SCREEN_TYPES;var OOSTATES=Constants.OOSTATES;var PLATFORMS=Constants.PLATFORMS;
 var VideoView=require('OoyalaSkin/videoView.js');
 var LanguageSelectionPanel=require('OoyalaSkin/languageSelectionPanel.js');
 var previousScreenType;
@@ -54374,7 +54376,8 @@ var listenerDefinitions=[
 ['upNextDismissed',function(event){return _this.onUpNextDismissed(event);}],
 ['playStarted',function(event){return _this.onPlayStarted(event);}],
 ['postShareAlert',function(event){return _this.onPostShareAlert(event);}],
-['error',function(event){return _this.onError(event);}]];
+['error',function(event){return _this.onError(event);}],
+['embedCodeSet',function(event){return _this.onEmbedCodeSet(event);}]];
 
 
 for(var i=0;i < listenerDefinitions.length;i++) {
@@ -54414,7 +54417,7 @@ if(this.skin.state.screenType != SCREEN_TYPES.MOREOPTION_SCREEN){
 this.previousScreenType = this.skin.state.screenType;}
 
 
-if(this.skin.state.rate > 0){
+if(this.skin.state.playing){
 this.skin.setState({pausedByOverlay:true});
 this.bridge.onPress({name:BUTTON_NAMES.PLAY_PAUSE});}};
 
@@ -54432,7 +54435,6 @@ this.bridge.onPress({name:BUTTON_NAMES.PLAY_PAUSE});}};
 
 
 OoyalaSkinCore.prototype.handlePress = function(n){
-this.skin.setState({lastPressedTime:new Date().getTime()});
 switch(n){
 case BUTTON_NAMES.MORE:
 n = "None";
@@ -54445,10 +54447,6 @@ case BUTTON_NAMES.SETTING:
 this.pauseOnOptions();
 this.onOptionButtonPress(n);
 break;
-case BUTTON_NAMES.RESET_AUTOHIDE:
-break;
-case BUTTON_NAMES.PLAY_PAUSE:
-this.skin.setState({showPlayButton:!this.skin.state.showPlayButton});
 default:
 this.bridge.onPress({name:n});
 break;}};
@@ -54470,9 +54468,6 @@ this.skin.setState({captionJSON:e});};
 
 
 OoyalaSkinCore.prototype.onDiscoveryRow = function(info){
-if(info.action && info.action === "click"){
-this.skin.setState({screenType:SCREEN_TYPES.LOADING_SCREEN,autoPlay:true});}
-
 this.bridge.onDiscoveryRow(info);};
 
 
@@ -54480,6 +54475,7 @@ OoyalaSkinCore.prototype.onTimeChange = function(e){
 this.skin.setState({
 playhead:e.playhead,
 duration:e.duration,
+initialPlay:false,
 availableClosedCaptionsLanguages:e.availableClosedCaptionsLanguages});
 
 
@@ -54545,18 +54541,41 @@ this.skin.setState({discoveryResults:e.results});};
 OoyalaSkinCore.prototype.onStateChange = function(e){
 Log.log("state changed to:" + e.state);
 switch(e.state){
-case "paused":this.skin.setState({rate:0});break;
-case "playing":
-this.skin.setState({rate:1});
-this.skin.setState({screenType:SCREEN_TYPES.VIDEO_SCREEN});
+case "completed":
+case "error":
+case "init":
+case "paused":
+case "ready":
+this.skin.setState({
+playing:false,
+loading:false});
+
 break;
-default:break;}};
+case "playing":
+this.skin.setState({
+playing:true,
+loading:false,
+initialPlay:this.skin.state.screenType == SCREEN_TYPES.START_SCREEN?true:false,
+screenType:SCREEN_TYPES.VIDEO_SCREEN});
+break;
+case "loading":
+this.skin.setState({
+loading:true});
+
+break;
+default:
+break;}};
 
 
 
 OoyalaSkinCore.prototype.onError = function(e){
 Log.log("Error received");
 this.skin.setState({screenType:SCREEN_TYPES.ERROR_SCREEN,error:e});};
+
+
+OoyalaSkinCore.prototype.onEmbedCodeSet = function(e){
+Log.log("EmbedCodeSet received");
+this.skin.setState({screenType:SCREEN_TYPES.LOADING_SCREEN});};
 
 
 OoyalaSkinCore.prototype.onUpNextDismissed = function(e){
@@ -54638,7 +54657,6 @@ OoyalaSkinCore.prototype.renderVideoView = function(){var _this4=this;
 return (
 React.createElement(VideoView,{
 rate:this.skin.state.rate,
-showPlay:this.skin.state.showPlayButton,
 playhead:this.skin.state.playhead,
 duration:this.skin.state.duration,
 ad:this.skin.state.ad,
@@ -54655,7 +54673,6 @@ closedCaptionsLanguage:this.skin.state.selectedLanguage,
 availableClosedCaptionsLanguages:this.skin.state.availableClosedCaptionsLanguages,
 captionJSON:this.skin.state.captionJSON,
 onSocialButtonPress:function(socialType){return _this4.onSocialButtonPress(socialType);},
-lastPressedTime:this.skin.state.lastPressedTime,
 config:{
 controlBar:this.skin.props.controlBar,
 buttons:this.skin.props.buttons.mobileContent,
@@ -54666,7 +54683,10 @@ adScreen:this.skin.props.adScreen},
 nextVideo:this.skin.state.nextVideo,
 upNextDismissed:this.skin.state.upNextDismissed,
 localizableStrings:this.skin.props.localization,
-locale:this.skin.props.locale}));};
+locale:this.skin.props.locale,
+playing:this.skin.state.playing,
+loading:this.skin.state.loading,
+initialPlay:this.skin.state.initialPlay}));};
 
 
 
@@ -54686,6 +54706,11 @@ icons:this.skin.props.icons}}));};
 
 
 OoyalaSkinCore.prototype.renderSocialOptions = function(){var _this6=this;
+if(this.skin.state.platform == Constants.PLATFORMS.ANDROID){
+this.bridge.shareTitle({shareTitle:this.skin.state.title});
+this.bridge.onPress({name:"Share"});}else 
+
+if(this.skin.state.platform == Constants.PLATFORMS.IOS){
 return (
 React.createElement(SharePanel,{
 socialButtons:this.skin.props.shareScreen,
@@ -54696,13 +54721,13 @@ height:this.skin.state.height,
 alertTitle:this.skin.state.alertTitle,
 alertMessage:this.skin.state.alertMessage,
 localizableStrings:this.skin.props.localization,
-locale:this.skin.props.locale}));},
+locale:this.skin.props.locale}));}},
+
 
 
 OoyalaSkinCore.prototype.renderDiscoveryPanel = function(){var _this7=this;
 if(!this.skin.state.discoveryResults){
 return null;}
-
 
 return (
 React.createElement(DiscoveryPanel,{
@@ -54740,7 +54765,6 @@ return null;};
 
 OoyalaSkinCore.prototype.renderMoreOptionScreen = function(){var _this8=this;
 var panel=this.renderMoreOptionPanel();
-
 return (
 React.createElement(MoreOptionScreen,{
 height:this.skin.state.height,
@@ -54761,7 +54785,7 @@ controlBarWidth:this.skin.state.width}}));};
 
 module.exports = OoyalaSkinCore;
 });
-__d('OoyalaSkin/StartScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/log.js","OoyalaSkin/style/startScreenStyles.json","OoyalaSkin/constants.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/VideoViewPlayPause.js","OoyalaSkin/widgets/VideoViewPlayPauseAndroid.js","OoyalaSkin/responsiveDesignManager.js"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/StartScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/log.js","OoyalaSkin/style/startScreenStyles.json","OoyalaSkin/constants.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/VideoViewPlayPauseAndroid.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/widgets/VideoViewPlayPause.js"],function(global, require, module, exports) {  var 
 React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
@@ -54780,7 +54804,8 @@ var Constants=require('OoyalaSkin/constants.js');var
 PLATFORMS=
 
 
-Constants.PLATFORMS;var IMG_URLS=Constants.IMG_URLS;var UI_SIZES=Constants.UI_SIZES;
+
+Constants.PLATFORMS;var IMG_URLS=Constants.IMG_URLS;var UI_SIZES=Constants.UI_SIZES;var BUTTON_NAMES=Constants.BUTTON_NAMES;
 
 var RectButton=require('OoyalaSkin/widgets/RectButton.js');
 var VideoViewPlayPause=require('OoyalaSkin/widgets/VideoViewPlayPause.js');
@@ -54801,7 +54826,7 @@ platform:React.PropTypes.string},
 
 
 handleClick:function(){
-this.props.onPress('PlayPause');},
+this.props.onPress(BUTTON_NAMES.PLAY);},
 
 
 getPlayButton:function(){
@@ -54857,8 +54882,7 @@ buttonWidth:iconFontSize,
 buttonHeight:iconFontSize,
 fontSize:iconFontSize,
 playing:false,
-showButton:true,
-isStartScreen:true}));}}
+showButton:true}));}}
 
 
 
@@ -54944,7 +54968,7 @@ playButton));}});
 
 module.exports = StartScreen;
 });
-__d('OoyalaSkin/utils.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/style/styles.json"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/utils.js',["OoyalaSkin/log.js","OoyalaSkin/style/styles.json","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -55163,7 +55187,7 @@ __d('OoyalaSkin/style/startScreenStyles.json',[],function(global, require, modul
 }
 ;
 });
-__d('OoyalaSkin/widgets/RectButton.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/RectButtonStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/widgets/RectButton.js',["OoyalaSkin/utils.js","OoyalaSkin/widgets/style/RectButtonStyles.json","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 StyleSheet=
 
@@ -55299,9 +55323,8 @@ fontSize:React.PropTypes.number,
 style:React.PropTypes.object,
 showButton:React.PropTypes.bool,
 playing:React.PropTypes.bool,
-isStartScreen:React.PropTypes.bool,
-rate:React.PropTypes.number,
-playhead:React.PropTypes.number},
+loading:React.PropTypes.bool,
+initialPlay:React.PropTypes.bool},
 
 
 getInitialState:function(){
@@ -55315,91 +55338,97 @@ animationScale:new Animated.Value(1),
 animationOpacity:new Animated.Value(0)},
 
 widget:{
-animationOpacity:new Animated.Value(1)},
+animationOpacity:new Animated.Value(0)},
 
-controlPlaying:true};},
+showInitialPlayAnimation:this.props.initialPlay,
+inAnimation:false};},
 
 
 
 componentWillMount:function(){
-if(this.isInitialVideoPlay() || this.isVideoRemount(PLAY)){
-this.playPauseAction(PLAY);
-this.setState({controlPlaying:false});}
 
-if(this.isVideoRemount(PAUSE)){
-this.props.onPress(BUTTON_NAMES.RESET_AUTOHIDE);}},
-
-
-
-isInitialVideoPlay:function(){
-return !this.props.isStartScreen && this.props.playhead == 0;},
+if(this.props.initialPlay){
+this.state.widget.animationOpacity.setValue(1);
+this.state.play.animationOpacity.setValue(1);
+this.state.pause.animationOpacity.setValue(0);}else 
+{
+this.state.widget.animationOpacity.setValue(this.props.showButton?1:0);
+this.state.play.animationOpacity.setValue(this.props.playing?0:1);
+this.state.pause.animationOpacity.setValue(this.props.playing?1:0);}},
 
 
-isVideoRemount:function(state){
-if(!this.props.isStartScreen && this.props.playhead != 0){
-if(state == PLAY){
-return !this.props.playing;}
 
-if(state == PAUSE){
-return this.props.playing;}}
+componentDidMount:function(){
+if(this.state.showInitialPlayAnimation){
+this.animatePlayButton();}},
 
 
-return false;},
+
+componentWillReceiveProps:function(nextProps){
+if(nextProps.showButton != this.props.showButton){
+var widgetOpacity=nextProps.showButton?1:0;
+Animated.timing(this.state.widget.animationOpacity,{
+toValue:widgetOpacity}).
+start();}
+
+
+if(nextProps.playing != this.props.playing){
+if(!this.state.inAnimation){
+this.syncButtons(nextProps.playing);}}},
+
+
 
 
 onPress:function(){
 if(this.props.showButton){
-
-this.setState({controlPlaying:!this.state.controlPlaying});
-if(this.props.rate <= 0 != this.state.controlPlaying && !this.props.isStartScreen){
-this.playPauseAction(PAUSE);}else 
-
+if(this.props.playing){
+this.showPlayButton();}else 
 {
-this.props.onPress(BUTTON_NAMES.PLAY_PAUSE);
-this.playPauseAction(this.state.controlPlaying?PLAY:PAUSE);}}else 
+this.animatePlayButton();}
 
-
+this.props.onPress(BUTTON_NAMES.PLAY_PAUSE);}else 
 {
 this.props.onPress(BUTTON_NAMES.RESET_AUTOHIDE);}},
 
 
 
+onAnimationCompleted:function(instance){
+this.state.widget.animationOpacity.setValue(this.props.showButton?1:0);
+this.setState({inAnimation:false});
+this.syncButtons(this.props.playing);},
 
-playPauseAction:function(name){
-if(name == PLAY){
+
+
+animatePlayButton:function(){
+this.setState({inAnimation:true});
 this.state.play.animationScale.setValue(1);
 this.state.play.animationOpacity.setValue(1);
+
 Animated.parallel([
 Animated.timing(this.state.play.animationOpacity,{
 toValue:0}),
 
 Animated.timing(this.state.play.animationScale,{
-toValue:2}),
+toValue:2})]).
 
-Animated.timing(this.state.pause.animationOpacity,{
-toValue:1,
-duration:100,
-delay:1200})]).
+start(this.onAnimationCompleted);},
 
-start();}
 
-if(name == PAUSE){
+showPlayButton:function(){
 this.state.pause.animationOpacity.setValue(0);
 this.state.play.animationOpacity.setValue(1);
-this.state.play.animationScale.setValue(1);}},
+this.state.play.animationScale.setValue(1);},
 
 
-
-componentDidUpdate:function(prevProps,prevState){
-if(prevProps.playing != this.props.playing && this.props.rate <= 0 == this.state.controlPlaying){
-this.playPauseAction(this.props.playing?PAUSE:PLAY);}},
-
+showPauseButton:function(){
+this.state.pause.animationOpacity.setValue(1);
+this.state.play.animationOpacity.setValue(0);},
 
 
-_renderLoading:function(){
-if((this.props.rate <= 0 || this.props.playhead == 0) && !this.props.showButton && !this.state.controlPlaying){
+_renderLoading:function(sizeStyle){
+if(this.props.loading){
 return (
-React.createElement(View,{style:styles.loading},
+React.createElement(Animated.View,{style:[styles.buttonArea,styles.loading,sizeStyle,{position:'absolute'}]},
 React.createElement(ActivityIndicatorIOS,{
 animating:true,
 size:'large'})));}},
@@ -55425,9 +55454,16 @@ this.props.icons[name].icon));},
 
 
 
+syncButtons:function(playing){
+if(playing){
+this.showPauseButton();}else 
+{
+this.showPlayButton();}},
+
+
+
 
 render:function(){var _this=this;
-
 if(this.props.style != null){
 positionStyle = this.props.style;}else 
 
@@ -55441,24 +55477,13 @@ position:'absolute',top:topOffset,left:leftOffset};}else
 {
 positionStyle = styles[this.props.position];}
 
+
 var sizeStyle={width:this.props.buttonWidth,height:this.props.buttonHeight};
 var opacity={opacity:this.state.widget.animationOpacity};
 
 var playButton=this._renderButton(PLAY);
 var pauseButton=this._renderButton(PAUSE);
-var loading=this._renderLoading();
-
-if(this.props.showButton){
-Animated.timing(this.state.widget.animationOpacity,{
-toValue:1,
-duration:400}).
-start();}else 
-
-{
-Animated.timing(this.state.widget.animationOpacity,{
-toValue:0,
-duration:400}).
-start();}
+var loading=this._renderLoading(sizeStyle);
 
 return (
 React.createElement(TouchableHighlight,{
@@ -55467,9 +55492,7 @@ style:[positionStyle],
 underlayColor:'transparent',
 activeOpacity:this.props.opacity},
 React.createElement(View,null,
-React.createElement(Animated.View,{style:[styles.buttonArea,sizeStyle,{position:'absolute'}]},
-loading),
-
+loading,
 React.createElement(Animated.View,{style:[styles.buttonArea,sizeStyle,opacity,{position:'absolute'}]},
 playButton,
 pauseButton))));}});
@@ -55480,10 +55503,9 @@ pauseButton))));}});
 
 
 
-
 module.exports = VideoViewPlayPause;
 });
-__d('OoyalaSkin/widgets/VideoViewPlayPauseAndroid.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/RectButtonStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/widgets/VideoViewPlayPauseAndroid.js',["OoyalaSkin/utils.js","OoyalaSkin/widgets/style/RectButtonStyles.json","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 ProgressBarAndroid=
 
@@ -55829,7 +55851,7 @@ console.log("ran",keys.length,"tests.");}}};
 
 module.exports = ResponsiveDesignManager;
 });
-__d('OoyalaSkin/EndScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/constants.js","OoyalaSkin/controlBar.js","OoyalaSkin/infoPanel.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/EndScreen.js',["OoyalaSkin/utils.js","OoyalaSkin/style/endScreenStyles.json","OoyalaSkin/progressBar.js","OoyalaSkin/controlBar.js","OoyalaSkin/waterMark.js","OoyalaSkin/infoPanel.js","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
 StyleSheet=
@@ -56019,7 +56041,7 @@ __d('OoyalaSkin/style/endScreenStyles.json',[],function(global, require, module,
   },
 };
 });
-__d('OoyalaSkin/progressBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/progressBarStyles.json"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/progressBar.js',["OoyalaSkin/utils.js","OoyalaSkin/style/progressBarStyles.json","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -56071,7 +56093,7 @@ __d('OoyalaSkin/style/progressBarStyles.json',[],function(global, require, modul
   }
 };
 });
-__d('OoyalaSkin/controlBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/controlBarWidgets.js","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/controlBar.js',["OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/controlBarWidgets.js","OoyalaSkin/collapsingBarUtils.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/responsiveDesignManager.js","OoyalaSkin/style/controlBarStyles.json","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -56250,7 +56272,7 @@ controlBarWidgets));}});
 
 module.exports = ControlBar;
 });
-__d('OoyalaSkin/widgets/controlBarWidgets.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/log.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/widgets/controlBarWidgets.js',["OoyalaSkin/widgets/VolumeView.js","OoyalaSkin/log.js","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -56548,7 +56570,7 @@ __d('OoyalaSkin/style/controlBarStyles.json',[],function(global, require, module
   }
 };
 });
-__d('OoyalaSkin/waterMark.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/waterMark.js',["OoyalaSkin/utils.js","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 StyleSheet=
 
@@ -56580,7 +56602,7 @@ waterMarkImage));}});
 
 module.exports = WaterMark;
 });
-__d('OoyalaSkin/infoPanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/infoPanelStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/infoPanel.js',["OoyalaSkin/utils.js","OoyalaSkin/style/infoPanelStyles.json","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 StyleSheet=
 
@@ -56625,7 +56647,7 @@ __d('OoyalaSkin/style/infoPanelStyles.json',[],function(global, require, module,
   }
 };
 });
-__d('OoyalaSkin/ErrorScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/style/errorScreenStyles.json"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/ErrorScreen.js',["OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/style/errorScreenStyles.json","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  var 
 React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
@@ -56720,7 +56742,7 @@ __d('OoyalaSkin/style/errorScreenStyles.json',[],function(global, require, modul
 }
 ;
 });
-__d('OoyalaSkin/discoveryPanel.js',["react-native/Libraries/react-native/react-native.js","react-timer-mixin/TimerMixin.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/widgets/CircularStatus.js","OoyalaSkin/style/discoveryPanelStyles.json","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/discoveryPanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/widgets/countdownTimer.js","OoyalaSkin/style/discoveryPanelStyles.json","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -56737,11 +56759,10 @@ Animated=
 
 
 React.Animated;var Image=React.Image;var ListView=React.ListView;var StyleSheet=React.StyleSheet;var Text=React.Text;var TouchableHighlight=React.TouchableHighlight;var View=React.View;var ScrollView=React.ScrollView;
-var TimerMixin=require('react-timer-mixin/TimerMixin.js');
 
 var Utils=require('OoyalaSkin/utils.js');
 var ResponsiveList=require('OoyalaSkin/widgets/ResponsiveList.js');
-var CircularStatus=require('OoyalaSkin/widgets/CircularStatus.js');
+var CountdownView=require('OoyalaSkin/widgets/countdownTimer.js');
 var styles=Utils.getStyles(require('OoyalaSkin/style/discoveryPanelStyles.json'));
 var Constants=require('OoyalaSkin/constants.js');var 
 
@@ -56755,7 +56776,6 @@ var widthPortrait=375;
 var animationDuration=1000;
 
 var DiscoveryPanel=React.createClass({displayName:'DiscoveryPanel',
-mixins:[TimerMixin],
 
 propTypes:{
 localizableStrings:React.PropTypes.object,
@@ -56771,10 +56791,8 @@ screenType:React.PropTypes.string},
 getInitialState:function(){
 return {
 opacity:new Animated.Value(0),
-showCircularStatus:false,
-currentCounterVal:0,
-counterLimit:0,
-timer:null};},
+showCountdownTimer:false,
+counterTime:0};},
 
 
 
@@ -56795,16 +56813,6 @@ this.setCounterTime(parseInt(this.props.config.countDownTime));}},
 
 
 
-componentWillUnmount:function(){
-this.clearTimer();},
-
-
-clearTimer:function(){
-if(this.state.timer){
-this.clearInterval(this.state.timer);}},
-
-
-
 onRowSelected:function(row){
 if(this.props.onRowAction){
 this.props.onRowAction({action:"click",embedCode:row.embedCode,bucketInfo:row.bucketInfo});}},
@@ -56818,27 +56826,13 @@ this.props.onRowAction({action:"impress",embedCode:row.embedCode,bucketInfo:row.
 
 
 onStatusPressed:function(){
-this.setState({showCircularStatus:false});
-this.clearTimer();},
+this.setState({showCountdownTimer:false});},
 
 
-setCounterTime:function(time){var _this=this;
+setCounterTime:function(time){
 this.setState({
-currentCounterVal:time,
-counterLimit:time,
-showCircularStatus:true});
-
-
-var timer=this.setInterval(function(){
-_this.setState({currentCounterVal:_this.state.currentCounterVal - 1});},
-1000);
-this.setState({timer:timer});},
-
-
-checkTimer:function(row){
-if(this.state.currentCounterVal === 0){
-this.onRowSelected(row);
-this.clearTimer();}},
+counterTime:time,
+showCountdownTimer:true});},
 
 
 
@@ -56872,17 +56866,26 @@ itemHeight:itemRect.height})));},
 
 
 
-renderCircularStatus:function(){var _this2=this;
+renderCountdownTimer:function(item){var _this=this;
 return (
-React.createElement(CircularStatus,{
-onPress:function(){return _this2.onStatusPressed();},
-total:this.state.counterLimit,
-current:this.state.currentCounterVal,
-thickness:2,
-diameter:44}));},
+React.createElement(CountdownView,{
+style:{
+width:44,
+height:44},
+
+automatic:true,
+time:this.state.counterLimit,
+timeLeft:this.state.counterLimit,
+radius:22,
+fillColor:'#000000',
+strokeColor:'#ffffff',
+fillAlpha:0.7,
+tapCancel:true,
+onPress:this.onStatusPressed,
+onTimerCompleted:function(){return _this.onRowSelected(item);}}));},
 
 
-renderItem:function(item,sectionID,itemID){var _this3=this;
+renderItem:function(item,sectionID,itemID){var _this2=this;
 var title;
 if(this.props.config.contentTitle && this.props.config.contentTitle.show){
 title = React.createElement(Text,{style:[styles.contentText,this.props.config.contentTitle.font],numberOfLines:1},item.name);}
@@ -56893,9 +56896,8 @@ duration = React.createElement(Text,{style:[styles.contentText,this.props.config
 ;
 
 var circularStatus;
-if(itemID === 0 && this.props.screenType === SCREEN_TYPES.END_SCREEN && this.state.showCircularStatus){
-circularStatus = this.renderCircularStatus();
-this.checkTimer(item);}
+if(itemID === 0 && this.props.screenType === SCREEN_TYPES.END_SCREEN && this.state.showCountdownTimer){
+circularStatus = this.renderCountdownTimer(item);}
 
 
 var thumbnail=
@@ -56910,7 +56912,7 @@ return (
 React.createElement(TouchableHighlight,{
 key:sectionID,
 underlayColor:'#37455B',
-onPress:function(){return _this3.onRowSelected(item);},
+onPress:function(){return _this2.onRowSelected(item);},
 style:itemRect},
 React.createElement(View,{style:columnContainerStyle},
 thumbnail,
@@ -56939,7 +56941,7 @@ React.createElement(Text,{style:[styles.panelTitleText,this.props.config.panelTi
 
 module.exports = DiscoveryPanel;
 });
-__d('OoyalaSkin/widgets/ResponsiveList.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/ResponsiveListStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/widgets/ResponsiveList.js',["OoyalaSkin/utils.js","OoyalaSkin/widgets/style/ResponsiveListStyles.json","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 StyleSheet=
 
@@ -57048,105 +57050,104 @@ __d('OoyalaSkin/widgets/style/ResponsiveListStyles.json',[],function(global, req
   }
 };
 });
-__d('OoyalaSkin/widgets/CircularStatus.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/CircularStatus.json"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/widgets/countdownTimer.js',["react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  var _extends=Object.assign || function(target){for(var i=1;i < arguments.length;i++) {var source=arguments[i];for(var key in source) {if(Object.prototype.hasOwnProperty.call(source,key)){target[key] = source[key];}}}return target;};var React=require('react-native/Libraries/react-native/react-native.js');var 
 
-
-
-React=require('react-native/Libraries/react-native/react-native.js');var 
-
-StyleSheet=
-
-
-
-React.StyleSheet;var Text=React.Text;var View=React.View;var TouchableHighlight=React.TouchableHighlight;
-
-var styles=require('OoyalaSkin/utils.js').getStyles(require('OoyalaSkin/widgets/style/CircularStatus.json'));
-
-var CircularStatus=React.createClass({displayName:'CircularStatus',
-propTypes:{
-current:React.PropTypes.number,
-total:React.PropTypes.number,
-diameter:React.PropTypes.number,
-thickness:React.PropTypes.number,
-onPress:React.PropTypes.func},
-
-
-renderCircularStatus:function(){
-
-var edges=this.props.diameter;
-var segment_length=this.props.diameter * Math.PI * 1.1 / edges;
-var circleSegments=[];
-var segmentangle=-360 / edges * (Math.PI / 180);
-var radius=this.props.diameter / 2;
-var progress=this.props.current / this.props.total * edges;
-
-for(var i=0;i < edges;i++) {
-var radians=i * segmentangle + Math.PI / 2;
-var color=progress < i?"gray":"white";
-circleSegments.push(
-React.createElement(View,{style:{
-"position":"absolute",
-"top":-Math.sin(radians) * radius + radius,
-"left":-Math.cos(radians) * radius + radius,
-"height":this.props.thickness,
-"width":segment_length,
-"backgroundColor":color,
-"transform":[{
-"rotate":radians + Math.PI / 2 + "rad"}]}}));}
+requireNativeComponent=
 
 
 
 
+React.requireNativeComponent;var NativeMethodsMixin=React.NativeMethodsMixin;var StyleSheet=React.StyleSheet;var View=React.View;var TouchableHighlight=React.TouchableHighlight;
 
-return React.createElement(View,{style:{
-"height":this.props.diameter,
-"width":this.props.diameter}},
+var CountdownView=React.createClass({displayName:'CountdownView',
+mixins:[NativeMethodsMixin],
 
-circleSegments,
-React.createElement(Text,{style:{
-"color":"white",
-"position":"absolute",
-"top":this.props.diameter / 4,
-"right":this.props.diameter / 4,
-"fontSize":this.props.diameter / 2}},
+propTypes:_extends({},
+View.propTypes,{
 
-Math.floor(this.props.current)));},
+time:React.PropTypes.number,
+timeLeft:React.PropTypes.number,
+radius:React.PropTypes.number,
+fillColor:React.PropTypes.string,
+fillAlpha:React.PropTypes.number,
+strokeColor:React.PropTypes.string,
+tapCancel:React.PropTypes.bool,
+automatic:React.PropTypes.bool,
+
+onTimerUpdate:React.PropTypes.func,
+onTimerCompleted:React.PropTypes.func,
+onPress:React.PropTypes.func}),
+
+
+getDefaultProps:function(){
+return {
+time:10,
+radius:20,
+fillColor:'#000000',
+fillAlpha:1.0,
+strokeColor:'#ffffff',
+tapCancel:false,
+automatic:true,
+timeLeft:10};},
 
 
 
+getInitialState:function(){
+return {
+canceled:false};},
 
-renderClickableCircularStatus:function(){var _this=this;
+
+
+_onTimerUpdate:function(event){
+this.props.onTimerUpdate && this.props.onTimerUpdate(event.nativeEvent);},
+
+
+_onTimerCompleted:function(event){
+this.props.onTimerCompleted && this.props.onTimerCompleted(event.nativeEvent);},
+
+
+_onPress:function(){
+if(this.props.tapCancel){
+this.setState({canceled:true});}
+
+
+this.props.onPress && this.props.onPress();},
+
+
+renderCountdownView:function(){
+return React.createElement(NativeCountdownView,_extends({},
+this.props,{
+canceled:this.state.canceled,
+onTimerUpdate:this._onTimerUpdate,
+onTimerCompleted:this._onTimerCompleted}));},
+
+
+renderClickableView:function(){var _this=this;
 return React.createElement(TouchableHighlight,{
 underlayColor:'transparent',
-onPress:function(){return _this.props.onPress();}},
-this.renderCircularStatus());},
+onPress:function(){return _this._onPress();}},
+this.renderCountdownView());},
 
 
 
 render:function(){
 if(this.props.onPress){
-return this.renderClickableCircularStatus();}else 
+return this.renderClickableView();}else 
 {
-return this.renderCircularStatus();}}});
+return this.renderCountdownView();}}});
 
 
 
 
-module.exports = CircularStatus;
-});
-__d('OoyalaSkin/widgets/style/CircularStatus.json',[],function(global, require, module, exports) {  module.exports = {
-  "circle": {
-    "height": 28,
-    "width": 28,
-    //"borderRadius": 14,
-    "backgroundColor": "white",
-    "transform": [
-      {
-        "rotate": "45deg"
-      }
-    ]
-  }
-};
+var NativeCountdownView=requireNativeComponent('CountdownView',CountdownView,{
+nativeOnly:{
+onTimerUpdate:true,
+onTimerCompleted:true,
+canceled:true}});
+
+
+
+module.exports = CountdownView;
 });
 __d('OoyalaSkin/style/discoveryPanelStyles.json',[],function(global, require, module, exports) {  module.exports = {
   "panelTitle": {
@@ -57217,7 +57218,7 @@ __d('OoyalaSkin/style/discoveryPanelStyles.json',[],function(global, require, mo
   },
 };
 });
-__d('OoyalaSkin/MoreOptionScreen.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/index.ios.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/constants.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/style/moreOptionScreenStyles.json","OoyalaSkin/collapsingBarUtils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/MoreOptionScreen.js',["OoyalaSkin/index.ios.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/style/moreOptionScreenStyles.json","OoyalaSkin/collapsingBarUtils.js","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 var React=require('react-native/Libraries/react-native/react-native.js');var 
 
@@ -57473,7 +57474,7 @@ __d('OoyalaSkin/style/moreOptionScreenStyles.json',[],function(global, require, 
   },
 };
 });
-__d('OoyalaSkin/sharePanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/log.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/style/sharePanelStyles.json"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
+__d('OoyalaSkin/sharePanel.js',["OoyalaSkin/utils.js","OoyalaSkin/log.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/style/sharePanelStyles.json","react-native/Libraries/react-native/react-native.js"],function(global, require, module, exports) {  var React=require('react-native/Libraries/react-native/react-native.js');var 
 
 Animated=
 
@@ -57695,7 +57696,6 @@ var Log=require('OoyalaSkin/log.js');
 var Utils=require('OoyalaSkin/utils.js');
 var styles=Utils.getStyles(require('OoyalaSkin/style/videoViewStyles.json'));
 var ResponsiveDesignManager=require('OoyalaSkin/responsiveDesignManager.js');
-
 var autohideDelay=5000;var 
 
 
@@ -57705,21 +57705,13 @@ BUTTON_NAMES=
 Constants.BUTTON_NAMES;var IMG_URLS=Constants.IMG_URLS;var UI_SIZES=Constants.UI_SIZES;
 
 var VideoView=React.createClass({displayName:'VideoView',
-getInitialState:function(){
-return {
-showControls:false,
-showSharePanel:false};},
-
-
-
 propTypes:{
 rate:React.PropTypes.number,
-isPlay:React.PropTypes.bool,
 playhead:React.PropTypes.number,
 buffered:React.PropTypes.number,
 duration:React.PropTypes.number,
-live:React.PropTypes.bool,
 ad:React.PropTypes.object,
+live:React.PropTypes.bool,
 width:React.PropTypes.number,
 height:React.PropTypes.number,
 volume:React.PropTypes.number,
@@ -57731,13 +57723,36 @@ availableClosedCaptionsLanguages:React.PropTypes.array,
 captionJSON:React.PropTypes.object,
 onSocialButtonPress:React.PropTypes.func,
 showWatermark:React.PropTypes.bool,
-lastPressedTime:React.PropTypes.number,
 config:React.PropTypes.object,
 nextVideo:React.PropTypes.object,
 upNextDismissed:React.PropTypes.bool,
 localizableStrings:React.PropTypes.object,
-platform:React.PropTypes.string,
-locale:React.PropTypes.string},
+locale:React.PropTypes.string,
+playing:React.PropTypes.bool,
+loading:React.PropTypes.bool,
+initialPlay:React.PropTypes.bool},
+
+
+componentWillReceiveProps:function(nextProps){
+if(this.state.showControls){
+if(new Date().getTime() - this.state.lastPressedTime > autohideDelay){
+this.setState({showControls:false});}}
+
+
+if(nextProps.ad){
+if(nextProps.rate == 0){
+this.setState({showControls:true});}else 
+{
+this.setState({showControls:false});}}},
+
+
+
+
+getInitialState:function(){
+return {
+showControls:false,
+showSharePanel:false};},
+
 
 
 generateLiveObject:function(){
@@ -57765,19 +57780,29 @@ this.props.onSocialButtonPress(socialType);},
 
 
 handlePress:function(name){
+this.setState({lastPressedTime:new Date().getTime()});
+if(this.state.showControls){
 if(name == "LIVE"){
 this.props.onScrub(1);}else 
+{
+this.props.onPress(name);}}else 
 
-if(name == BUTTON_NAMES.PLAY_PAUSE && this.props.isPlay){
-this.state.showControls = false;}else 
-
-if(name == BUTTON_NAMES.RESET_AUTOHIDE){
-this.state.showControls = true;}
-
-this.props.onPress(name);},
+{
+this.toggleControls();}},
 
 
-_renderBottomOverlay:function(){var _this=this;
+
+toggleControls:function(){
+var nextShowControls=!this.state.showControls;
+if(this.props.ad){
+if(!this.props.config.adScreen.showControlBar){
+nextShowControls = false;}}
+
+
+this.setState({showControls:nextShowControls});},
+
+
+_renderBottomOverlay:function(show){var _this=this;
 var shouldShowClosedCaptionsButton=
 this.props.availableClosedCaptionsLanguages && 
 this.props.availableClosedCaptionsLanguages.length > 0;
@@ -57785,7 +57810,7 @@ this.props.availableClosedCaptionsLanguages.length > 0;
 return React.createElement(BottomOverlay,{
 width:this.props.width,
 height:this.props.height,
-primaryButton:this.props.isPlay?"play":"pause",
+primaryButton:this.props.playing?"play":"pause",
 fullscreen:this.props.fullscreen,
 playhead:this.props.playhead,
 duration:this.props.duration,
@@ -57795,7 +57820,7 @@ onPress:function(name){return _this.handlePress(name);},
 onScrub:function(value){return _this.handleScrub(value);},
 showClosedCaptionsButton:shouldShowClosedCaptionsButton,
 showWatermark:this.props.showWatermark,
-isShow:this.controlsVisible(),
+isShow:show,
 config:{
 controlBar:this.props.config.controlBar,
 buttons:this.props.config.buttons,
@@ -57865,17 +57890,10 @@ onPress:function(value){return _this4.handlePress(value);},
 width:this.props.width});},
 
 
-_renderPlayPause:function(){var _this5=this;
-var buttonOpacity;
+_renderPlayPause:function(show){var _this5=this;
 var iconFontSize=ResponsiveDesignManager.makeResponsiveMultiplier(this.props.width,UI_SIZES.VIDEOVIEW_PLAYPAUSE);
-if(this.controlsVisible()){
-buttonOpacity = 1;}else 
 
-{
-buttonOpacity = 0;}
-
-if(this.props.platform == Constants.PLATFORMS.ANDROID)
-{
+if(this.props.platform == Constants.PLATFORMS.ANDROID){
 return (
 React.createElement(VideoViewPlayPauseAndroid,{
 icons:{
@@ -57889,22 +57907,19 @@ fontFamily:this.props.config.icons.pause.fontFamilyName}},
 
 
 position:"center",
-playing:this.props.isPlay,
 onPress:function(name){return _this5.handlePress(name);},
 frameWidth:this.props.width,
 frameHeight:this.props.height,
 buttonWidth:iconFontSize,
 buttonHeight:iconFontSize,
 fontSize:iconFontSize,
-opacity:buttonOpacity,
-showButton:this.controlsVisible(),
+showButton:show,
 rate:this.props.rate,
-playhead:this.props.playhead}));}else 
+playing:this.props.playing,
+loading:this.props.loading,
+initialPlay:this.props.initialPlay}));}else 
 
-
-if(this.props.platform == Constants.PLATFORMS.IOS)
-{
-
+if(this.props.platform == Constants.PLATFORMS.IOS){
 return (
 React.createElement(VideoViewPlayPause,{
 icons:{
@@ -57918,17 +57933,17 @@ fontFamily:this.props.config.icons.pause.fontFamilyName}},
 
 
 position:"center",
-playing:this.props.isPlay,
 onPress:function(name){return _this5.handlePress(name);},
 frameWidth:this.props.width,
 frameHeight:this.props.height,
 buttonWidth:iconFontSize,
 buttonHeight:iconFontSize,
 fontSize:iconFontSize,
-opacity:buttonOpacity,
-showButton:this.controlsVisible(),
+showButton:show,
 rate:this.props.rate,
-playhead:this.props.playhead}));}
+playing:this.props.playing,
+loading:this.props.loading,
+initialPlay:this.props.initialPlay}));}
 
 
 return null;},
@@ -57943,36 +57958,18 @@ this.props.onScrub(value);},
 
 
 getDefaultProps:function(){
-return {isPlay:true,playhead:0,buffered:0,duration:1};},
-
-
-controlsVisible:function(){
-return this.state.showControls && new Date().getTime() < this.props.lastPressedTime + autohideDelay;},
-
-
-toggleBottomOverlay:function(){
-this.setState({showControls:!this.controlsVisible()});
-this.props.onPress();},
+return {playhead:0,buffered:0,duration:1};},
 
 
 handleTouchEnd:function(event){
-this.toggleBottomOverlay();},
+this.setState({lastPressedTime:new Date().getTime()});
+this.toggleControls();},
 
 
 render:function(){
 var adBar=null;
-
 if(this.props.ad){
-if(this.props.rate == 0){
-this.state.showControls = true;}else 
-{
-this.state.showControls = false;}
-
-
-adBar = this.props.ad.requireAdBar?this._renderAdBar():null;
-if(this.props.config.adScreen.showControlBar == false && this.state.showControls == false){
-return adBar;}}
-
+adBar = this.props.ad.requireAdBar?this._renderAdBar():null;}
 
 return (
 React.createElement(View,{
@@ -57980,10 +57977,9 @@ style:styles.container},
 adBar,
 this._renderPlaceholder(),
 this._renderClosedCaptions(),
-this._renderPlayPause(),
+this._renderPlayPause(this.state.showControls),
 this._renderUpNext(),
-this._renderBottomOverlay()));}});
-
+this._renderBottomOverlay(this.state.showControls)));}});
 
 
 
@@ -58153,8 +58149,7 @@ this.props.onPress(BUTTON_NAMES.RESET_AUTOHIDE);},
 
 handleTouchMove:function(event){
 this.setState({x:event.nativeEvent.pageX});
-this.props.onPress(BUTTON_NAMES.RESET_AUTOHIDE);
-this.props.onScrub(this.touchPercent(event.nativeEvent.pageX));},
+this.props.onPress(BUTTON_NAMES.RESET_AUTOHIDE);},
 
 
 handleTouchEnd:function(event){
@@ -58222,7 +58217,7 @@ captionJSON:React.PropTypes.object};
 var OOClosedCaptionsView=requireNativeComponent('OOClosedCaptionsView',ClosedCaptionsView);
 module.exports = ClosedCaptionsView;
 });
-__d('OoyalaSkin/adBar.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/style/adBarStyles.json","OoyalaSkin/constants.js","OoyalaSkin/utils.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/adBar.js',["OoyalaSkin/log.js","OoyalaSkin/utils.js","OoyalaSkin/style/adBarStyles.json","OoyalaSkin/utils.js","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -58367,7 +58362,7 @@ __d('OoyalaSkin/style/adBarStyles.json',[],function(global, require, module, exp
 }
 ;
 });
-__d('OoyalaSkin/upNext.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/upNext.json","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/CircularStatus.js","OoyalaSkin/responsiveDesignManager.js"],function(global, require, module, exports) {  var 
+__d('OoyalaSkin/upNext.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/upNext.json","OoyalaSkin/widgets/RectButton.js","OoyalaSkin/widgets/countdownTimer.js","OoyalaSkin/responsiveDesignManager.js"],function(global, require, module, exports) {  var 
 React=require('react-native/Libraries/react-native/react-native.js');var 
 
 
@@ -58382,7 +58377,7 @@ var Utils=require('OoyalaSkin/utils.js');
 
 var styles=Utils.getStyles(require('OoyalaSkin/style/upNext.json'));
 var RectButton=require('OoyalaSkin/widgets/RectButton.js');
-var CircularStatus=require('OoyalaSkin/widgets/CircularStatus.js');
+var CountdownView=require('OoyalaSkin/widgets/countdownTimer.js');
 var ResponsiveDesignManager=require('OoyalaSkin/responsiveDesignManager.js');
 
 var descriptionMinWidth=140;
@@ -58442,7 +58437,15 @@ React.createElement(Text,{style:[{fontFamily:this.props.config.icons.play.fontFa
 var upNextDescription=
 React.createElement(View,{style:styles.textContainer},
 React.createElement(View,{style:styles.titleContainer},
-React.createElement(CircularStatus,{total:this.upNextDuration(),current:this.props.duration - this.props.playhead,thickness:2,diameter:26}),
+React.createElement(CountdownView,{style:{
+width:26,
+height:26},
+
+automatic:false,
+time:this.upNextDuration(),
+timeLeft:this.props.duration - this.props.playhead,
+radius:13,
+fillAlpha:0.7}),
 React.createElement(Text,{style:styles.title},'Up next: ',
 this.props.nextVideo.name)),
 
@@ -58556,7 +58559,7 @@ __d('OoyalaSkin/style/videoViewStyles.json',[],function(global, require, module,
 }
 ;
 });
-__d('OoyalaSkin/languageSelectionPanel.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/closedCaptionsView.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/utils.js","OoyalaSkin/style/languageSelectionPanelStyles.json","OoyalaSkin/widgets/ToggleSwitch.js","OoyalaSkin/languageSelectionPreview.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/languageSelectionPanel.js',["OoyalaSkin/widgets/ToggleSwitch.js","OoyalaSkin/closedCaptionsView.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/ResponsiveList.js","OoyalaSkin/languageSelectionPreview.js","OoyalaSkin/utils.js","OoyalaSkin/style/languageSelectionPanelStyles.json","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -58693,7 +58696,7 @@ var styles=require('OoyalaSkin/utils.js').getStyles(require('OoyalaSkin/style/la
 
 module.exports = LanguageSelectionPanel;
 });
-__d('OoyalaSkin/widgets/ToggleSwitch.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js","OoyalaSkin/utils.js","OoyalaSkin/widgets/style/ToggleSwitchStyles.json"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/widgets/ToggleSwitch.js',["OoyalaSkin/utils.js","OoyalaSkin/widgets/style/ToggleSwitchStyles.json","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 
 
@@ -58762,7 +58765,7 @@ __d('OoyalaSkin/widgets/style/ToggleSwitchStyles.json',[],function(global, requi
   },
 };
 });
-__d('OoyalaSkin/languageSelectionPreview.js',["react-native/Libraries/react-native/react-native.js","OoyalaSkin/utils.js","OoyalaSkin/style/languageSelectionPanelStyles.json","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
+__d('OoyalaSkin/languageSelectionPreview.js',["OoyalaSkin/utils.js","OoyalaSkin/style/languageSelectionPanelStyles.json","react-native/Libraries/react-native/react-native.js","OoyalaSkin/constants.js"],function(global, require, module, exports) {  'use strict';
 
 var React=require('react-native/Libraries/react-native/react-native.js');var 
 
