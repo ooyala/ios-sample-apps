@@ -189,10 +189,12 @@
         status = @"Idle";
         break;
       case GCKDeviceStatusBusy:
-        if( self.castManager.castPlayer.state == OOOoyalaPlayerStatePlaying ) { status = @"Playing"; }
-        else if( self.castManager.castPlayer.state == OOOoyalaPlayerStatePaused ) { status = @"Paused"; }
-        else if( self.castManager.castPlayer.state == OOOoyalaPlayerStateLoading ) { status = @"Buffering"; }
-        else { status = @"Connected"; }
+        switch( self.castManager.castPlayer.state ) {
+          case OOOoyalaPlayerStatePlaying: { status = @"Playing"; break; }
+          case OOOoyalaPlayerStatePaused: { status = @"Paused"; break; }
+          case OOOoyalaPlayerStateLoading: { status = @"Buffering"; break; }
+          default: { status = @"Connected"; break; }
+        }
         break;
       case GCKDeviceStatusUnknown:
         // fall through to 'default'.
