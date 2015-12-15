@@ -157,13 +157,10 @@
  * Shows the title, description, and promo image url
  */
 - (void)configureCastPlaybackViewBasedOnItem:(OOVideo *)item {
-  if( self.textView ) {
-    [self updateTextView:item];
-  }
-  else {
+  if( self.textView == nil ) {
     [self buildPlaybackView:item];
-    [self updateTextView:item];
   }
+  [self updateTextView:item];
 }
 
 -(NSString*) getReceiverDisplayName {
@@ -178,31 +175,15 @@
 }
 
 -(NSString*) getReceiverDisplayStatus {
-  NSString *status = @"Unknown";
-// off until our Receiver gives us something useful?
-//  if( self.castManager.selectedDevice.statusText ) {
-//    status = self.castManager.selectedDevice.statusText;
-//  }
-//  else {
-    switch( self.castManager.selectedDevice.status ) {
-      case GCKDeviceStatusIdle:
-        status = @"Idle";
-        break;
-      case GCKDeviceStatusBusy:
-        switch( self.castManager.castPlayer.state ) {
-          case OOOoyalaPlayerStatePlaying: { status = @"Playing"; break; }
-          case OOOoyalaPlayerStatePaused: { status = @"Paused"; break; }
-          case OOOoyalaPlayerStateLoading: { status = @"Buffering"; break; }
-          default: { status = @"Connected"; break; }
-        }
-        break;
-      case GCKDeviceStatusUnknown:
-        // fall through to 'default'.
-      default:
-        // status is already set to @"Unknown".
-        break;
+  NSString *status = @"Not connected";
+  if( self.castManager.isInCastMode ) {
+    switch( self.castManager.castPlayer.state ) {
+      case OOOoyalaPlayerStatePlaying: { status = @"Playing"; break; }
+      case OOOoyalaPlayerStatePaused: { status = @"Paused"; break; }
+      case OOOoyalaPlayerStateLoading: { status = @"Buffering"; break; }
+      default: { status = @"Connected"; break; }
     }
-//  }
+  }
   return status;
 }
 
