@@ -36,6 +36,7 @@
 @property NSString *accountId;
 
 @property UIImageView *castPlaybackView;
+@property UITextView *textView;
 @end
 
 @implementation PlayerViewController
@@ -89,9 +90,13 @@
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
-  // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    [self configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem];
+    // return here to avoid logging TimeChangedNotificiations for shorter logs
     return;
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
+    [self configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem];
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
     [self configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem];
@@ -152,10 +157,53 @@
  * Shows the title, description, and promo image url
  */
 - (void)configureCastPlaybackViewBasedOnItem:(OOVideo *)item {
+  if( self.textView == nil ) {
+    [self buildPlaybackView:item];
+  }
+  [self updateTextView:item];
+}
+
+-(NSString*) getReceiverDisplayName {
+  NSString *name = @"Unknown";
+  if( self.castManager.selectedDevice.friendlyName ) {
+    name = self.castManager.selectedDevice.friendlyName;
+  }
+  else if( self.castManager.selectedDevice.modelName ) {
+    name = self.castManager.selectedDevice.modelName;
+  }
+  return name;
+}
+
+-(NSString*) getReceiverDisplayStatus {
+  NSString *status = @"Not connected";
+  if( self.castManager.isInCastMode ) {
+    switch( self.castManager.castPlayer.state ) {
+      case OOOoyalaPlayerStatePlaying: { status = @"Playing"; break; }
+      case OOOoyalaPlayerStatePaused: { status = @"Paused"; break; }
+      case OOOoyalaPlayerStateLoading: { status = @"Buffering"; break; }
+      default: { status = @"Connected"; break; }
+    }
+  }
+  return status;
+}
+
+-(void) updateTextView:(OOVideo*)item {
+  if( self.textView ) {
+    dispatch_async( dispatch_get_main_queue(), ^{
+      NSString *videoTitle = item.title;
+      NSString *videoDescription = item.itemDescription;
+      self.textView.text = [NSString stringWithFormat:@"\n\n Title: %@\n\n Description: %@\n\n Receiver: %@\n\n State: %@",
+                            videoTitle,
+                            videoDescription,
+                            [self getReceiverDisplayName],
+                            [self getReceiverDisplayStatus]];
+    });
+  }
+}
+
+-(void) buildPlaybackView:(OOVideo*)item {
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     UIImage *image = [UIImage imageWithData:[Utils getDataFromImageURL:item.promoImageURL]];
-    NSString *videoTitle = item.title;
-    NSString *videoDescription = item.itemDescription;
 
     dispatch_sync(dispatch_get_main_queue(), ^{
       [[self.castPlaybackView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
@@ -164,19 +212,18 @@
       [self.castPlaybackView.layer setBorderWidth:5.0];
       self.castPlaybackView.contentMode = UIViewContentModeScaleAspectFit;
 
-      UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
-      textView.userInteractionEnabled = NO;
-      textView.text = [NSString stringWithFormat:@"\n\n Title: %@ \n\n Description: %@", videoTitle, videoDescription];
-      [textView setFont:[UIFont boldSystemFontOfSize:30]];
-      textView.textColor = [UIColor whiteColor];
-      textView.backgroundColor = [UIColor clearColor];
-      textView.textAlignment = NSTextAlignmentCenter;
-      textView.center = self.videoView.center;
-      [textView setTranslatesAutoresizingMaskIntoConstraints:NO];
-      [self.castPlaybackView addSubview:textView];
+      self.textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
+      self.textView.userInteractionEnabled = NO;
+      [self.textView setFont:[UIFont boldSystemFontOfSize:30]];
+      self.textView.textColor = [UIColor whiteColor];
+      self.textView.backgroundColor = [UIColor clearColor];
+      self.textView.textAlignment = NSTextAlignmentCenter;
+      self.textView.center = self.videoView.center;
+      [self.textView setTranslatesAutoresizingMaskIntoConstraints:NO];
+      [self.castPlaybackView addSubview:self.textView];
 
       NSLayoutConstraint *w =[NSLayoutConstraint
-                              constraintWithItem:textView
+                              constraintWithItem:self.textView
                               attribute:NSLayoutAttributeWidth
                               relatedBy:0
                               toItem:self.castPlaybackView
@@ -184,7 +231,7 @@
                               multiplier:1.0
                               constant:0];
       NSLayoutConstraint *h =[NSLayoutConstraint
-                              constraintWithItem:textView
+                              constraintWithItem:self.textView
                               attribute:NSLayoutAttributeHeight
                               relatedBy:0
                               toItem:self.castPlaybackView
@@ -192,7 +239,7 @@
                               multiplier:1.0
                               constant:0];
       NSLayoutConstraint *t = [NSLayoutConstraint
-                               constraintWithItem:textView
+                               constraintWithItem:self.textView
                                attribute:NSLayoutAttributeTop
                                relatedBy:NSLayoutRelationEqual
                                toItem:self.castPlaybackView
@@ -200,7 +247,7 @@
                                multiplier:1.0f
                                constant:0.f];
       NSLayoutConstraint *l = [NSLayoutConstraint
-                               constraintWithItem:textView
+                               constraintWithItem:self.textView
                                attribute:NSLayoutAttributeLeading
                                relatedBy:NSLayoutRelationEqual
                                toItem:self.castPlaybackView
