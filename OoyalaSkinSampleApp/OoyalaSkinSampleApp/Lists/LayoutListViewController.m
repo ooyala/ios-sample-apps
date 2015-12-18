@@ -19,24 +19,24 @@
   [self addCommonWithTitle:@"Original Alice Test Asset" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Small Player View (BigBuck+Ads)"
                                                             embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
-                                                                pcode:@"Vpd3E6BNabnn09G72IWye5O2RzN1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
                                                        viewController:[DefaultSkinPlayerViewController class] nib: @"SmallSkinPlayerView"]];
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Small Player View (HLS)"
                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                pcode:@"Vpd3E6BNabnn09G72IWye5O2RzN1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
                                                        viewController:[DefaultSkinPlayerViewController class] nib: @"SmallSkinPlayerView"]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Tall Player View"
                                                             embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
-                                                                pcode:@"Vpd3E6BNabnn09G72IWye5O2RzN1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
                                                        viewController:[DefaultSkinPlayerViewController class] nib: @"TallPlayerView"]];
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Wide Player View"
                                                             embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
-                                                                pcode:@"Vpd3E6BNabnn09G72IWye5O2RzN1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
                                                        viewController:[DefaultSkinPlayerViewController class] nib: @"WidePlayerView"]];
 
