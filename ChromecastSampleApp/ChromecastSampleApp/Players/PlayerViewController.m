@@ -76,7 +76,6 @@
   self.castPlaybackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.videoView.frame.size.width, self.videoView.frame.size.height)];
   [self.castManager setCastModeVideoView:self.castPlaybackView];
 
-
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(onCastManagerNotification:)
                                                name:nil
@@ -96,9 +95,7 @@
 
   // Init the castManager in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castManager];
-
   [self play:self.embedCode];
-
 }
 
 -(void) play:(NSString*)embedCode {
@@ -259,7 +256,6 @@
       [self.castPlaybackView addConstraint:h];
       [self.castPlaybackView addConstraint:t];
       [self.castPlaybackView addConstraint:l];
-      
     });
   });
 }
