@@ -110,6 +110,12 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
 - (void)setFullScreenButtonShowing: (BOOL) showing;
 
 /**
+ * Sets visibility of volume button on inline player
+ * @param[in] showing True to show fullscreen button, false otherwise
+ */
+- (void)setVolumeButtonShowing: (BOOL) showing;
+
+/**
  * Sets the ViewController used to display controls in fullscreen mode
  * @param[in] controller the initialized ViewController to use
  */

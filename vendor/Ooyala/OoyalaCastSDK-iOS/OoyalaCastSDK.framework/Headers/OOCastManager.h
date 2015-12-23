@@ -28,7 +28,13 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
 
 @property(nonatomic, strong) GCKDeviceScanner* deviceScanner;
 
-@property(nonatomic, strong) GCKDevice *selectedDevice;
+/**
+ * When YES, the OOCastManager will attempt to observe the
+ * state of networking and reconnect to the last selected device.
+ */
+@property(nonatomic) BOOL automaticallyReconnect;
+
+@property(nonatomic, readonly) GCKDevice *selectedDevice;
 
 @property(nonatomic, weak) id<OOCastManagerDelegate> delegate;
 
