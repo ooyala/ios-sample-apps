@@ -60990,7 +60990,7 @@ this._renderControlBar()));},
 
 render:function(){
 var widthStyle={width:this.props.width,opacity:this.state.opacity};
-if(this.props.live&&!this.props.config.live.dvrEnabled){
+if(this.props.live&&this.props.config.live!=null&&!this.props.config.live.dvrEnabled){
 return this.renderLiveWithoutDVR(widthStyle);}
 
 
@@ -61739,4 +61739,4 @@ __d('OoyalaSkin/style/languageSelectionPanelStyles.json',function(global, requir
 });
 ;require("InitializeJavaScriptAppEngine");
 ;require("OoyalaSkin/index.ios.js");
-__SSTOKENSTRING = "@generated SignedSource<<145310b5a8c4a78d780e7dbea2cfcaec>>";
+__SSTOKENSTRING = "@generated SignedSource<<a0d3176992cbfc63e7464d7232f9e393>>";
