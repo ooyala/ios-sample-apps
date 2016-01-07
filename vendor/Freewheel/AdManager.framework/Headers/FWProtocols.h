@@ -612,7 +612,7 @@ FW_EXTERN BOOL FWGetCookieOptOutState(void);
  *  Preload the slot.
  *  The notification FW_NOTIFICATION_SLOT_PRELOADED will be dispatched when the slot has finished preloading.
  *
- *  Note: For ads, the preload behaviour may differ due to different ad types.
+ *  Note: For ads, the preload behaviour may differ due to different ad types. Based on the current implementation, it only supports VAST Ad.
  */
 - (void)preload;
 

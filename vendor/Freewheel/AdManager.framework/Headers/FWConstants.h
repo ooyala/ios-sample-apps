@@ -636,6 +636,11 @@ FW_EXTERN NSString *const FW_EVENT_AD_RESELLER_NO_AD;
 FW_EXTERN NSString *const FW_EVENT_AD_ERROR;
 
 /**
+ *	Event name: concrete event
+ */
+FW_EXTERN NSString *const FW_EVENT_AD_MEASUREMENT;
+
+/**
  *	Event name: error
  */
 FW_EXTERN NSString *const FW_EVENT_ERROR;
@@ -883,6 +888,13 @@ FW_EXTERN NSString *const FW_INFO_KEY_ERROR;
  *  - Applicable notification: FW_NOTIFICATION_SLOT_STARTED, FW_NOTIFICATION_SLOT_ENDED, FW_NOTIFICATION_AD_*
  */
 FW_EXTERN NSString *const FW_INFO_KEY_CUSTOM_ID;
+
+/**
+ *  - UserInfo dictionary key: concrete event ID
+ *  - Concrete event ID of the related ad, as the key of detail info parameter in "processEvent" method of FWRendererController
+ *  - Valid values: NSString
+ */
+FW_EXTERN NSString *const FW_INFO_KEY_CONCRETE_EVENT_ID;
 
 /**
  *  - UserInfo dictionary key: slot
