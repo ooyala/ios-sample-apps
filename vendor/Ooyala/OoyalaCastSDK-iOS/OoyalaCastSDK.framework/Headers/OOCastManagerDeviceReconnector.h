@@ -6,10 +6,15 @@
 #import "OOCastManager.h"
 
 @interface OOCastManagerDeviceReconnector : NSObject
-@property(nonatomic) BOOL automaticallyReconnect;
+@property (nonatomic) BOOL automaticallyReconnect;
+@property (nonatomic, readonly) BOOL isReconnecting;
+@property (nonatomic, readonly) NSString *lastSessionID;
 -(id) init __attribute__((unavailable("use initWithCastManager:")));
 -(instancetype) initWithCastManager:(OOCastManager*)castManager;
--(void) onDeviceIPChanged:(NSString*)deviceIP;
+-(void) rememberDevice:(GCKDevice*)device sessionID:(NSString*)sessionID;
 -(void) deviceDidComeOnline:(GCKDevice*)device;
--(void) forgetDevice;
+-(void) didFailToConnectWithError:(NSError*)error;
+-(void) didFailToConnectToApplicationWithError:(GCKError*)error;
+-(void) didDisconnectWithError:(GCKError*)error;
+-(void)forgetReconnectionInfo;
 @end
