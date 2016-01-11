@@ -56,6 +56,10 @@
 		CA63277E1C442130008F3667 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = CA6327761C442130008F3667 /* validate.js */; };
 		CA63277F1C442130008F3667 /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6327771C442130008F3667 /* zh.json */; };
 		CA6327801C442145008F3667 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA63276B1C44211F008F3667 /* OoyalaSkinSDK.framework */; };
+		CA6327851C4421A0008F3667 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6327811C44219C008F3667 /* Roboto-Bold.ttf */; };
+		CA6327861C4421A0008F3667 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6327821C44219C008F3667 /* Roboto-Regular.ttf */; };
+		CA6327871C4421A0008F3667 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6327831C44219C008F3667 /* RobotoCondensed-Bold.ttf */; };
+		CA6327881C4421A0008F3667 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6327841C44219C008F3667 /* RobotoCondensed-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +126,10 @@
 		CA6327751C442130008F3667 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
 		CA6327761C442130008F3667 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		CA6327771C442130008F3667 /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
+		CA6327811C44219C008F3667 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CA6327821C44219C008F3667 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CA6327831C44219C008F3667 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		CA6327841C44219C008F3667 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +237,10 @@
 			children = (
 				0B8E7F261BDED4F80078155C /* alice.ttf */,
 				0B8E7F271BDED4F80078155C /* fontawesome-webfont.ttf */,
+				CA6327811C44219C008F3667 /* Roboto-Bold.ttf */,
+				CA6327821C44219C008F3667 /* Roboto-Regular.ttf */,
+				CA6327831C44219C008F3667 /* RobotoCondensed-Bold.ttf */,
+				CA6327841C44219C008F3667 /* RobotoCondensed-Regular.ttf */,
 			);
 			name = Fonts;
 			path = "../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts";
@@ -357,6 +369,7 @@
 			files = (
 				CA63277F1C442130008F3667 /* zh.json in Resources */,
 				CA63276E1C442126008F3667 /* main.jsbundle in Resources */,
+				CA6327851C4421A0008F3667 /* Roboto-Bold.ttf in Resources */,
 				0B8E7F291BDED4F80078155C /* fontawesome-webfont.ttf in Resources */,
 				0B8E7F281BDED4F80078155C /* alice.ttf in Resources */,
 				CA6327781C442130008F3667 /* en.json in Resources */,
@@ -364,11 +377,14 @@
 				0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */,
 				0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */,
 				0B7824541B2B83AB00D718AB /* Main.storyboard in Resources */,
+				CA6327871C4421A0008F3667 /* RobotoCondensed-Bold.ttf in Resources */,
+				CA6327881C4421A0008F3667 /* RobotoCondensed-Regular.ttf in Resources */,
 				0B345ADC1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets in Resources */,
 				0B7824571B2B841800D718AB /* TableCell.xib in Resources */,
 				CA6327791C442130008F3667 /* es.json in Resources */,
 				0B7824301B2B7EB600D718AB /* LaunchScreen.xib in Resources */,
 				CA63277C1C442130008F3667 /* skin-schema.json in Resources */,
+				CA6327861C4421A0008F3667 /* Roboto-Regular.ttf in Resources */,
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
 				CA63277D1C442130008F3667 /* skin.json in Resources */,
 				0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */,

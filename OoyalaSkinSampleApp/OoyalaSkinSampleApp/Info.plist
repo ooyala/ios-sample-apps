@@ -33,6 +33,10 @@
 	<array>
 		<string>fontawesome-webfont.ttf</string>
 		<string>alice.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>RobotoCondensed-Regular.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
