@@ -43,6 +43,11 @@
 @property(nonatomic, readonly) BOOL isMiniControllerInteractionAvailable;
 
 /**
+ * get and set device volume
+ */
+@property(nonatomic) float deviceVolume;
+
+/**
  * Enter cast mode with given OOCastModeOptions object
  */
 - (void)enterCastModeWithOptions:(OOCastModeOptions *)options;

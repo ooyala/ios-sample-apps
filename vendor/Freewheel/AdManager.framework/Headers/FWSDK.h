@@ -4,7 +4,7 @@
  *	The FreeWheel AdManager Cocoa Touch SDK is a static library for integrating
  *	your cocoa touch applications with FreeWheel MRM ad services.
  *
- *	The SDK supports iOS 5+ running on iPhone, iPod Touch and iPad. It is a
+ *	The SDK supports iOS 6+ running on iPhone, iPod Touch and iPad. It is a
  *	universal binary bundle with armv7, armv7s, arm64, i386 and x86_64 architectures.
  *
  *	The SDK may utilize UIKit intensively, so invoke from main thread is highly preferred,
