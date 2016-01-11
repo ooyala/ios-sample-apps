@@ -1,6 +1,6 @@
 {
   "general": {
-    "watermark": {"imageResource": {"url": "assets/images/ooyala-watermark.png" } }
+    "watermark": {"imageResource": {"url": "assets/images/ooyala-watermark.png","iosResource" : "logo" } }
   },
   "localization": {
     "defaultLanguage": "en",
@@ -141,7 +141,7 @@
     "autoHide": true,
     "height": 60,
     "watermark": {
-      "imageResource": {"url": "assets/images/ooyala.png" },
+      "imageResource": {"url": "assets/images/ooyala.png" ,"iosResource" : "logo"},
       "width": 500,
       "height": 81
     }
