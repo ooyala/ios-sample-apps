@@ -11,6 +11,6 @@
 
 @implementation OOCastManagerFetcher
 +(OOCastManager*) fetchCastManager {
-  return [OOCastManager getCastManagerWithAppID:@"D4C7BD4A" namespace:@"urn:x-cast:ooyala"];
+  return [OOCastManager getCastManagerWithAppID:@"4172C76F" namespace:@"urn:x-cast:ooyala"];
 }
 @end
