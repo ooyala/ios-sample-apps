@@ -42,7 +42,7 @@
 
 - (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription;
 
-- (void)enterCastModeWithOptions:(OOCastModeOptions *)options embedToken:(NSString *)embedToken additionalInitParams:(NSDictionary *)params isReconnecting:(BOOL)isReconnecting;
+- (void)enterCastModeWithOptions:(OOCastModeOptions *)options embedToken:(NSString *)embedToken additionalInitParams:(NSDictionary *)params;
 
 - (void)registerMiniController:(id<OOCastMiniControllerProtocol>) miniController;
 
