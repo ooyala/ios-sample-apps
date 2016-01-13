@@ -60204,6 +60204,13 @@ var buttonIcon=this._renderIcon(button.name);
 var buttonStyle=[styles.icon,this.props.config.moreOptionsScreen.iconStyle.active];
 
 
+
+
+if(buttonStyle[1].color){
+delete buttonStyle[1].color;}
+
+
+
 if(buttonIcon===undefined||buttonStyle===undefined){
 Log.warn("Warning: skipping unsupported More Options button ",button);
 continue;}
@@ -60484,6 +60491,7 @@ fullscreen:this.props.fullscreen,
 cuePoints:this.props.cuePoints,
 playhead:this.props.playhead,
 duration:this.props.duration,
+ad:this.props.ad,
 volume:this.props.volume,
 live:this.generateLiveObject(),
 onPress:function(name){return _this.handlePress(name);},
@@ -60675,6 +60683,7 @@ fullscreen:React.PropTypes.bool,
 cuePoints:React.PropTypes.array,
 playhead:React.PropTypes.number,
 duration:React.PropTypes.number,
+ad:React.PropTypes.object,
 volume:React.PropTypes.number,
 onPress:React.PropTypes.func,
 onScrub:React.PropTypes.func,
@@ -60717,13 +60726,6 @@ duration:500,
 delay:0})]).
 
 start();}},
-
-
-
-handleProgress:function(touch,percent){
-this.setState({touch:touch,percent:percent});
-if(!touch&&this.onScrub){
-this.onScrub(this.state.percent);}},
 
 
 
@@ -60863,7 +60865,7 @@ onTouchMove:function(event){return _this.handleTouchMove(event);},
 onTouchEnd:function(event){return _this.handleTouchEnd(event);}},
 this._renderProgressBar(playedPercent),
 this._renderControlBar(),
-this._renderProgressScrubber(this.state.touch?this.touchPercent(this.state.x):playedPercent),
+this._renderProgressScrubber(!this.props.ad&&this.state.touch?this.touchPercent(this.state.x):playedPercent),
 this._renderCuePoints(this.props.cuePoints)));},
 
 
@@ -61568,6 +61570,8 @@ if(this.props.selectedLanguage&&this.props.selectedLanguage!==''){
 hasCC=true;}
 
 
+var renderHorizontal=Utils.shouldShowLandscape(this.props.width,this.props.height);
+
 
 var itemPanelHeight=this.props.height-30-30-60;
 var animationStyle={opacity:this.state.opacity};
@@ -61586,7 +61590,7 @@ switchOffText:Utils.localizedString(this.props.config.locale,"Off",this.props.co
 config:this.props.config}),
 
 React.createElement(ResponsiveList,{
-horizontal:false,
+horizontal:renderHorizontal,
 data:this.props.languages,
 itemRender:this.renderItem,
 width:this.props.width,
@@ -61835,4 +61839,4 @@ __d('OoyalaSkin/style/languageSelectionPanelStyles.json',function(global, requir
 });
 ;require("InitializeJavaScriptAppEngine");
 ;require("OoyalaSkin/index.ios.js");
-__SSTOKENSTRING = "@generated SignedSource<<5b54c4bb12efe29a23059a7c18f08da3>>";
+__SSTOKENSTRING = "@generated SignedSource<<679d00cd686b26510aada9badd73a6a5>>";

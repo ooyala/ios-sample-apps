@@ -76,6 +76,19 @@ typedef enum {
   OOSeekStyleEnhanced
 } OOSeekStyle;
 
+/**
+ * Defines different slider UI styles
+ * Defaults to OOOoyalaPlayerEnvironmentProduction and should never change for customer apps.
+ */
+typedef NS_ENUM(NSInteger, OOUIProgressSliderMode)
+{
+  OOUIProgressSliderModeLive,
+  OOUIProgressSliderModeAdInLive,
+  OOUIProgressSliderModeNormal,
+  OOUIProgressSliderModeLiveNoSrubber,
+  OOUIProgressSliderModeElapsedDuration
+};
+
 #define OOOOYALAPLAYER_DURATION_MISSING (-1)
 
 // notifications
@@ -156,6 +169,16 @@ extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live clo
  * Get the options
  */
 @property (readonly, nonatomic) OOOptions *options;
+
+/**
+ * @internal the ui slider mode
+ */
+@property (nonatomic) OOUIProgressSliderMode normalSliderMode;
+
+/*
+ * the cast volume when the video is played in cast mode
+ */
+@property float castVolume;
 
 /**
  * @internal

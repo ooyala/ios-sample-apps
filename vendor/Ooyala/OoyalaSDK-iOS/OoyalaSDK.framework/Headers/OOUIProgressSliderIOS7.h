@@ -6,17 +6,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 #import "OOCuePointsView.h"
-
-// An enum of different slider UI styles
-enum
-{
-  OOUIProgressSliderModeLive,
-  OOUIProgressSliderModeAdInLive,
-  OOUIProgressSliderModeNormal,
-  OOUIProgressSliderModeLiveNoSrubber,
-  OOUIProgressSliderModeElapsedDuration
-};
-typedef NSInteger OOUIProgressSliderMode;
+#import "OOOoyalaPlayer.h"
 
 /**
  A view that can display the the current time, duration, and scrubber.

@@ -29,8 +29,8 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
 @property(nonatomic, strong) GCKDeviceScanner* deviceScanner;
 
 /**
- * When YES, the OOCastManager will attempt to observe the
- * state of networking and reconnect to the last selected device.
+ * When YES (the default), the OOCastManager will attempt to reconnect to the last selected device
+ * when recovering from lost network connectivity. Set this to NO to disable such behaviour.
  */
 @property(nonatomic) BOOL automaticallyReconnect;
 
