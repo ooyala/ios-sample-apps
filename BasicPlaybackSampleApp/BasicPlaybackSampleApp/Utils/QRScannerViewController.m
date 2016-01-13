@@ -102,6 +102,7 @@
     [self stopReading];
   }
   SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[self.playerSelectionOption viewController] alloc] initWithPlayerSelectionOption:self.playerSelectionOption];
+  self.playerSelectionOption.embedCode = nil;
   [self.navigationController pushViewController:controller animated:YES];
 }
 
