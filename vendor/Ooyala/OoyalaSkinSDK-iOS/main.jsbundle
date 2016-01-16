@@ -1240,10 +1240,6 @@ OoyalaSkinCoreInstance=new OoyalaSkinCore(this,eventBridge);
 OoyalaSkinCoreInstance.mount(DeviceEventEmitter);},
 
 
-componentDidMount:function(){
-eventBridge.onUIReady();},
-
-
 componentWillUnmount:function(){
 Log.log("componentWillUnmount");
 OoyalaSkinCoreInstance.unmount();},
@@ -61781,4 +61777,4 @@ __d('OoyalaSkin/style/languageSelectionPanelStyles.json',function(global, requir
 });
 ;require("InitializeJavaScriptAppEngine");
 ;require("OoyalaSkin/index.ios.js");
-__SSTOKENSTRING = "@generated SignedSource<<189f435fb0bdb21a30a33efed478ce68>>";
+__SSTOKENSTRING = "@generated SignedSource<<347cde2ea597965cb2de87e3cb04836b>>";
