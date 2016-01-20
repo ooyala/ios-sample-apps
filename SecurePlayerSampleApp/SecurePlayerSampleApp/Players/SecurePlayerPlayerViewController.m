@@ -67,7 +67,8 @@
    registerSecurePlayerMapping:_ooyalaPlayerViewController.player.streamPlayerMapping
    appVersion:@"0.0.1"
    sessionId:@"sessionId"
-   personalizationServerUrl:purl];
+   personalizationServerUrl:purl
+   engineType:VO_OSMP_VOME2_PLAYER];
 
 
 

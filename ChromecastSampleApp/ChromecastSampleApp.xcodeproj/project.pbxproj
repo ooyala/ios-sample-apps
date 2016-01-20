@@ -22,6 +22,7 @@
 		0B1AFBE51B0C09BB00347DFA /* CustomizedMiniControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD61B0C09BB00347DFA /* CustomizedMiniControllerView.m */; };
 		0B1AFBE61B0C09BB00347DFA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD81B0C09BB00347DFA /* Utils.m */; };
 		0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */; };
+		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
 		FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */; };
 		FF21F0DC19CB7A2100FE9D07 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D419CB7A2100FE9D07 /* CFNetwork.framework */; };
@@ -63,6 +64,8 @@
 		0B1AFBD81B0C09BB00347DFA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		0B89E24E1B1FC85300306176 /* ChromecastPlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromecastPlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastPlayerSelectionOption.m; sourceTree = "<group>"; };
+		5E5B755A1C472C4200371A9E /* CastPlaybackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastPlaybackView.h; sourceTree = "<group>"; };
+		5E5B755B1C472C4200371A9E /* CastPlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastPlaybackView.m; sourceTree = "<group>"; };
 		5EA5A7E71B6C07DC008C691C /* OOCastManagerFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCastManagerFetcher.h; sourceTree = "<group>"; };
 		5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOCastManagerFetcher.m; sourceTree = "<group>"; };
 		FF21F07619CB5ABC00FE9D07 /* ChromecastSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromecastSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 			children = (
 				0B1AFBD21B0C09BB00347DFA /* PlayerViewController.h */,
 				0B1AFBD31B0C09BB00347DFA /* PlayerViewController.m */,
+				5E5B755A1C472C4200371A9E /* CastPlaybackView.h */,
+				5E5B755B1C472C4200371A9E /* CastPlaybackView.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */,
 				5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */,
 				0B1AFBE51B0C09BB00347DFA /* CustomizedMiniControllerView.m in Sources */,
+				5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
