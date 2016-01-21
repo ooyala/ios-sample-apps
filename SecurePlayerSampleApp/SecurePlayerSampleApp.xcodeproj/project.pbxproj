@@ -35,8 +35,6 @@
 		0BC947DD1A817756004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947D71A817756004CB997 /* TableCell.xib */; };
 		0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */; };
 		0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */; };
-		0BD849FA1B911275006CB6D0 /* OoyalaSecurePlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849F81B911275006CB6D0 /* OoyalaSecurePlayerSDK.framework */; };
-		0BD849FB1B911275006CB6D0 /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849F91B911275006CB6D0 /* SecurePlayer.framework */; };
 		0BD849FD1B911512006CB6D0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849FC1B911512006CB6D0 /* libz.dylib */; };
 		0BD849FF1B911519006CB6D0 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849FE1B911519006CB6D0 /* libresolv.dylib */; };
 		0BD84A001B91151F006CB6D0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
@@ -61,6 +59,8 @@
 		0BD84A281B912588006CB6D0 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* SecurePlayerPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */; };
+		5E5F76851C506422006E4E96 /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5F76841C506422006E4E96 /* SecurePlayer.framework */; };
+		5E5F76871C506432006E4E96 /* OoyalaSecurePlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5F76861C506432006E4E96 /* OoyalaSecurePlayerSDK.framework */; };
 		9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */; };
 		9782DB021BFC1E9E0094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */; };
 /* End PBXBuildFile section */
@@ -132,6 +132,8 @@
 		0BD84A1D1B91179A006CB6D0 /* zgpriv.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = zgpriv.dat; sourceTree = "<group>"; };
 		0BD84A251B912588006CB6D0 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		5E5F76841C506422006E4E96 /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurePlayer.framework; path = ../vendor/SecurePlayer/SecurePlayer.framework; sourceTree = "<group>"; };
+		5E5F76861C506432006E4E96 /* OoyalaSecurePlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSecurePlayerSDK.framework; path = "../vendor/Ooyala/OoyalaSecurePlayerSDK-iOS/OoyalaSecurePlayerSDK.framework"; sourceTree = "<group>"; };
 		9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5F76871C506432006E4E96 /* OoyalaSecurePlayerSDK.framework in Frameworks */,
+				5E5F76851C506422006E4E96 /* SecurePlayer.framework in Frameworks */,
 				0BD84A151B9115C3006CB6D0 /* ExternalAccessory.framework in Frameworks */,
 				0BD84A111B911555006CB6D0 /* CoreMedia.framework in Frameworks */,
 				0BD84A0F1B911550006CB6D0 /* OpenGLES.framework in Frameworks */,
@@ -154,8 +158,6 @@
 				0BD84A001B91151F006CB6D0 /* Security.framework in Frameworks */,
 				0BD849FF1B911519006CB6D0 /* libresolv.dylib in Frameworks */,
 				0BD849FD1B911512006CB6D0 /* libz.dylib in Frameworks */,
-				0BD849FA1B911275006CB6D0 /* OoyalaSecurePlayerSDK.framework in Frameworks */,
-				0BD849FB1B911275006CB6D0 /* SecurePlayer.framework in Frameworks */,
 				0B9457D41AC32C64000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */,
 				0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */,
@@ -222,6 +224,8 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E5F76861C506432006E4E96 /* OoyalaSecurePlayerSDK.framework */,
+				5E5F76841C506422006E4E96 /* SecurePlayer.framework */,
 				0BD84A141B9115C3006CB6D0 /* ExternalAccessory.framework */,
 				0BD84A121B91159B006CB6D0 /* MediaAccessibility.framework */,
 				0BD84A101B911555006CB6D0 /* CoreMedia.framework */,
@@ -585,13 +589,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/jonslenk/Dev/repos/ios-complete/ios-sample-apps/vendor/**",
 				);
+				HEADER_SEARCH_PATHS = "/Users/jonslenk/Dev/repos/ios-complete/ios-sample-apps/vendor/**";
 				INFOPLIST_FILE = "$(SRCROOT)/SecurePlayerSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/jonslenk/Dev/repos/ios-complete/ios-sample-apps/vendor/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -610,13 +617,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/jonslenk/Dev/repos/ios-complete/ios-sample-apps/vendor/**",
 				);
+				HEADER_SEARCH_PATHS = "/Users/jonslenk/Dev/repos/ios-complete/ios-sample-apps/vendor/**";
 				INFOPLIST_FILE = "$(SRCROOT)/SecurePlayerSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"/Users/jonslenk/Dev/repos/ios-complete/ios-sample-apps/vendor/**",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";

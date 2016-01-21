@@ -1,6 +1,6 @@
 {
   "general": {
-    "watermark": {"imageResource": {"url": "assets/images/ooyala-watermark.png","iosResource" : "logo" } }
+    "watermark": {"imageResource": {"url": "assets/images/ooyala-watermark.png" } }
   },
   "localization": {
     "defaultLanguage": "en",
@@ -141,7 +141,7 @@
     "autoHide": true,
     "height": 60,
     "watermark": {
-      "imageResource": {"url": "assets/images/ooyala.png" ,"iosResource" : "logo"},
+      "imageResource": {"url": "assets/images/ooyala.png" },
       "width": 500,
       "height": 81
     }
@@ -176,7 +176,6 @@
       {"name":"share", "location":"moreOptions" },
       {"name":"discovery", "location":"moreOptions" },
       {"name":"closedCaption", "location":"moreOptions" },
-      {"name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":30 },
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 }
     ],
