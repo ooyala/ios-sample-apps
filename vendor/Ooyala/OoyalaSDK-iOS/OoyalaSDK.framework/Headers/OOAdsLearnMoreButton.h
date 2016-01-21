@@ -4,7 +4,9 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "OOAdMoviePlayer.h"
+#import <UIKit/UIKit.h>
+
+@class OOAdMoviePlayer;
 
 /**
   A button that enables the customer to click on an advertisement, and learn more about the ad
