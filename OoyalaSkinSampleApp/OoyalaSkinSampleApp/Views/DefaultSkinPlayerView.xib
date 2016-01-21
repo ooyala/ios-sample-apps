@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultSkinPlayerViewController">
@@ -17,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQc-XE-FRz">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                    <rect key="frame" x="10" y="10" width="580" height="470"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxJ-4U-Ozw">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxJ-4U-Ozw">
                     <rect key="frame" x="23" y="540" width="558" height="52"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -30,11 +31,11 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="gQc-XE-FRz" secondAttribute="bottom" constant="120" id="54J-rm-8QD"/>
-                <constraint firstAttribute="trailing" secondItem="gQc-XE-FRz" secondAttribute="trailing" id="IWt-oA-RBO"/>
+                <constraint firstAttribute="trailing" secondItem="gQc-XE-FRz" secondAttribute="trailing" constant="10" id="IWt-oA-RBO"/>
                 <constraint firstItem="fxJ-4U-Ozw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="cN8-8V-5jE"/>
-                <constraint firstItem="gQc-XE-FRz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="i0o-Ml-ouK"/>
+                <constraint firstItem="gQc-XE-FRz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="i0o-Ml-ouK"/>
                 <constraint firstAttribute="bottom" secondItem="fxJ-4U-Ozw" secondAttribute="bottom" constant="8" id="s8I-aU-2wV"/>
-                <constraint firstItem="gQc-XE-FRz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zM3-7D-D5A"/>
+                <constraint firstItem="gQc-XE-FRz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="zM3-7D-D5A"/>
             </constraints>
         </view>
     </objects>
