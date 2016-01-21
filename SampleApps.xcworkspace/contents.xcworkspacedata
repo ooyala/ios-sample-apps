@@ -29,6 +29,9 @@
       location = "group:OoyalaAPISampleApp/OoyalaAPISampleApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:OoyalaSkinSampleApp/OoyalaSkinSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:OptionsSampleApp/OptionsSampleApp.xcodeproj">
    </FileRef>
    <FileRef
