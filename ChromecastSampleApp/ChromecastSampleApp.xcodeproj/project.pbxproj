@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */; };
 		0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */; };
-		0B1AFB821B0C026E00347DFA /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FA1B0A607D00575391 /* GoogleCast.framework */; };
 		0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */; };
 		0B1AFBDB1B0C09BB00347DFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC31B0C09BB00347DFA /* LaunchScreen.xib */; };
 		0B1AFBDD1B0C09BB00347DFA /* ooyala_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC81B0C09BB00347DFA /* ooyala_logo.png */; };
@@ -22,6 +21,9 @@
 		0B1AFBE51B0C09BB00347DFA /* CustomizedMiniControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD61B0C09BB00347DFA /* CustomizedMiniControllerView.m */; };
 		0B1AFBE61B0C09BB00347DFA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD81B0C09BB00347DFA /* Utils.m */; };
 		0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */; };
+		5E3B14391C5806D50078E075 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B14381C5806D40078E075 /* GoogleCast.framework */; };
+		5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143A1C5807230078E075 /* libxml2.tbd */; };
+		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
 		FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */; };
@@ -35,13 +37,10 @@
 		FF4264A01B18D79900CED97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF42649E1B18D79900CED97A /* Main.storyboard */; };
 		FF49D20319CBAB28001B156F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20219CBAB28001B156F /* MessageUI.framework */; };
 		FF49D20519CBAB3F001B156F /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20419CBAB3F001B156F /* EventKit.framework */; };
-		FF49D20719CBAB50001B156F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20619CBAB50001B156F /* libz.dylib */; };
 		FF49D20919CBAB5A001B156F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20819CBAB5A001B156F /* AdSupport.framework */; };
 		FF49D20B19CBAB78001B156F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20A19CBAB78001B156F /* Foundation.framework */; };
 		FF49D20D19CBAB84001B156F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20C19CBAB84001B156F /* UIKit.framework */; };
 		FF49D20F19CBAB91001B156F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */; };
-		FF49D21119CBABA2001B156F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D21019CBABA2001B156F /* libc++.dylib */; };
-		FF49D21319CBABAE001B156F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D21219CBABAE001B156F /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +63,9 @@
 		0B1AFBD81B0C09BB00347DFA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		0B89E24E1B1FC85300306176 /* ChromecastPlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromecastPlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastPlayerSelectionOption.m; sourceTree = "<group>"; };
+		5E3B14381C5806D40078E075 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "../vendor/GoogleCast/GoogleCastSDK-2.7.1-Release/GoogleCast.framework"; sourceTree = "<group>"; };
+		5E3B143A1C5807230078E075 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		5E3B143C1C5807430078E075 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5E5B755A1C472C4200371A9E /* CastPlaybackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastPlaybackView.h; sourceTree = "<group>"; };
 		5E5B755B1C472C4200371A9E /* CastPlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastPlaybackView.m; sourceTree = "<group>"; };
 		5EA5A7E71B6C07DC008C691C /* OOCastManagerFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCastManagerFetcher.h; sourceTree = "<group>"; };
@@ -81,14 +83,10 @@
 		FF49D1FE19CBA9C6001B156F /* libWViPhoneAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWViPhoneAPI.a; path = ../../sdk/OoyalaSDK/Classes/Internal/Players/libWViPhoneAPI.a; sourceTree = "<group>"; };
 		FF49D20219CBAB28001B156F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FF49D20419CBAB3F001B156F /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		FF49D20619CBAB50001B156F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FF49D20819CBAB5A001B156F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FF49D20A19CBAB78001B156F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FF49D20C19CBAB84001B156F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FF49D21019CBABA2001B156F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		FF49D21219CBABAE001B156F /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		FF4A92FA1B0A607D00575391 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "../vendor/GoogleCastFramework-2.4.0-Release/GoogleCast.framework"; sourceTree = "<group>"; };
 		FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaCastSDK.framework; path = "../vendor/Ooyala/OoyalaCastSDK-iOS/OoyalaCastSDK.framework"; sourceTree = "<group>"; };
 		FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,17 +96,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B1AFB821B0C026E00347DFA /* GoogleCast.framework in Frameworks */,
+				5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */,
+				5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */,
+				5E3B14391C5806D50078E075 /* GoogleCast.framework in Frameworks */,
 				0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */,
 				0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */,
-				FF49D21319CBABAE001B156F /* libxml2.dylib in Frameworks */,
-				FF49D21119CBABA2001B156F /* libc++.dylib in Frameworks */,
 				FF49D20F19CBAB91001B156F /* SystemConfiguration.framework in Frameworks */,
 				FF49D20D19CBAB84001B156F /* UIKit.framework in Frameworks */,
 				FF49D20B19CBAB78001B156F /* Foundation.framework in Frameworks */,
 				FF21F0DE19CB7A2100FE9D07 /* CoreText.framework in Frameworks */,
 				FF49D20919CBAB5A001B156F /* AdSupport.framework in Frameworks */,
-				FF49D20719CBAB50001B156F /* libz.dylib in Frameworks */,
 				FF49D20519CBAB3F001B156F /* EventKit.framework in Frameworks */,
 				FF49D20319CBAB28001B156F /* MessageUI.framework in Frameworks */,
 				FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */,
@@ -198,7 +195,6 @@
 		0B1AFBE71B0C0B5900347DFA /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				FF4A92FA1B0A607D00575391 /* GoogleCast.framework */,
 				FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */,
 				FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */,
 			);
@@ -226,14 +222,14 @@
 		FF49D21519CBAC4D001B156F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E3B143C1C5807430078E075 /* libz.tbd */,
+				5E3B143A1C5807230078E075 /* libxml2.tbd */,
+				5E3B14381C5806D40078E075 /* GoogleCast.framework */,
 				FF49D1FE19CBA9C6001B156F /* libWViPhoneAPI.a */,
-				FF49D21219CBABAE001B156F /* libxml2.dylib */,
-				FF49D21019CBABA2001B156F /* libc++.dylib */,
 				FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */,
 				FF49D20C19CBAB84001B156F /* UIKit.framework */,
 				FF49D20A19CBAB78001B156F /* Foundation.framework */,
 				FF49D20819CBAB5A001B156F /* AdSupport.framework */,
-				FF49D20619CBAB50001B156F /* libz.dylib */,
 				FF49D20419CBAB3F001B156F /* EventKit.framework */,
 				FF49D20219CBAB28001B156F /* MessageUI.framework */,
 				FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */,
