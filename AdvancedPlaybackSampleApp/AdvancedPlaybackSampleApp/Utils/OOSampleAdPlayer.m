@@ -131,4 +131,8 @@
 - (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity {
   
 }
+
+- (BOOL) isLiveClosedCaptionsAvailable {
+  return NO;
+}
 @end

@@ -287,4 +287,8 @@
 - (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+- (void)setVolumeButtonShowing:(BOOL)isShowing {
+
+}
 @end

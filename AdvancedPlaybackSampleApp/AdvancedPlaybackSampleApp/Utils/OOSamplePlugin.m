@@ -144,7 +144,11 @@
   [self.adPlayer destroy];
   
   // remove observer to make notifier consistent when dealloc
-  [_notifier removeObserver:self forKeyPath:@"state" context: nil];
+  @try{
+    [_notifier removeObserver:self forKeyPath:@"state" context: nil];
+  }@catch(id anException){
+    // Double removed, avoid crashing
+  }
 }
 
 - (void)reset {

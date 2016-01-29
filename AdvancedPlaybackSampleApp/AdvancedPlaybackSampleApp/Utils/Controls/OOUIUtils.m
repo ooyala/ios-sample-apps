@@ -67,7 +67,7 @@
 
   if (string == nil)
   {
-    return [NSData data];
+    return nil;
   }
 
   ixtext = 0;
@@ -178,6 +178,15 @@
 
 + (BOOL)is1xDensity {
   return [[UIScreen mainScreen] scale] == 1.0;
+}
+
++(void) runOnMainThread:(void (^)(void))block {
+  if( [NSThread isMainThread] ) {
+    block();
+  }
+  else {
+    dispatch_async(dispatch_get_main_queue(), block);
+  }
 }
 
 @end
