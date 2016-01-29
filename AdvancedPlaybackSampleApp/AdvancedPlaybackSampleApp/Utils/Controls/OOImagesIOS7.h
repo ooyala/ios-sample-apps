@@ -24,4 +24,11 @@
 + (UIImage *)thumbImage;
 + (UIImage *)routeImage;
 + (UIImage *)routeOnImage;
+
++ (UIImage *) castOffImage;
++ (UIImage *) castOnImage;
++ (UIImage *) castOn0Image;
++ (UIImage *) castOn1Image;
++ (UIImage *) castOn2Image;
++ (UIImage *) volumeImage;
 @end

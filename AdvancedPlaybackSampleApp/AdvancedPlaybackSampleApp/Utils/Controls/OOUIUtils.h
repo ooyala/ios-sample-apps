@@ -21,4 +21,11 @@
 
 + (BOOL)is1xDensity;
 
+/**
+ * If called on the main thread, the block will be invoked immediately.
+ * Otherwise it will be dispatched to run on the main thread.
+ * @param a block of code to run on the main thread.
+ */
++(void) runOnMainThread:(void (^)(void))block;
+
 @end
