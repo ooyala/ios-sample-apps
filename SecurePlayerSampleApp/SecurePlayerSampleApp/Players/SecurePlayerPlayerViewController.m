@@ -68,7 +68,7 @@
    appVersion:@"0.0.1"
    sessionId:@"sessionId"
    personalizationServerUrl:purl
-   engineType:VO_OSMP_AV_PLAYER];
+   engineType:VO_OSMP_VOME2_PLAYER];
 
 
 
