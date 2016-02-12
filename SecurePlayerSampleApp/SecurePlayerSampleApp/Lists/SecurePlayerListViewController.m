@@ -27,11 +27,10 @@
 
 - (void)addAllSecurePlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
-                                                                  embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                  embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
-
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Encrypted HLS VOD"
                                                                   embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"
