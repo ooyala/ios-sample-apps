@@ -30,13 +30,5 @@
   [self addCommonWithTitle:@"Ooyala Ad Mid-roll" embedCode:@"xhcmp0ZDpnDB2-hXvH7TsYVQKEk_89di"];
   [self addCommonWithTitle:@"Ooyala Ad Post-roll" embedCode:@"Rjcmp0ZDr5yFbZPEfLZKUveR_2JzZjMO"];
   [self addCommonWithTitle:@"Multi Ad combination" embedCode:@"Ftcmp0ZDoz8tALmhPcN2vMzCdg7YU9lc"];
-  [self addCommonWithTitle:@"Vast multi-ads" embedCode:@"trNnFwdTogG_HxAgEV01zWLg3o8umVEJ"];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"BYU Live"
-                                                            embedCode:@"Rva245YTpHWP-9bchhJL25BMl1shI2fG"
-                                                                pcode:@"Vpd3E6BNabnn09G72IWye5O2RzN1"
-                                                         playerDomain:@"http://www.byu.edu"
-                                                       viewController:[DefaultSkinPlayerViewController class]
-                                                                  nib: @"DefaultSkinPlayerView"]];
-
 }
 @end
