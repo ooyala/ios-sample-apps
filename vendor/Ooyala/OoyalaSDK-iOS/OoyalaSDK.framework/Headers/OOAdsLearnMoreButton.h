@@ -11,7 +11,11 @@
 /**
   A button that enables the customer to click on an advertisement, and learn more about the ad
  */
-@interface OOAdsLearnMoreButton : UIView<UIWebViewDelegate>
+#ifdef OoyalatvOS
+@interface OOAdsLearnMoreButton : UIView
+#else
+@interface OOAdsLearnMoreButton : UIView <UIWebViewDelegate>
+#endif
 
 /**
   Initializes the learn more button, to be connected to a specific Ad Player

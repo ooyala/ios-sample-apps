@@ -5,7 +5,6 @@
  * @date       11/21/11
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "OOOoyalaAPIClient.h"
@@ -14,7 +13,11 @@
  * Ooyala analytics implementation.
  * Normally used internally by Ooyala SDK and doesn't need to be referenced by app code.
  */
+#ifdef OoyalatvOS
+@interface OOAnalytics : NSObject
+#else
 @interface OOAnalytics : NSObject <UIWebViewDelegate>
+#endif
 
 @property(nonatomic) BOOL enabled; /**< @internal YES to allow sending analytics, NO to silence them. Default is YES. */
 @property(readonly, nonatomic) BOOL ready;  /**< @internal YES if OOAnalytics is ready to accept events, NO if not */
@@ -65,19 +68,6 @@
  * Report that the player was asked to replay
  */
 - (void)reportReplay;
-
-/** @internal
- * Delegate method for UIWebView for when the UIWebView finishes loading
- * @param[in] webView the UIWebView that finished loading
- */
-- (void)webViewDidFinishLoad:(UIWebView *)webView;
-
-/** @internal
- * Delegate method for UIWebView for when the UIWebView fails to load
- * @param[in] webView the UIWebView that failed to load
- * @param[in] error the NSError explaining the failure
- */
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
 
 /**
  * Sets a tag for custom analytics

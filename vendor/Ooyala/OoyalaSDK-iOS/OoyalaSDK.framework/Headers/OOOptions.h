@@ -6,6 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "OOSecureURLGenerator.h"
 
 @class OOFCCTVRatingConfiguration;
 
@@ -21,23 +22,12 @@
 @property (nonatomic) BOOL preloadContent; /** If set to YES, load the content when the required information and authorization is available.If set to NO,  load the content after the pre-roll (if a pre-roll is available). Default: YES */
 @property (nonatomic) BOOL showPromoImage; /** If set to YES, show the promo image if a promo image is available. Default: NO */
 @property (nonatomic) NSTimeInterval connectionTimeout; /** The timeout value for network requests. Default: 60.0 seconds */
+@property (nonatomic) id<OOSecureURLGenerator> secureURLGenerator; /** Helper for signing URLs with provider's secret and API key. */
 
 /**
  * Initialize an OOOptions object with the all properties with default values
  * @returns the initialized OOOptions
  */
 -(instancetype) init;
-
-/**
- * Initialize an OOOptions object with the given parameters
- * @returns the initialized OOOptions
- */
--(instancetype) initWithTVRatingsConfiguration:(OOFCCTVRatingConfiguration *)tvRatingConfiguration
-                                 showCuePoints:(BOOL)showCuePoints
-                       showLiveContentScrubber:(BOOL)showLiveContentScrubber
-                               showAdsControls:(BOOL)showAdsControls
-                                preloadContent:(BOOL)preloadContent
-                                showPromoImage:(BOOL)showPromoImage
-                             connectionTimeout:(NSTimeInterval)connectionTimeout;
 
 @end

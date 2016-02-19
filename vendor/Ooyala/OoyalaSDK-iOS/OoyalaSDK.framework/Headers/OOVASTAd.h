@@ -26,6 +26,7 @@ OOVASTAdData *_adData;
 @property(readonly, nonatomic) NSMutableArray *sequence;         /**< the ordered sequence of the Ad (NSMutableArray of OOVASTSequenceItem) */
 @property(readonly, nonatomic) NSDictionary *extensions;         /**< the extensions of the Ad */
 
+@property(readwrite, nonatomic) float adSequence;                /**< the sequence of the Ad */
 -(instancetype) init __attribute__((unavailable("init not available")));
 
 /** @internal
@@ -34,6 +35,8 @@ OOVASTAdData *_adData;
  * @returns the initialized OOVASTAd
  */
 - (id)initWithXML:(OOTBXMLElement *)xml;
+
+- (void)setAdSequence:(float)adSequence;
 
 /** @internal
  * Update the OOVASTAd using the specified xml (subclasses should override this)

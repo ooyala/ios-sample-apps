@@ -18,4 +18,5 @@
 @property(nonatomic, strong) NSMutableArray *impressionURLs;   /**< the impression URLs of the Ad */
 @property(nonatomic, strong) __block NSMutableArray *sequence; /**< the ordered sequence of the Ad (NSMutableArray of OOVASTSequenceItem) */
 @property(nonatomic) NSDictionary *extensions;                 /**< the extensions of the Ad */
+@property(nonatomic) float adSequence;                     /**< the sequence of the Ad */
 @end
