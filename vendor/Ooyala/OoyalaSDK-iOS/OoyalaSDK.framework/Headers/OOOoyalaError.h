@@ -34,6 +34,7 @@ typedef enum {
   OOOoyalaErrorCodeDiscoveryInvalidParameter, /**< The expected discovery parameters are not provided */
   OOOoyalaErrorCodeDiscoveryNetworkError, /**< The discovery response is not received due to network errors */
   OOOoyalaErrorCodeDiscoveryFailedResponse, /**< The discovery reponse is received and an error occured on server side */
+  OOOoyalaErrorCodeNoAvailableStreams, /**< There were no streams available to play */
 } OOOoyalaErrorCode;
 
 

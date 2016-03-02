@@ -13,6 +13,7 @@
 @class OOPlayerAPIClient;
 @class OOChannel;
 @class OOClosedCaptions;
+@class OOUnbundledVideo;
 
 /**
  * this class implements video stream object
@@ -31,6 +32,19 @@
 @property(readonly, nonatomic, strong) OOChannel *parent;                /**< This OOVideo's parent OOChannel if it exists (could be a OODynamicChannel) */
 @property(readonly, nonatomic) Float64 duration;                       /**< The OOVideo's Total Duration (Length) */
 @property(readonly, nonatomic) BOOL live;                              /**< Whether or not the video is live */
+
+/**
+ * Initialize a OOVideo using the specified data (subclasses should override this)
+ * @param[in] unbundledVideo defines the streams and ads to use initializing the OOVideo.
+ */
+- (id)initWithUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
+
+/** @internal
+ * Initialize a OOVideo using the specified data (subclasses should override this)
+ * @param[in] theStreams NSArray containing OOStreams.
+ * @param[in] theAds NSArray containing OOManagedAdSpots.
+ */
+- (id)initWithUnbundledStreams:(NSArray*)theStreams ads:(NSArray*)theAds;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)

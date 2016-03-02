@@ -18,6 +18,8 @@
 #import "OOAdPluginManagerProtocol.h"
 #import "OOStateNotifier.h"
 #import "OOPlayerProtocol.h"
+#import "OOStream.h"
+#import "OOUnbundledVideo.h"
 
 @class OOContentItem;
 @class OOVideo;
@@ -241,6 +243,22 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
              domain:(OOPlayerDomain *)domain
 embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
             options:(OOOptions*)options;
+
+/**
+ * @param[in] stream non-nil, non-empty NSArray containing OOStreams.
+ */
+- (BOOL)setStream:(OOStream*)stream;
+
+/**
+ * @param[in] streams non-nil, non-empty NSArray containing OOStreams.
+ */
+- (BOOL)setStreams:(NSArray*)streams;
+
+/**
+ * Casting of OOUnbundledVideo is not supported.
+ * @param[in] unbundledVideo non-nil OOUnbundledVideo containing OOStreams.
+ */
+- (BOOL)setUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
 
 /**
  * Reinitializes the player with a new embedCode.

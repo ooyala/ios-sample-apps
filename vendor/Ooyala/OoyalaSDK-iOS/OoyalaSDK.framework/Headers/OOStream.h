@@ -54,6 +54,13 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
  */
 - (NSInteger)combinedBitrate;
 
+/**
+ * Create a stream for the given URL.
+ * @param[in] theUrl an NSURL pointing to an asset for streaming.
+ * @param[in] theType see OOConstants.h e.g. OO_DELIVERY_TYPE_HLS.
+ */
+- (id)initWithUrl:(NSURL *)theUrl deliveryType:(NSString *)theType;
+
 /** @internal
  * Initialize a OOStream using the specified data (subclasses should override this)
  * @param[in] data the NSDictionary containing the data to use to initialize this OOStream
