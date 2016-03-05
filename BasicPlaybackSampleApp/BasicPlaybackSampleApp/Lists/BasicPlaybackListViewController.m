@@ -7,6 +7,7 @@
 
 #import "BasicPlaybackListViewController.h"
 #import "BasicSimplePlayerViewController.h"
+#import "MultiVideosPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 #import "QRScannerViewController.h"
 
@@ -41,6 +42,8 @@
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Ad Post-roll" embedCode:@"Rjcmp0ZDr5yFbZPEfLZKUveR_2JzZjMO" viewController: [BasicSimplePlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Multi Ad combination" embedCode:@"Ftcmp0ZDoz8tALmhPcN2vMzCdg7YU9lc" viewController: [BasicSimplePlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Scan Code" embedCode:@"" viewController: [BasicSimplePlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Multi Videos Combination" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [MultiVideosPlayerViewController class]]];
+
 }
 
 - (void)viewDidLoad {
