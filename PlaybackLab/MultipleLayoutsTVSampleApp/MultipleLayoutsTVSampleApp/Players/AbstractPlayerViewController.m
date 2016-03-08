@@ -7,7 +7,7 @@
 //
 
 #import "AbstractPlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaTVSDK/OOOoyalaPlayer.h>
 
 @interface AbstractPlayerViewController ()
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <OoyalaSDK/OOOoyalaTVPlayerViewController.h>
+#import <OoyalaTVSDK/OOOoyalaTVPlayerViewController.h>
 
 @class PlayerSelectionOption;
 

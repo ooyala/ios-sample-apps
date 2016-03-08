@@ -8,9 +8,9 @@
 
 #import "ChildPlayerViewController.h"
 #import "PlayerSelectionOption.h"
-#import <OoyalaSDK/OOOoyalaTVPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaTVSDK/OOOoyalaTVPlayerViewController.h>
+#import <OoyalaTVSDK/OOOoyalaPlayer.h>
+#import <OoyalaTVSDK/OOPlayerDomain.h>
 
 @interface ChildPlayerViewController ()
 
