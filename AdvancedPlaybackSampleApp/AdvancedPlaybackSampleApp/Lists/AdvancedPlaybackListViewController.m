@@ -12,6 +12,7 @@
 #import "ChangeVideoPlayerViewController.h"
 #import "CustomControlsPlayerViewController.h"
 #import "CustomOverlayPlayerViewController.h"
+#import "UnbundledPlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface AdvancedPlaybackListViewController ()
@@ -32,6 +33,7 @@
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Play With InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [PlayWithInitialTimePlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [CustomControlsPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Overlay" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [CustomOverlayPlayerViewController class]]];
+ [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Unbundled HLS" embedCode:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8" viewController: [UnbundledPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
