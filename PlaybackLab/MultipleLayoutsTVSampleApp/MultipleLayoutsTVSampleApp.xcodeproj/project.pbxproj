@@ -9,9 +9,16 @@
 /* Begin PBXBuildFile section */
 		CA49FD4A1C8E4D8A0017E19F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD491C8E4D8A0017E19F /* main.m */; };
 		CA49FD4D1C8E4D8A0017E19F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD4C1C8E4D8A0017E19F /* AppDelegate.m */; };
-		CA49FD501C8E4D8A0017E19F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD4F1C8E4D8A0017E19F /* ViewController.m */; };
 		CA49FD531C8E4D8A0017E19F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA49FD511C8E4D8A0017E19F /* Main.storyboard */; };
 		CA49FD551C8E4D8A0017E19F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA49FD541C8E4D8A0017E19F /* Assets.xcassets */; };
+		CA49FD601C8E84440017E19F /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD5F1C8E84440017E19F /* VideoTableViewController.m */; };
+		CA49FD671C8E84520017E19F /* AbstractPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD621C8E84520017E19F /* AbstractPlayerViewController.m */; };
+		CA49FD681C8E84520017E19F /* ChildPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD641C8E84520017E19F /* ChildPlayerViewController.m */; };
+		CA49FD691C8E84520017E19F /* FullscreenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD661C8E84520017E19F /* FullscreenPlayerViewController.m */; };
+		CA49FD6E1C8E91460017E19F /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD6D1C8E91460017E19F /* OoyalaSDK.framework */; };
+		CA49FD721C8E91B30017E19F /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD711C8E91B30017E19F /* PlayerSelectionOption.m */; };
+		CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */; };
+		CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD751C8E98640017E19F /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,11 +26,22 @@
 		CA49FD491C8E4D8A0017E19F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA49FD4B1C8E4D8A0017E19F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA49FD4C1C8E4D8A0017E19F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA49FD4E1C8E4D8A0017E19F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CA49FD4F1C8E4D8A0017E19F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CA49FD521C8E4D8A0017E19F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA49FD541C8E4D8A0017E19F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA49FD561C8E4D8A0017E19F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA49FD5E1C8E84440017E19F /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoTableViewController.h; path = Lists/VideoTableViewController.h; sourceTree = "<group>"; };
+		CA49FD5F1C8E84440017E19F /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoTableViewController.m; path = Lists/VideoTableViewController.m; sourceTree = "<group>"; };
+		CA49FD611C8E84520017E19F /* AbstractPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractPlayerViewController.h; path = Players/AbstractPlayerViewController.h; sourceTree = "<group>"; };
+		CA49FD621C8E84520017E19F /* AbstractPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractPlayerViewController.m; path = Players/AbstractPlayerViewController.m; sourceTree = "<group>"; };
+		CA49FD631C8E84520017E19F /* ChildPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildPlayerViewController.h; path = Players/ChildPlayerViewController.h; sourceTree = "<group>"; };
+		CA49FD641C8E84520017E19F /* ChildPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildPlayerViewController.m; path = Players/ChildPlayerViewController.m; sourceTree = "<group>"; };
+		CA49FD651C8E84520017E19F /* FullscreenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FullscreenPlayerViewController.h; path = Players/FullscreenPlayerViewController.h; sourceTree = "<group>"; };
+		CA49FD661C8E84520017E19F /* FullscreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FullscreenPlayerViewController.m; path = Players/FullscreenPlayerViewController.m; sourceTree = "<group>"; };
+		CA49FD6D1C8E91460017E19F /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
+		CA49FD701C8E91B30017E19F /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerSelectionOption.h; path = Utils/PlayerSelectionOption.h; sourceTree = "<group>"; };
+		CA49FD711C8E91B30017E19F /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerSelectionOption.m; path = Utils/PlayerSelectionOption.m; sourceTree = "<group>"; };
+		CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CA49FD751C8E98640017E19F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */,
+				CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */,
+				CA49FD6E1C8E91460017E19F /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				CA49FD471C8E4D8A0017E19F /* MultipleLayoutsTVSampleApp */,
+				CA49FD6A1C8E84E00017E19F /* Frameworks */,
 				CA49FD461C8E4D8A0017E19F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,10 +78,11 @@
 		CA49FD471C8E4D8A0017E19F /* MultipleLayoutsTVSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA49FD6F1C8E919D0017E19F /* Utils */,
+				CA49FD5D1C8E83DF0017E19F /* Players */,
+				CA49FD5C1C8E83D60017E19F /* Lists */,
 				CA49FD4B1C8E4D8A0017E19F /* AppDelegate.h */,
 				CA49FD4C1C8E4D8A0017E19F /* AppDelegate.m */,
-				CA49FD4E1C8E4D8A0017E19F /* ViewController.h */,
-				CA49FD4F1C8E4D8A0017E19F /* ViewController.m */,
 				CA49FD511C8E4D8A0017E19F /* Main.storyboard */,
 				CA49FD541C8E4D8A0017E19F /* Assets.xcassets */,
 				CA49FD561C8E4D8A0017E19F /* Info.plist */,
@@ -74,6 +97,47 @@
 				CA49FD491C8E4D8A0017E19F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA49FD5C1C8E83D60017E19F /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				CA49FD5E1C8E84440017E19F /* VideoTableViewController.h */,
+				CA49FD5F1C8E84440017E19F /* VideoTableViewController.m */,
+			);
+			name = Lists;
+			sourceTree = "<group>";
+		};
+		CA49FD5D1C8E83DF0017E19F /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				CA49FD611C8E84520017E19F /* AbstractPlayerViewController.h */,
+				CA49FD621C8E84520017E19F /* AbstractPlayerViewController.m */,
+				CA49FD631C8E84520017E19F /* ChildPlayerViewController.h */,
+				CA49FD641C8E84520017E19F /* ChildPlayerViewController.m */,
+				CA49FD651C8E84520017E19F /* FullscreenPlayerViewController.h */,
+				CA49FD661C8E84520017E19F /* FullscreenPlayerViewController.m */,
+			);
+			name = Players;
+			sourceTree = "<group>";
+		};
+		CA49FD6A1C8E84E00017E19F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA49FD751C8E98640017E19F /* MediaPlayer.framework */,
+				CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */,
+				CA49FD6D1C8E91460017E19F /* OoyalaSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA49FD6F1C8E919D0017E19F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA49FD701C8E91B30017E19F /* PlayerSelectionOption.h */,
+				CA49FD711C8E91B30017E19F /* PlayerSelectionOption.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA49FD501C8E4D8A0017E19F /* ViewController.m in Sources */,
+				CA49FD601C8E84440017E19F /* VideoTableViewController.m in Sources */,
+				CA49FD671C8E84520017E19F /* AbstractPlayerViewController.m in Sources */,
+				CA49FD721C8E91B30017E19F /* PlayerSelectionOption.m in Sources */,
 				CA49FD4D1C8E4D8A0017E19F /* AppDelegate.m in Sources */,
+				CA49FD681C8E84520017E19F /* ChildPlayerViewController.m in Sources */,
+				CA49FD691C8E84520017E19F /* FullscreenPlayerViewController.m in Sources */,
 				CA49FD4A1C8E4D8A0017E19F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +318,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = MultipleLayoutsTVSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
@@ -262,6 +335,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = MultipleLayoutsTVSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
