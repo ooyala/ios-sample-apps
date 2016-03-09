@@ -92,4 +92,10 @@
  */
 - (NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSeconds;
 
+/**
+ * Called when an icon is clicked
+ * @param index the index of the icon
+ */
+- (void)onAdIconClicked: (NSInteger) index;
+
 @end

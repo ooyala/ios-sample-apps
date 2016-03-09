@@ -21,6 +21,7 @@
   NSMutableArray *streams;
 }
 
+@property(readonly, nonatomic) NSMutableArray *icons;
 @property(readonly, nonatomic) Float64 skipoffset;
 @property(readonly, nonatomic) Float64 duration;                            /**< The duration of the ad in seconds */
 @property(readonly, nonatomic, strong) NSMutableDictionary *trackingEvents; /**< The tracking events in an NSMutableDictionary of event name to NSMutableArray of NSString */

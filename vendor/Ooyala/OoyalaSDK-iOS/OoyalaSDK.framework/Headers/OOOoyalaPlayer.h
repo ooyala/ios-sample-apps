@@ -532,4 +532,10 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOOoyalaAPIClient *)api;
 
+/**
+ * Called when an icon is clicked
+ * @param index the index of the icon
+ */
+- (void) onAdIconClicked: (NSInteger) index;
+
 @end

@@ -29,6 +29,7 @@
 @interface OOPerformanceMonitor : NSObject
 +(OOPerformanceMonitor *) getStandardMonitor; /**< Returns an instance of OOPerformanceMonitor configured with standard monitoring. */
 -(instancetype) init __attribute__((unavailable("init not available")));
+-(instancetype) initWithWatches:(NSSet*)watches notificationCenter:(NSNotificationCenter*)notificationCenter;
 -(OOPerformanceStatisticsSnapshot *) buildStatisticsSnapshot;
 @end
 

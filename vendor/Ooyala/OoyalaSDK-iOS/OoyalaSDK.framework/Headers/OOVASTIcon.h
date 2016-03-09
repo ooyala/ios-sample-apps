@@ -10,7 +10,6 @@
 #import "OOTBXML.h"
 
 typedef enum {
-  None,
   Static,
   IFrame,
   HTML
