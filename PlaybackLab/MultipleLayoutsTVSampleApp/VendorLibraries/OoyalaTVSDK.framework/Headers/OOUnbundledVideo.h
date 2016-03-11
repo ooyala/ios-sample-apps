@@ -6,8 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OOPlayableItem.h"
-#import "OOContentItem.h"
 #import "OOStream.h"
 #import "OOVideo.h"
 
@@ -15,7 +13,7 @@
 
 #define OO_UNBUNDLED_EMBED_CODE @"UNBUNDLED"
 
-@interface OOUnbundledVideo : OOContentItem <OOPlayableItem>
+@interface OOUnbundledVideo : NSObject
 
 @property(nonatomic, readonly) NSArray *streams; /**< contains OOStreams. */
 @property(nonatomic, readonly) NSArray *ads; /**< contains OOManagedAdSpots. */
