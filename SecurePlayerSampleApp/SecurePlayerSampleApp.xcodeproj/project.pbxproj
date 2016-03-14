@@ -35,6 +35,8 @@
 		0BC947DD1A817756004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947D71A817756004CB997 /* TableCell.xib */; };
 		0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */; };
 		0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */; };
+		0BCEFB801C976E4900DCC36C /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCEFB7E1C976E4900DCC36C /* BasicSimplePlayerViewController.h */; };
+		0BCEFB811C976E4900DCC36C /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEFB7F1C976E4900DCC36C /* BasicSimplePlayerViewController.m */; };
 		0BD849FD1B911512006CB6D0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849FC1B911512006CB6D0 /* libz.dylib */; };
 		0BD849FF1B911519006CB6D0 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD849FE1B911519006CB6D0 /* libresolv.dylib */; };
 		0BD84A001B91151F006CB6D0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
@@ -109,6 +111,8 @@
 		0BC947D71A817756004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
+		0BCEFB7E1C976E4900DCC36C /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
+		0BCEFB7F1C976E4900DCC36C /* BasicSimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSimplePlayerViewController.m; sourceTree = "<group>"; };
 		0BD849F81B911275006CB6D0 /* OoyalaSecurePlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSecurePlayerSDK.framework; sourceTree = "<group>"; };
 		0BD849F91B911275006CB6D0 /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurePlayer.framework; sourceTree = "<group>"; };
 		0BD849FC1B911512006CB6D0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -251,6 +255,8 @@
 		0B19FEDB1A3AB4B4003E57DF /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				0BCEFB7E1C976E4900DCC36C /* BasicSimplePlayerViewController.h */,
+				0BCEFB7F1C976E4900DCC36C /* BasicSimplePlayerViewController.m */,
 				0B92BC961BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h */,
 				0B92BC971BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m */,
 				0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */,
@@ -339,6 +345,7 @@
 				0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */,
 				0B19FEDE1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h in Headers */,
 				0B92BC981BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h in Headers */,
+				0BCEFB801C976E4900DCC36C /* BasicSimplePlayerViewController.h in Headers */,
 				0BD84A271B912588006CB6D0 /* PlayerSelectionOption.h in Headers */,
 				9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */,
 			);
@@ -459,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9782DB021BFC1E9E0094A660 /* QRScannerViewController.m in Sources */,
+				0BCEFB811C976E4900DCC36C /* BasicSimplePlayerViewController.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				0B92BC991BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m in Sources */,
 				0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */,

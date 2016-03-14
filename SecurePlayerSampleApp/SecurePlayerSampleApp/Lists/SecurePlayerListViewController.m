@@ -8,6 +8,7 @@
 #import "SecurePlayerPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 #import "SecurePlayerOPTPlayerViewController.h"
+#import "BasicSimplePlayerViewController.h"
 #import "PlayerSelectionOption.h"
 #import "QRScannerViewController.h"
 
@@ -32,11 +33,13 @@
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
 
+  /* Encrypted HLS requires you to playback video throught the AVPlayer, not through the SecurePlayer */
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Encrypted HLS VOD"
                                                                   embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                      domain:@"http://www.ooyala.com"
-                                                             viewController:[SecurePlayerPlayerViewController class]]];
+                                                             viewController:[BasicSimplePlayerViewController class]]];
+
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Clear HLS VOD"
                                                                   embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                                       pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
