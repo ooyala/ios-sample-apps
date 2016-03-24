@@ -1,8 +1,7 @@
 //
 //  FullscreenPlayerViewController.m
-//  SampleTVOSApp
+//  MultipleLayoutsTVSampleApp
 //
-//  Created by Eric Vargas on 2/11/16.
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
@@ -30,8 +29,12 @@
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationHandler:) name:nil object:self.player];
   
-  [self.player setEmbedCode:self.option.embedCode];
-  [self.player play];
+  // currently, enables seek backward or forward using remote control left and right
+  self.showsPlaybackControls = YES;
+  
+  if ([self.player setEmbedCode:self.option.embedCode]) {
+    [self.player play];
+  }
 }
 
 - (void)notificationHandler:(NSNotification *)notification

@@ -2,7 +2,6 @@
 //  AppDelegate.m
 //  MultipleLayoutsTVSampleApp
 //
-//  Created by Eric Vargas on 3/7/16.
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 

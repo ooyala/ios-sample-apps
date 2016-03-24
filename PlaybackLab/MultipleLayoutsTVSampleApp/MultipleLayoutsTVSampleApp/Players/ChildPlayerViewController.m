@@ -1,8 +1,7 @@
 //
 //  ChildPlayerViewController.m
-//  SampleTVOSApp
+//  MultipleLayoutsTVSampleApp
 //
-//  Created by Eric Vargas on 2/11/16.
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
@@ -43,6 +42,8 @@
   self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController didMoveToParentViewController:self];
+  
+  self.ooyalaPlayerViewController.showsPlaybackControls = NO;
   
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.option.embedCode];

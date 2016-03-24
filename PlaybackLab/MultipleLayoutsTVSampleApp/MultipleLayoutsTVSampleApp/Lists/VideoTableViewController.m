@@ -1,8 +1,7 @@
 //
 //  VideoTableViewController.m
-//  SampleTVOSApp
+//  MultipleLayoutsTVSampleApp
 //
-//  Created by Eric Vargas on 2/11/16.
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
@@ -13,7 +12,7 @@
 
 @interface VideoTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *options; // of Video.h
+@property (nonatomic, strong) NSMutableArray *options; // of PlayerSelectionOption
 
 @end
 
