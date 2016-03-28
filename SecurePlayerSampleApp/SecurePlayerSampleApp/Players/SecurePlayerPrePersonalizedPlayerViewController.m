@@ -81,7 +81,9 @@
    sessionId:SESSION_ID
    personalizationServerUrl:[OOSecurePlayerDrmWorkflow calculatePersonalizationURLWithPcode:self.pcode]
    delegate:^(DxDrmManagerStatus status) {
-     NSLog( @"pre-personalization %@", status==DX_MANAGER_SUCCESS?@"OK":@"ERROR" );
+     void (^myblock)(void) = ^{ NSLog( @"pre-personalization: %@", status==DX_MANAGER_SUCCESS?@"OK":@"ERROR" ); };
+     if( [NSThread isMainThread] ) { myblock(); }
+     else { dispatch_async(dispatch_get_main_queue(), myblock); }
    }];
 
   // Attach it to current view
