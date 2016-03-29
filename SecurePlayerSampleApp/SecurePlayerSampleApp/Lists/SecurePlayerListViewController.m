@@ -8,6 +8,7 @@
 #import "SecurePlayerPlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
 #import "SecurePlayerOPTPlayerViewController.h"
+#import "SecurePlayerPrePersonalizedPlayerViewController.h"
 #import "BasicSimplePlayerViewController.h"
 #import "PlayerSelectionOption.h"
 #import "QRScannerViewController.h"
@@ -75,6 +76,11 @@
                                                                       pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
+  [self insertNewObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-Personalize"
+                                                           embedCode:@"5jNzJuazpFtKmloYZQmgPeC_tqDKHX9r"
+                                                               pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
+                                                              domain:@"http://www.ooyala.com"
+                                                      viewController:[SecurePlayerPrePersonalizedPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Scan code"
                                                                   embedCode:@""
                                                                       pcode:@""
