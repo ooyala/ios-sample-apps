@@ -559,13 +559,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/jacques/work/videoplaza/ios-sample-apps/vendor/Freewheel",
+					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)",
-					"/Users/jacques/work/videoplaza/ios-sample-apps/vendor/Ooyala/OoyalaFreewheelSDK-iOS",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaSkinSDK-iOS",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaSDK-iOS",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaPulseIntegration-iOS",
 				);
 				INFOPLIST_FILE = PulseSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -592,13 +587,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/jacques/work/videoplaza/ios-sample-apps/vendor/Freewheel",
+					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)",
-					"/Users/jacques/work/videoplaza/ios-sample-apps/vendor/Ooyala/OoyalaFreewheelSDK-iOS",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaSkinSDK-iOS",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaSDK-iOS",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaPulseIntegration-iOS",
 				);
 				INFOPLIST_FILE = PulseSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
