@@ -31,9 +31,9 @@
            [[PlayerSelectionOption alloc] initWithTitle:@"HLS"
                                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"],
            [[PlayerSelectionOption alloc] initWithTitle:@"eHLS"
-                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"],
+                                              embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"],
            [[PlayerSelectionOption alloc] initWithTitle:@"MP4"
-                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"],
+                                              embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx"],
            ];
 }
 
