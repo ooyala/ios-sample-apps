@@ -12,7 +12,9 @@
 @interface PlayerSelectionOption : NSObject
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *embedCode;
+@property (nonatomic, strong) Class hostVC;
 
 - (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode;
+- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode viewController:(Class)hostVC;
 
 @end

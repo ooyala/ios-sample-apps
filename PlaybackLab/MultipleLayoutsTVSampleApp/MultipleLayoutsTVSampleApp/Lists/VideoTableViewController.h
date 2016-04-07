@@ -9,4 +9,6 @@
 
 @interface VideoTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *assets;
+
 @end
