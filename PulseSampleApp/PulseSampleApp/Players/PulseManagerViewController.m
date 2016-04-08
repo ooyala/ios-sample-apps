@@ -54,7 +54,10 @@
   // Create Ooyala ViewController
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:PCODE
                                                domain:[[OOPlayerDomain alloc] initWithString:PLAYER_DOMAIN]];
-  
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:self.player];
   [self prepareSkinned];
   //[self prepareUnskinned];
   
@@ -129,4 +132,16 @@
                              requestSettings:requestSettings];
 }
 
+- (void) notificationHandler:(NSNotification*) notification {
+
+  // Ignore TimeChangedNotificiations for shorter logs
+  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    return;
+  }
+
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+        [notification name],
+        [OOOoyalaPlayer playerStateToString:[self.player state]],
+        [self.player playheadTime]);
+}
 @end
