@@ -30,6 +30,7 @@
 @property(readonly, nonatomic, strong) NSMutableArray *clickTrackingURLs;   /**< The click tracking urls in an NSMutableArray of NSString */
 @property(readonly, nonatomic, strong) NSMutableArray *customClickURLs;     /**< The custom click urls in an NSMutableArray of NSString */
 @property(readonly, nonatomic, strong) NSMutableArray *streams;             /**< The streams in an NSMutableArray of OOStream */
+@property(readonly, nonatomic, strong) NSMutableArray *errorCodes;          /**< The error codes */
 
 /** @internal
  * Initialize a OOVASTLinearAd using the specified xml (subclasses should override this)

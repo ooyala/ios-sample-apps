@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 extern float const OO_MINIMUM_SUPPORTED_VAST_VERSION;         /**< The minimum supported VAST version */
+extern float const OO_MINIMUM_SUPPORTED_VMAP_VERSION;         /**< The minimum supported VMAP version */
+extern float const OO_MAXIMUM_SUPPORTED_VMAP_VERSION;         /**< The maximum supported VMAP version */
 extern char *const OO_ELEMENT_VAST;                           /**< The XML element name for VAST */
 extern char *const OO_ELEMENT_AD;                             /**< The XML element name for Ad */
 extern char *const OO_ELEMENT_IN_LINE;                        /**< The XML element name for InLine */
@@ -54,6 +56,13 @@ extern char *const OO_ELEMENT_ICON_VIEW_TRACKING;             /**< The XML eleme
 extern char *const OO_ELEMENT_STATIC_RESOURCE;                /**< The XML element name for staticResource */
 extern char *const OO_ELEMENT_IFRAME_RESOURCE;                /**< The XML element name for iframeResource */
 extern char *const OO_ELEMENT_HTML_RESOURCE;                  /**< The XML element name for htmlResource */
+extern char *const OO_ELEMENT_VMAP;                           /**< The XML element name for vmap */
+extern char *const OO_ELEMENT_ADBREAK;                        /**< The XML element name for vmap ad break */
+extern char *const OO_ELEMENT_ADSOURCE;                       /**< The XML element name for vmap ad source */
+extern char *const OO_ELEMENT_ADTAGURI;                       /**< The XML element name for vmap ad tag uri */
+extern char *const OO_ELEMENT_VASTADDATA;                     /**< The XML element name for vast ad data */
+extern char *const OO_ELEMENT_CUSTOMADATA;                     /**< The XML element name for custom ad data */
+
 extern NSString *const OO_ATTRIBUTE_VERSION;                  /**< The XML attribute name for version */
 extern NSString *const OO_ATTRIBUTE_ID;                       /**< The XML attribute name for id */
 extern NSString *const OO_ATTRIBUTE_SEQUENCE;                 /**< The XML attribute name for sequence */
@@ -78,5 +87,22 @@ extern NSString *const OO_ATTRIBUTE_OFFSET;                   /**< The XML attri
 extern NSString *const OO_ATTRIBUTE_DURATEION;                /**< The XML attribute name for duration */
 extern NSString *const OO_ATTRIBUTE_CREATIVE_TYPE;            /**< The XML attribute name for creativeType */
 
+extern NSString *const OO_ATTRIBUTE_TIMEOFFSET;               /**< The XML attribute name for time offset */
+extern NSString *const OO_ATTRIBUTE_BREAKTYPE;                /**< The XML attribute name for break type */
+extern NSString *const OO_ATTRIBUTE_BREAKID;                  /**< The XML attribute name for break ID */
+extern NSString *const OO_ATTRIBUTE_REPEAT_AFTER;             /**< The XML attribute name for repeat after */
+extern NSString *const OO_ATTRIBUTE_ALLOW_MULTIPLE_ADS;       /**< The XML attribute name for allow multiple ads */
+extern NSString *const OO_ATTRIBUTE_FOLLOW_REDIRECTS;         /**< The XML attribute name for follow redirects */
+extern NSString *const OO_ATTRIBUTE_TEMPLATE_TYPE;            /**< The XML attribute name for template type */
+
 extern NSString *const OO_MIME_TYPE_MP4;                      /**< The MIME type for .mp4 files */
 extern NSString *const OO_MIME_TYPE_M3U8;                     /**< The MIME type for .m3u8 files */
+
+extern NSInteger const OO_ERROR_XML_PARSE;                    /**< The code of XML parsing error */
+extern NSInteger const OO_ERROR_VAST_SCHEMA;                  /**< The code of VAST schema validation error */
+extern NSInteger const OO_ERROR_VAST_VERSION;                 /**< The code of VAST version of response not supported error */
+extern NSInteger const OO_ERROR_GENERAL_WRAPPER;              /**< The code of General Wrapper error */
+extern NSInteger const OO_ERROR_WRAPPER_LIMIT;                /**< The code of Wrapper limit reached error */
+extern NSInteger const OO_ERROR_VAST_RESPONSE_WRAPPER;        /**< The code of No ads VAST response after Wrappers error */
+extern NSInteger const OO_ERROR_GENERAL_LINEAR;               /**< The code of General linear error */
+extern NSInteger const OO_ERROR_GENERAL_NONLINEAR_ADS;        /**< The code of General NonLinear ads error */
