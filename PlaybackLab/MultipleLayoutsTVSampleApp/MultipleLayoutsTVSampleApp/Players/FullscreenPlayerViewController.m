@@ -8,12 +8,17 @@
 #import "FullscreenPlayerViewController.h"
 #import <OoyalaTVSDK/OOOoyalaPlayer.h>
 #import <OoyalaTVSDK/OOPlayerDomain.h>
+#import <OoyalaTVSDK/OOEmbedTokenGenerator.h>
+#import <OoyalaTVSDK/OOEmbeddedSecureURLGenerator.h>
 #import "PlayerSelectionOption.h"
 
-@interface FullscreenPlayerViewController ()
+@interface FullscreenPlayerViewController () <OOEmbedTokenGenerator>
 
 @property (nonatomic, strong) NSString *pcode;
 @property (nonatomic, strong) NSString *playerDomain;
+@property (nonatomic, strong) NSString *apiKey;
+@property (nonatomic, strong) NSString *secret;
+@property (nonatomic, strong) NSString *authorizeHost;
 
 @end
 
@@ -22,10 +27,17 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
+  self.pcode =@"c0cTkxOqALQviQIGAHWY5hP0q9gU";
+  self.apiKey = @"<ADD API KEY>";
+  self.secret = @"<ADD SECRET>";
+  self.authorizeHost = @"http://player.ooyala.com";
   self.playerDomain = @"http://www.ooyala.com";
   
-  self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  if (self.option.needsAuthorization) {
+    self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
+  } else {
+    self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  }
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationHandler:) name:nil object:self.player];
   
@@ -47,6 +59,18 @@
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.player state]],
         [self.player playheadTime]);
+}
+
+#pragma mark - OOEmbedTokenGenerator
+
+- (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
+  NSMutableDictionary* params = [NSMutableDictionary dictionary];
+  
+  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  
+  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
+  NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
+  callback([embedTokenUrl absoluteString]);
 }
 
 @end
