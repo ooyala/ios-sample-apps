@@ -37,14 +37,6 @@ OOVASTAdData *_adData;
  */
 - (id)initWithXML:(OOTBXMLElement *)xml;
 
-/** @internal
- * Initialize a OOVASTAd using the specified xml (subclasses should override this) and version
- * @param[in] xml the OOTBXMLElement containing the xml to use to initialize this OOVASTAd
- * @param[in] version the OOTBXMLElement contatining the version to use to initialize the OOVastAd
- * @returns the initialized OOVASTAd
- */
-- (id)initWithXML:(OOTBXMLElement *)xml version:(NSString *)version;
-
 - (void)setAdSequence:(float)adSequence;
 
 /** @internal

@@ -20,4 +20,5 @@
 - (void) bridgeCurrentItemChangedNotification:(NSNotification *)notification;
 - (void) bridgeErrorNotification:(NSNotification *)notification;
 - (void) bridgeStateChangedNotification:(NSNotification *)notification;
+- (void) bridgeDesiredStateChangedNotification:(NSNotification *)notification;
 @end
