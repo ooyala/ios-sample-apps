@@ -112,6 +112,10 @@ typedef NS_ENUM(NSInteger, IMAErrorCode){
    */
   kIMAError_FAILED_LOADING_AD = 1010,
   /**
+   *  There was an error initializing the stream.
+   */
+  kIMAError_STREAM_INITIALIZATION_FAILED = 1020,
+  /**
    *  Invalid arguments were provided to SDK methods.
    */
   kIMAError_INVALID_ARGUMENTS = 1101,

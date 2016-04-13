@@ -11,7 +11,9 @@
 @class IMAAdError;
 @class IMAAdsLoader;
 @class IMAAdsManager;
+@class IMAStreamManager;
 @class IMAAdsRequest;
+@class IMAStreamRequest;
 @class IMASettings;
 
 #pragma mark - IMAAdsLoadedData
@@ -23,8 +25,15 @@
 
 /**
  *  The ads manager instance created by the ads loader.
+ *  Will be nil when using server side ad insertion.
  */
 @property(nonatomic, strong, readonly) IMAAdsManager *adsManager;
+
+/**
+ *  The stream manager instance created by the ads loader.
+ *  Will be nil when requesting ads client side.
+ */
+@property(nonatomic, strong, readonly) IMAStreamManager *streamManager;
 
 /**
  *  The user context specified in the ads request.
@@ -32,6 +41,7 @@
 @property(nonatomic, strong, readonly) id userContext;
 
 @end
+
 
 #pragma mark - IMAAdLoadingErrorData
 
@@ -126,12 +136,22 @@
 
 /**
  *  Request ads from the ad server. The loader takes 1-2 seconds to setup on init and become ready
- *  to make ad requests. So reusing the same IMAAdsLoader instance is encouraged when making
- *  ad requests in order to minimize ad request times.
+ *  to make ad requests. So reusing the same IMAAdsLoader instance is encouraged when making ad
+ *  requests in order to minimize ad request times.
  *
- *  @param request the ad request
+ *  @param request the IMAAdsRequest. If it was created for use with Picture-in-Picture, this
+ *                 IMAAdsLoader instance's IMASettings must have backround playback enabled
  */
 - (void)requestAdsWithRequest:(IMAAdsRequest *)request;
+
+/**
+ *  Request a stream with with ads inserted server side. The loader takes 1-2 seconds to setup on
+ *  init and become ready to make stream requests. So reusing the same IMAAdsLoader instance is
+ *  encouraged when making stream requests in order to minimize stream request latency.
+ *
+ *  @param request the stream request
+ */
+- (void)requestStreamWithRequest:(IMAStreamRequest *)request;
 
 /**
  *  Signal to the SDK that the content has completed. The SDK will play
