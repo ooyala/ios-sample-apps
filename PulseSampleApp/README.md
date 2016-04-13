@@ -19,16 +19,16 @@ This is absolutely **not** intended to be used in production or to outline best 
 
 ## Project structure
 
-A [VideoLibraryViewController](PulseSampleApp/Lists/VideoLibraryViewController.m) shows a list of available videos, along with some [metadata](PulseSampleApp/Lists/VideoItem.h). When a video is selected, it is opened in a [PulseManagerViewController](PulseSampleApp/Players/PulseManagerViewController.m).
+A [VideoLibraryViewController](PulseSampleApp/Lists/VideoLibraryViewController.m) shows a list of available videos along with [metadata](PulseSampleApp/Lists/VideoItem.h) about these videos. When a video is selected, it opens in a [PulseManagerViewController](PulseSampleApp/Players/PulseManagerViewController.m).
 
-The PulseManagerViewController creates an OOOoyalaPlayer and then associates it with an instance of the OOPulseManager class from the OoyalaPulseIntegration framework. OOPulseManager will allow Pulse ads to be shown for content that has is configured with a Videoplaza ad set.
+The PulseManagerViewController creates an OOOoyalaPlayer and then associates it with an instance of the OOPulseManager class from the OoyalaPulseIntegration framework. OOPulseManager will allow Ooyala Pulse ads to be shown for video content that is associated with a Videoplaza ad set in Backlot.
 
 ```
 self.manager = [[OOPulseManager alloc] initWithPlayer:self.player];
 self.manager.delegate = self;
 ```
 
-When the OOPulseManager requires an ad session it will request one from it's delegate, (PulseManagerViewController in the sample app). The delegate is passed request settings and content metadata that are populated from back lot, but has the opportunity to change them.
+When the OOPulseManager requires an ad session it will request one from its delegate, (PulseManagerViewController in the sample app). The delegate receives request settings and content metadata that are populated from Backlot, but has the opportunity to change them. For more information about these settings, refer to [Ooyala Ad Products SDK Parameter Reference](http://support.ooyala.com/developers/ad-documentation/oadtech/ad_serving/dg/integration_sdk_parameter.html).
 
 ```
 - (id<OOPulseSession>)pulseManager:(OOPulseManager *)manager
@@ -37,6 +37,11 @@ When the OOPulseManager requires an ad session it will request one from it's del
                    contentMetadata:(VPContentMetadata *)contentMetadata
                    requestSettings:(VPRequestSettings *)requestSettings
 {
+  // Set the correct pulse host and options
+  [OOPulse setPulseHost:pulsehost
+        deviceContainer:nil
+           persistentId:nil];
+
   // Here we assume a landscape orientation for video playback
   requestSettings.width = (NSInteger)MAX(self.view.frame.size.width, self.view.frame.size.height);
   requestSettings.height = (NSInteger)MIN(self.view.frame.size.width, self.view.frame.size.height);
@@ -45,12 +50,6 @@ When the OOPulseManager requires an ad session it will request one from it's del
   // bitrate of ads to request.
   requestSettings.maxBitRate = [BandwidthChecker maxBitRate];
 
-  // Set the correct pulse host and options
-  //   refer to: http://support.ooyala.com/developers/ad-documentation/oadtech/ad_serving/dg/integration_sdk_parameter.html
-  [OOPulse setPulseHost:pulsehost
-        deviceContainer:nil
-           persistentId:nil];
-  
   return [OOPulse sessionWithContentMetadata:contentMetadata
                              requestSettings:requestSettings];
 }
@@ -58,7 +57,7 @@ When the OOPulseManager requires an ad session it will request one from it's del
 
 ## Demo Pulse account
 
-This integration sample uses the following Pulse account:
+This integration sample uses the following Ooyala Pulse account:
 ```
 https://pulse-demo.videoplaza.tv
 ```
