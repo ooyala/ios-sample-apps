@@ -8,15 +8,22 @@
  */
 
 #import "PlayerSelectionOption.h"
+#import "FullscreenPlayerViewController.h"
 
 @implementation PlayerSelectionOption
 
 - (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode {
+  return [self initWithTitle:title embedCode:embedCode viewController:[FullscreenPlayerViewController class]];
+}
+
+- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode viewController:(Class)hostVC {
   self = [super init];
   if (self) {
     self.title = title;
     self.embedCode = embedCode;
+    self.hostVC = hostVC;
   }
   return self;
 }
+
 @end
