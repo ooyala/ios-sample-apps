@@ -42,6 +42,14 @@ typedef enum
   OOOoyalaPlayerStateError
 } OOOoyalaPlayerState;
 
+typedef enum
+{
+  /** user is playing a video */
+  OOOoyalaPlayerDesiredStatePlaying,
+  /** user is paused, video is showing */
+  OOOoyalaPlayerDesiredStatePaused,
+} OOOoyalaPlayerDesiredState;
+
 @protocol OOPlayerProtocol<NSObject>
 
 /**

@@ -96,6 +96,7 @@ typedef NS_ENUM(NSInteger, OOUIProgressSliderMode)
 // notifications
 extern NSString *const OOOoyalaPlayerTimeChangedNotification; /**< Fires when the Playhead Time Changes */
 extern NSString *const OOOoyalaPlayerStateChangedNotification; /**< Fires when the Player's State Changes */
+extern NSString *const OOOoyalaPlayerDesiredStateChangedNotification; /**< Fires when the user's desired State Changes */
 extern NSString *const OOOoyalaPlayerContentTreeReadyNotification; /**< Fires when the content tree's metadata is ready and can be accessed */
 extern NSString *const OOOoyalaPlayerAuthorizationReadyNotification; /**< Fires when the authorization status is ready and can be accessed */
 extern NSString *const OOOoyalaPlayerPlayStartedNotification; /**< Fires when play starts */
@@ -364,6 +365,14 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOOoyalaPlayerState)state;
 
+
+/**
+ * Gets the user's current desired state.
+ * @returns a string containing the current state
+ */
+@property (nonatomic, readonly)OOOoyalaPlayerDesiredState desiredState;
+
+
 /**
  * Pauses the current video.
  */
@@ -467,6 +476,14 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 + (NSString *)playerStateToString:(OOOoyalaPlayerState)state;
 
+
+/**
+ * Converts PlayerDesiredState to a String.
+ * @param[in] state the PlayerState
+ * @returns an external facing DesiredState string
+ */
++ (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
+
 /**
  * Register ad player for an ad type
  * @param[in] adPlayerClass the ad player class
@@ -537,5 +554,11 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * @param index the index of the icon
  */
 - (void) onAdIconClicked: (NSInteger) index;
+
+/**
+ * Insert VAST ads to the managed ad plugin
+ * @param ads the ads to be inserted
+ */
+- (void)insertAds:(NSMutableArray *)ads;
 
 @end

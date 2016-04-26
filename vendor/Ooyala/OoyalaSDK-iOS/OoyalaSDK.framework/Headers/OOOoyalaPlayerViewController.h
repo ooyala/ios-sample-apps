@@ -20,18 +20,18 @@ extern NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible;
 @class OOPlayerDomain;
 @class OOClosedCaptionsStyle;
 
-/**
- * Main ViewController class for Ooyala player.
- * Implements a default skin as well as convenience methods for accesssing and initializing underlying OOOoyalaPlayer.
- */
-@interface OOOoyalaPlayerViewController : UIViewController
-
 typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
   /** an inline player, expandable to fullscreen */
   OOOoyalaPlayerControlTypeInline,
   /** a fullscreen player, not shrinkable to inline */
   OOOoyalaPlayerControlTypeFullScreen
 };
+
+/**
+ * Main ViewController class for Ooyala player.
+ * Implements a default skin as well as convenience methods for accesssing and initializing underlying OOOoyalaPlayer.
+ */
+@interface OOOoyalaPlayerViewController : UIViewController
 
 @property (nonatomic, readonly) OOOoyalaPlayerControlType initialControlType; // initial state
 @property (nonatomic, strong) OOOoyalaPlayer *player;

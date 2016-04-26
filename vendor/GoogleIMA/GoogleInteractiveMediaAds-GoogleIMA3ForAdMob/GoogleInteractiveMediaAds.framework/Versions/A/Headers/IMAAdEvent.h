@@ -22,6 +22,14 @@ typedef NS_ENUM(NSInteger, IMAAdEventType){
    */
   kIMAAdEvent_AD_BREAK_READY,
   /**
+   *  Ad break ended (only used for server side ad insertion).
+   */
+  kIMAAdEvent_AD_BREAK_ENDED,
+  /**
+   *  Ad break started (only used for server side ad insertion).
+   */
+  kIMAAdEvent_AD_BREAK_STARTED,
+  /**
    *  All ads managed by the ads manager have completed.
    */
   kIMAAdEvent_ALL_ADS_COMPLETED,

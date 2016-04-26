@@ -21,6 +21,7 @@ OOVASTAdData *_adData;
 @property(readonly, nonatomic) NSString *title;                  /**< the title of the Ad */
 @property(readonly, nonatomic) NSString *adDescription;            /**< the description of the Ad */
 @property(readonly, nonatomic) NSMutableArray *surveyURLs;       /**< the survey URLs of the Ad */
+@property(readonly, nonatomic) NSMutableArray *errorCodes;       /**< the error codes of the Ad */
 @property(readonly, nonatomic) NSMutableArray *errorURLs;        /**< the error URLs of the Ad */
 @property(readonly, nonatomic) NSMutableArray *impressionURLs;   /**< the impression URLs of the Ad */
 @property(readonly, nonatomic) NSMutableArray *sequence;         /**< the ordered sequence of the Ad (NSMutableArray of OOVASTSequenceItem) */

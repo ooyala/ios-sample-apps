@@ -33,10 +33,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "IMAAdError.h"
-#import "IMAAdEvent.h"
+@class IMAAdDisplayContainer;
+@class IMAAdError;
+@class IMAAdEvent;
+@class IMAAdsRenderingSettings;
+
 #import "IMAAdPlaybackInfo.h"
-#import "IMAAdsRenderingSettings.h"
 #import "IMAContentPlayhead.h"
 
 @class IMAAdsManager;
@@ -156,7 +158,18 @@
 @property(nonatomic, strong, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
 
 /**
- *  Initializes and loads the ad. Pass in |contentPlayhead|
+ *  Initializes and loads the ad.
+ *
+ *  @param adsRenderingSettings the IMAAdsRenderingSettings. Pass in to influence ad rendering.
+ *                              Use nil to default to standard rendering.
+ */
+- (void)initializeWithAdsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings;
+
+/**
+ *  @deprectated Replaced by initializeWithAdsRenderingSettings:. The IMAContentPlayhead
+ *  is now passed as an argument when creating an IMAAdsRequest object.
+ *
+ *  Initializes and loads the ad.
  *
  *  @param contentPlayhead      the IMAContentPlayhead. Pass in to enable content tracking
  *                              and automatically scheduled ad breaks. Use nil to disable
@@ -165,7 +178,8 @@
  *                              Use nil to default to standard rendering.
  */
 - (void)initializeWithContentPlayhead:(NSObject<IMAContentPlayhead> *)contentPlayhead
-                 adsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings;
+                 adsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings
+                                                                  DEPRECATED_ATTRIBUTE;
 
 - (instancetype)init NS_UNAVAILABLE;
 
@@ -193,5 +207,11 @@
  *  Causes the ads manager to stop the ad and clean its internal state.
  */
 - (void)destroy;
+
+/**
+ *  If an ad break is currently playing, discard it and resume content.
+ *  Otherwise, ignore the next scheduled ad break.
+ */
+- (void)discardAdBreak;
 
 @end

@@ -11,4 +11,5 @@
 +(void)setAdvertisingId:(NSString*)adId;
 +(NSString*)advertisingId;
 + (NSURL *)urlFromAdUrlString:(NSString *)url;
++ (void)logErrorCodes: (NSArray *)errorCodes;
 @end

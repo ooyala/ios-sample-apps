@@ -32,7 +32,6 @@
   [self addCommonWithTitle:@"Multi Ad combination" embedCode:@"Ftcmp0ZDoz8tALmhPcN2vMzCdg7YU9lc"];
   // Skippable and Podded ads
   [self addCommonWithTitle:@"VAST 3.0 - Podded" embedCode:@"tjN2h1MDE65xMHMqNvvU0fYVBi6sFl1M"];
-  [self addCommonWithTitle:@"VAST 3.0 - Skippable Midroll" embedCode:@"4xMzA5MTE6tCoMA9RY26vlJ9RsBPiJOK"];
   [self addCommonWithTitle:@"VAST 3.0 - Skippable Preroll" embedCode:@"55MjA5MTE6iZTRzrTtLoxUy78YbffT2G"];
   [self addCommonWithTitle:@"VAST 3.0 - Podded With Skippable" embedCode:@"NuMGp1MDE6EKUv7rAmkSQ3iuLU5N5Ik0"];
   // Icon ads

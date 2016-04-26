@@ -22,4 +22,6 @@
 @property (readonly) NSURL *clickURL; /**< The URL which should be opened when the OOAdSpot is clicked */
 @property (readonly) NSArray *trackingURLs; /**< The Array of URLs which should be pinged when the OOAdSpot plays */
 
++ (OOManagedAdSpot *)adSpotFromDictionary:(NSDictionary *)data api:(OOPlayerAPIClient *)api duration:(Float64)duration;
+
 @end
