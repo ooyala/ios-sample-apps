@@ -23,6 +23,7 @@
 @end
 
 /**
+ * Listens to notifications and runs any matching watchers.
  * Does not support watches that start and end on the exact same event occurrence, and thus have zero time.
  * Does support watches that start and end on a repeating event, with time in between.
  */
