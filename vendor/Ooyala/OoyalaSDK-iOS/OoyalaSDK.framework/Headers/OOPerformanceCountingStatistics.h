@@ -5,8 +5,10 @@
 #import <Foundation/Foundation.h>
 #import "OOPerformanceStatisticsProtocol.h"
 
+/**
+ * Accumulated count.
+ */
 @interface OOPerformanceCountingStatistics : NSObject <OOPerformanceStatisticsProtocol>
-@property (nonatomic, readonly) int count;
 -(instancetype) init __attribute__((unavailable("init not available")));
 -(instancetype) initWithName:(NSString*)name;
 -(void) mergeCount:(int)count;
