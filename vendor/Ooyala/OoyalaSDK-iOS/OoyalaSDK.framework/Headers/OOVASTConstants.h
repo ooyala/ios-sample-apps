@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 extern float const OO_MINIMUM_SUPPORTED_VAST_VERSION;         /**< The minimum supported VAST version */
+extern float const OO_MAXIMUM_SUPPORTED_VAST_VERSION;         /**< The maximum supported VAST version */
 extern float const OO_MINIMUM_SUPPORTED_VMAP_VERSION;         /**< The minimum supported VMAP version */
 extern float const OO_MAXIMUM_SUPPORTED_VMAP_VERSION;         /**< The maximum supported VMAP version */
 extern char *const OO_ELEMENT_VAST;                           /**< The XML element name for VAST */
@@ -24,8 +25,10 @@ extern char *const OO_ELEMENT_IMPRESSION;                     /**< The XML eleme
 extern char *const OO_ELEMENT_CREATIVES;                      /**< The XML element name for Creatives */
 extern char *const OO_ELEMENT_CREATIVE;                       /**< The XML element name for Creative */
 extern char *const OO_ELEMENT_LINEAR;                         /**< The XML element name for Linear */
+extern char *const OO_ELEMENT_NONLINEAR;                      /**< The XML element name for NonLinear */
 extern char *const OO_ELEMENT_NON_LINEAR_ADS;                 /**< The XML element name for NonLinearAds */
 extern char *const OO_ELEMENT_COMPANION_ADS;                  /**< The XML element name for CompanionAds */
+extern char *const OO_ELEMENT_COMPANION;                      /**< The XML element name for Companion */
 extern char *const OO_ELEMENT_EXTENSIONS;                     /**< The XML element name for Extensions */
 extern char *const OO_ELEMENT_DURATION;                       /**< The XML element name for Duration */
 extern char *const OO_ELEMENT_TRACKING_EVENTS;                /**< The XML element name for TrackingEvents */
@@ -56,6 +59,14 @@ extern char *const OO_ELEMENT_ICON_VIEW_TRACKING;             /**< The XML eleme
 extern char *const OO_ELEMENT_STATIC_RESOURCE;                /**< The XML element name for staticResource */
 extern char *const OO_ELEMENT_IFRAME_RESOURCE;                /**< The XML element name for iframeResource */
 extern char *const OO_ELEMENT_HTML_RESOURCE;                  /**< The XML element name for htmlResource */
+
+extern char *const OO_ELEMENT_CREATIVE_ENTENSIONS;            /**< The XML element name for creativeExtensions */
+extern char *const OO_ELEMENT_CREATIVE_ENTENSION;             /**< The XML element name for creativeExtension */
+extern char *const OO_ELEMENT_NONLINEAR_CLICK_TRACKING;       /**< The XML element name for nonLinear click tracking */
+extern char *const OO_ELEMENT_NONLINEAR_CLICK_THROUGH;        /**< The XML element name for nonLinear click through */
+extern char *const OO_ELEMENT_ALT_TEXT;                       /**< The XML element name for alt Text */
+extern char *const OO_ELEMENT_COMPANION_CLICK_THROUGH;        /**< The XML element name for companion click through */
+
 extern char *const OO_ELEMENT_VMAP;                           /**< The XML element name for vmap */
 extern char *const OO_ELEMENT_ADBREAK;                        /**< The XML element name for vmap ad break */
 extern char *const OO_ELEMENT_ADSOURCE;                       /**< The XML element name for vmap ad source */
@@ -65,6 +76,7 @@ extern char *const OO_ELEMENT_CUSTOMADATA;                     /**< The XML elem
 
 extern NSString *const OO_ATTRIBUTE_VERSION;                  /**< The XML attribute name for version */
 extern NSString *const OO_ATTRIBUTE_ID;                       /**< The XML attribute name for id */
+extern NSString *const OO_ATTRIBUTE_ADID;                     /**< The XML attribute name for ad id */
 extern NSString *const OO_ATTRIBUTE_SEQUENCE;                 /**< The XML attribute name for sequence */
 extern NSString *const OO_ATTRIBUTE_EVENT;                    /**< The XML attribute name for event */
 extern NSString *const OO_ATTRIBUTE_DELIVERY;                 /**< The XML attribute name for delivery */
@@ -86,6 +98,13 @@ extern NSString *const OO_ATTRIBUTE_YPOSITION;                /**< The XML attri
 extern NSString *const OO_ATTRIBUTE_OFFSET;                   /**< The XML attribute name for offset */
 extern NSString *const OO_ATTRIBUTE_DURATEION;                /**< The XML attribute name for duration */
 extern NSString *const OO_ATTRIBUTE_CREATIVE_TYPE;            /**< The XML attribute name for creativeType */
+extern NSString *const OO_ATTRIBUTE_REQUIRED;                 /**< The XML attribute name for required */
+extern NSString *const OO_ATTRIBUTE_EXPANDED_WIDTH;           /**< The XML attribute name for expanded width */
+extern NSString *const OO_ATTRIBUTE_EXPANDED_HEIGHT;          /**< The XML attribute name for expanded height */
+extern NSString *const OO_ATTRIBUTE_MIN_SUGGESTED_DURATION;   /**< The XML attribute name for min suggested duration */
+extern NSString *const OO_ATTRIBUTE_ASSET_WIDTH;              /**< The XML attribute name for asset width */
+extern NSString *const OO_ATTRIBUTE_ASSET_HEIGHT;             /**< The XML attribute name for asset height */
+extern NSString *const OO_ATTRIBUTE_AD_SLOT_ID;               /**< The XML attribute name for ad slot id */
 
 extern NSString *const OO_ATTRIBUTE_TIMEOFFSET;               /**< The XML attribute name for time offset */
 extern NSString *const OO_ATTRIBUTE_BREAKTYPE;                /**< The XML attribute name for break type */
@@ -106,3 +125,6 @@ extern NSInteger const OO_ERROR_WRAPPER_LIMIT;                /**< The code of W
 extern NSInteger const OO_ERROR_VAST_RESPONSE_WRAPPER;        /**< The code of No ads VAST response after Wrappers error */
 extern NSInteger const OO_ERROR_GENERAL_LINEAR;               /**< The code of General linear error */
 extern NSInteger const OO_ERROR_GENERAL_NONLINEAR_ADS;        /**< The code of General NonLinear ads error */
+extern NSInteger const OO_ERROR_LINEAR_FILE_NOT_FOUND;
+extern NSInteger const OO_ERROR_LINEAR_TIMEOUT_MEDIAFILE;
+extern NSInteger const OO_ERROR_LINEAR_SUPPORTED_MEDIA_NOT_FOUND;

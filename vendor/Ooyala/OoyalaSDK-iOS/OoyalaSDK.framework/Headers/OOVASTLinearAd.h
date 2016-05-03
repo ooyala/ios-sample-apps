@@ -10,16 +10,7 @@
 #import "OOTBXML.h"
 #import "OOPlayableItem.h"
 
-@interface OOVASTLinearAd : NSObject <OOPlayableItem> {
-@protected
-  Float64 duration;
-  NSMutableDictionary *trackingEvents;
-  NSString *parameters;
-  NSString *clickThroughURL;
-  NSMutableArray *clickTrackingURLs;
-  NSMutableArray *customClickURLs;
-  NSMutableArray *streams;
-}
+@interface OOVASTLinearAd : NSObject <OOPlayableItem> 
 
 @property(readonly, nonatomic) NSMutableArray *icons;
 @property(readonly, nonatomic) Float64 skipoffset;
@@ -50,5 +41,7 @@
  * @param[in] newClickTrackingURLs the NSMutableArray of the wrapper's click tracking URLs
  */
 - (void)updateClickTrackingURLs:(NSMutableArray*)newClickTrackingURLs;
+
+- (void)merge:(OOVASTLinearAd *)linear;
 
 @end

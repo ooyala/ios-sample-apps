@@ -110,6 +110,7 @@ extern NSString *const OOOoyalaPlayerAdPodCompletedNotification; /**< Fires when
 extern NSString *const OOOoyalaPlayerAdsLoadedNotification; /**< Fires when ads are done loading */
 extern NSString *const OOOoyalaPlayerAdSkippedNotification; /**< Fires when an ad is skipped */
 extern NSString *const OOOoyalaPlayerAdTappedNotification; /**< Fires when third party ad is tapped*/
+extern NSString *const OOOoyalaPlayerContentResumedAfterAdNotification; /**< Fires when the player has switched from ads back to main content */
 extern NSString *const OOOoyalaPlayerErrorNotification; /**< Fires when an error occurs */
 extern NSString *const OOOoyalaPlayerAdErrorNotification; /**< Fires when an error occurs while trying to play an ad */
 extern NSString *const OOOoyalaPlayerMetadataReadyNotification; /**< Fires when content metadata is ready to be accessed */
