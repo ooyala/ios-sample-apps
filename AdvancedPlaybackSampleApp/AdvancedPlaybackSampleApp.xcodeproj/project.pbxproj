@@ -84,6 +84,8 @@
 		0BCA696E1A84965F00225119 /* OOSamplePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333AA1A7AEEBD00F0EC32 /* OOSamplePlugin.m */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* PlayWithInitialTimePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
+		5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */; };
+		5E32B2CE1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */; };
 		5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */; };
 		5E98478B1C8E5F9900D31ED1 /* UnbundledPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */; };
 /* End PBXBuildFile section */
@@ -171,6 +173,8 @@
 		0BCA69471A848E6400225119 /* CustomControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsViewController.m; sourceTree = "<group>"; };
 		0BCA694A1A848E6400225119 /* OOUIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOUIUtils.h; sourceTree = "<group>"; };
 		0BCA694B1A848E6400225119 /* OOUIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOUIUtils.m; sourceTree = "<group>"; };
+		5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceProfilingPlayerViewController.h; sourceTree = "<group>"; };
+		5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceProfilingPlayerViewController.m; sourceTree = "<group>"; };
 		5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnbundledPlayerViewController.h; sourceTree = "<group>"; };
 		5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnbundledPlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -277,6 +281,8 @@
 				0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */,
 				5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */,
 				5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */,
+				5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */,
+				5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				0BCA694C1A848E6400225119 /* OOControlsViewController.h in Headers */,
 				5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */,
 				0B7AC4261A79A93B0085BC97 /* PluginPlayerViewController.h in Headers */,
+				5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */,
 				0B19FEF81A3AB608003E57DF /* PlayerSelectionOption.h in Headers */,
 				0B19FEE31A3AB4BC003E57DF /* AdvancedPlaybackListViewController.h in Headers */,
 				0B7333AF1A7AEEBD00F0EC32 /* OOSamplePlugin.h in Headers */,
@@ -506,6 +513,7 @@
 				0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */,
 				0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
+				5E32B2CE1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m in Sources */,
 				0B7333AE1A7AEEBD00F0EC32 /* OOSampleAdSpot.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 				0BCA695B1A848E6400225119 /* OOUIUtils.m in Sources */,
