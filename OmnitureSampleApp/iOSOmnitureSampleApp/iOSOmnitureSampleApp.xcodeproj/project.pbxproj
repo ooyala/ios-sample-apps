@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA15C2D91CDAB16A00B9EF25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15C2D81CDAB16A00B9EF25 /* main.m */; };
+		CA15C2DC1CDAB16A00B9EF25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15C2DB1CDAB16A00B9EF25 /* AppDelegate.m */; };
+		CA15C2E21CDAB16A00B9EF25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E01CDAB16A00B9EF25 /* Main.storyboard */; };
+		CA15C2E41CDAB16A00B9EF25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */; };
+		CA15C2E71CDAB16A00B9EF25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E51CDAB16A00B9EF25 /* LaunchScreen.storyboard */; };
+		CA15C3231CDAB1C300B9EF25 /* OoyalaOmnitureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C31A1CDAB1B500B9EF25 /* OoyalaOmnitureSDK.framework */; };
+		CA15C3241CDAB26700B9EF25 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C3081CDAB1B500B9EF25 /* OoyalaSDK.framework */; };
+		CA15C3281CDAB3AF00B9EF25 /* BasicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15C3271CDAB3AF00B9EF25 /* BasicPlayerViewController.m */; };
+		CA15C32A1CDAB72F00B9EF25 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */; };
+		CA15C32C1CDAB73B00B9EF25 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C32B1CDAB73B00B9EF25 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA15C3071CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B0D803F1AB7F8D300CDD091;
+			remoteInfo = OoyalaSDK;
+		};
+		CA15C3091CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B0E71A8147B0777006F000B;
+			remoteInfo = OoyalaSDKTests;
+		};
+		CA15C30B1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9539C59914845D5C00FA201C;
+			remoteInfo = TestApp;
+		};
+		CA15C30D1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BE798601ABBAB6500C94ABF;
+			remoteInfo = OoyalaIMASDK;
+		};
+		CA15C30F1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BE797A11ABBA9B600C94ABF;
+			remoteInfo = OoyalaFreewheelSDK;
+		};
+		CA15C3111CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B6E8AAC1ABB8C720002A76E;
+			remoteInfo = OoyalaSecurePlayerSDK;
+		};
+		CA15C3131CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9750D1F61C4497B10081EB88;
+			remoteInfo = OoyalaSecurePlayerSDKTests;
+		};
+		CA15C3151CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BE7991D1ABBADD600C94ABF;
+			remoteInfo = OoyalaNielsenSDK;
+		};
+		CA15C3171CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 97E616931A70588A00FFBC0A;
+			remoteInfo = OoyalaNielsenSDKTests;
+		};
+		CA15C3191CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA15C2BB1CDAAAAC00B9EF25;
+			remoteInfo = OoyalaOmnitureSDK;
+		};
+		CA15C31B1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FF73D3021ACCBDF400312010;
+			remoteInfo = OoyalaCastSDK;
+		};
+		CA15C31D1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CAD0F5E71C593C9E00027135;
+			remoteInfo = OoyalaTVSDK;
+		};
+		CA15C31F1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C424B8FF1CABDBA6006DC3CD;
+			remoteInfo = OoyalaPulseIntegration;
+		};
+		CA15C3211CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C464E5391CB7AF030019ABD8;
+			remoteInfo = OoyalaPulseIntegrationTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA15C2D41CDAB16A00B9EF25 /* iOSOmnitureSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSOmnitureSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA15C2D81CDAB16A00B9EF25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA15C2DA1CDAB16A00B9EF25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA15C2DB1CDAB16A00B9EF25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CA15C2E11CDAB16A00B9EF25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA15C2E61CDAB16A00B9EF25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA15C2E81CDAB16A00B9EF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OoyalaSDK.xcodeproj; path = "../../../ios-sdk/sdk/OoyalaSDK.xcodeproj"; sourceTree = "<group>"; };
+		CA15C3261CDAB3AF00B9EF25 /* BasicPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicPlayerViewController.h; path = Players/BasicPlayerViewController.h; sourceTree = "<group>"; };
+		CA15C3271CDAB3AF00B9EF25 /* BasicPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicPlayerViewController.m; path = Players/BasicPlayerViewController.m; sourceTree = "<group>"; };
+		CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CA15C32B1CDAB73B00B9EF25 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA15C2D11CDAB16A00B9EF25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA15C32C1CDAB73B00B9EF25 /* SystemConfiguration.framework in Frameworks */,
+				CA15C32A1CDAB72F00B9EF25 /* MediaPlayer.framework in Frameworks */,
+				CA15C3241CDAB26700B9EF25 /* OoyalaSDK.framework in Frameworks */,
+				CA15C3231CDAB1C300B9EF25 /* OoyalaOmnitureSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA15C2CB1CDAB16A00B9EF25 = {
+			isa = PBXGroup;
+			children = (
+				CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */,
+				CA15C2D61CDAB16A00B9EF25 /* iOSOmnitureSampleApp */,
+				CA15C32D1CDAB75E00B9EF25 /* Frameworks */,
+				CA15C2D51CDAB16A00B9EF25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA15C2D51CDAB16A00B9EF25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA15C2D41CDAB16A00B9EF25 /* iOSOmnitureSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA15C2D61CDAB16A00B9EF25 /* iOSOmnitureSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				CA15C3251CDAB32A00B9EF25 /* Players */,
+				CA15C2DA1CDAB16A00B9EF25 /* AppDelegate.h */,
+				CA15C2DB1CDAB16A00B9EF25 /* AppDelegate.m */,
+				CA15C2E01CDAB16A00B9EF25 /* Main.storyboard */,
+				CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */,
+				CA15C2E51CDAB16A00B9EF25 /* LaunchScreen.storyboard */,
+				CA15C2D71CDAB16A00B9EF25 /* Supporting Files */,
+			);
+			path = iOSOmnitureSampleApp;
+			sourceTree = "<group>";
+		};
+		CA15C2D71CDAB16A00B9EF25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA15C2E81CDAB16A00B9EF25 /* Info.plist */,
+				CA15C2D81CDAB16A00B9EF25 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA15C2EF1CDAB1B500B9EF25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA15C3081CDAB1B500B9EF25 /* OoyalaSDK.framework */,
+				CA15C30A1CDAB1B500B9EF25 /* OoyalaSDKTests.xctest */,
+				CA15C30C1CDAB1B500B9EF25 /* TestApp.app */,
+				CA15C30E1CDAB1B500B9EF25 /* OoyalaIMASDK.framework */,
+				CA15C3101CDAB1B500B9EF25 /* OoyalaFreewheelSDK.framework */,
+				CA15C3121CDAB1B500B9EF25 /* OoyalaSecurePlayerSDK.framework */,
+				CA15C3141CDAB1B500B9EF25 /* OoyalaSecurePlayerSDKTests.xctest */,
+				CA15C3161CDAB1B500B9EF25 /* OoyalaNielsenSDK.framework */,
+				CA15C3181CDAB1B500B9EF25 /* OoyalaNielsenSDKTests.xctest */,
+				CA15C31A1CDAB1B500B9EF25 /* OoyalaOmnitureSDK.framework */,
+				CA15C31C1CDAB1B500B9EF25 /* OoyalaCastSDK.framework */,
+				CA15C31E1CDAB1B500B9EF25 /* OoyalaTVSDK.framework */,
+				CA15C3201CDAB1B500B9EF25 /* OoyalaPulseIntegration.framework */,
+				CA15C3221CDAB1B500B9EF25 /* OoyalaPulseIntegrationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA15C3251CDAB32A00B9EF25 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				CA15C3261CDAB3AF00B9EF25 /* BasicPlayerViewController.h */,
+				CA15C3271CDAB3AF00B9EF25 /* BasicPlayerViewController.m */,
+			);
+			name = Players;
+			sourceTree = "<group>";
+		};
+		CA15C32D1CDAB75E00B9EF25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA15C32B1CDAB73B00B9EF25 /* SystemConfiguration.framework */,
+				CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA15C2D31CDAB16A00B9EF25 /* iOSOmnitureSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA15C2EB1CDAB16A00B9EF25 /* Build configuration list for PBXNativeTarget "iOSOmnitureSampleApp" */;
+			buildPhases = (
+				CA15C2D01CDAB16A00B9EF25 /* Sources */,
+				CA15C2D11CDAB16A00B9EF25 /* Frameworks */,
+				CA15C2D21CDAB16A00B9EF25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSOmnitureSampleApp;
+			productName = iOSOmnitureSampleApp;
+			productReference = CA15C2D41CDAB16A00B9EF25 /* iOSOmnitureSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA15C2CC1CDAB16A00B9EF25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Ooyala;
+				TargetAttributes = {
+					CA15C2D31CDAB16A00B9EF25 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = CA15C2CF1CDAB16A00B9EF25 /* Build configuration list for PBXProject "iOSOmnitureSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA15C2CB1CDAB16A00B9EF25;
+			productRefGroup = CA15C2D51CDAB16A00B9EF25 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CA15C2EF1CDAB1B500B9EF25 /* Products */;
+					ProjectRef = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				CA15C2D31CDAB16A00B9EF25 /* iOSOmnitureSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CA15C3081CDAB1B500B9EF25 /* OoyalaSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaSDK.framework;
+			remoteRef = CA15C3071CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C30A1CDAB1B500B9EF25 /* OoyalaSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OoyalaSDKTests.xctest;
+			remoteRef = CA15C3091CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C30C1CDAB1B500B9EF25 /* TestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestApp.app;
+			remoteRef = CA15C30B1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C30E1CDAB1B500B9EF25 /* OoyalaIMASDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaIMASDK.framework;
+			remoteRef = CA15C30D1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C3101CDAB1B500B9EF25 /* OoyalaFreewheelSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaFreewheelSDK.framework;
+			remoteRef = CA15C30F1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C3121CDAB1B500B9EF25 /* OoyalaSecurePlayerSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaSecurePlayerSDK.framework;
+			remoteRef = CA15C3111CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C3141CDAB1B500B9EF25 /* OoyalaSecurePlayerSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OoyalaSecurePlayerSDKTests.xctest;
+			remoteRef = CA15C3131CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C3161CDAB1B500B9EF25 /* OoyalaNielsenSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaNielsenSDK.framework;
+			remoteRef = CA15C3151CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C3181CDAB1B500B9EF25 /* OoyalaNielsenSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OoyalaNielsenSDKTests.xctest;
+			remoteRef = CA15C3171CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C31A1CDAB1B500B9EF25 /* OoyalaOmnitureSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaOmnitureSDK.framework;
+			remoteRef = CA15C3191CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C31C1CDAB1B500B9EF25 /* OoyalaCastSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaCastSDK.framework;
+			remoteRef = CA15C31B1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C31E1CDAB1B500B9EF25 /* OoyalaTVSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaTVSDK.framework;
+			remoteRef = CA15C31D1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C3201CDAB1B500B9EF25 /* OoyalaPulseIntegration.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaPulseIntegration.framework;
+			remoteRef = CA15C31F1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA15C3221CDAB1B500B9EF25 /* OoyalaPulseIntegrationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OoyalaPulseIntegrationTests.xctest;
+			remoteRef = CA15C3211CDAB1B500B9EF25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA15C2D21CDAB16A00B9EF25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA15C2E71CDAB16A00B9EF25 /* LaunchScreen.storyboard in Resources */,
+				CA15C2E41CDAB16A00B9EF25 /* Assets.xcassets in Resources */,
+				CA15C2E21CDAB16A00B9EF25 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA15C2D01CDAB16A00B9EF25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA15C3281CDAB3AF00B9EF25 /* BasicPlayerViewController.m in Sources */,
+				CA15C2DC1CDAB16A00B9EF25 /* AppDelegate.m in Sources */,
+				CA15C2D91CDAB16A00B9EF25 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA15C2E01CDAB16A00B9EF25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA15C2E11CDAB16A00B9EF25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA15C2E51CDAB16A00B9EF25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA15C2E61CDAB16A00B9EF25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA15C2E91CDAB16A00B9EF25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA15C2EA1CDAB16A00B9EF25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA15C2EC1CDAB16A00B9EF25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iOSOmnitureSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.iOSOmnitureSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CA15C2ED1CDAB16A00B9EF25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iOSOmnitureSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.iOSOmnitureSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA15C2CF1CDAB16A00B9EF25 /* Build configuration list for PBXProject "iOSOmnitureSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA15C2E91CDAB16A00B9EF25 /* Debug */,
+				CA15C2EA1CDAB16A00B9EF25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA15C2EB1CDAB16A00B9EF25 /* Build configuration list for PBXNativeTarget "iOSOmnitureSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA15C2EC1CDAB16A00B9EF25 /* Debug */,
+				CA15C2ED1CDAB16A00B9EF25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA15C2CC1CDAB16A00B9EF25 /* Project object */;
+}
