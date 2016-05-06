@@ -12,113 +12,10 @@
 		CA15C2E21CDAB16A00B9EF25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E01CDAB16A00B9EF25 /* Main.storyboard */; };
 		CA15C2E41CDAB16A00B9EF25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */; };
 		CA15C2E71CDAB16A00B9EF25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E51CDAB16A00B9EF25 /* LaunchScreen.storyboard */; };
-		CA15C3231CDAB1C300B9EF25 /* OoyalaOmnitureSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C31A1CDAB1B500B9EF25 /* OoyalaOmnitureSDK.framework */; };
-		CA15C3241CDAB26700B9EF25 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C3081CDAB1B500B9EF25 /* OoyalaSDK.framework */; };
 		CA15C3281CDAB3AF00B9EF25 /* BasicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15C3271CDAB3AF00B9EF25 /* BasicPlayerViewController.m */; };
 		CA15C32A1CDAB72F00B9EF25 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */; };
 		CA15C32C1CDAB73B00B9EF25 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C32B1CDAB73B00B9EF25 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CA15C3071CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0B0D803F1AB7F8D300CDD091;
-			remoteInfo = OoyalaSDK;
-		};
-		CA15C3091CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3B0E71A8147B0777006F000B;
-			remoteInfo = OoyalaSDKTests;
-		};
-		CA15C30B1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9539C59914845D5C00FA201C;
-			remoteInfo = TestApp;
-		};
-		CA15C30D1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0BE798601ABBAB6500C94ABF;
-			remoteInfo = OoyalaIMASDK;
-		};
-		CA15C30F1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0BE797A11ABBA9B600C94ABF;
-			remoteInfo = OoyalaFreewheelSDK;
-		};
-		CA15C3111CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0B6E8AAC1ABB8C720002A76E;
-			remoteInfo = OoyalaSecurePlayerSDK;
-		};
-		CA15C3131CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9750D1F61C4497B10081EB88;
-			remoteInfo = OoyalaSecurePlayerSDKTests;
-		};
-		CA15C3151CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0BE7991D1ABBADD600C94ABF;
-			remoteInfo = OoyalaNielsenSDK;
-		};
-		CA15C3171CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 97E616931A70588A00FFBC0A;
-			remoteInfo = OoyalaNielsenSDKTests;
-		};
-		CA15C3191CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CA15C2BB1CDAAAAC00B9EF25;
-			remoteInfo = OoyalaOmnitureSDK;
-		};
-		CA15C31B1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FF73D3021ACCBDF400312010;
-			remoteInfo = OoyalaCastSDK;
-		};
-		CA15C31D1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CAD0F5E71C593C9E00027135;
-			remoteInfo = OoyalaTVSDK;
-		};
-		CA15C31F1CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C424B8FF1CABDBA6006DC3CD;
-			remoteInfo = OoyalaPulseIntegration;
-		};
-		CA15C3211CDAB1B500B9EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C464E5391CB7AF030019ABD8;
-			remoteInfo = OoyalaPulseIntegrationTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CA15C2D41CDAB16A00B9EF25 /* iOSOmnitureSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSOmnitureSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +26,6 @@
 		CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA15C2E61CDAB16A00B9EF25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA15C2E81CDAB16A00B9EF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OoyalaSDK.xcodeproj; path = "../../../ios-sdk/sdk/OoyalaSDK.xcodeproj"; sourceTree = "<group>"; };
 		CA15C3261CDAB3AF00B9EF25 /* BasicPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicPlayerViewController.h; path = Players/BasicPlayerViewController.h; sourceTree = "<group>"; };
 		CA15C3271CDAB3AF00B9EF25 /* BasicPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicPlayerViewController.m; path = Players/BasicPlayerViewController.m; sourceTree = "<group>"; };
 		CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -143,8 +39,6 @@
 			files = (
 				CA15C32C1CDAB73B00B9EF25 /* SystemConfiguration.framework in Frameworks */,
 				CA15C32A1CDAB72F00B9EF25 /* MediaPlayer.framework in Frameworks */,
-				CA15C3241CDAB26700B9EF25 /* OoyalaSDK.framework in Frameworks */,
-				CA15C3231CDAB1C300B9EF25 /* OoyalaOmnitureSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +48,6 @@
 		CA15C2CB1CDAB16A00B9EF25 = {
 			isa = PBXGroup;
 			children = (
-				CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */,
 				CA15C2D61CDAB16A00B9EF25 /* iOSOmnitureSampleApp */,
 				CA15C32D1CDAB75E00B9EF25 /* Frameworks */,
 				CA15C2D51CDAB16A00B9EF25 /* Products */,
@@ -190,27 +83,6 @@
 				CA15C2D81CDAB16A00B9EF25 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CA15C2EF1CDAB1B500B9EF25 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CA15C3081CDAB1B500B9EF25 /* OoyalaSDK.framework */,
-				CA15C30A1CDAB1B500B9EF25 /* OoyalaSDKTests.xctest */,
-				CA15C30C1CDAB1B500B9EF25 /* TestApp.app */,
-				CA15C30E1CDAB1B500B9EF25 /* OoyalaIMASDK.framework */,
-				CA15C3101CDAB1B500B9EF25 /* OoyalaFreewheelSDK.framework */,
-				CA15C3121CDAB1B500B9EF25 /* OoyalaSecurePlayerSDK.framework */,
-				CA15C3141CDAB1B500B9EF25 /* OoyalaSecurePlayerSDKTests.xctest */,
-				CA15C3161CDAB1B500B9EF25 /* OoyalaNielsenSDK.framework */,
-				CA15C3181CDAB1B500B9EF25 /* OoyalaNielsenSDKTests.xctest */,
-				CA15C31A1CDAB1B500B9EF25 /* OoyalaOmnitureSDK.framework */,
-				CA15C31C1CDAB1B500B9EF25 /* OoyalaCastSDK.framework */,
-				CA15C31E1CDAB1B500B9EF25 /* OoyalaTVSDK.framework */,
-				CA15C3201CDAB1B500B9EF25 /* OoyalaPulseIntegration.framework */,
-				CA15C3221CDAB1B500B9EF25 /* OoyalaPulseIntegrationTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CA15C3251CDAB32A00B9EF25 /* Players */ = {
@@ -276,119 +148,12 @@
 			mainGroup = CA15C2CB1CDAB16A00B9EF25;
 			productRefGroup = CA15C2D51CDAB16A00B9EF25 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CA15C2EF1CDAB1B500B9EF25 /* Products */;
-					ProjectRef = CA15C2EE1CDAB1B500B9EF25 /* OoyalaSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CA15C2D31CDAB16A00B9EF25 /* iOSOmnitureSampleApp */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CA15C3081CDAB1B500B9EF25 /* OoyalaSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaSDK.framework;
-			remoteRef = CA15C3071CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C30A1CDAB1B500B9EF25 /* OoyalaSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OoyalaSDKTests.xctest;
-			remoteRef = CA15C3091CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C30C1CDAB1B500B9EF25 /* TestApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = TestApp.app;
-			remoteRef = CA15C30B1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C30E1CDAB1B500B9EF25 /* OoyalaIMASDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaIMASDK.framework;
-			remoteRef = CA15C30D1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C3101CDAB1B500B9EF25 /* OoyalaFreewheelSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaFreewheelSDK.framework;
-			remoteRef = CA15C30F1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C3121CDAB1B500B9EF25 /* OoyalaSecurePlayerSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaSecurePlayerSDK.framework;
-			remoteRef = CA15C3111CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C3141CDAB1B500B9EF25 /* OoyalaSecurePlayerSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OoyalaSecurePlayerSDKTests.xctest;
-			remoteRef = CA15C3131CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C3161CDAB1B500B9EF25 /* OoyalaNielsenSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaNielsenSDK.framework;
-			remoteRef = CA15C3151CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C3181CDAB1B500B9EF25 /* OoyalaNielsenSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OoyalaNielsenSDKTests.xctest;
-			remoteRef = CA15C3171CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C31A1CDAB1B500B9EF25 /* OoyalaOmnitureSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaOmnitureSDK.framework;
-			remoteRef = CA15C3191CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C31C1CDAB1B500B9EF25 /* OoyalaCastSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaCastSDK.framework;
-			remoteRef = CA15C31B1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C31E1CDAB1B500B9EF25 /* OoyalaTVSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaTVSDK.framework;
-			remoteRef = CA15C31D1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C3201CDAB1B500B9EF25 /* OoyalaPulseIntegration.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaPulseIntegration.framework;
-			remoteRef = CA15C31F1CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CA15C3221CDAB1B500B9EF25 /* OoyalaPulseIntegrationTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OoyalaPulseIntegrationTests.xctest;
-			remoteRef = CA15C3211CDAB1B500B9EF25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CA15C2D21CDAB16A00B9EF25 /* Resources */ = {
@@ -561,6 +326,7 @@
 				CA15C2ED1CDAB16A00B9EF25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
