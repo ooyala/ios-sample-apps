@@ -9,13 +9,13 @@
 
 #import "BasicSimplePlayerViewController.h"
 #import "PlayerSelectionOption.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaTVSDK/OOOoyalaTVPlayerViewController.h>
+#import <OoyalaTVSDK/OOOoyalaPlayer.h>
+#import <OoyalaTVSDK/OOPlayerDomain.h>
 #import <UIKit/UIScreen.h>
 
 @interface BasicSimplePlayerViewController ()
-@property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property (strong, nonatomic) OOOoyalaTVPlayerViewController *ooyalaPlayerViewController;
 
 @property NSString *embedCode;
 @property NSString *nib;
@@ -52,7 +52,7 @@
 
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+  self.ooyalaPlayerViewController = [[OOOoyalaTVPlayerViewController alloc] initWithPlayer:player];
   
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
