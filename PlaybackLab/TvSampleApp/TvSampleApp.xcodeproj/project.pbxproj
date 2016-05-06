@@ -15,13 +15,13 @@
 		97F7CEF31BF2FAD6009E3A63 /* TvSampleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F7CEF21BF2FAD6009E3A63 /* TvSampleAppUITests.m */; };
 		97F7CF041BF30891009E3A63 /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F7CF031BF30891009E3A63 /* BasicPlaybackListViewController.m */; };
 		97F7CF071BF3093D009E3A63 /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F7CF061BF3093D009E3A63 /* BasicSimplePlayerViewController.m */; };
-		97F7CF101BF30B6F009E3A63 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7CF0F1BF30B6F009E3A63 /* OoyalaSDK.framework */; };
 		97F7CF151BF30B9B009E3A63 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F7CF121BF30B9B009E3A63 /* PlayerSelectionOption.m */; };
 		97F7CF161BF30B9B009E3A63 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F7CF141BF30B9B009E3A63 /* SampleAppPlayerViewController.m */; };
 		97F7CF181BF30C8C009E3A63 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7CF171BF30C8C009E3A63 /* libc++.tbd */; };
 		97F7CF1A1BF30C96009E3A63 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7CF191BF30C96009E3A63 /* libxml2.tbd */; };
 		97F7CF1C1BF30CAE009E3A63 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7CF1B1BF30CAE009E3A63 /* MediaPlayer.framework */; };
 		97F7CF1E1BF30CB5009E3A63 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7CF1D1BF30CB5009E3A63 /* SystemConfiguration.framework */; };
+		CAF3E6481CDD53CE0028143D /* OoyalaTVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF3E6471CDD53CE0028143D /* OoyalaTVSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +68,7 @@
 		97F7CF191BF30C96009E3A63 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		97F7CF1B1BF30CAE009E3A63 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		97F7CF1D1BF30CB5009E3A63 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CAF3E6471CDD53CE0028143D /* OoyalaTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSDK.framework; path = VendorLibraries/OoyalaTVSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +76,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF3E6481CDD53CE0028143D /* OoyalaTVSDK.framework in Frameworks */,
 				97F7CF1E1BF30CB5009E3A63 /* SystemConfiguration.framework in Frameworks */,
 				97F7CF1C1BF30CAE009E3A63 /* MediaPlayer.framework in Frameworks */,
 				97F7CF1A1BF30C96009E3A63 /* libxml2.tbd in Frameworks */,
 				97F7CF181BF30C8C009E3A63 /* libc++.tbd in Frameworks */,
-				97F7CF101BF30B6F009E3A63 /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +104,7 @@
 		97F7CEC41BF2FAD6009E3A63 = {
 			isa = PBXGroup;
 			children = (
+				CAF3E6471CDD53CE0028143D /* OoyalaTVSDK.framework */,
 				97F7CF1D1BF30CB5009E3A63 /* SystemConfiguration.framework */,
 				97F7CF1B1BF30CAE009E3A63 /* MediaPlayer.framework */,
 				97F7CF191BF30C96009E3A63 /* libxml2.tbd */,
@@ -558,6 +560,7 @@
 				97F7CEF91BF2FAD6009E3A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97F7CEFA1BF2FAD6009E3A63 /* Build configuration list for PBXNativeTarget "TvSampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +569,7 @@
 				97F7CEFC1BF2FAD6009E3A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97F7CEFD1BF2FAD6009E3A63 /* Build configuration list for PBXNativeTarget "TvSampleAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +578,7 @@
 				97F7CEFF1BF2FAD6009E3A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
