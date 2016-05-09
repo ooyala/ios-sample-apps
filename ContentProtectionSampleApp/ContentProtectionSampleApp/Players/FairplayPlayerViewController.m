@@ -15,7 +15,7 @@
  *
  * To play OPT-enabled videos, you must implement the OOEmbedTokenGenerator interface
  */
-@interface FairplayPlayerViewController ()
+@interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
 @property NSString *embedCode;
@@ -23,8 +23,12 @@
 @property NSString *pcode;
 @property NSString *playerDomain;
 
+// required for FairPlay.
 @property NSString *apiKey;
 @property NSString *secret;
+// additionaly required if using OPT.
+@property NSString *authorizeHost;
+@property NSString *accountId;
 
 @property(nonatomic, strong) UIAlertView *nicknameDialog;
 @property(nonatomic) NSString *publicDeviceId;
@@ -69,7 +73,9 @@
 
   // Create Ooyala ViewController, with self as the embed token generator
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                          domain:[[OOPlayerDomain alloc]initWithString:self.playerDomain] options:options];
+                                                          domain:[[OOPlayerDomain alloc]initWithString:self.playerDomain]
+                                             embedTokenGenerator:self
+                                                         options:options];
 
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
@@ -97,5 +103,21 @@
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime]);
+}
+
+/*
+ * Get the Ooyala Player Token to play the embed code.
+ * This should contact your servers to generate the OPT server-side.
+ * For debugging, you can use Ooyala's EmbeddedSecureURLGenerator to create local embed tokens
+ */
+- (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
+  NSMutableDictionary* params = [NSMutableDictionary dictionary];
+  
+  params[@"account_id"] = self.accountId;
+  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  
+  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
+  NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
+  callback([embedTokenUrl absoluteString]);
 }
 @end

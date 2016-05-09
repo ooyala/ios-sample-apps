@@ -36,7 +36,8 @@
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Adobe Pass" embedCode:@"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G" viewController: [AdobePassPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unconfigured)" embedCode:@"" viewController: [DeviceManagementPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Player Token (Unconfigured)" embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52" viewController: [OoyalaPlayerTokenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Playback(Unconfigured)" embedCode:@"BuMjEwMDE6b8-bX45pBkcgFieNehCcln" viewController: [FairplayPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"FairPlay (Unconfigured)" embedCode:@"BuMjEwMDE6b8-bX45pBkcgFieNehCcln" viewController: [FairplayPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"FairPlay Ooyala Player Token (Unconfigured)" embedCode:@"c1cGpjMzE6-7Fi9nhZ01iK3Gfsyrddiu" viewController: [FairplayPlayerViewController class]]];
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
