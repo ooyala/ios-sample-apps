@@ -10,17 +10,9 @@
 #import "OOTBXML.h"
 #import "OOPlayableItem.h"
 
-@interface OOVASTLinearAd : NSObject <OOPlayableItem> {
-@protected
-  Float64 duration;
-  NSMutableDictionary *trackingEvents;
-  NSString *parameters;
-  NSString *clickThroughURL;
-  NSMutableArray *clickTrackingURLs;
-  NSMutableArray *customClickURLs;
-  NSMutableArray *streams;
-}
+@interface OOVASTLinearAd : NSObject <OOPlayableItem> 
 
+@property(readonly, nonatomic) NSMutableArray *icons;
 @property(readonly, nonatomic) Float64 skipoffset;
 @property(readonly, nonatomic) Float64 duration;                            /**< The duration of the ad in seconds */
 @property(readonly, nonatomic, strong) NSMutableDictionary *trackingEvents; /**< The tracking events in an NSMutableDictionary of event name to NSMutableArray of NSString */
@@ -29,6 +21,7 @@
 @property(readonly, nonatomic, strong) NSMutableArray *clickTrackingURLs;   /**< The click tracking urls in an NSMutableArray of NSString */
 @property(readonly, nonatomic, strong) NSMutableArray *customClickURLs;     /**< The custom click urls in an NSMutableArray of NSString */
 @property(readonly, nonatomic, strong) NSMutableArray *streams;             /**< The streams in an NSMutableArray of OOStream */
+@property(readonly, nonatomic, strong) NSMutableArray *errorCodes;          /**< The error codes */
 
 /** @internal
  * Initialize a OOVASTLinearAd using the specified xml (subclasses should override this)
@@ -48,5 +41,7 @@
  * @param[in] newClickTrackingURLs the NSMutableArray of the wrapper's click tracking URLs
  */
 - (void)updateClickTrackingURLs:(NSMutableArray*)newClickTrackingURLs;
+
+- (void)merge:(OOVASTLinearAd *)linear;
 
 @end

@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4264B5E3C0FAF3A8F8A226161DDF14603CD95740" : 0,
     "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : 0,
     "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B321E9D1-84EB-4010-B538-B95AE462F405",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4264B5E3C0FAF3A8F8A226161DDF14603CD95740" : "ios-complete\/native-skin\/",
     "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : "ios-sdk\/",
     "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : "ios-sample-apps\/"
   },
@@ -20,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.services.ooyala.net:playback-app\/ios-sdk.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/native-skin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4264B5E3C0FAF3A8F8A226161DDF14603CD95740"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/ios-sample-apps.git",
