@@ -27,9 +27,6 @@
  HLSs = @"m3u8"
  MP4s = @"mp4"
  AKAMAI HD = @"akamai_hd"
- WIDEVINE HLS = @"wv_hls"
- WIDEVINE MP4 = @"wv_mp4"
- WIDEVINE WVM = @"wv_wvm"
  MS Smooth = @"smooth"
 
  return nil to not include this parameter

@@ -17,6 +17,7 @@
 
 - (BOOL)playAd:(OOAdSpot *)ad;
 - (void)onError;
+- (void)skipAd;
 
 @end
 

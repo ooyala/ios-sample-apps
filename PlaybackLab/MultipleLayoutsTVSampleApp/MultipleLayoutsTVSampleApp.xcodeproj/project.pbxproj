@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97EF72811CE2777E001A3CFF /* OoyalaTVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EF72731CE2733C001A3CFF /* OoyalaTVSDK.framework */; };
+		97EF728D1CE27E4A001A3CFF /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EF72771CE27395001A3CFF /* OoyalaTVSkinSDK.framework */; };
 		CA49FD4A1C8E4D8A0017E19F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD491C8E4D8A0017E19F /* main.m */; };
 		CA49FD4D1C8E4D8A0017E19F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD4C1C8E4D8A0017E19F /* AppDelegate.m */; };
 		CA49FD531C8E4D8A0017E19F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA49FD511C8E4D8A0017E19F /* Main.storyboard */; };
@@ -20,10 +22,11 @@
 		CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD751C8E98640017E19F /* MediaPlayer.framework */; };
 		CA6F9F761CB6CD0D00A114BE /* AssetDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6F9F751CB6CD0D00A114BE /* AssetDataSource.m */; };
 		CAFA2E3C1CB5BFC900623133 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFA2E3B1CB5BFC900623133 /* MainTableViewController.m */; };
-		CAFF0F801CA48CE500073164 /* OoyalaTVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF0F7F1CA48CE500073164 /* OoyalaTVSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97EF72731CE2733C001A3CFF /* OoyalaTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSDK.framework; path = VendorLibraries/OoyalaTVSDK.framework; sourceTree = "<group>"; };
+		97EF72771CE27395001A3CFF /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSkinSDK.framework; path = VendorLibraries/OoyalaTVSkinSDK.framework; sourceTree = "<group>"; };
 		CA49FD451C8E4D8A0017E19F /* MultipleLayoutsTVSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleLayoutsTVSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA49FD491C8E4D8A0017E19F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA49FD4B1C8E4D8A0017E19F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,7 +50,6 @@
 		CA6F9F751CB6CD0D00A114BE /* AssetDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetDataSource.m; path = Utils/AssetDataSource.m; sourceTree = "<group>"; };
 		CAFA2E3A1CB5BFC900623133 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableViewController.h; path = Lists/MainTableViewController.h; sourceTree = "<group>"; };
 		CAFA2E3B1CB5BFC900623133 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewController.m; path = Lists/MainTableViewController.m; sourceTree = "<group>"; };
-		CAFF0F7F1CA48CE500073164 /* OoyalaTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSDK.framework; path = VendorLibraries/OoyalaTVSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFF0F801CA48CE500073164 /* OoyalaTVSDK.framework in Frameworks */,
+				97EF728D1CE27E4A001A3CFF /* OoyalaTVSkinSDK.framework in Frameworks */,
 				CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */,
 				CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */,
+				97EF72811CE2777E001A3CFF /* OoyalaTVSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +135,8 @@
 		CA49FD6A1C8E84E00017E19F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CAFF0F7F1CA48CE500073164 /* OoyalaTVSDK.framework */,
+				97EF72771CE27395001A3CFF /* OoyalaTVSkinSDK.framework */,
+				97EF72731CE2733C001A3CFF /* OoyalaTVSDK.framework */,
 				CA49FD751C8E98640017E19F /* MediaPlayer.framework */,
 				CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */,
 			);
@@ -339,6 +343,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
 		};
@@ -356,6 +361,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Release;
 		};
