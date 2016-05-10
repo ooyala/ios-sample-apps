@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-  Seconds,
-  Percentage,
-  Position
-} Type;
+typedef NS_ENUM(NSInteger, OffsetType) {
+  OffsetTypeSeconds,
+  OffsetTypePercentage,
+  OffsetTypePosition
+};
 
 @interface OOVASTOffset : NSObject
 
-@property (readonly, nonatomic, assign) Type type;
+@property (readonly, nonatomic, assign) OffsetType type;
 
-- (id)initWithType:(Type)type value:(Float64)value;
+- (id)initWithType:(OffsetType)type value:(Float64)value;
 - (id)initWithOffset:(NSString *)offsetStr;
 
 - (Float64)getPercentage;
