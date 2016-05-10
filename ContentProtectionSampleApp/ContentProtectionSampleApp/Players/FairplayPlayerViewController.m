@@ -41,13 +41,14 @@
   self.nib = @"PlayerSimple";
   self.pcode = @"RkcjMxOtMYDwJzrPy3sWJLl6blS1";
   self.playerDomain = @"http://www.ooyala.com";
+  self.authorizeHost = @"http://player.ooyala.com";
   /*
    * The API Key and Secret should not be saved inside your applciation (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
   self.apiKey = @"Fill me in";
   self.secret = @"Fill me in";
-
+  self.accountId = @"Fill me in";
 
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
