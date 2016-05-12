@@ -7,6 +7,7 @@
  */
 
 #import "OOManagedAdSpot.h"
+#import "OOTBXML.h"
 
 @interface OOVASTAdSpot : OOManagedAdSpot {
 @protected
@@ -15,10 +16,16 @@
   NSMutableArray *ads;
 }
 
-@property(readonly, nonatomic, strong) NSString *signature; /**< The signature for the vast request */
-@property(readonly, nonatomic) NSInteger expires;           /**< The expires for the vast request */
-@property(readonly, nonatomic, strong) NSURL *vastURL;      /**< The url for the vast request */
-@property(readonly, nonatomic, strong) NSMutableArray *ads; /**< The actual ads (NSMutableArray of OOVASTAd) */
+@property(readonly, nonatomic, strong) NSString *signature;         /**< The signature for the vast request */
+@property(readonly, nonatomic) NSInteger expires;                   /**< The expires for the vast request */
+@property(readonly, nonatomic, strong) NSURL *vastURL;              /**< The url for the vast request */
+@property(readonly, nonatomic, strong) NSMutableArray *ads;         /**< The actual ads */
+@property(readonly, nonatomic, strong) NSMutableArray *vmapAdSpots; /**< The vmap ad spots */
+@property(readonly, nonatomic) NSInteger contentDuration;           /**< The duration of the ad */
+@property(readonly, nonatomic, strong) NSMutableDictionary *errors;           /**< The errors of ads */
+
+
+- (id)initWithOffset:(NSInteger)timeoffset duration:(NSInteger)duration Element:(OOTBXMLElement *)e;
 
 /**
  * Initialize a OOVASTAdSpot using the VAST URL
@@ -28,16 +35,17 @@
  * @param[in] theVASTURL the VAST URL to initialize the OOVASTAdSpot with
  * @returns the initialized OOVASTAdSpot
  */
-- (id)initWithTime:(NSNumber *)theTime clickURL:(NSURL *)theClickURL trackingURLs:(NSArray *)theTrackingURLs vastURL:(NSURL *)theVASTURL;
+- (id)initWithTime:(NSNumber *)theTime duration:(NSInteger)duration clickURL:(NSURL *)theClickURL trackingURLs:(NSArray *)theTrackingURLs vastURL:(NSURL *)theVASTURL;
 
 
 /** @internal
  * Initialize a OOVASTAdSpot using the specified data (subclasses should override this)
  * @param[in] data the NSDictionary containing the data to use to initialize this OOVASTAdSpot
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVASTAd
+ * @param[in] duration the content duration
  * @returns the initialized OOVASTAdSpot
  */
-- (id)initWithDictionary:(NSDictionary *)data api:(OOPlayerAPIClient *)theAPI;
+- (id)initWithDictionary:(NSDictionary *)data api:(OOPlayerAPIClient *)theAPI duration:(NSInteger)duration;
 
 /** @internal
  * Update the OOVASTAdSpot using the specified data (subclasses should override and call this)

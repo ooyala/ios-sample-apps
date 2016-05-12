@@ -14,13 +14,9 @@
 /**
  * A single ooyala video ad associated with specific time
  */
-@interface OOOoyalaAdSpot : OOManagedAdSpot <OOAuthorizableItem, OOPlayableItem> {
-@protected
-  NSString *embedCode;
-  BOOL authorized;
-  OOAuthCode authCode;
-}
+@interface OOOoyalaAdSpot : OOManagedAdSpot <OOAuthorizableItem, OOPlayableItem> 
 
+@property(readonly, nonatomic, strong) NSMutableArray *streams;
 @property(readonly, nonatomic, strong) NSString *embedCode; /**< The OOOoyalaAdSpot's Embed Code */
 @property(readonly, nonatomic) BOOL authorized;             /**< @internal Whether or not this OOOoyalaAdSpot is authorized */
 @property(readonly, nonatomic) OOAuthCode authCode;         /**< @internal The response code from the authorize call */
