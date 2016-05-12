@@ -9,15 +9,19 @@
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaAdobeAnalyticsSDK/OoyalaAdobeAnalyticsSDK.h>
 
 @interface BasicPlayerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 
-@property (nonatomic, strong) OOOoyalaPlayerViewController *playerVC;
+@property (nonatomic) OOOoyalaPlayerViewController *playerVC;
+@property (nonatomic) OOAdobeAnalyticsManager *adobeAnalyticsManager;
 
-@property (nonatomic, strong) NSString *pcode;
-@property (nonatomic, strong) NSString *playerDomain;
-@property (nonatomic, strong) NSString *embedCode;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *hbTrackingServer;
+@property (nonatomic) NSString *hbProvider;
 
 @end
 
@@ -27,12 +31,21 @@
   [super viewDidLoad];
   
   self.pcode = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
-  self.embedCode = @"JiOTdrdzqAujYa5qvnOxszbrTEuU5HMt";
+  self.embedCode = @"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx";
   self.playerDomain = @"http://www.ooyala.com";
+  self.hbTrackingServer = @"ovppartners.hb.omtrdc.net";
+  self.hbProvider = @"ooyalatester";
   
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   self.playerVC = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+  
+  // Start adobe analytics
+  OOAdobeHeartbeatConfiguration *hbConfig = [[OOAdobeHeartbeatConfiguration alloc]
+                                             initWithHeartbeatTrackingServer:self.hbTrackingServer
+                                             heartbeatPublisher:self.hbProvider];
+  self.adobeAnalyticsManager = [[OOAdobeAnalyticsManager alloc] initWithPlayer:player config:hbConfig];
+  [self.adobeAnalyticsManager startCapture];
   
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
