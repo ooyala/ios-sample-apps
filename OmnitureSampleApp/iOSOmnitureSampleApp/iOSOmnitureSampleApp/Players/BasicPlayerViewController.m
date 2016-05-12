@@ -6,6 +6,7 @@
 //
 
 #import "BasicPlayerViewController.h"
+#import "PlayerSelectionOption.h"
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
@@ -17,9 +18,7 @@
 @property (nonatomic) OOOoyalaPlayerViewController *playerVC;
 @property (nonatomic) OOAdobeAnalyticsManager *adobeAnalyticsManager;
 
-@property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *playerDomain;
-@property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *hbTrackingServer;
 @property (nonatomic) NSString *hbProvider;
 
@@ -30,22 +29,22 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  self.pcode = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
-  self.embedCode = @"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx";
+  self.title = self.asset.title;
+  
   self.playerDomain = @"http://www.ooyala.com";
   self.hbTrackingServer = @"ovppartners.hb.omtrdc.net";
   self.hbProvider = @"ooyalatester";
   
-  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.asset.pcode
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   self.playerVC = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
   // Start adobe analytics
-  OOAdobeHeartbeatConfiguration *hbConfig = [[OOAdobeHeartbeatConfiguration alloc]
-                                             initWithHeartbeatTrackingServer:self.hbTrackingServer
-                                             heartbeatPublisher:self.hbProvider];
-  self.adobeAnalyticsManager = [[OOAdobeAnalyticsManager alloc] initWithPlayer:player config:hbConfig];
-  [self.adobeAnalyticsManager startCapture];
+//  OOAdobeHeartbeatConfiguration *hbConfig = [[OOAdobeHeartbeatConfiguration alloc]
+//                                             initWithHeartbeatTrackingServer:self.hbTrackingServer
+//                                             heartbeatPublisher:self.hbProvider];
+//  self.adobeAnalyticsManager = [[OOAdobeAnalyticsManager alloc] initWithPlayer:player config:hbConfig];
+//  [self.adobeAnalyticsManager startCapture];
   
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
@@ -57,7 +56,7 @@
   self.playerVC.view.frame = self.playerView.bounds;
   [self.playerVC didMoveToParentViewController:self];
   
-  if ([self.playerVC.player setEmbedCode:self.embedCode]) {
+  if ([self.playerVC.player setEmbedCode:self.asset.embedCode]) {
     [self.playerVC.player play];
   }
 }
