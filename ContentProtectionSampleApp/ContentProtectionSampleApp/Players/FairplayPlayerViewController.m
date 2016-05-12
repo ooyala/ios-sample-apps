@@ -35,7 +35,7 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode = @"RkcjMxOtMYDwJzrPy3sWJLl6blS1";
+  self.pcode = @"x0b2cyOupu0FFK5hCr4zXg8KKcrm";
   self.playerDomain = @"http://www.ooyala.com";
   /*
    * The API Key and Secret should not be saved inside your applciation (even in git!).
