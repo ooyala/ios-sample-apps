@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const OO_SKIN_VERSION;
+extern NSString *const OO_CLOSED_CAPTIONS_UPDATE_EVENT;

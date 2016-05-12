@@ -552,6 +552,8 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOOoyalaAPIClient *)api;
 
+- (void)destroy;
+
 /**
  * Called when an icon is clicked
  * @param index the index of the icon
