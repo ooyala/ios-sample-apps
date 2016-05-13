@@ -40,11 +40,11 @@
   self.playerVC = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
   // Start adobe analytics
-//  OOAdobeHeartbeatConfiguration *hbConfig = [[OOAdobeHeartbeatConfiguration alloc]
-//                                             initWithHeartbeatTrackingServer:self.hbTrackingServer
-//                                             heartbeatPublisher:self.hbProvider];
-//  self.adobeAnalyticsManager = [[OOAdobeAnalyticsManager alloc] initWithPlayer:player config:hbConfig];
-//  [self.adobeAnalyticsManager startCapture];
+  OOAdobeHeartbeatConfiguration *hbConfig = [[OOAdobeHeartbeatConfiguration alloc]
+                                             initWithHeartbeatTrackingServer:self.hbTrackingServer
+                                             heartbeatPublisher:self.hbProvider];
+  self.adobeAnalyticsManager = [[OOAdobeAnalyticsManager alloc] initWithPlayer:player config:hbConfig];
+  [self.adobeAnalyticsManager startCapture];
   
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
