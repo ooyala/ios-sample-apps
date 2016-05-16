@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
+  self.pcode =@"c0cTkxOqALQviQIGAHWY5hP0q9gU";
   self.playerDomain = @"http://www.ooyala.com";
   
   // Create Ooyala ViewController

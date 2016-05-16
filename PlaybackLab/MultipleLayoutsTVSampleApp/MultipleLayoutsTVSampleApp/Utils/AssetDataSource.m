@@ -34,6 +34,12 @@
                                               embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"],
            [[PlayerSelectionOption alloc] initWithTitle:@"MP4"
                                               embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"OPT unauthorized"
+                                              embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
+                                     needsAuthorization:NO],
+           [[PlayerSelectionOption alloc] initWithTitle:@"OPT authorized"
+                                              embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
+                                     needsAuthorization:YES],
            ];
 }
 
@@ -41,9 +47,11 @@
   return @[
            [[PlayerSelectionOption alloc] initWithTitle:@"Fullscreen Player"
                                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                     needsAuthorization:NO
                                          viewController:[FullscreenPlayerViewController class]],
            [[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
                                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                     needsAuthorization:NO
                                          viewController:[ChildPlayerViewController class]],
            ];
 }
