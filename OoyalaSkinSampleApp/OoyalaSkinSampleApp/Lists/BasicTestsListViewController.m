@@ -39,14 +39,14 @@
   [self addCommonWithTitle:@"VAST 3.0 - Icon Top Right" embedCode:@"RndWtqMzE6Ntq7eH648UHTe00oL4Tld6"];
   [self addCommonWithTitle:@"VAST 3.0 - Icon Bottom Left" embedCode:@"4zMzA5MTE63GOQrCXisPVr5deWsc9WiY"];
   // Error Reporting
-  [self addCommonWithTitle:@"VAST 3.0 - General Linear Error" embedCode:@"M5dmtqMzE6oH_PYHHUrvtPiYb2erJmAc"];
-  [self addCommonWithTitle:@"VAST 3.0 - No Ads Error" embedCode:@"xsdmtqMzE64N4xS6f4s9A35gt4KRMOFk"];
-  [self addCommonWithTitle:@"VAST 3.0 - Unsupported Version Error" embedCode:@"xld2tqMzE6YLRevbnbwJGEtKw33F1qEJ"];
+  [self addCommonWithTitle:@"VAST 3.0 Error Case - General Linear Error" embedCode:@"M5dmtqMzE6oH_PYHHUrvtPiYb2erJmAc"];
+  [self addCommonWithTitle:@"VAST 3.0 Error Case - No Ads Error" embedCode:@"xsdmtqMzE64N4xS6f4s9A35gt4KRMOFk"];
+  [self addCommonWithTitle:@"VAST 3.0 Error Case - Unsupported Version Error" embedCode:@"xld2tqMzE6YLRevbnbwJGEtKw33F1qEJ"];
   // VMAP
   [self addCommonWithTitle:@"VAST 3.0 - VMAP PreMidPost using AdTagURI" embedCode:@"41MzA5MTE65SC6VQAS3H3d9rX-hwHQSK"];
   [self addCommonWithTitle:@"VAST 3.0 - VMAP PreMid using VASTAdData" embedCode:@"10eGE0MjE6TZG6mdHfJJEAGnxbuEv1Vi"];
   // Ad Overlay
   [self addCommonWithTitle:@"VAST 3.0 - Overlay Ad" embedCode:@"10MzA5MTE6IsBf0ers2BiZu8l7AB0TOi"];
-  [self addCommonWithTitle:@"VAST 3.0 - Overlay Podded Ad" embedCode:@"9uajEwMzE6K3pBlfg3Z65LapnI9dLouv"];
+  [self addCommonWithTitle:@"VAST 3.0 - Overlay with PreMid Podded" embedCode:@"9uajEwMzE6K3pBlfg3Z65LapnI9dLouv"];
 }
 @end
