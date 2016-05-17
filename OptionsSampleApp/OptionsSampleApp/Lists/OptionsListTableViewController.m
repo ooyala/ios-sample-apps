@@ -85,7 +85,7 @@ static NSString *cellId = @"pickerCell";
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
   SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
-  if ([selection.title rangeOfString:@"initialPlayTime"].location != NSNotFound) {
+  if ([selection.title rangeOfString:@"InitialTime"].location != NSNotFound) {
     ((OptionsViewController *)controller).initialTime = 20;
   }
   [self.navigationController pushViewController:controller animated:YES];
