@@ -4,6 +4,7 @@
 #import <OoyalaSDK/OOooyalaError.h>
 #import <OoyalaSDK/OOOptions.h>
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
+#import <OoyalaSDK/OODebugMode.h>
 
 /**
  * This activity illustrates how you configure your application to run Fairplay assets
@@ -15,7 +16,7 @@
  *
  * To play OPT-enabled videos, you must implement the OOEmbedTokenGenerator interface
  */
-@interface FairplayPlayerViewController ()
+@interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
 @property NSString *embedCode;
@@ -23,8 +24,12 @@
 @property NSString *pcode;
 @property NSString *playerDomain;
 
+// required for FairPlay.
 @property NSString *apiKey;
 @property NSString *secret;
+// additionaly required if using OPT.
+@property NSString *authorizeHost;
+@property NSString *accountId;
 
 @property(nonatomic, strong) UIAlertView *nicknameDialog;
 @property(nonatomic) NSString *publicDeviceId;
@@ -37,13 +42,16 @@
   self.nib = @"PlayerSimple";
   self.pcode = @"RkcjMxOtMYDwJzrPy3sWJLl6blS1";
   self.playerDomain = @"http://www.ooyala.com";
+  self.authorizeHost = @"http://player.ooyala.com";
   /*
    * The API Key and Secret should not be saved inside your applciation (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
   self.apiKey = @"Fill me in";
+  [OODebugMode setDebugMode:LogAndAbort];
+  ASSERT( [self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey." );
   self.secret = @"Fill me in";
-
+  self.accountId = @"Fill me in";
 
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
@@ -69,7 +77,9 @@
 
   // Create Ooyala ViewController, with self as the embed token generator
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                          domain:[[OOPlayerDomain alloc]initWithString:self.playerDomain] options:options];
+                                                          domain:[[OOPlayerDomain alloc]initWithString:self.playerDomain]
+                                             embedTokenGenerator:self
+                                                         options:options];
 
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
@@ -97,5 +107,21 @@
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime]);
+}
+
+/*
+ * Get the Ooyala Player Token to play the embed code.
+ * This should contact your servers to generate the OPT server-side.
+ * For debugging, you can use Ooyala's EmbeddedSecureURLGenerator to create local embed tokens
+ */
+- (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
+  NSMutableDictionary* params = [NSMutableDictionary dictionary];
+  
+  params[@"account_id"] = self.accountId;
+  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  
+  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
+  NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
+  callback([embedTokenUrl absoluteString]);
 }
 @end
