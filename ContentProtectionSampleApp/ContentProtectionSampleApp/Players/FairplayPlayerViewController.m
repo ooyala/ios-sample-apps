@@ -47,7 +47,8 @@
    * The API Key and Secret should not be saved inside your applciation (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
-  self.apiKey = @"Fill me in"; // Note: self.pcode must be the long prefix of self.apiKey.
+  self.apiKey = @"Fill me in";
+  [OODebugMode setDebugMode:LogAndAbort];
   ASSERT( [self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey." );
   self.secret = @"Fill me in";
   self.accountId = @"Fill me in";
