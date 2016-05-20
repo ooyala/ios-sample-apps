@@ -34,6 +34,7 @@
   [self addCommonWithTitle:@"VAST 3.0 - Podded" embedCode:@"ZnaWtqMzE6HLDm_J8pqeKKenfoZt_wj6"];
   [self addCommonWithTitle:@"VAST 3.0 - Skippable Midroll" embedCode:@"4xMzA5MTE6tCoMA9RY26vlJ9RsBPiJOK"];
   [self addCommonWithTitle:@"VAST 3.0 - Skippable Preroll" embedCode:@"55MjA5MTE6iZTRzrTtLoxUy78YbffT2G"];
+  [self addCommonWithTitle:@"VAST 3.0 - Ad Wrapper" embedCode:@"Fkcm9lMjE6GOcDOtPSiRnNCRhqsz-96e"];
   // Icon ads
   [self addCommonWithTitle:@"VAST 3.0 - Icon General" embedCode:@"80dWtqMzE6_f8I1lphM6iLSZ7CPuhJiz"];
   [self addCommonWithTitle:@"VAST 3.0 - Icon Top Right" embedCode:@"RndWtqMzE6Ntq7eH648UHTe00oL4Tld6"];
