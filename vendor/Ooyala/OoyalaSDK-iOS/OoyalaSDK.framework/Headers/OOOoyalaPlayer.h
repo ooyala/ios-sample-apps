@@ -103,6 +103,7 @@ extern NSString *const OOOoyalaPlayerPlayStartedNotification; /**< Fires when pl
 extern NSString *const OOOoyalaplayerLicenseAcquisitionNotification; /**< Fires after a successful license acquisition */
 extern NSString *const OOOoyalaPlayerPlayCompletedNotification; /**< Fires when play completes */
 extern NSString *const OOOoyalaPlayerCurrentItemChangedNotification; /**< Fires when the current item changes */
+extern NSString *const OOOoyalaPlayerAdOverlayNotification; /**< Fries when encounters an ad overlay */
 extern NSString *const OOOoyalaPlayerAdPodStartedNotification; /**< Fires when an ad pod containing one ore more ads starts playing */
 extern NSString *const OOOoyalaPlayerAdStartedNotification; /**< Fires when an ad starts playing */
 extern NSString *const OOOoyalaPlayerAdCompletedNotification; /**< Fires when an ad completes playing */
@@ -115,6 +116,7 @@ extern NSString *const OOOoyalaPlayerErrorNotification; /**< Fires when an error
 extern NSString *const OOOoyalaPlayerAdErrorNotification; /**< Fires when an error occurs while trying to play an ad */
 extern NSString *const OOOoyalaPlayerMetadataReadyNotification; /**< Fires when content metadata is ready to be accessed */
 extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires when close caption language changed*/
+extern NSString *const OOOoyalaPlayerSeekStartedNotification; /**< Fires when a seek begins*/
 extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
 extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
 extern NSString *const OOOoyalaPlayerEmbedCodeSetNotification; /**< Fires when setEmbedCode is getting called */
@@ -550,11 +552,19 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOOoyalaAPIClient *)api;
 
+- (void)destroy;
+
 /**
  * Called when an icon is clicked
  * @param index the index of the icon
  */
-- (void) onAdIconClicked: (NSInteger) index;
+- (void)onAdIconClicked: (NSInteger) index;
+
+/**
+ * Called when an ad overlay is clicked
+ * @param clickUrl the url of the overlay
+ */
+- (void)onAdOverlayClicked: (NSString *)clickUrl;
 
 /**
  * Insert VAST ads to the managed ad plugin

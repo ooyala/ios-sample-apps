@@ -34,6 +34,8 @@
 		0B4111561B604C7800DF47AB /* CustomOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111541B604C7800DF47AB /* CustomOverlayView.m */; };
 		0B4111571B6051AF00DF47AB /* CustomOverlayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */; };
 		0B4111581B6051AF00DF47AB /* CustomOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111541B604C7800DF47AB /* CustomOverlayView.m */; };
+		0B4FE7931CE2AA60000DCC00 /* UnbundledPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */; };
+		0B4FE7941CE2AA60000DCC00 /* PerformanceProfilingPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */; };
 		0B7333AB1A7AEEBD00F0EC32 /* OOSampleAdPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */; };
 		0B7333AC1A7AEEBD00F0EC32 /* OOSampleAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */; };
 		0B7333AD1A7AEEBD00F0EC32 /* OOSampleAdSpot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7333A71A7AEEBD00F0EC32 /* OOSampleAdSpot.h */; };
@@ -539,6 +541,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4FE7931CE2AA60000DCC00 /* UnbundledPlayerViewController.m in Sources */,
+				0B4FE7941CE2AA60000DCC00 /* PerformanceProfilingPlayerViewController.m in Sources */,
 				0B4111571B6051AF00DF47AB /* CustomOverlayPlayerViewController.m in Sources */,
 				0B4111581B6051AF00DF47AB /* CustomOverlayView.m in Sources */,
 				0BCA696C1A84965F00225119 /* OOSampleAdPlayer.m in Sources */,
@@ -666,6 +670,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -692,6 +697,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",

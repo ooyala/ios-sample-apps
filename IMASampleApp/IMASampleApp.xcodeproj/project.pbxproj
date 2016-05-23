@@ -15,7 +15,7 @@
 		0B9458AD1AC3361F000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458AC1AC3361F000DD545 /* libxml2.dylib */; };
 		0B9458B81AC339AB000DD545 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA3E1A68702A0050A602 /* libz.dylib */; };
 		0B94591F1AC33ABF000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94584E1AC32CB3000DD545 /* OoyalaSDK.framework */; };
-		0BC8CF9B1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9A1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework */; settings = {ASSET_TAGS = (); }; };
+		0BC8CF9B1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9A1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework */; };
 		0BC947FF1A81779B004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947F91A81779B004CB997 /* PlayerDoubleButton.xib */; };
 		0BC948001A81779B004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FA1A81779B004CB997 /* PlayerDoubleSwitch.xib */; };
 		0BC948011A81779B004CB997 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FB1A81779B004CB997 /* PlayerDoubleText.xib */; };
@@ -483,6 +483,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -511,6 +512,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",

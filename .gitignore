@@ -25,4 +25,4 @@ go_script/bin
 **/Resources/*.dat
 **/Resources/*.xml
 **/Resources/*.cfg
-
+**/Pulse.framework
