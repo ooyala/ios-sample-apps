@@ -6,6 +6,9 @@
 #import "OOPerformanceEventWatchProtocol.h"
 #import "OOPerformanceEventMatcherProtocol.h"
 
+/**
+ * Help keep track of the window between a start and end event.
+ */
 @interface OOPerformanceEventWatchStartEnd : NSObject <OOPerformanceEventWatchProtocol>
 @property (nonatomic, readonly) id<OOPerformanceEventMatcherProtocol> start;
 @property (nonatomic, readonly) id<OOPerformanceEventMatcherProtocol> end;

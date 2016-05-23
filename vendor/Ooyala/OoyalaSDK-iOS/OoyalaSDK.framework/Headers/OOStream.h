@@ -31,7 +31,6 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
   NSString *url;
   NSString *aspectRatio;
   BOOL isLiveStream;
-  NSString *widevineServerPath;
 }
 
 @property(readonly, nonatomic, strong) NSString *deliveryType; /**< The OOStream's delivery type */
@@ -46,8 +45,6 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 @property(readonly, nonatomic, strong) NSString *aspectRatio; /**< The OOStream's URL (Remote Asset only) */
 @property(readonly, nonatomic, assign) BOOL isLiveStream; /**< The OOStream's URL (Remote Asset only) */
 @property(readonly, nonatomic, strong) NSString *profile; /**< The OOStream's encoding profile */
-@property(readonly, nonatomic, strong) NSString *widevineServerPath; /**< The OOStream's widevine server path */
-
 /**
  * Get the combined (video+audio) bitrate of this OOStream
  * @returns an NSNumber containing the combined bitrate
@@ -80,12 +77,6 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
  * @returns an NSURL object created by decoding the url according to urlFromat
  */
 - (NSURL *)decodedURL;
-
-/**
- * Gets the Widevine Server Path, if it was passed in from SAS
- * @returns the widevine server path
- */
-- (NSString *)getWidevineServerPath;
 
 /** @internal
  * Check if the OOStream is better than the other

@@ -1,0 +1,2 @@
+The Pulse sample app is not provided within this package.
+You can download the Pulse sample app from our iOS Sample App Github Repository: https://github.com/ooyala/ios-sample-apps

@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @class IMAAdDisplayContainer;
+@class IMAAVPlayerContentPlayhead;
+@class IMAAVPlayerVideoDisplay;
+@class IMAPictureInPictureProxy;
+@protocol IMAContentPlayhead;
 
 /**
  *  Data class describing the ad request.
@@ -39,19 +43,57 @@
 
 /**
  *  Initializes an ads request instance with the given ad tag URL and ad display
- *  container. Serial ad requests may reuse the same IMAAdDisplayContainer by
- *  first calling [IMAAdsManager destroy] its current adsManager. Concurrent
- *  requests must use different ad containers.
+ *  container with Picture-in-Picture support. Serial ad requests may reuse the
+ *  same IMAAdDisplayContainer by first calling [IMAAdsManager destroy] on its
+ *  current adsManager. Concurrent requests must use different ad containers.
  *
- *  @param adTagUrl           the ad tag URL
- *  @param adDisplayContainer the IMAAdDisplayContainer for rendering the ad
- *  @param userContext        the user context for tracking requests
+ *  @param adTagUrl              the ad tag URL
+ *  @param adDisplayContainer    the IMAAdDisplayContainer for rendering the ad UI
+ *  @param avPlayerVideoDisplay  the IMAAVPlayerVideoDisplay for rendering ads
+ *  @param pictureInPictureProxy the IMAPictureInPictureProxy for tracking PIP events
+ *  @param userContext           the user context for tracking requests (optional)
  *
  *  @return the IMAAdsRequest instance
  */
 - (instancetype)initWithAdTagUrl:(NSString *)adTagUrl
               adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
+            avPlayerVideoDisplay:(IMAAVPlayerVideoDisplay *)avPlayerVideoDisplay
+           pictureInPictureProxy:(IMAPictureInPictureProxy *)pictureInPictureProxy
                      userContext:(id)userContext;
+
+/**
+ *  Initializes an ads request instance with the given ad tag URL and ad display
+ *  container. Serial ad requests may reuse the same IMAAdDisplayContainer by
+ *  first calling [IMAAdsManager destroy] on its current adsManager. Concurrent
+ *  requests must use different ad containers. Does not support Picture-in-Picture.
+ *
+ *  @param adTagUrl           the ad tag URL
+ *  @param adDisplayContainer the IMAAdDisplayContainer for rendering the ad UI
+ *  @param contentPlayhead    the IMAContentPlayhead for the content player (optional)
+ *  @param userContext        the user context for tracking requests (optional)
+ *
+ *  @return the IMAAdsRequest instance
+ */
+- (instancetype)initWithAdTagUrl:(NSString *)adTagUrl
+              adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
+                 contentPlayhead:(NSObject<IMAContentPlayhead> *)contentPlayhead
+                     userContext:(id)userContext NS_DESIGNATED_INITIALIZER;
+
+/**
+ *  Initializes an ads request instance with the given ad tag URL and ad display
+ *  container. Serial ad requests may reuse the same IMAAdDisplayContainer by
+ *  first calling [IMAAdsManager destroy] on its current adsManager. Concurrent
+ *  requests must use different ad containers. Does not support Picture-in-Picture.
+ *
+ *  @param adTagUrl           the ad tag URL
+ *  @param adDisplayContainer the IMAAdDisplayContainer for rendering the ad
+ *  @param userContext        the user context for tracking requests (optional)
+ *
+ *  @return the IMAAdsRequest instance
+ */
+- (instancetype)initWithAdTagUrl:(NSString *)adTagUrl
+              adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
+                     userContext:(id)userContext DEPRECATED_ATTRIBUTE;
 
 - (instancetype)init NS_UNAVAILABLE;
 

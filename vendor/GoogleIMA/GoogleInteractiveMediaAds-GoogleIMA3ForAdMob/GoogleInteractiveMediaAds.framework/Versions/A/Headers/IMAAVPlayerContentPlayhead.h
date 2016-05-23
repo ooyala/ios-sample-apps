@@ -18,6 +18,9 @@
  */
 @interface IMAAVPlayerContentPlayhead : NSObject<IMAContentPlayhead>
 
+// The player to track.
+@property(nonatomic, strong, readonly) AVPlayer *player;
+
 /**
  *  Initializes a IMAAVPlayerContentPlayhead that tracks a player. It will attach a periodic time
  *  observer to the player immediately.

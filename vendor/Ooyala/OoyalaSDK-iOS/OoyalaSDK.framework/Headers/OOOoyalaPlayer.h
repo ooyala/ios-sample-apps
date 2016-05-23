@@ -96,12 +96,14 @@ typedef NS_ENUM(NSInteger, OOUIProgressSliderMode)
 // notifications
 extern NSString *const OOOoyalaPlayerTimeChangedNotification; /**< Fires when the Playhead Time Changes */
 extern NSString *const OOOoyalaPlayerStateChangedNotification; /**< Fires when the Player's State Changes */
+extern NSString *const OOOoyalaPlayerDesiredStateChangedNotification; /**< Fires when the user's desired State Changes */
 extern NSString *const OOOoyalaPlayerContentTreeReadyNotification; /**< Fires when the content tree's metadata is ready and can be accessed */
 extern NSString *const OOOoyalaPlayerAuthorizationReadyNotification; /**< Fires when the authorization status is ready and can be accessed */
 extern NSString *const OOOoyalaPlayerPlayStartedNotification; /**< Fires when play starts */
 extern NSString *const OOOoyalaplayerLicenseAcquisitionNotification; /**< Fires after a successful license acquisition */
 extern NSString *const OOOoyalaPlayerPlayCompletedNotification; /**< Fires when play completes */
 extern NSString *const OOOoyalaPlayerCurrentItemChangedNotification; /**< Fires when the current item changes */
+extern NSString *const OOOoyalaPlayerAdOverlayNotification; /**< Fries when encounters an ad overlay */
 extern NSString *const OOOoyalaPlayerAdPodStartedNotification; /**< Fires when an ad pod containing one ore more ads starts playing */
 extern NSString *const OOOoyalaPlayerAdStartedNotification; /**< Fires when an ad starts playing */
 extern NSString *const OOOoyalaPlayerAdCompletedNotification; /**< Fires when an ad completes playing */
@@ -109,10 +111,12 @@ extern NSString *const OOOoyalaPlayerAdPodCompletedNotification; /**< Fires when
 extern NSString *const OOOoyalaPlayerAdsLoadedNotification; /**< Fires when ads are done loading */
 extern NSString *const OOOoyalaPlayerAdSkippedNotification; /**< Fires when an ad is skipped */
 extern NSString *const OOOoyalaPlayerAdTappedNotification; /**< Fires when third party ad is tapped*/
+extern NSString *const OOOoyalaPlayerContentResumedAfterAdNotification; /**< Fires when the player has switched from ads back to main content */
 extern NSString *const OOOoyalaPlayerErrorNotification; /**< Fires when an error occurs */
 extern NSString *const OOOoyalaPlayerAdErrorNotification; /**< Fires when an error occurs while trying to play an ad */
 extern NSString *const OOOoyalaPlayerMetadataReadyNotification; /**< Fires when content metadata is ready to be accessed */
 extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires when close caption language changed*/
+extern NSString *const OOOoyalaPlayerSeekStartedNotification; /**< Fires when a seek begins*/
 extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
 extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
 extern NSString *const OOOoyalaPlayerEmbedCodeSetNotification; /**< Fires when setEmbedCode is getting called */
@@ -364,6 +368,14 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOOoyalaPlayerState)state;
 
+
+/**
+ * Gets the user's current desired state.
+ * @returns a string containing the current state
+ */
+@property (nonatomic, readonly)OOOoyalaPlayerDesiredState desiredState;
+
+
 /**
  * Pauses the current video.
  */
@@ -467,6 +479,14 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 + (NSString *)playerStateToString:(OOOoyalaPlayerState)state;
 
+
+/**
+ * Converts PlayerDesiredState to a String.
+ * @param[in] state the PlayerState
+ * @returns an external facing DesiredState string
+ */
++ (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
+
 /**
  * Register ad player for an ad type
  * @param[in] adPlayerClass the ad player class
@@ -531,5 +551,25 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * Return an OoyalaAPIClient
  */
 - (OOOoyalaAPIClient *)api;
+
+- (void)destroy;
+
+/**
+ * Called when an icon is clicked
+ * @param index the index of the icon
+ */
+- (void)onAdIconClicked: (NSInteger) index;
+
+/**
+ * Called when an ad overlay is clicked
+ * @param clickUrl the url of the overlay
+ */
+- (void)onAdOverlayClicked: (NSString *)clickUrl;
+
+/**
+ * Insert VAST ads to the managed ad plugin
+ * @param ads the ads to be inserted
+ */
+- (void)insertAds:(NSMutableArray *)ads;
 
 @end

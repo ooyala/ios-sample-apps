@@ -12,6 +12,8 @@
 #import "ChangeVideoPlayerViewController.h"
 #import "CustomControlsPlayerViewController.h"
 #import "CustomOverlayPlayerViewController.h"
+#import "UnbundledPlayerViewController.h"
+#import "PerformanceProfilingPlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface AdvancedPlaybackListViewController ()
@@ -32,6 +34,8 @@
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Play With InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [PlayWithInitialTimePlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [CustomControlsPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Overlay" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [CustomOverlayPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Unbundled HLS" embedCode:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8" viewController: [UnbundledPlayerViewController class]]];
+  [self insertNewObject:[[PlayerSelectionOption alloc] initWithTitle:@"Performance Profiling (mid-roll)" embedCode:@"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa" viewController:[PerformanceProfilingPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
@@ -46,8 +50,9 @@
   if (!self.options) {
       self.options = [[NSMutableArray alloc] init];
   }
-  [self.options insertObject:selectionObject atIndex:0];
-  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+  int index = [self.options count];
+  [self.options insertObject:selectionObject atIndex:index];
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
   [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 

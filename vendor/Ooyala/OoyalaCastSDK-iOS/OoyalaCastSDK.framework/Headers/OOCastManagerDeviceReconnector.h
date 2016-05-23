@@ -15,6 +15,6 @@
 -(void) deviceDidComeOnline:(GCKDevice*)device;
 -(void) didFailToConnectWithError:(NSError*)error;
 -(void) didFailToConnectToApplicationWithError:(GCKError*)error;
--(void) didDisconnectWithError:(GCKError*)error;
+-(BOOL) didDisconnectWithError:(GCKError*)error;
 -(void)forgetReconnectionInfo;
 @end

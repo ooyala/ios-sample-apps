@@ -48,7 +48,7 @@
 
 - (IBAction)onLeftBtnClick:(UIButton *)sender
 {
-  OOVASTAdSpot *vastAd = [[OOVASTAdSpot alloc] initWithTime:[NSNumber numberWithFloat:[self.ooyalaPlayerViewController.player playheadTime]] clickURL:nil trackingURLs:nil vastURL:[NSURL URLWithString:@"http://xd-team.ooyala.com.s3.amazonaws.com/ads/VastAd_Preroll.xml"]];
+  OOVASTAdSpot *vastAd = [[OOVASTAdSpot alloc] initWithTime:[NSNumber numberWithFloat:[self.ooyalaPlayerViewController.player playheadTime]] duration:self.ooyalaPlayerViewController.player.duration clickURL:nil trackingURLs:nil vastURL:[NSURL URLWithString:@"http://xd-team.ooyala.com.s3.amazonaws.com/ads/VastAd_Preroll.xml"]];
   [self.plugin insertAd:vastAd];
 }
 
