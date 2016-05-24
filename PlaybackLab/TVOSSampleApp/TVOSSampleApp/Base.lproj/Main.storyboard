@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="Npa-02-pFR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Fullscreen Player View Controller-->
+        <scene sceneID="mkl-qc-uVc">
+            <objects>
+                <viewController id="eFy-3r-7xd" customClass="FullscreenPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JLC-4f-lTL"/>
+                        <viewControllerLayoutGuide type="bottom" id="QtO-Vp-7ss"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eGe-BK-P8q">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PiI-1M-4pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2683" y="-294"/>
+        </scene>
+        <!--Video Table View Controller-->
+        <scene sceneID="LgU-kg-OGy">
+            <objects>
+                <tableViewController id="Npa-02-pFR" customClass="VideoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="2Ia-Jj-st1">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" id="ZiF-9i-OZM">
+                                <rect key="frame" x="0.0" y="54" width="1880" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZiF-9i-OZM" id="ThK-nU-s1v">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Npa-02-pFR" id="adu-ez-x1p"/>
+                            <outlet property="delegate" destination="Npa-02-pFR" id="1oz-sb-d86"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="eFy-3r-7xd" kind="show" identifier="fullscreenSegue" id="5tS-vz-vvh"/>
+                        <segue destination="HVY-de-FJh" kind="show" identifier="childSegue" id="dcC-le-5GL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFK-AF-myQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="483"/>
+        </scene>
+        <!--Child Player View Controller-->
+        <scene sceneID="PVY-9J-HI3">
+            <objects>
+                <viewController id="HVY-de-FJh" customClass="ChildPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X0z-Pv-Xch"/>
+                        <viewControllerLayoutGuide type="bottom" id="tSk-7b-bnn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bTQ-V4-YDD">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xan-kQ-0cU" userLabel="Player View">
+                                <rect key="frame" x="320" y="20" width="1280" height="720"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="720" id="Bu6-oW-ns3"/>
+                                    <constraint firstAttribute="width" constant="1280" id="LEz-pc-F1M"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWA-F5-O0r">
+                                <rect key="frame" x="65" y="337" width="195" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lX0-iS-ab5">
+                                <rect key="frame" x="1660" y="337" width="195" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xan-kQ-0cU" firstAttribute="leading" secondItem="zWA-F5-O0r" secondAttribute="trailing" constant="60" id="Siv-ea-JOz"/>
+                            <constraint firstItem="lX0-iS-ab5" firstAttribute="leading" secondItem="xan-kQ-0cU" secondAttribute="trailing" constant="60" id="ZkI-Hd-R34"/>
+                            <constraint firstItem="lX0-iS-ab5" firstAttribute="centerY" secondItem="xan-kQ-0cU" secondAttribute="centerY" id="dC1-VT-jSb"/>
+                            <constraint firstItem="xan-kQ-0cU" firstAttribute="centerX" secondItem="bTQ-V4-YDD" secondAttribute="centerX" id="eOc-b1-bzb"/>
+                            <constraint firstItem="xan-kQ-0cU" firstAttribute="top" secondItem="X0z-Pv-Xch" secondAttribute="bottom" constant="20" id="jfF-kR-u1J"/>
+                            <constraint firstItem="zWA-F5-O0r" firstAttribute="centerY" secondItem="xan-kQ-0cU" secondAttribute="centerY" id="rvI-9t-Ag4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="xan-kQ-0cU" id="UlL-s7-y9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eY-Gi-a6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2683" y="1207"/>
+        </scene>
+    </scenes>
+</document>
