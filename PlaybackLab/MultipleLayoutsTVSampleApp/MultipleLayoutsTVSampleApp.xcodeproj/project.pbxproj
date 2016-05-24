@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3BD61A1CF3A6CD00A8ACDA /* OoyalaTVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3BD6191CF3A6CD00A8ACDA /* OoyalaTVSDK.framework */; };
+		0B3BD61E1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */; };
 		CA49FD4A1C8E4D8A0017E19F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD491C8E4D8A0017E19F /* main.m */; };
 		CA49FD4D1C8E4D8A0017E19F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD4C1C8E4D8A0017E19F /* AppDelegate.m */; };
 		CA49FD531C8E4D8A0017E19F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA49FD511C8E4D8A0017E19F /* Main.storyboard */; };
@@ -18,10 +20,11 @@
 		CA49FD721C8E91B30017E19F /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CA49FD711C8E91B30017E19F /* PlayerSelectionOption.m */; };
 		CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */; };
 		CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD751C8E98640017E19F /* MediaPlayer.framework */; };
-		CAF253091C8F547100A48F96 /* OoyalaTVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF253081C8F547100A48F96 /* OoyalaTVSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3BD6191CF3A6CD00A8ACDA /* OoyalaTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSDK.framework; path = VendorLibraries/OoyalaTVSDK.framework; sourceTree = "<group>"; };
+		0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSkinSDK.framework; path = VendorLibraries/OoyalaTVSkinSDK.framework; sourceTree = "<group>"; };
 		CA49FD451C8E4D8A0017E19F /* MultipleLayoutsTVSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleLayoutsTVSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA49FD491C8E4D8A0017E19F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA49FD4B1C8E4D8A0017E19F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		CA49FD711C8E91B30017E19F /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerSelectionOption.m; path = Utils/PlayerSelectionOption.m; sourceTree = "<group>"; };
 		CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CA49FD751C8E98640017E19F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		CAF253081C8F547100A48F96 /* OoyalaTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSDK.framework; path = VendorLibraries/OoyalaTVSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,9 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF253091C8F547100A48F96 /* OoyalaTVSDK.framework in Frameworks */,
 				CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */,
+				0B3BD61A1CF3A6CD00A8ACDA /* OoyalaTVSDK.framework in Frameworks */,
 				CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */,
+				0B3BD61E1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +127,8 @@
 		CA49FD6A1C8E84E00017E19F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CAF253081C8F547100A48F96 /* OoyalaTVSDK.framework */,
+				0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */,
+				0B3BD6191CF3A6CD00A8ACDA /* OoyalaTVSDK.framework */,
 				CA49FD751C8E98640017E19F /* MediaPlayer.framework */,
 				CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */,
 			);
