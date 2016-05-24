@@ -36,6 +36,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>fontawesome-webfont.ttf</string>
+		<string>ooyala-slick-type.ttf</string>
 		<string>alice.ttf</string>
 		<string>Roboto-Regular.ttf</string>
 		<string>Roboto-Bold.ttf</string>
