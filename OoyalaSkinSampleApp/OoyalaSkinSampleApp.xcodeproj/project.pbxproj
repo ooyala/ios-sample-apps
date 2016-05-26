@@ -33,6 +33,7 @@
 		0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */; };
 		0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */; };
 		972ED77E1AE184CE005043DC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 972ED77D1AE184CE005043DC /* libz.dylib */; };
+		9756A7581CF677D500D292F0 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */; };
 		97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */; };
 		97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C0F1B6709A9009B3512 /* MasterListViewControllerTableViewController.m */; };
 		97930C131B670D49009B3512 /* LayoutListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C121B670D49009B3512 /* LayoutListViewController.m */; };
@@ -96,6 +97,7 @@
 		0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidePlayerView.xib; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* OoyalaSkinSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OoyalaSkinSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		972ED77D1AE184CE005043DC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		97930C0B1B670971009B3512 /* FreewheelPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreewheelPlayerViewController.h; sourceTree = "<group>"; };
 		97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreewheelPlayerViewController.m; sourceTree = "<group>"; };
 		97930C0E1B6709A9009B3512 /* MasterListViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterListViewControllerTableViewController.h; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		0B8E7F251BDED4F80078155C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */,
 				0B8E7F261BDED4F80078155C /* alice.ttf */,
 				0B8E7F271BDED4F80078155C /* fontawesome-webfont.ttf */,
 				CA6327811C44219C008F3667 /* Roboto-Bold.ttf */,
@@ -399,6 +402,7 @@
 				0B345ADC1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets in Resources */,
 				0B7824571B2B841800D718AB /* TableCell.xib in Resources */,
 				CA6327791C442130008F3667 /* es.json in Resources */,
+				9756A7581CF677D500D292F0 /* ooyala-slick-type.ttf in Resources */,
 				CA63277C1C442130008F3667 /* skin-schema.json in Resources */,
 				CA6327861C4421A0008F3667 /* Roboto-Regular.ttf in Resources */,
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
