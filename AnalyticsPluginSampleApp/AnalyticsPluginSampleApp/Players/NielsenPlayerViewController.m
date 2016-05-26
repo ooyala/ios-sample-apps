@@ -24,8 +24,8 @@
 
 @implementation NielsenPlayerViewController
 
-NSString * const APPID = @"PUT YOUR APPID HERE, APPID IS GRANTED BY NIELSEN";
-NSString * const SFCODE = @"PUT YOUR SFCODE HERE";
+NSString * const APPID = @"appid";
+NSString * const SFCODE = @"sfcode";
 
 - (void)viewDidLoad {
   // Do any additional setup after loading the view, typically from a nib.

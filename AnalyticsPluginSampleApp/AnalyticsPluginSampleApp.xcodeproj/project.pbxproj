@@ -19,7 +19,6 @@
 		970B987B1A1AD8A40091AD38 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B987A1A1AD8A40091AD38 /* CoreLocation.framework */; };
 		970B987D1A1AD8B00091AD38 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B987C1A1AD8B00091AD38 /* SystemConfiguration.framework */; };
 		970B987F1A1AD8DC0091AD38 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B987E1A1AD8DC0091AD38 /* MediaPlayer.framework */; };
-		9784D01D1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01A1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework */; };
 		9784D01E1AD5D316002F2ECD /* NielsenAppApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */; };
 		9784D01F1AD5D316002F2ECD /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */; };
 		9784D0281AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9784D0221AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.m */; };
@@ -47,7 +46,6 @@
 		970B987A1A1AD8A40091AD38 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		970B987C1A1AD8B00091AD38 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		970B987E1A1AD8DC0091AD38 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		9784D01A1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "NielsenAppApi-cpp11.framework"; sourceTree = "<group>"; };
 		9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NielsenAppApi.framework; sourceTree = "<group>"; };
 		9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		9784D0211AD5D7CE002F2ECD /* NielsenPlaybackListViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NielsenPlaybackListViewcontroller.h; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				970B987D1A1AD8B00091AD38 /* SystemConfiguration.framework in Frameworks */,
 				970B987B1A1AD8A40091AD38 /* CoreLocation.framework in Frameworks */,
 				970B98791A1AD89C0091AD38 /* AdSupport.framework in Frameworks */,
-				9784D01D1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework in Frameworks */,
 				9784D0331AD5EE79002F2ECD /* OoyalaNielsenSDK.framework in Frameworks */,
 				970B98771A1AD8790091AD38 /* libxml2.dylib in Frameworks */,
 				9784D01E1AD5D316002F2ECD /* NielsenAppApi.framework in Frameworks */,
@@ -147,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				9784D0321AD5EE79002F2ECD /* OoyalaNielsenSDK.framework */,
-				9784D01A1AD5D316002F2ECD /* NielsenAppApi-cpp11.framework */,
 				9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */,
 				9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */,
 			);
@@ -380,9 +376,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					../../vendor/Nielsen,
 					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/zchen/repos/ios-sdk/submodules/ios_sample_apps/vendor/Ooyala/OoyalaNielsenSDK-iOS",
 				);
 				INFOPLIST_FILE = AnalyticsPluginSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -400,9 +394,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					../../vendor/Nielsen,
 					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/zchen/repos/ios-sdk/submodules/ios_sample_apps/vendor/Ooyala/OoyalaNielsenSDK-iOS",
 				);
 				INFOPLIST_FILE = AnalyticsPluginSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
