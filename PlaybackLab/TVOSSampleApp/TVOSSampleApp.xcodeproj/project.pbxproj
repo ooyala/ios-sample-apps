@@ -19,6 +19,7 @@
 		0B3BD63B1CF3E68200A8ACDA /* ChildPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD62E1CF3E68200A8ACDA /* ChildPlayerViewController.m */; };
 		0B3BD63C1CF3E68200A8ACDA /* FullscreenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD6301CF3E68200A8ACDA /* FullscreenPlayerViewController.m */; };
 		0B3BD63D1CF3E68200A8ACDA /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD6331CF3E68200A8ACDA /* PlayerSelectionOption.m */; };
+		0BD644E01CF7C08B005AD8CB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */; };
 		CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */; };
 		CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD751C8E98640017E19F /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		0B3BD6301CF3E68200A8ACDA /* FullscreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenPlayerViewController.m; sourceTree = "<group>"; };
 		0B3BD6321CF3E68200A8ACDA /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B3BD6331CF3E68200A8ACDA /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA49FD451C8E4D8A0017E19F /* TVOSSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVOSSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CA49FD751C8E98640017E19F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD644E01CF7C08B005AD8CB /* JavaScriptCore.framework in Frameworks */,
 				CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */,
 				0B3BD61A1CF3A6CD00A8ACDA /* OoyalaTVSDK.framework in Frameworks */,
 				CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */,
@@ -129,6 +132,7 @@
 		CA49FD6A1C8E84E00017E19F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */,
 				0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */,
 				0B3BD6191CF3A6CD00A8ACDA /* OoyalaTVSDK.framework */,
 				CA49FD751C8E98640017E19F /* MediaPlayer.framework */,
@@ -321,7 +325,7 @@
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = MultipleLayoutsTVSampleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,7 +342,7 @@
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = MultipleLayoutsTVSampleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
