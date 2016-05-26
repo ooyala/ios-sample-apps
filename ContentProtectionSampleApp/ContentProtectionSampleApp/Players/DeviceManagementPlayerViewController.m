@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOooyalaError.h>
+#import <OoyalaSDK/OOOptions.h>
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 
 @interface DeviceManagementPlayerViewController () <OOEmbedTokenGenerator>
@@ -62,8 +63,14 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+  OOOptions *options = [OOOptions new];
+  // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
+  // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
+  //   which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
+  options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
+
   // Create Ooyala ViewController
-  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self options:options];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
   [[NSNotificationCenter defaultCenter] addObserver: self
