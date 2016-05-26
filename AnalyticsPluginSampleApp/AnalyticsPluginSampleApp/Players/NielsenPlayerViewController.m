@@ -44,7 +44,6 @@ NSString * const SFCODE = @"sfcode";
   _nielsenPlugin = [[OONielsenPlugin alloc] initWithPlayer:_ooyalaPlayerViewController.player appId:APPID appVersion:@"0.1" appName:@"OoyalaNielsenSampleApp" sfcode:SFCODE parameters:parameters];
 
   // Attach it to current view
-  // Attach it to current view
   [self addChildViewController:_ooyalaPlayerViewController];
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
