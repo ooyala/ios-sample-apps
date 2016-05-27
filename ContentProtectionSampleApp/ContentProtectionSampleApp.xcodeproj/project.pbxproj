@@ -37,6 +37,7 @@
 		0B24B8781AA6948800F131C3 /* MvpdLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B84F1AA6827200F131C3 /* MvpdLoginViewController.m */; };
 		0B24B8791AA6948800F131C3 /* MvpdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8511AA6827200F131C3 /* MvpdTableViewController.m */; };
 		0B24B8D61AA6998500F131C3 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B24B8531AA6827200F131C3 /* Util.m */; };
+		0B4FE7951CE2AA7C000DCC00 /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98DDDB1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m */; };
 		0B89E1DC1B18033400306176 /* DeviceManagementPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B89E1DA1B18033400306176 /* DeviceManagementPlayerViewController.h */; };
 		0B89E1DD1B18033400306176 /* DeviceManagementPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E1DB1B18033400306176 /* DeviceManagementPlayerViewController.m */; };
 		0B89E1DE1B1803EF00306176 /* DeviceManagementPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E1DB1B18033400306176 /* DeviceManagementPlayerViewController.m */; };
@@ -558,6 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4FE7951CE2AA7C000DCC00 /* OoyalaPlayerTokenPlayerViewController.m in Sources */,
 				0B89E1DE1B1803EF00306176 /* DeviceManagementPlayerViewController.m in Sources */,
 				0B24B8D61AA6998500F131C3 /* Util.m in Sources */,
 				0B24B8741AA6948800F131C3 /* ContentProtectionListViewController.m in Sources */,
@@ -678,6 +680,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -704,6 +707,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",

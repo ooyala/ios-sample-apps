@@ -24,8 +24,8 @@
 
 @implementation NielsenPlayerViewController
 
-NSString * const APPID = @"PUT YOUR APPID HERE, APPID IS GRANTED BY NIELSEN";
-NSString * const SFCODE = @"PUT YOUR SFCODE HERE";
+NSString * const APPID = @"appid";
+NSString * const SFCODE = @"sfcode";
 
 - (void)viewDidLoad {
   // Do any additional setup after loading the view, typically from a nib.
@@ -43,7 +43,6 @@ NSString * const SFCODE = @"PUT YOUR SFCODE HERE";
   NSDictionary *parameters = @{@"longitude":@"37.783", @"latitude":@"122.417"};
   _nielsenPlugin = [[OONielsenPlugin alloc] initWithPlayer:_ooyalaPlayerViewController.player appId:APPID appVersion:@"0.1" appName:@"OoyalaNielsenSampleApp" sfcode:SFCODE parameters:parameters];
 
-  // Attach it to current view
   // Attach it to current view
   [self addChildViewController:_ooyalaPlayerViewController];
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
