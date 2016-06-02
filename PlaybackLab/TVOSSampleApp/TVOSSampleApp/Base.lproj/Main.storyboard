@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="Npa-02-pFR">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="Npa-02-pFR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Fairplay Player View Controller-->
+        <scene sceneID="UDI-Nu-Etz">
+            <objects>
+                <viewController id="NIL-Lr-UVC" customClass="FairplayPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pjP-LE-Zrb"/>
+                        <viewControllerLayoutGuide type="bottom" id="u2g-Rw-5rw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l3E-wi-aK4">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ft1-Kp-Spg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2675" y="-1741"/>
+        </scene>
         <!--Fullscreen Player View Controller-->
         <scene sceneID="mkl-qc-uVc">
             <objects>
@@ -19,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiI-1M-4pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="-294"/>
+            <point key="canvasLocation" x="2683" y="-518"/>
         </scene>
         <!--Video Table View Controller-->
         <scene sceneID="LgU-kg-OGy">
@@ -46,11 +63,12 @@
                     <connections>
                         <segue destination="eFy-3r-7xd" kind="show" identifier="fullscreenSegue" id="5tS-vz-vvh"/>
                         <segue destination="HVY-de-FJh" kind="show" identifier="childSegue" id="dcC-le-5GL"/>
+                        <segue destination="NIL-Lr-UVC" kind="show" identifier="fairplaySegue" id="R9d-AG-bBZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFK-AF-myQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="483"/>
+            <point key="canvasLocation" x="445" y="-518"/>
         </scene>
         <!--Child Player View Controller-->
         <scene sceneID="PVY-9J-HI3">
