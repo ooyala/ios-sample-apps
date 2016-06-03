@@ -8,6 +8,7 @@
 #import "VideoTableViewController.h"
 #import "AbstractPlayerViewController.h"
 #import "FullscreenPlayerViewController.h"
+#import "FairplayPlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface VideoTableViewController ()
@@ -39,6 +40,13 @@
                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"]];
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Baseline Profile (Unconfigured)"
+                                                             embedCode:@"V3NDdnMzE6tPCchL9wYTFZY8jAE8_Y21"]];
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Main Profile (Unconfigured)"
+                                                             embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"]];
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay High Profile (Unconfigured)"
+                                                             embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"]];
+  
   [self.tableView reloadData];
 }
 
@@ -65,6 +73,8 @@
     segueId = @"fullscreenSegue";
   } else if ([option.title isEqualToString:@"Inline Player"]) {
     segueId = @"childSegue";
+  } else {
+    segueId = @"fairplaySegue";
   }
   
   [self performSegueWithIdentifier:segueId sender:[self.tableView cellForRowAtIndexPath:indexPath]];
@@ -79,8 +89,11 @@
   if ([segue.identifier isEqualToString:@"fullscreenSegue"]) {
     FullscreenPlayerViewController *destinationVC = segue.destinationViewController;
     destinationVC.option = self.options[indexPath.row];
-  } else {
+  } else if ([segue.identifier isEqualToString:@"childSegue"]){
     AbstractPlayerViewController *destinationVC = segue.destinationViewController;
+    destinationVC.option = self.options[indexPath.row];
+  } else {
+    FairplayPlayerViewController *destinationVC = segue.destinationViewController;
     destinationVC.option = self.options[indexPath.row];
   }
 }
