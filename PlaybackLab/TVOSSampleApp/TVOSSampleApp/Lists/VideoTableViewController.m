@@ -10,6 +10,7 @@
 #import "FullscreenPlayerViewController.h"
 #import "FairplayPlayerViewController.h"
 #import "PlayerSelectionOption.h"
+#import "OoyalaPlayerTokenPlayerViewController.h"
 
 @interface VideoTableViewController ()
 
@@ -40,6 +41,8 @@
                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"]];
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Player Token (Unconfigured)"
+                                                             embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Baseline Profile (Unconfigured)"
                                                              embedCode:@"V3NDdnMzE6tPCchL9wYTFZY8jAE8_Y21"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Main Profile (Unconfigured)"
@@ -73,6 +76,8 @@
     segueId = @"fullscreenSegue";
   } else if ([option.title isEqualToString:@"Inline Player"]) {
     segueId = @"childSegue";
+  } else if ([option.title isEqualToString:@"Player Token (Unconfigured)"]) {
+    segueId = @"playerTokenSegue";
   } else {
     segueId = @"fairplaySegue";
   }
@@ -91,6 +96,9 @@
     destinationVC.option = self.options[indexPath.row];
   } else if ([segue.identifier isEqualToString:@"childSegue"]){
     AbstractPlayerViewController *destinationVC = segue.destinationViewController;
+    destinationVC.option = self.options[indexPath.row];
+  } else if ([segue.identifier isEqualToString:@"playerTokenSegue"]) {
+    OoyalaPlayerTokenPlayerViewController *destinationVC = segue.destinationViewController;
     destinationVC.option = self.options[indexPath.row];
   } else {
     FairplayPlayerViewController *destinationVC = segue.destinationViewController;
