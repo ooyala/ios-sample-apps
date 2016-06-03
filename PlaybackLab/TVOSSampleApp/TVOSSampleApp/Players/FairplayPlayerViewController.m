@@ -34,17 +34,14 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  self.pcode = @"RkcjMxOtMYDwJzrPy3sWJLl6blS1"; // fill me in
   self.pcode = @"Fill me in";
   self.playerDomain = @"http://www.ooyala.com";
   self.authorizeHost = @"http://player.ooyala.com";
   
-  self.apiKey = @"RkcjMxOtMYDwJzrPy3sWJLl6blS1.szIL7";
   self.apiKey = @"Fill me in";
   [OODebugMode setDebugMode:LogAndAbort];
   ASSERT( [self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey." );
 
-  self.secret = @"8SGFdqVNoefgHrFVtV9XyheZn1Nnn3jowe_PAOCw";
   self.secret = @"Fill me in";
   self.accountId = @"Fill me in";
   

@@ -49,6 +49,8 @@
                                                              embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay High Profile (Unconfigured)"
                                                              embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"]];
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Live (Unconfigured)"
+                                                             embedCode:@"92MmdlMzE6Jijt5qhM-sh-zI5MQLuRP4"]];
   
   [self.tableView reloadData];
 }
