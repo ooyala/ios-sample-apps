@@ -38,6 +38,23 @@
             </objects>
             <point key="canvasLocation" x="2683" y="-518"/>
         </scene>
+        <!--Ooyala Player Token Player View Controller-->
+        <scene sceneID="spq-KH-iVM">
+            <objects>
+                <viewController id="5jA-y6-ANQ" customClass="OoyalaPlayerTokenPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kpw-Da-ykf"/>
+                        <viewControllerLayoutGuide type="bottom" id="X2V-TF-vcI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="je7-vo-EFM">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVt-bh-lrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427" y="-1741"/>
+        </scene>
         <!--Video Table View Controller-->
         <scene sceneID="LgU-kg-OGy">
             <objects>
@@ -64,6 +81,7 @@
                         <segue destination="eFy-3r-7xd" kind="show" identifier="fullscreenSegue" id="5tS-vz-vvh"/>
                         <segue destination="HVY-de-FJh" kind="show" identifier="childSegue" id="dcC-le-5GL"/>
                         <segue destination="NIL-Lr-UVC" kind="show" identifier="fairplaySegue" id="R9d-AG-bBZ"/>
+                        <segue destination="5jA-y6-ANQ" kind="show" identifier="playerTokenSegue" id="L3c-Ho-OZM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFK-AF-myQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eY-Gi-a6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="1207"/>
+            <point key="canvasLocation" x="2675" y="845"/>
         </scene>
     </scenes>
 </document>
