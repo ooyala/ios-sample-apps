@@ -16,6 +16,7 @@
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OODiscoveryOptions.h>
 #import <OoyalaSkinSDK/OOSkinOptions.h>
 #import <OoyalaSkinSDK/OOSkinViewController.h>
 
@@ -73,7 +74,11 @@
 {
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main"
                                                   withExtension:@"jsbundle"];
-  OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:nil
+  OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
+                                                                            limit:10
+                                                                          timeout:60];
+  
+  OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
                                                                overrideConfigs:nil];
