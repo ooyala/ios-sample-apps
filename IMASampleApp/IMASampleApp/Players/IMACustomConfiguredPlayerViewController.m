@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaIMASDK/OOIMAManager.h>
+#import "AppDelegate.h"
 
 @interface IMACustomConfiguredPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -40,6 +41,7 @@
 - (void)loadView {
   [super loadView];
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+    [AppDelegate getInstance].count=0;
 }
 
 - (void)viewDidLoad {
@@ -77,10 +79,11 @@
     return;
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
+        [self.ooyalaPlayerViewController.player playheadTime],[AppDelegate getInstance].count);
+    [AppDelegate getInstance].count++;
 }
 
 @end
