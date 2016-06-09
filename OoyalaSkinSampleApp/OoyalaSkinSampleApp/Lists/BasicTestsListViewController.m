@@ -32,7 +32,7 @@
   [self addCommonWithTitle:@"Multi Ad combination" embedCode:@"Ftcmp0ZDoz8tALmhPcN2vMzCdg7YU9lc"];
   // Skippable and Podded ads
   [self addCommonWithTitle:@"VAST 3.0 - Podded" embedCode:@"ZnaWtqMzE6HLDm_J8pqeKKenfoZt_wj6"];
-  [self addCommonWithTitle:@"VAST 3.0 - Skippable Midroll" embedCode:@"4xMzA5MTE6tCoMA9RY26vlJ9RsBPiJOK"];
+  [self addCommonWithTitle:@"VAST 3.0 - Skippable Midroll" embedCode:@"BtY3IxNDE6VmZgCbgKBjhCcH4ypJPD8x"];
   [self addCommonWithTitle:@"VAST 3.0 - Skippable Preroll" embedCode:@"55MjA5MTE6iZTRzrTtLoxUy78YbffT2G"];
   [self addCommonWithTitle:@"VAST 3.0 - Ad Wrapper" embedCode:@"Fkcm9lMjE6GOcDOtPSiRnNCRhqsz-96e"];
   // Icon ads
@@ -48,6 +48,6 @@
   [self addCommonWithTitle:@"VAST 3.0 - VMAP PreMid using VASTAdData" embedCode:@"10eGE0MjE6TZG6mdHfJJEAGnxbuEv1Vi"];
   // Ad Overlay
   [self addCommonWithTitle:@"VAST 3.0 - Overlay Ad" embedCode:@"10MzA5MTE6IsBf0ers2BiZu8l7AB0TOi"];
-  [self addCommonWithTitle:@"VAST 3.0 - Overlay with PreMid Podded" embedCode:@"9uajEwMzE6K3pBlfg3Z65LapnI9dLouv"];
+  [self addCommonWithTitle:@"VAST 3.0 - Overlay with PreMid" embedCode:@"9uajEwMzE6K3pBlfg3Z65LapnI9dLouv"];
 }
 @end
