@@ -8,19 +8,18 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate () <UINavigationControllerDelegate>
-
 @end
 
 @implementation AppDelegate
-AppDelegate *instance ;
+AppDelegate *instance;
 
-+(AppDelegate*)getInstance{
++ (AppDelegate *)getInstance{
     return instance;
 }
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   instance=self;
+  instance = self;
   // Override point for customization after application launch.
   return YES;
 }

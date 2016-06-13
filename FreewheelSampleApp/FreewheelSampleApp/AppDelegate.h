@@ -9,9 +9,10 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
++ (AppDelegate *)getInstance;
+
 @property (strong, nonatomic) UIWindow *window;
-+(AppDelegate*)getInstance;
-@property (nonatomic,assign) int count ;
+@property (nonatomic, assign) int count;
 
 @end
 

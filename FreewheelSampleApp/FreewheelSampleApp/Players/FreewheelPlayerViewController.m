@@ -86,8 +86,8 @@
   NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime],[AppDelegate getInstance].count);
-    [AppDelegate getInstance].count++;
+        [self.ooyalaPlayerViewController.player playheadTime], [AppDelegate getInstance].count);
+  [AppDelegate getInstance].count++;
 }
 
 @end
