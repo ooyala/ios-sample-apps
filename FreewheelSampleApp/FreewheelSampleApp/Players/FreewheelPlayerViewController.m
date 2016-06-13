@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaFreewheelSDK/OOFreewheelManager.h>
+#import "AppDelegate.h"
 
 @interface FreewheelPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -82,10 +83,11 @@
     return;
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
+        [self.ooyalaPlayerViewController.player playheadTime],[AppDelegate getInstance].count);
+    [AppDelegate getInstance].count++;
 }
 
 @end
