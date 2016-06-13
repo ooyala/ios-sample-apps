@@ -41,7 +41,6 @@
 - (void)loadView {
   [super loadView];
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
-    [AppDelegate getInstance].count=0;
 }
 
 - (void)viewDidLoad {
