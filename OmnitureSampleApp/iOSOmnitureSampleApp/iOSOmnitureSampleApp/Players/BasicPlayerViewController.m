@@ -32,8 +32,8 @@
   self.title = self.asset.title;
   
   self.playerDomain = @"http://www.ooyala.com";
-  self.hbTrackingServer = @"ovppartners.hb.omtrdc.net";
-  self.hbProvider = @"ooyalatester";
+  self.hbTrackingServer = @"[INSERT YOUR TRACKING SERVER HERE]";
+  self.hbProvider = @"[INSERT YOUR PROVIDER HERE]";
   
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.asset.pcode
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
