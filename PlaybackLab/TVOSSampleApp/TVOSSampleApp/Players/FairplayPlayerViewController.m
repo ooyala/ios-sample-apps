@@ -14,7 +14,7 @@
 #import <OoyalaTVSDK/OOOptions.h>
 #import "PlayerSelectionOption.h"
 
-@interface FairplayPlayerViewController ()
+@interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 
 @property (nonatomic, strong) NSString *embedCode;
 @property (nonatomic, strong) NSString *pcode;
@@ -55,6 +55,8 @@
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self
                                               options:options];
+  // enable seeking
+  self.showsPlaybackControls = YES;
   
   [self.player setEmbedCode:self.option.embedCode];
   [self.player play];

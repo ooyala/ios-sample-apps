@@ -13,7 +13,7 @@
 #import <OoyalaTVSDK/OOEmbeddedSecureURLGenerator.h>
 #import "PlayerSelectionOption.h"
 
-@interface OoyalaPlayerTokenPlayerViewController ()
+@interface OoyalaPlayerTokenPlayerViewController () <OOEmbedTokenGenerator>
 
 @property (nonatomic, strong) NSString *embedCode;
 @property (nonatomic, strong) NSString *pcode;
@@ -47,6 +47,8 @@
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                           domain:[[OOPlayerDomain alloc]initWithString:self.playerDomain]
                                              embedTokenGenerator:self];
+  // enable seeking
+  self.showsPlaybackControls = YES;
   
   [self.player setEmbedCode:self.option.embedCode];
   [self.player play];
