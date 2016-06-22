@@ -16,6 +16,7 @@
 #import <OoyalaSDK/OOManagedAdsPlugin.h>
 #import <OoyalaSDK/OOVASTAdSpot.h>
 #import <OoyalaSDK/OOOoyalaAdSpot.h>
+#import "AppDelegate.h"
 
 @interface InsertAdPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -26,7 +27,9 @@
 @property NSString *playerDomain;
 @end
 
-@implementation InsertAdPlayerViewController
+@implementation InsertAdPlayerViewController{
+    AppDelegate *appDel;
+}
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
@@ -60,6 +63,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  appDel = [[UIApplication sharedApplication] delegate];
   
   [self.button1 setTitle:@"INSERT VAST AD" forState:UIControlStateNormal];
   [self.button2 setTitle:@"INSERT OOYALA AD" forState:UIControlStateNormal];
@@ -93,10 +97,11 @@
     return;
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
+        [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
+  appDel.count++;  
 }
 
 @end
