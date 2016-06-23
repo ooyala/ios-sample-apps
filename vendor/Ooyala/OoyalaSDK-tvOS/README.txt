@@ -1,4 +1,4 @@
-Current Version: 4.14.0_RC2
+Current Version: 4.15.0_RC4
 
 For the latest release notes, please refer to http://support.ooyala.com/documentation/concepts/mobile_sdk_ios_release_notes.html
 
