@@ -11,7 +11,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic,assign) int count ;
+//A counter for tracking the number of ooyala sdk events generated across all the test asset plays
+@property (nonatomic,assign) int count;
 
 @end
 
