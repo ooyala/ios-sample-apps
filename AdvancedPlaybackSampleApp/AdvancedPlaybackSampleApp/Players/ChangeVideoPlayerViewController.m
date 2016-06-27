@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
+#import "AppDelegate.h"
 
 @interface ChangeVideoPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -21,7 +22,9 @@
 @property NSString *playerDomain;
 @end
 
-@implementation ChangeVideoPlayerViewController
+@implementation ChangeVideoPlayerViewController{
+    AppDelegate *appDel;
+}
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
@@ -56,6 +59,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  appDel = [[UIApplication sharedApplication] delegate];
   
   [self.button1 setTitle:@"Play Video 1" forState:UIControlStateNormal];
   [self.button2 setTitle:@"Play Video 2" forState:UIControlStateNormal];
@@ -86,10 +90,11 @@
     return;
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
+        [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
+  appDel.count++;
 }
 
 @end

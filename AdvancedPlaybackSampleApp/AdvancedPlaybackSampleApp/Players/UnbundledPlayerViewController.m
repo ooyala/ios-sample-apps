@@ -14,6 +14,7 @@
 #import <OoyalaSDK/OOStream.h>
 #import <OoyalaSDK/OOUnbundledVideo.h>
 #import <OoyalaSDK/OODeliveryTypeConstants.h>
+#import "AppDelegate.h"
 
 @interface UnbundledPlayerViewController ()
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -24,7 +25,9 @@
 @property NSString *playerDomain;
 @end
 
-@implementation UnbundledPlayerViewController
+@implementation UnbundledPlayerViewController{
+    AppDelegate *appDel;
+}
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
@@ -45,6 +48,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  appDel = [[UIApplication sharedApplication] delegate];
 
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
@@ -76,9 +80,10 @@
     return;
   }
   
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
+        [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
+  appDel.count++;  
 }
 @end

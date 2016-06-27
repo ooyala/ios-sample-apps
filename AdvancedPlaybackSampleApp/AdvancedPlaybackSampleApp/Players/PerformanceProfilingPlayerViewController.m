@@ -9,6 +9,7 @@
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOPerformanceMonitorBuilder.h>
+#import "AppDelegate.h"
 
 @interface PerformanceProfilingPlayerViewController ()
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -19,7 +20,9 @@
 @property (nonatomic) NSString *playerDomain;
 @end
 
-@implementation PerformanceProfilingPlayerViewController
+@implementation PerformanceProfilingPlayerViewController{
+    AppDelegate *appDel;
+}
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
@@ -41,6 +44,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  appDel = [[UIApplication sharedApplication] delegate];
+    
   // Create Ooyala ViewController
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
@@ -73,10 +78,11 @@
     return;
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
+        [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
+  appDel.count++;  
 }
 
 @end
