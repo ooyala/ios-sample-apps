@@ -62,6 +62,11 @@
 	<array>
 		<string>alice.ttf</string>
 		<string>fontawesome-webfont.ttf</string>
+		<string>ooyala-slick-type.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>RobotoCondensed-Regular.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
 	</array>
 </dict>
 </plist>
