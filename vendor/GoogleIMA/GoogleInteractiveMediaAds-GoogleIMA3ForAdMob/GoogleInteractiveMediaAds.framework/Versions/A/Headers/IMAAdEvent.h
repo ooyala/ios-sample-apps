@@ -22,11 +22,11 @@ typedef NS_ENUM(NSInteger, IMAAdEventType){
    */
   kIMAAdEvent_AD_BREAK_READY,
   /**
-   *  Ad break ended (only used for server side ad insertion).
+   *  Ad break ended (only used for dynamic ad insertion).
    */
   kIMAAdEvent_AD_BREAK_ENDED,
   /**
-   *  Ad break started (only used for server side ad insertion).
+   *  Ad break started (only used for dynamic ad insertion).
    */
   kIMAAdEvent_AD_BREAK_STARTED,
   /**
@@ -41,6 +41,10 @@ typedef NS_ENUM(NSInteger, IMAAdEventType){
    *  Single ad has finished.
    */
   kIMAAdEvent_COMPLETE,
+  /**
+   *  Cuepoints changed for VOD stream (only used for dynamic ad insertion).
+   */
+  kIMAAdEvent_CUEPOINTS_CHANGED,
   /**
    *  First quartile of a linear ad was reached.
    */

@@ -62,6 +62,9 @@
 
 @end
 
+/**
+ * Declares a simple video display class used for ad playback.
+ */
 @protocol IMAVideoDisplay <IMAAdPlaybackInfo>
 
 // Allows the publisher to send player events to the SDK.

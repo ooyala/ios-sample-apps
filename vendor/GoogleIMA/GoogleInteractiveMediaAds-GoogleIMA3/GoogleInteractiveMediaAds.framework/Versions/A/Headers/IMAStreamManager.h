@@ -86,7 +86,7 @@
 @property(nonatomic, weak) NSObject<IMAStreamManagerDelegate> *delegate;
 
 /**
- *  Identifier used during server side ad insertion to uniquely identify a stream.
+ *  Identifier used during dynamic ad insertion to uniquely identify a stream.
  */
 @property(nonatomic, copy, readonly) NSString *streamId;
 
@@ -99,5 +99,10 @@
 - (void)initializeWithAdsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings;
 
 - (instancetype)init NS_UNAVAILABLE;
+
+/**
+ *  Cleans the stream manager's internal state for proper deallocation.
+ */
+- (void)destroy;
 
 @end

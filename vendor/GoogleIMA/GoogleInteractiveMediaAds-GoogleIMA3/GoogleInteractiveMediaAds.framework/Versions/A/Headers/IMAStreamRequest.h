@@ -12,6 +12,36 @@
 @protocol IMAVideoDisplay;
 
 /**
+ *  The inventory unit (iu).
+ */
+extern NSString *const kIMAStreamParamIU;
+
+/**
+ *  The description url (description_url).
+ */
+extern NSString *const kIMAStreamParamDescriptionURL;
+
+/**
+ *  The custom parameters (cust_params).
+ */
+extern NSString *const kIMAStreamParamCustomParameters;
+
+/**
+ *  Tag for child detection parameter (tfcd).
+ */
+extern NSString *const kIMAStreamParamTFCD;
+
+/**
+ *  The order variant parameter (dai-ov).
+ */
+extern NSString *const kIMAStreamParamOrderVariant;
+
+/**
+ *  The order type parameter (dai-ot).
+ */
+extern NSString *const kIMAStreamParamOrderType;
+
+/**
  *  Data class describing the stream request.
  */
 @interface IMAStreamRequest : NSObject
@@ -32,11 +62,6 @@
 @property(nonatomic, copy, readonly) NSString *videoId;
 
 /**
- *  The stream request asset type. Should be either "content" or "event".
- */
-@property(nonatomic, copy, readonly) NSString *assetType;
-
-/**
  *  The stream display container for displaying the ad UI.
  */
 @property(nonatomic, strong, readonly) IMAAdDisplayContainer *adDisplayContainer;
@@ -54,13 +79,15 @@
 @property(nonatomic, copy) NSString *apiKey;
 
 /**
- *  Any custom targeting parameters.
+ *  The parameters that the SDK will attempt to add to ad tags. The following parameters are
+ *  allowed: "cust_params", "dai-ot", "dai-ov", "description_url", "durl", "iu", and "tfcd".
+ *  All other parameters will be ignored.
  */
-@property(nonatomic, copy) NSDictionary *customParameters;
+@property(nonatomic, copy) NSDictionary *adTagParameters;
 
 /**
- *  Whether the SDK should attempt to play a preroll during server side ad insertion.
- *  Defaults to false.
+ *  Whether the SDK should attempt to play a preroll during dynamic ad insertion.
+ *  Defaults to false. This setting is only used for live streams.
  */
 @property(nonatomic) BOOL attemptPreroll;
 
@@ -70,7 +97,7 @@
  *
  *  @param assetKey           the stream assetKey
  *  @param adDisplayContainer the IMAAdDisplayContainer for rendering the ad UI
- *  @parem videoDisplay       the IMAVideoDisplay for playing the stream
+ *  @param videoDisplay       the IMAVideoDisplay for playing the stream
  *
  *  @return the IMAStreamRequest instance
  */
@@ -85,7 +112,7 @@
  *  @param contentSourceId    the content source ID for this stream
  *  @param videoId            the video identifier for this stream
  *  @param adDisplayContainer the IMAAdDisplayContainer for rendering the ad UI
- *  @parem videoDisplay       the IMAVideoDisplay for playing the stream
+ *  @param videoDisplay       the IMAVideoDisplay for playing the stream
  *
  *  @return the IMAStreamRequest instance
  */

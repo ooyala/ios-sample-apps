@@ -25,7 +25,7 @@
 
 /**
  *  The ads manager instance created by the ads loader.
- *  Will be nil when using server side ad insertion.
+ *  Will be nil when using dynamic ad insertion.
  */
 @property(nonatomic, strong, readonly) IMAAdsManager *adsManager;
 
@@ -145,7 +145,7 @@
 - (void)requestAdsWithRequest:(IMAAdsRequest *)request;
 
 /**
- *  Request a stream with with ads inserted server side. The loader takes 1-2 seconds to setup on
+ *  Request a stream with with ads inserted dynamically. The loader takes 1-2 seconds to setup on
  *  init and become ready to make stream requests. So reusing the same IMAAdsLoader instance is
  *  encouraged when making stream requests in order to minimize stream request latency.
  *
