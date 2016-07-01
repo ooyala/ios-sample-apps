@@ -49,6 +49,7 @@ extern char *const OO_ELEMENT_STYLE;                          /**< The XML eleme
 extern char *const OO_ELEMENT_DIV;                            /**< The XML element name for div */
 extern char *const OO_ELEMENT_P;                              /**< The XML element name for p */
 extern char *const OO_ELEMENT_SPAN;                           /**< The XML element name for span */
+extern char *const OO_ELEMENT_METADATA;                       /**< The XML element name for metadata */
 extern char *const OO_ELEMENT_BR;                             /**< The XML element name for br */
 extern char *const OO_ELEMENT_ICONS;                          /**< The XML element name for icons */
 extern char *const OO_ELEMENT_ICON;                           /**< The XML element name for icon */
