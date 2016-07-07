@@ -25,7 +25,6 @@
 		0B8E7F1C1BDED4BD0078155C /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8E7F1B1BDED4BD0078155C /* OoyalaIMASDK.framework */; };
 		0B8E7F1E1BDED4C40078155C /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8E7F1D1BDED4C40078155C /* OoyalaSDK.framework */; };
 		0B8E7F281BDED4F80078155C /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B8E7F261BDED4F80078155C /* alice.ttf */; };
-		0B8E7F291BDED4F80078155C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B8E7F271BDED4F80078155C /* fontawesome-webfont.ttf */; };
 		0BB8E7A51BE0438300003E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8E7A41BE0438300003E2D /* README.md */; };
 		0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AB1BE0449000003E2D /* Social.framework */; };
 		0BB8E7AE1BE0449500003E2D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AD1BE0449500003E2D /* MessageUI.framework */; };
@@ -390,7 +389,6 @@
 				0B4731341C5199A300F1E7FD /* Main.storyboard in Resources */,
 				CA63276E1C442126008F3667 /* main.jsbundle in Resources */,
 				CA6327851C4421A0008F3667 /* Roboto-Bold.ttf in Resources */,
-				0B8E7F291BDED4F80078155C /* fontawesome-webfont.ttf in Resources */,
 				0B4731331C5199A300F1E7FD /* LaunchScreen.xib in Resources */,
 				0B8E7F281BDED4F80078155C /* alice.ttf in Resources */,
 				CA6327781C442130008F3667 /* en.json in Resources */,
