@@ -20,6 +20,7 @@
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
+@property NSString *embedCode;
 
 @end
 
@@ -40,8 +41,15 @@
     } else {
       _nib = @"PlayerDoubleSwitch";
     }
-    _pcode =@"BidTQxOqebpNk1rVsjs2sUJSTOZc";
-    _playerDomain = @"http://www.ooyala.com";
+    if (self.playerSelectionOption) {
+      self.embedCode = self.playerSelectionOption.embedCode;
+      self.title = self.playerSelectionOption.title;
+      self.pcode = self.playerSelectionOption.pcode;
+      self.playerDomain = self.playerSelectionOption.domain;
+    } else {
+      NSLog(@"There was no PlayerSelectionOption!");
+      return nil;
+    }
   }
   return self;
 }
@@ -124,7 +132,7 @@
   [self addChildViewController:_playerViewController];
   [self.playerView addSubview:_playerViewController.view];
 
-  [_playerViewController.player setEmbedCode:self.playerSelectionOption.embedCode];
+  [_playerViewController.player setEmbedCode:self.embedCode];
   if (_initialTime > 0) {
     [_playerViewController.player playWithInitialTime:_initialTime];
   }

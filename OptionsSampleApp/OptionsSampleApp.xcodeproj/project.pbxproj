@@ -16,6 +16,7 @@
 		0BC9480F1A8177E2004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948091A8177E2004CB997 /* PlayerSimple.xib */; };
 		0BC948101A8177E2004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9480A1A8177E2004CB997 /* PlayerSingleButton.xib */; };
 		0BC948111A8177E2004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9480B1A8177E2004CB997 /* TableCell.xib */; };
+		0BCC6E381D2F58080040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E371D2F58080040B0B2 /* AVKit.framework */; };
 		0BDC4C1A1AA5037D00576639 /* OptionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDC4C181AA5037D00576639 /* OptionsViewController.h */; };
 		0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
 		0BF0B0E61A671E4300026FDC /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0B0E31A671E4300026FDC /* PlayerSelectionOption.m */; };
@@ -60,6 +61,7 @@
 		0BC948091A8177E2004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0BC9480A1A8177E2004CB997 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BC9480B1A8177E2004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		0BCC6E371D2F58080040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BDC4C181AA5037D00576639 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		0BDC4C191AA5037D00576639 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		0BF0B0E21A671E4300026FDC /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC6E381D2F58080040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458A91AC32CDB000DD545 /* OoyalaSDK.framework in Frameworks */,
 				9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */,
 				9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */,
@@ -145,6 +148,7 @@
 		0BF4FA021A685F2F0050A602 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC6E371D2F58080040B0B2 /* AVKit.framework */,
 				9772BFFD1A48FE9700B255C0 /* libc++.dylib */,
 				9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */,
 				9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */,
