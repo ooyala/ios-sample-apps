@@ -162,7 +162,7 @@
                                                                      viewController:[PlayerViewController class]]];
   [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Playready Smooth with Clear HLS Backup"
                                                                           embedCode:@"pkMm1rdTqIAxx9DQ4-8Hyp9P_AHRe4pt"
-                                                                              pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                              pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
                                                                              domain:@"http://www.ooyala.com"
                                                                      viewController:[PlayerViewController class]]];
   [self.mediaList addObject: [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"2 Assets autoplayed"
