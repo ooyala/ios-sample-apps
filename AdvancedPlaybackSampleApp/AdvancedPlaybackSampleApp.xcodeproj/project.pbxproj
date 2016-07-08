@@ -84,6 +84,7 @@
 		0BCA696C1A84965F00225119 /* OOSampleAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */; };
 		0BCA696D1A84965F00225119 /* OOSampleAdSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A81A7AEEBD00F0EC32 /* OOSampleAdSpot.m */; };
 		0BCA696E1A84965F00225119 /* OOSamplePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333AA1A7AEEBD00F0EC32 /* OOSamplePlugin.m */; };
+		0BCC6E281D2F2EFF0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* PlayWithInitialTimePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
 		5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */; };
@@ -175,6 +176,7 @@
 		0BCA69471A848E6400225119 /* CustomControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsViewController.m; sourceTree = "<group>"; };
 		0BCA694A1A848E6400225119 /* OOUIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOUIUtils.h; sourceTree = "<group>"; };
 		0BCA694B1A848E6400225119 /* OOUIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOUIUtils.m; sourceTree = "<group>"; };
+		0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceProfilingPlayerViewController.h; sourceTree = "<group>"; };
 		5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceProfilingPlayerViewController.m; sourceTree = "<group>"; };
 		5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnbundledPlayerViewController.h; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC6E281D2F2EFF0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9457D11AC32C5B000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */,
 				0B9457CD1AC32A17000DD545 /* libxml2.dylib in Frameworks */,
@@ -250,6 +253,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */,
 				0B9457CC1AC32A17000DD545 /* libxml2.dylib */,
 				0B7AC4481A7A296B0085BC97 /* libOoyalaSDK.a */,
 				0B7AC4441A7A27090085BC97 /* UIKit.framework */,

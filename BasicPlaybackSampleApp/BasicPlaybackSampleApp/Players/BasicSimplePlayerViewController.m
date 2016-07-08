@@ -30,8 +30,6 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode = nil;
-  self.playerDomain = nil;
   
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;

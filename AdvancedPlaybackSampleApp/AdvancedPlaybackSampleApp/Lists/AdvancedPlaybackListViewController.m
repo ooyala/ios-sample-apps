@@ -28,14 +28,46 @@
   return self;
 }
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Plugin Player" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [PluginPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Change Video Programmatically" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [ChangeVideoPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Insert Ad at Runtime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [InsertAdPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Play With InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [PlayWithInitialTimePlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [CustomControlsPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Overlay" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [CustomOverlayPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Unbundled HLS" embedCode:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8" viewController: [UnbundledPlayerViewController class]]];
-  [self insertNewObject:[[PlayerSelectionOption alloc] initWithTitle:@"Performance Profiling (mid-roll)" embedCode:@"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa" viewController:[PerformanceProfilingPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Plugin Player"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [PluginPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Change Video Programmatically"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [ChangeVideoPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Insert Ad at Runtime"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [InsertAdPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Play With InitialTime"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [PlayWithInitialTimePlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [CustomControlsPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Overlay"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [CustomOverlayPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Unbundled HLS"
+                                                            embedCode:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [UnbundledPlayerViewController class]]];
+  [self insertNewObject:[[PlayerSelectionOption alloc] initWithTitle:@"Performance Profiling (mid-roll)"
+                                                           embedCode:@"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa"
+                                                               pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                                              domain:@"http://www.ooyala.com"
+                                                      viewController:[PerformanceProfilingPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
