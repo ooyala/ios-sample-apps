@@ -33,9 +33,10 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  self.pcode = self.option.pcode;
+  self.playerDomain = self.option.domain;
   
-  self.pcode = @"Fill me in";
-  self.playerDomain = @"http://www.ooyala.com";
   self.authorizeHost = @"http://player.ooyala.com";
   
   self.apiKey = @"Fill me in";

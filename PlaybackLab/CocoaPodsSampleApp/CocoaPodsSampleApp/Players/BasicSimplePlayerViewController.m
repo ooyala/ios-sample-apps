@@ -26,7 +26,7 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
+  self.pcode =@"c0cTkxOqALQviQIGAHWY5hP0q9gU";
   self.playerDomain = @"http://www.ooyala.com";
   
   if (self.playerSelectionOption) {

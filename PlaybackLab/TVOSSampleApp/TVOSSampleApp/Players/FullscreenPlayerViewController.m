@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
-  self.playerDomain = @"http://www.ooyala.com";
+  self.pcode = self.option.pcode;
+  self.playerDomain = self.option.domain;
   
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   

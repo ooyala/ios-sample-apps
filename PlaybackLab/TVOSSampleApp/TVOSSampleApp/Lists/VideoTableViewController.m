@@ -38,19 +38,43 @@
 - (void)populateOptions
 {
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fullscreen Player"
-                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"]];
+                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"fullscreenSegue"]];
+
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
-                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"]];
+                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"childSegue"]];
+
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Player Token (Unconfigured)"
-                                                             embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"]];
+                                                             embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
+                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"playerTokenSegue"]];
+
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Baseline Profile (Unconfigured)"
-                                                             embedCode:@"V3NDdnMzE6tPCchL9wYTFZY8jAE8_Y21"]];
+                                                             embedCode:@"V3NDdnMzE6tPCchL9wYTFZY8jAE8_Y21"
+                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"fairplaySegue"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Main Profile (Unconfigured)"
-                                                             embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"]];
+                                                             embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
+                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"fairplaySegue"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay High Profile (Unconfigured)"
-                                                             embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"]];
+                                                             embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"
+                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"fairplaySegue"]];
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Live (Unconfigured)"
-                                                             embedCode:@"92MmdlMzE6Jijt5qhM-sh-zI5MQLuRP4"]];
+                                                             embedCode:@"92MmdlMzE6Jijt5qhM-sh-zI5MQLuRP4"
+                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"fairplaySegue"]];
   
   [self.tableView reloadData];
 }
@@ -72,19 +96,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSString *segueId = @"";
   PlayerSelectionOption *option = self.options[indexPath.row];
-  if ([option.title isEqualToString:@"Fullscreen Player"]) {
-    segueId = @"fullscreenSegue";
-  } else if ([option.title isEqualToString:@"Inline Player"]) {
-    segueId = @"childSegue";
-  } else if ([option.title isEqualToString:@"Player Token (Unconfigured)"]) {
-    segueId = @"playerTokenSegue";
-  } else {
-    segueId = @"fairplaySegue";
-  }
-  
-  [self performSegueWithIdentifier:segueId sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+  [self performSegueWithIdentifier:option.segueName sender:[self.tableView cellForRowAtIndexPath:indexPath]];
 }
 
 

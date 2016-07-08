@@ -37,29 +37,13 @@
                      @"HLS Video",
                      @"MP4 Video",
                      @"VOD with CCs",
-                     @"4:3 Aspect Ratio",
-                     @"VAST Ad Pre-roll",
-                     @"VAST Ad Mid-roll",
-                     @"VAST Ad Post-roll",
-                     @"VAST Ad Wrapper",
-                     @"Ooyala Ad Pre-roll",
-                     @"Ooyala Ad Mid-roll",
-                     @"Ooyala Ad Post-roll",
-                     @"Multi Ad combination", nil];
+                     @"4:3 Aspect Ratio", nil];
   
   self.optionEmbedCodes = [[NSMutableArray alloc] initWithObjects:
                            @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1",
                            @"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx",
                            @"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww",
                            @"FwaXZjcjrkydIftLal2cq9ymQMuvjvD8",
-                           @"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c", // VAST Preroll
-                           @"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa", // VAST Midroll
-                           @"Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf", // VAST Postroll
-                           @"pqaWp0ZDqo17Z-Dn_5YiVhjcbQYs5lhq", // VAST Wrapper
-                           @"M4cmp0ZDpYdy8kiL4UD910Rw_DWwaSnU", // OOYALA Preroll
-                           @"xhcmp0ZDpnDB2-hXvH7TsYVQKEk_89di", // OOYALA Midroll
-                           @"Rjcmp0ZDr5yFbZPEfLZKUveR_2JzZjMO", // OOYALA Postroll
-                           @"Ftcmp0ZDoz8tALmhPcN2vMzCdg7YU9lc", // Multi Ad combination
                            nil];
   
 }

@@ -10,9 +10,12 @@
 #import <UIKit/UIKit.h>
 
 @interface PlayerSelectionOption : NSObject
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *embedCode;
+@property NSString *embedCode;
+@property NSString *pcode;
+@property NSString *domain;
+@property NSString *title;
+@property NSString *nib;
+@property NSString *segueName;
 
-- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode;
-
+- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain segueName:(NSString *)segueName;
 @end

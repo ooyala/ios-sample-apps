@@ -30,10 +30,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view.
-  self.pcode = @"Fill me in";
-  self.playerDomain = @"http://www.ooyala.com";
-  
+  self.pcode = self.option.pcode;
+  self.playerDomain = self.option.domain;
+
   self.authorizeHost = @"http://player.ooyala.com";
   
   /*
