@@ -22,13 +22,41 @@
   return self;
 }
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Preroll" embedCode:@"Q5MXg2bzq0UAXXMjLIFWio_6U0Jcfk6v" viewController: [FreewheelPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Midroll" embedCode:@"NwcGg4bzrwxc6rqAZbYij4pWivBsX57a" viewController: [FreewheelPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Postroll" embedCode:@"NmcGg4bzqbeqXO_x9Rfj5IX6gwmRRrse" viewController: [FreewheelPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel PreMidPost" embedCode:@"NqcGg4bzoOmMiV35ZttQDtBX1oNQBnT-" viewController: [FreewheelPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Overlay" embedCode:@"NucGg4bzrVrilZrMdlSA9tyg6Vty46DN" viewController: [FreewheelPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel PreMidPost Overlay" embedCode:@"NscGg4bzpO9s5rUMyW-AAfoeEA7CX6hP" viewController: [FreewheelPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Multi Midroll" embedCode:@"htdnB3cDpMzXVL7fecaIWdv9rTd125As" viewController: [FreewheelPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Preroll"
+                                                            embedCode:@"Q5MXg2bzq0UAXXMjLIFWio_6U0Jcfk6v"
+                                                                pcode:@"V0NDYyOuL4a4eLle69su0dP_7vs1"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [FreewheelPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Midroll"
+                                                            embedCode:@"NwcGg4bzrwxc6rqAZbYij4pWivBsX57a"
+                                                                pcode:@"V0NDYyOuL4a4eLle69su0dP_7vs1"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [FreewheelPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Postroll"
+                                                            embedCode:@"NmcGg4bzqbeqXO_x9Rfj5IX6gwmRRrse"
+                                                                pcode:@"V0NDYyOuL4a4eLle69su0dP_7vs1"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [FreewheelPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel PreMidPost"
+                                                            embedCode:@"NqcGg4bzoOmMiV35ZttQDtBX1oNQBnT-"
+                                                                pcode:@"V0NDYyOuL4a4eLle69su0dP_7vs1"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [FreewheelPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Overlay"
+                                                            embedCode:@"NucGg4bzrVrilZrMdlSA9tyg6Vty46DN"
+                                                                pcode:@"V0NDYyOuL4a4eLle69su0dP_7vs1"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [FreewheelPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel PreMidPost Overlay"
+                                                            embedCode:@"NscGg4bzpO9s5rUMyW-AAfoeEA7CX6hP"
+                                                                pcode:@"V0NDYyOuL4a4eLle69su0dP_7vs1"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [FreewheelPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Freewheel Multi Midroll"
+                                                            embedCode:@"htdnB3cDpMzXVL7fecaIWdv9rTd125As"
+                                                                pcode:@"V0NDYyOuL4a4eLle69su0dP_7vs1"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [FreewheelPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
