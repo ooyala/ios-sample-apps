@@ -27,8 +27,16 @@
 }
 
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic NPAW Youbura Integration" embedCode: @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [NPAWDefaultPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"NPAW with Optional Metadata" embedCode: @"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [NPAWOptionalMetadataPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Basic NPAW Youbura Integration"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [NPAWDefaultPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"NPAW with Optional Metadata"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [NPAWOptionalMetadataPlayerViewController class]]];
 
 }
 

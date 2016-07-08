@@ -5,8 +5,8 @@
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import "NPAWOptionalMetadataPlayerViewController.h"
 
+#import "NPAWOptionalMetadataPlayerViewController.h"
 #import <YouboraMedia/Youbora.h>
 #import <OoyalaSDK/OOOoyalaPlayerViewController.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
@@ -30,14 +30,19 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
-  self.playerDomain = @"http://www.ooyala.com";
+
+  //NPAW configurations
   self.npawSystemId = @"ooyalaqa";
   self.npawUserId = @"pkArmh";
 
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
+    self.pcode = self.playerSelectionOption.pcode;
+    self.playerDomain = self.playerSelectionOption.domain;
+  } else {
+    NSLog(@"There was no PlayerSelectionOption!");
+    return nil;
   }
   return self;
 }

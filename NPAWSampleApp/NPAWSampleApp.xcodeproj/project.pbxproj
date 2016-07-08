@@ -38,6 +38,7 @@
 		0B9458AB1AC3353E000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458AA1AC3353E000DD545 /* libxml2.dylib */; };
 		0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
+		0BCC6E321D2F391F0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E311D2F391F0040B0B2 /* AVKit.framework */; };
 		0BFFF6C71B33655100D72444 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAWOptionalMetadataPlayerViewController.h; sourceTree = "<group>"; };
 		0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAWOptionalMetadataPlayerViewController.m; sourceTree = "<group>"; };
 		0B9458AA1AC3353E000DD545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		0BCC6E311D2F391F0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC6E321D2F391F0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */,
 				0B1AFB731B02C58D00347DFA /* YouboraMedia.framework in Frameworks */,
 				0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */,
@@ -124,6 +127,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC6E311D2F391F0040B0B2 /* AVKit.framework */,
 				0B9458AA1AC3353E000DD545 /* libxml2.dylib */,
 				0B17A0EC1A78207F009D1C50 /* libc++.dylib */,
 				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
