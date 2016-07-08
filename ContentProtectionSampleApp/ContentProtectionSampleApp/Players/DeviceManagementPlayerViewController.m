@@ -41,8 +41,7 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode = @"pqdHc6rN2_wYW2z-pOmDqkUmMnI1";
-  self.playerDomain = @"http://www.ooyala.com";
+
   self.apiKey = @"Fill me in";
   self.secret = @"Fill me in";
   self.accountId = @"Fill me in";
@@ -51,10 +50,14 @@
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
+    self.pcode = self.playerSelectionOption.pcode;
+    self.playerDomain = self.playerSelectionOption.domain;
+  } else {
+    NSLog(@"There was no PlayerSelectionOption!");
+    return nil;
   }
   return self;
 }
-
 - (void)loadView {
   [super loadView];
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];

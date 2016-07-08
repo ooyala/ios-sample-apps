@@ -65,6 +65,7 @@
 		0B94591D1AC33AA9000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457F01AC32C76000DD545 /* OoyalaSDK.framework */; };
 		0B98DDDC1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B98DDDA1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h */; };
 		0B98DDDD1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98DDDB1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m */; };
+		0BCC6E2C1D2F33F20040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */; };
 		FF86C1C21A9BF06700C328A9 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FF86C1881A9BF06700C328A9 /* AppDelegate.h */; };
 		FF86C1C31A9BF06700C328A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF86C1891A9BF06700C328A9 /* AppDelegate.m */; };
 		FF86C1C41A9BF06700C328A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18A1A9BF06700C328A9 /* LaunchScreen.xib */; };
@@ -150,6 +151,7 @@
 		0B9457F01AC32C76000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B98DDDA1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaPlayerTokenPlayerViewController.h; sourceTree = "<group>"; };
 		0B98DDDB1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaPlayerTokenPlayerViewController.m; sourceTree = "<group>"; };
+		0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		FF86C1881A9BF06700C328A9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF86C1891A9BF06700C328A9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF86C18B1A9BF06700C328A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC6E2C1D2F33F20040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458041AC32C76000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B140F891A2E5374001324EE /* MediaPlayer.framework in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
@@ -215,6 +218,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */,
 				0B24B86D1AA6838100F131C3 /* libxml2.dylib */,
 				FF86C2831A9C0E3F00C328A9 /* AdSupport.framework */,
 				0B7AC4481A7A296B0085BC97 /* libOoyalaSDK.a */,
