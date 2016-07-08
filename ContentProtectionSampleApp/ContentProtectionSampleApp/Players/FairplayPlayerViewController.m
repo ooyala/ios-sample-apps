@@ -40,23 +40,28 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode = @"x0b2cyOupu0FFK5hCr4zXg8KKcrm";
-  self.playerDomain = @"http://www.ooyala.com";
-  self.authorizeHost = @"http://player.ooyala.com";
+
+  if (self.playerSelectionOption) {
+    self.embedCode = self.playerSelectionOption.embedCode;
+    self.title = self.playerSelectionOption.title;
+    self.pcode = self.playerSelectionOption.pcode;
+    self.playerDomain = self.playerSelectionOption.domain;
+  } else {
+    NSLog(@"There was no PlayerSelectionOption!");
+    return nil;
+  }
+
   /*
    * The API Key and Secret should not be saved inside your applciation (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
   self.apiKey = @"Fill me in";
-  [OODebugMode setDebugMode:LogAndAbort];
-  ASSERT( [self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey." );
   self.secret = @"Fill me in";
   self.accountId = @"Fill me in";
+  self.authorizeHost = @"http://player.ooyala.com";
+  [OODebugMode setDebugMode:LogAndAbort];
+  ASSERT( [self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey." );
 
-  if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-  }
   return self;
 }
 

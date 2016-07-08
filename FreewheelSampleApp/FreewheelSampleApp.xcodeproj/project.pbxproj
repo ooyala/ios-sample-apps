@@ -24,6 +24,7 @@
 		0BC947F51A817781004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947EF1A817781004CB997 /* PlayerSimple.xib */; };
 		0BC947F61A817781004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947F01A817781004CB997 /* PlayerSingleButton.xib */; };
 		0BC947F71A817781004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947F11A817781004CB997 /* TableCell.xib */; };
+		0BCC6E2E1D2F366C0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E2D1D2F366C0040B0B2 /* AVKit.framework */; };
 		0BF4FA3D1A686FBC0050A602 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA3C1A686FBC0050A602 /* WebKit.framework */; };
 		0BF4FD341A6884A10050A602 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FD1D1A6884A10050A602 /* AppDelegate.h */; };
 		0BF4FD351A6884A10050A602 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FD1E1A6884A10050A602 /* AppDelegate.m */; };
@@ -74,6 +75,7 @@
 		0BC947EF1A817781004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0BC947F01A817781004CB997 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BC947F11A817781004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		0BCC6E2D1D2F366C0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BF4FA3C1A686FBC0050A602 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0BF4FA3E1A68702A0050A602 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0BF4FD1D1A6884A10050A602 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC6E2E1D2F366C0040B0B2 /* AVKit.framework in Frameworks */,
 				0B203EB01BD076AF00CB92D0 /* MediaPlayer.framework in Frameworks */,
 				0B94583A1AC32CA0000DD545 /* OoyalaFreewheelSDK.framework in Frameworks */,
 				0B94583B1AC32CA0000DD545 /* OoyalaSDK.framework in Frameworks */,
@@ -150,6 +153,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC6E2D1D2F366C0040B0B2 /* AVKit.framework */,
 				0B17A0EA1A782075009D1C50 /* libc++.dylib */,
 				0BF4FD521A6887880050A602 /* AdSupport.framework */,
 				0BF4FD501A68876E0050A602 /* MessageUI.framework */,

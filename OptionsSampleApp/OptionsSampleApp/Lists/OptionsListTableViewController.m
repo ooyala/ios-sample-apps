@@ -26,16 +26,44 @@ static NSString *cellId = @"pickerCell";
 }
 
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Preroll" embedCode:@"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c" viewController: [OptionsViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Midroll" embedCode:@"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa" viewController: [OptionsViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Postroll" embedCode:@"Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf" viewController: [OptionsViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with HLS Video" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with InitialTime" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]]];
-  PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:@"HLS Video with timeout" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [OptionsViewController class]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Preroll"
+                                                            embedCode:@"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c"
+                                                                pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Midroll"
+                                                            embedCode:@"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa"
+                                                                pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Postroll"
+                                                            embedCode:@"Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf"
+                                                                pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with HLS Video"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [OptionsViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with InitialTime"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [OptionsViewController class]]];
+  PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:@"HLS Video with timeout"
+                                                                     embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                         pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                        domain:@"http://www.ooyala.com"
+                                                                viewController: [OptionsViewController class]];
   option.nib = @"PlayerDoubleText";
   [self insertNewObject: option];
 
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"TV Ratings Configuration" embedCode:@"c4eHZjcjqNetoCDCmzY_ApifO3qBuWpi" viewController: [TVRatingsPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"TV Ratings Configuration"
+                                                            embedCode:@"c4eHZjcjqNetoCDCmzY_ApifO3qBuWpi"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [TVRatingsPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {

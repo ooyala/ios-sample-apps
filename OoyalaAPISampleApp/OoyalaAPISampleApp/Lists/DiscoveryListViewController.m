@@ -145,7 +145,11 @@ NSString *PCODE = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
   NSString *bucketInfo = [dict objectForKey:@"bucket_info"];
 
 
-  PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:name embedCode:embedCode viewController:[ChannelContentTreeDetailViewController class]];
+  PlayerSelectionOption *option = [[PlayerSelectionOption alloc] initWithTitle:name
+                                                                     embedCode:embedCode
+                                                                         pcode:PCODE
+                                                                        domain:@"http://www.ooyala.com"
+                                                                viewController:[ChannelContentTreeDetailViewController class]];
   ChannelContentTreeDetailViewController *controller = [[ChannelContentTreeDetailViewController alloc] initWithPlayerSelectionOption:option];
   [self.navigationController pushViewController:controller animated:YES];
   // send click feedback

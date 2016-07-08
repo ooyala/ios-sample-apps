@@ -23,16 +23,56 @@
   return self;
 }
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Preroll" embedCode:@"EzZ29lcTq49IswgZYkMknnU4Ukb9PQMH" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Midroll" embedCode:@"VlaG9lcTqeUU18adfd1DVeQ8YekP3H4l" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Postroll" embedCode:@"BnaG9lcTqLXQNyod7ON8Yv3eDas2Oog6" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Preroll" embedCode:@"1wNjE3cDox0G3hQIWxTjsZ8MPUDLSkDY" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Midroll" embedCode:@"1yNjE3cDodUEfUfp2WNzHkCZCMb47MUP" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Postroll" embedCode:@"1sNjE3cDoN3ZewFm1238ce730J4BMrEJ" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Pre-Mid-Post" embedCode:@"ZrOTE3cDoXo2sLOWzQPxjS__M-Qk32Co" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Skippable" embedCode:@"FhbGRjbzq8tfaoA3dhfxc2Qs0-RURJfO" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre, Mid and Post Skippable" embedCode:@"10NjE3cDpj8nUzYiV1PnFsjC6nEvPQAE" viewController: [IMAPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Client-side configured IMA Ads" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController: [IMACustomConfiguredPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Preroll"
+                                                            embedCode:@"EzZ29lcTq49IswgZYkMknnU4Ukb9PQMH"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Midroll"
+                                                            embedCode:@"VlaG9lcTqeUU18adfd1DVeQ8YekP3H4l"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Postroll"
+                                                            embedCode:@"BnaG9lcTqLXQNyod7ON8Yv3eDas2Oog6"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Preroll"
+                                                            embedCode:@"1wNjE3cDox0G3hQIWxTjsZ8MPUDLSkDY"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Midroll"
+                                                            embedCode:@"1yNjE3cDodUEfUfp2WNzHkCZCMb47MUP"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Postroll"
+                                                            embedCode:@"1sNjE3cDoN3ZewFm1238ce730J4BMrEJ"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Pre-Mid-Post"
+                                                            embedCode:@"ZrOTE3cDoXo2sLOWzQPxjS__M-Qk32Co"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Skippable"
+                                                            embedCode:@"FhbGRjbzq8tfaoA3dhfxc2Qs0-RURJfO"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre, Mid and Post Skippable"
+                                                            embedCode:@"10NjE3cDpj8nUzYiV1PnFsjC6nEvPQAE"
+                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMAPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Client-side configured IMA Ads"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IMACustomConfiguredPlayerViewController class]]];
 }
 
 - (void)viewDidLoad {

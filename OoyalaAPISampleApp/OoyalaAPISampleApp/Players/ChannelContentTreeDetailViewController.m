@@ -26,9 +26,16 @@
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   if (self = [super initWithPlayerSelectionOption:playerSelectionOption]) {
     nib = @"PlayerSimple";
-    pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
-    playerDomain = @"http://www.ooyala.com";
-    embedCode = playerSelectionOption.embedCode;
+
+    if (self.playerSelectionOption) {
+      embedCode = self.playerSelectionOption.embedCode;
+      self.title = self.playerSelectionOption.title;
+      pcode = self.playerSelectionOption.pcode;
+      playerDomain = self.playerSelectionOption.domain;
+    } else {
+      NSLog(@"There was no PlayerSelectionOption!");
+      return nil;
+    }
   }
   return self;
 }

@@ -34,6 +34,8 @@
   if (self.playerSelectionOption) {
     self.assetUrl = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
+    self.pcode = self.playerSelectionOption.pcode;
+    self.playerDomain = self.playerSelectionOption.domain;
   }
   return self;
 }
