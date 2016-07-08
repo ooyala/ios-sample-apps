@@ -30,16 +30,17 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
-  self.playerDomain = @"http://www.ooyala.com";
+  self.pcode = nil;
+  self.playerDomain = nil;
   
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-  }
-
-  if (self.playerSelectionOption.pcode) {
     self.pcode = self.playerSelectionOption.pcode;
+    self.playerDomain = self.playerSelectionOption.domain;
+  } else {
+    NSLog(@"There was no PlayerSelectionOption!");
+    return nil;
   }
   return self;
 }
