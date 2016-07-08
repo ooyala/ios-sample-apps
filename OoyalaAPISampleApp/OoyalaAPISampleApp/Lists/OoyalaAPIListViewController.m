@@ -24,9 +24,17 @@
 
   if (_channelList == nil) {
     PlayerSelectionOption *option1 =
-      [[PlayerSelectionOption alloc] initWithTitle:@"Content Tree for Channel" embedCode:@"txaGRiMzqQZSmFpMML92QczdIYUrcYVe" viewController:[ChannelContentTreePlayerViewController class]];
+      [[PlayerSelectionOption alloc] initWithTitle:@"Content Tree for Channel"
+                                         embedCode:@"txaGRiMzqQZSmFpMML92QczdIYUrcYVe"
+                                             pcode:@"R2d3I6s06RyB712DN0_2GsQS-R-Y"
+                                            domain:@"http://www.ooyala.com"
+                                    viewController:[ChannelContentTreePlayerViewController class]];
     PlayerSelectionOption *option2 =
-      [[PlayerSelectionOption alloc] initWithTitle:@"Discovery Results" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" viewController:[DiscoveryListViewController class]];
+      [[PlayerSelectionOption alloc] initWithTitle:@"Discovery Results"
+                                         embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                             pcode:@""
+                                            domain:@""
+                                    viewController:[DiscoveryListViewController class]];
     _channelList = [NSArray arrayWithObjects:option1, option2, nil];
   }
 }

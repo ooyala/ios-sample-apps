@@ -21,6 +21,9 @@
   OOOoyalaAPIClient *apiClient;
 }
 
+@property NSString *pcode;
+@property NSString *playerDomain;
+
 @end
 
 @implementation ChannelContentTreePlayerViewController
@@ -30,12 +33,14 @@
   
   if (apiClient == nil) {
     // Do any additional setup after loading the view.
+    // You need to place your own API Key and Secret from your Backlot account here, so you can perfomr Content Tree requests
+    // NOTE: Secrets are not safe to put into your application, so this functionality is not necessarily reccomended
     NSString *APIKEY = @"PUT YOUR API KEY HERE";
     NSString *SECRETKEY = @"PUT YOUR SECRET HERE";
-    NSString *PCODE =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
-    NSString *PLAYER_DOMAIN = @"http://www.ooyala.com";
-    OOPlayerDomain *playerDomain = [[OOPlayerDomain alloc] initWithString:PLAYER_DOMAIN];
-    apiClient = [[OOOoyalaAPIClient alloc] initWithAPIKey:APIKEY secret:SECRETKEY pcode:PCODE domain:playerDomain];
+
+    self.pcode = self.option.pcode;
+    self.playerDomain = self.option.domain;
+    apiClient = [[OOOoyalaAPIClient alloc] initWithAPIKey:APIKEY secret:SECRETKEY pcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
 
     if (self.option.embedCode) {
       [apiClient contentTree:[NSArray arrayWithObject:self.option.embedCode] callback:^void(OOContentItem *contentItem, OOOoyalaError *error) {
@@ -91,7 +96,11 @@
 {
   // When a row is selected, load its desired PlayerViewController
   OOVideo *video = [videos objectAtIndex:indexPath.row];
-  PlayerSelectionOption *selection = [[PlayerSelectionOption alloc] initWithTitle:video.title embedCode:video.embedCode viewController:[ChannelContentTreeDetailViewController class]];
+  PlayerSelectionOption *selection = [[PlayerSelectionOption alloc] initWithTitle:video.title
+                                                                        embedCode:video.embedCode
+                                                                            pcode:self.pcode
+                                                                           domain:self.playerDomain
+                                                                   viewController:[ChannelContentTreeDetailViewController class]];
   ChannelContentTreeDetailViewController *controller = [[ChannelContentTreeDetailViewController alloc] initWithPlayerSelectionOption:selection];
   [self.navigationController pushViewController:controller animated:YES];
 }

@@ -13,6 +13,7 @@
 		0B9458B21AC338A7000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */; };
 		0B9459201AC33ACB000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */; };
 		0BC8CF9E1BBC83A100F61C1A /* DiscoveryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */; };
+		0BCC6E341D2F3B3B0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E331D2F3B3B0040B0B2 /* AVKit.framework */; };
 		0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */; };
 		0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */; };
 		0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		0BCC6E331D2F3B3B0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BDC4BC31A9F9F7300576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOoyalaAPISampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BDC4BDE1A9FA3D800576639 /* ChannelContentTreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreeTableViewCell.h; sourceTree = "<group>"; };
 		0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreeTableViewCell.m; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC6E341D2F3B3B0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458621AC32CC4000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B9458B21AC338A7000DD545 /* MediaPlayer.framework in Frameworks */,
 				0B9458AF1AC33830000DD545 /* SystemConfiguration.framework in Frameworks */,
@@ -116,6 +119,7 @@
 		0BDC4BBE1A9F9F1600576639 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC6E331D2F3B3B0040B0B2 /* AVKit.framework */,
 				979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */,
 				979BB2211A9C0B54001EB8BF /* libxml2.dylib */,
 				979BB21F1A9C0B43001EB8BF /* libc++.dylib */,
