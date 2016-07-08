@@ -22,6 +22,7 @@
 		0BC948021A81779B004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FC1A81779B004CB997 /* PlayerSimple.xib */; };
 		0BC948031A81779B004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FD1A81779B004CB997 /* PlayerSingleButton.xib */; };
 		0BC948041A81779B004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947FE1A81779B004CB997 /* TableCell.xib */; };
+		0BCC6E301D2F37930040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E2F1D2F37930040B0B2 /* AVKit.framework */; };
 		0BF4FA271A686CB40050A602 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF4FA101A686CB40050A602 /* AppDelegate.h */; };
 		0BF4FA281A686CB40050A602 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4FA111A686CB40050A602 /* AppDelegate.m */; };
 		0BF4FA291A686CB40050A602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA121A686CB40050A602 /* LaunchScreen.xib */; };
@@ -76,6 +77,7 @@
 		0BC947FC1A81779B004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0BC947FD1A81779B004CB997 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BC947FE1A81779B004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		0BCC6E2F1D2F37930040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BF4FA101A686CB40050A602 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0BF4FA111A686CB40050A602 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0BF4FA131A686CB40050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC6E301D2F37930040B0B2 /* AVKit.framework in Frameworks */,
 				0B94585F1AC32CB3000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B94585E1AC32CB3000DD545 /* OoyalaIMASDK.framework in Frameworks */,
 				0BC8CF9B1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */,
@@ -147,6 +150,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC6E2F1D2F37930040B0B2 /* AVKit.framework */,
 				0B9458AC1AC3361F000DD545 /* libxml2.dylib */,
 				0B17A0E81A78206D009D1C50 /* libc++.dylib */,
 				0BF4FA3E1A68702A0050A602 /* libz.dylib */,
