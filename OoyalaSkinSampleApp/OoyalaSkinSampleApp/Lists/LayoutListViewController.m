@@ -16,7 +16,7 @@
 @implementation LayoutListViewController
 
 - (void)addTestCases {
-  [self addCommonWithTitle:@"Original Alice Test Asset" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"];
+  [self addCommonWithTitle:@"Original Alice Test Asset" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Small Player View (BigBuck+Ads)"
                                                             embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"

@@ -26,7 +26,7 @@
 }
 
 - (PlayerSelectionOption *)optionWithTitle:(NSString *)title embedCode:(NSString *)embedCode {
-  NSString *pcode =@"BidTQxOqebpNk1rVsjs2sUJSTOZc";
+  NSString *pcode =@"V0NDYyOuL4a4eLle69su0dP_7vs1";
   NSString *playerDomain = @"http://www.ooyala.com";
   NSString *nib = @"DefaultSkinPlayerView";
   return [[PlayerSelectionOption alloc] initWithTitle:title embedCode:embedCode pcode:pcode playerDomain:playerDomain viewController:[FreewheelPlayerViewController class] nib:nib];

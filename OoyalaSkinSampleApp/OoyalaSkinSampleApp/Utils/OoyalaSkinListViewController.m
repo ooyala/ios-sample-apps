@@ -25,10 +25,10 @@
   return self;
 }
 
--(void)addCommonWithTitle:(NSString*)title embedCode:(NSString*)embedCode {
+-(void)addCommonWithTitle:(NSString*)title embedCode:(NSString*)embedCode pcode:(NSString *)pcode {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:title
                                                             embedCode:embedCode
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                pcode:pcode
                                                          playerDomain:@"http://www.ooyala.com"
                                                        viewController: [DefaultSkinPlayerViewController class]
                                                                   nib:@"DefaultSkinPlayerView"]];
