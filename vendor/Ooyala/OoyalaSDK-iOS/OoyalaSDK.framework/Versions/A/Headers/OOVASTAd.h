@@ -12,7 +12,7 @@
 @interface OOVASTAd : NSObject
 
 @property(readonly, nonatomic) NSString *adID;                   /**< the ID of the Ad */
-@property(readonly, nonatomic) NSInteger adSequence;            /**< the sequence of the Ad */
+@property(nonatomic) NSInteger adSequence;            /**< the sequence of the Ad */
 @property(readonly, nonatomic) NSString *system;                 /**< the System */
 @property(readonly, nonatomic) NSString *systemVersion;          /**< the System Version */
 @property(readonly, nonatomic) NSString *title;                  /**< the title of the Ad */
@@ -38,8 +38,6 @@
  * @returns the initialized OOVASTAd
  */
 - (id)initWithXML:(OOTBXMLElement *)xml;
-
-- (void)setAdSequence:(float)adSequence;
 
 /** @internal
  * Update the OOVASTAd using the specified xml (subclasses should override this)
