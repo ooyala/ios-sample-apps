@@ -70,11 +70,6 @@
                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                 domain:@"http://www.ooyala.com"
                                                              segueName:@"fairplaySegue"]];
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Live (Unconfigured)"
-                                                             embedCode:@"92MmdlMzE6Jijt5qhM-sh-zI5MQLuRP4"
-                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"fairplaySegue"]];
   
   [self.tableView reloadData];
 }
