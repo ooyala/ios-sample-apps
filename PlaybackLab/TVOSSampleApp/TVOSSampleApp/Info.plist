@@ -33,5 +33,9 @@
 	<array>
 		<string>arm64</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ooyala-slick-type.ttf</string>
+	</array>
 </dict>
 </plist>
