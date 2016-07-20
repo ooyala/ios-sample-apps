@@ -57,6 +57,7 @@ NSMutableArray *_sharePlugins;
 //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
 
+  ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions jsCodeLocation:jsCodeLocation configFileName:@"skin" overrideConfigs:overrideConfigs];
   self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer skinOptions:skinOptions parent:_videoView launchOptions:nil];
   [self addChildViewController:_skinController];
