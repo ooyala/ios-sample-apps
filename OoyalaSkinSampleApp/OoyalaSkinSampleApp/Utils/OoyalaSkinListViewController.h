@@ -12,6 +12,6 @@
 
 - (void)addTestCases;
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject;
-- (void)addCommonWithTitle:(NSString*)title embedCode:(NSString*)embedCode;
+- (void)addCommonWithTitle:(NSString*)title embedCode:(NSString*)embedCode pcode:(NSString *)pcode;
 
 @end

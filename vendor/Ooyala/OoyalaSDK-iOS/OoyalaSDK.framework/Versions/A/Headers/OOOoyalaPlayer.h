@@ -35,6 +35,7 @@
 @class OOFCCTVRating;
 @class OOOptions;
 @class OOManagedAdsPlugin;
+@class OOPlayer;
 /**
  * Defines player behavior after video playback has ended, defaults to OOOoyalaPlayerActionAtEndContinue
  */
