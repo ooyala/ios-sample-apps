@@ -14,7 +14,7 @@
 #import <OoyalaTVSDK/OOOptions.h>
 #import "PlayerSelectionOption.h"
 
-@interface FairplayPlayerViewController ()
+@interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 
 @property (nonatomic, strong) NSString *embedCode;
 @property (nonatomic, strong) NSString *pcode;
