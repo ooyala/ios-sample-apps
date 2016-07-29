@@ -19,6 +19,11 @@
 		0B3BD63B1CF3E68200A8ACDA /* ChildPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD62E1CF3E68200A8ACDA /* ChildPlayerViewController.m */; };
 		0B3BD63C1CF3E68200A8ACDA /* FullscreenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD6301CF3E68200A8ACDA /* FullscreenPlayerViewController.m */; };
 		0B3BD63D1CF3E68200A8ACDA /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD6331CF3E68200A8ACDA /* PlayerSelectionOption.m */; };
+		0BC139221D4BF5AA007EBDA4 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1391D1D4BF5AA007EBDA4 /* ooyala-slick-type.ttf */; };
+		0BC139231D4BF5AA007EBDA4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1391E1D4BF5AA007EBDA4 /* Roboto-Bold.ttf */; };
+		0BC139241D4BF5AA007EBDA4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1391F1D4BF5AA007EBDA4 /* Roboto-Regular.ttf */; };
+		0BC139251D4BF5AA007EBDA4 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC139201D4BF5AA007EBDA4 /* RobotoCondensed-Bold.ttf */; };
+		0BC139261D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC139211D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf */; };
 		0BD644E01CF7C08B005AD8CB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */; };
 		0BE8AA2F1CFF889200152888 /* FairplayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */; };
 		0BE8AA321D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA311D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m */; };
@@ -45,6 +50,11 @@
 		0B3BD6301CF3E68200A8ACDA /* FullscreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenPlayerViewController.m; sourceTree = "<group>"; };
 		0B3BD6321CF3E68200A8ACDA /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B3BD6331CF3E68200A8ACDA /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		0BC1391D1D4BF5AA007EBDA4 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		0BC1391E1D4BF5AA007EBDA4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		0BC1391F1D4BF5AA007EBDA4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0BC139201D4BF5AA007EBDA4 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		0BC139211D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		0BE8AA2D1CFF889200152888 /* FairplayPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FairplayPlayerViewController.h; sourceTree = "<group>"; };
 		0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FairplayPlayerViewController.m; sourceTree = "<group>"; };
@@ -81,6 +91,7 @@
 				0B3BD6251CF3E68200A8ACDA /* Info.plist */,
 				0B3BD6261CF3E68200A8ACDA /* Lists */,
 				0B3BD6291CF3E68200A8ACDA /* main.m */,
+				0BC1391C1D4BF5AA007EBDA4 /* Fonts */,
 				0B3BD62A1CF3E68200A8ACDA /* Players */,
 				0B3BD6311CF3E68200A8ACDA /* Utils */,
 			);
@@ -120,6 +131,19 @@
 				0B3BD6331CF3E68200A8ACDA /* PlayerSelectionOption.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		0BC1391C1D4BF5AA007EBDA4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0BC1391D1D4BF5AA007EBDA4 /* ooyala-slick-type.ttf */,
+				0BC1391E1D4BF5AA007EBDA4 /* Roboto-Bold.ttf */,
+				0BC1391F1D4BF5AA007EBDA4 /* Roboto-Regular.ttf */,
+				0BC139201D4BF5AA007EBDA4 /* RobotoCondensed-Bold.ttf */,
+				0BC139211D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf */,
+			);
+			name = Fonts;
+			path = "../../../vendor/Ooyala/OoyalaSkinSDK-tvOS/Fonts";
 			sourceTree = "<group>";
 		};
 		CA49FD3C1C8E4D8A0017E19F = {
@@ -208,8 +232,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC139241D4BF5AA007EBDA4 /* Roboto-Regular.ttf in Resources */,
+				0BC139221D4BF5AA007EBDA4 /* ooyala-slick-type.ttf in Resources */,
 				0B3BD6351CF3E68200A8ACDA /* Assets.xcassets in Resources */,
+				0BC139231D4BF5AA007EBDA4 /* Roboto-Bold.ttf in Resources */,
+				0BC139251D4BF5AA007EBDA4 /* RobotoCondensed-Bold.ttf in Resources */,
 				0B3BD6371CF3E68200A8ACDA /* Info.plist in Resources */,
+				0BC139261D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf in Resources */,
 				0B3BD6361CF3E68200A8ACDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
