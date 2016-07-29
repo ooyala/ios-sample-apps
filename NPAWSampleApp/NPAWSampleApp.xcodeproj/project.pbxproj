@@ -40,6 +40,7 @@
 		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		0BCC6E321D2F391F0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E311D2F391F0040B0B2 /* AVKit.framework */; };
 		0BFFF6C71B33655100D72444 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
+		97E587591D4AE0BD00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E587581D4AE0BD00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAWOptionalMetadataPlayerViewController.m; sourceTree = "<group>"; };
 		0B9458AA1AC3353E000DD545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0BCC6E311D2F391F0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		97E587581D4AE0BD00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E587591D4AE0BD00202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E321D2F391F0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */,
 				0B1AFB731B02C58D00347DFA /* YouboraMedia.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E587581D4AE0BD00202E09 /* JavaScriptCore.framework */,
 				0BCC6E311D2F391F0040B0B2 /* AVKit.framework */,
 				0B9458AA1AC3353E000DD545 /* libxml2.dylib */,
 				0B17A0EC1A78207F009D1C50 /* libc++.dylib */,

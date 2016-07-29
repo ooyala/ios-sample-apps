@@ -91,6 +91,7 @@
 		5E32B2CE1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */; };
 		5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */; };
 		5E98478B1C8E5F9900D31ED1 /* UnbundledPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */; };
+		97E5874A1D4ADF7300202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E587491D4ADF7300202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -181,6 +182,7 @@
 		5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceProfilingPlayerViewController.m; sourceTree = "<group>"; };
 		5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnbundledPlayerViewController.h; sourceTree = "<group>"; };
 		5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnbundledPlayerViewController.m; sourceTree = "<group>"; };
+		97E587491D4ADF7300202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E5874A1D4ADF7300202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E281D2F2EFF0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9457D11AC32C5B000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */,
@@ -253,6 +256,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E587491D4ADF7300202E09 /* JavaScriptCore.framework */,
 				0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */,
 				0B9457CC1AC32A17000DD545 /* libxml2.dylib */,
 				0B7AC4481A7A296B0085BC97 /* libOoyalaSDK.a */,

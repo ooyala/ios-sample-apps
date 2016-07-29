@@ -45,6 +45,7 @@
 		0BFFF6C41B33395B00D72444 /* IMAPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */; };
 		0BFFF6C51B33395B00D72444 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */; };
 		0BFFF6C61B33395B00D72444 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */; };
+		97E587571D4AE0A400202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E587551D4AE08B00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +98,7 @@
 		0BF4FA3E1A68702A0050A602 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPlayerViewController.h; sourceTree = "<group>"; };
 		0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAPlayerViewController.m; sourceTree = "<group>"; };
+		97E587551D4AE08B00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E587571D4AE0A400202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E301D2F37930040B0B2 /* AVKit.framework in Frameworks */,
 				0B94585F1AC32CB3000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B94585E1AC32CB3000DD545 /* OoyalaIMASDK.framework in Frameworks */,
@@ -150,6 +153,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E587551D4AE08B00202E09 /* JavaScriptCore.framework */,
 				0BCC6E2F1D2F37930040B0B2 /* AVKit.framework */,
 				0B9458AC1AC3361F000DD545 /* libxml2.dylib */,
 				0B17A0E81A78206D009D1C50 /* libc++.dylib */,

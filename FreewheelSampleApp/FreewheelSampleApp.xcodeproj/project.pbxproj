@@ -44,6 +44,7 @@
 		0BF4FD4F1A6886EB0050A602 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FD4E1A6886EB0050A602 /* libxml2.dylib */; };
 		0BF4FD511A68876E0050A602 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FD501A68876E0050A602 /* MessageUI.framework */; };
 		0BF4FD531A6887880050A602 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FD521A6887880050A602 /* AdSupport.framework */; };
+		97E587541D4AE04800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E587531D4AE04800202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +98,7 @@
 		0BF4FD4E1A6886EB0050A602 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0BF4FD501A68876E0050A602 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0BF4FD521A6887880050A602 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		97E587531D4AE04800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E587541D4AE04800202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E2E1D2F366C0040B0B2 /* AVKit.framework in Frameworks */,
 				0B203EB01BD076AF00CB92D0 /* MediaPlayer.framework in Frameworks */,
 				0B94583A1AC32CA0000DD545 /* OoyalaFreewheelSDK.framework in Frameworks */,
@@ -153,6 +156,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E587531D4AE04800202E09 /* JavaScriptCore.framework */,
 				0BCC6E2D1D2F366C0040B0B2 /* AVKit.framework */,
 				0B17A0EA1A782075009D1C50 /* libc++.dylib */,
 				0BF4FD521A6887880050A602 /* AdSupport.framework */,

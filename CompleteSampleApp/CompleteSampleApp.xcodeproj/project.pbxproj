@@ -61,6 +61,7 @@
 		0BDC4BE51A9FA47B00576639 /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BDC4BE41A9FA47B00576639 /* ChannelCell.xib */; };
 		0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA4C1A68730A0050A602 /* WebKit.framework */; };
 		0BF4FA4F1A6873120050A602 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA4E1A6873120050A602 /* libz.dylib */; };
+		97E587501D4AE00A00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,7 @@
 		0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMASampleAppSource.a; path = "../IMASampleApp/build/Debug-iphoneos/libIMASampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4FA4C1A68730A0050A602 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0BF4FA4E1A6873120050A602 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E587501D4AE00A00202E09 /* JavaScriptCore.framework in Frameworks */,
 				0B1AFB751B02C6C400347DFA /* libNPAWSampleAppSource.a in Frameworks */,
 				0B9459151AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
 				0B9459161AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a in Frameworks */,
@@ -212,6 +215,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */,
 				0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */,
 				0B94590F1AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a */,
 				0B9459101AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a */,

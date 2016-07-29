@@ -27,6 +27,7 @@
 		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
+		97E5874E1D4ADFDD00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */; };
 		FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */; };
 		FF21F0DC19CB7A2100FE9D07 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D419CB7A2100FE9D07 /* CFNetwork.framework */; };
 		FF21F0DD19CB7A2100FE9D07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D519CB7A2100FE9D07 /* CoreMedia.framework */; };
@@ -72,6 +73,7 @@
 		5E5B755B1C472C4200371A9E /* CastPlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastPlaybackView.m; sourceTree = "<group>"; };
 		5EA5A7E71B6C07DC008C691C /* OOCastManagerFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCastManagerFetcher.h; sourceTree = "<group>"; };
 		5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOCastManagerFetcher.m; sourceTree = "<group>"; };
+		97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FF21F07619CB5ABC00FE9D07 /* ChromecastSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromecastSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FF21F0D419CB7A2100FE9D07 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E5874E1D4ADFDD00202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E2A1D2F30B80040B0B2 /* AVKit.framework in Frameworks */,
 				5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */,
 				5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */,
@@ -225,6 +228,7 @@
 		FF49D21519CBAC4D001B156F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */,
 				0BCC6E291D2F30B80040B0B2 /* AVKit.framework */,
 				5E3B143C1C5807430078E075 /* libz.tbd */,
 				5E3B143A1C5807230078E075 /* libxml2.tbd */,

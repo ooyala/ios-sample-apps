@@ -37,6 +37,7 @@
 		9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */; };
 		9772BFFC1A48FE8A00B255C0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */; };
 		9772BFFE1A48FE9700B255C0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFFD1A48FE9700B255C0 /* libc++.dylib */; };
+		97E5875D1D4AE10A00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5875C1D4AE10A00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +87,7 @@
 		9772BFF91A48FE4E00B255C0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		9772BFFD1A48FE9700B255C0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		97E5875C1D4AE10A00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E5875D1D4AE10A00202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E381D2F58080040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458A91AC32CDB000DD545 /* OoyalaSDK.framework in Frameworks */,
 				9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */,
@@ -148,6 +151,7 @@
 		0BF4FA021A685F2F0050A602 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E5875C1D4AE10A00202E09 /* JavaScriptCore.framework */,
 				0BCC6E371D2F58080040B0B2 /* AVKit.framework */,
 				9772BFFD1A48FE9700B255C0 /* libc++.dylib */,
 				9772BFFB1A48FE8A00B255C0 /* libxml2.dylib */,

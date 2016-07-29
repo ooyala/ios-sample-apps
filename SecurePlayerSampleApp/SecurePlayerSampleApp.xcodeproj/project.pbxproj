@@ -67,6 +67,7 @@
 		5E7EEEA01CA9F9070049E43F /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7EEE9D1CA9F9070049E43F /* SecurePlayer.framework */; };
 		9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */; };
 		9782DB021BFC1E9E0094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */; };
+		97E5875F1D4AE14800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -143,6 +144,7 @@
 		5E7EEE9D1CA9F9070049E43F /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurePlayer.framework; path = ../vendor/SecurePlayer/SecurePlayer.framework; sourceTree = "<group>"; };
 		9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
+		97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E5875F1D4AE14800202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BDBDBE71D35C181003933D0 /* AVKit.framework in Frameworks */,
 				5E7EEE9E1CA9F9070049E43F /* OoyalaSDK.framework in Frameworks */,
 				5E7EEE9F1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework in Frameworks */,
@@ -231,6 +234,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */,
 				0BDBDBE61D35C181003933D0 /* AVKit.framework */,
 				5E7EEE9B1CA9F9060049E43F /* OoyalaSDK.framework */,
 				5E7EEE9C1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework */,
