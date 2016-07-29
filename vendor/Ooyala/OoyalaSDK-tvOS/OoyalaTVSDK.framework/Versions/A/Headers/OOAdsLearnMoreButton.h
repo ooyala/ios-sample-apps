@@ -11,9 +11,9 @@
 /**
   A button that enables the customer to click on an advertisement, and learn more about the ad
  */
-#ifdef OoyalatvOS
+#if TARGET_OS_TV
 @interface OOAdsLearnMoreButton : UIView
-#else
+#elif TARGET_OS_IOS
 @interface OOAdsLearnMoreButton : UIView <UIWebViewDelegate>
 #endif
 
