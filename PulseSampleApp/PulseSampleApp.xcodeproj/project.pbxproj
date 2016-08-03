@@ -29,7 +29,6 @@
 		C4499AFA1CA18B6B00B6EE20 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AF91CA18B6B00B6EE20 /* OoyalaSkinSDK.framework */; };
 		C4499AFC1CA18B7800B6EE20 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AFB1CA18B7800B6EE20 /* OoyalaSDK.framework */; };
 		C4499B131CA18B8C00B6EE20 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499AFF1CA18B8C00B6EE20 /* alice.ttf */; };
-		C4499B141CA18B8C00B6EE20 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B001CA18B8C00B6EE20 /* fontawesome-webfont.ttf */; };
 		C4499B151CA18B8C00B6EE20 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */; };
 		C4499B161CA18B8C00B6EE20 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */; };
 		C4499B171CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */; };
@@ -99,7 +98,6 @@
 		C4499AF91CA18B6B00B6EE20 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "VendorLibraries/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
 		C4499AFB1CA18B7800B6EE20 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "VendorLibraries/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 		C4499AFF1CA18B8C00B6EE20 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
-		C4499B001CA18B8C00B6EE20 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 			children = (
 				C4082C1A1D2145CA00CC3BC4 /* ooyala-slick-type.ttf */,
 				C4499AFF1CA18B8C00B6EE20 /* alice.ttf */,
-				C4499B001CA18B8C00B6EE20 /* fontawesome-webfont.ttf */,
 				C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */,
 				C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */,
 				C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */,
@@ -414,7 +411,6 @@
 				C4499B241CA18B8C00B6EE20 /* zh.json in Resources */,
 				0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */,
 				C4082C1B1D21461200CC3BC4 /* ooyala-slick-type.ttf in Resources */,
-				C4499B141CA18B8C00B6EE20 /* fontawesome-webfont.ttf in Resources */,
 				C4BB04431C75FCD100871138 /* TableCell.xib in Resources */,
 				C4499B191CA18B8C00B6EE20 /* main.jsbundle in Resources */,
 				C4499B181CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf in Resources */,
