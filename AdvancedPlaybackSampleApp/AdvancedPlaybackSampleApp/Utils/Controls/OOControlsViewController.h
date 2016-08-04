@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomControlsView.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @class OOOoyalaPlayer;
 

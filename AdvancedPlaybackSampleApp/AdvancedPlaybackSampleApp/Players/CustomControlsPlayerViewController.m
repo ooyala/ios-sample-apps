@@ -10,9 +10,7 @@
 #import "CustomControlsPlayerViewController.h"
 #import "CustomControlsViewController.h"
 
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 /**
  * This player has code which utilizes our DefaultControlsSource for custom controls.

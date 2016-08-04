@@ -11,8 +11,7 @@
 #import "Utils.h"
 #import "CustomizedMiniControllerView.h"
 #import "ChromecastPlayerSelectionOption.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
 #import <OoyalaCastSDK/OOCastPlayer.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>

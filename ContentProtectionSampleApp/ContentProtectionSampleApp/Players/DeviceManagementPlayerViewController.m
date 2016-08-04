@@ -9,11 +9,7 @@
 
 #import "DeviceManagementPlayerViewController.h"
 #import "AdobePassViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOooyalaError.h>
-#import <OoyalaSDK/OOOptions.h>
-#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface DeviceManagementPlayerViewController () <OOEmbedTokenGenerator>
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;

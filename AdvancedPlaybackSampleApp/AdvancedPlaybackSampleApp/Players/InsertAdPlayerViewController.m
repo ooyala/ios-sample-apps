@@ -9,13 +9,7 @@
 
 #import "InsertAdPlayerViewController.h"
 
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOManagedAdSpot.h>
-#import <OoyalaSDK/OOManagedAdsPlugin.h>
-#import <OoyalaSDK/OOVASTAdSpot.h>
-#import <OoyalaSDK/OOOoyalaAdSpot.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface InsertAdPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;

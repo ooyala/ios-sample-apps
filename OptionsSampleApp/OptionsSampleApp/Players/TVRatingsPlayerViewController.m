@@ -7,10 +7,7 @@
 //
 
 #import "TVRatingsPlayerViewController.h"
-#import <OoyalaSDK/OOOptions.h>
-#import <OoyalaSDK/OOFCCTVRatingConfiguration.h>
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface TVRatingsPlayerViewController () <UITextFieldDelegate>
 

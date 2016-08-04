@@ -8,8 +8,7 @@
 
 #import "AdobePassPlayerViewController.h"
 #import "AdobePassViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface AdobePassPlayerViewController () <AdobePassViewControllerDelegate>
 @property NSString *embedCode;

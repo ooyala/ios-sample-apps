@@ -10,8 +10,7 @@
 #import "PlayerSelectionOption.h"
 #import "ChannelContentTreeDetailViewController.h"
 #import "ChannelContentTreeTableViewCell.h"
-#import <OoyalaSDK/OODiscoveryManager.h>
-#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface DiscoveryListViewController ()
 

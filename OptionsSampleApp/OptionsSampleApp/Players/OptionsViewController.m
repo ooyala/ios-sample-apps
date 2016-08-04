@@ -7,9 +7,7 @@
 //
 
 #import "OptionsViewController.h"
-#import <OoyalaSDK/OOOptions.h>
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface OptionsViewController () <UITextFieldDelegate>
 

@@ -13,10 +13,7 @@
 
 #import <OoyalaPulseIntegration/OOPulseManager.h>
 
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OODiscoveryOptions.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSkinSDK/OOSkinOptions.h>
 #import <OoyalaSkinSDK/OOSkinViewController.h>
 

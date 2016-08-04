@@ -8,9 +8,7 @@
 
 
 #import "BasicSimplePlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
 
 @interface BasicSimplePlayerViewController ()

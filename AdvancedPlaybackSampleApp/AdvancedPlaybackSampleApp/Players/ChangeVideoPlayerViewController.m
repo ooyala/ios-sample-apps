@@ -9,9 +9,7 @@
 
 #import "ChangeVideoPlayerViewController.h"
 
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface ChangeVideoPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;

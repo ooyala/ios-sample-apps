@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OoyalaSDK/OOAdSpot.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface OOSampleAdSpot : OOAdSpot
 
