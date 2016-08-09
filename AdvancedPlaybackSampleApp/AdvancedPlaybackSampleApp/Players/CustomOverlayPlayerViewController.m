@@ -17,9 +17,7 @@
 #import "CustomControlsViewController.h"
 #import "CustomOverlayView.h"
 
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface CustomOverlayPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;

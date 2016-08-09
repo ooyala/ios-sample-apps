@@ -10,9 +10,7 @@
 #import "PluginPlayerViewController.h"
 #import "OOSamplePlugin.h"
 
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface PluginPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;

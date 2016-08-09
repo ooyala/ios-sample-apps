@@ -6,11 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <OoyalaSDK/OOUIProgressSliderIOS7.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import <OoyalaSDK/OOPlayPauseButton.h>
-#import <OoyalaSDK/OOClosedCaptionsButton.h>
-#import <OoyalaSDK/OOFullscreenButton.h>
 
 
 @interface CustomControlsView : UIView

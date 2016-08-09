@@ -6,9 +6,7 @@
  */
 
 #import "ChannelContentTreeDetailViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface ChannelContentTreeDetailViewController () {
   NSString *embedCode;

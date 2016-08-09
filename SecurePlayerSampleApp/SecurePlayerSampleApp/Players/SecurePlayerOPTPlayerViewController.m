@@ -6,11 +6,7 @@
  */
 
 #import "SecurePlayerOPTPlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOStreamPlayer.h>
-#import <OoyalaSDK/OOooyalaError.h>
-#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSecurePlayerSDK/OOOoyalaSecurePlayerSDK.h>
 
 /**

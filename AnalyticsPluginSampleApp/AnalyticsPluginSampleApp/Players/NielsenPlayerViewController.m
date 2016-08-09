@@ -5,9 +5,7 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 #import "NielsenPlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOOoyalaError.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaNielsenSDK/OONielsenPlugin.h>
 #import <NielsenAppApi/NielsenAppApi.h>
 

@@ -8,9 +8,7 @@
 
 #import "NPAWDefaultPlayerViewController.h"
 #import <YouboraMedia/Youbora.h>
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface NPAWDefaultPlayerViewController ()
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;

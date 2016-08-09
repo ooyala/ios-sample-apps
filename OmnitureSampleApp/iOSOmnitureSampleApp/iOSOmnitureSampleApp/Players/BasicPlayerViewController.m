@@ -7,9 +7,7 @@
 
 #import "BasicPlayerViewController.h"
 #import "PlayerSelectionOption.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaAdobeAnalyticsSDK/OoyalaAdobeAnalyticsSDK.h>
 
 @interface BasicPlayerViewController ()

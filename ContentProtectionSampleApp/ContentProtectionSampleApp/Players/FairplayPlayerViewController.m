@@ -1,10 +1,5 @@
 #import "FairplayPlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOooyalaError.h>
-#import <OoyalaSDK/OOOptions.h>
-#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
-#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 /**
  * This activity illustrates how you configure your application to run Fairplay assets

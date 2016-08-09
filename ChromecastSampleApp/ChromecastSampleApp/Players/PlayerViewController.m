@@ -7,12 +7,7 @@
 //
 
 #import "PlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOVideo.h>
-#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaCastSDK/OOCastPlayer.h>
 #import "Utils.h"
 #import "OOCastManagerFetcher.h"
