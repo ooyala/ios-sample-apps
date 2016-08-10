@@ -58,7 +58,7 @@
                                                              viewController:[SecurePlayerPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Playready HLS VOD with Closed Captions"
                                                                   embedCode:@"xrcGYydDq1wU7nSmX7AQB3Uq4Fu3BjuE"
-                                                                      pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
+                                                                      pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Playready Smooth VOD"

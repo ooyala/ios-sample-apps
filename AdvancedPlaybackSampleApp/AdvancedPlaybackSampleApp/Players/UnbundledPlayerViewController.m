@@ -8,12 +8,7 @@
 
 
 #import "UnbundledPlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOStream.h>
-#import <OoyalaSDK/OOUnbundledVideo.h>
-#import <OoyalaSDK/OODeliveryTypeConstants.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface UnbundledPlayerViewController ()
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;

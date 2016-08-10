@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <OoyalaSDK/OOEmbedTokenGenerator.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 extern int const PASS_SUCCESS;
 extern int const PASS_FAILURE;

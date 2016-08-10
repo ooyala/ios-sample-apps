@@ -9,9 +9,6 @@
 #ifndef SwiftSampleApp_SwiftSampleApp_Bridging_Header_h
 #define SwiftSampleApp_SwiftSampleApp_Bridging_Header_h
 
-#import <OoyalaSDK/OOOoyalaError.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOooyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 #endif

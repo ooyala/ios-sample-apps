@@ -7,10 +7,7 @@
 
 
 #import "SecurePlayerPlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOStreamPlayer.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSecurePlayerSDK/OOOoyalaSecurePlayerSDK.h>
 
 #import "PlayerSelectionOption.h" 

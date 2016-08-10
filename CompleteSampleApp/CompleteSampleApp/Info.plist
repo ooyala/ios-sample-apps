@@ -61,6 +61,8 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+  </array>
+  <key>NSCameraUsageDescription</key>
+  <string>The camera is used to capture QR codes which contain the PCode and Embed Code for playback</string>
 </dict>
 </plist>

@@ -10,10 +10,7 @@
 #import <OoyalaIMASDK/OOIMAManager.h>
 #import <OoyalaSkinSDK/OOSkinViewController.h>
 #import <OoyalaSkinSDK/OOSkinOptions.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOOptions.h>
-#import <OoyalaSDK/OODiscoveryOptions.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface IMAPlayerViewController ()
 @property (nonatomic, retain) OOIMAManager *adsManager;
