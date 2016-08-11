@@ -143,7 +143,7 @@
 				0BC139211D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf */,
 			);
 			name = Fonts;
-			path = "../../../vendor/Ooyala/OoyalaSkinSDK-tvOS/Fonts";
+			path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts";
 			sourceTree = "<group>";
 		};
 		CA49FD3C1C8E4D8A0017E19F = {
