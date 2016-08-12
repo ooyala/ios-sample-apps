@@ -32,12 +32,6 @@
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Adobe Pass"
-                                                            embedCode:@"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G"
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                               domain:@"http://www.ooyala.com"
-                                                       viewController: [AdobePassPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unconfigured)"
                                                             embedCode:@""
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
