@@ -116,7 +116,7 @@
   self.adPlayer = [[OOSampleAdPlayer alloc] initWithFrame:rect notifier:self.notifier];
   [self.adPlayer setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
   [self.ooplayer.view addSubview:self.adPlayer];
-
+  [self.notifier notifyAdStarted];
   [self.adPlayer loadAd:ad];
   [self.adPlayer play];
 }
@@ -128,6 +128,7 @@
 
   switch ((OOOoyalaPlayerState)[[change objectForKey:NSKeyValueChangeNewKey] intValue]) {
     case OOOoyalaPlayerStateCompleted:
+      [self.notifier notifyAdCompleted];
       [self.adPlayer removeFromSuperview];
       [self.adPlayer destroy];
       self.adPlayer = nil;
