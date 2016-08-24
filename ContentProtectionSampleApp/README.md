@@ -7,6 +7,7 @@ The app is meant to demonstrate how to implement some key integrations around Co
 ## OoyalaPlayerTokenPlayerViewController
 
 You will need: 
+
 1. An embed code/content ID from your provider (set in the ListViewControler)
 1. Your Provider code (PCode) (set in the ListViewControler)
 1. Your user's API Key and Secret (set in the OoyalaPlayerTokenViewController
