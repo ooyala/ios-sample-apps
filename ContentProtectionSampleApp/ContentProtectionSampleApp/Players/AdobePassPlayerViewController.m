@@ -86,7 +86,7 @@
 
 - (void)onRightBtnClick:(id)sender {
   //[ooController.player setEmbedCode:@"5icXRvNDrl9kxzF_58oV79ApUNRffoLR"];
-  [self.ooyalaPlayerViewController.player setEmbedCode:@"h0NGNxczpVZm5WeI-iwEHGgGcCoipQJy"];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   [self.ooyalaPlayerViewController.player play];
 }
 
