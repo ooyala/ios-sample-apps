@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA27FC421D76301100418357 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA27FC411D76301100418357 /* PlayerViewController.m */; };
+		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
+		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
+		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
 		CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F1581D6CFA1C0039D633 /* AssetListViewController.m */; };
 		CA38F15D1D6D086D0039D633 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */; };
 		CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */; };
@@ -18,7 +22,6 @@
 		CA7ED90B1D5964E700EA0A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */; };
 		CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA919FED1D74D4D8002B0870 /* AssetPersistenceManager.m */; };
 		CAC620441D63C5D6004902F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620291D63C5D0004902F3 /* OoyalaSDK.framework */; };
-		CAC620471D63C78B004902F3 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC620461D63C78B004902F3 /* DownloadViewController.m */; };
 		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +127,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA27FC401D76301100418357 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		CA27FC411D76301100418357 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		CA38F1571D6CFA1C0039D633 /* AssetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetListViewController.h; path = Lists/AssetListViewController.h; sourceTree = "<group>"; };
 		CA38F1581D6CFA1C0039D633 /* AssetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetListViewController.m; path = Lists/AssetListViewController.m; sourceTree = "<group>"; };
 		CA38F15B1D6D086D0039D633 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerSelectionOption.h; path = Utils/PlayerSelectionOption.h; sourceTree = "<group>"; };
@@ -143,8 +151,6 @@
 		CA919FEC1D74D4D8002B0870 /* AssetPersistenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetPersistenceManager.h; path = Managers/AssetPersistenceManager.h; sourceTree = "<group>"; };
 		CA919FED1D74D4D8002B0870 /* AssetPersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetPersistenceManager.m; path = Managers/AssetPersistenceManager.m; sourceTree = "<group>"; };
 		CAC6200E1D63C5D0004902F3 /* OoyalaSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OoyalaSDK.xcodeproj; path = "../../../ios-sdk/sdk/OoyalaSDK.xcodeproj"; sourceTree = "<group>"; };
-		CAC620451D63C78B004902F3 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
-		CAC620461D63C78B004902F3 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -153,8 +159,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */,
 				CAC620441D63C5D6004902F3 /* OoyalaSDK.framework in Frameworks */,
+				CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */,
+				CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */,
+				CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */,
+				CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,10 +216,10 @@
 				CA38F15A1D6D08600039D633 /* Utils */,
 				CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */,
 				CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */,
-				CAC620451D63C78B004902F3 /* DownloadViewController.h */,
-				CAC620461D63C78B004902F3 /* DownloadViewController.m */,
 				CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */,
 				CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */,
+				CA27FC401D76301100418357 /* PlayerViewController.h */,
+				CA27FC411D76301100418357 /* PlayerViewController.m */,
 				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
 				CA7ED9071D5964E700EA0A57 /* Assets.xcassets */,
 				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
@@ -261,6 +270,9 @@
 		CAC620481D63C9AB004902F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA34EEB31D7640B500E168F6 /* AVKit.framework */,
+				CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */,
+				CA34EE981D76409700E168F6 /* MediaPlayer.framework */,
 				CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
@@ -447,11 +459,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */,
-				CAC620471D63C78B004902F3 /* DownloadViewController.m in Sources */,
 				CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */,
 				CA38F15D1D6D086D0039D633 /* PlayerSelectionOption.m in Sources */,
 				CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */,
 				CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */,
+				CA27FC421D76301100418357 /* PlayerViewController.m in Sources */,
 				CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */,
 				CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */,
 			);

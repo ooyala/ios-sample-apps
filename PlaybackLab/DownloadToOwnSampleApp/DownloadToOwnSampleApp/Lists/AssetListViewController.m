@@ -12,7 +12,11 @@
 #import "PlayerSelectionOption.h"
 #import "AssetPersistenceManager.h"
 
+#import "PlayerViewController.h"
+
 #import <OoyalaSDK/OoyalaSDK.h>
+
+#define PLAYER_SEGUE @"videoSegue"
 
 @interface AssetListViewController () <OptionTableViewCellDelegate>
 
@@ -106,14 +110,15 @@
   [self presentViewController:alertController animated:YES completion:nil];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+  if ([sender isKindOfClass:[OptionTableViewCell class]] && [segue.identifier isEqualToString:PLAYER_SEGUE]) {
+    PlayerViewController *playerViewController = segue.destinationViewController;
+    OptionTableViewCell *cell = sender;
+    playerViewController.option = cell.option;
+  }
 }
-*/
 
 @end

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11156"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,6 +51,7 @@
                                     <outlet property="downloadProgressView" destination="p1G-VK-JFe" id="wda-pH-nTQ"/>
                                     <outlet property="subtitleLabel" destination="7eN-OZ-GpE" id="S2L-sg-Nsv"/>
                                     <outlet property="titleLabel" destination="9oY-ft-mBZ" id="UyV-MU-vLD"/>
+                                    <segue destination="AQo-so-8ew" kind="show" identifier="videoSegue" id="fgP-31-pYP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -64,59 +66,39 @@
             </objects>
             <point key="canvasLocation" x="468" y="133.5832083958021"/>
         </scene>
-        <!--Download View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Player View Controller-->
+        <scene sceneID="n52-pw-7dq">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DownloadViewController" sceneMemberID="viewController">
+                <viewController id="AQo-so-8ew" customClass="PlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="vui-WH-lpt"/>
+                        <viewControllerLayoutGuide type="bottom" id="eW3-1u-4Ph"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Mo9-QQ-jG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAj-6P-aPl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unk-bD-6Mm">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="mek-fX-q8N"/>
+                                    <constraint firstAttribute="width" secondItem="Unk-bD-6Mm" secondAttribute="height" multiplier="16:9" id="txS-9c-K0Y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEY-0h-UKi">
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="start" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBC-HW-0ac"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uly-R6-uV0">
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancel" destination="BYZ-38-t0r" eventType="touchUpInside" id="A9r-Dc-Uu6"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TEY-0h-UKi" firstAttribute="top" secondItem="EAj-6P-aPl" secondAttribute="bottom" constant="14" id="A6u-xA-ztQ"/>
-                            <constraint firstItem="Uly-R6-uV0" firstAttribute="top" secondItem="TEY-0h-UKi" secondAttribute="bottom" constant="8" id="D9I-ZT-52a"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EAj-6P-aPl" secondAttribute="trailing" id="SZd-oI-gJV"/>
-                            <constraint firstItem="Uly-R6-uV0" firstAttribute="centerX" secondItem="TEY-0h-UKi" secondAttribute="centerX" id="bCH-ce-nld"/>
-                            <constraint firstItem="TEY-0h-UKi" firstAttribute="centerX" secondItem="EAj-6P-aPl" secondAttribute="centerX" id="hHa-SW-vcT"/>
-                            <constraint firstItem="EAj-6P-aPl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uta-Es-I26"/>
-                            <constraint firstItem="EAj-6P-aPl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x3x-YK-ub7"/>
+                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="top" secondItem="vui-WH-lpt" secondAttribute="bottom" id="6vZ-Rt-TuG"/>
+                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="trailing" secondItem="Mo9-QQ-jG8" secondAttribute="trailingMargin" id="Jmb-o2-1Lg"/>
+                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="leading" secondItem="Mo9-QQ-jG8" secondAttribute="leadingMargin" id="hVB-VP-5Tg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="Uly-R6-uV0" id="Ggw-je-Qug"/>
-                        <outlet property="progressLabel" destination="EAj-6P-aPl" id="wPe-1y-xYG"/>
-                        <outlet property="startButton" destination="TEY-0h-UKi" id="R0S-K7-EC2"/>
+                        <outlet property="playerView" destination="Unk-bD-6Mm" id="emv-Hg-LR5"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQV-mw-rt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1229.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sl9-3g-Sac">
