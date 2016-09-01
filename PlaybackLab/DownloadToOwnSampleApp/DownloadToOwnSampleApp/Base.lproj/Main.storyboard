@@ -79,21 +79,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unk-bD-6Mm">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Unk-bD-6Mm" secondAttribute="height" multiplier="16:9" id="txS-9c-K0Y"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgJ-KD-ajj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji6-SE-AGI">
+                                <state key="normal" title="Set Downloaded"/>
+                                <connections>
+                                    <action selector="playOffline" destination="AQo-so-8ew" eventType="touchUpInside" id="523-oc-hwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Iq-ASZ">
+                                <state key="normal" title="Set Remote URL"/>
+                                <connections>
+                                    <action selector="playOnline" destination="AQo-so-8ew" eventType="touchUpInside" id="eTC-6z-5CC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Unk-bD-6Mm" firstAttribute="top" secondItem="vui-WH-lpt" secondAttribute="bottom" id="6vZ-Rt-TuG"/>
+                            <constraint firstItem="CTr-Iq-ASZ" firstAttribute="top" secondItem="wgJ-KD-ajj" secondAttribute="bottom" constant="11" id="8np-kJ-cco"/>
                             <constraint firstItem="Unk-bD-6Mm" firstAttribute="trailing" secondItem="Mo9-QQ-jG8" secondAttribute="trailingMargin" id="Jmb-o2-1Lg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ji6-SE-AGI" secondAttribute="trailing" id="XtZ-B8-IaO"/>
+                            <constraint firstItem="ji6-SE-AGI" firstAttribute="top" secondItem="wgJ-KD-ajj" secondAttribute="bottom" constant="11" id="dZ2-9Q-OAG"/>
                             <constraint firstItem="Unk-bD-6Mm" firstAttribute="leading" secondItem="Mo9-QQ-jG8" secondAttribute="leadingMargin" id="hVB-VP-5Tg"/>
+                            <constraint firstItem="wgJ-KD-ajj" firstAttribute="top" secondItem="Unk-bD-6Mm" secondAttribute="bottom" constant="8" id="j8f-A3-8nz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="CTr-Iq-ASZ" secondAttribute="leading" id="qGc-2s-DUb"/>
+                            <constraint firstItem="wgJ-KD-ajj" firstAttribute="centerX" secondItem="Mo9-QQ-jG8" secondAttribute="centerX" id="zEJ-fA-WRW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playOfflineButton" destination="ji6-SE-AGI" id="mMH-ks-Ech"/>
                         <outlet property="playerView" destination="Unk-bD-6Mm" id="emv-Hg-LR5"/>
+                        <outlet property="stateLabel" destination="wgJ-KD-ajj" id="3Ry-1M-VWW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQV-mw-rt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
