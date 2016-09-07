@@ -124,9 +124,16 @@
   // bitrate of ads to request.
   //requestSettings.maxBitRate = [BandwidthChecker maxBitRate];
   
-  // Set the correct pulse host set and options
+  // Set the correct Pulse host set and options
   //   refer to: http://support.ooyala.com/developers/ad-documentation/oadtech/ad_serving/dg/integration_sdk_parameter.html
-  [OOPulse setPulseHost:@"https://pulse-demo.videoplaza.tv"
+  // If the ad set connected to the video does not have a Pulse host specified,
+  //   and you do not wish to set it manually, return nil here.
+  
+  if(!pulseHost) {
+    return nil;
+  }
+  
+  [OOPulse setPulseHost:pulseHost
         deviceContainer:nil
            persistentId:nil];
   
