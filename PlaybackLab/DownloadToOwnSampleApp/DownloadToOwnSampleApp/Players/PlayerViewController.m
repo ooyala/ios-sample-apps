@@ -39,13 +39,14 @@
   
   AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
   [self updateUIUsingState:@(state)];
-  
-  
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAssetStateChanged:) name:AssetPersistenceStateChangedNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(handleAssetStateChanged:)
+                                               name:AssetPersistenceStateChangedNotification
+                                             object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

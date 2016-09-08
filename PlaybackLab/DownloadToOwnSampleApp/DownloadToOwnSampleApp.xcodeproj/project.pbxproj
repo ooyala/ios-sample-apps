@@ -15,6 +15,7 @@
 		CA38F15D1D6D086D0039D633 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */; };
 		CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */; };
 		CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */; };
+		CA561E6E1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */; };
 		CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FC1D5964E700EA0A57 /* main.m */; };
 		CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */; };
 		CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9041D5964E700EA0A57 /* Main.storyboard */; };
@@ -127,8 +128,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CA27FC401D76301100418357 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
-		CA27FC411D76301100418357 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		CA27FC401D76301100418357 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = Players/PlayerViewController.h; sourceTree = "<group>"; };
+		CA27FC411D76301100418357 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerViewController.m; path = Players/PlayerViewController.m; sourceTree = "<group>"; };
 		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -140,6 +141,8 @@
 		CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsDataSource.m; path = Utils/OptionsDataSource.m; sourceTree = "<group>"; };
 		CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
 		CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
+		CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEmbedTokenGenerator.h; path = Utils/BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
+		CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEmbedTokenGenerator.m; path = Utils/BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
 		CA7ED8F81D5964E700EA0A57 /* DownloadToOwnSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadToOwnSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7ED8FC1D5964E700EA0A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,8 +189,19 @@
 				CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */,
 				CA38F15E1D6D0AF40039D633 /* OptionsDataSource.h */,
 				CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */,
+				CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */,
+				CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		CA561E541D78E04B00535DB3 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				CA27FC401D76301100418357 /* PlayerViewController.h */,
+				CA27FC411D76301100418357 /* PlayerViewController.m */,
+			);
+			name = Players;
 			sourceTree = "<group>";
 		};
 		CA7ED8EF1D5964E700EA0A57 = {
@@ -213,13 +227,12 @@
 			children = (
 				CA919FD41D74D4BE002B0870 /* Managers */,
 				CA38F13F1D6CF9E70039D633 /* Lists */,
+				CA561E541D78E04B00535DB3 /* Players */,
 				CA38F15A1D6D08600039D633 /* Utils */,
 				CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */,
 				CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */,
 				CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */,
 				CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */,
-				CA27FC401D76301100418357 /* PlayerViewController.h */,
-				CA27FC411D76301100418357 /* PlayerViewController.m */,
 				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
 				CA7ED9071D5964E700EA0A57 /* Assets.xcassets */,
 				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
@@ -460,6 +473,7 @@
 			files = (
 				CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */,
 				CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */,
+				CA561E6E1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m in Sources */,
 				CA38F15D1D6D086D0039D633 /* PlayerSelectionOption.m in Sources */,
 				CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */,
 				CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */,

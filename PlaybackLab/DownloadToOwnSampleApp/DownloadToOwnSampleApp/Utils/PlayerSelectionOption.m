@@ -11,13 +11,6 @@
 
 @implementation PlayerSelectionOption
 
-- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain viewController:(Class) viewController {
-  if (self = [self initWithTitle:title embedCode:embedCode pcode:pcode domain:domain]) {
-    self.viewController = viewController;
-  }
-  return self;
-}
-
 - (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain {
   if (self = [super init]) {
     self.title = title;
@@ -28,4 +21,17 @@
   return self;
 }
 
+- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain viewController:(Class) viewController {
+  if (self = [self initWithTitle:title embedCode:embedCode pcode:pcode domain:domain]) {
+    self.viewController = viewController;
+  }
+  return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain viewController:(Class)viewController embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator {
+  if (self = [self initWithTitle:title embedCode:embedCode pcode:pcode domain:domain viewController:viewController]) {
+    _embedTokenGenerator = embedTokenGenerator;
+  }
+  return self;
+}
 @end

@@ -8,6 +8,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface PlayerSelectionOption : NSObject
 
@@ -16,10 +17,12 @@
 @property (nonatomic) NSString *domain;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *nib;
+@property (nonatomic) id<OOEmbedTokenGenerator> embedTokenGenerator;
 @property (nonatomic) Class viewController;
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain viewController:(Class)viewController;
 - (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain viewController:(Class)viewController;
+- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain viewController:(Class)viewController embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
 
 @end
