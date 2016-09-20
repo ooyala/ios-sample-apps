@@ -26,4 +26,5 @@ This only works when you are using a device that supports PIP (Most new iPads)
 * The sample does not handle multiple pcodes, so most assets will not playback
 * Memory profiling has not been performed, so leaks may exist.  If you see a leak, feel free to file an issue
 * If you have any feedback on the API or development issues, contact your CSM or Support with information
-
+* Pressing the "return from PIP" button in the PIP frame needs to go back to the PlayerViewController, which does not exist right now
+* Going into PIP, then into the ListView, then selecting the same video, the video should resume in normal view (or PIP), however right now the video will restart in normal view
