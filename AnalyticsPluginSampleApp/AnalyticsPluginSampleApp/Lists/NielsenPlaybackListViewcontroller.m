@@ -22,12 +22,12 @@
   return self;
 }
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Demo" embedCode:@"84aDVmcTqN3FrdLXClZgJq-GfFEDhS1a" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Live" embedCode:@"p4ZXNwdDrfdg2vz04LdpbRg94XXb7d_c" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Demo" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-WithAds" embedCode:@"x3YjJzczqREV-5RDiemsrdqki1FYu2NT" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-14min" embedCode:@"JyanIxdDoj9MhKbVEmTJEG8O4QF5xExb" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Live" embedCode:@"RuZXNwdDpcWdrXskPkw73Mosq6sw6Fux" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Demo" embedCode:@"84aDVmcTqN3FrdLXClZgJq-GfFEDhS1a" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Live" embedCode:@"p4ZXNwdDrfdg2vz04LdpbRg94XXb7d_c" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Demo" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-WithAds" embedCode:@"x3YjJzczqREV-5RDiemsrdqki1FYu2NT" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-14min" embedCode:@"JyanIxdDoj9MhKbVEmTJEG8O4QF5xExb" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Live" embedCode:@"RuZXNwdDpcWdrXskPkw73Mosq6sw6Fux" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
 
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA32F9F1D931D7A007A0017 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA32F9E1D931D7A007A0017 /* JavaScriptCore.framework */; };
+		0BA32FA31D931D93007A0017 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA32FA21D931D93007A0017 /* AVKit.framework */; };
 		970B980D1A1AD5D90091AD38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 970B980C1A1AD5D90091AD38 /* main.m */; };
 		970B98101A1AD5D90091AD38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 970B980F1A1AD5D90091AD38 /* AppDelegate.m */; };
 		970B98161A1AD5D90091AD38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970B98141A1AD5D90091AD38 /* Main.storyboard */; };
@@ -31,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BA32F9E1D931D7A007A0017 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		0BA32FA01D931D89007A0017 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		0BA32FA21D931D93007A0017 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		970B98071A1AD5D90091AD38 /* AnalyticsPluginSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalyticsPluginSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		970B980B1A1AD5D90091AD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		970B980C1A1AD5D90091AD38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA32FA31D931D93007A0017 /* AVKit.framework in Frameworks */,
+				0BA32F9F1D931D7A007A0017 /* JavaScriptCore.framework in Frameworks */,
 				970B987F1A1AD8DC0091AD38 /* MediaPlayer.framework in Frameworks */,
 				970B987D1A1AD8B00091AD38 /* SystemConfiguration.framework in Frameworks */,
 				970B987B1A1AD8A40091AD38 /* CoreLocation.framework in Frameworks */,
@@ -85,6 +92,9 @@
 		970B97FE1A1AD5D90091AD38 = {
 			isa = PBXGroup;
 			children = (
+				0BA32FA21D931D93007A0017 /* AVKit.framework */,
+				0BA32FA01D931D89007A0017 /* MediaAccessibility.framework */,
+				0BA32F9E1D931D7A007A0017 /* JavaScriptCore.framework */,
 				9784D0191AD5D316002F2ECD /* VendorLibraries */,
 				970B98781A1AD89C0091AD38 /* AdSupport.framework */,
 				970B987A1A1AD8A40091AD38 /* CoreLocation.framework */,
@@ -107,8 +117,8 @@
 		970B98091A1AD5D90091AD38 /* AnalyticsPluginSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				9784D02B1AD5D9CB002F2ECD /* Players */,
 				9784D0201AD5D7CE002F2ECD /* Lists */,
+				9784D02B1AD5D9CB002F2ECD /* Players */,
 				9784D0231AD5D7CE002F2ECD /* Utils */,
 				9784D0261AD5D7CE002F2ECD /* Views */,
 				970B980E1A1AD5D90091AD38 /* AppDelegate.h */,

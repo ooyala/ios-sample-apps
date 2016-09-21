@@ -11,11 +11,12 @@
 
 @implementation PlayerSelectionOption
 
-- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode viewController:(Class) viewController {
+- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode viewController:(Class) viewController {
   self = [super init];
   if (self) {
     self.title = title;
     self.embedCode = embedCode;
+    self.pcode = pcode;
     self.viewController = viewController;
   }
   return self;

@@ -104,7 +104,7 @@ NSString * const SFCODE = @"sfcode";
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
-  self.pcode = @"42Zms6h4wdcI1R1uFzepD-KZ0kkk";
+  self.pcode = self.playerSelectionOption.pcode;
   self.playerDomain = @"http://www.ooyala.com";
 
   if (self.playerSelectionOption) {
