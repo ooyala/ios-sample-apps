@@ -6,13 +6,15 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <AVFoundation/AVAssetResourceLoader.h>
+#import <AVFoundation/AVFoundation.h>
 #import "OOSecureURLGenerator.h"
 
 @interface OOAssetLoaderDelegate : NSObject<AVAssetResourceLoaderDelegate>
 -(instancetype) init __attribute__((unavailable("init not available")));
--(instancetype) initWithPcode:(NSString*)pcode
-                    authToken:(NSString*)authToken
+
+-(instancetype) initWithAsset:(AVURLAsset *)asset
+                        pcode:(NSString *)pcode
+                    authToken:(NSString *)authToken
            secureURLGenerator:(id<OOSecureURLGenerator>)secureURLGenerator
-                      timeout:(NSTimeInterval)timeout;
+                      timeout:(NSTimeInterval)timeout NS_DESIGNATED_INITIALIZER;
 @end

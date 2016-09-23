@@ -111,15 +111,18 @@
 #import <OoyalaSDK/OOAuthorizableItem.h>
 #import <OoyalaSDK/OOClosedCaptionsItem.h>
 #import <OoyalaSDK/OOUnbundledVideo.h>
+#import <OoyalaSDK/OOOfflineVideo.h>
 #import <OoyalaSDK/OOPlayableItem.h>
 #import <OoyalaSDK/OOFCCTVRating.h>
 
+// Offline
+#import <OoyalaSDK/OOAssetDownloadOptions.h>
+#import <OoyalaSDK/OOAssetDownloadManager.h>
 
 // API access classes
 #import <OoyalaSDK/OODiscoveryManager.h>
 #import <OoyalaSDK/OODiscoveryOptions.h>
 #import <OoyalaSDK/OOOoyalaAPIClient.h>
-#import <OoyalaSDK/OOAnalytics.h>
 
 // Utils classes
 #import <OoyalaSDK/OODebugMode.h>
@@ -147,6 +150,5 @@
 #import <OoyalaSDK/OOStateNotifier.h>
 #import <OoyalaSDK/OOAssetLoaderDelegate.h>
 #import <OoyalaSDK/OODeliveryTypeConstants.h>
-
 
 #endif /* OoyalaSDK_h */
