@@ -28,7 +28,8 @@
   [super viewDidLoad];
   
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
-                                                          domain:[OOPlayerDomain domainWithString:self.option.domain]];
+                                                          domain:[OOPlayerDomain domainWithString:self.option.domain]
+                                             embedTokenGenerator:self.option.embedTokenGenerator];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
   [self.ooyalaPlayerViewController willMoveToParentViewController:self];

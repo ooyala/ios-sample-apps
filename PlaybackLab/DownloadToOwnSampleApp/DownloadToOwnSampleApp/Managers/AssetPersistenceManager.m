@@ -93,7 +93,7 @@ NSString * const AssetProgressKey = @"percentage";
   options.pcode = option.pcode;
   options.embedCode = option.embedCode;
   options.domain = [OOPlayerDomain domainWithString:option.domain];
-  options.embedTokenGenerator = options.embedTokenGenerator;
+  options.embedTokenGenerator = option.embedTokenGenerator;
   return [[OOAssetDownloadManager alloc] initWithOptions:options];
 }
 
