@@ -75,21 +75,21 @@ class AssetPlaybackManager: NSObject {
     }
     
     // MARK: KVO
-    override func observeValue(forKeyPath keyPath: String?, of object: AnyObject?, change: [NSKeyValueChangeKey : AnyObject]?, context: UnsafeMutablePointer<Void>?) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         guard context == &observerContext else {
             super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
             return
         }
         
         if keyPath == #keyPath(AVURLAsset.isPlayable) {
-            guard let asset = asset where asset.urlAsset.isPlayable else { return }
+            guard let asset = asset , asset.urlAsset.isPlayable else { return }
             
             playerItem = AVPlayerItem(asset: asset.urlAsset)
             player.replaceCurrentItem(with: playerItem)
         }
         else if keyPath == #keyPath(AVPlayerItem.status) {
           print("playerItem status: \(playerItem?.status.rawValue)")
-            guard let playerItem = playerItem where playerItem.status == .readyToPlay else { return }
+            guard let playerItem = playerItem , playerItem.status == .readyToPlay else { return }
             
             if !readyForPlayback {
                 readyForPlayback = true

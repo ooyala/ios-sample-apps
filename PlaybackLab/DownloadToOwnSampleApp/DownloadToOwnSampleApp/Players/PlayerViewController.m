@@ -27,9 +27,16 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  OOOptions *options = [OOOptions new];
+  // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
+  // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
+  //   which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
+  options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm.-s6jH" secret:@"ZCMQt2CCVqlHWce6dG5w2WA6fkAM_JaWgoI_yzQp"];
+  
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
                                                           domain:[OOPlayerDomain domainWithString:self.option.domain]
-                                             embedTokenGenerator:self.option.embedTokenGenerator];
+                                             embedTokenGenerator:self.option.embedTokenGenerator
+                                                         options:options];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
   [self.ooyalaPlayerViewController willMoveToParentViewController:self];

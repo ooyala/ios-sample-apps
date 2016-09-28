@@ -24,6 +24,7 @@
 		CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA919FED1D74D4D8002B0870 /* AssetPersistenceManager.m */; };
 		CAC620441D63C5D6004902F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620291D63C5D0004902F3 /* OoyalaSDK.framework */; };
 		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
+		CACFA1E61D9B2A8F00CA4A59 /* SampleDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACFA1E51D9B2A8F00CA4A59 /* SampleDownloadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,8 @@
 		CA919FED1D74D4D8002B0870 /* AssetPersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetPersistenceManager.m; path = Managers/AssetPersistenceManager.m; sourceTree = "<group>"; };
 		CAC6200E1D63C5D0004902F3 /* OoyalaSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OoyalaSDK.xcodeproj; path = "../../../ios-sdk/sdk/OoyalaSDK.xcodeproj"; sourceTree = "<group>"; };
 		CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CACFA1E41D9B2A8F00CA4A59 /* SampleDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDownloadViewController.h; sourceTree = "<group>"; };
+		CACFA1E51D9B2A8F00CA4A59 /* SampleDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleDownloadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
 				CA7ED90C1D5964E700EA0A57 /* Info.plist */,
 				CA7ED8FB1D5964E700EA0A57 /* Supporting Files */,
+				CACFA1E41D9B2A8F00CA4A59 /* SampleDownloadViewController.h */,
+				CACFA1E51D9B2A8F00CA4A59 /* SampleDownloadViewController.m */,
 			);
 			path = DownloadToOwnSampleApp;
 			sourceTree = "<group>";
@@ -479,6 +484,7 @@
 				CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */,
 				CA27FC421D76301100418357 /* PlayerViewController.m in Sources */,
 				CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */,
+				CACFA1E61D9B2A8F00CA4A59 /* SampleDownloadViewController.m in Sources */,
 				CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

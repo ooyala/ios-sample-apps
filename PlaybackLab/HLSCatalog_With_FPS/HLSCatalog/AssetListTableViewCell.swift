@@ -57,10 +57,10 @@ class AssetListTableViewCell: UITableViewCell {
     
     func handleAssetDownloadStateChangedNotification(_ notification: Notification) {
         guard let assetStreamName = notification.userInfo![Asset.Keys.name] as? String,
-            downloadStateRawValue = notification.userInfo![Asset.Keys.downloadState] as? String,
-            downloadState = Asset.DownloadState(rawValue: downloadStateRawValue),
-            asset = asset
-            where asset.name == assetStreamName else { return }
+            let downloadStateRawValue = notification.userInfo![Asset.Keys.downloadState] as? String,
+            let downloadState = Asset.DownloadState(rawValue: downloadStateRawValue),
+            let asset = asset
+            , asset.name == assetStreamName else { return }
         
         DispatchQueue.main.async {
             switch downloadState {
@@ -81,7 +81,7 @@ class AssetListTableViewCell: UITableViewCell {
     }
     
     func handleAssetDownloadProgressNotification(_ notification: NSNotification) {
-        guard let assetStreamName = notification.userInfo![Asset.Keys.name] as? String, asset = asset where asset.name == assetStreamName else { return }
+        guard let assetStreamName = notification.userInfo![Asset.Keys.name] as? String, let asset = asset , asset.name == assetStreamName else { return }
         guard let progress = notification.userInfo![Asset.Keys.percentDownloaded] as? Double else { return }
         
         self.downloadProgressView.setProgress(Float(progress), animated: true)

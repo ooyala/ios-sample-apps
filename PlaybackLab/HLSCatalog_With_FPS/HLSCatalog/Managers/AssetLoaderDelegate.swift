@@ -30,16 +30,16 @@ public class AssetLoaderDelegate: NSObject {
     static let didPersistContentKeyNotification = NSNotification.Name(rawValue: "handleAssetLoaderDelegateDidPersistContentKeyNotification")
     
     /// The AVURLAsset associated with the asset.
-    private let asset: AVURLAsset
+    let asset: AVURLAsset
     
     /// The name associated with the asset.
-    private let assetName: String
+    let assetName: String
     
     /// The DispatchQueue to use for AVAssetResourceLoaderDelegate callbacks.
-    private let resourceLoadingRequestQueue = DispatchQueue(label: "com.example.apple-samplecode.resourcerequests")
+    let resourceLoadingRequestQueue = DispatchQueue(label: "com.example.apple-samplecode.resourcerequests")
     
     /// The document URL to use for saving persistent content key.
-    private let documentURL: URL
+    let documentURL: URL
   
     init(asset: AVURLAsset, assetName: String) {
         // Determine the library URL.
@@ -66,7 +66,7 @@ public class AssetLoaderDelegate: NSObject {
       params["expires"] = String(format: "%ld", expires)
       
       let uri = String(format: "/sas/fps/%@/certificate", self.pcode)
-      let signedUrl = self.secureUrlGenerator .secureURL("http://player.ooyala.com", uri: uri, params: params)
+      let signedUrl = self.secureUrlGenerator .secureURL("http://10.11.66.52:4567", uri: uri, params: params)
       guard let jsonBytes = OONetUtils.request(signedUrl, timeout: self.timeout) else {
         return applicationCertificate
       }
@@ -96,7 +96,7 @@ public class AssetLoaderDelegate: NSObject {
       var params = [String: String]()
       params["asset_id"] = assetIDString
       params["spc"] = OOUtils.encodeBase64(with: spcData)
-      let uri = String(format: "%@%@", "http://10.11.66.52:4567", String(format: "/sas/fps/%@/key", self.pcode))
+      let uri = String(format: "%@%@", "http://10.11.66.52:4567", String(format: "/sas/fps/%@/key/offline", self.pcode))
       var response: HTTPURLResponse? = nil
       guard let jsonBytes = OONetUtils.postSynchronous(URL(string: uri),
                                                  timeout: self.timeout,
@@ -105,7 +105,7 @@ public class AssetLoaderDelegate: NSObject {
                                                   return ckcData
       }
       
-      if (nil != response && (response?.statusCode < 200 || response?.statusCode > 299)) {
+      if (nil != response && ((response?.statusCode)! < 200 || (response?.statusCode)! > 299)) {
         return ckcData
       }
       
@@ -158,7 +158,7 @@ private extension AssetLoaderDelegate {
     
     func prepareAndSendContentKeyRequest(resourceLoadingRequest: AVAssetResourceLoadingRequest) {
         
-        guard let url = resourceLoadingRequest.request.url, assetIDString = url.host else {
+        guard let url = resourceLoadingRequest.request.url, let assetIDString = url.host else {
             print("Failed to get url or assetIDString for the request object of the resource.")
             return
         }
@@ -182,7 +182,7 @@ private extension AssetLoaderDelegate {
         if let filePathURLForPersistedContentKey = filePathURLForPersistedContentKey() {
             
             // Verify the file does actually exist on disk.
-            if FileManager.default.fileExists(atPath: filePathURLForPersistedContentKey.path!) {
+            if FileManager.default.fileExists(atPath: filePathURLForPersistedContentKey.path) {
                 
                 do {
                     // Load the contents of the persistedContentKey file.
@@ -228,7 +228,7 @@ private extension AssetLoaderDelegate {
         // Check if this reuqest is the result of a potential AVAssetDownloadTask.
         if shouldPersist {
             // Since this request is the result of an AVAssetDownloadTask, we configure the options to request a persistent content key from the KSM.
-            resourceLoadingRequestOptions = [AVAssetResourceLoadingRequestStreamingContentKeyRequestRequiresPersistentKey: true]
+            resourceLoadingRequestOptions = [AVAssetResourceLoadingRequestStreamingContentKeyRequestRequiresPersistentKey: true as AnyObject]
         }
         
         let spcData: Data!

@@ -31,13 +31,13 @@ class AssetPersistenceManager: NSObject {
     private var assetDownloadURLSession: AVAssetDownloadURLSession!
     
     /// Internal map of AVAssetDownloadTask to its corresponding Asset.
-    private var activeDownloadsMap = [AVAssetDownloadTask : Asset]()
+    var activeDownloadsMap = [AVAssetDownloadTask : Asset]()
     
     /// Internal map of AVAssetDownloadTask to its resoled AVMediaSelection
-    private var mediaSelectionMap = [AVAssetDownloadTask : AVMediaSelection]()
+    var mediaSelectionMap = [AVAssetDownloadTask : AVMediaSelection]()
     
     /// The URL to the Library directory of the application's data container.
-    private let libraryURL: URL
+    let libraryURL: URL
     
     // MARK: Intialization
     
@@ -66,7 +66,7 @@ class AssetPersistenceManager: NSObject {
         assetDownloadURLSession.getAllTasks { tasksArray in
             // For each task, restore the state in the app by recreating Asset structs and reusing existing AVURLAsset objects.
             for task in tasksArray {
-                guard let assetDownloadTask = task as? AVAssetDownloadTask, assetName = task.taskDescription else { break }
+                guard let assetDownloadTask = task as? AVAssetDownloadTask, let assetName = task.taskDescription else { break }
                 
                 let urlAsset = assetDownloadTask.urlAsset
                 
@@ -96,8 +96,8 @@ class AssetPersistenceManager: NSObject {
         task.resume()
         
         var userInfo = [String: AnyObject]()
-        userInfo[Asset.Keys.name] = asset.name
-        userInfo[Asset.Keys.downloadState] = Asset.DownloadState.downloading.rawValue
+        userInfo[Asset.Keys.name] = asset.name as AnyObject?
+        userInfo[Asset.Keys.downloadState] = Asset.DownloadState.downloading.rawValue as AnyObject?
         
         NotificationCenter.default.post(name: AssetDownloadStateChangedNotification, object: nil, userInfo:  userInfo)
     }
@@ -139,17 +139,15 @@ class AssetPersistenceManager: NSObject {
         let userDefaults = UserDefaults.standard
         
         // Check if there is a file URL stored for this asset.
-        if let localFileLocation = userDefaults.value(forKey: asset.name) as? String{
-            do {
+        if let localFileLocation = userDefaults.string(forKey: asset.name) {
                 // Check if the file exists on disk
-                guard let localFilePath = try libraryURL.appendingPathComponent(localFileLocation).path else { return .notDownloaded }
+                let localFilePath = libraryURL.appendingPathComponent(localFileLocation).path
                 
                 if FileManager.default.fileExists(atPath: localFilePath) {
                     return .downloaded
-                }
-            } catch {
-                return .notDownloaded
-            }
+                } else {
+                  return .notDownloaded
+              }
         }
         
         // Check if there are any active downloads in flight.
@@ -174,8 +172,8 @@ class AssetPersistenceManager: NSObject {
                 userDefaults.removeObject(forKey: asset.name)
                 
                 var userInfo = [String: AnyObject]()
-                userInfo[Asset.Keys.name] = asset.name
-                userInfo[Asset.Keys.downloadState] = Asset.DownloadState.notDownloaded.rawValue
+                userInfo[Asset.Keys.name] = asset.name as AnyObject?
+                userInfo[Asset.Keys.downloadState] = Asset.DownloadState.notDownloaded.rawValue as AnyObject?
                 
                 NotificationCenter.default.post(name: AssetDownloadStateChangedNotification, object: nil, userInfo:  userInfo)
             }
@@ -244,10 +242,10 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
          This is the ideal place to begin downloading additional media selections
          once the asset itself has finished downloading.
          */
-        guard let task = task as? AVAssetDownloadTask , asset = activeDownloadsMap.removeValue(forKey: task) else { return }
+        guard let task = task as? AVAssetDownloadTask , let asset = self.activeDownloadsMap.removeValue(forKey: task) else { return }
         
         // Prepare the basic userInfo dictionary that will be posted as part of our notification.
-        var userInfo = [String: AnyObject]()
+        var userInfo = [String: Any]()
         userInfo[Asset.Keys.name] = asset.name
         
         if let error = error {
@@ -260,7 +258,7 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
                 guard let localFileLocation = userDefaults.value(forKey: asset.name) as? String else { return }
                 
                 do {
-                    let fileURL = try libraryURL.appendingPathComponent(localFileLocation)
+                    let fileURL = try self.libraryURL.appendingPathComponent(localFileLocation)
                     try FileManager.default.removeItem(at: fileURL)
                     
                     userDefaults.removeObject(forKey: asset.name)
@@ -268,7 +266,7 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
                     print("An error occured trying to delete the contents on disk for \(asset.name): \(error)")
                 }
                 
-                userInfo[Asset.Keys.downloadState] = Asset.DownloadState.notDownloaded.rawValue
+                userInfo[Asset.Keys.downloadState] = Asset.DownloadState.notDownloaded.rawValue as AnyObject?
                 
             case (NSURLErrorDomain, NSURLErrorUnknown):
                 fatalError("Downloading HLS streams is not supported in the simulator.")
@@ -324,7 +322,7 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
 //            }
 //            else {
                 // All additional media selections have been downloaded.
-                userInfo[Asset.Keys.downloadState] = Asset.DownloadState.downloaded.rawValue
+                userInfo[Asset.Keys.downloadState] = Asset.DownloadState.downloaded.rawValue as AnyObject?
                 
 //            }
         }
@@ -341,7 +339,7 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
          `URLSessionTaskDelegate.urlSession(_:task:didCompleteWithError:)`.
          */
         if let asset = activeDownloadsMap[assetDownloadTask] {
-          let loc = location.relativePath?.components(separatedBy: "Library/")[1]
+          let loc = location.relativePath.components(separatedBy: "Library/")[1]
           userDefaults.set(loc, forKey: asset.name)
         }
     }
@@ -356,9 +354,9 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
             percentComplete += CMTimeGetSeconds(loadedTimeRange.duration) / CMTimeGetSeconds(timeRangeExpectedToLoad.duration)
         }
         
-        var userInfo = [String: AnyObject]()
+        var userInfo = [String: Any]()
         userInfo[Asset.Keys.name] = asset.name
-        userInfo[Asset.Keys.percentDownloaded] = percentComplete
+        userInfo[Asset.Keys.percentDownloaded] = percentComplete as AnyObject?
         
         NotificationCenter.default.post(name: AssetDownloadProgressNotification, object: nil, userInfo:  userInfo)
     }

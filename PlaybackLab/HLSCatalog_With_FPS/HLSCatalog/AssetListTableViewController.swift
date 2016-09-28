@@ -15,7 +15,7 @@ class AssetListTableViewController: UITableViewController {
     
     static let presentPlayerViewControllerSegueIdentifier = "PresentPlayerViewControllerSegueIdentifier"
     
-    private var playerViewController: AVPlayerViewController?
+    var playerViewController: AVPlayerViewController?
     
     private var pendingContentKeyRequests = [String: Asset]()
     
@@ -77,7 +77,7 @@ class AssetListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? AssetListTableViewCell, asset = cell.asset else { return }
+        guard let cell = tableView.cellForRow(at: indexPath) as? AssetListTableViewCell, let asset = cell.asset else { return }
         
         let downloadState = AssetPersistenceManager.sharedManager.downloadState(for: asset)
         let alertAction: UIAlertAction
@@ -105,7 +105,7 @@ class AssetListTableViewController: UITableViewController {
         alertController.addAction(alertAction)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         
-        if UIDevice.current().userInterfaceIdiom == .pad {
+        if UIDevice.current.userInterfaceIdiom == .pad {
             guard let popoverController = alertController.popoverPresentationController else {
                 return
             }
@@ -117,11 +117,11 @@ class AssetListTableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
         if segue.identifier == AssetListTableViewController.presentPlayerViewControllerSegueIdentifier {
-            guard let cell = sender as? AssetListTableViewCell, playerViewControler = segue.destinationViewController as? AVPlayerViewController, asset = cell.asset else { return }
+            guard let cell = sender as? AssetListTableViewCell, let playerViewControler = segue.destination as? AVPlayerViewController, let asset = cell.asset else { return }
             
             // Grab a reference for the destinationViewController to use in later delegate callbacks from AssetPlaybackManager.
             playerViewController = playerViewControler
@@ -146,7 +146,7 @@ class AssetListTableViewController: UITableViewController {
     }
     
     func handleAssetLoaderDelegateDidPersistContentKeyNotification(notification: Notification) {
-        guard let assetName = notification.userInfo?[Asset.Keys.name] as? String, asset = self.pendingContentKeyRequests.removeValue(forKey: assetName) else {
+        guard let assetName = notification.userInfo?[Asset.Keys.name] as? String, let asset = self.pendingContentKeyRequests.removeValue(forKey: assetName) else {
             return
         }
         
@@ -176,7 +176,7 @@ extension AssetListTableViewController: AssetPlaybackDelegate {
     }
     
     func streamPlaybackManager(_ streamPlaybackManager: AssetPlaybackManager, playerCurrentItemDidChange player: AVPlayer) {
-        guard let playerViewController = playerViewController where player.currentItem != nil else { return }
+        guard let playerViewController = playerViewController , player.currentItem != nil else { return }
         
         playerViewController.player = player
     }

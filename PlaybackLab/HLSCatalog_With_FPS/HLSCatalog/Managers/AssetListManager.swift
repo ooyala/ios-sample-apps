@@ -56,7 +56,7 @@ class AssetListManager: NSObject {
     func handleAssetPersistenceManagerDidRestoreStateNotification(_ notification: Notification) {
         DispatchQueue.main.async {
             // Get the file path of the Streams.plist from the application bundle.
-            guard let streamsFilepath = Bundle.main.pathForResource("Streams", ofType: "plist") else { return }
+            guard let streamsFilepath = Bundle.main.path(forResource: "Streams", ofType: "plist") else { return }
             
             // Create an array from the contents of the Streams.plist file.
             guard let arrayOfStreams = NSArray(contentsOfFile: streamsFilepath) as? [[String: AnyObject]] else { return }
