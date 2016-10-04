@@ -25,10 +25,11 @@
 }
 
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerSimple";
-  
+  NSLog(@"value of qa mode in BasicSimplePlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
@@ -59,6 +60,15 @@
                                                name:nil
                                              object:self.ooyalaPlayerViewController.player];
   
+  // In QA Mode , Attaching Text Field
+  if(self.qaModeEnabled==YES){
+    
+    CGRect someRect = CGRectMake(0.0, 0.0, 100.0, 30.0);
+    self.text3 = [[UITextField alloc] initWithFrame:someRect];
+    [self.text3 setUserInteractionEnabled:NO] ;
+    [self.stackView1 addArrangedSubview:self.text3];
+  }
+  
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
@@ -81,6 +91,21 @@
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
+  
+  //In QA Mode , adding notifications to the Text Field
+  if(self.qaModeEnabled==YES) {
+  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                       [notification name],
+                       [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                       [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
+  NSString *string = self.text3.text;
+  NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+  NSLog(@"Current Text field Contents: %@",string);
+  NSLog(@"Appended String is: %@",appendString);
+  
+  [self.text3 setText:appendString];
+  }
+  
   appDel.count++;
 }
 @end

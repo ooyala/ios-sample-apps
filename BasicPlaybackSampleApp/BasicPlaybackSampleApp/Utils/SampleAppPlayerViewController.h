@@ -21,10 +21,14 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
 @property (weak, nonatomic) IBOutlet UITextField *text1;
 @property (weak, nonatomic) IBOutlet UITextField *text2;
+@property (weak, nonatomic) IBOutlet UITextField *text3;
+@property (strong, nonatomic) IBOutlet UIStackView *stackView1;
+@property (weak, nonatomic) IBOutlet UIView *playerView1;
 
 @property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
+@property BOOL qaModeEnabled;
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption;
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled;
 
 - (IBAction)onButtonClick:(id)sender;
 
