@@ -59,9 +59,8 @@
                                              object:self.ooyalaPlayerViewController.player];
   
   // In QA Mode , making textView visible
-  if(self.qaModeEnabled==YES){
+  if(self.qaModeEnabled == YES){
     self.textView.hidden = NO;
-
   }
   
   // Attach it to current view
@@ -88,7 +87,7 @@
         [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
   
   //In QA Mode , adding notifications to the TextView
-  if(self.qaModeEnabled==YES) {
+  if(self.qaModeEnabled == YES) {
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
                        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],

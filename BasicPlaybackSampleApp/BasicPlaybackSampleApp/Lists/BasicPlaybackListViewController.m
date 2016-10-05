@@ -120,10 +120,10 @@
 - (void)changeSwitch:(id)sender{
   if([sender isOn]){
     NSLog(@"Switch is ON");
-    self.qaLogEnabled=YES;
+    self.qaLogEnabled = YES;
   } else{
     NSLog(@"Switch is OFF");
-    self.qaLogEnabled=NO;
+    self.qaLogEnabled = NO;
   }
 //  self.qaLogEnabled = [sender isOn];
 }
