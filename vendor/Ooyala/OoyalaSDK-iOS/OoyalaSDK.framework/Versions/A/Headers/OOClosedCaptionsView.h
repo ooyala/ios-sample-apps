@@ -15,6 +15,7 @@
   OOCaption *caption;
   OOClosedCaptionsStyle *style;
 }
++ (void) setArbitararyScalingFactor:(CGFloat)scalingFactor;
 
 @property (nonatomic, strong) OOCaption *caption;
 

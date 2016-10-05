@@ -8,9 +8,12 @@
 
 #import <OoyalaSDK/OOAdSpotPlugin.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <Pulse/Pulse.h>
 
 @class OOPulseManager;
+@protocol OOPulseVideoAd;
+@protocol OOPulseSession;
+@class VPContentMetadata;
+@class VPRequestSettings;
 
 /**
  *  The OOPulseManagerDelegate protocol provides a way for the OOPulseManager
