@@ -24,8 +24,6 @@
     AppDelegate *appDel;
 }
 
-
-
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerSimple";
@@ -60,13 +58,10 @@
                                                name:nil
                                              object:self.ooyalaPlayerViewController.player];
   
-  // In QA Mode , Attaching Text Field
+  // In QA Mode , making textView visible
   if(self.qaModeEnabled==YES){
-    
-    CGRect someRect = CGRectMake(0.0, 0.0, 100.0, 30.0);
-    self.text3 = [[UITextField alloc] initWithFrame:someRect];
-    [self.text3 setUserInteractionEnabled:NO] ;
-    [self.stackView1 addArrangedSubview:self.text3];
+    self.textView.hidden = NO;
+
   }
   
   // Attach it to current view
@@ -92,18 +87,16 @@
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
   
-  //In QA Mode , adding notifications to the Text Field
+  //In QA Mode , adding notifications to the TextView
   if(self.qaModeEnabled==YES) {
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
                        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
                        [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
-  NSString *string = self.text3.text;
+  NSString *string = self.textView.text;
   NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
-  NSLog(@"Current Text field Contents: %@",string);
-  NSLog(@"Appended String is: %@",appendString);
-  
-  [self.text3 setText:appendString];
+  [self.textView setText:appendString];
+    
   }
   
   appDel.count++;

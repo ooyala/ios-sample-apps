@@ -11,6 +11,7 @@
                 <outlet property="playerView" destination="7vU-CD-UGU" id="D99-Wu-RIh"/>
                 <outlet property="playerView1" destination="7vU-CD-UGU" id="rEL-Bj-teU"/>
                 <outlet property="stackView1" destination="OR2-mc-zFZ" id="nrC-hv-S2t"/>
+                <outlet property="textView" destination="nmb-I6-1aN" id="qZJ-5y-FC7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ldZ-EV-hm3"/>
             </connections>
         </placeholder>
@@ -22,8 +23,24 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vU-CD-UGU">
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="Kv4-UH-ICU"/>
+                            </constraints>
                         </view>
+                        <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-I6-1aN">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7vU-CD-UGU" secondAttribute="trailing" id="0DF-p9-EfK"/>
+                        <constraint firstAttribute="bottom" secondItem="nmb-I6-1aN" secondAttribute="bottom" id="6pe-i3-JsP"/>
+                        <constraint firstAttribute="trailing" secondItem="nmb-I6-1aN" secondAttribute="trailing" id="7vM-QO-5AD"/>
+                        <constraint firstItem="7vU-CD-UGU" firstAttribute="top" secondItem="OR2-mc-zFZ" secondAttribute="top" id="IVD-CA-3xd"/>
+                        <constraint firstItem="nmb-I6-1aN" firstAttribute="leading" secondItem="OR2-mc-zFZ" secondAttribute="leading" id="NlA-If-ieb"/>
+                        <constraint firstItem="7vU-CD-UGU" firstAttribute="leading" secondItem="OR2-mc-zFZ" secondAttribute="leading" id="UX7-2u-ZVd"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,7 +50,7 @@
                 <constraint firstAttribute="bottom" secondItem="OR2-mc-zFZ" secondAttribute="bottom" id="avv-Q6-cOD"/>
                 <constraint firstItem="OR2-mc-zFZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="krW-lM-UVI"/>
             </constraints>
-            <point key="canvasLocation" x="170" y="962"/>
+            <point key="canvasLocation" x="169.5" y="961.5"/>
         </view>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>
