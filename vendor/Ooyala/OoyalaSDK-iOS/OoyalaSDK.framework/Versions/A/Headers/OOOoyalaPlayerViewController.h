@@ -69,6 +69,23 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
          controlType:(OOOoyalaPlayerControlType)controlType;
 
 /**
+ * Returns a dictionary of localization dictionaries. The keys are strings of locale codes.  the values are dictionaries of localized strings
+ * example:
+ * { "en" : { @"LIVE": @"LIVE", @"Done": @"Done", ... },
+ *   "es" : { @"LIVE": @"En vivo", @"Done": @"Hecho", ... },
+ *    ...
+ * }
+ * @returns the dictionary of available localization.
+ */
++ (NSDictionary *) getAvailableLocalizations;
+
+/**
+ * Sets the available localizations for the OoyalaPlayer.
+ * @param[in] localizations the dictionary of translation dictionaries
+ */
++ (void) setAvailableLocalizations:(NSDictionary *)localizations;
+
+/**
  * Loads a dictionary of language strings according to language settings in the device
  */
 + (void)loadDeviceLanguage;
