@@ -68,7 +68,7 @@
 
   NSMutableDictionary *fwParameters = [[NSMutableDictionary alloc] init];
   //[fwParameters setObject:@"90750" forKey:@"fw_ios_mrm_network_id"];
-  [fwParameters setObject:@"http://g1.v.fwmrm.net/" forKey:@"fw_ios_ad_server"];
+  [fwParameters setObject:@"https://g1.v.fwmrm.net/" forKey:@"fw_ios_ad_server"];
   [fwParameters setObject:@"90750:ooyala_ios" forKey:@"fw_ios_player_profile"];
   [fwParameters setObject:@"channel=TEST;subchannel=TEST;section=TEST;mode=online;player=ooyala;beta=n" forKey:@"FRMSegment"];
   //[fwParameters setObject:@"ooyala_test_site_section" forKey:@"fw_ios_site_section_id"];
