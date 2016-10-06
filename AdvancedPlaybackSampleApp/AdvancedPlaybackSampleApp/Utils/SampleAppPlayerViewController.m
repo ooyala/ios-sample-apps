@@ -15,7 +15,7 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super init];
   if (self) {
-    self.playerSelectionOption = playerSelectionOption;
+    _playerSelectionOption = playerSelectionOption;
   }
   return self;
 }

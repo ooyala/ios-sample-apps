@@ -14,6 +14,7 @@
 #import "CustomOverlayPlayerViewController.h"
 #import "UnbundledPlayerViewController.h"
 #import "PerformanceProfilingPlayerViewController.h"
+#import "LocalizationLanguagesViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface AdvancedPlaybackListViewController ()
@@ -68,6 +69,11 @@
                                                                pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
                                                               domain:@"http://www.ooyala.com"
                                                       viewController:[PerformanceProfilingPlayerViewController class]]];
+  [self insertNewObject:[[PlayerSelectionOption alloc] initWithTitle:@"Additional localization languages"
+                                                           embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
+                                                               pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                              domain:@"http://www.ooyala.com"
+                                                      viewController:[LocalizationLanguagesViewController class]]];
 }
 
 - (void)viewDidLoad {

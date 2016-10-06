@@ -92,6 +92,8 @@
 		5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */; };
 		5E98478B1C8E5F9900D31ED1 /* UnbundledPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */; };
 		97E5874A1D4ADF7300202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E587491D4ADF7300202E09 /* JavaScriptCore.framework */; };
+		CA6D61751DA5E05C009D43D8 /* LocalizationLanguagesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6D61731DA5E05C009D43D8 /* LocalizationLanguagesViewController.h */; };
+		CA6D61761DA5E05C009D43D8 /* LocalizationLanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6D61741DA5E05C009D43D8 /* LocalizationLanguagesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -183,6 +185,8 @@
 		5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnbundledPlayerViewController.h; sourceTree = "<group>"; };
 		5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnbundledPlayerViewController.m; sourceTree = "<group>"; };
 		97E587491D4ADF7300202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		CA6D61731DA5E05C009D43D8 /* LocalizationLanguagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationLanguagesViewController.h; sourceTree = "<group>"; };
+		CA6D61741DA5E05C009D43D8 /* LocalizationLanguagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationLanguagesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +297,8 @@
 				5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */,
 				5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */,
 				5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */,
+				CA6D61731DA5E05C009D43D8 /* LocalizationLanguagesViewController.h */,
+				CA6D61741DA5E05C009D43D8 /* LocalizationLanguagesViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				0BCA69541A848E6400225119 /* CustomControlsView.h in Headers */,
 				0BCA69521A848E6400225119 /* OOImagesIOS7.h in Headers */,
 				0BCA694C1A848E6400225119 /* OOControlsViewController.h in Headers */,
+				CA6D61751DA5E05C009D43D8 /* LocalizationLanguagesViewController.h in Headers */,
 				5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */,
 				0B7AC4261A79A93B0085BC97 /* PluginPlayerViewController.h in Headers */,
 				5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */,
@@ -470,6 +477,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 556Y9XWD3N;
 					};
 					0B19FEFD1A3B7532003E57DF = {
 						CreatedOnToolsVersion = 6.1;
@@ -519,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BCA694F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m in Sources */,
+				CA6D61761DA5E05C009D43D8 /* LocalizationLanguagesViewController.m in Sources */,
 				0B4111561B604C7800DF47AB /* CustomOverlayView.m in Sources */,
 				0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */,
 				0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */,
@@ -678,6 +687,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,6 +715,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
