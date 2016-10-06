@@ -11,7 +11,7 @@
   "analytics": {
     "rsids": "[INSERT YOUR ID HERE]",
     "server": "[INSERT YOUR SERVER HERE]",
-    "ssl": false,
+    "ssl": true,
     "offlineEnabled": false,
     "lifecycleTimeout": 300,
     "privacyDefault": "optedin",
