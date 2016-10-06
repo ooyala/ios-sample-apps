@@ -77,10 +77,11 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
  * }
  * @returns the dictionary of available localization.
  */
-+ (NSDictionary *) getAvailableLocalizations;
++ (NSDictionary *) availableLocalizations;
 
 /**
  * Sets the available localizations for the OoyalaPlayer.
+ * The "en" key must exist, do not remove it, but you can update any of the values there.
  * @param[in] localizations the dictionary of translation dictionaries
  */
 + (void) setAvailableLocalizations:(NSDictionary *)localizations;

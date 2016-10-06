@@ -2,18 +2,14 @@
 //  OoyalaSkinSDK.h
 //  OoyalaSkinSDK
 //
-//  Created by Zhihui Chen on 4/21/15.
-//  Copyright (c) 2015 ooyala. All rights reserved.
+//  Created on 9/28/16.
+//  Copyright (c) 2016 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef OoyalaSkinSDK_h
+#define OoyalaSkinSDK_h
 
-//! Project version number for OoyalaSkinSDK.
-FOUNDATION_EXPORT double OoyalaSkinSDKVersionNumber;
+#import <OoyalaSkinSDK/OOSkinViewController.h>
+#import <OoyalaSkinSDK/OOSkinOptions.h>
 
-//! Project version string for OoyalaSkinSDK.
-FOUNDATION_EXPORT const unsigned char OoyalaSkinSDKVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <OoyalaSkinSDK/PublicHeader.h>
-
-
+#endif /* OoyalaSkinSDK_h */
