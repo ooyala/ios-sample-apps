@@ -121,7 +121,6 @@
   } else{
     self.qaLogEnabled = NO;
   }
-//  self.qaLogEnabled = [sender isOn];
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {

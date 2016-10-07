@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
 @property (weak, nonatomic) IBOutlet UITextField *text1;
 @property (weak, nonatomic) IBOutlet UITextField *text2;
-@property (strong, nonatomic) IBOutlet UIStackView *stackView1;
+@property (weak, nonatomic) IBOutlet UIStackView *stackView1;
 @property (weak, nonatomic) IBOutlet UIView *playerView1;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
