@@ -64,7 +64,7 @@
                                              object:self.ooyalaPlayerViewController.player];
 
   // initialize youbora plugin
-  self.youbora = [[Youbora alloc] initWithSystemId:self.npawSystemId userID:self.npawUserId playerInstance:player options:nil httpSecure:NO];
+  self.youbora = [[Youbora alloc] initWithSystemId:self.npawSystemId userID:self.npawUserId playerInstance:player options:nil httpSecure:YES];
 
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];
