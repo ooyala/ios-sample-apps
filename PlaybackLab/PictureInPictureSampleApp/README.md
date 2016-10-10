@@ -20,6 +20,14 @@ To actually fire off Picture In Picture, you need to call the provided OoyalaPla
 
 This only works when you are using a device that supports PIP (Most new iPads)
 
+# Implementing AVPictureInPictureControllerDelegate
+
+To react to the PIP events, AVKit provides [AVPictureInPictureControllerDelegate](https://developer.apple.com/reference/avkit/avpictureinpicturecontrollerdelegate), which lets your application react before and after PIP is started or stopped.  This is not part of the PictureInPictureSampleApp yet, but is necessary to open up the correct video View/ViewController before PIP is stopped.
+
+You can set your PIP Delegate within your OOOptions object when intitializing your OOOoyalaPlayer:
+
+    OOOptions *options = [OOOptions new];
+    options.pipDelegate = self;
 
 # Other Considerations
 * Advertisements are not supported
