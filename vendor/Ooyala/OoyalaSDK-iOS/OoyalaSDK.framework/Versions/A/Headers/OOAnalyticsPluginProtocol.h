@@ -13,6 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "OOOoyalaPlayer.h"
 #import "OOLifeCycle.h"
+#import "OOSeekInfo.h"
 
 @protocol OOAnalyticsPluginProtocol <NSObject>
 
@@ -46,4 +47,9 @@
  * Called whenever the user or application calls OoyalaPlayer.play()
  */
 - (void)reportPlayRequested;
+/**
+ * Called whenever the user seeks the video
+ */
+- (void)reportSeekStarted:(OOSeekInfo *)seekInfo;
+
 @end

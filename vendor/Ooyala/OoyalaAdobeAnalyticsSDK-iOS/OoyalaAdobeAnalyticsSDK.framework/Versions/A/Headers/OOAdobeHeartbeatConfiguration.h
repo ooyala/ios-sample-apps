@@ -31,6 +31,10 @@
  */
 @property (nonatomic) NSString *onlineVideoPlatform;
 
+/**
+ *  Enable or disable SSL for Adobe Heartbeat. Default: YES
+ */
+@property (nonatomic) BOOL sslEnabled;
 
 - (instancetype)initWithHeartbeatTrackingServer:(NSString *)trackingServer
                              heartbeatPublisher:(NSString *)publisher
