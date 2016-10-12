@@ -8,7 +8,8 @@
 #import "PulsePlayerViewController.h"
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaPulseIntegration/OOPulseManager.h>
+#import <OoyalaPulseIntegration/OoyalaPulseIntegration.h>
+#import <Pulse/Pulse.h>
 #import "PlayerSelectionOption.h"
 
 @interface PulsePlayerViewController () <OOPulseManagerDelegate>

@@ -7,11 +7,11 @@
 //
 
 #import "FairplayPlayerViewController.h"
-#import <OoyalaTVSDK/OOOoyalaPlayer.h>
-#import <OoyalaTVSDK/OOPlayerDomain.h>
-#import <OoyalaTVSDK/OODebugMode.h>
-#import <OoyalaTVSDK/OOEmbeddedSecureURLGenerator.h>
-#import <OoyalaTVSDK/OOOptions.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
+#import <OoyalaSDK/OOOptions.h>
 #import "PlayerSelectionOption.h"
 
 @interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
