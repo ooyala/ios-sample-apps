@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Npa-02-pFR">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Npa-02-pFR">
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -65,16 +65,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" id="ZiF-9i-OZM">
-                                <rect key="frame" x="0.0" y="40" width="1880" height="66"/>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" id="ZiF-9i-OZM">
+                                <rect key="frame" x="0.0" y="40" width="1920" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZiF-9i-OZM" id="ThK-nU-s1v">
                                     <frame key="frameInset" width="1904" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="6gc-90-9Jy" kind="show" identifier="pulseSegue" id="Mnr-Yq-jTo"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -87,11 +84,43 @@
                         <segue destination="HVY-de-FJh" kind="show" identifier="childSegue" id="dcC-le-5GL"/>
                         <segue destination="NIL-Lr-UVC" kind="show" identifier="fairplaySegue" id="R9d-AG-bBZ"/>
                         <segue destination="5jA-y6-ANQ" kind="show" identifier="playerTokenSegue" id="L3c-Ho-OZM"/>
+                        <segue destination="aRs-xV-gZh" kind="show" identifier="pulseSegue" id="3VU-Yc-TN4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFK-AF-myQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-62" y="-212"/>
+        </scene>
+        <!--Pulse Library View Controller-->
+        <scene sceneID="YDY-T8-iLI">
+            <objects>
+                <viewController id="aRs-xV-gZh" customClass="PulseLibraryViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="66" sectionFooterHeight="66" id="Ls0-qL-Tfd">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" id="Bhr-eZ-At6" userLabel="OptionCell">
+                                <rect key="frame" x="0.0" y="66" width="1920" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bhr-eZ-At6" id="4Vc-6z-yHw">
+                                    <frame key="frameInset" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aRs-xV-gZh" id="7ER-lW-t2O"/>
+                            <outlet property="delegate" destination="aRs-xV-gZh" id="nhs-jX-IRv"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="6gc-90-9Jy" kind="show" identifier="pulsePlayer" id="gM5-mx-w1I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94W-97-U9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="1290"/>
         </scene>
         <!--Pulse Integration View Controller-->
         <scene sceneID="9by-P5-2kM">
@@ -108,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5i-Q2-fO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="1312"/>
+            <point key="canvasLocation" x="-62" y="2765"/>
         </scene>
         <!--Child Player View Controller-->
         <scene sceneID="PVY-9J-HI3">

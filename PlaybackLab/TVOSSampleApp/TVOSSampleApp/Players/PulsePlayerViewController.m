@@ -5,17 +5,19 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import "PulsePlayerViewController.h"
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaPulseIntegration/OoyalaPulseIntegration.h>
 #import <Pulse/Pulse.h>
-#import "PlayerSelectionOption.h"
+
+#import "PulsePlayerViewController.h"
+#import "PulseLibraryOption.h"
+
+NSString *const PCODE = @"tlM2k6i2-WrXX1DE_b8zfhui_eQN";
+NSString *const PLAYER_DOMAIN = @"http://www.ooyala.com";
 
 @interface PulsePlayerViewController () <OOPulseManagerDelegate>
 
-@property (nonatomic, strong) NSString *pcode;
-@property (nonatomic, strong) NSString *playerDomain;
 @property (strong, nonatomic) OOPulseManager *manager;
 
 @end
@@ -25,11 +27,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.pcode = self.option.pcode;
-  self.playerDomain = self.option.domain;
-
   self.playbackControlsEnabled = YES;
-  self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.player = [[OOOoyalaPlayer alloc] initWithPcode:PCODE domain:[[OOPlayerDomain alloc] initWithString:PLAYER_DOMAIN]];
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationHandler:) name:nil object:self.player];
 
@@ -65,13 +64,26 @@
   requestSettings.width = (NSInteger)MAX(self.view.frame.size.width, self.view.frame.size.height);
   requestSettings.height = (NSInteger)MIN(self.view.frame.size.width, self.view.frame.size.height);
   
+  // We can optionally pass some player-level custom parameters to the ad request
+  if(self.option.category != nil) {
+    contentMetadata.category = self.option.category;
+  }
+  
+  if(self.option.tags != nil) {
+    contentMetadata.tags = self.option.tags;
+  }
+  
+  if(self.option.midrollPositions != nil) {
+    requestSettings.linearPlaybackPositions = self.option.midrollPositions;
+  }
+  
   // You should probably implement some way of determining the max
   // bitrate of ads to request.
-  //requestSettings.maxBitRate = [BandwidthChecker maxBitRate];
+  // requestSettings.maxBitRate = [BandwidthChecker maxBitRate];
 
-  // If the associated ad set has no Pulse host set, use this default one  
+  // If the associated ad set has no Pulse host set, we'll return nil to prevent the ad request
   if(pulseHost == nil) {
-    pulseHost = @"https://pulse-demo.videoplaza.tv";
+    return nil;
   }
 
   [OOPulse setPulseHost:pulseHost

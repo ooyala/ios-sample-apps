@@ -8,7 +8,7 @@
 #import "VideoTableViewController.h"
 #import "AbstractPlayerViewController.h"
 #import "FullscreenPlayerViewController.h"
-#import "PulsePlayerViewController.h"
+#import "PulseLibraryViewController.h"
 #import "FairplayPlayerViewController.h"
 #import "PlayerSelectionOption.h"
 #import "OoyalaPlayerTokenPlayerViewController.h"
@@ -38,10 +38,10 @@
 
 - (void)populateOptions
 {
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pulse Integration"
-                                                             embedCode:@"ZlNzk5NTE6i-azGFoP6X0ICminpjhBds"
-                                                                 pcode:@"tlM2k6i2-WrXX1DE_b8zfhui_eQN"
-                                                                domain:@"http://www.ooyala.com"
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Pulse Integration"
+                                                             embedCode:nil
+                                                                 pcode:nil
+                                                                domain:nil
                                                              segueName:@"pulseSegue"]];
 
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fullscreen Player"
@@ -112,8 +112,7 @@
     FullscreenPlayerViewController *destinationVC = segue.destinationViewController;
     destinationVC.option = self.options[indexPath.row];
   } else if ([segue.identifier isEqualToString:@"pulseSegue"]) {
-    PulsePlayerViewController *destinationVC = segue.destinationViewController;
-    destinationVC.option = self.options[indexPath.row];
+    // no options passed here as the Pulse integration sample has its own content library
   } else if ([segue.identifier isEqualToString:@"childSegue"]){
     AbstractPlayerViewController *destinationVC = segue.destinationViewController;
     destinationVC.option = self.options[indexPath.row];

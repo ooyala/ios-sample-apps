@@ -8,10 +8,10 @@
 #import <UIKit/UIKit.h>
 #import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
 
-@class PlayerSelectionOption;
+@class PulseLibraryOption;
 
 @interface PulsePlayerViewController : OOOoyalaTVPlayerViewController
 
-@property (nonatomic, strong) PlayerSelectionOption *option;
+@property (nonatomic, strong) PulseLibraryOption *option;
 
 @end
