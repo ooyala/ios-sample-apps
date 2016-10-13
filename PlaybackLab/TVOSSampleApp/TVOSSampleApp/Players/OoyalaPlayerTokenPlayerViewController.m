@@ -7,10 +7,10 @@
 //
 
 #import "OoyalaPlayerTokenPlayerViewController.h"
-#import <OoyalaTVSDK/OOOoyalaPlayer.h>
-#import <OoyalaTVSDK/OOPlayerDomain.h>
-#import <OoyalaTVSDK/OODebugMode.h>
-#import <OoyalaTVSDK/OOEmbeddedSecureURLGenerator.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OODebugMode.h>
+#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import "PlayerSelectionOption.h"
 
 @interface OoyalaPlayerTokenPlayerViewController ()
