@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  DownloadToOwnSampleApp
 //
-//  Created by Eric Vargas on 8/8/16.
-//  Copyright © 2016 Eric Vargas. All rights reserved.
+//  Created on 8/8/16.
+//  Copyright © 2016 Ooyala. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
