@@ -6,8 +6,8 @@
 //
 
 #import "FullscreenPlayerViewController.h"
-#import <OoyalaTVSDK/OOOoyalaPlayer.h>
-#import <OoyalaTVSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OOOoyalaPlayer.h>
+#import <OoyalaSDK/OOPlayerDomain.h>
 #import "PlayerSelectionOption.h"
 
 @interface FullscreenPlayerViewController ()
