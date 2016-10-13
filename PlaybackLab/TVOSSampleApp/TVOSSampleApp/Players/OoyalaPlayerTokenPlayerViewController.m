@@ -13,7 +13,7 @@
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import "PlayerSelectionOption.h"
 
-@interface OoyalaPlayerTokenPlayerViewController ()
+@interface OoyalaPlayerTokenPlayerViewController () <OOEmbedTokenGenerator>
 
 @property (nonatomic, strong) NSString *embedCode;
 @property (nonatomic, strong) NSString *pcode;
