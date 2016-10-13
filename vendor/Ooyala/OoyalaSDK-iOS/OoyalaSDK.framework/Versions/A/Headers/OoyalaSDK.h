@@ -92,6 +92,7 @@
 #import <OoyalaSDK/OOAdPodInfo.h>
 #import <OoyalaSDK/OOAdOverlayInfo.h>
 #import <OoyalaSDK/OOClientId.h>
+#import <OoyalaSDK/OOSeekInfo.h>
 
 
 // Caption information
