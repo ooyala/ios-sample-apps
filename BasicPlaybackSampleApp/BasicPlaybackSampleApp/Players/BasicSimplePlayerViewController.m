@@ -24,9 +24,11 @@
     AppDelegate *appDel;
 }
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
+  
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
@@ -57,11 +59,6 @@
                                                name:nil
                                              object:self.ooyalaPlayerViewController.player];
   
-  // In QA Mode , making textView visible
-  if(self.qaModeEnabled == YES){
-    self.textView.hidden = NO;
-  }
-  
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
@@ -80,20 +77,10 @@
     return;
   }
   
-  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-                       [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
-  NSLog(@"%@", message);
-  
-  //In QA Mode , adding notifications to the TextView
-  if(self.qaModeEnabled == YES) {
-  NSString *string = self.textView.text;
-  NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
-  [self.textView setText:appendString];
-    
-  }
-  
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
+        [notification name],
+        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+        [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
   appDel.count++;
 }
 @end
