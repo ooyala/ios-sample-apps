@@ -13,8 +13,9 @@
 #import "PlayerSelectionOption.h"
 
 @interface BasicPlaybackListViewController ()
-@property (nonatomic) NSMutableArray *options;
-@property (nonatomic) BOOL qaLogEnabled;
+@property NSMutableArray *options;
+@property NSMutableArray *optionList;
+@property NSMutableArray *optionEmbedCodes;
 @end
 
 @implementation BasicPlaybackListViewController
@@ -101,26 +102,9 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
-    
-  UISwitch *swtLog = [[UISwitch alloc] init];
-  [swtLog addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
-  UILabel *lblLog = [[UILabel alloc]  initWithFrame:CGRectMake(0,0,44,44)];
-  [lblLog setText:@"QA"];
-  
-  UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithCustomView:swtLog];
-  UIBarButtonItem * lbl = [[UIBarButtonItem alloc] initWithCustomView:lblLog];
-  self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn,lbl, nil] ;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
   [self addAllBasicPlayerSelectionOptions];
-}
-
-- (void)changeSwitch:(id)sender{
-  if([sender isOn]){
-    self.qaLogEnabled = YES;
-  } else{
-    self.qaLogEnabled = NO;
-  }
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
@@ -164,9 +148,9 @@
   PlayerSelectionOption *selection = self.options[indexPath.row];
   SampleAppPlayerViewController *controller;
   if (selection.embedCode.length > 0) {
-    controller = [(BasicSimplePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
+    controller = [(BasicSimplePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
   } else {
-    controller = [[QRScannerViewController alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
+    controller = [[QRScannerViewController alloc] initWithPlayerSelectionOption:selection];
   }
   [self.navigationController pushViewController:controller animated:YES];
 }
