@@ -43,11 +43,12 @@
                                                                 domain:@"http://www.ooyala.com"
                                                              segueName:@"fullscreenSegue"]];
 
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
-                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"childSegue"]];
+  // Read the comments in ChildPlayerViewController.h to know what this example is for
+//  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
+//                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+//                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+//                                                                domain:@"http://www.ooyala.com"
+//                                                             segueName:@"childSegue"]];
 
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Player Token (Unconfigured)"
                                                              embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
@@ -60,11 +61,13 @@
                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                 domain:@"http://www.ooyala.com"
                                                              segueName:@"fairplaySegue"]];
+  
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Main Profile (Unconfigured)"
                                                              embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                 domain:@"http://www.ooyala.com"
                                                              segueName:@"fairplaySegue"]];
+  
   [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay High Profile (Unconfigured)"
                                                              embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"
                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
