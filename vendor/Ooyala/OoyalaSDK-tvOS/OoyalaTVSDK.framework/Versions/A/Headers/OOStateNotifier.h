@@ -15,5 +15,7 @@
 - (void)notifyPlayheadChange;
 - (void)notifyAdsLoaded;
 - (void)notifyAdSkipped;
+- (void)notifyAdStarted;
+- (void)notifyAdCompleted;
 
 @end

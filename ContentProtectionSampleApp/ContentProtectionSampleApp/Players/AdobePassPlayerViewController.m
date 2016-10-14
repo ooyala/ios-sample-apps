@@ -8,8 +8,7 @@
 
 #import "AdobePassPlayerViewController.h"
 #import "AdobePassViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface AdobePassPlayerViewController () <AdobePassViewControllerDelegate>
 @property NSString *embedCode;
@@ -87,7 +86,7 @@
 
 - (void)onRightBtnClick:(id)sender {
   //[ooController.player setEmbedCode:@"5icXRvNDrl9kxzF_58oV79ApUNRffoLR"];
-  [self.ooyalaPlayerViewController.player setEmbedCode:@"h0NGNxczpVZm5WeI-iwEHGgGcCoipQJy"];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   [self.ooyalaPlayerViewController.player play];
 }
 

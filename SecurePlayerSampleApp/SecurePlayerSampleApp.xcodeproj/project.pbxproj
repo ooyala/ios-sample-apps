@@ -58,6 +58,7 @@
 		0BD84A271B912588006CB6D0 /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD84A251B912588006CB6D0 /* PlayerSelectionOption.h */; };
 		0BD84A281B912588006CB6D0 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */; };
 		0BDBDBE71D35C181003933D0 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDBDBE61D35C181003933D0 /* AVKit.framework */; };
+		0BDC86FE1D5B96E00012EFA8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* SecurePlayerPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */; };
 		5E7EEE8E1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */; };
@@ -137,6 +138,7 @@
 		0BD84A251B912588006CB6D0 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BDBDBE61D35C181003933D0 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurePlayerPrePersonalizedPlayerViewController.h; sourceTree = "<group>"; };
 		5E7EEE8D1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurePlayerPrePersonalizedPlayerViewController.m; sourceTree = "<group>"; };
 		5E7EEE9B1CA9F9060049E43F /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDC86FE1D5B96E00012EFA8 /* CoreLocation.framework in Frameworks */,
 				97E5875F1D4AE14800202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BDBDBE71D35C181003933D0 /* AVKit.framework in Frameworks */,
 				5E7EEE9E1CA9F9070049E43F /* OoyalaSDK.framework in Frameworks */,
@@ -234,6 +237,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */,
 				97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */,
 				0BDBDBE61D35C181003933D0 /* AVKit.framework */,
 				5E7EEE9B1CA9F9060049E43F /* OoyalaSDK.framework */,

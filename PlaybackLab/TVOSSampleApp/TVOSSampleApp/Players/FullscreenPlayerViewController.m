@@ -24,7 +24,8 @@
 
   self.pcode = self.option.pcode;
   self.playerDomain = self.option.domain;
-  
+
+  self.playbackControlsEnabled = YES;
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationHandler:) name:nil object:self.player];

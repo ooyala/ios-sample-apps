@@ -35,7 +35,7 @@
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Adobe Pass"
                                                             embedCode:@"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G"
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                                pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
                                                                domain:@"http://www.ooyala.com"
                                                        viewController: [AdobePassPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unconfigured)"

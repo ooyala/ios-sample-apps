@@ -12,6 +12,7 @@ This is absolutely **not** intended to be used in production or to outline best 
 
 1. After cloning the project, download the Ooyala Ad Products iOS SDKs [here](http://support.ooyala.com/resources/mobile-and-client-sdks).
 2. Copy the [required](VendorLibraries/README.md) framework files into the VendorLibraries folder of the project.
+3. Ensure that the required [OoyalaSkinSDK-iOS](../vendor/Ooyala/OoyalaSkinSDK-iOS/) package is available in the [Ooyala](../vendor/Ooyala) folder. 
 3. Open the project file in XCode.
 4. Select the ```PulseSampleApp``` scheme
 5. Build the project.

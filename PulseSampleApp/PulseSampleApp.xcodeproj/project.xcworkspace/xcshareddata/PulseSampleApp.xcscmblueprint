@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "62AA0CF502A80EBB7BE2D9BC4065CA0D3BCB46E4" : 0,
+    "4264B5E3C0FAF3A8F8A226161DDF14603CD95740" : 0,
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : 0,
+    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C47037B3-9F78-47E0-8DE7-5F76FFF90D2A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "62AA0CF502A80EBB7BE2D9BC4065CA0D3BCB46E4" : "vendor\/",
+    "4264B5E3C0FAF3A8F8A226161DDF14603CD95740" : "native-skin\/",
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : "ios-sample-apps\/",
+    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : "ios-sdk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PulseSampleApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PulseSampleApp\/PulseSampleApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/git.corp.ooyala.com:7999\/pba\/ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/native-skin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4264B5E3C0FAF3A8F8A226161DDF14603CD95740"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/ios-sample-apps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/git.corp.ooyala.com\/vendor",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "62AA0CF502A80EBB7BE2D9BC4065CA0D3BCB46E4"
+    }
+  ]
+}

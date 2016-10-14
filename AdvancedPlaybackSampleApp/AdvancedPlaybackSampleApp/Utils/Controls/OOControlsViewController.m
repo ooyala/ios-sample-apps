@@ -7,9 +7,7 @@
  */
 
 #import <OOControlsViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOVideo.h>
-#import <OoyalaSDK/OOOptions.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import "OOUIUtils.h"
 
 @interface OOUnselectableActivityIndicatorView : UIActivityIndicatorView

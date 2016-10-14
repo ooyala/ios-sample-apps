@@ -8,9 +8,9 @@
 
 #import "NPAWOptionalMetadataPlayerViewController.h"
 #import <YouboraMedia/Youbora.h>
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface NPAWOptionalMetadataPlayerViewController ()
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -69,7 +69,7 @@
   NSDictionary *customMetadata = [self generateNpawCustomMetadata];
 
   // initialize youbora plugin
-  self.youbora = [[Youbora alloc] initWithSystemId:self.npawSystemId userID:self.npawUserId playerInstance:player options:customMetadata httpSecure:NO];
+  self.youbora = [[Youbora alloc] initWithSystemId:self.npawSystemId userID:self.npawUserId playerInstance:player options:customMetadata httpSecure:YES];
 
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];

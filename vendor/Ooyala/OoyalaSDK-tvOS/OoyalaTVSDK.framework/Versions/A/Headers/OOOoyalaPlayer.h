@@ -193,6 +193,11 @@ extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live clo
 + (void)setEnvironment:(OOOoyalaPlayerEnvironment)e;
 
 /**
+ * Set if SSL is used for Player APIs. Default YES
+ */
++ (void)setSSLEnvironmentEnabled:(BOOL)sslEnabled;
+
+/**
  * Get the version and RC of the Ooyala SDK
  * @returns the string that represents the SDK version
  */

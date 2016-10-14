@@ -21,6 +21,7 @@
     self.text = @"This is an overlay";
     self.backgroundColor = [UIColor redColor];
     self.editable = NO;
+    self.selectable = NO;
   }
   return self;
 }

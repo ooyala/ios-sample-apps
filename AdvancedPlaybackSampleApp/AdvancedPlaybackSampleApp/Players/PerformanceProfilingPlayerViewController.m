@@ -5,10 +5,7 @@
 
 #import "PerformanceProfilingPlayerViewController.h"
 
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOPerformanceMonitorBuilder.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface PerformanceProfilingPlayerViewController ()
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;

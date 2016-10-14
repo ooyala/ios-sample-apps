@@ -13,6 +13,7 @@
 		0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E51A40DF9A00E7DE88 /* LaunchScreen.xib */; };
 		0BC947CE1A817732004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C81A817732004CB997 /* PlayerSimple.xib */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
+		26EF171C1D50918900BACD9C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EF171B1D50918900BACD9C /* AVKit.framework */; };
 		C402FB031CAD4123001D4BBD /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = C402FB021CAD4123001D4BBD /* library.json */; };
 		C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C402FB041CAD414E001D4BBD /* VideoItemCell.xib */; };
 		C402FB0A1CAD4163001D4BBD /* VideoLibraryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */; };
@@ -28,7 +29,6 @@
 		C4499AFA1CA18B6B00B6EE20 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AF91CA18B6B00B6EE20 /* OoyalaSkinSDK.framework */; };
 		C4499AFC1CA18B7800B6EE20 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AFB1CA18B7800B6EE20 /* OoyalaSDK.framework */; };
 		C4499B131CA18B8C00B6EE20 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499AFF1CA18B8C00B6EE20 /* alice.ttf */; };
-		C4499B141CA18B8C00B6EE20 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B001CA18B8C00B6EE20 /* fontawesome-webfont.ttf */; };
 		C4499B151CA18B8C00B6EE20 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */; };
 		C4499B161CA18B8C00B6EE20 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */; };
 		C4499B171CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */; };
@@ -83,6 +83,7 @@
 		0B7AC4441A7A27090085BC97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BC947C81A817732004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
+		26EF171B1D50918900BACD9C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C402FB021CAD4123001D4BBD /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
 		C402FB041CAD414E001D4BBD /* VideoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLibraryViewController.h; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		C4499AF91CA18B6B00B6EE20 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "VendorLibraries/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
 		C4499AFB1CA18B7800B6EE20 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "VendorLibraries/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 		C4499AFF1CA18B8C00B6EE20 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
-		C4499B001CA18B8C00B6EE20 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -126,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EF171C1D50918900BACD9C /* AVKit.framework in Frameworks */,
 				C4082C191D2144E200CC3BC4 /* libc++.tbd in Frameworks */,
 				C4499AF81CA1887200B6EE20 /* MediaAccessibility.framework in Frameworks */,
 				C477A80B1C888E03000B4890 /* AdSupport.framework in Frameworks */,
@@ -202,6 +203,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26EF171B1D50918900BACD9C /* AVKit.framework */,
 				C4082C181D2144E200CC3BC4 /* libc++.tbd */,
 				C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */,
 				C464E5311CB526AD0019ABD8 /* Pulse.framework */,
@@ -273,7 +275,6 @@
 			children = (
 				C4082C1A1D2145CA00CC3BC4 /* ooyala-slick-type.ttf */,
 				C4499AFF1CA18B8C00B6EE20 /* alice.ttf */,
-				C4499B001CA18B8C00B6EE20 /* fontawesome-webfont.ttf */,
 				C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */,
 				C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */,
 				C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */,
@@ -410,7 +411,6 @@
 				C4499B241CA18B8C00B6EE20 /* zh.json in Resources */,
 				0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */,
 				C4082C1B1D21461200CC3BC4 /* ooyala-slick-type.ttf in Resources */,
-				C4499B141CA18B8C00B6EE20 /* fontawesome-webfont.ttf in Resources */,
 				C4BB04431C75FCD100871138 /* TableCell.xib in Resources */,
 				C4499B191CA18B8C00B6EE20 /* main.jsbundle in Resources */,
 				C4499B181CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf in Resources */,

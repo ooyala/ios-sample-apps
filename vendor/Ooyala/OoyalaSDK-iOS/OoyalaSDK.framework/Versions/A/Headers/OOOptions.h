@@ -26,6 +26,7 @@
 @property (nonatomic) id<OOSecureURLGenerator> secureURLGenerator; /** Helper for signing URLs with provider's secret and API key. */
 @property (nonatomic) id<AVPictureInPictureControllerDelegate> pipDelegate; /** The picture in picture delegate to receive PIP events*/
 @property (nonatomic) BOOL bypassPCodeMatching; /** Bypass the check to ensure the provided PCode matches the asset's Pcode */
+@property (nonatomic) BOOL disableVASTOoyalaAds; /** Disable the support of VAST and Ooyala Ads that is enabled in the SDK by default */
 /**
  * Initialize an OOOptions object with the all properties with default values
  * @returns the initialized OOOptions

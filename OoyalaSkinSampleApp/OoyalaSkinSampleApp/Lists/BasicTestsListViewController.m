@@ -20,7 +20,6 @@
   [self addCommonWithTitle:@"HLS Video" embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"];
   [self addCommonWithTitle:@"MP4 Video" embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"];
   [self addCommonWithTitle:@"VOD with CCs" embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"];
-  [self addCommonWithTitle:@"CC to no-CC Channel" embedCode:@"ZwNThkdTrSfttI2N_-MH3MRIdJQ3Ox8I" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"];
   [self addCommonWithTitle:@"4:3 Aspect Ratio" embedCode:@"FwaXZjcjrkydIftLal2cq9ymQMuvjvD8" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"];
   [self addCommonWithTitle:@"VAST Ad Pre-roll" embedCode:@"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"];
   [self addCommonWithTitle:@"VAST Ad Mid-roll" embedCode:@"pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"];

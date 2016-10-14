@@ -4,7 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <OoyalaSDK/OOVideo.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface CastPlaybackView : UIImageView
 -(instancetype) init __attribute__((unavailable("init")));

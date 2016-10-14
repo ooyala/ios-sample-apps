@@ -9,11 +9,7 @@
 
 #import "OoyalaPlayerTokenPlayerViewController.h"
 #import "AdobePassViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOooyalaError.h>
-#import <OoyalaSDK/OODebugMode.h>
-#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 
 /**
  * This activity illustrates how you use Ooyala Player Token.
@@ -127,6 +123,7 @@
   NSMutableDictionary* params = [NSMutableDictionary dictionary];
 
   params[@"account_id"] = self.accountId;
+//  params[@"override_syndication_group"] = @"override_all_synd_groups";
   NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
 
   OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];

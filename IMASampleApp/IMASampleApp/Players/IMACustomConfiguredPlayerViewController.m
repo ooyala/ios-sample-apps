@@ -8,9 +8,7 @@
 
 
 #import "IMACustomConfiguredPlayerViewController.h"
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
+#import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaIMASDK/OOIMAManager.h>
 #import "AppDelegate.h"
 

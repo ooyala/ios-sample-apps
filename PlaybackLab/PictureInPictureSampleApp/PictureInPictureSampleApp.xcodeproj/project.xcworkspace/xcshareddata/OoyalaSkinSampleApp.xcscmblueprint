@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "62AA0CF502A80EBB7BE2D9BC4065CA0D3BCB46E4" : 0,
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A844C234-D0F9-4CA4-A697-B819C2E83560",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "62AA0CF502A80EBB7BE2D9BC4065CA0D3BCB46E4" : "vendor\/",
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : "ios_sample_apps\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OoyalaSkinSampleApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OoyalaSkinSampleApp\/OoyalaSkinSampleApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/ios-sample-apps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/git.corp.ooyala.com\/vendor",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "62AA0CF502A80EBB7BE2D9BC4065CA0D3BCB46E4"
+    }
+  ]
+}

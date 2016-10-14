@@ -36,6 +36,7 @@ typedef enum {
   OOOoyalaErrorCodeDiscoveryFailedResponse, /**< The discovery reponse is received and an error occured on server side */
   OOOoyalaErrorCodeNoAvailableStreams, /**< There were no streams available to play */
   OOOoyalaErrorCodePcodeMismatch,
+  OOOoyalaErrorCodeDownloadFailed, /**< Download Failed for any reason */
 } OOOoyalaErrorCode;
 
 
