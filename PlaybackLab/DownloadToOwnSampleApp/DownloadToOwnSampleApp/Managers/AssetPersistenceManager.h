@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class PlayerSelectionOption;
+@class OOOfflineVideo;
 
 typedef NS_ENUM(NSInteger, AssetPersistenceState) {
   AssetNotDownloaded,
@@ -32,6 +33,6 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
 - (void)startDownloadForOption:(PlayerSelectionOption *)option;
 - (void)cancelDownloadForEmbedCode:(NSString *)embedCode;
 - (void)deleteDownloadedFileForEmbedCode:(NSString *)embedCode;
-- (NSURL *)downloadLocationForEmbedCode:(NSString *)embedCode;
+- (OOOfflineVideo *)videoForEmbedCode:(NSString *)embedCode;
 
 @end

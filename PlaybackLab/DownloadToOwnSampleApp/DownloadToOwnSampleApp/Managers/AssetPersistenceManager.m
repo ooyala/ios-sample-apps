@@ -10,6 +10,8 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "PlayerSelectionOption.h"
 
+#define FAIRPLAY_KEY_NAME @"%@.key"
+
 NSNotificationName const AssetPersistenceStateChangedNotification = @"AssetPersistenceStateChangedNotification";
 NSNotificationName const AssetDownloadProgressNotification = @"AssetDownloadProgressNotification";
 
@@ -78,8 +80,10 @@ NSString * const AssetProgressKey = @"percentage";
   [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
 }
 
-- (NSURL *)downloadLocationForEmbedCode:(NSString *)embedCode {
-  return [[NSUserDefaults standardUserDefaults] URLForKey:embedCode];
+- (OOOfflineVideo *)videoForEmbedCode:(NSString *)embedCode {
+  NSURL *location = [[NSUserDefaults standardUserDefaults] URLForKey:embedCode];
+  NSURL *keyLocation = [[NSUserDefaults standardUserDefaults] URLForKey:[NSString stringWithFormat:FAIRPLAY_KEY_NAME, embedCode]];
+  return [OOOfflineVideo videoWithVideoLocation:location fairplayKeyLocation:keyLocation];
 }
 
 - (NSMutableArray *)activeDownloads {
@@ -130,7 +134,7 @@ NSString * const AssetProgressKey = @"percentage";
 }
 
 - (void)downloadManager:(OOAssetDownloadManager *)manager persistedContentKeyAtLocation:(NSURL *)location {
-  
+  [[NSUserDefaults standardUserDefaults] setURL:location forKey:[NSString stringWithFormat:FAIRPLAY_KEY_NAME, manager.embedCode]];
 }
 
 - (void)downloadManager:(OOAssetDownloadManager *)manager downloadPercentage:(Float64)percentage {

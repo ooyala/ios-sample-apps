@@ -95,8 +95,7 @@
 
 - (IBAction)playOffline {
   NSLog(@"Playing an offline video");
-  NSURL *location = [[AssetPersistenceManager sharedManager] downloadLocationForEmbedCode:self.option.embedCode];
-  OOOfflineVideo *video = [[OOOfflineVideo alloc] initWithFileLocation:location];
+  OOOfflineVideo *video = [[AssetPersistenceManager sharedManager] videoForEmbedCode:self.option.embedCode];
   [self.ooyalaPlayerViewController.player setUnbundledVideo:video];
 }
 
