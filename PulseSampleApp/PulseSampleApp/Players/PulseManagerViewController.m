@@ -13,6 +13,7 @@
 
 #import <OoyalaPulseIntegration/OOPulseManager.h>
 
+#import <Pulse/Pulse.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSkinSDK/OOSkinOptions.h>
 #import <OoyalaSkinSDK/OOSkinViewController.h>
@@ -56,6 +57,11 @@
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.player];
+    
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                            selector:@selector(notificationHandler:)
+                                                name:nil
+                                             object:self.playerViewController];
   [self prepareSkinned];
   //[self prepareUnskinned];
   
@@ -147,7 +153,15 @@
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
-
+  
+  // Check for FullScreenChanged notification
+  if ([notification.name isEqualToString:OOOoyalaPlayerFullScreenChangedNotification]){
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
+                        [notification name],
+                        [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+    NSLog(@"%@", message);
+  }
+    
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.player state]],
