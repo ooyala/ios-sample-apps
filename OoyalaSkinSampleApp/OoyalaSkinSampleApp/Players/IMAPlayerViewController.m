@@ -61,6 +61,11 @@
                                                name:nil
                                              object:ooyalaPlayer];
 
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:self.skinController];
+
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
 
 
@@ -73,6 +78,14 @@
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
+  }
+
+  // Check for FullScreenChanged notification
+  if ([notification.name isEqualToString:OOOoyalaPlayerFullScreenChangedNotification]) {
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
+                         [notification name],
+                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+    NSLog(@"%@", message);
   }
 
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
