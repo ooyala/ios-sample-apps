@@ -81,7 +81,7 @@
   }
 
   // Check for FullScreenChanged notification
-  if ([notification.name isEqualToString:OOOoyalaPlayerFullScreenChangedNotification]) {
+  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
     NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
                          [notification name],
                          [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
