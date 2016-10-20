@@ -13,9 +13,9 @@
 
 #import <OoyalaPulseIntegration/OOPulseManager.h>
 
+#import <Pulse/Pulse.h>
 #import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaSkinSDK/OOSkinOptions.h>
-#import <OoyalaSkinSDK/OOSkinViewController.h>
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 
 
 @interface PulseManagerViewController () <OOPulseManagerDelegate>

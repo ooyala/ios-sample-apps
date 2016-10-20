@@ -7,8 +7,7 @@
 //
 
 #import "DefaultSkinPlayerViewController.h"
-#import <OoyalaSkinSDK/OOSkinViewController.h>
-#import <OoyalaSkinSDK/OOSkinOptions.h>
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
 @interface DefaultSkinPlayerViewController ()

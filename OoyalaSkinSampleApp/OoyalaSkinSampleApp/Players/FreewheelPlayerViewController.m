@@ -8,8 +8,7 @@
 
 #import "FreewheelPlayerViewController.h"
 #import <OoyalaFreewheelSDK/OOFreewheelManager.h>
-#import <OoyalaSkinSDK/OOSkinViewController.h>
-#import <OoyalaSkinSDK/OOSkinOptions.h>
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
 

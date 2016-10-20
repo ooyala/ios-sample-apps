@@ -8,8 +8,7 @@
 
 #import "IMAPlayerViewController.h"
 #import <OoyalaIMASDK/OOIMAManager.h>
-#import <OoyalaSkinSDK/OOSkinViewController.h>
-#import <OoyalaSkinSDK/OOSkinOptions.h>
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
 @interface IMAPlayerViewController ()
