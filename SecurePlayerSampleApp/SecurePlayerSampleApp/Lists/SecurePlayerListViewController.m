@@ -30,20 +30,20 @@
 - (void)addAllSecurePlayerSelectionOptions {
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
                                                                   embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
-                                                                      pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
+                                                                      pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
 
   /* Encrypted HLS requires you to playback video throught the AVPlayer, not through the SecurePlayer */
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Encrypted HLS VOD"
                                                                   embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"
-                                                                      pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
+                                                                      pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[BasicSimplePlayerViewController class]]];
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Clear HLS VOD"
                                                                   embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                      pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
+                                                                      pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                      domain:@"http://www.ooyala.com"
                                                              viewController:[SecurePlayerPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Microsoft Clear Smooth VOD"
