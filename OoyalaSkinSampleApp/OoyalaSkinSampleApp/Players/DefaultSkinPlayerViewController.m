@@ -58,12 +58,33 @@ NSMutableArray *_sharePlugins;
   self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer skinOptions:skinOptions parent:_videoView launchOptions:nil];
   [self addChildViewController:_skinController];
   [_skinController.view setFrame:self.videoView.bounds];
+
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:self.skinController];
+
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) notificationHandler:(NSNotification*) notification {
+
+  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    return;
+  }
+
+  // Check for FullScreenChanged notification
+  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
+                         [notification name],
+                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+    NSLog(@"%@", message);
+  }
 }
 
 /*
