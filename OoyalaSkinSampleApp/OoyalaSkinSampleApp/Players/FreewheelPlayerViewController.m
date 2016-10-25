@@ -67,11 +67,6 @@
                                                name:nil
                                              object:ooyalaPlayer];
 
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.skinController];
-
   self.adsManager = [[OOFreewheelManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
 
   NSMutableDictionary *fwParameters = [[NSMutableDictionary alloc] init];
@@ -94,20 +89,11 @@
     return;
   }
 
-  // Check for FullScreenChanged notification
-  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
-    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
-                         [notification name],
-                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
-    NSLog(@"%@", message);
-  }
-
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
         [self.skinController.player playheadTime]);
 }
-
 
 
 @end
