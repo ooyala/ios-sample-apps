@@ -19,6 +19,10 @@
 @property (nonatomic, readonly) NSString *version;
 @property (nonatomic, readonly) OOClosedCaptionsStyle *closedCaptionsDeviceStyle;
 
+// notifications
+extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fires when player goes FullScreen  */
+
+
 - (instancetype) init __attribute__((unavailable("init not available")));
 - (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
                    skinOptions:(OOSkinOptions *)jsCodeLocation
