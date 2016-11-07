@@ -25,21 +25,31 @@
                                                  domain:@"http://www.ooyala.com"
                                          viewController:nil
                                     embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
-                                                                                                 apiKey:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm.-s6jH"
-                                                                                              apiSecret:@"ZCMQt2CCVqlHWce6dG5w2WA6fkAM_JaWgoI_yzQp"
+                                                                                                 apiKey:@"API_KEY"
+                                                                                              apiSecret:@"SECRET"
                                                                                               accountId:nil
                                                                                           authorizeHost:@"http://player.ooyala.com"]],
-//
-//           [[PlayerSelectionOption alloc] initWithTitle:@"HLS Fairplay High Profile"
-//                                              embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"
-//                                                  pcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
-//                                                 domain:@"http://www.ooyala.com"
-//                                         viewController:nil
-//                                    embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
-//                                                                                                 apiKey:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm.-s6jH"
-//                                                                                              apiSecret:@"ZCMQt2CCVqlHWce6dG5w2WA6fkAM_JaWgoI_yzQp"
-//                                                                                              accountId:nil
-//                                                                                          authorizeHost:@"http://player.ooyala.com"]],
+           
+           [[PlayerSelectionOption alloc] initWithTitle:@"[AT-3304] FPS Unified"
+                                              embedCode:@"ozOTM4NzE6LaONM7zKiTQGbbultNrMfM"
+                                                  pcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
+                                                 domain:@"http://www.ooyala.com"
+                                         viewController:nil
+                                    embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
+                                                                                                 apiKey:@"API_KEY"
+                                                                                              apiSecret:@"SECRET"
+                                                                                              accountId:nil
+                                                                                          authorizeHost:@"http://player.ooyala.com"]],
+           [[PlayerSelectionOption alloc] initWithTitle:@"[AT-3304] FPS Elemental"
+                                              embedCode:@"JmZDM4NzE64pKEqRDBvp98mJpOny9lWj"
+                                                  pcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
+                                                 domain:@"http://www.ooyala.com"
+                                         viewController:nil
+                                    embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
+                                                                                                 apiKey:@"API_KEY"
+                                                                                              apiSecret:@"SECRET"
+                                                                                              accountId:nil
+                                                                                          authorizeHost:@"http://player.ooyala.com"]],
            ];
 }
 

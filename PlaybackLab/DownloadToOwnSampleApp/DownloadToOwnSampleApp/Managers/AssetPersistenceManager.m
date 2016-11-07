@@ -10,7 +10,7 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "PlayerSelectionOption.h"
 
-#define FAIRPLAY_KEY_NAME @"%@.key"
+#define FAIRPLAY_KEY_NAME @"OO_DTO_%@.key"
 
 NSNotificationName const AssetPersistenceStateChangedNotification = @"AssetPersistenceStateChangedNotification";
 NSNotificationName const AssetDownloadProgressNotification = @"AssetDownloadProgressNotification";
@@ -62,10 +62,7 @@ NSString * const AssetProgressKey = @"percentage";
   for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
-      
-      NSDictionary *userInfo = @{AssetNameKey: embedCode,
-                                 AssetStateKey: @(AssetNotDownloaded)};
-      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+      [self deleteDownloadedFileForEmbedCode:embedCode];
       break;
     }
   }
@@ -74,6 +71,9 @@ NSString * const AssetProgressKey = @"percentage";
 - (void)deleteDownloadedFileForEmbedCode:(NSString *)embedCode {
   [OOAssetDownloadManager deleteFileAtLocation:[[NSUserDefaults standardUserDefaults] URLForKey:embedCode]];
   [[NSUserDefaults standardUserDefaults] removeObjectForKey:embedCode];
+  
+  [OOAssetDownloadManager deleteFileAtLocation:[[NSUserDefaults standardUserDefaults] URLForKey:[NSString stringWithFormat:FAIRPLAY_KEY_NAME, embedCode]]];
+  [[NSUserDefaults standardUserDefaults] removeObjectForKey:[NSString stringWithFormat:FAIRPLAY_KEY_NAME, embedCode]];
   
   NSDictionary *userInfo = @{AssetNameKey: embedCode,
                              AssetStateKey: @(AssetNotDownloaded)};
