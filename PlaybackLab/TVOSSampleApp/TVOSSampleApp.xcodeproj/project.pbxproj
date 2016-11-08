@@ -11,7 +11,6 @@
 		0B3BD6341CF3E68200A8ACDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD6211CF3E68200A8ACDA /* AppDelegate.m */; };
 		0B3BD6351CF3E68200A8ACDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3BD6221CF3E68200A8ACDA /* Assets.xcassets */; };
 		0B3BD6361CF3E68200A8ACDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3BD6231CF3E68200A8ACDA /* Main.storyboard */; };
-		0B3BD6371CF3E68200A8ACDA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B3BD6251CF3E68200A8ACDA /* Info.plist */; };
 		0B3BD6381CF3E68200A8ACDA /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD6281CF3E68200A8ACDA /* VideoTableViewController.m */; };
 		0B3BD6391CF3E68200A8ACDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD6291CF3E68200A8ACDA /* main.m */; };
 		0B3BD63A1CF3E68200A8ACDA /* AbstractPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BD62C1CF3E68200A8ACDA /* AbstractPlayerViewController.m */; };
@@ -27,12 +26,18 @@
 		0BD644E01CF7C08B005AD8CB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */; };
 		0BE8AA2F1CFF889200152888 /* FairplayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */; };
 		0BE8AA321D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA311D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m */; };
+		AA4D8C941DAE626C00FFD124 /* PulsePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D8C931DAE626C00FFD124 /* PulsePlayerViewController.m */; };
+		AA4D8C971DAE66DB00FFD124 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4D8C951DAE66C900FFD124 /* OoyalaPulseIntegration.framework */; };
+		AA4D8C991DAE672B00FFD124 /* Pulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4D8C981DAE672B00FFD124 /* Pulse.framework */; };
+		AA4D8C9E1DAE813C00FFD124 /* PulseLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D8C9D1DAE813C00FFD124 /* PulseLibraryViewController.m */; };
+		AA4D8CA11DAE885600FFD124 /* PulseLibraryOption.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D8CA01DAE885600FFD124 /* PulseLibraryOption.m */; };
+		AA4D8CA31DAE891000FFD124 /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = AA4D8CA21DAE891000FFD124 /* library.json */; };
 		CA49FD741C8E985F0017E19F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */; };
 		CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA49FD751C8E98640017E19F /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B3BD6191CF3A6CD00A8ACDA /* OoyalaTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSDK.framework; path = VendorLibraries/OoyalaTVSDK.framework; sourceTree = "<group>"; };
+		0B3BD6191CF3A6CD00A8ACDA /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSkinSDK.framework; path = VendorLibraries/OoyalaTVSkinSDK.framework; sourceTree = "<group>"; };
 		0B3BD6201CF3E68200A8ACDA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B3BD6211CF3E68200A8ACDA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +66,15 @@
 		0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FairplayPlayerViewController.m; sourceTree = "<group>"; };
 		0BE8AA301D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaPlayerTokenPlayerViewController.h; sourceTree = "<group>"; };
 		0BE8AA311D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaPlayerTokenPlayerViewController.m; sourceTree = "<group>"; };
+		AA4D8C921DAE626C00FFD124 /* PulsePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsePlayerViewController.h; sourceTree = "<group>"; };
+		AA4D8C931DAE626C00FFD124 /* PulsePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsePlayerViewController.m; sourceTree = "<group>"; };
+		AA4D8C951DAE66C900FFD124 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaPulseIntegration.framework; path = "../../vendor/Ooyala/OoyalaPulseIntegration-tvOS/OoyalaPulseIntegration.framework"; sourceTree = "<group>"; };
+		AA4D8C981DAE672B00FFD124 /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulse.framework; path = VendorLibraries/Pulse.framework; sourceTree = "<group>"; };
+		AA4D8C9C1DAE812300FFD124 /* PulseLibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PulseLibraryViewController.h; sourceTree = "<group>"; };
+		AA4D8C9D1DAE813C00FFD124 /* PulseLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseLibraryViewController.m; sourceTree = "<group>"; };
+		AA4D8C9F1DAE829800FFD124 /* PulseLibraryOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PulseLibraryOption.h; sourceTree = "<group>"; };
+		AA4D8CA01DAE885600FFD124 /* PulseLibraryOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseLibraryOption.m; sourceTree = "<group>"; };
+		AA4D8CA21DAE891000FFD124 /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
 		CA49FD451C8E4D8A0017E19F /* TVOSSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVOSSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CA49FD751C8E98640017E19F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -71,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4D8C991DAE672B00FFD124 /* Pulse.framework in Frameworks */,
+				AA4D8C971DAE66DB00FFD124 /* OoyalaPulseIntegration.framework in Frameworks */,
 				0BD644E01CF7C08B005AD8CB /* JavaScriptCore.framework in Frameworks */,
 				CA49FD761C8E98640017E19F /* MediaPlayer.framework in Frameworks */,
 				0B4F2AE51DAF1B340085E226 /* OoyalaSDK.framework in Frameworks */,
@@ -85,6 +101,7 @@
 		0B3BD61F1CF3E68200A8ACDA /* TVOSSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				AA4D8CA21DAE891000FFD124 /* library.json */,
 				0B3BD6201CF3E68200A8ACDA /* AppDelegate.h */,
 				0B3BD6211CF3E68200A8ACDA /* AppDelegate.m */,
 				0B3BD6221CF3E68200A8ACDA /* Assets.xcassets */,
@@ -104,6 +121,8 @@
 			children = (
 				0B3BD6271CF3E68200A8ACDA /* VideoTableViewController.h */,
 				0B3BD6281CF3E68200A8ACDA /* VideoTableViewController.m */,
+				AA4D8C9C1DAE812300FFD124 /* PulseLibraryViewController.h */,
+				AA4D8C9D1DAE813C00FFD124 /* PulseLibraryViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -111,6 +130,8 @@
 		0B3BD62A1CF3E68200A8ACDA /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				AA4D8C921DAE626C00FFD124 /* PulsePlayerViewController.h */,
+				AA4D8C931DAE626C00FFD124 /* PulsePlayerViewController.m */,
 				0B3BD62B1CF3E68200A8ACDA /* AbstractPlayerViewController.h */,
 				0B3BD62C1CF3E68200A8ACDA /* AbstractPlayerViewController.m */,
 				0B3BD62D1CF3E68200A8ACDA /* ChildPlayerViewController.h */,
@@ -130,6 +151,8 @@
 			children = (
 				0B3BD6321CF3E68200A8ACDA /* PlayerSelectionOption.h */,
 				0B3BD6331CF3E68200A8ACDA /* PlayerSelectionOption.m */,
+				AA4D8C9F1DAE829800FFD124 /* PulseLibraryOption.h */,
+				AA4D8CA01DAE885600FFD124 /* PulseLibraryOption.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -167,6 +190,8 @@
 		CA49FD6A1C8E84E00017E19F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA4D8C981DAE672B00FFD124 /* Pulse.framework */,
+				AA4D8C951DAE66C900FFD124 /* OoyalaPulseIntegration.framework */,
 				0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */,
 				0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */,
 				0B3BD6191CF3A6CD00A8ACDA /* OoyalaTVSDK.framework */,
@@ -235,11 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BC139241D4BF5AA007EBDA4 /* Roboto-Regular.ttf in Resources */,
+				AA4D8CA31DAE891000FFD124 /* library.json in Resources */,
 				0BC139221D4BF5AA007EBDA4 /* ooyala-slick-type.ttf in Resources */,
 				0B3BD6351CF3E68200A8ACDA /* Assets.xcassets in Resources */,
 				0BC139231D4BF5AA007EBDA4 /* Roboto-Bold.ttf in Resources */,
 				0BC139251D4BF5AA007EBDA4 /* RobotoCondensed-Bold.ttf in Resources */,
-				0B3BD6371CF3E68200A8ACDA /* Info.plist in Resources */,
 				0BC139261D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf in Resources */,
 				0B3BD6361CF3E68200A8ACDA /* Main.storyboard in Resources */,
 			);
@@ -252,11 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4D8C9E1DAE813C00FFD124 /* PulseLibraryViewController.m in Sources */,
 				0B3BD6391CF3E68200A8ACDA /* main.m in Sources */,
 				0B3BD63D1CF3E68200A8ACDA /* PlayerSelectionOption.m in Sources */,
 				0B3BD63B1CF3E68200A8ACDA /* ChildPlayerViewController.m in Sources */,
 				0B3BD63C1CF3E68200A8ACDA /* FullscreenPlayerViewController.m in Sources */,
 				0BE8AA321D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m in Sources */,
+				AA4D8CA11DAE885600FFD124 /* PulseLibraryOption.m in Sources */,
+				AA4D8C941DAE626C00FFD124 /* PulsePlayerViewController.m in Sources */,
 				0B3BD6381CF3E68200A8ACDA /* VideoTableViewController.m in Sources */,
 				0BE8AA2F1CFF889200152888 /* FairplayPlayerViewController.m in Sources */,
 				0B3BD6341CF3E68200A8ACDA /* AppDelegate.m in Sources */,
@@ -372,6 +400,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
 		};
@@ -389,6 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Release;
 		};
