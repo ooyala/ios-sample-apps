@@ -5,6 +5,14 @@
 //  Created on 8/2/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
+//  Here is an example on how to use this class:
+//  OOAssetDownloadOptions *options = [OOAssetDownloadOptions new]; // set required properties for this options object
+//  OOAssetDownloadManager *manager = [[OOAssetDownloadManager alloc] initWithOptions:options];
+//  downloadManager.delegate = self;
+//  [downloadManager startDownload];
+//
+//  The delegate is an implementation of OOAssetDownloadManagerDelegate.
+//  Use it to know about the progress of the download.
 
 #import <Foundation/Foundation.h>
 
@@ -41,6 +49,15 @@
  * @param percentage value between 0.0 and 1.0, 1.0 being a completed download.
  */
 - (void)downloadManager:(OOAssetDownloadManager *)manager downloadPercentage:(Float64)percentage;
+
+/**
+ * Notifies where a persistent content key for a Fairplay protected asset was saved.
+ *
+ * @param manager the OOAssetDownloadManager that called this delegate's method.
+ * @param location where the key is stored. You should store it yourself so you can delete it later when you want
+ * to delete the downloaded asset.
+ */
+- (void)downloadManager:(OOAssetDownloadManager *)manager persistedContentKeyAtLocation:(NSURL *)location;
 
 @end
 
@@ -90,16 +107,20 @@ NS_CLASS_AVAILABLE_IOS(10.0)
 - (void)cancelDownload;
 
 /**
- * It is the responsability of the consumer of this class to save the location of a downloadable assets. 
+ * It is the responsability of the consumer of this class to save the location of both downloadable assets and it persistent key, 
+ * in case it is a Fairplay asset.
  *
  * You should use the downloadManager:downloadCompletedAtLocation:withError: method of the delegate, to know where 
  * the asset was saved.
+ *
+ * Also, use the downloadManager:persistedContentKeyAtLocation: method of the delegate to know where the Fairplay persistent
+ * key was saved.
  *
  * This class method expects to receive a valid location of a download file and will delete the contents.
  *
  * @param location File to delete
  * @returns YES if the file was deleted, NO if an error ocurred or the file didn't exist.
  */
-+ (BOOL)deleteAssetAtLocation:(NSURL *)location;
++ (BOOL)deleteFileAtLocation:(NSURL *)location;
 
 @end

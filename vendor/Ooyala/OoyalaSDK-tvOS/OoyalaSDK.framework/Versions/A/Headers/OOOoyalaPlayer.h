@@ -122,6 +122,7 @@ extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when 
 extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
 extern NSString *const OOOoyalaPlayerEmbedCodeSetNotification; /**< Fires when setEmbedCode is getting called */
 extern NSString *const OOOoyalaPlayerCastVolumeChangeNotification; /** Fires when cast device volume changed */
+extern NSString *const OOOoyalaPlayerBitrateChangedNotification; /** Fires when bitrate changes in the base stream player **/
 
 extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live closed captions */
 

@@ -32,6 +32,7 @@
 @property(readonly, nonatomic, strong) OOChannel *parent;                /**< This OOVideo's parent OOChannel if it exists (could be a OODynamicChannel) */
 @property(readonly, nonatomic) Float64 duration;                       /**< The OOVideo's Total Duration (Length) */
 @property(readonly, nonatomic) BOOL live;                              /**< Whether or not the video is live */
+@property(readonly, nonatomic) NSURL *fairplayKeyURL;                  /**< If this is an offline Fairplay asset, this is where the Fairplay key is located */
 
 /**
  * Initialize a OOVideo using the specified data (subclasses should override this)

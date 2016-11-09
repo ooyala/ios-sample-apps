@@ -9,6 +9,7 @@
 #import "OOSecureURLGenerator.h"
 
 @class OOFCCTVRatingConfiguration;
+@class OOIQConfiguration;
 @protocol AVPictureInPictureControllerDelegate;
 
 /**
@@ -17,6 +18,7 @@
 @interface OOOptions : NSObject
 
 @property (nonatomic) OOFCCTVRatingConfiguration *tvRatingConfiguration; /** tvRatingConfiguration TV rating configuration object for current OoyalaPlayer; Default: default setting object for OOFCCTVRatingConfiguration */
+@property (nonatomic) OOIQConfiguration *iqConfiguration; /** iqConfiguration iq configuration object for current player; Default: default analytics values object like playerID for OOiqConfiguration */
 @property (nonatomic) BOOL showCuePoints; /** Show cue points for ads if this is set to YES; Default: YES */
 @property (nonatomic) BOOL showLiveContentScrubber; /** If set to YES, show the live content scrubber during live content playback (for live stream only). Default: YES */
 @property (nonatomic) BOOL showAdsControls; /** If set to YES, show ads controls (show the scrubber) during ad playback. Default: YES */

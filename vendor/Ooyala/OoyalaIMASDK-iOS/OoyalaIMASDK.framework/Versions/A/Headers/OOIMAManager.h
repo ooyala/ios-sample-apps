@@ -11,6 +11,7 @@
 
 @class OOStateNotifier;
 @class OOOoyalaPlayer;
+@class OOIMAConfiguration;
 
 @protocol OOIMAManagerDelegate
 -(void)adsReady;
@@ -33,10 +34,19 @@
 
 /**
  * Initialize a OOIMAManager using the OOOoyalaPlayer
- * @param[in] player the OOOoylaPlayer
+ * @param[in] player the OOOoyalaPlayer
  * @returns the initialized OOIMAManager
  */
 - (instancetype)initWithOoyalaPlayer:(OOOoyalaPlayer *)player;
+
+/**
+ * Initialize a OOIMAManager using the OOOoyalaPlayer and an Ooyala IMA Configuration
+ * @param[in] player the OOOoyalaPlayer
+ * @param[in] configuration the OOIMAConfiguration to configure the Ooyala IMA Integration. can be nil
+
+ * @returns the initialized OOIMAManager
+ */
+- (instancetype)initWithOoyalaPlayer:(OOOoyalaPlayer *)player configuration:(OOIMAConfiguration *)configuration;
 
 /**
  * Add a compnanionSlot to AdsPlayer
@@ -57,11 +67,6 @@
  * This is meant to be called only by the OOIMAAdPlayer.
  */
 -(void)play;
-
-/*
- * Use the default browser like Safari on the mobile device instead of browsing in the native app.
- */
--(void)setUseDefaultBrowser:(BOOL)useDefaultBrowser;
 
 /**
  * Pause currently playing ad.

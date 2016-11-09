@@ -19,7 +19,6 @@
 
 /**
  * This is called when content is about to play
- *
  */
 - (void)onCurrentItemAboutToPlay:(OOVideo *)video;
 
@@ -27,6 +26,21 @@
  * Called during the first time video starts playing back after the video is changed
  */
 - (void)reportPlayStarted;
+
+/**
+ * Called when video content is paused
+ */
+- (void)reportPlayPaused;
+
+/**
+ * Called when video content is resumed from paused state;
+ */
+- (void)reportPlayResumed;
+
+/**
+ * Called when video playback is completed
+ */
+- (void)reportPlayCompleted;
 
 /**
  * Called when the Plugin is registered, effectively reporting when the player is loaded

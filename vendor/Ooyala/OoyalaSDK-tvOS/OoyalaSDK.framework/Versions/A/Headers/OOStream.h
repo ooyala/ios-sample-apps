@@ -45,6 +45,11 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 @property(readonly, nonatomic, strong) NSString *aspectRatio; /**< The OOStream's URL (Remote Asset only) */
 @property(readonly, nonatomic, assign) BOOL isLiveStream; /**< The OOStream's URL (Remote Asset only) */
 @property(readonly, nonatomic, strong) NSString *profile; /**< The OOStream's encoding profile */
+
+@property (readonly, nonatomic) NSString *drmType;        /**< If drm protected, The OOStream's drm type */
+@property (readonly, nonatomic) NSString *licenseUrl;     /**< If drm protected, The OOStream's license url */
+@property (readonly, nonatomic) NSString *certificateUrl; /**< If drm protected, The OOStream's certificate url */
+
 /**
  * Get the combined (video+audio) bitrate of this OOStream
  * @returns an NSNumber containing the combined bitrate
