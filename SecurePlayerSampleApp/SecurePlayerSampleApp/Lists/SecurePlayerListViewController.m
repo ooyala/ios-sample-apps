@@ -70,12 +70,12 @@
                                                                   embedCode:@"0xNmpoczpeNkx6Pq8ZOPwPUu6CuzFKeY"
                                                                       pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7"
                                                                      domain:@"http://www.ooyala.com"
-                                                             viewController:[SecurePlayerPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Bind to Entitlement"
+                                                             viewController:[SecurePlayerOPTPlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Bind to Entitlement(Unconfigured)"
                                                                   embedCode:@"Q3NmpoczpUH__SVSKRI0BbFl3A9CtHSL"
                                                                       pcode:@"N5dGEyOrMsKgdLgNp2B0wirtpqm7"
                                                                      domain:@"http://www.ooyala.com"
-                                                             viewController:[SecurePlayerPlayerViewController class]]];
+                                                             viewController:[SecurePlayerOPTPlayerViewController class]]];
   [self insertNewObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-Personalize"
                                                            embedCode:@"5jNzJuazpFtKmloYZQmgPeC_tqDKHX9r"
                                                                pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
