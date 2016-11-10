@@ -10,6 +10,7 @@
 #import "IMACustomConfiguredPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaIMASDK/OOIMAManager.h>
+#import <OoyalaIMASDK/OOIMAConfiguration.h>
 #import "AppDelegate.h"
 
 @interface IMACustomConfiguredPlayerViewController ()
@@ -64,7 +65,11 @@
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
 
-  self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:player];
+  //Create an optional OOIMAConfiguration
+  OOIMAConfiguration *config = [OOIMAConfiguration new];
+  config.localeOverride = @"fr";
+  
+  self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:player configuration:config];
 
   // Override the ad url to load when a video is loaded
   [self.adsManager setAdUrlOverride:@"http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7521029/pb_test_mid&ciu_szs=640x480&impl=s&cmsid=949&vid=FjbGRjbzp0DV_5-NtXBVo5Rgp3Sj0R5C&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]"];
