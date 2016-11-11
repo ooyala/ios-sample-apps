@@ -52,6 +52,9 @@
 #import <OoyalaSDK/OOVideoGravityButton.h>
 #import <OoyalaSDK/OOVolumeButton.h>
 #import <OoyalaSDK/iOS7ScrubberSliderFraming.h>
+#import <OoyalaSDK/OOControlsViewController.h>
+#import <OoyalaSDK/OOImagesIOS7.h>
+#import <OoyalaSDK/OOUIUtils.h>
 
 // Performance Monitoring classes
 #import <OoyalaSDK/OOPerformanceEventWatchMemoryProfiling.h>
