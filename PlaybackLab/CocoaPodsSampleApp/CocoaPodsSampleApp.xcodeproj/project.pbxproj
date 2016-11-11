@@ -11,27 +11,27 @@
 		0B9458AB1AC3353E000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458AA1AC3353E000DD545 /* libxml2.dylib */; };
 		0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
-		0BA65EDA1BD01534000D389F /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65EBF1BD01534000D389F /* AppDelegate.h */; settings = {ASSET_TAGS = (); }; };
-		0BA65EDB1BD01534000D389F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65EC01BD01534000D389F /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		0BA65EDC1BD01534000D389F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC11BD01534000D389F /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
-		0BA65EDD1BD01534000D389F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC31BD01534000D389F /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		0BA65EDE1BD01534000D389F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC51BD01534000D389F /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		0BA65EDF1BD01534000D389F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC61BD01534000D389F /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE01BD01534000D389F /* CocoaPodsListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65EC81BD01534000D389F /* CocoaPodsListViewController.h */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE11BD01534000D389F /* CocoaPodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65EC91BD01534000D389F /* CocoaPodsListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE21BD01534000D389F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ECA1BD01534000D389F /* main.m */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE31BD01534000D389F /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65ECC1BD01534000D389F /* BasicSimplePlayerViewController.h */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE41BD01534000D389F /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ECD1BD01534000D389F /* BasicSimplePlayerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE51BD01534000D389F /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65ECF1BD01534000D389F /* PlayerSelectionOption.h */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE61BD01534000D389F /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ED01BD01534000D389F /* PlayerSelectionOption.m */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE71BD01534000D389F /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65ED11BD01534000D389F /* SampleAppPlayerViewController.h */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE81BD01534000D389F /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ED21BD01534000D389F /* SampleAppPlayerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0BA65EE91BD01534000D389F /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED41BD01534000D389F /* PlayerDoubleButton.xib */; settings = {ASSET_TAGS = (); }; };
-		0BA65EEA1BD01534000D389F /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED51BD01534000D389F /* PlayerDoubleSwitch.xib */; settings = {ASSET_TAGS = (); }; };
-		0BA65EEB1BD01534000D389F /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED61BD01534000D389F /* PlayerDoubleText.xib */; settings = {ASSET_TAGS = (); }; };
-		0BA65EEC1BD01534000D389F /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED71BD01534000D389F /* PlayerSimple.xib */; settings = {ASSET_TAGS = (); }; };
-		0BA65EED1BD01534000D389F /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED81BD01534000D389F /* PlayerSingleButton.xib */; settings = {ASSET_TAGS = (); }; };
-		0BA65EEE1BD01534000D389F /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED91BD01534000D389F /* TableCell.xib */; settings = {ASSET_TAGS = (); }; };
+		0BA65EDA1BD01534000D389F /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65EBF1BD01534000D389F /* AppDelegate.h */; };
+		0BA65EDB1BD01534000D389F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65EC01BD01534000D389F /* AppDelegate.m */; };
+		0BA65EDC1BD01534000D389F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC11BD01534000D389F /* LaunchScreen.xib */; };
+		0BA65EDD1BD01534000D389F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC31BD01534000D389F /* Main.storyboard */; };
+		0BA65EDE1BD01534000D389F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC51BD01534000D389F /* Images.xcassets */; };
+		0BA65EDF1BD01534000D389F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65EC61BD01534000D389F /* Info.plist */; };
+		0BA65EE01BD01534000D389F /* CocoaPodsListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65EC81BD01534000D389F /* CocoaPodsListViewController.h */; };
+		0BA65EE11BD01534000D389F /* CocoaPodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65EC91BD01534000D389F /* CocoaPodsListViewController.m */; };
+		0BA65EE21BD01534000D389F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ECA1BD01534000D389F /* main.m */; };
+		0BA65EE31BD01534000D389F /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65ECC1BD01534000D389F /* BasicSimplePlayerViewController.h */; };
+		0BA65EE41BD01534000D389F /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ECD1BD01534000D389F /* BasicSimplePlayerViewController.m */; };
+		0BA65EE51BD01534000D389F /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65ECF1BD01534000D389F /* PlayerSelectionOption.h */; };
+		0BA65EE61BD01534000D389F /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ED01BD01534000D389F /* PlayerSelectionOption.m */; };
+		0BA65EE71BD01534000D389F /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA65ED11BD01534000D389F /* SampleAppPlayerViewController.h */; };
+		0BA65EE81BD01534000D389F /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA65ED21BD01534000D389F /* SampleAppPlayerViewController.m */; };
+		0BA65EE91BD01534000D389F /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED41BD01534000D389F /* PlayerDoubleButton.xib */; };
+		0BA65EEA1BD01534000D389F /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED51BD01534000D389F /* PlayerDoubleSwitch.xib */; };
+		0BA65EEB1BD01534000D389F /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED61BD01534000D389F /* PlayerDoubleText.xib */; };
+		0BA65EEC1BD01534000D389F /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED71BD01534000D389F /* PlayerSimple.xib */; };
+		0BA65EED1BD01534000D389F /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED81BD01534000D389F /* PlayerSingleButton.xib */; };
+		0BA65EEE1BD01534000D389F /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED91BD01534000D389F /* TableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -279,6 +279,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 556Y9XWD3N;
 					};
 					0B19FEFD1A3B7532003E57DF = {
 						CreatedOnToolsVersion = 6.1;
@@ -482,6 +483,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -506,6 +508,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

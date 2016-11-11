@@ -194,7 +194,7 @@
 				AA4D8C951DAE66C900FFD124 /* OoyalaPulseIntegration.framework */,
 				0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */,
 				0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */,
-				0B3BD6191CF3A6CD00A8ACDA /* OoyalaTVSDK.framework */,
+				0B3BD6191CF3A6CD00A8ACDA /* OoyalaSDK.framework */,
 				0B4F2AE41DAF1B340085E226 /* OoyalaSDK.framework */,
 				CA49FD751C8E98640017E19F /* MediaPlayer.framework */,
 				CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */,
@@ -233,6 +233,7 @@
 				TargetAttributes = {
 					CA49FD441C8E4D8A0017E19F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 556Y9XWD3N;
 					};
 				};
 			};
@@ -391,6 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
@@ -409,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
