@@ -363,6 +363,7 @@
 					0B193AB41AC109A500EFFE17 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 556Y9XWD3N;
+						ProvisioningStyle = Manual;
 					};
 					0B193AC91AC109A500EFFE17 = {
 						CreatedOnToolsVersion = 6.2;
@@ -607,6 +608,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SwiftSampleApp/SwiftSampleApp-Bridging-Header.h";
 			};
 			name = Debug;
@@ -629,6 +632,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SwiftSampleApp/SwiftSampleApp-Bridging-Header.h";
 			};
 			name = Release;

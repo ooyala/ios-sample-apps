@@ -453,6 +453,7 @@
 				TargetAttributes = {
 					95EF85FD14C27988009DAD32 = {
 						DevelopmentTeam = 556Y9XWD3N;
+						ProvisioningStyle = Manual;
 					};
 					FFA11C3C1A96618600AC143F = {
 						CreatedOnToolsVersion = 6.2;
@@ -680,6 +681,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GettingStartedSampleApp/GettingStartedSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GettingStartedSampleApp/GettingStartedSampleApp-Info.plist";
@@ -689,7 +691,8 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -700,6 +703,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GettingStartedSampleApp/GettingStartedSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GettingStartedSampleApp/GettingStartedSampleApp-Info.plist";
@@ -709,7 +713,8 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};

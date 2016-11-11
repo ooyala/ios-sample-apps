@@ -47,7 +47,6 @@
 		0BD84A0D1B91154A006CB6D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A0C1B91154A006CB6D0 /* CoreGraphics.framework */; };
 		0BD84A0F1B911550006CB6D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */; };
 		0BD84A111B911555006CB6D0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A101B911555006CB6D0 /* CoreMedia.framework */; };
-		0BD84A151B9115C3006CB6D0 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A141B9115C3006CB6D0 /* ExternalAccessory.framework */; };
 		0BD84A1E1B91179A006CB6D0 /* bgroupcert.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0BD84A171B91179A006CB6D0 /* bgroupcert.dat */; };
 		0BD84A1F1B91179A006CB6D0 /* devcerttemplate.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0BD84A181B91179A006CB6D0 /* devcerttemplate.dat */; };
 		0BD84A201B91179A006CB6D0 /* iOS-cap.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0BD84A191B91179A006CB6D0 /* iOS-cap.xml */; };
@@ -127,7 +126,6 @@
 		0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		0BD84A101B911555006CB6D0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		0BD84A121B91159B006CB6D0 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		0BD84A141B9115C3006CB6D0 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		0BD84A171B91179A006CB6D0 /* bgroupcert.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgroupcert.dat; sourceTree = "<group>"; };
 		0BD84A181B91179A006CB6D0 /* devcerttemplate.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = devcerttemplate.dat; sourceTree = "<group>"; };
 		0BD84A191B91179A006CB6D0 /* iOS-cap.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "iOS-cap.xml"; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				5E7EEE9E1CA9F9070049E43F /* OoyalaSDK.framework in Frameworks */,
 				5E7EEE9F1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework in Frameworks */,
 				5E7EEEA01CA9F9070049E43F /* SecurePlayer.framework in Frameworks */,
-				0BD84A151B9115C3006CB6D0 /* ExternalAccessory.framework in Frameworks */,
 				0BD84A111B911555006CB6D0 /* CoreMedia.framework in Frameworks */,
 				0BD84A0F1B911550006CB6D0 /* OpenGLES.framework in Frameworks */,
 				0BD84A0D1B91154A006CB6D0 /* CoreGraphics.framework in Frameworks */,
@@ -243,7 +240,6 @@
 				5E7EEE9B1CA9F9060049E43F /* OoyalaSDK.framework */,
 				5E7EEE9C1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework */,
 				5E7EEE9D1CA9F9070049E43F /* SecurePlayer.framework */,
-				0BD84A141B9115C3006CB6D0 /* ExternalAccessory.framework */,
 				0BD84A121B91159B006CB6D0 /* MediaAccessibility.framework */,
 				0BD84A101B911555006CB6D0 /* CoreMedia.framework */,
 				0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */,
@@ -424,6 +420,12 @@
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 556Y9XWD3N;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 					0B19FEFD1A3B7532003E57DF = {
 						CreatedOnToolsVersion = 6.1;
@@ -630,6 +632,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SecurePlayerSampleApp;
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -661,6 +665,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SecurePlayerSampleApp;
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};

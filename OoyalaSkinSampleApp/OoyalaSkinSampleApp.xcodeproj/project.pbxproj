@@ -364,6 +364,7 @@
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 556Y9XWD3N;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -478,6 +479,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaSkinSampleApp;
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -497,6 +500,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaSkinSampleApp;
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

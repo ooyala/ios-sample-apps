@@ -274,6 +274,7 @@
 					9751C7ED1A956C5300C7364F = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 556Y9XWD3N;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -494,6 +495,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 			};
 			name = Debug;
 		};
@@ -517,6 +520,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
+				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
+				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 			};
 			name = Release;
 		};
