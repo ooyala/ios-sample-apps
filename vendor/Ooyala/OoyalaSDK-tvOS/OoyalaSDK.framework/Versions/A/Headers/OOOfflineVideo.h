@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <OoyalaSDK/OoyalaSDK.h>
+#import "OOUnbundledVideo.h"
 
 @interface OOOfflineVideo : OOUnbundledVideo
 
