@@ -10,4 +10,5 @@ This app requires the tvOS Pulse SDK library to run.  In order to get this you m
 1. Download "tvOS 2.x SDK framework"
 1. Take the resulting Pulse-tvos.framework and paste it in `TVOSSampleApp/VendorLibraries
 1. Rename Pulse-tvos.framework to Pulse.framework
+1. Within the Pulse.framework folder, Rename Pulse-tvos to Pulse
 1. Run the application
