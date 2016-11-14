@@ -49,6 +49,7 @@
 		0B9459181AC33A40000DD545 /* libIMASampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9459121AC33A40000DD545 /* libIMASampleAppSource.a */; };
 		0B9459191AC33A40000DD545 /* libOoyalaAPISampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9459131AC33A40000DD545 /* libOoyalaAPISampleAppSource.a */; };
 		0B94591A1AC33A40000DD545 /* libOptionsSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */; };
+		0B9797671DDA47300013F12C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9797661DDA47300013F12C /* CoreLocation.framework */; };
 		0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E21A40DF7000E7DE88 /* Main.storyboard */; };
 		0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801111A40E02000E7DE88 /* LaunchScreen.xib */; };
 		0BC8CF9D1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9C1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework */; };
@@ -118,6 +119,7 @@
 		0B9459121AC33A40000DD545 /* libIMASampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMASampleAppSource.a; path = "../../../Library/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos/libIMASampleAppSource.a"; sourceTree = "<group>"; };
 		0B9459131AC33A40000DD545 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaAPISampleAppSource.a; path = "../../../Library/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos/libOoyalaAPISampleAppSource.a"; sourceTree = "<group>"; };
 		0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOptionsSampleAppSource.a; path = "../../../Library/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos/libOptionsSampleAppSource.a"; sourceTree = "<group>"; };
+		0B9797661DDA47300013F12C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0B9800E31A40DF7000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B9801121A40E02000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9797671DDA47300013F12C /* CoreLocation.framework in Frameworks */,
 				97E587501D4AE00A00202E09 /* JavaScriptCore.framework in Frameworks */,
 				0B1AFB751B02C6C400347DFA /* libNPAWSampleAppSource.a in Frameworks */,
 				0B9459151AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
@@ -215,6 +218,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B9797661DDA47300013F12C /* CoreLocation.framework */,
 				97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */,
 				0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */,
 				0B94590F1AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a */,
@@ -597,7 +601,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = CompleteSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,7 +635,7 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = CompleteSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

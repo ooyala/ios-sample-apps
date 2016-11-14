@@ -52,6 +52,8 @@
 		0B9457D11AC32C5B000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457D01AC32C5B000DD545 /* OoyalaSDK.framework */; };
 		0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B94591B1AC33A9C000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457D01AC32C5B000DD545 /* OoyalaSDK.framework */; };
+		0B9797681DDA475B0013F12C /* LocalizationLanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6D61741DA5E05C009D43D8 /* LocalizationLanguagesViewController.m */; };
+		0B9797691DDA47650013F12C /* LocalizationLanguagesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6D61731DA5E05C009D43D8 /* LocalizationLanguagesViewController.h */; };
 		0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E51A40DF9A00E7DE88 /* LaunchScreen.xib */; };
 		0BC947CB1A817732004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C51A817732004CB997 /* PlayerDoubleButton.xib */; };
 		0BC947CC1A817732004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C61A817732004CB997 /* PlayerDoubleSwitch.xib */; };
@@ -420,6 +422,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9797691DDA47650013F12C /* LocalizationLanguagesViewController.h in Headers */,
 				0B19FF601A3B80FB003E57DF /* PlayerSelectionOption.h in Headers */,
 				0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */,
 				0B19FF621A3B80FB003E57DF /* AdvancedPlaybackListViewController.h in Headers */,
@@ -559,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9797681DDA475B0013F12C /* LocalizationLanguagesViewController.m in Sources */,
 				0B4FE7931CE2AA60000DCC00 /* UnbundledPlayerViewController.m in Sources */,
 				0B4FE7941CE2AA60000DCC00 /* PerformanceProfilingPlayerViewController.m in Sources */,
 				0B4111571B6051AF00DF47AB /* CustomOverlayPlayerViewController.m in Sources */,
