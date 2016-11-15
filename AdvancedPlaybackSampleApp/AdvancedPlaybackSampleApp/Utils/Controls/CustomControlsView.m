@@ -6,7 +6,6 @@
 //
 
 #import "CustomControlsView.h"
-#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface CustomControlsView() {
 }

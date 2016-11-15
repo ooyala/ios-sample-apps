@@ -7,8 +7,6 @@
 
 #import "OOFullScreenIOS7ViewController.h"
 #import "OOFullScreenIOS7ControlsView.h"
-#import "OOUIUtils.h"
-#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface OOFullScreenIOS7ViewController ()
 
