@@ -7,7 +7,6 @@
 
 #import "CustomControlsViewController.h"
 #import "CustomControlsView.h"
-#import "OOUIUtils.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 
 @interface CustomControlsViewController() {
