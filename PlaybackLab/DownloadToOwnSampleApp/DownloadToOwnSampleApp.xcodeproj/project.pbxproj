@@ -37,8 +37,8 @@
 		CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerSelectionOption.m; path = Utils/PlayerSelectionOption.m; sourceTree = "<group>"; };
 		CA38F15E1D6D0AF40039D633 /* OptionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsDataSource.h; path = Utils/OptionsDataSource.h; sourceTree = "<group>"; };
 		CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsDataSource.m; path = Utils/OptionsDataSource.m; sourceTree = "<group>"; };
-		CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
-		CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
+		CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionTableViewCell.h; path = Utils/Views/OptionTableViewCell.h; sourceTree = "<group>"; };
+		CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionTableViewCell.m; path = Utils/Views/OptionTableViewCell.m; sourceTree = "<group>"; };
 		CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEmbedTokenGenerator.h; path = Utils/BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
 		CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEmbedTokenGenerator.m; path = Utils/BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
 		CA7ED8F81D5964E700EA0A57 /* DownloadToOwnSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadToOwnSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +87,7 @@
 		CA38F15A1D6D08600039D633 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CAFA5BAF1DDD410000CAE010 /* Views */,
 				CA38F15B1D6D086D0039D633 /* PlayerSelectionOption.h */,
 				CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */,
 				CA38F15E1D6D0AF40039D633 /* OptionsDataSource.h */,
@@ -132,8 +133,6 @@
 				CA38F15A1D6D08600039D633 /* Utils */,
 				CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */,
 				CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */,
-				CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */,
-				CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */,
 				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
 				CA7ED9071D5964E700EA0A57 /* Assets.xcassets */,
 				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
@@ -172,6 +171,15 @@
 				CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAFA5BAF1DDD410000CAE010 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */,
+				CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
