@@ -20,10 +20,9 @@
 @property NSString *playerDomain;
 @end
 
-@implementation NotificationsPlayerViewController{
+@implementation NotificationsPlayerViewController {
   AppDelegate *appDel;
 }
-
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
@@ -71,7 +70,6 @@
   [self.ooyalaPlayerViewController.player play];
 
 }
-
 
 
 /** Handle all notifications from the OoyalaPlayer
