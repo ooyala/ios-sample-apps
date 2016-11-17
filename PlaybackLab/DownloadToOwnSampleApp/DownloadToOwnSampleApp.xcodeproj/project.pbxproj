@@ -22,7 +22,6 @@
 		CA7ED90B1D5964E700EA0A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */; };
 		CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA919FED1D74D4D8002B0870 /* AssetPersistenceManager.m */; };
 		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
-		CACFA1E61D9B2A8F00CA4A59 /* SampleDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACFA1E51D9B2A8F00CA4A59 /* SampleDownloadViewController.m */; };
 		CAEAD3D21DDD385700E95E08 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */; };
 		CAFA5BAE1DDD400500CAE010 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFA5BAD1DDD400500CAE010 /* OoyalaSDK.framework */; };
 /* End PBXBuildFile section */
@@ -52,8 +51,6 @@
 		CA919FEC1D74D4D8002B0870 /* AssetPersistenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetPersistenceManager.h; path = Managers/AssetPersistenceManager.h; sourceTree = "<group>"; };
 		CA919FED1D74D4D8002B0870 /* AssetPersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetPersistenceManager.m; path = Managers/AssetPersistenceManager.m; sourceTree = "<group>"; };
 		CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		CACFA1E41D9B2A8F00CA4A59 /* SampleDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDownloadViewController.h; sourceTree = "<group>"; };
-		CACFA1E51D9B2A8F00CA4A59 /* SampleDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleDownloadViewController.m; sourceTree = "<group>"; };
 		CAEAD3D01DDD385700E95E08 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = Players/PlayerViewController.h; sourceTree = "<group>"; };
 		CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerViewController.m; path = Players/PlayerViewController.m; sourceTree = "<group>"; };
 		CAFA5BAD1DDD400500CAE010 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
@@ -131,15 +128,10 @@
 				CA38F13F1D6CF9E70039D633 /* Lists */,
 				CA561E541D78E04B00535DB3 /* Players */,
 				CA38F15A1D6D08600039D633 /* Utils */,
-				CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */,
-				CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */,
 				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
-				CA7ED9071D5964E700EA0A57 /* Assets.xcassets */,
 				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
-				CA7ED90C1D5964E700EA0A57 /* Info.plist */,
+				CA7ED9071D5964E700EA0A57 /* Assets.xcassets */,
 				CA7ED8FB1D5964E700EA0A57 /* Supporting Files */,
-				CACFA1E41D9B2A8F00CA4A59 /* SampleDownloadViewController.h */,
-				CACFA1E51D9B2A8F00CA4A59 /* SampleDownloadViewController.m */,
 			);
 			path = DownloadToOwnSampleApp;
 			sourceTree = "<group>";
@@ -147,6 +139,9 @@
 		CA7ED8FB1D5964E700EA0A57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */,
+				CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */,
+				CA7ED90C1D5964E700EA0A57 /* Info.plist */,
 				CA7ED8FC1D5964E700EA0A57 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -261,7 +256,6 @@
 				CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */,
 				CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */,
 				CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */,
-				CACFA1E61D9B2A8F00CA4A59 /* SampleDownloadViewController.m in Sources */,
 				CAEAD3D21DDD385700E95E08 /* PlayerViewController.m in Sources */,
 				CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */,
 			);
