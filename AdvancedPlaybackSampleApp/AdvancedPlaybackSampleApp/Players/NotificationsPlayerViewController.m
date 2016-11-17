@@ -69,21 +69,25 @@
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   [self.ooyalaPlayerViewController.player play];
 
+  
 }
 
 
 /** Handle all notifications from the OoyalaPlayer
  *  Filter on "Note:" in xcode logs to see key points in the notification workflow
- *  Filter on "Notification Received:" in xcode logs to see all notificiations in the notification workflow
+ *  Filter on "Notification Received:" in xcode logs to see all notifications in the notification workflow
  */
 /** NOTE: there could also be UI-related notifications from your OoyalaPlayerViewController or OOSkinViewController that are not represented here **/
 - (void) notificationHandler:(NSNotification*) notification {
 
-  // Ignore TimeChangedNotificiations for shorter logs
+  // Ignore TimeChanged Notifications for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
 
   // Notifications for when Ooyala API requests are completed
+
+  } else if ([notification.name isEqualToString:OOOoyalaPlayerEmbedCodeSetNotification]) {
+    NSLog(@"Note: The Embed Code has been set, effectively restarting the OoyalaPlayer");
   } else if ([notification.name isEqualToString:OOOoyalaPlayerContentTreeReadyNotification]) {
   } else if ([notification.name isEqualToString:OOOoyalaPlayerAuthorizationReadyNotification]) {
   } else if ([notification.name isEqualToString:OOOoyalaPlayerMetadataReadyNotification]) {
