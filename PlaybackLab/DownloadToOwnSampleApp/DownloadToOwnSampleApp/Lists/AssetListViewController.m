@@ -80,6 +80,7 @@
       }];
       break;
     }
+    case AssetAuthorizing:
     case AssetDownloading:
     {
       alertAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

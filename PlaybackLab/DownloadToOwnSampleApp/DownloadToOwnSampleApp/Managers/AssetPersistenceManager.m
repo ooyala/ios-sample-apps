@@ -21,7 +21,8 @@ NSString * const AssetProgressKey = @"percentage";
 
 @interface AssetPersistenceManager () <OOAssetDownloadManagerDelegate>
 
-@property (nonatomic) NSMutableArray *activeDownloads; // List of OOAssetDownloadManager
+@property (nonatomic) NSMutableSet *downloadsPendingAuth;         // List of OOAssetDownloadManager
+@property (nonatomic) NSMutableSet *activeDownloads;              // List of OOAssetDownloadManager
 
 @end
 
@@ -36,11 +37,31 @@ NSString * const AssetProgressKey = @"percentage";
   return manager;
 }
 
+- (NSMutableSet *)activeDownloads {
+  if (!_activeDownloads) {
+    _activeDownloads = [NSMutableSet new];
+  }
+  return _activeDownloads;
+}
+
+- (NSMutableSet *)downloadsPendingAuth {
+  if (!_downloadsPendingAuth) {
+    _downloadsPendingAuth = [NSMutableSet new];
+  }
+  return _downloadsPendingAuth;
+}
+
 - (AssetPersistenceState)downloadStateForEmbedCode:(NSString *)embedCode {
   NSURL *fileURL = [[NSUserDefaults standardUserDefaults] URLForKey:embedCode];
   if ([[NSFileManager defaultManager] fileExistsAtPath:fileURL.path]) {
     return AssetDownloaded;
   } else {
+    for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
+      if ([downloadManager.embedCode isEqualToString:embedCode]) {
+        return AssetAuthorizing;
+      }
+    }
+    
     for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
       if ([downloadManager.embedCode isEqualToString:embedCode]) {
         return AssetDownloading;
@@ -55,10 +76,22 @@ NSString * const AssetProgressKey = @"percentage";
   OOAssetDownloadManager *downloadManager = [self buildDownloadManagerForOption:option];
   downloadManager.delegate = self;
   [downloadManager startDownload];
-//  [self.activeDownloads addObject:downloadManager];
+  
+  [self.downloadsPendingAuth addObject:downloadManager];
+  NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                             AssetStateKey: @(AssetAuthorizing)};
+  [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
 }
 
 - (void)cancelDownloadForEmbedCode:(NSString *)embedCode {
+  for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager cancelDownload];
+      [self deleteDownloadedFileForEmbedCode:embedCode];
+      return;
+    }
+  }
+  
   for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
@@ -86,13 +119,6 @@ NSString * const AssetProgressKey = @"percentage";
   return [OOOfflineVideo videoWithVideoLocation:location fairplayKeyLocation:keyLocation];
 }
 
-- (NSMutableArray *)activeDownloads {
-  if (!_activeDownloads) {
-    _activeDownloads = [NSMutableArray new];
-  }
-  return _activeDownloads;
-}
-
 - (OOAssetDownloadManager *)buildDownloadManagerForOption:(PlayerSelectionOption *)option {
   OOAssetDownloadOptions *options = [OOAssetDownloadOptions new];
   options.pcode = option.pcode;
@@ -106,6 +132,10 @@ NSString * const AssetProgressKey = @"percentage";
 
 - (void)downloadManager:(OOAssetDownloadManager *)manager downloadTaskStartedWithError:(OOOoyalaError *)error {
   AssetPersistenceState downloadState = AssetDownloading;
+  
+  // we always want to remove the manager from the pending authorization list at this point
+  [self.downloadsPendingAuth removeObject:manager];
+  
   if (error) {
     NSLog(@"error: %@", error);
     downloadState = AssetNotDownloaded;

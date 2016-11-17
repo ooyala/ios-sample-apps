@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ylV-wG-glq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ylV-wG-glq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sample Download View Controller-->
-        <scene sceneID="SpL-dx-0rr">
-            <objects>
-                <viewController id="71T-ZQ-SRU" customClass="SampleDownloadViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6jc-rP-xOw"/>
-                        <viewControllerLayoutGuide type="bottom" id="VZy-9e-7mn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CEq-O7-p6n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xeu-Bh-7Qy">
-                                <state key="normal" title="Download"/>
-                                <connections>
-                                    <action selector="download:" destination="71T-ZQ-SRU" eventType="touchUpInside" id="peh-8L-z0G"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VZy-9e-7mn" firstAttribute="top" secondItem="Xeu-Bh-7Qy" secondAttribute="bottom" constant="20" id="ihT-t7-oty"/>
-                            <constraint firstItem="Xeu-Bh-7Qy" firstAttribute="centerX" secondItem="CEq-O7-p6n" secondAttribute="centerX" id="rkK-aS-6rk"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QTw-Kn-2vH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-471" y="-519"/>
-        </scene>
         <!--Assets-->
         <scene sceneID="Pvg-3F-fxv">
             <objects>
@@ -48,25 +21,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="option cell" rowHeight="75" id="qAu-yu-Spi" customClass="OptionTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qAu-yu-Spi" id="VYV-db-hBq">
-                                    <frame key="frameInset" width="328" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-kB-AnS">
+                                            <rect key="frame" x="8" y="8" width="312" height="58.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="500" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oY-ft-mBZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="312" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eN-OZ-GpE">
+                                                    <rect key="frame" x="0.0" y="34" width="312" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p1G-VK-JFe"/>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p1G-VK-JFe">
+                                                    <rect key="frame" x="0.0" y="56.5" width="312" height="2"/>
+                                                </progressView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -109,23 +87,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unk-bD-6Mm">
+                                <rect key="frame" x="16" y="64" width="343" height="193"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Unk-bD-6Mm" secondAttribute="height" multiplier="16:9" id="txS-9c-K0Y"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgJ-KD-ajj">
+                                <rect key="frame" x="163" y="265" width="49.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji6-SE-AGI">
+                                <rect key="frame" x="246" y="296.5" width="113" height="30"/>
                                 <state key="normal" title="Set Downloaded"/>
                                 <connections>
                                     <action selector="playOffline" destination="AQo-so-8ew" eventType="touchUpInside" id="523-oc-hwb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Iq-ASZ">
+                                <rect key="frame" x="16" y="296.5" width="113" height="30"/>
                                 <state key="normal" title="Set Remote URL"/>
                                 <connections>
                                     <action selector="playOnline" destination="AQo-so-8ew" eventType="touchUpInside" id="eTC-6z-5CC"/>

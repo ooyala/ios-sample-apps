@@ -19,37 +19,18 @@
                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                  domain:@"http://www.ooyala.com"],
            
-           [[PlayerSelectionOption alloc] initWithTitle:@"HLS Fairplay Main Profile"
+           [[PlayerSelectionOption alloc] initWithTitle:@"HLS Fairplay"
                                               embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
                                                   pcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
                                                  domain:@"http://www.ooyala.com"
                                          viewController:nil
                                     embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
                                                                                                  apiKey:@"API_KEY"
-                                                                                              apiSecret:@"SECRET"
+                                                                                              apiSecret:@"API_SECRET"
                                                                                               accountId:nil
                                                                                           authorizeHost:@"http://player.ooyala.com"]],
            
-           [[PlayerSelectionOption alloc] initWithTitle:@"[AT-3304] FPS Unified"
-                                              embedCode:@"ozOTM4NzE6LaONM7zKiTQGbbultNrMfM"
-                                                  pcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
-                                                 domain:@"http://www.ooyala.com"
-                                         viewController:nil
-                                    embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
-                                                                                                 apiKey:@"API_KEY"
-                                                                                              apiSecret:@"SECRET"
-                                                                                              accountId:nil
-                                                                                          authorizeHost:@"http://player.ooyala.com"]],
-           [[PlayerSelectionOption alloc] initWithTitle:@"[AT-3304] FPS Elemental"
-                                              embedCode:@"JmZDM4NzE64pKEqRDBvp98mJpOny9lWj"
-                                                  pcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
-                                                 domain:@"http://www.ooyala.com"
-                                         viewController:nil
-                                    embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"02dDQyOmJ2ryGyUV5nE9nVUt9hCW"
-                                                                                                 apiKey:@"API_KEY"
-                                                                                              apiSecret:@"SECRET"
-                                                                                              accountId:nil
-                                                                                          authorizeHost:@"http://player.ooyala.com"]],
+           // if required, add more test cases here
            ];
 }
 

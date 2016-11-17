@@ -37,6 +37,10 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
     case AssetNotDownloaded:
       self.downloadProgressView.hidden = true;
       break;
+    case AssetAuthorizing:
+      stateStr = @"authorizing";
+      self.downloadProgressView.hidden = true;
+      break;
     case AssetDownloading:
       stateStr = @"downloading";
       self.downloadProgressView.hidden = false;

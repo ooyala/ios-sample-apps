@@ -9,6 +9,7 @@
 #import "PlayerViewController.h"
 #import "PlayerSelectionOption.h"
 #import "AssetPersistenceManager.h"
+#import "BasicEmbedTokenGenerator.h"
 
 #import <OoyalaSDK/OoyalaSDK.h>
 
@@ -20,6 +21,9 @@
 
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
+@property (nonatomic) NSString *apiKey;
+@property (nonatomic) NSString *apiSecret;
+
 @end
 
 @implementation PlayerViewController
@@ -27,17 +31,35 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  OOOptions *options = [OOOptions new];
-  // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
-  // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
-  //   which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
-  options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:@"API_KEY" secret:@"SECRET"];
+  // We assume we're dealing with a Fairplay asset because the Option instance has an embedTokenGenerator
+  if (self.option.embedTokenGenerator) {
+    if ([self.option.embedTokenGenerator isKindOfClass:[BasicEmbedTokenGenerator class]]) {
+      BasicEmbedTokenGenerator *basicEmbedTokenGen = (BasicEmbedTokenGenerator *) self.option.embedTokenGenerator;
+      self.apiKey = basicEmbedTokenGen.apiKey;
+      self.apiSecret = basicEmbedTokenGen.apiSecret;
+    } else {
+      // If you're not using the BasicEmbedTokenGenerator provided in the example, supply your own API_KEY and API_SECRET
+      self.apiKey = @"API_KEY";
+      self.apiSecret = @"API_SECRET";
+    }
+    
+    OOOptions *options = [OOOptions new];
+    // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
+    // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
+    //   which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
+    options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.apiSecret];
+    
+    OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
+                                                            domain:[OOPlayerDomain domainWithString:self.option.domain]
+                                               embedTokenGenerator:self.option.embedTokenGenerator
+                                                           options:options];
+    self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
-  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
-                                                          domain:[OOPlayerDomain domainWithString:self.option.domain]
-                                             embedTokenGenerator:self.option.embedTokenGenerator
-                                                         options:options];
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+  } else { // This is a regular HLS asset with non DRM protection
+    OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
+                                                            domain:[OOPlayerDomain domainWithString:self.option.domain]];
+    self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+  }
   
   [self.ooyalaPlayerViewController willMoveToParentViewController:self];
   [self addChildViewController:self.ooyalaPlayerViewController];

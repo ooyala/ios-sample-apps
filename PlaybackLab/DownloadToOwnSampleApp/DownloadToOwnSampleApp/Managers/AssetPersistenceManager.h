@@ -13,6 +13,7 @@
 
 typedef NS_ENUM(NSInteger, AssetPersistenceState) {
   AssetNotDownloaded,
+  AssetAuthorizing,
   AssetDownloading,
   AssetDownloaded,
 };
