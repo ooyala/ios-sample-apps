@@ -100,15 +100,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji6-SE-AGI">
-                                <rect key="frame" x="246" y="296.5" width="113" height="30"/>
-                                <state key="normal" title="Set Downloaded"/>
+                                <rect key="frame" x="243" y="296.5" width="116" height="30"/>
+                                <state key="normal" title="Set Offline Video"/>
                                 <connections>
                                     <action selector="playOffline" destination="AQo-so-8ew" eventType="touchUpInside" id="523-oc-hwb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Iq-ASZ">
-                                <rect key="frame" x="16" y="296.5" width="113" height="30"/>
-                                <state key="normal" title="Set Remote URL"/>
+                                <rect key="frame" x="16" y="296.5" width="114" height="30"/>
+                                <state key="normal" title="Set Online Video"/>
                                 <connections>
                                     <action selector="playOnline" destination="AQo-so-8ew" eventType="touchUpInside" id="eTC-6z-5CC"/>
                                 </connections>
