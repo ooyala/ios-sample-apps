@@ -33,8 +33,15 @@
   self.tableView.estimatedRowHeight = 75.0;
 }
 
+
+/**
+ Initializes the options when it is first requested.
+
+ @return an Array of PlayerSelectionOption instances.
+ */
 - (NSArray *)options {
   if (!_options) {
+    // OptionsDataSource contains the information of all the assets in the app.
     _options = [OptionsDataSource options];
   }
   return _options;
@@ -43,6 +50,7 @@
 #pragma mark - OptionTableViewCellDelegate methods
 
 - (void)optionCell:(OptionTableViewCell *)cell downloadStateDidChange:(NSNumber *)state {
+  // the given cell is letting this delegate (table view) know that the download state of its asset changed. Refresh the UI for that given cell.
   NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
   if (indexPath) {
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -56,15 +64,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  // OptionCellReusableIdentifier has to match the identifier set in the Storyboard for the cell.
   OptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:OptionCellReusableIdentifier forIndexPath:indexPath];
   
   PlayerSelectionOption *option = self.options[indexPath.row];
   cell.option = option;
+  // This class will be delegate of all of the created cells.
   cell.delegate = self;
   
   return cell;
 }
 
+// Called when the accessoryButton in the cell is tapped.
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
   OptionTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
   PlayerSelectionOption *option = cell.option;
@@ -97,6 +108,7 @@
     }
   }
   
+  // Show an UIAlertController with different options, the alert might show Download, Cancel or Delete, depending on the download state of the asset.
   UIAlertController *alertController = [UIAlertController alertControllerWithTitle:option.title
                                                                            message:@"Select an option"
                                                                     preferredStyle:UIAlertControllerStyleActionSheet];
@@ -113,8 +125,8 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  // When tapping on a cell, we'll transition to the PlayerViewController. If that's the case set the PlayerSelectionOption for the player.
   if ([sender isKindOfClass:[OptionTableViewCell class]] && [segue.identifier isEqualToString:PLAYER_SEGUE]) {
     PlayerViewController *playerViewController = segue.destinationViewController;
     OptionTableViewCell *cell = sender;

@@ -15,12 +15,18 @@
 
 @interface PlayerViewController ()
 
+
 @property (weak, nonatomic) IBOutlet UIView *playerView;
+
+/**
+ Shows the current download state of the asset
+ */
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playOfflineButton;
 
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
+// properties required for a Fairplay asset
 @property (nonatomic) NSString *apiKey;
 @property (nonatomic) NSString *apiSecret;
 
@@ -34,6 +40,8 @@
   // We assume we're dealing with a Fairplay asset because the Option instance has an embedTokenGenerator
   if (self.option.embedTokenGenerator) {
     if ([self.option.embedTokenGenerator isKindOfClass:[BasicEmbedTokenGenerator class]]) {
+      // If you're using the BasicEmbedTokenGenerator we provided in this sample app, this block will be called.
+      // check the OptionsDataSource class to see how we define the assets for the app and how we add a reference to a BasicEmbedTokenGenerator to a given asset.
       BasicEmbedTokenGenerator *basicEmbedTokenGen = (BasicEmbedTokenGenerator *) self.option.embedTokenGenerator;
       self.apiKey = basicEmbedTokenGen.apiKey;
       self.apiSecret = basicEmbedTokenGen.apiSecret;
@@ -73,6 +81,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
+  
+  // Become an observer for the AssetPersistenceStateChangedNotification notification.
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(handleAssetStateChanged:)
                                                name:AssetPersistenceStateChangedNotification
@@ -81,13 +91,24 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
+  // Remove this class as an observer.
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+
+/**
+ Update the UI depending on the download state of the given asset.
+
+ @param state download state to use to update the UI.
+ */
 - (void)updateUIUsingState:(NSNumber *)state {
   switch ([state intValue]) {
     case AssetNotDownloaded:
       self.stateLabel.text = @"State: Not Downloaded";
+      self.playOfflineButton.enabled = NO;
+      break;
+    case AssetAuthorizing:
+      self.stateLabel.text = @"State: Authorizing";
       self.playOfflineButton.enabled = NO;
       break;
     case AssetDownloading:
@@ -105,20 +126,25 @@
   NSString *embedCode = notification.userInfo[AssetNameKey];
   NSNumber *state = notification.userInfo[AssetStateKey];
   
+  // update the UI only if it is the correct embed code.
   if ([embedCode isEqualToString:self.option.embedCode]) {
-    [self updateUIUsingState:state];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self updateUIUsingState:state];
+    });
   }
 }
 
+// action linked to the online video button
 - (IBAction)playOnline {
-  NSLog(@"Playing an online video");
   [self.ooyalaPlayerViewController.player setEmbedCode:self.option.embedCode];
 }
 
+// action linked to the offline video button
 - (IBAction)playOffline {
-  NSLog(@"Playing an offline video");
   OOOfflineVideo *video = [[AssetPersistenceManager sharedManager] videoForEmbedCode:self.option.embedCode];
-  [self.ooyalaPlayerViewController.player setUnbundledVideo:video];
+  if (video) {
+    [self.ooyalaPlayerViewController.player setUnbundledVideo:video];
+  }
 }
 
 @end

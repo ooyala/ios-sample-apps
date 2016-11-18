@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
+
+/**
+ Basic example of an OOEmbedTokenGenerator implementation.
+ */
 @interface BasicEmbedTokenGenerator : NSObject <OOEmbedTokenGenerator>
 
 @property (nonatomic) NSString *pcode;

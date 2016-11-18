@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ Manages the assets to be downloaded.
+ */
 @interface OptionsDataSource : NSObject
 
+
+/**
+ @return an Array of PlayerSelectionOption instances to be used throughout the app. 
+ */
 + (NSArray *)options;
 
 @end

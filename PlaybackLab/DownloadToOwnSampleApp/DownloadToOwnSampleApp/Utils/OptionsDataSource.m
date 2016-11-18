@@ -19,11 +19,12 @@
                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                  domain:@"http://www.ooyala.com"],
            
+           // Fairplay assets require an embedTokenGenerator instance.
+           // We provide an example, use BasicEmbedTokenGenerator to test your own assets too.
            [[PlayerSelectionOption alloc] initWithTitle:@"HLS Fairplay"
                                               embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
                                                   pcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
                                                  domain:@"http://www.ooyala.com"
-                                         viewController:nil
                                     embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
                                                                                                  apiKey:@"API_KEY"
                                                                                               apiSecret:@"API_SECRET"
