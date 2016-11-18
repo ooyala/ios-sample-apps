@@ -118,10 +118,12 @@ NSString * const AssetProgressKey = @"percentage";
   NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
                              AssetStateKey: @(AssetAuthorizing)};
   [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+  NSLog(@"[AssetPersistenceManager] download intent started for embed code: %@, current download state:  Authorizing", downloadManager.embedCode);
 }
 
 - (void)cancelDownloadForEmbedCode:(NSString *)embedCode {
   // find a download in progress for the given embed code, cancel the download and remove the remaining contents if something was downloaded already.
+  NSLog(@"[AssetPersistenceManager] Attempting to cancel a download for embed code: %@", embedCode);
   for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
@@ -154,6 +156,7 @@ NSString * const AssetProgressKey = @"percentage";
   NSDictionary *userInfo = @{AssetNameKey: embedCode,
                              AssetStateKey: @(AssetNotDownloaded)};
   [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+  NSLog(@"[AssetPersistenceManager] Cancelled a download in progress for embed code: %@, current download state: Not Downloaded", embedCode);
 }
 
 - (OOOfflineVideo *)videoForEmbedCode:(NSString *)embedCode {
@@ -172,11 +175,12 @@ NSString * const AssetProgressKey = @"percentage";
   [self.downloadsPendingAuth removeObject:manager];
   
   if (error) {
-    NSLog(@"error: %@", error);
+    NSLog(@"[AssetPersistenceManager] error starting a download for embed code: %@, current download state: Not Downloaded, error object: %@", manager.embedCode, error);
     downloadState = AssetNotDownloaded;
   } else {
     // If a download was started successfuly, then we add it to the activeDownloads Set.
     [self.activeDownloads addObject:manager];
+    NSLog(@"[AssetPersistenceManager] download started successfuly for embed code: %@, current download state: Downloading", manager.embedCode);
   }
   
   // Notify the download state of the asset, either Downloading or NotDownloaded.
@@ -189,6 +193,7 @@ NSString * const AssetProgressKey = @"percentage";
 - (void)downloadManager:(OOAssetDownloadManager *)manager persistedContentKeyAtLocation:(NSURL *)location {
   // Store the location of the Fairplay Key in NSUserDefaults, we'll need it to playback the DRM video offline.
   [[NSUserDefaults standardUserDefaults] setURL:location forKey:[NSString stringWithFormat:FAIRPLAY_KEY_NAME, manager.embedCode]];
+  NSLog(@"[AssetPersistenceManager] Saving Fairplay license location in NSUserDefaults using key: %@", [NSString stringWithFormat:FAIRPLAY_KEY_NAME, manager.embedCode]);
 }
 
 - (void)downloadManager:(OOAssetDownloadManager *)manager downloadPercentage:(Float64)percentage {
@@ -200,10 +205,12 @@ NSString * const AssetProgressKey = @"percentage";
 - (void)downloadManager:(OOAssetDownloadManager *)manager downloadCompletedAtLocation:(NSURL *)location withError:(OOOoyalaError *)error {
   AssetPersistenceState downloadState = AssetDownloaded;
   if (error) {
+    NSLog(@"[AssetPersistenceManager] error completing a download for embed code: %@, current download state: Not Downloaded, error object: %@", manager.embedCode, error);
     downloadState = AssetNotDownloaded;
   } else {
     // A download completed successfuly, save the location in NSUserDefaults
     [[NSUserDefaults standardUserDefaults] setURL:location forKey:manager.embedCode];
+    NSLog(@"[AssetPersistenceManager] download completed successfuly for embed code: %@ current download state: Downloaded. Saving video location in NSUserDefaults using key: %@", manager.embedCode, manager.embedCode);
   }
   
   // At this point the download completed successfuly or not, either way we must remove the manager from the activeDownloads Set.
