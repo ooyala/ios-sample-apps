@@ -18,7 +18,6 @@
 		0B193AE11AC1182D00EFFE17 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */; };
 		0B193AE41AC1184500EFFE17 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */; };
 		0B193AE51AC1184500EFFE17 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */; };
-		0B193AE71AC1185800EFFE17 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE61AC1185800EFFE17 /* OoyalaSDK.framework */; };
 		0B193AE91AC1186D00EFFE17 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */; };
 		0B193AEB1AC1187A00EFFE17 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEA1AC1187A00EFFE17 /* Security.framework */; };
 		0B193AED1AC1188B00EFFE17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */; };
@@ -30,12 +29,9 @@
 		0B193AF91AC118D500EFFE17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */; };
 		0B193AFB1AC118E100EFFE17 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AFA1AC118E100EFFE17 /* libxml2.dylib */; };
 		0B193AFD1AC118F400EFFE17 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AFC1AC118F400EFFE17 /* libc++.dylib */; };
-		0B35A0641ACB10F30003CE85 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B35A0631ACB10F30003CE85 /* InterfaceController.swift */; };
-		0B35A0661ACB10F30003CE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B35A0651ACB10F30003CE85 /* Images.xcassets */; };
-		0B35A06A1ACB10F30003CE85 /* SwiftSampleApp WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 0B35A0691ACB10F30003CE85 /* SwiftSampleApp WatchKit App.app */; };
-		0B35A0721ACB10F30003CE85 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B35A0701ACB10F30003CE85 /* Interface.storyboard */; };
-		0B35A0741ACB10F30003CE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B35A0731ACB10F30003CE85 /* Images.xcassets */; };
-		0B35A0771ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0B35A05F1ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0B50E1D11DDD429B00817DD8 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B50E1D01DDD429B00817DD8 /* OoyalaSDK.framework */; };
+		0B50E1D31DDD45D000817DD8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B50E1D21DDD45D000817DD8 /* JavaScriptCore.framework */; };
+		0B50E1D51DDD45D400817DD8 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B50E1D41DDD45D400817DD8 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,20 +42,6 @@
 			remoteGlobalIDString = 0B193AB41AC109A500EFFE17;
 			remoteInfo = SwiftSampleApp;
 		};
-		0B35A06B1ACB10F30003CE85 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B193AAD1AC109A500EFFE17 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B35A0681ACB10F30003CE85;
-			remoteInfo = "SwiftSampleApp WatchKit App";
-		};
-		0B35A0751ACB10F30003CE85 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B193AAD1AC109A500EFFE17 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B35A05E1ACB10F30003CE85;
-			remoteInfo = "SwiftSampleApp WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,7 +51,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0B35A0771ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +73,6 @@
 		0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		0B193AE61AC1185800EFFE17 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B193AEA1AC1187A00EFFE17 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -105,14 +85,15 @@
 		0B193AFA1AC118E100EFFE17 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0B193AFC1AC118F400EFFE17 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B193AFF1AC11A5400EFFE17 /* SwiftSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		0B35A05F1ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SwiftSampleApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B35A0621ACB10F30003CE85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B35A0631ACB10F30003CE85 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		0B35A0651ACB10F30003CE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0B35A0691ACB10F30003CE85 /* SwiftSampleApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftSampleApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B35A06F1ACB10F30003CE85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B35A0711ACB10F30003CE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		0B35A0731ACB10F30003CE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B50E1D01DDD429B00817DD8 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		0B50E1D21DDD45D000817DD8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		0B50E1D41DDD45D400817DD8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B50E1D51DDD45D400817DD8 /* AVKit.framework in Frameworks */,
+				0B50E1D31DDD45D000817DD8 /* JavaScriptCore.framework in Frameworks */,
 				0B193AFD1AC118F400EFFE17 /* libc++.dylib in Frameworks */,
 				0B193AFB1AC118E100EFFE17 /* libxml2.dylib in Frameworks */,
 				0B193AF91AC118D500EFFE17 /* CoreGraphics.framework in Frameworks */,
@@ -130,8 +113,8 @@
 				0B193AEF1AC1189A00EFFE17 /* CoreText.framework in Frameworks */,
 				0B193AED1AC1188B00EFFE17 /* AVFoundation.framework in Frameworks */,
 				0B193AEB1AC1187A00EFFE17 /* Security.framework in Frameworks */,
+				0B50E1D11DDD429B00817DD8 /* OoyalaSDK.framework in Frameworks */,
 				0B193AE91AC1186D00EFFE17 /* SystemConfiguration.framework in Frameworks */,
-				0B193AE71AC1185800EFFE17 /* OoyalaSDK.framework in Frameworks */,
 				0B193AE41AC1184500EFFE17 /* MediaAccessibility.framework in Frameworks */,
 				0B193AE51AC1184500EFFE17 /* MediaPlayer.framework in Frameworks */,
 				0B193AE11AC1182D00EFFE17 /* CFNetwork.framework in Frameworks */,
@@ -140,13 +123,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0B193AC71AC109A500EFFE17 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B35A05C1ACB10F30003CE85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,6 +138,7 @@
 				0B193AB71AC109A500EFFE17 /* SwiftSampleApp */,
 				0B35A0601ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension */,
 				0B35A06D1ACB10F30003CE85 /* SwiftSampleApp WatchKit App */,
+				0B50E1CF1DDD429B00817DD8 /* VendorLibraries */,
 				0B193AFE1AC118FB00EFFE17 /* Frameworks */,
 				0B193ACD1AC109A500EFFE17 /* SwiftSampleAppTests */,
 				0B193AB61AC109A500EFFE17 /* Products */,
@@ -173,8 +150,6 @@
 			children = (
 				0B193AB51AC109A500EFFE17 /* SwiftSampleApp.app */,
 				0B193ACA1AC109A500EFFE17 /* SwiftSampleAppTests.xctest */,
-				0B35A05F1ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension.appex */,
-				0B35A0691ACB10F30003CE85 /* SwiftSampleApp WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +197,8 @@
 		0B193AFE1AC118FB00EFFE17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B50E1D41DDD45D400817DD8 /* AVKit.framework */,
+				0B50E1D21DDD45D000817DD8 /* JavaScriptCore.framework */,
 				0B193AFC1AC118F400EFFE17 /* libc++.dylib */,
 				0B193AFA1AC118E100EFFE17 /* libxml2.dylib */,
 				0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */,
@@ -233,7 +210,6 @@
 				0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */,
 				0B193AEA1AC1187A00EFFE17 /* Security.framework */,
 				0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */,
-				0B193AE61AC1185800EFFE17 /* OoyalaSDK.framework */,
 				0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */,
 				0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */,
 				0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */,
@@ -278,6 +254,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0B50E1CF1DDD429B00817DD8 /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				0B50E1D01DDD429B00817DD8 /* OoyalaSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,7 +277,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0B35A0761ACB10F30003CE85 /* PBXTargetDependency */,
 			);
 			name = SwiftSampleApp;
 			productName = SwiftSampleApp;
@@ -318,39 +301,6 @@
 			productReference = 0B193ACA1AC109A500EFFE17 /* SwiftSampleAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0B35A05E1ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B35A07D1ACB10F30003CE85 /* Build configuration list for PBXNativeTarget "SwiftSampleApp WatchKit Extension" */;
-			buildPhases = (
-				0B35A05B1ACB10F30003CE85 /* Sources */,
-				0B35A05C1ACB10F30003CE85 /* Frameworks */,
-				0B35A05D1ACB10F30003CE85 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0B35A06C1ACB10F30003CE85 /* PBXTargetDependency */,
-			);
-			name = "SwiftSampleApp WatchKit Extension";
-			productName = "SwiftSampleApp WatchKit Extension";
-			productReference = 0B35A05F1ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		0B35A0681ACB10F30003CE85 /* SwiftSampleApp WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B35A07C1ACB10F30003CE85 /* Build configuration list for PBXNativeTarget "SwiftSampleApp WatchKit App" */;
-			buildPhases = (
-				0B35A0671ACB10F30003CE85 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SwiftSampleApp WatchKit App";
-			productName = "SwiftSampleApp WatchKit App";
-			productReference = 0B35A0691ACB10F30003CE85 /* SwiftSampleApp WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -363,17 +313,13 @@
 					0B193AB41AC109A500EFFE17 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 556Y9XWD3N;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 					};
 					0B193AC91AC109A500EFFE17 = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0B193AB41AC109A500EFFE17;
-					};
-					0B35A05E1ACB10F30003CE85 = {
-						CreatedOnToolsVersion = 6.2;
-					};
-					0B35A0681ACB10F30003CE85 = {
-						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -392,8 +338,6 @@
 			targets = (
 				0B193AB41AC109A500EFFE17 /* SwiftSampleApp */,
 				0B193AC91AC109A500EFFE17 /* SwiftSampleAppTests */,
-				0B35A05E1ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension */,
-				0B35A0681ACB10F30003CE85 /* SwiftSampleApp WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -413,24 +357,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B35A05D1ACB10F30003CE85 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B35A06A1ACB10F30003CE85 /* SwiftSampleApp WatchKit App.app in Resources */,
-				0B35A0661ACB10F30003CE85 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B35A0671ACB10F30003CE85 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B35A0721ACB10F30003CE85 /* Interface.storyboard in Resources */,
-				0B35A0741ACB10F30003CE85 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,14 +381,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B35A05B1ACB10F30003CE85 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B35A0641ACB10F30003CE85 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -470,16 +388,6 @@
 			isa = PBXTargetDependency;
 			target = 0B193AB41AC109A500EFFE17 /* SwiftSampleApp */;
 			targetProxy = 0B193ACB1AC109A500EFFE17 /* PBXContainerItemProxy */;
-		};
-		0B35A06C1ACB10F30003CE85 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B35A0681ACB10F30003CE85 /* SwiftSampleApp WatchKit App */;
-			targetProxy = 0B35A06B1ACB10F30003CE85 /* PBXContainerItemProxy */;
-		};
-		0B35A0761ACB10F30003CE85 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B35A05E1ACB10F30003CE85 /* SwiftSampleApp WatchKit Extension */;
-			targetProxy = 0B35A0751ACB10F30003CE85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -599,6 +507,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -611,6 +520,7 @@
 				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
 				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SwiftSampleApp/SwiftSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -623,6 +533,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -635,6 +546,7 @@
 				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
 				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SwiftSampleApp/SwiftSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -653,6 +565,7 @@
 				INFOPLIST_FILE = SwiftSampleAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSampleApp.app/SwiftSampleApp";
 			};
 			name = Debug;
@@ -668,61 +581,8 @@
 				INFOPLIST_FILE = SwiftSampleAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSampleApp.app/SwiftSampleApp";
-			};
-			name = Release;
-		};
-		0B35A0781ACB10F30003CE85 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SwiftSampleApp WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		0B35A0791ACB10F30003CE85 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "SwiftSampleApp WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		0B35A07A1ACB10F30003CE85 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IBSC_MODULE = SwiftSampleApp_WatchKit_Extension;
-				INFOPLIST_FILE = "SwiftSampleApp WatchKit App/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Debug;
-		};
-		0B35A07B1ACB10F30003CE85 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				IBSC_MODULE = SwiftSampleApp_WatchKit_Extension;
-				INFOPLIST_FILE = "SwiftSampleApp WatchKit App/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
@@ -752,24 +612,6 @@
 			buildConfigurations = (
 				0B193AD81AC109A500EFFE17 /* Debug */,
 				0B193AD91AC109A500EFFE17 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0B35A07C1ACB10F30003CE85 /* Build configuration list for PBXNativeTarget "SwiftSampleApp WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B35A07A1ACB10F30003CE85 /* Debug */,
-				0B35A07B1ACB10F30003CE85 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0B35A07D1ACB10F30003CE85 /* Build configuration list for PBXNativeTarget "SwiftSampleApp WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B35A0781ACB10F30003CE85 /* Debug */,
-				0B35A0791ACB10F30003CE85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
