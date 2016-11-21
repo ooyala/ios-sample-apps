@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B24B84A1AA66D6700F131C3 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
+		0B50E2501DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B50E24E1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h */; };
+		0B50E2511DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E24F1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m */; };
 		0B9458A91AC32CDB000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458A81AC32CDB000DD545 /* OoyalaSDK.framework */; };
 		0B9459211AC33AD2000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458A81AC32CDB000DD545 /* OoyalaSDK.framework */; };
 		0BC9480C1A8177E2004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948061A8177E2004CB997 /* PlayerDoubleButton.xib */; };
@@ -55,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B50E24E1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQConfigurationPlayerViewController.h; sourceTree = "<group>"; };
+		0B50E24F1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQConfigurationPlayerViewController.m; sourceTree = "<group>"; };
 		0B9458A81AC32CDB000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0BC948061A8177E2004CB997 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
 		0BC948071A8177E2004CB997 /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 		9772BFAA1A43B6C000B255C0 /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				0B50E24E1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h */,
+				0B50E24F1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m */,
 				0BDC4C181AA5037D00576639 /* OptionsViewController.h */,
 				0BDC4C191AA5037D00576639 /* OptionsViewController.m */,
 				9772BFAE1A43C11C00B255C0 /* TVRatingsPlayerViewController.h */,
@@ -243,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BDC4C1A1AA5037D00576639 /* OptionsViewController.h in Headers */,
+				0B50E2501DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +376,7 @@
 				9772BF891A43B61500B255C0 /* AppDelegate.m in Sources */,
 				9772BFB31A43C15E00B255C0 /* OptionsListTableViewController.m in Sources */,
 				0BF0B0E61A671E4300026FDC /* PlayerSelectionOption.m in Sources */,
+				0B50E2511DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m in Sources */,
 				9772BF861A43B61500B255C0 /* main.m in Sources */,
 				0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */,
 				0BF0B0E71A671E4300026FDC /* SampleAppPlayerViewController.m in Sources */,

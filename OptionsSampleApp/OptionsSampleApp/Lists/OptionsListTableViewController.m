@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 
+#import "IQConfigurationPlayerViewController.h"
 #import "OptionsListTableViewController.h"
 #import "TVRatingsPlayerViewController.h"
 #import "OptionsViewController.h"
@@ -26,6 +27,11 @@ static NSString *cellId = @"pickerCell";
 }
 
 - (void)addAllPlayerSelectionOptions {
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"IQ Configuration Sample"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [IQConfigurationPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Preload/Promo Image with Preroll"
                                                             embedCode:@"Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c"
                                                                 pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
