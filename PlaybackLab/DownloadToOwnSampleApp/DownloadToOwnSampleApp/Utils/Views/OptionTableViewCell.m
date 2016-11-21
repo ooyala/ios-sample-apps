@@ -65,7 +65,7 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
       self.downloadProgressView.hidden = true;
       break;
     case AssetDownloading:
-      stateStr = @"downloading";
+      stateStr = @"download starting";
       self.downloadProgressView.hidden = false;
       break;
     case AssetDownloaded:
@@ -111,6 +111,7 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
     // Update progressView with the percentage progress of the notification. We assume it has a value between 0.0 and 1.0.
     dispatch_async(dispatch_get_main_queue(), ^{
       NSNumber *percentage = notification.userInfo[AssetProgressKey];
+      self.subtitleLabel.text = [NSString stringWithFormat:@"downloading: %.0f%%", [percentage floatValue] * 100];
       [self.downloadProgressView setProgress:[percentage floatValue] animated:YES];
     });
   }

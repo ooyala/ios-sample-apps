@@ -87,6 +87,10 @@
                                            selector:@selector(handleAssetStateChanged:)
                                                name:AssetPersistenceStateChangedNotification
                                              object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(handleProgressChanged:)
+                                               name:AssetDownloadProgressNotification
+                                             object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -130,6 +134,18 @@
   if ([embedCode isEqualToString:self.option.embedCode]) {
     dispatch_async(dispatch_get_main_queue(), ^{
       [self updateUIUsingState:state];
+    });
+  }
+}
+
+- (void)handleProgressChanged:(NSNotification *)notification {
+  NSString *embedCode = notification.userInfo[AssetNameKey];
+  
+  if ([embedCode isEqualToString:self.option.embedCode]) {
+    // Update progressView with the percentage progress of the notification. We assume it has a value between 0.0 and 1.0.
+    dispatch_async(dispatch_get_main_queue(), ^{
+      NSNumber *percentage = notification.userInfo[AssetProgressKey];
+      self.stateLabel.text = [NSString stringWithFormat:@"State: Downloading (%.0f%%)", [percentage floatValue] * 100];
     });
   }
 }
