@@ -61,4 +61,10 @@ typedef enum
  */
 - (BOOL)requestAdMode:(id<OOAdPlugin>)plugin;
 
+/**
+ * Determine which ad plugin, if any, has control of the OoyalaPlayer
+ *
+ * @return the ad plugin which currently is in Ad Mode, or nil if no plugin is in ad mode
+ */
+- (id<OOAdPlugin>)activeAdPlugin;
 @end
