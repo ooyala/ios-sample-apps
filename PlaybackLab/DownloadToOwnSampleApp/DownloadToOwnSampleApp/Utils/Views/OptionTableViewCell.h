@@ -31,7 +31,6 @@ FOUNDATION_EXPORT NSString *const OptionCellReusableIdentifier;
  */
 @protocol OptionTableViewCellDelegate <NSObject>
 
-
 /**
  Notifies the delegate about the download state of a given cell's embed code.
 
