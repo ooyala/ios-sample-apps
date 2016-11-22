@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ylV-wG-glq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Assets-->
+        <scene sceneID="Pvg-3F-fxv">
+            <objects>
+                <tableViewController id="ldA-SG-uTe" customClass="AssetListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="1HU-KU-xK6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="option cell" rowHeight="75" id="qAu-yu-Spi" customClass="OptionTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qAu-yu-Spi" id="VYV-db-hBq">
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="75"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-kB-AnS">
+                                            <rect key="frame" x="8" y="8" width="312" height="58.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="500" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oY-ft-mBZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="312" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eN-OZ-GpE">
+                                                    <rect key="frame" x="0.0" y="34" width="312" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p1G-VK-JFe">
+                                                    <rect key="frame" x="0.0" y="56.5" width="312" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nCI-kB-AnS" secondAttribute="bottom" id="fCw-qV-4hH"/>
+                                        <constraint firstItem="nCI-kB-AnS" firstAttribute="trailing" secondItem="VYV-db-hBq" secondAttribute="trailingMargin" id="rVR-kX-vqV"/>
+                                        <constraint firstItem="nCI-kB-AnS" firstAttribute="top" secondItem="VYV-db-hBq" secondAttribute="topMargin" id="wUz-np-10F"/>
+                                        <constraint firstItem="nCI-kB-AnS" firstAttribute="leading" secondItem="VYV-db-hBq" secondAttribute="leadingMargin" id="wsv-M2-oIH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downloadProgressView" destination="p1G-VK-JFe" id="wda-pH-nTQ"/>
+                                    <outlet property="subtitleLabel" destination="7eN-OZ-GpE" id="S2L-sg-Nsv"/>
+                                    <outlet property="titleLabel" destination="9oY-ft-mBZ" id="UyV-MU-vLD"/>
+                                    <segue destination="AQo-so-8ew" kind="show" identifier="videoSegue" id="fgP-31-pYP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ldA-SG-uTe" id="Owk-VM-3JD"/>
+                            <outlet property="delegate" destination="ldA-SG-uTe" id="Bkg-uT-avg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Assets" id="3Xe-TH-xRG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l80-06-8Tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="133.5832083958021"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="n52-pw-7dq">
+            <objects>
+                <viewController id="AQo-so-8ew" customClass="PlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vui-WH-lpt"/>
+                        <viewControllerLayoutGuide type="bottom" id="eW3-1u-4Ph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mo9-QQ-jG8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unk-bD-6Mm">
+                                <rect key="frame" x="16" y="64" width="343" height="193"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Unk-bD-6Mm" secondAttribute="height" multiplier="16:9" id="txS-9c-K0Y"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgJ-KD-ajj">
+                                <rect key="frame" x="163" y="265" width="49.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji6-SE-AGI">
+                                <rect key="frame" x="243" y="296.5" width="116" height="30"/>
+                                <state key="normal" title="Set Offline Video"/>
+                                <connections>
+                                    <action selector="playOffline" destination="AQo-so-8ew" eventType="touchUpInside" id="523-oc-hwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Iq-ASZ">
+                                <rect key="frame" x="16" y="296.5" width="114" height="30"/>
+                                <state key="normal" title="Set Online Video"/>
+                                <connections>
+                                    <action selector="playOnline" destination="AQo-so-8ew" eventType="touchUpInside" id="eTC-6z-5CC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="top" secondItem="vui-WH-lpt" secondAttribute="bottom" id="6vZ-Rt-TuG"/>
+                            <constraint firstItem="CTr-Iq-ASZ" firstAttribute="top" secondItem="wgJ-KD-ajj" secondAttribute="bottom" constant="11" id="8np-kJ-cco"/>
+                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="trailing" secondItem="Mo9-QQ-jG8" secondAttribute="trailingMargin" id="Jmb-o2-1Lg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ji6-SE-AGI" secondAttribute="trailing" id="XtZ-B8-IaO"/>
+                            <constraint firstItem="ji6-SE-AGI" firstAttribute="top" secondItem="wgJ-KD-ajj" secondAttribute="bottom" constant="11" id="dZ2-9Q-OAG"/>
+                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="leading" secondItem="Mo9-QQ-jG8" secondAttribute="leadingMargin" id="hVB-VP-5Tg"/>
+                            <constraint firstItem="wgJ-KD-ajj" firstAttribute="top" secondItem="Unk-bD-6Mm" secondAttribute="bottom" constant="8" id="j8f-A3-8nz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="CTr-Iq-ASZ" secondAttribute="leading" id="qGc-2s-DUb"/>
+                            <constraint firstItem="wgJ-KD-ajj" firstAttribute="centerX" secondItem="Mo9-QQ-jG8" secondAttribute="centerX" id="zEJ-fA-WRW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playOfflineButton" destination="ji6-SE-AGI" id="mMH-ks-Ech"/>
+                        <outlet property="playerView" destination="Unk-bD-6Mm" id="emv-Hg-LR5"/>
+                        <outlet property="stateLabel" destination="wgJ-KD-ajj" id="3Ry-1M-VWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQV-mw-rt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sl9-3g-Sac">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ylV-wG-glq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uKw-Cg-LGP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ldA-SG-uTe" kind="relationship" relationship="rootViewController" id="Cxn-fY-Kv4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDZ-QC-bcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471.19999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
