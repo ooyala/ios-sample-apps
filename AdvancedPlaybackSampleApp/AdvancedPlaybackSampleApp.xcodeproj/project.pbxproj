@@ -36,6 +36,9 @@
 		0B4111581B6051AF00DF47AB /* CustomOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4111541B604C7800DF47AB /* CustomOverlayView.m */; };
 		0B4FE7931CE2AA60000DCC00 /* UnbundledPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */; };
 		0B4FE7941CE2AA60000DCC00 /* PerformanceProfilingPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */; };
+		0B50E1CA1DDD18E900817DD8 /* NotificationsPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B50E1C81DDD18E900817DD8 /* NotificationsPlayerViewController.h */; };
+		0B50E1CB1DDD18E900817DD8 /* NotificationsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E1C91DDD18E900817DD8 /* NotificationsPlayerViewController.m */; };
+		0B50E1CC1DDD294E00817DD8 /* NotificationsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E1C91DDD18E900817DD8 /* NotificationsPlayerViewController.m */; };
 		0B7333AB1A7AEEBD00F0EC32 /* OOSampleAdPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */; };
 		0B7333AC1A7AEEBD00F0EC32 /* OOSampleAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */; };
 		0B7333AD1A7AEEBD00F0EC32 /* OOSampleAdSpot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7333A71A7AEEBD00F0EC32 /* OOSampleAdSpot.h */; };
@@ -132,6 +135,8 @@
 		0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayPlayerViewController.m; sourceTree = "<group>"; };
 		0B4111531B604C7800DF47AB /* CustomOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayView.h; sourceTree = "<group>"; };
 		0B4111541B604C7800DF47AB /* CustomOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayView.m; sourceTree = "<group>"; };
+		0B50E1C81DDD18E900817DD8 /* NotificationsPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsPlayerViewController.h; sourceTree = "<group>"; };
+		0B50E1C91DDD18E900817DD8 /* NotificationsPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsPlayerViewController.m; sourceTree = "<group>"; };
 		0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSampleAdPlayer.h; sourceTree = "<group>"; };
 		0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOSampleAdPlayer.m; sourceTree = "<group>"; };
 		0B7333A71A7AEEBD00F0EC32 /* OOSampleAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOSampleAdSpot.h; sourceTree = "<group>"; };
@@ -289,6 +294,8 @@
 				5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */,
 				CA6D61731DA5E05C009D43D8 /* LocalizationLanguagesViewController.h */,
 				CA6D61741DA5E05C009D43D8 /* LocalizationLanguagesViewController.m */,
+				0B50E1C81DDD18E900817DD8 /* NotificationsPlayerViewController.h */,
+				0B50E1C91DDD18E900817DD8 /* NotificationsPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -374,6 +381,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B50E1CA1DDD18E900817DD8 /* NotificationsPlayerViewController.h in Headers */,
 				0BC94BF21A84719D004CB997 /* CustomControlsPlayerViewController.h in Headers */,
 				0BCA69541A848E6400225119 /* CustomControlsView.h in Headers */,
 				CA6D61751DA5E05C009D43D8 /* LocalizationLanguagesViewController.h in Headers */,
@@ -526,6 +534,7 @@
 				0BCA69511A848E6400225119 /* OOFullScreenIOS7ViewController.m in Sources */,
 				0B4111521B604C0D00DF47AB /* CustomOverlayPlayerViewController.m in Sources */,
 				0B7AC4231A79A93B0085BC97 /* ChangeVideoPlayerViewController.m in Sources */,
+				0B50E1CB1DDD18E900817DD8 /* NotificationsPlayerViewController.m in Sources */,
 				0B7333AC1A7AEEBD00F0EC32 /* OOSampleAdPlayer.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* AdvancedPlaybackListViewController.m in Sources */,
 				5E98478B1C8E5F9900D31ED1 /* UnbundledPlayerViewController.m in Sources */,
@@ -538,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B50E1CC1DDD294E00817DD8 /* NotificationsPlayerViewController.m in Sources */,
 				0B9797681DDA475B0013F12C /* LocalizationLanguagesViewController.m in Sources */,
 				0B4FE7931CE2AA60000DCC00 /* UnbundledPlayerViewController.m in Sources */,
 				0B4FE7941CE2AA60000DCC00 /* PerformanceProfilingPlayerViewController.m in Sources */,
