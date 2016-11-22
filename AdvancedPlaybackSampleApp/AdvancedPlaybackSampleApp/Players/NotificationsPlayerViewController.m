@@ -12,17 +12,15 @@
 #import "AppDelegate.h"
 
 @interface NotificationsPlayerViewController ()
-@property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 @end
 
-@implementation NotificationsPlayerViewController {
-  AppDelegate *appDel;
-}
+@implementation NotificationsPlayerViewController
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
@@ -208,7 +206,7 @@
   NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
-  appDel.count++;
+        [self.ooyalaPlayerViewController.player playheadTime], [[UIApplication sharedApplication] delegate].count);
+  [[UIApplication sharedApplication] delegate].count++;
 }
 @end
