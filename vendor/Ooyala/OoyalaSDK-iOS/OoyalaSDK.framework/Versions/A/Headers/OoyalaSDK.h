@@ -12,6 +12,7 @@
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 
 #import <OoyalaSDK/OOFCCTVRatingConfiguration.h>
+#import <OoyalaSDK/OOIQConfiguration.h>
 #import <OoyalaSDK/OOOptions.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOPlayerInfo.h>
