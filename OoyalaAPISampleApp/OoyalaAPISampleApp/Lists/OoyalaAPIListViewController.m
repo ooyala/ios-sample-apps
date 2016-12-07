@@ -7,6 +7,7 @@
 
 #import "OoyalaAPIListViewController.h"
 #import "ChannelContentTreePlayerViewController.h"
+#import "PlaylistListViewController.h"
 #import "DiscoveryListViewController.h"
 #import "PlayerSelectionOption.h"
 
@@ -35,7 +36,13 @@
                                              pcode:@""
                                             domain:@""
                                     viewController:[DiscoveryListViewController class]];
-    _channelList = [NSArray arrayWithObjects:option1, option2, nil];
+    PlayerSelectionOption *option3 =
+    [[PlayerSelectionOption alloc] initWithTitle:@"Playlists API"
+                                       embedCode:@""
+                                           pcode:@""
+                                          domain:@"http://www.ooyala.com"
+                                  viewController:[PlaylistListViewController class]];
+    _channelList = [NSArray arrayWithObjects:option3, option1, option2,   nil];
   }
 }
 
@@ -76,6 +83,8 @@
     ((ChannelContentTreePlayerViewController *)controller).option = selection;
   } else if ([controller isKindOfClass:[DiscoveryListViewController class]]) {
     ((DiscoveryListViewController *)controller).embedCode = selection.embedCode;
+  } else if ([controller isKindOfClass:[PlaylistListViewController class]]) {
+    ((PlaylistListViewController *)controller).option = selection;
   }
   [self.navigationController pushViewController:controller animated:YES];
 }
