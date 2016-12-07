@@ -45,7 +45,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  appDel = [[UIApplication sharedApplication] delegate];
 
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
@@ -206,7 +205,7 @@
   NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime], [[UIApplication sharedApplication] delegate].count);
-  [[UIApplication sharedApplication] delegate].count++;
+        [self.ooyalaPlayerViewController.player playheadTime], ((AppDelegate *)[[UIApplication sharedApplication] delegate]).count);
+  ((AppDelegate *)[[UIApplication sharedApplication] delegate]).count++;
 }
 @end
