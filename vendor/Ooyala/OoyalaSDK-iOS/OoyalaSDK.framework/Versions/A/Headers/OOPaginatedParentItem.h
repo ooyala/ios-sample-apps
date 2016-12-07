@@ -1,18 +1,10 @@
-/**
- * @protocol   OOPaginatedParentItem OOPaginatedParentItem.h "OOPaginatedParentItem.h"
- * @brief      OOPaginatedParentItem
- * @details    OOPaginatedParentItem.h in OoyalaSDK
- * @date       12/7/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 #import "OOCallbacks.h"
 #import "OOReturnState.h"
 
 @class OOOoyalaError;
 
-@protocol OOPaginatedParentItem <NSObject>
+@protocol OOPaginatedParentItem<NSObject>
 
 /**
  * The OOPaginatedParentItem's Embed Code

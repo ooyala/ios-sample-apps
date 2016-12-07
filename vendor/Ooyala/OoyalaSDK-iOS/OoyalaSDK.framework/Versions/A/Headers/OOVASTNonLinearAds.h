@@ -8,6 +8,10 @@
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
+/**
+ * A list of non-linear, static advertisement that was defined in a VAST XML
+ * \ingroup vast
+ */
 @interface OOVASTNonLinearAds : NSObject
 
 @property (readonly, nonatomic, strong) NSMutableDictionary *trackingEvents;

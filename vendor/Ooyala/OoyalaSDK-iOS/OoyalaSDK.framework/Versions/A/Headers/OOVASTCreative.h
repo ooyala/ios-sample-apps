@@ -1,16 +1,13 @@
-//
-//  OOVASTCreative.h
-//  OoyalaSDK
-//
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 #import "OOVASTLinearAd.h"
 #import "OOVASTCompanionAds.h"
 #import "OOVASTNonLinearAds.h"
 
+/**
+ * A creative that was defined in a VAST XML
+ * \ingroup vast
+ */
 @interface OOVASTCreative : NSObject
 
 @property (readonly, nonatomic) NSInteger sequence;

@@ -1,15 +1,11 @@
-/**
- * @class      OOVASTLinearAd OOVASTLinearAd.h "OOVASTLinearAd.h"
- * @brief      OOVASTLinearAd
- * @details    OOVASTLinearAd.h in OoyalaSDK
- * @date       12/8/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 #import "OOPlayableItem.h"
 
+/**
+ * Represents a single VAST linear advertisement.
+ * \ingroup vast
+ */
 @interface OOVASTLinearAd : NSObject <OOPlayableItem> 
 
 @property(readonly, nonatomic) NSMutableArray *icons;

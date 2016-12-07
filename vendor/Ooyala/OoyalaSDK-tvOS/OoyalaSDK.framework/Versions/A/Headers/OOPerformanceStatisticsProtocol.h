@@ -4,6 +4,7 @@
 
 /**
  * Minimal stuff an OOPerformanceStatistics object should implement.
+ * \ingroup performance
  */
 @protocol OOPerformanceStatisticsProtocol <NSCopying>
 @property (nonatomic, readonly) NSString *name; /**< Help identify what the statistics came from. */

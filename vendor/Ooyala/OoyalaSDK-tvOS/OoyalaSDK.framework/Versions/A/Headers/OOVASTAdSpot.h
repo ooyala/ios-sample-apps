@@ -1,14 +1,10 @@
-/**
- * @class      OOVASTAdSpot OOVASTAdSpot.h "OOVASTAdSpot.h"
- * @brief      OOVASTAdSpot
- * @details    OOVASTAdSpot.h in OoyalaSDK
- * @date       12/7/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import "OOManagedAdSpot.h"
 #import "OOTBXML.h"
 
+/**
+ * Represents all VAST information from a root VAST XML file. May have multiple vast XMLs as part of the ad hierarchy.
+ * \ingroup vast
+ */
 @interface OOVASTAdSpot : OOManagedAdSpot {
 @protected
   NSString *signature;

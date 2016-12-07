@@ -1,9 +1,8 @@
-//
-// Copyright (c) 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
+/**
+ * \ingroup performance
+ */
 @class OOPerformanceStatisticsSnapshotBuilder;
 
 /**

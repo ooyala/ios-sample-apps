@@ -1,11 +1,3 @@
-//
-//  VASTIcon.h
-//  OoyalaSDK
-//
-//  Created by Yi Gu on 3/1/16.
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
@@ -15,6 +7,11 @@ typedef enum {
   HTML
 } ResourceType;
 
+
+/**
+ * Represents a VASTIcon that needs to be displayed on during a VAST ad
+ * \ingroup vast
+ */
 @interface OOVASTIcon : NSObject
 
 @property (readonly, strong, nonatomic) NSString *program;

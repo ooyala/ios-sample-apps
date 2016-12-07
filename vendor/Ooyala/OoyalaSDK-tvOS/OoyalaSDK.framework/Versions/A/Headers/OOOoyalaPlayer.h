@@ -1,12 +1,3 @@
-/**
- * @file       OOOoyalaPlayer.h
- * @class      OOOoyalaPlayer OOOoyalaPlayer.h "OOOoyalaPlayer.h"
- * @brief      OOOoyalaPlayer
- * @details    OOOoyalaPlayer.h in OoyalaSDK
- * @date       11/21/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -36,6 +27,16 @@
 @class OOOptions;
 @class OOManagedAdsPlugin;
 @class OOPlayer;
+
+/**
+ * \defgroup key Most Commonly Used Classes
+ * \defgroup item Content Item
+ * \defgroup performance Performance Utilities
+ * \defgroup captions Captions
+ * \defgroup vast VAST-Specific
+ * \defgroup offline Offline Playback (DTO)
+ */
+
 /**
  * Defines player behavior after video playback has ended, defaults to OOOoyalaPlayerActionAtEndContinue
  */
@@ -94,44 +95,278 @@ typedef NS_ENUM(NSInteger, OOUIProgressSliderMode)
 
 #define OOOOYALAPLAYER_DURATION_MISSING (-1)
 
-// notifications
-extern NSString *const OOOoyalaPlayerTimeChangedNotification; /**< Fires when the Playhead Time Changes */
-extern NSString *const OOOoyalaPlayerStateChangedNotification; /**< Fires when the Player's State Changes */
-extern NSString *const OOOoyalaPlayerDesiredStateChangedNotification; /**< Fires when the user's desired State Changes */
-extern NSString *const OOOoyalaPlayerContentTreeReadyNotification; /**< Fires when the content tree's metadata is ready and can be accessed */
-extern NSString *const OOOoyalaPlayerAuthorizationReadyNotification; /**< Fires when the authorization status is ready and can be accessed */
-extern NSString *const OOOoyalaPlayerPlayStartedNotification; /**< Fires when play starts */
-extern NSString *const OOOoyalaplayerLicenseAcquisitionNotification; /**< Fires after a successful license acquisition */
-extern NSString *const OOOoyalaPlayerPlayCompletedNotification; /**< Fires when play completes */
-extern NSString *const OOOoyalaPlayerCurrentItemChangedNotification; /**< Fires when the current item changes */
-extern NSString *const OOOoyalaPlayerAdOverlayNotification; /**< Fries when encounters an ad overlay */
-extern NSString *const OOOoyalaPlayerAdPodStartedNotification; /**< Fires when an ad pod containing one ore more ads starts playing */
-extern NSString *const OOOoyalaPlayerAdStartedNotification; /**< Fires when an ad starts playing */
-extern NSString *const OOOoyalaPlayerAdCompletedNotification; /**< Fires when an ad completes playing */
-extern NSString *const OOOoyalaPlayerAdPodCompletedNotification; /**< Fires when all ads in the ad pod is completed */
-extern NSString *const OOOoyalaPlayerAdsLoadedNotification; /**< Fires when ads are done loading */
-extern NSString *const OOOoyalaPlayerAdSkippedNotification; /**< Fires when an ad is skipped */
-extern NSString *const OOOoyalaPlayerAdTappedNotification; /**< Fires when third party ad is tapped*/
-extern NSString *const OOOoyalaPlayerContentResumedAfterAdNotification; /**< Fires when the player has switched from ads back to main content */
-extern NSString *const OOOoyalaPlayerErrorNotification; /**< Fires when an error occurs */
-extern NSString *const OOOoyalaPlayerAdErrorNotification; /**< Fires when an error occurs while trying to play an ad */
-extern NSString *const OOOoyalaPlayerMetadataReadyNotification; /**< Fires when content metadata is ready to be accessed */
-extern NSString *const OOOoyalaPlayerLanguageChangedNotification; /**< Fires when close caption language changed*/
-extern NSString *const OOOoyalaPlayerSeekStartedNotification; /**< Fires when a seek begins*/
-extern NSString *const OOOoyalaPlayerSeekCompletedNotification; /**< Fires when a seek completes*/
-extern NSString *const OOOoyalaPlayerJsonReceivedNotification; /**< Fires when received a json string, userinfo contains the key and value of the json string*/
-extern NSString *const OOOoyalaPlayerEmbedCodeSetNotification; /**< Fires when setEmbedCode is getting called */
-extern NSString *const OOOoyalaPlayerCastVolumeChangeNotification; /** Fires when cast device volume changed */
-extern NSString *const OOOoyalaPlayerBitrateChangedNotification; /** Fires when bitrate changes in the base stream player **/
+#pragma mark Notification Names
 
-extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live closed captions */
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when playhead time changes.
+ * \details Nothing is provided through UserInfo. You can get the time with OOoyalaPlayer.playheadTime
+ * @see OOOoyalaPlayer.playheadTime
+ */
+extern NSString *const OOOoyalaPlayerTimeChangedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when the player's state changes.
+ * \details UserInfo is a dictionary with a key @"newState" with a value of OOOoyalaPlayerState.
+ */
+extern NSString *const OOOoyalaPlayerStateChangedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when the player's desired state changes.
+ * \details UserInfo is a dictionary with a key @"newState" with a value of OOOoyalaPlayerDesiredState.
+ */
+extern NSString *const OOOoyalaPlayerDesiredStateChangedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when the upcoming asset's content tree is ready and can be accessed.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerContentTreeReadyNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when the upcoming asset's metadata is ready and can be accessed.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerMetadataReadyNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when the upcoming asset's authorization status is ready and can be accessed.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerAuthorizationReadyNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when all of the upcoming asset's metadata is ready, and the item is ready to be played.
+ * \details Nothing is provided through UserInfo.
+ * @see currentItem
+ */
+extern NSString *const OOOoyalaPlayerCurrentItemChangedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications when video playback starts.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerPlayStartedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire after a successful license acquisition.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaplayerLicenseAcquisitionNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when video playback is completed.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerPlayCompletedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when an ad overlay should be displayed.
+ * \details Nothing is provided through UserInfo. This applies to Ooyala-managed VAST Advertisements only.
+ */
+extern NSString *const OOOoyalaPlayerAdOverlayNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when an ad manager has control of the OoyalaPlayer.
+ * \details Nothing is provided through UserInfo. Ads may or may not play during this time.
+ */
+extern NSString *const OOOoyalaPlayerAdPodStartedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when a linear advertisement starts playing back.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerAdStartedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when a linear advertisement has been completed.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerAdCompletedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when an ad manager has ceded control of the OoyalaPlayer, and content should resume.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerAdPodCompletedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when ads are completed loading.
+ * \details Nothing is provided through UserInfo. This only applies to Freewheel and Pulse advertisements.
+ */
+extern NSString *const OOOoyalaPlayerAdsLoadedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when an advertisement is skipped.
+ * \details Nothing is provided through UserInfo. This only applies to VAST advertisements.
+ */
+extern NSString *const OOOoyalaPlayerAdSkippedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when an advertisement is tapped (IMA only).
+ * \details Nothing is provided through UserInfo. This only applies to IMA advertisements.
+ */
+extern NSString *const OOOoyalaPlayerAdTappedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when content should resume after an advertisement.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerContentResumedAfterAdNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when an irrecoverable error occurs.
+ * \details Nothing is provided through UserInfo. You should check the error when you get this.
+ * @see error
+ */
+extern NSString *const OOOoyalaPlayerErrorNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when a recoverrable error occurs during an ad.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerAdErrorNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when the closed captions language is changed.
+ * \details Nothing is provided through UserInfo. You can get the language from closedCaptionsLanguage.
+ * @see closedCaptionsLanguage
+ */
+extern NSString *const OOOoyalaPlayerLanguageChangedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when seek is initialized.
+ * \details UserInfo is a dictionary with a key @"newState" with a value of a OOSeekInfo object.
+ * @see OOSeekInfo
+ */
+extern NSString *const OOOoyalaPlayerSeekStartedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when seek is completed.
+ * \details UserInfo is a dictionary with a key @"newState" with a value of a OOSeekInfo object. The seekStartTime of the object is not set for this notification.
+ * @see OOSeekInfo
+ */
+extern NSString *const OOOoyalaPlayerSeekCompletedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire JSON is received (i.e. ID3 tags).
+ * \details UserInfo is a dictionary with keys and values that were all in the JSON from the ID3 tag.
+ */
+extern NSString *const OOOoyalaPlayerJsonReceivedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire the Embed Code (aka Content ID) has been changed.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerEmbedCodeSetNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when cast device volume changed.
+ * \details Nothing is provided through UserInfo. This happens only during Chromecast playback, when the Chromecast volume is affected by a different sender device.
+ */
+extern NSString *const OOOoyalaPlayerCastVolumeChangeNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when bitrate has changed in video playback.
+ * \details Nothing is provided through UserInfo. You should be able to check OOOoyalaPlayer.bitrate for a new value.
+ */
+extern NSString *const OOOoyalaPlayerBitrateChangedNotification;
+
+/** the string for live closed captions */
+extern NSString *const OOLiveClosedCaptionsLanguage;
 
 /**
  * The OoyalaPlayer is the heart of the playback system.
- * Use it to configure and control asset playback,
- * and to be aware of playback state changes.
+ * Use it to configure and control asset playback, and to be aware of playback state changes.
+* \ingroup key
  */
 @interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol>
+
+#pragma mark Statics
+/**
+ * Set which environment is used for Player APIs. Default OOOoyalaPlayerEnvironmentProduction
+ */
++ (void)setEnvironment:(OOOoyalaPlayerEnvironment)e;
+
+/**
+ * Set if SSL is used for Player APIs. Default YES
+ */
++ (void)setSSLEnvironmentEnabled:(BOOL)sslEnabled;
+
+/**
+ * Get the version and RC of the Ooyala SDK
+ * @returns the string that represents the SDK version
+ */
++ (NSString *)version;
+
+/**
+ * Converts PlayerState to a String.
+ * @param[in] state the PlayerState
+ * @returns an external facing state string
+ */
++ (NSString *)playerStateToString:(OOOoyalaPlayerState)state;
+
+
+/**
+ * Converts PlayerDesiredState to a String.
+ * @param[in] state the PlayerState
+ * @returns an external facing DesiredState string
+ */
++ (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
+
+/**
+ * @returns YES means to try to use local/debug DRM modes,
+ * NO means to use regular DRM config.
+ */
++(BOOL)useDebugDRMPlayback;
+
+
+/**
+ * set encryptedloopback.
+ * @param[in] enabled true if enabled, false if disabled
+ */
++ (void)setEncryptedLoopback:(BOOL)enabled;
+
+/**
+ * get encryptedloopback.
+ * @returns encryptedLoopback;
+ */
++ (BOOL)encryptedLoopback;
+
+/**
+ * YES means to try to use local/debug DRM modes,
+ * NO means to use regular DRM config.
+ */
++(void)setUseDebugDRMPlayback:(BOOL)enable;
+
+#pragma mark Properties
 
 @property(readonly, nonatomic, strong) OOVideo *currentItem; /**< The OOOoyalaPlayer's currently playing OOVideo */
 @property(readonly, nonatomic, strong) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
@@ -158,15 +393,17 @@ extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live clo
 @property (nonatomic) float playbackRate; /** the rate of playback. 1 is the normal speed.  Set to .5 for half speed, 2 for double speed, etc. */
 @property (readonly, nonatomic) NSString *authToken; /** The Auth Token provided by Ooyala Authorization, when using Ooyala Player Token */
 
-/**
- * Checks the expiration of the authToken, and compares it to the current time.
- * @returns YES if token is expired, NO otherwise
- */
-- (BOOL) isAuthTokenExpired;
 
 @property (nonatomic) NSString *customDrmData;
 @property (nonatomic, readonly) OOStreamPlayerMapping *streamPlayerMapping;
 @property (nonatomic, readonly) NSString *pcode;
+
+
+/**
+ * Gets the user's current desired state.
+ * @returns a string containing the current state
+ */
+@property (nonatomic, readonly)OOOoyalaPlayerDesiredState desiredState;
 
 /**
  * Get the managedAdsPlugin that manages OOOoyalaAdSpots and OOVASTAdSpots.
@@ -188,21 +425,7 @@ extern NSString *const OOLiveClosedCaptionsLanguage; /** the string for live clo
  */
 @property float castVolume;
 
-/**
- * @internal
- */
-+ (void)setEnvironment:(OOOoyalaPlayerEnvironment)e;
-
-/**
- * Set if SSL is used for Player APIs. Default YES
- */
-+ (void)setSSLEnvironmentEnabled:(BOOL)sslEnabled;
-
-/**
- * Get the version and RC of the Ooyala SDK
- * @returns the string that represents the SDK version
- */
-+ (NSString *)version;
+#pragma mark Initializers
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -255,6 +478,9 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
 embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
             options:(OOOptions*)options;
 
+
+#pragma mark Content Setters
+
 /**
  * @param[in] stream non-nil, non-empty NSArray containing OOStreams.
  */
@@ -302,14 +528,14 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (BOOL)setEmbedCodes:(NSArray *)embedCodes adSetCode:(NSString *)adSetCode;
 
 /**
- * Reinitializes the player with a new external ID. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify. 
+ * Reinitializes the player with a new external ID. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
  * @param[in] externalId the external ID to use
  * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setExternalId:(NSString *)externalId;
 
 /**
- * Reinitializes the player with the new external IDs (as an array). External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify. 
+ * Reinitializes the player with the new external IDs (as an array). External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
  * @param[in] externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
  * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
@@ -323,7 +549,7 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 
 /**
  * Sets the current video in a channel, if the video is present.
- * @param[in] embedCode the embed code of the video to play 
+ * @param[in] embedCode the embed code of the video to play
  * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)changeCurrentItemToEmbedCode:(NSString *)embedCode;
@@ -339,6 +565,15 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * @returns an OOAsyncTask that can be cancelled if necessary
  */
 - (id)reauthorizeCurrentItemWithCallback:(OOAuthorizeCallback)callback;
+
+#pragma mark During-playback status
+
+/**
+ * Checks the expiration of the authToken, and compares it to the current time.
+ * @returns YES if token is expired, NO otherwise
+ */
+- (BOOL) isAuthTokenExpired;
+
 /**
  * Gets the current playhead time (the part of the video currently being accessed).
  * @returns the current playhead time, in milliseconds
@@ -358,6 +593,11 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (Float64)duration;
 
 /**
+ * current seekable range for main video.
+ */
+- (CMTimeRange) seekableTimeRange;
+
+/**
  * Get the maximum buffered time
  * @returns the buffered time in seconds of the currently playing item
  */
@@ -375,13 +615,62 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  */
 - (OOOoyalaPlayerState)state;
 
+/**
+ * Get whether the player is playing
+ * @returns a BOOL indicating the current player is playing
+ */
+- (BOOL)isPlaying;
 
 /**
- * Gets the user's current desired state.
- * @returns a string containing the current state
+ * Get whether the player is playing ad
+ * @returns a BOOL indicating the current player is playing ad
  */
-@property (nonatomic, readonly)OOOoyalaPlayerDesiredState desiredState;
+- (BOOL)isShowingAd;
 
+/**
+ * @return YES if self.isShowingAd==YES and the ad player reports that
+ * it has custom controls, instead of using the Ooyala video controls.
+ */
+- (BOOL)isShowingAdWithCustomControls;
+
+/**
+ * Get the available closed captions languages
+ * @returns an NSArray containing the available closed captions languages as NSStrings
+ */
+- (NSArray *)availableClosedCaptionsLanguages;
+
+/**
+ * Get the short code from the natural language name. Example: name="english", code="en".
+ * @param name is the long name, from availableClosedCaptionsLanguages.
+ * @return the short cc code. If the reverse mapping fails, the original name parameter value is returned.
+ */
+-(NSString*)languageNameToLanguageCode:(NSString*)name;
+
+/**
+ * Get the current bitrate
+ * @returns a double indicating the current bitrate in bytes
+ */
+- (double)bitrate;
+
+#pragma mark UI-specific apis
+
+/**
+ * Return a collection of the times at which to show cue points.
+ * E.g. for the content player, show when ads are scheduled to play.
+ */
+-(NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSecondsForCurrentPlayer;
+
+/**
+ * @returns the video rect
+ */
+- (CGRect)videoRect;
+
+/**
+ * internal Ooyala use only.
+ */
+-(void) layoutSubviews;
+
+#pragma mark Playback Actions
 
 /**
  * Pauses the current video.
@@ -405,24 +694,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (void)seek:(Float64) time;
 
 /**
- * Get whether the player is playing
- * @returns a BOOL indicating the current player is playing
- */
-- (BOOL)isPlaying;
-
-/**
- * Get whether the player is playing ad
- * @returns a BOOL indicating the current player is playing ad
- */
-- (BOOL)isShowingAd;
-
-/**
- * @return YES if self.isShowingAd==YES and the ad player reports that
- * it has custom controls, instead of using the Ooyala video controls.
- */
-- (BOOL)isShowingAdWithCustomControls;
-
-/**
  * Tries to set the current video to the next video in the OOChannel or ChannetSet
  * @returns a BOOL indicating that the item was successfully changed
  */
@@ -433,26 +704,6 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * @returns a BOOL indicating that the item was successfully changed
  */
 - (BOOL)previousVideo;
-
-/**
- * Get the available closed captions languages
- * @returns an NSArray containing the available closed captions languages as NSStrings
- */
-- (NSArray *)availableClosedCaptionsLanguages;
-
-/**
- * Get the short code from the natural language name. Example: name="english", code="en".
- * @param name is the long name, from availableClosedCaptionsLanguages.
- * @return the short cc code. If the reverse mapping fails, the original name parameter value is returned.
- */
--(NSString*)languageNameToLanguageCode:(NSString*)name;
-
-/**
- * Get the current bitrate
- * @returns a double indicating the current bitrate in bytes
- */
-- (double)bitrate;
-
 /**
  * Reset the state of ad plays. Calling this will cause all ads which have been played to play again.
  */
@@ -469,97 +720,11 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (void)clickAd;
 
 /**
- * current seekable range for main video.
- */
-- (CMTimeRange) seekableTimeRange;
-
-/**
- * Sets a tag for custom analytics
+ * DEPRECATED. Sets a tag for custom analytics.
  * @param[in] tags n array of NSStrings
  */
 - (void)setCustomAnalyticsTags:(NSArray *)tags;
 
-/**
- * Converts PlayerState to a String.
- * @param[in] state the PlayerState
- * @returns an external facing state string
- */
-+ (NSString *)playerStateToString:(OOOoyalaPlayerState)state;
-
-
-/**
- * Converts PlayerDesiredState to a String.
- * @param[in] state the PlayerState
- * @returns an external facing DesiredState string
- */
-+ (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
-
-/**
- * Register ad player for an ad type
- * @param[in] adPlayerClass the ad player class
- * @param[in] adClass the ad class
- */
-- (void)registerAdPlayer:(Class)adPlayerClass forType:(Class)adClass;
-
-/**
- * @returns the video rect
- */
-- (CGRect)videoRect;
-
-/**
- * set encryptedloopback.
- * @param[in] enabled true if enabled, false if disabled
- */
-+ (void)setEncryptedLoopback:(BOOL)enabled;
-
-/**
- * get encryptedloopback.
- * @returns encryptedLoopback;
- */
-+ (BOOL)encryptedLoopback;
-
-/**
- * YES means to try to use local/debug DRM modes,
- * NO means to use regular DRM config.
- */
-+(void)setUseDebugDRMPlayback:(BOOL)enable;
-
-/**
- * @returns YES means to try to use local/debug DRM modes,
- * NO means to use regular DRM config.
- */
-+(BOOL)useDebugDRMPlayback;
-
-/**
- * internal Ooyala use only.
- */
--(void) layoutSubviews;
-
-/**
- * called by an ad plugin to create a state notifier
- *
- */
-- (OOStateNotifier *)createStateNotifier;
-
-- (void)initCastManager:(OOCastManager *)castManager;
-
-- (void)switchToCastMode;
-
-- (void)exitCastModeWithEmbedCode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying;
-
-- (BOOL)isInCastMode;
-/**
- * Return a collection of the times at which to show cue points.
- * E.g. for the content player, show when ads are scheduled to play.
- */
--(NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSecondsForCurrentPlayer;
-
-/**
- * Return an OoyalaAPIClient
- */
-- (OOOoyalaAPIClient *)api;
-
-- (void)destroy;
 
 /**
  * Called when an icon is clicked
@@ -580,9 +745,38 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (void)insertAds:(NSMutableArray *)ads;
 
 /**
-* Toggle the picture in picture mode
-* iOS 9 and up only
-*/
+ * Toggle the picture in picture mode
+ * iOS 9 and up only
+ */
 - (void)togglePictureInPictureMode;
 
+- (void)destroy;
+
+#pragma mark Plugin registration and interaction
+
+/**
+ * Register ad player for an ad type
+ * @param[in] adPlayerClass the ad player class
+ * @param[in] adClass the ad class
+ */
+- (void)registerAdPlayer:(Class)adPlayerClass forType:(Class)adClass;
+
+/**
+ * Called by an ad plugin to create a state notifier
+ *
+ */
+- (OOStateNotifier *)createStateNotifier;
+
+- (void)initCastManager:(OOCastManager *)castManager;
+
+- (void)switchToCastMode;
+
+- (void)exitCastModeWithEmbedCode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying;
+
+- (BOOL)isInCastMode;
+
+/**
+ * Return an OoyalaAPIClient
+ */
+- (OOOoyalaAPIClient *)api;
 @end

@@ -1,18 +1,11 @@
-/**
- * @class      OOClosedCaptions OOClosedCaptions.h "OOClosedCaptions.h"
- * @brief      OOClosedCaptions
- * @details    OOClosedCaptions.h in OoyalaSDK
- * @date       12/12/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 #import "OOReturnState.h"
 
 @class OOCaption;
 
 /**
- * A set of `OOCaption`s associated with specific content movie
+ * An object which represents all closed captions information for the asset
+ * \ingroup item
  */
 @interface OOClosedCaptions : NSObject
 

@@ -1,13 +1,8 @@
-/**
- * @protocol   OOSecureURLGenerator OOSecureURLGenerator.h "OOSecureURLGenerator.h"
- * @brief      OOSecureURLGenerator
- * @details    OOSecureURLGenerator.h in OoyalaSDK
- * @date       12/1/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 
+/**
+ * @brief A protocol used to request a signed URL for Player API requests
+ */
 @protocol OOSecureURLGenerator <NSObject>
 
 /**

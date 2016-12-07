@@ -1,13 +1,8 @@
-/**
- * @protocol   OOSignatureGenerator OOSignatureGenerator.h "OOSignatureGenerator.h"
- * @brief      OOSignatureGenerator
- * @details    OOSignatureGenerator.h in OoyalaSDK
- * @date       11/30/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 
+/**
+ * @brief A protocol which signs data based on Ooyala signature protocol
+ */
 @protocol OOSignatureGenerator <NSObject>
 
 /**

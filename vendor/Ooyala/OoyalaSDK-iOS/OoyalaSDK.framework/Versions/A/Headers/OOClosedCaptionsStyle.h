@@ -1,12 +1,3 @@
-
-/**
- * @class      OOClosedCaptionsStyle OOClosedCaptionsStyle.h "OOClosedCaptionsStyle.h"
- * @brief      OOClosedCaptionsStyle
- * @details    OOClosedCaptionsStyle.h in OoyalaSDK
- * @date       1/31/12
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MediaAccessibility/MACaptionAppearance.h>
@@ -15,6 +6,7 @@
 
 /**
  * Defines text style to be used when displaying closed captions.
+ * \ingroup captions
  */
 @interface OOClosedCaptionsStyle : NSObject
 
@@ -36,7 +28,7 @@
 /** Closed captions window opacity */
 @property (nonatomic) CGFloat windowOpacity;
 
-/** Closed captions presentation, deprecatged */
+/** Closed captions presentation, deprecated */
 typedef enum {
   /** text that appears all at once */
   OOClosedCaptionPopOn,

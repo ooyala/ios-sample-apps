@@ -1,14 +1,10 @@
-//
-//  OOVASTVMAPAdHelper.h
-//  OoyalaSDK
-//
-//  Created by Yi Gu on 3/21/16.
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
+/**
+ * Various VMAP-related utilities
+ * \ingroup vast
+ */
 @interface OOVASTVMAPAdHelper : NSObject
 
 + (BOOL)parse:(OOTBXMLElement *)e adSpots:(NSMutableArray *)adSpots duration:(NSInteger)duration;

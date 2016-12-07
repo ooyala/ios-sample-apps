@@ -1,11 +1,3 @@
-//
-//  OOVASTConstants.h
-//  OoyalaSDK
-//
-//  Created by Yi Gu on 2/16/16.
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 extern float const OO_MINIMUM_SUPPORTED_VAST_VERSION;         /**< The minimum supported VAST version */

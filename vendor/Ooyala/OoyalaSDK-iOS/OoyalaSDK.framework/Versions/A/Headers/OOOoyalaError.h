@@ -42,6 +42,7 @@ typedef enum {
 
 /**
  * Represents an error in the Ooyala SDK
+ * \ingroup key
  */
 @interface OOOoyalaError : NSObject {
 @protected

@@ -1,10 +1,3 @@
-/**
- * @class      OOOptions OOOptions.h "OOOptions.h"
- * @brief      OOOptions
- * @details    OOOptions.h in OoyalaSDK
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 #import "OOSecureURLGenerator.h"
 
@@ -13,7 +6,8 @@
 @protocol AVPictureInPictureControllerDelegate;
 
 /**
- * A Class that implements configurable options
+ * Configurations to change the behavior of the OoyalaPlayer
+ * \ingroup key
  */
 @interface OOOptions : NSObject
 

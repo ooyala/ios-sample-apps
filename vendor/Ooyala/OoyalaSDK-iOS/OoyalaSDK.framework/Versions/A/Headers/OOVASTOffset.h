@@ -1,11 +1,3 @@
-//
-//  OOVASTOffset.h
-//  OoyalaSDK
-//
-//  Created by Yi Gu on 3/21/16.
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, OffsetType) {
@@ -14,6 +6,10 @@ typedef NS_ENUM(NSInteger, OffsetType) {
   OffsetTypePosition
 };
 
+/**
+ * Defines an offset for when ad-related events should happen around VAST ads
+ * \ingroup vast
+ */
 @interface OOVASTOffset : NSObject
 
 @property (readonly, nonatomic, assign) OffsetType type;

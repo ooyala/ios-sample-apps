@@ -12,6 +12,9 @@
 @class OOPerformanceMemoryProfilingStatistics;
 @class OOPerformanceFileSpaceProfilingStatistics;
 
+/**
+ * \ingroup performance
+ */
 @interface OOPerformanceStatisticsSnapshotBuilder : NSObject
 -(void)addCountingStatistics:(OOPerformanceCountingStatistics*)countingStatistics;
 -(void)addStartEndStatistics:(OOPerformanceStartEndStatistics*)startEndStatistics;

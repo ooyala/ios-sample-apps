@@ -1,14 +1,10 @@
-/**
- * @class      OOVASTAd OOVASTAd.h "OOVASTAd.h"
- * @brief      OOVASTAd
- * @details    OOVASTAd.h in OoyalaSDK
- * @date       12/8/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
+/**
+ * Represents all information from a single VAST XML file.
+ * \ingroup vast
+ */
 @interface OOVASTAd : NSObject
 
 @property(readonly, nonatomic) NSString *adID;                   /**< the ID of the Ad */

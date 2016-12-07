@@ -1,13 +1,10 @@
-//
-//  OOVASTUtils.h
-//  OoyalaSDK
-//
-// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
+/**
+ * Various VAST-related utilities
+ * \ingroup vast
+ */
 @interface OOVASTUtils : NSObject
 + (void)setAdvertisingId:(NSString*)adId;
 + (NSString*)advertisingId;

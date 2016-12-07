@@ -1,12 +1,9 @@
-//
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import "OOPerformanceEventWatchProtocol.h"
 #import "OOPerformanceEventMatcherProtocol.h"
 
 /**
  * Sample file space stats whenever notifications match.
+ * \ingroup performance
  */
 @interface OOPerformanceEventWatchFileSpaceProfiling : NSObject <OOPerformanceEventWatchProtocol>
 @property (nonatomic, readonly) id<OOPerformanceEventMatcherProtocol> matcher;

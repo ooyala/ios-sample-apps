@@ -1,14 +1,10 @@
-//
-//  OOVASTVMAPAdSpot.h
-//  OoyalaSDK
-//
-//  Created by Yi Gu on 3/23/16.
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import "OOVASTAdSpot.h"
 #import "OOVASTOffset.h"
 
+/**
+ * Defines all information around an Ad Spot as it was defined in a VMAP XML
+ * \ingroup vast
+ */
 @interface OOVASTVMAPAdSpot : OOVASTAdSpot
 
 @property (readonly, nonatomic, strong) OOVASTOffset *timeOffset;

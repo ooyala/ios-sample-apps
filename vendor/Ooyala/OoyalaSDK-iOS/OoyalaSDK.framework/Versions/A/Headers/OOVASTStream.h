@@ -1,13 +1,9 @@
-/**
- * @class      OOVASTStream OOVASTStream.h "OOVASTStream.h"
- * @brief      OOVASTStream
- * @details    OOVASTStream.h in OoyalaSDK
- * @date       12/8/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import "OOStream.h"
 
+/**
+ * Represents a single VAST stream that can be played in a Stream Player.
+ * \ingroup vast
+ */
 @interface OOVASTStream : OOStream {
   BOOL scalable;
   BOOL maintainAspectRatio;

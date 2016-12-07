@@ -8,6 +8,7 @@
 
 /**
  * CPU profiling related data.
+ * \ingroup performance
  */
 @interface OOPerformanceCPUProfilingStatistics : NSObject <OOPerformanceStatisticsProtocol>
 

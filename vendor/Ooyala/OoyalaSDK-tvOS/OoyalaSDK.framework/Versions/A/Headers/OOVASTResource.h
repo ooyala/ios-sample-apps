@@ -1,10 +1,3 @@
-//
-//  OOVASTResource.h
-//  OoyalaSDK
-//
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, Type) {
@@ -14,6 +7,10 @@ typedef NS_ENUM(NSInteger, Type) {
   TypeHTML
 };
 
+/**
+ * A URL from which to get VAST information
+ * \ingroup vast
+ */
 @interface OOVASTResource : NSObject
 
 @property (readonly, nonatomic) Type type;

@@ -7,6 +7,7 @@
 
 /**
  * Sample CPU stats whenever notifications match.
+ * \ingroup performance
  */
 @interface OOPerformanceEventWatchCPUProfiling : NSObject <OOPerformanceEventWatchProtocol>
 @property (nonatomic, readonly) id<OOPerformanceEventMatcherProtocol> matcher;

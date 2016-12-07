@@ -1,14 +1,11 @@
-//
-//  OOVASTNonLinear.h
-//  OoyalaSDK
-//
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 #import "OOVASTResource.h"
 
+/**
+ * A single non-linear, static advertisement that was defined in a VAST XML
+ * \ingroup vast
+ */
 @interface OOVASTNonLinear : NSObject
 
 @property (readonly, nonatomic, strong) NSString *id;

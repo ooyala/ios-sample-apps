@@ -8,6 +8,7 @@
 
 #import <OoyalaSDK/OOAdSpotPlugin.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
+#import "OOPulsePlayerOptions.h"
 
 @class OOPulseManager;
 @protocol OOPulseVideoAd;
@@ -79,6 +80,7 @@
  */
 - (instancetype)initWithPlayer:(OOOoyalaPlayer*)player;
 
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player pulsePlayerOptions:(OOPulsePlayerOptions *)pulsePlayerOptions;
 
 /**
  *  The object that acts as the delegate of the Pulse Manager.
@@ -86,5 +88,6 @@
  *  The delegate must adopt the OOPulseManagerDelegate protocol.
  */
 @property (weak, nonatomic) id<OOPulseManagerDelegate> delegate;
+@property (strong, nonatomic) OOPulsePlayerOptions *options;
 
 @end

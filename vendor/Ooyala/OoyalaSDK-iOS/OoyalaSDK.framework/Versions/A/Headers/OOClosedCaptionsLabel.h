@@ -1,12 +1,14 @@
-//
-//  OOClosedCaptionsLabel.h
-//  OoyalaSDK
-//
-// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
-
+/**
+ * A text label which may have the uniform edge style
+ * \ingroup captions
+ */
 @interface OOClosedCaptionsLabel : UILabel
+
+/**
+ * Initialize the Closed Captions Label
+ *
+ */
 - (id)initWithFrame:(CGRect)frame isUniformEdge:(BOOL)isUniformEdge;
 @end

@@ -1,12 +1,9 @@
-//
-// Copyright (c) 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOPerformanceStatisticsProtocol.h"
 
 /**
  * File space profiling related data.
+ * \ingroup performance
  */
 @interface OOPerformanceFileSpaceProfilingStatistics : NSObject <OOPerformanceStatisticsProtocol>
 

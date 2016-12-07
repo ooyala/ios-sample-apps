@@ -1,16 +1,12 @@
-/**
- * @class      OOAdPlugin OOAdPlugin.h "OOAdPlugin.h"
- * @brief      OOAdPlugin
- * @details    OOAdPlugin.h in OoyalaSDK
- * @date       11/21/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
 
 #import "OOPlayerProtocol.h"
 #import "OOLifeCycle.h"
 
+/**
+ * @brief An interface to implement an Ad Plugin, which can plug into the OoyalaPlayer
+ * @see OOOoyalaPlayer.registerAdPlayer:forType:
+ */
 @protocol OOAdPlugin<NSObject, OOLifeCycle>
 
 /**

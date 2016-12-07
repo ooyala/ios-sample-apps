@@ -1,13 +1,10 @@
-//
-// Copyright (c) 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import <mach/mach.h>
 #import "OOPerformanceStatisticsProtocol.h"
 
 /**
  * Memory profiling related data.
+ * \ingroup performance
  */
 @interface OOPerformanceMemoryProfilingStatistics : NSObject <OOPerformanceStatisticsProtocol>
 

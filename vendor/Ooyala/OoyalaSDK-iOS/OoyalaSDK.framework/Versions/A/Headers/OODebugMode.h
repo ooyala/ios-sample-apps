@@ -1,11 +1,3 @@
-/**
- * @class      OODebugMode OODebugMode.h "OODebugMode.h"
- * @brief      OODebugMode
- * @details    OODebugMode.h in OoyalaSDK
- * @date       05/29/2014
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #define LOG(...) [OODebugMode log:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
 #define ASSERT(condition, ...) [OODebugMode assert:condition tag:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
 #define ASSERT_FALSE(...) [OODebugMode assertFalse:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
@@ -18,6 +10,10 @@ typedef enum {
   LogAndAbort
 } DebugMode;
 
+/**
+ * Enable or disable Ooyala debug logs
+ * \ingroup key
+ */
 @interface OODebugMode : NSObject
 
 /**

@@ -1,13 +1,7 @@
-/**
- * @class      OOLifeCycle OOLifeCycle.h "OOLifeCycle.h"
- * @brief      OOLifeCycle
- * @details    OOLifeCycle.h in OoyalaSDK
- * @date       11/21/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
- */
-
 #import <Foundation/Foundation.h>
-
+/**
+ * @brief Handle events around the lifecycle of the OOOoyalaPlayer
+ */
 @protocol OOLifeCycle
 
 /**

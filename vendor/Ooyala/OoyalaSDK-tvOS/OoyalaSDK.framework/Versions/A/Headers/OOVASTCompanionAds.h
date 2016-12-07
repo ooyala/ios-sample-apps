@@ -1,10 +1,3 @@
-//
-//  OOVASTCompanionAds.h
-//  OoyalaSDK
-//
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
@@ -13,7 +6,11 @@ typedef NS_ENUM(NSInteger, RequiredType) {
   RequiredTypeAny,
   RequiredTypeNone
 };
-
+  
+/**
+ * A list of companion ads that was defined in a VAST XML
+ * \ingroup vast
+ */
 @interface OOVASTCompanionAds : NSObject
 
 - (id)initWithElement:(OOTBXMLElement *)element;

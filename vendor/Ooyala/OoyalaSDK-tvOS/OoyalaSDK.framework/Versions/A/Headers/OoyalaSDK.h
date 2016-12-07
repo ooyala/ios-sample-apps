@@ -1,10 +1,3 @@
-//
-//  OoyalaSDK.h
-//  OoyalaSDK
-//
-//  Created by Michael Len on 7/12/16.
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
 
 #ifndef OoyalaSDK_h
 #define OoyalaSDK_h

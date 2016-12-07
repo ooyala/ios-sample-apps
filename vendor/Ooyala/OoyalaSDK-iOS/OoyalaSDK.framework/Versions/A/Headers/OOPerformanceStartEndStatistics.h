@@ -1,7 +1,3 @@
-//
-// Copyright (c) 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOPerformanceStatisticsProtocol.h"
 
@@ -9,6 +5,7 @@
  * Keep track of the time taken between the start and end events.
  * As the start-end windows repeat, this keeps gathering those
  * into itself and updating a moving average.
+ * \ingroup performance
  */
 @interface OOPerformanceStartEndStatistics : NSObject <OOPerformanceStatisticsProtocol>
 @property (nonatomic, readonly) NSTimeInterval totalTime;

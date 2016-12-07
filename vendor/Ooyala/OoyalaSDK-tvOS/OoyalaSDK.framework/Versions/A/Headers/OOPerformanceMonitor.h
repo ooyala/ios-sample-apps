@@ -9,6 +9,9 @@
 #import "OOPerformanceNotificationNameStateMatcher.h"
 #import "OOPerformanceStatisticsSnapshot.h"
 
+/**
+ * \ingroup performance
+ */
 @class OOPerformanceMonitor;
 
 /**

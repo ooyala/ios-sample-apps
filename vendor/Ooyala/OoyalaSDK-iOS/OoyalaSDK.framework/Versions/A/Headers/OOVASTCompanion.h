@@ -1,14 +1,11 @@
-//
-//  OOVASTCompanion.h
-//  OoyalaSDK
-//
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 #import "OOVASTResource.h"
 
+/**
+ * A Companion ad that was defined in a VAST advertisement 
+ * \ingroup vast
+ */
 @interface OOVASTCompanion : NSObject
 
 @property (readonly, nonatomic) NSString *id;
