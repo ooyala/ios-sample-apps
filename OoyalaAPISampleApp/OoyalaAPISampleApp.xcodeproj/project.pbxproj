@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B63FB011DF797F300879D7E /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63FB001DF797F300879D7E /* ChannelContentTreePlayerViewController.m */; };
+		0B63FB041DF7980400879D7E /* PlaylistListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63FB031DF7980400879D7E /* PlaylistListViewController.m */; };
 		0B9458621AC32CC4000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */; };
 		0B9458AF1AC33830000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */; };
 		0B9458B01AC33843000DD545 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21F1A9C0B43001EB8BF /* libc++.dylib */; };
@@ -15,7 +17,6 @@
 		0BC8CF9E1BBC83A100F61C1A /* DiscoveryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */; };
 		0BCC6E341D2F3B3B0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E331D2F3B3B0040B0B2 /* AVKit.framework */; };
 		0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */; };
-		0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */; };
 		0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
 		0BDC4BE01A9FA3D800576639 /* ChannelContentTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */; };
 		0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */; };
@@ -27,7 +28,6 @@
 		9751C8621A95717900C7364F /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9751C8601A95717900C7364F /* PlayerSimple.xib */; };
 		9751C8631A95717900C7364F /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9751C8611A95717900C7364F /* TableCell.xib */; };
 		9751C8671A95722700C7364F /* OoyalaAPIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */; };
-		9751C8731A9572C000C7364F /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */; };
 		979BB20E1A9BD691001EB8BF /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB20D1A9BD691001EB8BF /* PlayerSelectionOption.m */; };
 		979BB2121A9BE32D001EB8BF /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979BB2111A9BE32D001EB8BF /* ChannelCell.xib */; };
 		979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */; };
@@ -50,6 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B63FAFF1DF797F300879D7E /* ChannelContentTreePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreePlayerViewController.h; sourceTree = "<group>"; };
+		0B63FB001DF797F300879D7E /* ChannelContentTreePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreePlayerViewController.m; sourceTree = "<group>"; };
+		0B63FB021DF7980400879D7E /* PlaylistListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistListViewController.h; sourceTree = "<group>"; };
+		0B63FB031DF7980400879D7E /* PlaylistListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistListViewController.m; sourceTree = "<group>"; };
 		0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0BCC6E331D2F3B3B0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BDC4BC31A9F9F7300576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOoyalaAPISampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,8 +71,6 @@
 		9751C8611A95717900C7364F /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		9751C8651A95722700C7364F /* OoyalaAPIListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaAPIListViewController.h; sourceTree = "<group>"; };
 		9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaAPIListViewController.m; sourceTree = "<group>"; };
-		9751C8711A9572C000C7364F /* ChannelContentTreePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreePlayerViewController.h; sourceTree = "<group>"; };
-		9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreePlayerViewController.m; sourceTree = "<group>"; };
 		979BB20C1A9BD691001EB8BF /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		979BB20D1A9BD691001EB8BF /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
 		979BB2111A9BE32D001EB8BF /* ChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelCell.xib; sourceTree = "<group>"; };
@@ -190,10 +192,12 @@
 		9751C8641A95720600C7364F /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				97DFF0D01B4CB25300B1C9FC /* DiscoveryListViewController.h */,
-				97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */,
 				9751C8651A95722700C7364F /* OoyalaAPIListViewController.h */,
 				9751C8661A95722700C7364F /* OoyalaAPIListViewController.m */,
+				0B63FB021DF7980400879D7E /* PlaylistListViewController.h */,
+				0B63FB031DF7980400879D7E /* PlaylistListViewController.m */,
+				97DFF0D01B4CB25300B1C9FC /* DiscoveryListViewController.h */,
+				97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -201,8 +205,8 @@
 		9751C8681A95723800C7364F /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				9751C8711A9572C000C7364F /* ChannelContentTreePlayerViewController.h */,
-				9751C8721A9572C000C7364F /* ChannelContentTreePlayerViewController.m */,
+				0B63FAFF1DF797F300879D7E /* ChannelContentTreePlayerViewController.h */,
+				0B63FB001DF797F300879D7E /* ChannelContentTreePlayerViewController.m */,
 				979BB2191A9BE737001EB8BF /* ChannelContentTreeDetailViewController.h */,
 				979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */,
 			);
@@ -321,7 +325,6 @@
 				0BC8CF9E1BBC83A100F61C1A /* DiscoveryListViewController.m in Sources */,
 				0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */,
 				0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */,
-				0BDC4BDB1A9F9FFC00576639 /* ChannelContentTreePlayerViewController.m in Sources */,
 				0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,10 +336,11 @@
 				9751C7F71A956C5300C7364F /* AppDelegate.m in Sources */,
 				0BDC4BE01A9FA3D800576639 /* ChannelContentTreeTableViewCell.m in Sources */,
 				979BB20E1A9BD691001EB8BF /* PlayerSelectionOption.m in Sources */,
-				9751C8731A9572C000C7364F /* ChannelContentTreePlayerViewController.m in Sources */,
 				979BB21B1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m in Sources */,
 				97DFF0D21B4CB25300B1C9FC /* DiscoveryListViewController.m in Sources */,
+				0B63FB041DF7980400879D7E /* PlaylistListViewController.m in Sources */,
 				9751C8671A95722700C7364F /* OoyalaAPIListViewController.m in Sources */,
+				0B63FB011DF797F300879D7E /* ChannelContentTreePlayerViewController.m in Sources */,
 				979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */,
 				9751C7F41A956C5300C7364F /* main.m in Sources */,
 			);
