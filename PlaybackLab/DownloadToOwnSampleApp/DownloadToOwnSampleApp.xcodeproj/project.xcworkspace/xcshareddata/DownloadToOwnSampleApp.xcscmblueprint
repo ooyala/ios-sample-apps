@@ -4,13 +4,17 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : 0,
-    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : 0
+    "40FB9B88A1A025363E460C25F67D91807EBB64DF" : 9223372036854775807,
+    "4264B5E3C0FAF3A8F8A226161DDF14603CD95740" : 9223372036854775807,
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : 0,
+    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EC9D46F9-3F9B-46E7-8D25-08FDF731C7C6",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : "ios-sdk\/",
-    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : "ios-sample-apps\/"
+    "40FB9B88A1A025363E460C25F67D91807EBB64DF" : "native-skin\/skin-config\/",
+    "4264B5E3C0FAF3A8F8A226161DDF14603CD95740" : "native-skin\/",
+    "56259557E7CDC2A1C6794E8BF2EBA8C6812FA57A" : "ios-sample-apps\/",
+    "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7" : "ios-sdk\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "DownloadToOwnSampleApp",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -20,6 +24,16 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/git.corp.ooyala.com:7999\/pba\/ios-sdk.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24D541CC8CB56A307AC4F1F29F233C9C62F98CB7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ooyala\/skin-config.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "40FB9B88A1A025363E460C25F67D91807EBB64DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/ios-skin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4264B5E3C0FAF3A8F8A226161DDF14603CD95740"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ooyala\/ios-sample-apps.git",
