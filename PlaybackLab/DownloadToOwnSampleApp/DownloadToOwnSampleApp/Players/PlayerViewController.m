@@ -12,6 +12,7 @@
 #import "BasicEmbedTokenGenerator.h"
 
 #import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 
 @interface PlayerViewController ()
 
@@ -24,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playOfflineButton;
 
-@property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property (nonatomic) OOSkinViewController *ooyalaPlayerViewController;
 
 // properties required for a Fairplay asset
 @property (nonatomic) NSString *apiKey;
@@ -37,6 +38,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  OOOoyalaPlayer *player = nil;
   // We assume we're dealing with a Fairplay asset because the Option instance has an embedTokenGenerator
   if (self.option.embedTokenGenerator) {
     if ([self.option.embedTokenGenerator isKindOfClass:[BasicEmbedTokenGenerator class]]) {
@@ -57,22 +59,24 @@
     //   which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
     options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.apiSecret];
     
-    OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
+    player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
                                                             domain:[OOPlayerDomain domainWithString:self.option.domain]
                                                embedTokenGenerator:self.option.embedTokenGenerator
                                                            options:options];
-    self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
   } else { // This is a regular HLS asset with non DRM protection
-    OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
+    player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
                                                             domain:[OOPlayerDomain domainWithString:self.option.domain]];
-    self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   }
+  
+  NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+//  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+  OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:nil jsCodeLocation:jsCodeLocation configFileName:@"skin" overrideConfigs:nil];
+  self.ooyalaPlayerViewController = [[OOSkinViewController alloc] initWithPlayer:player skinOptions:skinOptions parent:self.playerView launchOptions:nil];
   
   [self.ooyalaPlayerViewController willMoveToParentViewController:self];
   [self addChildViewController:self.ooyalaPlayerViewController];
-  [self.playerView addSubview:self.ooyalaPlayerViewController.view];
-  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   [self.ooyalaPlayerViewController didMoveToParentViewController:self];
   
   AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];

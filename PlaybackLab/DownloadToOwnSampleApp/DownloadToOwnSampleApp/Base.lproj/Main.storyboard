@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qAu-yu-Spi" id="VYV-db-hBq">
-                                    <rect key="frame" x="0.0" y="0.0" width="328" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nCI-kB-AnS">
@@ -59,7 +59,7 @@
                                     <outlet property="downloadProgressView" destination="p1G-VK-JFe" id="wda-pH-nTQ"/>
                                     <outlet property="subtitleLabel" destination="7eN-OZ-GpE" id="S2L-sg-Nsv"/>
                                     <outlet property="titleLabel" destination="9oY-ft-mBZ" id="UyV-MU-vLD"/>
-                                    <segue destination="AQo-so-8ew" kind="show" identifier="videoSegue" id="fgP-31-pYP"/>
+                                    <segue destination="Hvu-ub-zep" kind="show" identifier="videoSegue" id="xMg-4h-DvZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,74 +75,107 @@
             <point key="canvasLocation" x="468" y="133.5832083958021"/>
         </scene>
         <!--Player View Controller-->
-        <scene sceneID="n52-pw-7dq">
+        <scene sceneID="zTi-O6-8wR">
             <objects>
-                <viewController id="AQo-so-8ew" customClass="PlayerViewController" sceneMemberID="viewController">
+                <viewController id="Hvu-ub-zep" customClass="PlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vui-WH-lpt"/>
-                        <viewControllerLayoutGuide type="bottom" id="eW3-1u-4Ph"/>
+                        <viewControllerLayoutGuide type="top" id="9Uu-aY-cAC"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpb-oe-6hU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mo9-QQ-jG8">
+                    <view key="view" contentMode="scaleToFill" id="gOw-vW-fA4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unk-bD-6Mm">
-                                <rect key="frame" x="16" y="64" width="343" height="193"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-lp-2kb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z8P-u8-fWG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="277.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58a-b7-LP6">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="58a-b7-LP6" secondAttribute="height" multiplier="16:9" id="sGf-Im-Nlg"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ue-mm-6LK">
+                                                <rect key="frame" x="163" y="219" width="49.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLR-X6-Hoc">
+                                                <rect key="frame" x="0.0" y="247.5" width="375" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqi-Ql-KuQ">
+                                                        <rect key="frame" x="8" y="0.0" width="114" height="30"/>
+                                                        <state key="normal" title="Set Online Video"/>
+                                                        <connections>
+                                                            <action selector="playOnline" destination="Hvu-ub-zep" eventType="touchUpInside" id="g6J-yh-Oc7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0z-yC-Pah">
+                                                        <rect key="frame" x="251" y="0.0" width="116" height="30"/>
+                                                        <state key="normal" title="Set Offline Video"/>
+                                                        <connections>
+                                                            <action selector="playOffline" destination="Hvu-ub-zep" eventType="touchUpInside" id="OqE-u5-gKK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="v0z-yC-Pah" secondAttribute="trailing" constant="8" id="CtW-Kp-bCP"/>
+                                                    <constraint firstItem="v0z-yC-Pah" firstAttribute="top" secondItem="RLR-X6-Hoc" secondAttribute="top" id="GkB-za-Kdl"/>
+                                                    <constraint firstItem="Mqi-Ql-KuQ" firstAttribute="top" secondItem="RLR-X6-Hoc" secondAttribute="top" id="H43-y3-nqF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="v0z-yC-Pah" secondAttribute="bottom" id="HIV-WO-kO8"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Mqi-Ql-KuQ" secondAttribute="bottom" id="e15-VW-THd"/>
+                                                    <constraint firstAttribute="height" constant="30" id="pTw-9I-Qov"/>
+                                                    <constraint firstItem="Mqi-Ql-KuQ" firstAttribute="leading" secondItem="RLR-X6-Hoc" secondAttribute="leading" constant="8" id="ygq-xm-Aem"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="58a-b7-LP6" firstAttribute="leading" secondItem="z8P-u8-fWG" secondAttribute="leading" id="5p7-Lw-ESN"/>
+                                            <constraint firstItem="RLR-X6-Hoc" firstAttribute="leading" secondItem="z8P-u8-fWG" secondAttribute="leading" id="99M-Cj-aQ2"/>
+                                            <constraint firstAttribute="trailing" secondItem="58a-b7-LP6" secondAttribute="trailing" id="Hne-Dx-plH"/>
+                                            <constraint firstAttribute="trailing" secondItem="RLR-X6-Hoc" secondAttribute="trailing" id="x3l-on-SJV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Unk-bD-6Mm" secondAttribute="height" multiplier="16:9" id="txS-9c-K0Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="z8P-u8-fWG" secondAttribute="bottom" id="HdO-Qb-icV"/>
+                                    <constraint firstItem="z8P-u8-fWG" firstAttribute="width" secondItem="iyG-lp-2kb" secondAttribute="width" id="RYY-6L-niI"/>
+                                    <constraint firstAttribute="trailing" secondItem="z8P-u8-fWG" secondAttribute="trailing" id="Y4t-l1-JS0"/>
+                                    <constraint firstItem="z8P-u8-fWG" firstAttribute="leading" secondItem="iyG-lp-2kb" secondAttribute="leading" id="cOM-Cx-Zca"/>
+                                    <constraint firstItem="z8P-u8-fWG" firstAttribute="top" secondItem="iyG-lp-2kb" secondAttribute="top" id="ypd-CO-k5f"/>
                                 </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgJ-KD-ajj">
-                                <rect key="frame" x="163" y="265" width="49.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji6-SE-AGI">
-                                <rect key="frame" x="243" y="296.5" width="116" height="30"/>
-                                <state key="normal" title="Set Offline Video"/>
-                                <connections>
-                                    <action selector="playOffline" destination="AQo-so-8ew" eventType="touchUpInside" id="523-oc-hwb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Iq-ASZ">
-                                <rect key="frame" x="16" y="296.5" width="114" height="30"/>
-                                <state key="normal" title="Set Online Video"/>
-                                <connections>
-                                    <action selector="playOnline" destination="AQo-so-8ew" eventType="touchUpInside" id="eTC-6z-5CC"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="top" secondItem="vui-WH-lpt" secondAttribute="bottom" id="6vZ-Rt-TuG"/>
-                            <constraint firstItem="CTr-Iq-ASZ" firstAttribute="top" secondItem="wgJ-KD-ajj" secondAttribute="bottom" constant="11" id="8np-kJ-cco"/>
-                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="trailing" secondItem="Mo9-QQ-jG8" secondAttribute="trailingMargin" id="Jmb-o2-1Lg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ji6-SE-AGI" secondAttribute="trailing" id="XtZ-B8-IaO"/>
-                            <constraint firstItem="ji6-SE-AGI" firstAttribute="top" secondItem="wgJ-KD-ajj" secondAttribute="bottom" constant="11" id="dZ2-9Q-OAG"/>
-                            <constraint firstItem="Unk-bD-6Mm" firstAttribute="leading" secondItem="Mo9-QQ-jG8" secondAttribute="leadingMargin" id="hVB-VP-5Tg"/>
-                            <constraint firstItem="wgJ-KD-ajj" firstAttribute="top" secondItem="Unk-bD-6Mm" secondAttribute="bottom" constant="8" id="j8f-A3-8nz"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="CTr-Iq-ASZ" secondAttribute="leading" id="qGc-2s-DUb"/>
-                            <constraint firstItem="wgJ-KD-ajj" firstAttribute="centerX" secondItem="Mo9-QQ-jG8" secondAttribute="centerX" id="zEJ-fA-WRW"/>
+                            <constraint firstAttribute="trailing" secondItem="iyG-lp-2kb" secondAttribute="trailing" id="QUI-GW-egU"/>
+                            <constraint firstItem="dpb-oe-6hU" firstAttribute="top" secondItem="iyG-lp-2kb" secondAttribute="bottom" id="enm-kn-UqJ"/>
+                            <constraint firstItem="iyG-lp-2kb" firstAttribute="leading" secondItem="gOw-vW-fA4" secondAttribute="leading" id="hgC-tj-DcJ"/>
+                            <constraint firstItem="iyG-lp-2kb" firstAttribute="top" secondItem="gOw-vW-fA4" secondAttribute="top" id="qWf-Xd-cWd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="playOfflineButton" destination="ji6-SE-AGI" id="mMH-ks-Ech"/>
-                        <outlet property="playerView" destination="Unk-bD-6Mm" id="emv-Hg-LR5"/>
-                        <outlet property="stateLabel" destination="wgJ-KD-ajj" id="3Ry-1M-VWW"/>
+                        <outlet property="playOfflineButton" destination="v0z-yC-Pah" id="rCw-r2-AZk"/>
+                        <outlet property="playerView" destination="58a-b7-LP6" id="IHl-O9-hmt"/>
+                        <outlet property="stateLabel" destination="8Ue-mm-6LK" id="i1g-Qy-GBd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CQV-mw-rt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QW-DQ-dg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1415" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sl9-3g-Sac">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ylV-wG-glq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uKw-Cg-LGP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uKw-Cg-LGP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

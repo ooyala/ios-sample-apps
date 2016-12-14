@@ -15,6 +15,23 @@
 		CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */; };
 		CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */; };
 		CA561E6E1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */; };
+		CA79AF681E00B0B80027754F /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA79AF511E00B0B80027754F /* OoyalaSkinSDK.xcassets */; };
+		CA79AF751E00B2CD0027754F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF741E00B2CD0027754F /* libxml2.tbd */; };
+		CA79AF771E00B2D30027754F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF761E00B2D30027754F /* libc++.tbd */; };
+		CA79AF791E00B2DF0027754F /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF781E00B2DF0027754F /* libc++abi.tbd */; };
+		CA79AF7B1E00B2E80027754F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF7A1E00B2E80027754F /* libz.tbd */; };
+		CA79AF921E00B53F0027754F /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = CA79AF911E00B53F0027754F /* main.jsbundle */; };
+		CA79B8911E00BA040027754F /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = CA79B88D1E00BA040027754F /* en.json */; };
+		CA79B8921E00BA040027754F /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = CA79B88E1E00BA040027754F /* es.json */; };
+		CA79B8931E00BA040027754F /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = CA79B88F1E00BA040027754F /* zh.json */; };
+		CA79B8941E00BA040027754F /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = CA79B8901E00BA040027754F /* skin.json */; };
+		CA79B89C1E00BA110027754F /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA79B8961E00BA110027754F /* alice.ttf */; };
+		CA79B89D1E00BA110027754F /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA79B8971E00BA110027754F /* ooyala-slick-type.ttf */; };
+		CA79B89E1E00BA110027754F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA79B8981E00BA110027754F /* Roboto-Bold.ttf */; };
+		CA79B89F1E00BA110027754F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA79B8991E00BA110027754F /* Roboto-Regular.ttf */; };
+		CA79B8A01E00BA110027754F /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA79B89A1E00BA110027754F /* RobotoCondensed-Bold.ttf */; };
+		CA79B8A11E00BA110027754F /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA79B89B1E00BA110027754F /* RobotoCondensed-Regular.ttf */; };
+		CA79B8A21E00BA350027754F /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF501E00B0B80027754F /* OoyalaSkinSDK.framework */; };
 		CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FC1D5964E700EA0A57 /* main.m */; };
 		CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */; };
 		CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9041D5964E700EA0A57 /* Main.storyboard */; };
@@ -40,6 +57,23 @@
 		CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionTableViewCell.m; path = Utils/Views/OptionTableViewCell.m; sourceTree = "<group>"; };
 		CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEmbedTokenGenerator.h; path = Utils/BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
 		CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEmbedTokenGenerator.m; path = Utils/BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
+		CA79AF501E00B0B80027754F /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		CA79AF511E00B0B80027754F /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OoyalaSkinSDK.xcassets; sourceTree = "<group>"; };
+		CA79AF741E00B2CD0027754F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		CA79AF761E00B2D30027754F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		CA79AF781E00B2DF0027754F /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		CA79AF7A1E00B2E80027754F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CA79AF911E00B53F0027754F /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
+		CA79B88D1E00BA040027754F /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
+		CA79B88E1E00BA040027754F /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
+		CA79B88F1E00BA040027754F /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
+		CA79B8901E00BA040027754F /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = skin.json; path = "../../ios-sample-apps/vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/skin.json"; sourceTree = "<group>"; };
+		CA79B8961E00BA110027754F /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
+		CA79B8971E00BA110027754F /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		CA79B8981E00BA110027754F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CA79B8991E00BA110027754F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CA79B89A1E00BA110027754F /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		CA79B89B1E00BA110027754F /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		CA7ED8F81D5964E700EA0A57 /* DownloadToOwnSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadToOwnSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7ED8FC1D5964E700EA0A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,10 +96,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFA5BAE1DDD400500CAE010 /* OoyalaSDK.framework in Frameworks */,
+				CA79B8A21E00BA350027754F /* OoyalaSkinSDK.framework in Frameworks */,
 				CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */,
 				CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */,
 				CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */,
 				CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */,
+				CA79AF7B1E00B2E80027754F /* libz.tbd in Frameworks */,
+				CA79AF791E00B2DF0027754F /* libc++abi.tbd in Frameworks */,
+				CA79AF771E00B2D30027754F /* libc++.tbd in Frameworks */,
+				CA79AF751E00B2CD0027754F /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +141,54 @@
 				CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */,
 			);
 			name = Players;
+			sourceTree = "<group>";
+		};
+		CA79AF471E00B0B80027754F /* OoyalaSkinSDK-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CA79B8951E00BA110027754F /* Fonts */,
+				CA79AF931E00B58D0027754F /* skin-config */,
+				CA79AF911E00B53F0027754F /* main.jsbundle */,
+				CA79AF501E00B0B80027754F /* OoyalaSkinSDK.framework */,
+				CA79AF511E00B0B80027754F /* OoyalaSkinSDK.xcassets */,
+			);
+			name = "OoyalaSkinSDK-iOS";
+			path = "VendorLibraries/OoyalaSkinSDK-iOS";
+			sourceTree = "<group>";
+		};
+		CA79AF931E00B58D0027754F /* skin-config */ = {
+			isa = PBXGroup;
+			children = (
+				CA79B88C1E00BA040027754F /* languageFiles */,
+				CA79B8901E00BA040027754F /* skin.json */,
+			);
+			name = "skin-config";
+			path = "../../../../../native-skin/skin-config";
+			sourceTree = "<group>";
+		};
+		CA79B88C1E00BA040027754F /* languageFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CA79B88D1E00BA040027754F /* en.json */,
+				CA79B88E1E00BA040027754F /* es.json */,
+				CA79B88F1E00BA040027754F /* zh.json */,
+			);
+			name = languageFiles;
+			path = "../../ios-sample-apps/vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles";
+			sourceTree = "<group>";
+		};
+		CA79B8951E00BA110027754F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA79B8961E00BA110027754F /* alice.ttf */,
+				CA79B8971E00BA110027754F /* ooyala-slick-type.ttf */,
+				CA79B8981E00BA110027754F /* Roboto-Bold.ttf */,
+				CA79B8991E00BA110027754F /* Roboto-Regular.ttf */,
+				CA79B89A1E00BA110027754F /* RobotoCondensed-Bold.ttf */,
+				CA79B89B1E00BA110027754F /* RobotoCondensed-Regular.ttf */,
+			);
+			name = Fonts;
+			path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts";
 			sourceTree = "<group>";
 		};
 		CA7ED8EF1D5964E700EA0A57 = {
@@ -159,11 +246,16 @@
 		CAC620481D63C9AB004902F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA79AF471E00B0B80027754F /* OoyalaSkinSDK-iOS */,
 				CAFA5BAD1DDD400500CAE010 /* OoyalaSDK.framework */,
 				CA34EEB31D7640B500E168F6 /* AVKit.framework */,
 				CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */,
 				CA34EE981D76409700E168F6 /* MediaPlayer.framework */,
 				CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */,
+				CA79AF7A1E00B2E80027754F /* libz.tbd */,
+				CA79AF781E00B2DF0027754F /* libc++abi.tbd */,
+				CA79AF761E00B2D30027754F /* libc++.tbd */,
+				CA79AF741E00B2CD0027754F /* libxml2.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,9 +328,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA79B8911E00BA040027754F /* en.json in Resources */,
+				CA79B89C1E00BA110027754F /* alice.ttf in Resources */,
+				CA79B89E1E00BA110027754F /* Roboto-Bold.ttf in Resources */,
+				CA79B8A11E00BA110027754F /* RobotoCondensed-Regular.ttf in Resources */,
+				CA79B8941E00BA040027754F /* skin.json in Resources */,
+				CA79B8A01E00BA110027754F /* RobotoCondensed-Bold.ttf in Resources */,
+				CA79B8931E00BA040027754F /* zh.json in Resources */,
 				CA7ED90B1D5964E700EA0A57 /* LaunchScreen.storyboard in Resources */,
+				CA79B89D1E00BA110027754F /* ooyala-slick-type.ttf in Resources */,
+				CA79B8921E00BA040027754F /* es.json in Resources */,
 				CA7ED9081D5964E700EA0A57 /* Assets.xcassets in Resources */,
 				CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */,
+				CA79B89F1E00BA110027754F /* Roboto-Regular.ttf in Resources */,
+				CA79AF921E00B53F0027754F /* main.jsbundle in Resources */,
+				CA79AF681E00B0B80027754F /* OoyalaSkinSDK.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,10 +480,12 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)/VendorLibraries/**",
+					"$(PROJECT_DIR)/VendorLibraries/OoyalaSkinSDK-iOS",
 				);
 				INFOPLIST_FILE = DownloadToOwnSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -392,10 +498,12 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)/VendorLibraries/**",
+					"$(PROJECT_DIR)/VendorLibraries/OoyalaSkinSDK-iOS",
 				);
 				INFOPLIST_FILE = DownloadToOwnSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
