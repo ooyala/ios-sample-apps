@@ -97,7 +97,14 @@
 
   // Notification when player has all information from Ooyala APIs
   } else if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
+    OOVideo *video = self.ooyalaPlayerViewController.player.currentItem;
+    NSArray *streams = [video getStreams];
+    OOStream *stream;
+    if (streams.count > 0) {
+      stream = [streams objectAtIndex:0];
+    }
 
+    NSLog(@"Current Item Changed.  Content ID: %@, Stream URL %@, Stream Type %@", video.embedCode, stream.decodedURL, stream.deliveryType);
   // Notification when the player goes into one of the OoyalaPlayer States
   } else if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
     switch (self.ooyalaPlayerViewController.player.state) {
