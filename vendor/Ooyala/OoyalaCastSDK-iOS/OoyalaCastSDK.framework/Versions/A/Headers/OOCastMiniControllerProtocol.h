@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OoyalaSDK/OOPlayerProtocol.h>
 
 @class OOCastManager;
 @class OOCastMiniControllerView;

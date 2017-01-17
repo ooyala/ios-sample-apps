@@ -372,7 +372,7 @@ extern NSString *const OOLiveClosedCaptionsLanguage;
 @property(readonly, nonatomic, strong) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
 @property(readonly, nonatomic, strong) NSDictionary *metadata; /**< The OOOoyalaPlayer's content metadata for currently loaded content */
 @property(readonly, nonatomic, strong) OOOoyalaError *error; /**< The OOOoyalaPlayer's current error if it exists */
-@property(readonly, nonatomic, strong) UIView *view; /** the view associated with the player*/
+@property(readonly, nonatomic, strong) UIView *view; /**< the view associated with the player*/
 @property(nonatomic) OOOoyalaPlayerVideoGravity videoGravity;
 @property(readonly, nonatomic) BOOL supportsVideoGravityButton;
 @property(nonatomic) BOOL seekable; /**< Whether or not the Videos that OOOoyalaPlayer plays are seekable */
@@ -390,8 +390,16 @@ extern NSString *const OOLiveClosedCaptionsLanguage;
 @property (readonly, nonatomic, getter = isExternalPlaybackActive) BOOL externalPlaybackActive;
 
 @property (nonatomic) BOOL allowsExternalPlayback;
-@property (nonatomic) float playbackRate; /** the rate of playback. 1 is the normal speed.  Set to .5 for half speed, 2 for double speed, etc. */
-@property (readonly, nonatomic) NSString *authToken; /** The Auth Token provided by Ooyala Authorization, when using Ooyala Player Token */
+@property (nonatomic) float playbackRate; /**< the rate of playback. 1 is the normal speed.  Set to .5 for half speed, 2 for double speed, etc. */
+@property (readonly, nonatomic) NSString *authToken; /**< The Auth Token provided by Ooyala Authorization, when using Ooyala Player Token */
+
+/**
+ * The volume of the OoyalaPlayer, relative to the device's volume setting.
+ * For example, if volume is 1.0 (default), the playback volume would be as loud as the device's volume.
+ * The volume set here will affect Content, Ooyala, Pulse, and VAST ad playback.  It will not affect other ad managers.
+ * This property can be changed at any point after the OoyalaPlayer is initialized
+ */
+@property (nonatomic) float volume;
 
 
 @property (nonatomic) NSString *customDrmData;
@@ -419,11 +427,6 @@ extern NSString *const OOLiveClosedCaptionsLanguage;
  * @internal the ui slider mode
  */
 @property (nonatomic) OOUIProgressSliderMode normalSliderMode;
-
-/*
- * the cast volume when the video is played in cast mode
- */
-@property float castVolume;
 
 #pragma mark Initializers
 

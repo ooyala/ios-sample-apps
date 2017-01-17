@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <GoogleCast/GoogleCast.h>
-#import <OoyalaSDK/OOPlayerProtocol.h>
 #import <OoyalaSDK/OOCastManagerProtocol.h>
 
 @class OOCastPlayer, OOOoyalaPlayer;
