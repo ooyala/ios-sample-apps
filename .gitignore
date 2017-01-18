@@ -26,3 +26,6 @@ go_script/bin
 **/Resources/*.xml
 **/Resources/*.cfg
 **/Pulse.framework
+
+**/Pods/
+Podfile.lock
