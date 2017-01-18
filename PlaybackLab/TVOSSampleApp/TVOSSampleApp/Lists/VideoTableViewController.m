@@ -50,6 +50,16 @@
                                                                 domain:@"http://www.ooyala.com"
                                                              segueName:@"fullscreenSegue"]];
 
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"5.1 Audio, Single HLS Rendition"
+                                                             embedCode:@"04bnlxNzE6ZoNIUuEwvnso0Q5u2jOx_M"
+                                                                 pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"fullscreenSegue"]];
+  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"5.1 Audio E-AC3"
+                                                             embedCode:@"kyeHR5ODE6FDXOC9eZ5DTKuiJGVo0jnh"
+                                                                 pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
+                                                                domain:@"http://www.ooyala.com"
+                                                             segueName:@"fullscreenSegue"]];
   // Read the comments in ChildPlayerViewController.h to know what this example is for
 //  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
 //                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"

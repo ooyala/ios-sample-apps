@@ -42,6 +42,11 @@
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                domain:@"http://www.ooyala.com"
                                                        viewController: [BasicSimplePlayerViewController class]]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"2.0 and 5.1 HLS Video"
+                                                            embedCode:@"oza2pxODE6Vm_TTHPKJ68gBD8JQ7oTuj"
+                                                                pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
+                                                               domain:@"http://www.ooyala.com"
+                                                       viewController: [BasicSimplePlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"4:3 Aspect Ratio"
                                                             embedCode:@"FwaXZjcjrkydIftLal2cq9ymQMuvjvD8"
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
