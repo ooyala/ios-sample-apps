@@ -84,6 +84,10 @@
 		0BCA696D1A84965F00225119 /* OOSampleAdSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A81A7AEEBD00F0EC32 /* OOSampleAdSpot.m */; };
 		0BCA696E1A84965F00225119 /* OOSamplePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333AA1A7AEEBD00F0EC32 /* OOSamplePlugin.m */; };
 		0BCC6E281D2F2EFF0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */; };
+		0BEE356B1E30456400618269 /* ProgrammaticVolumePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */; };
+		0BEE356C1E30456400618269 /* ProgrammaticVolumePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */; };
+		0BEE35E71E3049D500618269 /* ProgrammaticVolumePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */; };
+		0BEE35E81E3049DD00618269 /* ProgrammaticVolumePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* PlayWithInitialTimePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
 		5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */; };
@@ -175,6 +179,8 @@
 		0BCA69461A848E6400225119 /* CustomControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsViewController.h; sourceTree = "<group>"; };
 		0BCA69471A848E6400225119 /* CustomControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsViewController.m; sourceTree = "<group>"; };
 		0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammaticVolumePlayerViewController.h; sourceTree = "<group>"; };
+		0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammaticVolumePlayerViewController.m; sourceTree = "<group>"; };
 		5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceProfilingPlayerViewController.h; sourceTree = "<group>"; };
 		5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceProfilingPlayerViewController.m; sourceTree = "<group>"; };
 		5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnbundledPlayerViewController.h; sourceTree = "<group>"; };
@@ -296,6 +302,8 @@
 				CA6D61741DA5E05C009D43D8 /* LocalizationLanguagesViewController.m */,
 				0B50E1C81DDD18E900817DD8 /* NotificationsPlayerViewController.h */,
 				0B50E1C91DDD18E900817DD8 /* NotificationsPlayerViewController.m */,
+				0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */,
+				0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -387,6 +395,7 @@
 				CA6D61751DA5E05C009D43D8 /* LocalizationLanguagesViewController.h in Headers */,
 				5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */,
 				0B7AC4261A79A93B0085BC97 /* PluginPlayerViewController.h in Headers */,
+				0BEE356B1E30456400618269 /* ProgrammaticVolumePlayerViewController.h in Headers */,
 				5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */,
 				0B19FEF81A3AB608003E57DF /* PlayerSelectionOption.h in Headers */,
 				0B19FEE31A3AB4BC003E57DF /* AdvancedPlaybackListViewController.h in Headers */,
@@ -409,6 +418,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEE35E81E3049DD00618269 /* ProgrammaticVolumePlayerViewController.h in Headers */,
 				0B9797691DDA47650013F12C /* LocalizationLanguagesViewController.h in Headers */,
 				0B19FF601A3B80FB003E57DF /* PlayerSelectionOption.h in Headers */,
 				0B19FF611A3B80FB003E57DF /* SampleAppPlayerViewController.h in Headers */,
@@ -538,6 +548,7 @@
 				0B7333AC1A7AEEBD00F0EC32 /* OOSampleAdPlayer.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* AdvancedPlaybackListViewController.m in Sources */,
 				5E98478B1C8E5F9900D31ED1 /* UnbundledPlayerViewController.m in Sources */,
+				0BEE356C1E30456400618269 /* ProgrammaticVolumePlayerViewController.m in Sources */,
 				0B7333B01A7AEEBD00F0EC32 /* OOSamplePlugin.m in Sources */,
 				0B7AC4251A79A93B0085BC97 /* InsertAdPlayerViewController.m in Sources */,
 			);
@@ -547,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEE35E71E3049D500618269 /* ProgrammaticVolumePlayerViewController.m in Sources */,
 				0B50E1CC1DDD294E00817DD8 /* NotificationsPlayerViewController.m in Sources */,
 				0B9797681DDA475B0013F12C /* LocalizationLanguagesViewController.m in Sources */,
 				0B4FE7931CE2AA60000DCC00 /* UnbundledPlayerViewController.m in Sources */,

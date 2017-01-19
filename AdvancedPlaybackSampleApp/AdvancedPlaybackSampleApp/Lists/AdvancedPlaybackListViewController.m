@@ -16,6 +16,7 @@
 #import "PerformanceProfilingPlayerViewController.h"
 #import "LocalizationLanguagesViewController.h"
 #import "NotificationsPlayerViewController.h"
+#import "ProgrammaticVolumePlayerViewController.h"
 #import "PlayerSelectionOption.h"
 
 @interface AdvancedPlaybackListViewController ()
@@ -80,6 +81,11 @@
                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                               domain:@"http://www.ooyala.com"
                                                       viewController:[NotificationsPlayerViewController class]]];
+  [self insertNewObject:[[PlayerSelectionOption alloc] initWithTitle:@"Programmatic Volume"
+                                                           embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
+                                                               pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                              domain:@"http://www.ooyala.com"
+                                                      viewController:[ProgrammaticVolumePlayerViewController class]]];
 }
 
 - (void)viewDidLoad {
