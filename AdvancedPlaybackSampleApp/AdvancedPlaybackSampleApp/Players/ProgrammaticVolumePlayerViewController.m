@@ -7,10 +7,16 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
 
-/**
- * on TimeChangedNotification, we will lower the volume by .025.  That means after ~10 seconds, the volume will be muted
- */
 
+/**
+ * This ViewController illustrates how you can change the volume of the OOOoyalaPlayer programmatically.
+ * Here you can see the volume being set onCreate, and changed every tick of TIME_CHANGED
+ *
+ * Over 10 seconds, volume should slowly increase from muted to full volume
+ *
+ * Please read the APIDocs for [OoyalaPlayer setVolume] for more information
+ *
+ */
 @interface ProgrammaticVolumePlayerViewController ()
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
@@ -63,7 +69,7 @@
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
 
   // You can set the volume anytime after OOOoyalaPlayer is instantiated
-  [player setVolume:1.f];
+  [player setVolume:0.0f];
 
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
@@ -75,8 +81,8 @@
 
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
 
-    // Slowly lower the volume every tick of playback.
-    [self.ooyalaPlayerViewController.player setVolume: self.ooyalaPlayerViewController.player.volume - .025f];
+    // Slowly increase the volume every tick of playback.
+    [self.ooyalaPlayerViewController.player setVolume: self.ooyalaPlayerViewController.player.volume + .025f];
     return;
   }
 
