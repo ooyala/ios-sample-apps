@@ -2,8 +2,6 @@
 //  OOSkinViewController.h
 //  OoyalaSkin
 //
-//  Created by Zhihui Chen on 4/16/15.
-//  Copyright (c) 2015 Facebook. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,6 +10,10 @@
 @class OOSkinOptions;
 @class OOClosedCaptionsStyle;
 
+/**
+ * The primary class for the Skin UI
+ * Use it to display the Ooyala Skin UI alongside the OOOoyalaPlayer
+ */
 @interface OOSkinViewController : UIViewController
 
 @property (nonatomic, readonly) OOOoyalaPlayer *player;
