@@ -82,17 +82,15 @@
     return;
   }
   
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
-        [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
-  
-  //In QA Mode , adding notifications to the TextView
-  if(self.qaModeEnabled==YES) {
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
                        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
                        [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
+  
+  NSLog(@"%@",message);
+  
+  //In QA Mode , adding notifications to the TextView
+  if(self.qaModeEnabled==YES) {
   NSString *string = self.textView.text;
   NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
   [self.textView setText:appendString];
