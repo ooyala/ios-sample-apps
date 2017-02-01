@@ -29,4 +29,10 @@
  */
 -(instancetype) init;
 
+/**
+ * Logs all properties that are part of this OOOptions.
+ *
+ */
+-(void) logProperties;
+
 @end

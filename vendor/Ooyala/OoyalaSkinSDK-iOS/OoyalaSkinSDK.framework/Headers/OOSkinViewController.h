@@ -9,6 +9,7 @@
 @class OOOoyalaPlayer;
 @class OOSkinOptions;
 @class OOClosedCaptionsStyle;
+@class OOReactBridge;
 
 /**
  * The primary class for the Skin UI
@@ -32,4 +33,6 @@ extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fir
                  launchOptions:(NSDictionary *)options;
 
 - (void)ccStyleChanged:(NSNotification *) notification;
+
+- (void)sendBridgeEventWithName:(NSString *)eventName body:(id)body;
 @end
