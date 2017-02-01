@@ -48,9 +48,20 @@
   [super viewDidLoad];
   appDel = [[UIApplication sharedApplication] delegate];
 
-  // Create an IQConfiguration class
+  // Create an IQConfiguration class, and change all settings available
   OOIQConfiguration *iqConfig = [OOIQConfiguration new];
+
   iqConfig.playerID = @"App-configured Player ID";
+
+  iqConfig.analyticsJSURL = @"https://analytics-staging.ooyala.com/static/v3/analytics.js";
+
+  iqConfig.backendEndpointURL = @"https://l.ooyala.com/v3/analytics/events";
+
+  iqConfig.domain = @"https://customDomain.com";
+
+  iqConfig.backendEndpointTimeout = 20;
+
+  iqConfig.analyticsJSRequestTimeout = 20;
 
   // Put the IQConfiguration class into the OOOptions
   OOOptions *options = [OOOptions new];

@@ -7,6 +7,7 @@
 //
 
 #import "LayoutListViewController.h"
+#import "DoublePlayerPlayerViewController.h"
 #import "DefaultSkinPlayerViewController.h"
 
 @interface LayoutListViewController ()
@@ -22,6 +23,12 @@
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
                                                        viewController:[DefaultSkinPlayerViewController class] nib: @"SmallSkinPlayerView"]];
+  
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Double Player"
+                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                         playerDomain:@"http://www.ooyala.com"
+                                                       viewController:[DoublePlayerPlayerViewController class] nib: @"DoublePlayerView"]];
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Small Player View (HLS)"
                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"

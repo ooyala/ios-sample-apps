@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoublePlayerPlayerViewController">
+            <connections>
+                <outlet property="videoView" destination="gQc-XE-FRz" id="Bj9-3h-M69"/>
+                <outlet property="videoView2" destination="SdR-bU-NxY" id="Clp-qO-qYd"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qjd-Wp-FIZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lve-5e-ruB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQc-XE-FRz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                            <color key="backgroundColor" red="0.2122364180437657" green="0.39328370418848169" blue="0.24970995622501194" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdR-bU-NxY">
+                            <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                            <color key="backgroundColor" red="0.30337396739885664" green="0.20773630924278003" blue="0.30622136780104714" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="SdR-bU-NxY" firstAttribute="height" secondItem="gQc-XE-FRz" secondAttribute="height" id="cdN-m7-7Ua"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Lve-5e-ruB" secondAttribute="bottom" id="0Lf-Jf-7tN"/>
+                <constraint firstItem="Lve-5e-ruB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GXy-GE-tNU"/>
+                <constraint firstItem="Lve-5e-ruB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ayw-IE-beF"/>
+                <constraint firstItem="Lve-5e-ruB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iSd-tg-WtQ"/>
+                <constraint firstItem="Lve-5e-ruB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mpC-fo-68c"/>
+                <constraint firstAttribute="trailing" secondItem="Lve-5e-ruB" secondAttribute="trailing" id="u1E-9S-BA7"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="57.5"/>
+        </view>
+    </objects>
+</document>
