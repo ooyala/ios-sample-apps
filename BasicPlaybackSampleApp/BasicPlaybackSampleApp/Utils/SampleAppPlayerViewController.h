@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
-@property (nonatomic, assign) BOOL qaModeEnabled;
+@property (nonatomic) BOOL qaModeEnabled;
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled;
 

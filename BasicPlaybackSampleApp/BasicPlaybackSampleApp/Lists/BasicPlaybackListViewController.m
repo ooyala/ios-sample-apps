@@ -13,9 +13,9 @@
 #import "PlayerSelectionOption.h"
 
 @interface BasicPlaybackListViewController ()
-@property NSMutableArray *options;
-@property NSMutableArray *optionList;
-@property NSMutableArray *optionEmbedCodes;
+@property (nonatomic) NSMutableArray *options;
+@property (nonatomic) NSMutableArray *optionList;
+@property (nonatomic) NSMutableArray *optionEmbedCodes;
 @property BOOL qaLogEnabled;
 @end
 
