@@ -1,5 +1,7 @@
-This was built with OoyalaSDK v4.22.0_RC3
-Git SHA: 859a183890f718268b94e51073268cededc36e09
-Using Adobe Mobile Services library version v4.10.0
-Using Adobe Heartbeat library version v1.5.6
-Created On: Wed Feb 1 14:56:07 PST 2017
+Ooyala SDK Version: v4.22.0_RC3
+Git SHA: ecb1aad01bf8a0c0d3453d1def0a8b4b4085231c
+
+Adobe Mobile Services library "v4.10.0"
+VideoHeartbeat library "v1.5.6"
+
+Created On: Thu Feb  2 15:26:22 PST 2017

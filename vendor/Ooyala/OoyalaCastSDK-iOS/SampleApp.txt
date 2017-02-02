@@ -1,2 +1,0 @@
-The OoyalaChromecastSampleApp is not provided within this package.
-You can download the OoyalaChromecastSampleApp from our iOS Sample App Github Repository: https://github.com/ooyala/ios-sample-apps
