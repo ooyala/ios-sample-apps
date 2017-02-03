@@ -12,7 +12,7 @@
 
 @interface FreewheelPlaybackListViewcontroller ()
 @property (nonatomic) NSMutableArray *options;
-@property BOOL qaLogEnabled;
+@property (nonatomic) BOOL qaLogEnabled;
 @end
 
 @implementation FreewheelPlaybackListViewcontroller
