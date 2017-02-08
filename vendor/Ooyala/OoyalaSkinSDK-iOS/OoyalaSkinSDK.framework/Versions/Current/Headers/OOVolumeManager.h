@@ -15,7 +15,6 @@ FOUNDATION_EXPORT NSString *const VolumeChangeKey;
 
 + (void)addVolumeObserver:(NSObject *)observer;
 + (void)removeVolumeObserver:(NSObject *)observer;
-+ (void)sendVolumeChangeEvent:(float)volume;
 
 + (float)getCurrentVolume;
 
