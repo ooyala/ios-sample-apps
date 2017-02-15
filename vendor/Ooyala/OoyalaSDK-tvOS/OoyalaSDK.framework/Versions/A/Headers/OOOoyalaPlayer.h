@@ -11,6 +11,7 @@
 #import "OOPlayerProtocol.h"
 #import "OOStream.h"
 #import "OOUnbundledVideo.h"
+#import "OOAudioTrack.h"
 
 @class OOContentItem;
 @class OOVideo;
@@ -27,6 +28,7 @@
 @class OOOptions;
 @class OOManagedAdsPlugin;
 @class OOPlayer;
+@protocol OOAudioTrackProtocol;
 
 /**
  * \defgroup key Most Commonly Used Classes
@@ -307,7 +309,7 @@ extern NSString *const OOLiveClosedCaptionsLanguage;
  * Use it to configure and control asset playback, and to be aware of playback state changes.
 * \ingroup key
  */
-@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol>
+@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol, OOAudioTrackProtocol>
 
 #pragma mark Statics
 /**
@@ -635,6 +637,28 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
  * it has custom controls, instead of using the Ooyala video controls.
  */
 - (BOOL)isShowingAdWithCustomControls;
+
+/**
+ Lets you know if the current video has multiple audio tracks.
+ 
+ It requires that a video has already loaded.
+ 
+ The following code snippet shows an example of this method. It assumes you are listening
+ to the events of the OOOoyalaPlayer using notifications:
+@code
+// assumes you are observing OOOoyalaPlayer notifications and you have a property
+// like `@property OOOoyalaPlayer *player;`
+if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
+  NSNumber *state = notification.userInfo[@"newState"];
+  if (state.intValue == OOOoyalaPlayerStateReady) {
+    NSLog(@"has audio tracks: %d", [self.player hasMultipleAudioTracks]);
+  }
+}
+@endcode
+
+ @return true if there are more than one audio tracks, false otherwise.
+ */
+- (BOOL)hasMultipleAudioTracks;
 
 /**
  * Get the available closed captions languages

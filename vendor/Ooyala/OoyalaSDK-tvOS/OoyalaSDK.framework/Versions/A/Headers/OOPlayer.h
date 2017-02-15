@@ -13,8 +13,9 @@
 #import "OOOoyalaError.h"
 #import "OOPlayerProtocol.h"
 #import "OOLifeCycle.h"
+#import "OOAudioTrackProtocol.h"
 
-@interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle> { // really, an Abstract class.
+@interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle, OOAudioTrackProtocol> { // really, an Abstract class.
 @protected
   OOOoyalaError *playerError;
   UIView *view;
