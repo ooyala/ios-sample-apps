@@ -112,6 +112,8 @@
 #import <OoyalaSDK/OOOfflineVideo.h>
 #import <OoyalaSDK/OOPlayableItem.h>
 #import <OoyalaSDK/OOFCCTVRating.h>
+#import <OoyalaSDK/OOAudioTrack.h>
+#import <OoyalaSDK/OOAudioTrackProtocol.h>
 
 // Offline
 #import <OoyalaSDK/OOAssetDownloadOptions.h>
