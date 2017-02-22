@@ -29,6 +29,9 @@
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationHandler:) name:nil object:self.player];
   
+  // Explicity require playback controlls, which enables tap seek
+  self.showsPlaybackControls = YES;
+  
   [self.player setEmbedCode:self.option.embedCode];
   [self.player play];
 }
