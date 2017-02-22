@@ -46,6 +46,8 @@
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                           domain:[[OOPlayerDomain alloc]initWithString:self.playerDomain]
                                              embedTokenGenerator:self];
+  // enable seeking
+  self.showsPlaybackControls = YES;
   
   [self.player setEmbedCode:self.option.embedCode];
   [self.player play];

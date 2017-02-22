@@ -27,6 +27,9 @@
 
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   
+  // enable seeking
+  self.showsPlaybackControls = YES;
+  
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationHandler:) name:nil object:self.player];
   
   [self.player setEmbedCode:self.option.embedCode];
