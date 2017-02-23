@@ -104,10 +104,10 @@
 		C4499B041CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		C4499B051CA18B8C00B6EE20 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../VendorLibraries/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
 		C4499B071CA18B8C00B6EE20 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../VendorLibraries/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
-		C4499B0A1CA18B8C00B6EE20 /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
-		C4499B0B1CA18B8C00B6EE20 /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
+		C4499B0A1CA18B8C00B6EE20 /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = en.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/en.json"; sourceTree = "<group>"; };
+		C4499B0B1CA18B8C00B6EE20 /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = es.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/es.json"; sourceTree = "<group>"; };
 		C4499B0F1CA18B8C00B6EE20 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
-		C4499B111CA18B8C00B6EE20 /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
+		C4499B111CA18B8C00B6EE20 /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = zh.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/zh.json"; sourceTree = "<group>"; };
 		C464E5311CB526AD0019ABD8 /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulse.framework; path = VendorLibraries/Pulse.framework; sourceTree = "<group>"; };
 		C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaPulseIntegration.framework; path = "VendorLibraries/OoyalaPulseIntegration-iOS/OoyalaPulseIntegration.framework"; sourceTree = "<group>"; };
 		C477A7FA1C884769000B4890 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -399,18 +399,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4499B221CA18B8C00B6EE20 /* skin.json in Resources */,
 				C4499B1E1CA18B8C00B6EE20 /* es.json in Resources */,
+				C4499B241CA18B8C00B6EE20 /* zh.json in Resources */,
+				C4499B1D1CA18B8C00B6EE20 /* en.json in Resources */,
 				C4499B151CA18B8C00B6EE20 /* Roboto-Bold.ttf in Resources */,
 				0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */,
 				C4499B1B1CA18B8C00B6EE20 /* OoyalaSkinSDK.xcassets in Resources */,
 				C4499B161CA18B8C00B6EE20 /* Roboto-Regular.ttf in Resources */,
 				C4499B171CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf in Resources */,
-				C4499B1D1CA18B8C00B6EE20 /* en.json in Resources */,
 				C4499B131CA18B8C00B6EE20 /* alice.ttf in Resources */,
 				C402FB031CAD4123001D4BBD /* library.json in Resources */,
 				C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */,
-				C4499B221CA18B8C00B6EE20 /* skin.json in Resources */,
-				C4499B241CA18B8C00B6EE20 /* zh.json in Resources */,
 				0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */,
 				C4082C1B1D21461200CC3BC4 /* ooyala-slick-type.ttf in Resources */,
 				C4BB04431C75FCD100871138 /* TableCell.xib in Resources */,

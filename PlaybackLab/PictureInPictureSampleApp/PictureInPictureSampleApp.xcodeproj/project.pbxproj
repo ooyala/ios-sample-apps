@@ -65,14 +65,14 @@
 
 /* Begin PBXFileReference section */
 		0B3549851D8C9476003E76BE /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
-		0B3549881D8C9D50003E76BE /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
-		0B3549891D8C9D50003E76BE /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
+		0B3549881D8C9D50003E76BE /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = en.json; path = languageFiles/en.json; sourceTree = "<group>"; };
+		0B3549891D8C9D50003E76BE /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = es.json; path = languageFiles/es.json; sourceTree = "<group>"; };
 		0B35498A1D8C9D50003E76BE /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		0B35498B1D8C9D50003E76BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0B35498C1D8C9D50003E76BE /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		0B35498D1D8C9D50003E76BE /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
 		0B35498E1D8C9D50003E76BE /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
-		0B35498F1D8C9D50003E76BE /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
+		0B35498F1D8C9D50003E76BE /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = zh.json; path = languageFiles/zh.json; sourceTree = "<group>"; };
 		0B3549991D8C9D54003E76BE /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
 		0B35499A1D8C9D54003E76BE /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		0B35499B1D8C9D54003E76BE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -403,8 +403,10 @@
 				0B4731341C5199A300F1E7FD /* Main.storyboard in Resources */,
 				0B4731331C5199A300F1E7FD /* LaunchScreen.xib in Resources */,
 				0B3549911D8C9D50003E76BE /* es.json in Resources */,
+				0B3549901D8C9D50003E76BE /* en.json in Resources */,
 				0B3549951D8C9D50003E76BE /* skin.json in Resources */,
 				0B3549921D8C9D50003E76BE /* package.json in Resources */,
+				0B3549971D8C9D50003E76BE /* zh.json in Resources */,
 				0B3549A21D8C9D54003E76BE /* Roboto-Regular.ttf in Resources */,
 				0B3549A01D8C9D54003E76BE /* ooyala-slick-type.ttf in Resources */,
 				0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */,
@@ -412,11 +414,9 @@
 				0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */,
 				0B35499F1D8C9D54003E76BE /* alice.ttf in Resources */,
 				0B3549A11D8C9D54003E76BE /* Roboto-Bold.ttf in Resources */,
-				0B3549971D8C9D50003E76BE /* zh.json in Resources */,
 				0B3549A31D8C9D54003E76BE /* RobotoCondensed-Bold.ttf in Resources */,
 				0B7824571B2B841800D718AB /* TableCell.xib in Resources */,
 				0B3549A41D8C9D54003E76BE /* RobotoCondensed-Regular.ttf in Resources */,
-				0B3549901D8C9D50003E76BE /* en.json in Resources */,
 				0B3549861D8C9476003E76BE /* PlayerSingleButton.xib in Resources */,
 				0B3549AA1D8C9D63003E76BE /* OoyalaSkinSDK.xcassets in Resources */,
 				0B3549961D8C9D50003E76BE /* validate.js in Resources */,
