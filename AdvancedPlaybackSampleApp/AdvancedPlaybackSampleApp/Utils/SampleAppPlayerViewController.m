@@ -12,10 +12,12 @@
 #import "SampleAppPlayerViewController.h"
 
 @implementation SampleAppPlayerViewController
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super init];
   if (self) {
-    _playerSelectionOption = playerSelectionOption;
+    self.playerSelectionOption = playerSelectionOption;
+     self.qaModeEnabled = qaModeEnabled;
+
   }
   return self;
 }

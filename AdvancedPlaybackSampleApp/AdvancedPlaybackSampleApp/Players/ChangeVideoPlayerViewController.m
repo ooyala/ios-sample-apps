@@ -8,23 +8,25 @@
 
 
 #import "ChangeVideoPlayerViewController.h"
-
+#import "AppDelegate.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 
 @interface ChangeVideoPlayerViewController ()
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 @end
 
 @implementation ChangeVideoPlayerViewController
-
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+{
+ AppDelegate *appDel;
+}
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerDoubleButton";
-
+NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
@@ -58,6 +60,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    
+    appDel = [[UIApplication sharedApplication] delegate];
   
   [self.button1 setTitle:@"Play Video 1" forState:UIControlStateNormal];
   [self.button2 setTitle:@"Play Video 2" forState:UIControlStateNormal];
@@ -70,6 +74,14 @@
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:_ooyalaPlayerViewController.player];
+    
+    // In QA Mode , making textView visible
+    if(self.qaModeEnabled==YES){
+        self.textView.hidden = NO;
+    }
+    else{
+        [self.textView removeFromSuperview];
+    }
 
   // Attach it to current view
   [self addChildViewController:_ooyalaPlayerViewController];
@@ -88,10 +100,23 @@
     return;
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                         [notification name],
+                         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                         [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
+    
+    NSLog(@"%@",message);
+    
+    //In QA Mode , adding notifications to the TextView
+    if(self.qaModeEnabled==YES) {
+        NSString *string = self.textView.text;
+        NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+        [self.textView setText:appendString];
+    
+         appDel.count++;
+        
+    }
+   appDel.count++;
+   
 }
-
 @end

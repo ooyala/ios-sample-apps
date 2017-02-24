@@ -20,7 +20,8 @@
 #import "PlayerSelectionOption.h"
 
 @interface AdvancedPlaybackListViewController ()
-@property NSMutableArray *options;
+@property (nonatomic) NSMutableArray *options;
+@property (nonatomic) BOOL qaLogEnabled;
 @end
 
 @implementation AdvancedPlaybackListViewController
@@ -91,10 +92,33 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
+    
+  
+    UISwitch *swtLog = [[UISwitch alloc] init];
+    [swtLog addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
+    UILabel *lblLog = [[UILabel alloc]  initWithFrame:CGRectMake(0,0,44,44)];
+    [lblLog setText:@"QA"];
+    
+    UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithCustomView:swtLog];
+    UIBarButtonItem * lbl = [[UIBarButtonItem alloc] initWithCustomView:lblLog];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn,lbl, nil] ;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
+     forCellReuseIdentifier:@"TableCell"];
 
   [self addAllPlayerSelectionOptions];
 }
+
+     - (void)changeSwitch:(id)sender{
+         if([sender isOn]){
+             NSLog(@"Switch is ON");
+             self.qaLogEnabled=YES;
+         }else{
+             NSLog(@"Switch is OFF");
+             self.qaLogEnabled=NO;
+         }
+         //  self.qaLogEnabled = [sender isOn];
+     }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
   if (!self.options) {
@@ -136,7 +160,7 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
-  PlayWithInitialTimePlayerViewController *controller = [(PlayWithInitialTimePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  PlayWithInitialTimePlayerViewController *controller = [(PlayWithInitialTimePlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
   [self.navigationController pushViewController:controller animated:YES];
 }
 

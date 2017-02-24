@@ -27,11 +27,13 @@
 @end
 
 @implementation ProgrammaticVolumePlayerViewController
+    AppDelegate *appDel;
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled{
+  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerSimple";
-
+ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
@@ -62,6 +64,11 @@
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.ooyalaPlayerViewController.player];
+    // In QA Mode , making textView visible
+    if(self.qaModeEnabled==YES){
+        self.textView.hidden = NO;
+        
+    }
 
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];
@@ -86,11 +93,22 @@
     return;
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
-        [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime], ((AppDelegate *)[[UIApplication sharedApplication] delegate]).count);
-  ((AppDelegate *)[[UIApplication sharedApplication] delegate]).count++;
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                         [notification name],
+                         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                         [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
+    
+    NSLog(@"%@",message);
+    
+    //In QA Mode , adding notifications to the TextView
+    if(self.qaModeEnabled==YES) {
+        NSString *string = self.textView.text;
+        NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+        [self.textView setText:appendString];
+        
+    }
+    
+    appDel.count++;
 }
 
 @end
