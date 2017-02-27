@@ -15,7 +15,7 @@
 @property IBOutlet UIButton *button;
 @property IBOutlet UIView *playerView;
 
-@property OOOoyalaPlayerViewController* playerViewController;
+@property (strong, nonatomic) OOOoyalaPlayerViewController* playerViewController;
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
@@ -36,7 +36,7 @@
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
     self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-
+    NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
     if (playerSelectionOption.nib) {
       _nib = playerSelectionOption.nib;
     } else {
@@ -62,6 +62,15 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
      appDel = [[UIApplication sharedApplication] delegate];
+    
+    // In QA Mode , making textView visible
+    if(self.qaModeEnabled==YES){
+        self.textView.hidden = NO;
+    }
+    else{
+        [self.textView removeFromSuperview];
+    }
+    
   if (_switch1 != nil) {
     _switchLabel1.text = @"ShowPromoImage";
     _switch1.on = NO;
@@ -82,7 +91,10 @@
     _switchLabel2.enabled = NO;
     _text2.enabled = NO;
   }
-
+//    if (self.qaModeEnabled == false) {
+//        [self.textView removeFromSuperview];
+//    }
+    //[self.textView setText:@"Hey"];
   [_button setTitle:@"Create" forState:UIControlStateNormal];
   self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
@@ -121,13 +133,7 @@
     [_playerViewController removeFromParentViewController];
     [_playerViewController.view removeFromSuperview];
   }
-
-    // In QA Mode , making textView visible
-    if(self.qaModeEnabled==YES){
-        self.textView.hidden = NO;
-        
-    }
-
+    
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
