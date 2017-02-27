@@ -8,13 +8,15 @@
 
 #import "TVRatingsPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
+#import "AppDelegate.h"
+
 
 @interface TVRatingsPlayerViewController () <UITextFieldDelegate>
 
 @property IBOutlet UIButton *button;
 @property IBOutlet UIView *playerView;
 
-@property OOOoyalaPlayerViewController* playerViewController;
+@property OOOoyalaPlayerViewController *playerViewController;
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
@@ -23,7 +25,9 @@
 
 @end
 
-@implementation TVRatingsPlayerViewController
+@implementation TVRatingsPlayerViewController{
+    AppDelegate *appDel;
+}
 
 @synthesize switchLabel1 = _switchLabel1;
 @synthesize switchLabel2 = _switchLabel2;
@@ -31,8 +35,8 @@
 @synthesize switch2 = _switch2;
 @synthesize button1 = _button1;
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  if (self = [super initWithPlayerSelectionOption: playerSelectionOption]) {
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+    self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
     _nib = @"PlayerDoubleSwitch";
     _tvRatingDuration = 5;
 
@@ -45,7 +49,6 @@
       NSLog(@"There was no PlayerSelectionOption!");
       return nil;
     }
-  }
   return self;
 }
 
@@ -68,6 +71,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    appDel = [[UIApplication sharedApplication] delegate];
   if (_switch1 != nil) {
     _switchLabel1.text = @"On = Top, Off = Bottom";
     _switch1.on = NO;
@@ -96,6 +100,12 @@
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+    
+    // In QA Mode , making textView visible
+    if(self.qaModeEnabled==YES){
+        self.textView.hidden = NO;
+        
+    }
 
   //Setup video view
   CGRect rect = self.playerView.bounds;
@@ -114,5 +124,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) notificationHandler:(NSNotification*) notification {
+    
+    // Ignore TimeChangedNotificiations for shorter logs
+    if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+        return;
+    }
+
+NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                     [notification name],
+                     [OOOoyalaPlayer playerStateToString:[self.playerViewController.player state]],
+                     [self.playerViewController.player playheadTime], appDel.count];
+
+NSLog(@"%@",message);
+
+//In QA Mode , adding notifications to the TextView
+if(self.qaModeEnabled==YES) {
+    NSString *string = self.textView.text;
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+    [self.textView setText:appendString];
+    
+}
+
+appDel.count++;
+}
+
+
 
 @end
