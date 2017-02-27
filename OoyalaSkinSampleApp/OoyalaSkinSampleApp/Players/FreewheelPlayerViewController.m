@@ -10,6 +10,7 @@
 #import <OoyalaFreewheelSDK/OOFreewheelManager.h>
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
+#import "AppDelegate.h"
 
 
 @interface FreewheelPlayerViewController ()
@@ -24,20 +25,24 @@
 @end
 
 
-@implementation FreewheelPlayerViewController
+@implementation FreewheelPlayerViewController{
+  AppDelegate *appDel;
+}
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption];
-
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
+  
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = playerSelectionOption.playerDomain;
+    self.playerDomain = self.playerSelectionOption.domain;
     self.pcode = playerSelectionOption.pcode;
   }
   return self;
 }
+
 
 - (void)loadView {
   [super loadView];
@@ -46,8 +51,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
-  // Create Ooyala ViewController
+appDel = [[UIApplication sharedApplication] delegate];
+ 
+  
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
@@ -61,6 +67,12 @@
   [self addChildViewController:_skinController];
   [_skinController.view setFrame:self.videoView.bounds];
   [ooyalaPlayer setEmbedCode:self.embedCode];
+  
+  // In QA Mode , making textView visible
+  if(self.qaModeEnabled==YES){
+    self.textView.hidden = NO;
+    
+  }
 
 
   [[NSNotificationCenter defaultCenter] addObserver: self
@@ -103,12 +115,23 @@
     NSLog(@"%@", message);
   }
 
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
-        [self.skinController.player playheadTime]);
+  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                       [notification name],
+                       [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
+                       [self.skinController.player playheadTime], appDel.count];
+  
+  NSLog(@"%@",message);
+  
+  //In QA Mode , adding notifications to the TextView
+  if(self.qaModeEnabled==YES) {
+    NSString *string = self.textView.text;
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+    [self.textView setText:appendString];
+    
+  }
+  
+  appDel.count++;
 }
-
 
 
 @end

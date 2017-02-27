@@ -15,10 +15,11 @@
 @end
 
 @implementation SampleAppPlayerViewController
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super init];
   if (self) {
     self.playerSelectionOption = playerSelectionOption;
+     self.qaModeEnabled = qaModeEnabled;
   }
   return self;
 }
