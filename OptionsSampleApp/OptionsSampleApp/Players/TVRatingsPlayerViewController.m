@@ -39,7 +39,7 @@
     self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
     _nib = @"PlayerDoubleSwitch";
     _tvRatingDuration = 5;
-
+NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
     if (self.playerSelectionOption) {
       self.embedCode = self.playerSelectionOption.embedCode;
       self.title = self.playerSelectionOption.title;
@@ -72,6 +72,14 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
     appDel = [[UIApplication sharedApplication] delegate];
+    
+    // In QA Mode , making textView visible
+    if(self.qaModeEnabled==YES){
+        self.textView.hidden = NO;
+        
+    }
+
+    
   if (_switch1 != nil) {
     _switchLabel1.text = @"On = Top, Off = Bottom";
     _switch1.on = NO;
@@ -101,11 +109,10 @@
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
     
-    // In QA Mode , making textView visible
-    if(self.qaModeEnabled==YES){
-        self.textView.hidden = NO;
-        
-    }
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector:@selector(notificationHandler:)
+                                                 name:nil
+                                               object:self.playerViewController.player];
 
   //Setup video view
   CGRect rect = self.playerView.bounds;
