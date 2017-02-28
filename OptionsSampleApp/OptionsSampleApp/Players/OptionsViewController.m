@@ -91,11 +91,7 @@
     _switchLabel2.enabled = NO;
     _text2.enabled = NO;
   }
-//    if (self.qaModeEnabled == false) {
-//        [self.textView removeFromSuperview];
-//    }
-    //[self.textView setText:@"Hey"];
-  [_button setTitle:@"Create" forState:UIControlStateNormal];
+    [_button setTitle:@"Create" forState:UIControlStateNormal];
   self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
@@ -137,6 +133,12 @@
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector:@selector(notificationHandler:)
+                                                 name:nil
+                                               object:self.playerViewController.player];
+
     
   //Setup video view
   CGRect rect = self.playerView.bounds;
