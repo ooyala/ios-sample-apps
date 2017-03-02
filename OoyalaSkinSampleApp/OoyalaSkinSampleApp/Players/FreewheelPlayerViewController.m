@@ -37,7 +37,7 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.domain;
+    self.playerDomain = self.playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
   }
   return self;
@@ -51,7 +51,7 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-appDel = [[UIApplication sharedApplication] delegate];
+  appDel = [[UIApplication sharedApplication] delegate];
  
   
   // Create Ooyala ViewController
@@ -68,12 +68,6 @@ appDel = [[UIApplication sharedApplication] delegate];
   [_skinController.view setFrame:self.videoView.bounds];
   [ooyalaPlayer setEmbedCode:self.embedCode];
   
-  // In QA Mode , making textView visible
-  if(self.qaModeEnabled==YES){
-    self.textView.hidden = NO;
-    
-  }
-
 
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
@@ -86,6 +80,12 @@ appDel = [[UIApplication sharedApplication] delegate];
                                              object:self.skinController];
 
   self.adsManager = [[OOFreewheelManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
+  
+  // In QA Mode , making textView visible
+  if(self.qaModeEnabled==YES){
+    self.textView.hidden = NO;
+    
+  }
 
   NSMutableDictionary *fwParameters = [[NSMutableDictionary alloc] init];
   //[fwParameters setObject:@"90750" forKey:@"fw_ios_mrm_network_id"];

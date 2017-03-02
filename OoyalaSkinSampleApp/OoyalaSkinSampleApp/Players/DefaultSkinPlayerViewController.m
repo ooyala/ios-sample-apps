@@ -38,8 +38,10 @@ NSMutableArray *_sharePlugins;
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.domain;
+    self.playerDomain = self.playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
+    
+    NSLog(@"%@s", self.playerDomain);
   }
   return self;
 }
@@ -69,6 +71,16 @@ NSMutableArray *_sharePlugins;
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.skinController];
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:ooyalaPlayer];
+  
+  // In QA Mode , making textView visible
+  if(self.qaModeEnabled==YES){
+    self.textView.hidden = NO;
+    
+  }
 
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
@@ -79,45 +91,28 @@ NSMutableArray *_sharePlugins;
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
-
+  
+  // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
-
-  // Check for FullScreenChanged notification
-  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
-    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
-                         [notification name],
-                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
-    NSLog(@"%@", message);
-  }
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                     [notification name],
-                     [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
-                     [self.skinController.player playheadTime], appDel.count];
-
-NSLog(@"%@",message);
-
-//In QA Mode , adding notifications to the TextView
-if(self.qaModeEnabled==YES) {
-  NSString *string = self.textView.text;
-  NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
-  [self.textView setText:appendString];
   
+  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                       [notification name],
+                       [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
+                       [self.skinController.player playheadTime], appDel.count];
+  NSLog(@"%@",message);
+  
+  //In QA Mode , adding notifications to the TextView
+  if(self.qaModeEnabled==YES) {
+    NSString *string = self.textView.text;
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+    [self.textView setText:appendString];
+    
+  }
+  appDel.count++;
 }
 
-appDel.count++;
-}
+
 
 @end

@@ -14,6 +14,7 @@
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *domain;
 @property (nonatomic) NSString *title;
+@property (nonatomic) NSString *playerDomain;
 @property (nonatomic) NSString *nib;
 @property Class viewController;
 
