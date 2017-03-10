@@ -14,6 +14,7 @@
 
 @interface NPAWListViewController ()
 @property NSMutableArray *options;
+@property BOOL qaLogEnabled;
 @property NSMutableArray *optionList;
 @property NSMutableArray *optionEmbedCodes;
 @end
@@ -43,9 +44,28 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
+    UISwitch *swtLog = [[UISwitch alloc] init];
+    [swtLog addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
+    UILabel *lblLog = [[UILabel alloc]  initWithFrame:CGRectMake(0,0,44,44)];
+    [lblLog setText:@"QA"];
+    
+    UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithCustomView:swtLog];
+    UIBarButtonItem * lbl = [[UIBarButtonItem alloc] initWithCustomView:lblLog];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn,lbl, nil] ;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
 
   [self addAllPlayerSelectionOptions];
+}
+
+- (void)changeSwitch:(id)sender{
+    if([sender isOn]){
+        NSLog(@"Switch is ON");
+        self.qaLogEnabled=YES;
+    }else{
+        NSLog(@"Switch is OFF");
+        self.qaLogEnabled=NO;
+    }
+    //  self.qaLogEnabled = [sender isOn];
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
@@ -87,7 +107,7 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller = [(NPAWDefaultPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  SampleAppPlayerViewController *controller = [(NPAWDefaultPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
   [self.navigationController pushViewController:controller animated:YES];
 }
 @end
