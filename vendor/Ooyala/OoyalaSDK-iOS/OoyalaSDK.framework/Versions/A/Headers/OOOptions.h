@@ -20,7 +20,7 @@
 @property (nonatomic) BOOL showPromoImage; /** If set to YES, show the promo image if a promo image is available. Default: NO */
 @property (nonatomic) NSTimeInterval connectionTimeout; /** The timeout value for network requests. Default: 60.0 seconds */
 @property (nonatomic) id<OOSecureURLGenerator> secureURLGenerator; /** Helper for signing URLs with provider's secret and API key. */
-@property (nonatomic) id<AVPictureInPictureControllerDelegate> pipDelegate; /** The picture in picture delegate to receive PIP events*/
+@property (weak, nonatomic) id<AVPictureInPictureControllerDelegate> pipDelegate; /** The picture in picture delegate to receive PIP events*/
 @property (nonatomic) BOOL bypassPCodeMatching; /** Bypass the check to ensure the provided PCode matches the asset's Pcode */
 @property (nonatomic) BOOL disableVASTOoyalaAds; /** Disable the support of VAST and Ooyala Ads that is enabled in the SDK by default */
 /**
