@@ -83,7 +83,6 @@
 
   // Load the video
   [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [_ooyalaPlayerViewController.player play];
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
