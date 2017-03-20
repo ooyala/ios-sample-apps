@@ -9,5 +9,6 @@ This app requires the tvOS Pulse SDK library to run.  In order to get this you m
 1. Go to [help.ooyala.com/downloads](help.ooyala.com/downloads)
 1. Download "tvOS 2.x SDK framework"
 1. Take the resulting Pulse_tvOS.framework and paste it in `TVOSSampleApp/VendorLibraries
-1. In Xcode, add Pulse_tvOS.framework to Linked Frameworks and Libraries, and Embedded Binaries of the TVOSSampleApp target
+1. In Xcode, add Pulse_tvOS.framework to Linked Frameworks and Libraries of the TVOSSampleApp target
+1. In Xcode, add Pulse_tvOS.framework to Embedded Binaries of the TVOSSampleApp target
 1. Run the application
