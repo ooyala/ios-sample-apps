@@ -8,7 +8,7 @@
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaPulseIntegration/OoyalaPulseIntegration.h>
-#import <Pulse/Pulse.h>
+#import <Pulse_tvOS/Pulse.h>
 
 #import "PulsePlayerViewController.h"
 #import "PulseLibraryOption.h"
