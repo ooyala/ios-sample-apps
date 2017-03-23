@@ -17,8 +17,10 @@
 @property (nonatomic) NSString *playerDomain;
 @end
 
-@implementation PerformanceProfilingPlayerViewController
+@implementation PerformanceProfilingPlayerViewController{
           AppDelegate *appDel;
+}
+
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled{
   self = [super initWithPlayerSelectionOption: playerSelectionOption  qaModeEnabled:qaModeEnabled];
@@ -43,6 +45,7 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    appDel = [[UIApplication sharedApplication] delegate];
   // Create Ooyala ViewController
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];

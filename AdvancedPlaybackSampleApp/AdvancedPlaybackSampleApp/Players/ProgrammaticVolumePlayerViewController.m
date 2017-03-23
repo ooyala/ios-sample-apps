@@ -53,7 +53,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
+    appDel = [[UIApplication sharedApplication] delegate];
+    
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];

@@ -20,8 +20,9 @@
 @property (nonatomic) NSString *playerDomain;
 @end
 
-@implementation NotificationsPlayerViewController
+@implementation NotificationsPlayerViewController{
   AppDelegate *appDel;
+}
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled{
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled];
@@ -46,7 +47,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
+appDel = [[UIApplication sharedApplication] delegate];
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
