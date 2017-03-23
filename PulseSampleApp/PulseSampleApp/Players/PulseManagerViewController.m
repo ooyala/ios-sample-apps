@@ -56,12 +56,13 @@
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.player];
-    
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                            selector:@selector(notificationHandler:)
-                                                name:nil
-                                             object:self.playerViewController];
+
   [self prepareSkinned];
+
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(notificationHandler:)
+                                               name:nil
+                                             object:self.playerViewController];
   //[self prepareUnskinned];
   
   // Create the Pulse manager object, and associate it with the Ooyala player
