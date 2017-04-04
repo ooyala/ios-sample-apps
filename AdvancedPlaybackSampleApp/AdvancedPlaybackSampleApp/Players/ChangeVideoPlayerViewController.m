@@ -26,7 +26,7 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerDoubleButton";
-NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
+NSLog(@"value of qa mode in ChangeVideoProgrammaticallyViewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;

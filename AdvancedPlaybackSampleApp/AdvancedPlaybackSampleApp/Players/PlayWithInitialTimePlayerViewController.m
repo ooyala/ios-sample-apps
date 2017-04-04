@@ -26,7 +26,7 @@ AppDelegate *appDel;
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerSimple";
- NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
+ NSLog(@"value of qa mode in PlayWithInitialTimeViewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;

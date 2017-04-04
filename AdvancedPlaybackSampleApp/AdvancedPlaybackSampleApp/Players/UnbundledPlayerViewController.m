@@ -29,7 +29,7 @@
   self.pcode =@"R2d3I6s06RyB712DN0_2GsQS-R-Y";
   self.playerDomain = @"http://www.ooyala.com";
     
-    NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
+    NSLog(@"value of qa mode in UnbundeledPlayerViewController %@", self.qaModeEnabled ? @"YES" : @"NO");
 
   if (self.playerSelectionOption) {
     self.assetUrl = self.playerSelectionOption.embedCode;

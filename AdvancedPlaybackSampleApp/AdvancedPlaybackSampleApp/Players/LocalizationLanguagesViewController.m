@@ -26,7 +26,7 @@
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled{
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerSimple";
-   NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
+   NSLog(@"value of qa mode in LozalizationLanguageViewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self && self.playerSelectionOption) {
     _embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
