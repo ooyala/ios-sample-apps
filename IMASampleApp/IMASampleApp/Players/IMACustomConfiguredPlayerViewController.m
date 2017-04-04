@@ -14,7 +14,7 @@
 #import "AppDelegate.h"
 
 @interface IMACustomConfiguredPlayerViewController ()
-@property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (nonatomic) OOIMAManager *adsManager;
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *nib;
@@ -85,7 +85,6 @@
 
   // Load the video
   [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [_ooyalaPlayerViewController.player play];
 }
 
 - (void) notificationHandler:(NSNotification*) notification {

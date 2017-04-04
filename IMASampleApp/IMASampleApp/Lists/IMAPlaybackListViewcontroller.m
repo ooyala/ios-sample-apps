@@ -12,8 +12,8 @@
 #import "PlayerSelectionOption.h"
 
 @interface IMAPlaybackListViewcontroller ()
-@property NSMutableArray *options;
-@property BOOL qaLogEnabled;
+@property (nonatomic) NSMutableArray *options;
+@property (nonatomic) BOOL qaLogEnabled;
 @end
 
 @implementation IMAPlaybackListViewcontroller

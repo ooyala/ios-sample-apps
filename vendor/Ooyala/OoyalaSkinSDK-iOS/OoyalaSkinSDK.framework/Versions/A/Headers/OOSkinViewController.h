@@ -22,6 +22,11 @@
 @property (nonatomic, readonly) NSString *version;
 @property (nonatomic, readonly) OOClosedCaptionsStyle *closedCaptionsDeviceStyle;
 
+/**
+ Programatically change the fullscreen mode of the player.
+ */
+@property (nonatomic, getter=isFullscreen) BOOL fullscreen;
+
 // notifications
 extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fires when player goes FullScreen  */
 
@@ -35,4 +40,5 @@ extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fir
 - (void)ccStyleChanged:(NSNotification *) notification;
 
 - (void)sendBridgeEventWithName:(NSString *)eventName body:(id)body;
+
 @end
