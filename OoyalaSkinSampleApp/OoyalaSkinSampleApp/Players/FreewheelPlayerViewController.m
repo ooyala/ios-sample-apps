@@ -30,9 +30,7 @@
 }
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
-  
+  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];  
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
@@ -52,33 +50,33 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
 - (void)viewDidLoad {
   [super viewDidLoad];
   appDel = [[UIApplication sharedApplication] delegate];
- 
+  
   
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-//  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+  //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause; //This is reccomended to make sure the endscreen shows up as expected
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions jsCodeLocation:jsCodeLocation configFileName:@"skin" overrideConfigs:nil];
-
+  
   self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer skinOptions:skinOptions parent:_videoView launchOptions:nil];
   [self addChildViewController:_skinController];
   [_skinController.view setFrame:self.videoView.bounds];
   [ooyalaPlayer setEmbedCode:self.embedCode];
   
-
+  
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:ooyalaPlayer];
-
+  
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.skinController];
-
+  
   self.adsManager = [[OOFreewheelManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
   
   // In QA Mode , making textView visible
@@ -86,7 +84,7 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
     self.textView.hidden = NO;
     
   }
-
+  
   NSMutableDictionary *fwParameters = [[NSMutableDictionary alloc] init];
   //[fwParameters setObject:@"90750" forKey:@"fw_ios_mrm_network_id"];
   [fwParameters setObject:@"https://g1.v.fwmrm.net/" forKey:@"fw_ios_ad_server"];
@@ -95,18 +93,18 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
   //[fwParameters setObject:@"ooyala_test_site_section" forKey:@"fw_ios_site_section_id"];
   //[fwParameters setObject:@"ooyala_test_video_with_bvi_cuepoints" forKey:@"fw_ios_video_asset_id"];
   [self.adsManager overrideFreewheelParameters:fwParameters];
-
+  
   // Load the video
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
-
+  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
-
+  
   // Check for FullScreenChanged notification
   if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
     NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
@@ -114,7 +112,7 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
                          [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
     NSLog(@"%@", message);
   }
-
+  
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
                        [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
@@ -125,11 +123,9 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
   //In QA Mode , adding notifications to the TextView
   if(self.qaModeEnabled==YES) {
     NSString *string = self.textView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
     [self.textView setText:appendString];
-    
   }
-  
   appDel.count++;
 }
 

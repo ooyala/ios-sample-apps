@@ -53,18 +53,15 @@
   UIBarButtonItem * lbl = [[UIBarButtonItem alloc] initWithCustomView:lblLog];
   self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn,lbl, nil] ;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-
+  
   [self addTestCases];
 }
 - (void)changeSwitch:(id)sender{
   if([sender isOn]){
-    NSLog(@"Switch is ON");
-    self.qaLogEnabled=YES;
+    self.qaLogEnabled = YES;
   } else{
-    NSLog(@"Switch is OFF");
-    self.qaLogEnabled=NO;
+    self.qaLogEnabled = NO;
   }
-  //  self.qaLogEnabled = [sender isOn];
 }
 
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
@@ -107,4 +104,4 @@
   SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
   [self.navigationController pushViewController:controller animated:YES];
 }
-  @end
+@end

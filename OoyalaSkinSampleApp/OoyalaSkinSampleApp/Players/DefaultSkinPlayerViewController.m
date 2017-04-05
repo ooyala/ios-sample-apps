@@ -30,10 +30,7 @@ NSMutableArray *_sharePlugins;
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-  NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
-
   _sharePlugins = [[NSMutableArray alloc] init];
-
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
@@ -108,7 +105,6 @@ NSMutableArray *_sharePlugins;
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
     [self.textView setText:appendString];
-    
   }
   appDel.count++;
 }

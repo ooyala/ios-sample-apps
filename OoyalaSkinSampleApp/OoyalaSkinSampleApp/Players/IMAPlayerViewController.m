@@ -24,12 +24,11 @@
 @implementation IMAPlayerViewController
 {
   AppDelegate *appDel;
-
+  
 }
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
@@ -47,7 +46,7 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-appDel = [[UIApplication sharedApplication] delegate];
+  appDel = [[UIApplication sharedApplication] delegate];
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
@@ -60,12 +59,12 @@ appDel = [[UIApplication sharedApplication] delegate];
   [self addChildViewController:_skinController];
   [_skinController.view setFrame:self.videoView.bounds];
   [ooyalaPlayer setEmbedCode:self.embedCode];
-
+  
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:ooyalaPlayer];
-
+  
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
@@ -73,11 +72,10 @@ appDel = [[UIApplication sharedApplication] delegate];
   // In QA Mode , making textView visible
   if(self.qaModeEnabled==YES){
     self.textView.hidden = NO;
-    
   }
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
-
-
+  
+  
   // Load the video
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
@@ -98,9 +96,8 @@ appDel = [[UIApplication sharedApplication] delegate];
   //In QA Mode , adding notifications to the TextView
   if(self.qaModeEnabled==YES) {
     NSString *string = self.textView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
     [self.textView setText:appendString];
-    
   }
   appDel.count++;
 }
