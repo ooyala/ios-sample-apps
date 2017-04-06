@@ -1,4 +1,7 @@
-This was built with OoyalaSDK v4.22.0_RC3
-Git SHA: 6544ba68667f61c828ac5730dcbbb403a47469ab
-Tested with Freewheel SDK version 6.5.0
-Created On: Mon Jan 23 18:21:07 PST 2017
+Ooyala SDK Version: v4.24.0_RC4
+Git SHA: 70b04bbc1f44cc1f4f0db185b9b32ac38daeac15
+
+#define FW_SDK_VERSION @"6.5.0"
+#define FW_BUILD_STAMP "6.5.0-r10900-201511170350"
+
+Created On: Mon Mar 27 16:54:02 PDT 2017

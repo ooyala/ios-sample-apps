@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <OoyalaSDK/OOOoyalaPlayer.h>
 
+@class OOReactBridge;
 
 @interface OOUpNextManager : NSObject
 
@@ -13,6 +14,7 @@
 @property (nonatomic, readonly, weak) OOOoyalaPlayer *player;
 
 - (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
+                        bridge:(OOReactBridge *)bridge
                         config:(NSDictionary *)config;
 
 - (void)setNextVideo:(NSMutableArray *)nextVideo;

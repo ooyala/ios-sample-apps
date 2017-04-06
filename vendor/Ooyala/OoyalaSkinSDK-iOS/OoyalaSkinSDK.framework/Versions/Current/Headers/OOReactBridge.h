@@ -13,9 +13,8 @@
 @class OOSkinViewController;
 
 @interface OOReactBridge : NSObject<RCTBridgeModule>
-
-+ (void)sendDeviceEventWithName:(NSString *)eventName body:(id)body;
-+ (void)registerController:(OOSkinViewController *)controller;
-+ (void)deregisterController:(OOSkinViewController *)controller;
+- (void)sendDeviceEventWithName:(NSString *)eventName body:(id)body;
+- (void)registerController:(OOSkinViewController *)controller;
+- (void)deregisterController:(OOSkinViewController *)controller;
 
 @end
