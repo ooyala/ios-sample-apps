@@ -39,38 +39,37 @@
     self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
     _nib = @"PlayerDoubleSwitch";
     _tvRatingDuration = 5;
-NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
     if (self.playerSelectionOption) {
-      self.embedCode = self.playerSelectionOption.embedCode;
-      self.title = self.playerSelectionOption.title;
-      self.pcode = self.playerSelectionOption.pcode;
-      self.playerDomain = self.playerSelectionOption.domain;
+        self.embedCode = self.playerSelectionOption.embedCode;
+        self.title = self.playerSelectionOption.title;
+        self.pcode = self.playerSelectionOption.pcode;
+        self.playerDomain = self.playerSelectionOption.domain;
     } else {
-      NSLog(@"There was no PlayerSelectionOption!");
-      return nil;
+        NSLog(@"There was no PlayerSelectionOption!");
+        return nil;
     }
-  return self;
+    return self;
 }
 
 - (void)loadView {
-  [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+    [super loadView];
+    [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (OOFCCTvRatingsPosition) getTVRatingPosition {
-  if (_switch1.on == YES && _switch2.on == YES) {
-    return OOFCCTvRatingsPositionTopLeft;
-  } else if (_switch1.on == YES && _switch2.on == NO) {
-    return OOFCCTvRatingsPositionTopRight;
-  } else if (_switch1.on == NO && _switch2.on == YES) {
-    return OOFCCTvRatingsPositionBottomLeft;
-  } else { // if (_switch1.on == NO && _switch2.on == NO)
-    return OOFCCTvRatingsPositionBottomRight;
-  }
+    if (_switch1.on == YES && _switch2.on == YES) {
+        return OOFCCTvRatingsPositionTopLeft;
+    } else if (_switch1.on == YES && _switch2.on == NO) {
+        return OOFCCTvRatingsPositionTopRight;
+    } else if (_switch1.on == NO && _switch2.on == YES) {
+        return OOFCCTvRatingsPositionBottomLeft;
+    } else { // if (_switch1.on == NO && _switch2.on == NO)
+        return OOFCCTvRatingsPositionBottomRight;
+    }
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
+    [super viewDidLoad];
     appDel = [[UIApplication sharedApplication] delegate];
     
     // In QA Mode , making textView visible
@@ -78,53 +77,53 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
         self.textView.hidden = NO;
         
     }
-
     
-  if (_switch1 != nil) {
-    _switchLabel1.text = @"On = Top, Off = Bottom";
-    _switch1.on = NO;
-  }
-  if (_switch2 != nil) {
-    _switchLabel2.text = @"On = Left, Off = Right";
-    _switch2.on = NO;
-  }
-
-  [_button1 setTitle:@"Set EC" forState:UIControlStateNormal];
+    
+    if (_switch1 != nil) {
+        _switchLabel1.text = @"On = Top, Off = Bottom";
+        _switch1.on = NO;
+    }
+    if (_switch2 != nil) {
+        _switchLabel2.text = @"On = Left, Off = Right";
+        _switch2.on = NO;
+    }
+    
+    [_button1 setTitle:@"Set EC" forState:UIControlStateNormal];
 }
 
 - (IBAction)onButtonClick:(id)sender {
-  OOOptions *options = [OOOptions new];
-  if (_playerViewController) {
-    [_playerViewController removeFromParentViewController];
-    [_playerViewController.view removeFromSuperview];
-  }
-
-  OOFCCTVRatingConfiguration *tvRatingConfig = [[OOFCCTVRatingConfiguration alloc] initWithDurationSeconds:_tvRatingDuration
-                                                                                                   position:[self getTVRatingPosition]
-                                                                                                      scale:OOFCCTVRATINGCONFIGURATION_DEFAULT_SCALE
-                                                                                                    opacity:OOFCCTVRATINGCONFIGURATION_DEFAULT_OPACITY];
-  options.tvRatingConfiguration = tvRatingConfig;
-
-  // Create Ooyala ViewController
-  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
-  _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+    OOOptions *options = [OOOptions new];
+    if (_playerViewController) {
+        [_playerViewController removeFromParentViewController];
+        [_playerViewController.view removeFromSuperview];
+    }
+    
+    OOFCCTVRatingConfiguration *tvRatingConfig = [[OOFCCTVRatingConfiguration alloc] initWithDurationSeconds:_tvRatingDuration
+                                                                                                    position:[self getTVRatingPosition]
+                                                                                                       scale:OOFCCTVRATINGCONFIGURATION_DEFAULT_SCALE
+                                                                                                     opacity:OOFCCTVRATINGCONFIGURATION_DEFAULT_OPACITY];
+    options.tvRatingConfiguration = tvRatingConfig;
+    
+    // Create Ooyala ViewController
+    OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
+    _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
     
     [[NSNotificationCenter defaultCenter] addObserver: self
                                              selector:@selector(notificationHandler:)
                                                  name:nil
                                                object:self.playerViewController.player];
-
-  //Setup video view
-  CGRect rect = self.playerView.bounds;
-  [_playerViewController.view setFrame:rect];
-  [self addChildViewController:_playerViewController];
-  [self.playerView addSubview:_playerViewController.view];
-
-  [_playerViewController.player setEmbedCode:self.embedCode];
-  if (_initialTime > 0) {
-    [_playerViewController.player playWithInitialTime:_initialTime];
-  }
-  
+    
+    //Setup video view
+    CGRect rect = self.playerView.bounds;
+    [_playerViewController.view setFrame:rect];
+    [self addChildViewController:_playerViewController];
+    [self.playerView addSubview:_playerViewController.view];
+    
+    [_playerViewController.player setEmbedCode:self.embedCode];
+    if (_initialTime > 0) {
+        [_playerViewController.player playWithInitialTime:_initialTime];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -138,23 +137,21 @@ NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnable
     if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
         return;
     }
-
-NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                     [notification name],
-                     [OOOoyalaPlayer playerStateToString:[self.playerViewController.player state]],
-                     [self.playerViewController.player playheadTime], appDel.count];
-
-NSLog(@"%@",message);
-
-//In QA Mode , adding notifications to the TextView
-if(self.qaModeEnabled==YES) {
-    NSString *string = self.textView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
-    [self.textView setText:appendString];
     
-}
-
-appDel.count++;
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                         [notification name],
+                         [OOOoyalaPlayer playerStateToString:[self.playerViewController.player state]],
+                         [self.playerViewController.player playheadTime], appDel.count];
+    
+    NSLog(@"%@",message);
+    
+    //In QA Mode , adding notifications to the TextView
+    if(self.qaModeEnabled==YES) {
+        NSString *string = self.textView.text;
+        NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
+        [self.textView setText:appendString];
+    }
+    appDel.count++;
 }
 
 
