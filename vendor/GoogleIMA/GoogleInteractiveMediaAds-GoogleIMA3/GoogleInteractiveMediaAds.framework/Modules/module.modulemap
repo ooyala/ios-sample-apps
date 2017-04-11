@@ -28,10 +28,13 @@ framework module GoogleInteractiveMediaAds {
   header "IMAAdsRequest.h"
   header "IMACompanionAdSlot.h"
   header "IMAContentPlayhead.h"
+  header "IMACuepoint.h"
+  header "IMALiveStreamRequest.h"
   header "IMAPictureInPictureProxy.h"
   header "IMASettings.h"
   header "IMAStreamManager.h"
   header "IMAStreamRequest.h"
   header "IMAUiElements.h"
+  header "IMAVODStreamRequest.h"
   header "IMAVideoDisplay.h"
 }
