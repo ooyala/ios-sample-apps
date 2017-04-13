@@ -70,7 +70,7 @@
                                                name:nil
                                              object:self.skinController];
   // In QA Mode , making textView visible
-  if(self.qaModeEnabled==YES){
+  if (self.qaModeEnabled == YES){
     self.textView.hidden = NO;
   }
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
@@ -94,7 +94,7 @@
   NSLog(@"%@",message);
   
   //In QA Mode , adding notifications to the TextView
-  if(self.qaModeEnabled==YES) {
+  if (self.qaModeEnabled == YES) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
     [self.textView setText:appendString];

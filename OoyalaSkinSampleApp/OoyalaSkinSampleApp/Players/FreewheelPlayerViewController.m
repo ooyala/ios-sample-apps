@@ -30,7 +30,7 @@
 }
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];  
+  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
@@ -80,7 +80,7 @@
   self.adsManager = [[OOFreewheelManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
   
   // In QA Mode , making textView visible
-  if(self.qaModeEnabled==YES){
+  if (self.qaModeEnabled == YES){
     self.textView.hidden = NO;
     
   }
@@ -121,13 +121,11 @@
   NSLog(@"%@",message);
   
   //In QA Mode , adding notifications to the TextView
-  if(self.qaModeEnabled==YES) {
+  if (self.qaModeEnabled == YES) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
     [self.textView setText:appendString];
   }
   appDel.count++;
 }
-
-
 @end

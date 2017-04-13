@@ -74,9 +74,8 @@ NSMutableArray *_sharePlugins;
                                              object:ooyalaPlayer];
   
   // In QA Mode , making textView visible
-  if(self.qaModeEnabled==YES){
+  if (self.qaModeEnabled == YES){
     self.textView.hidden = NO;
-    
   }
 
   [ooyalaPlayer setEmbedCode:self.embedCode];
@@ -101,14 +100,11 @@ NSMutableArray *_sharePlugins;
   NSLog(@"%@",message);
   
   //In QA Mode , adding notifications to the TextView
-  if(self.qaModeEnabled==YES) {
+  if (self.qaModeEnabled == YES) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
     [self.textView setText:appendString];
   }
   appDel.count++;
 }
-
-
-
 @end
