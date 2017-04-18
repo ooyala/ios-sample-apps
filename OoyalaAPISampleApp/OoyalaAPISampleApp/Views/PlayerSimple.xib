@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleAppPlayerViewController">
             <connections>
+                <outlet property="playerBottomSpace" destination="qSZ-mf-Lmn" id="swK-41-iqJ"/>
                 <outlet property="playerView" destination="iN0-l3-epB" id="9Th-Yt-L8r"/>
                 <outlet property="textView" destination="5JG-7h-bBs" id="VcE-mI-JV7"/>
                 <outlet property="view" destination="4TQ-c6-OhF" id="1mV-OR-s6k"/>

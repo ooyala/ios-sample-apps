@@ -11,5 +11,5 @@
 @interface DiscoveryListViewController : UITableViewController
 
 @property NSString *embedCode;
-
+@property BOOL qaModeEnabled;
 @end

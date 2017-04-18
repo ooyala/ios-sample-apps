@@ -5,4 +5,5 @@
 
 @property (nonatomic) PlayerSelectionOption *option;
 
+@property BOOL qaModeEnabled;
 @end
