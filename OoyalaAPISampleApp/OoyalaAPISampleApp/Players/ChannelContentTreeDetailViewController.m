@@ -7,22 +7,30 @@
 
 #import "ChannelContentTreeDetailViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
+#import "AppDelegate.h"
 
 @interface ChannelContentTreeDetailViewController () {
   NSString *embedCode;
   NSString *nib;
   NSString *pcode;
   NSString *playerDomain;
+    
 
   OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+    
 }
 
 @end
 
-@implementation ChannelContentTreeDetailViewController
+@implementation ChannelContentTreeDetailViewController{
+    AppDelegate *appDel;
+}
 
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  if (self = [super initWithPlayerSelectionOption:playerSelectionOption]) {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled  {
+     self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+    NSLog(@"value of qa mode  %@", self.qaModeEnabled ? @"YES" : @"NO");
+
+  if (self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled]) {
     nib = @"PlayerSimple";
 
     if (self.playerSelectionOption) {
@@ -46,6 +54,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    appDel = [[UIApplication sharedApplication] delegate];
 
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:pcode domain:[[OOPlayerDomain alloc] initWithString:playerDomain]];
@@ -78,10 +88,20 @@
     return;
   }
 
-  LOG(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
-        [OOOoyalaPlayer playerStateToString:[ooyalaPlayerViewController.player state]],
-        [ooyalaPlayerViewController.player playheadTime]);
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
+                         [notification name],
+                         [OOOoyalaPlayer playerStateToString:[self->ooyalaPlayerViewController.player state]],
+                         [self->ooyalaPlayerViewController.player playheadTime], appDel.count];
+    NSLog(@"%@",message);
+    
+    //In QA Mode , adding notifications to the TextView
+    if(self.qaModeEnabled==YES) {
+        NSString *string = self.textView.text;
+        NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
+        [self.textView setText:appendString];
+        
+    }
+    appDel.count++;
 }
 
 

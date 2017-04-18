@@ -14,6 +14,8 @@
 @interface OoyalaAPIListViewController ()
 
 @property NSArray *channelList;
+@property (nonatomic) NSMutableArray *options;
+@property (nonatomic) BOOL qaLogEnabled;
 
 @end
 
@@ -21,6 +23,16 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
+    
+    UISwitch *swtLog = [[UISwitch alloc] init];
+    [swtLog addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
+    UILabel *lblLog = [[UILabel alloc]  initWithFrame:CGRectMake(0,0,44,44)];
+    [lblLog setText:@"QA"];
+    
+    UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithCustomView:swtLog];
+    UIBarButtonItem * lbl = [[UIBarButtonItem alloc] initWithCustomView:lblLog];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn,lbl, nil] ;
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil] forCellReuseIdentifier:@"TableCell"];
 
   if (_channelList == nil) {
@@ -45,6 +57,18 @@
     _channelList = [NSArray arrayWithObjects:option3, option1, option2,   nil];
   }
 }
+
+- (void)changeSwitch:(id)sender{
+    if([sender isOn]){
+        NSLog(@"Switch is ON");
+        self.qaLogEnabled=YES;
+    }else{
+        NSLog(@"Switch is OFF");
+        self.qaLogEnabled=NO;
+    }
+    //  self.qaLogEnabled = [sender isOn];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -77,8 +101,8 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.channelList[indexPath.row];
-  UIViewController *controller = (UIViewController *)[[selection viewController] new];
-
+   UIViewController *controller = (UIViewController *)[[selection viewController] new];
+    
   if ([controller isKindOfClass:[ChannelContentTreePlayerViewController class]]) {
     ((ChannelContentTreePlayerViewController *)controller).option = selection;
   } else if ([controller isKindOfClass:[DiscoveryListViewController class]]) {
