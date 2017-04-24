@@ -49,8 +49,8 @@
 		C4A99EC01C6227AD00F55208 /* PulseManagerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A99EBE1C6227AD00F55208 /* PulseManagerViewController.h */; };
 		C4A99EC11C6227AD00F55208 /* PulseManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A99EBF1C6227AD00F55208 /* PulseManagerViewController.m */; };
 		C4BB04431C75FCD100871138 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BB04421C75FCD100871138 /* TableCell.xib */; };
-		CFA4B7941E703B72003E9721 /* Pulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA4B7931E703B72003E9721 /* Pulse.framework */; };
-		CFA4B7951E703B72003E9721 /* Pulse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFA4B7931E703B72003E9721 /* Pulse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF9F30661EA9F3A300DFC7BB /* Pulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9F30651EA9F3A300DFC7BB /* Pulse.framework */; };
+		CF9F30671EA9F3A300DFC7BB /* Pulse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF9F30651EA9F3A300DFC7BB /* Pulse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,13 +63,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFA4B7961E703B72003E9721 /* Embed Frameworks */ = {
+		CF9F30681EA9F3A300DFC7BB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CFA4B7951E703B72003E9721 /* Pulse.framework in Embed Frameworks */,
+				CF9F30671EA9F3A300DFC7BB /* Pulse.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +131,7 @@
 		C4A99EBE1C6227AD00F55208 /* PulseManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseManagerViewController.h; sourceTree = "<group>"; };
 		C4A99EBF1C6227AD00F55208 /* PulseManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseManagerViewController.m; sourceTree = "<group>"; };
 		C4BB04421C75FCD100871138 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		CF9F30651EA9F3A300DFC7BB /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulse.framework; path = VendorLibraries/Pulse.framework; sourceTree = "<group>"; };
 		CFA4B7931E703B72003E9721 /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pulse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +148,7 @@
 				C477A8011C884815000B4890 /* libz.tbd in Frameworks */,
 				C477A7FF1C884776000B4890 /* MessageUI.framework in Frameworks */,
 				C477A7FD1C884770000B4890 /* Social.framework in Frameworks */,
-				CFA4B7941E703B72003E9721 /* Pulse.framework in Frameworks */,
+				CF9F30661EA9F3A300DFC7BB /* Pulse.framework in Frameworks */,
 				C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */,
 				C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */,
 				0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */,
@@ -170,6 +171,7 @@
 		0B140F4A1A2E4709001324EE = {
 			isa = PBXGroup;
 			children = (
+				CF9F30651EA9F3A300DFC7BB /* Pulse.framework */,
 				0B140F551A2E4709001324EE /* PulseSampleApp */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
@@ -342,7 +344,7 @@
 				0B140F501A2E4709001324EE /* Frameworks */,
 				0B140F511A2E4709001324EE /* Resources */,
 				0B140FA11A2E6438001324EE /* Headers */,
-				CFA4B7961E703B72003E9721 /* Embed Frameworks */,
+				CF9F30681EA9F3A300DFC7BB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -572,6 +574,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = PulseSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -604,6 +607,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = PulseSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
