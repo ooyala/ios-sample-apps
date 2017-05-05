@@ -27,6 +27,7 @@
 @class OOFCCTVRating;
 @class OOOptions;
 @class OOManagedAdsPlugin;
+@class OOUserInfo;
 @class OOPlayer;
 @protocol OOAudioTrackProtocol;
 
@@ -806,4 +807,9 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * Return an OoyalaAPIClient
  */
 - (OOOoyalaAPIClient *)api;
+/**
+ * Return an OOUserInfo
+ */
+- (OOUserInfo *)userInfo;
+
 @end
