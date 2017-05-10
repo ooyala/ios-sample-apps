@@ -16,7 +16,8 @@
 @implementation IMATestsListViewController
 
 - (void)addTestCases {
-  [self insertNewObject:[self optionWithTitle:@"Ad-Rules Preroll" embedCode:@"EzZ29lcTq49IswgZYkMknnU4Ukb9PQMH"]];
+  //TODO: Replace with a new ad rules preroll asset, this embed code is broken 
+//  [self insertNewObject:[self optionWithTitle:@"Ad-Rules Preroll" embedCode:@"EzZ29lcTq49IswgZYkMknnU4Ukb9PQMH"]];
   [self insertNewObject:[self optionWithTitle:@"Ad-Rules Midroll" embedCode:@"VlaG9lcTqeUU18adfd1DVeQ8YekP3H4l"]];
   [self insertNewObject:[self optionWithTitle:@"Ad-Rules Postroll" embedCode:@"BnaG9lcTqLXQNyod7ON8Yv3eDas2Oog6"]];
   [self insertNewObject:[self optionWithTitle:@"Podded Preroll" embedCode:@"1wNjE3cDox0G3hQIWxTjsZ8MPUDLSkDY"]];
