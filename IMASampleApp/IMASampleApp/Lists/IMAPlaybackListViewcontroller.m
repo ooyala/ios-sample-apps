@@ -24,11 +24,12 @@
   return self;
 }
 - (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Preroll"
-                                                            embedCode:@"EzZ29lcTq49IswgZYkMknnU4Ukb9PQMH"
-                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
-                                                               domain:@"http://www.ooyala.com"
-                                                       viewController: [IMAPlayerViewController class]]];
+  //TODO: Replace with a new ad rules preroll asset, this embed code is broken
+//  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Preroll"
+//                                                            embedCode:@"EzZ29lcTq49IswgZYkMknnU4Ukb9PQMH"
+//                                                                pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
+//                                                               domain:@"http://www.ooyala.com"
+//                                                       viewController: [IMAPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ad-Rules Midroll"
                                                             embedCode:@"VlaG9lcTqeUU18adfd1DVeQ8YekP3H4l"
                                                                 pcode:@"R2NDYyOhSRhYj0UrUVgcdWlFVP-H"
