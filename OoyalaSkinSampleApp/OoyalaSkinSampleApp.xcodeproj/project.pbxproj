@@ -48,6 +48,7 @@
 		97DE27B01B212BC00071DBFE /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE27AF1B212BC00071DBFE /* libc++abi.dylib */; };
 		97DE27B21B212BCD0071DBFE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE27B11B212BCD0071DBFE /* libc++.dylib */; };
 		97DE27B41B212BD90071DBFE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE27B31B212BD90071DBFE /* libxml2.dylib */; };
+		CA30119A1ECA5911003BA426 /* ja.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3011991ECA5911003BA426 /* ja.json */; };
 		CA63276E1C442126008F3667 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = CA63276D1C442126008F3667 /* main.jsbundle */; };
 		CA63277A1C442130008F3667 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6327721C442130008F3667 /* package.json */; };
 		CA63277B1C442130008F3667 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CA6327731C442130008F3667 /* README.md */; };
@@ -137,6 +138,7 @@
 		97DE27AF1B212BC00071DBFE /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; };
 		97DE27B11B212BCD0071DBFE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		97DE27B31B212BD90071DBFE /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		CA3011991ECA5911003BA426 /* ja.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ja.json; sourceTree = "<group>"; };
 		CA63276B1C44211F008F3667 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
 		CA63276D1C442126008F3667 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
 		CA6327721C442130008F3667 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		0620FF3C1DE64D0100D1B44E /* languageFiles */ = {
 			isa = PBXGroup;
 			children = (
+				CA3011991ECA5911003BA426 /* ja.json */,
 				0620FF3D1DE64D0100D1B44E /* en.json */,
 				0620FF3E1DE64D0100D1B44E /* es.json */,
 				0620FF3F1DE64D0100D1B44E /* zh.json */,
@@ -441,6 +444,7 @@
 				0620FF411DE64D0100D1B44E /* es.json in Resources */,
 				0620FF421DE64D0100D1B44E /* zh.json in Resources */,
 				0620FF401DE64D0100D1B44E /* en.json in Resources */,
+				CA30119A1ECA5911003BA426 /* ja.json in Resources */,
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
 				CA63277D1C442130008F3667 /* skin.json in Resources */,
 				0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */,
