@@ -14,7 +14,7 @@
 
 @interface NPAWListViewController ()
 @property NSMutableArray *options;
-@property BOOL qaLogEnabled;
+@property (nonatomic) BOOL qaLogEnabled;
 @property NSMutableArray *optionList;
 @property NSMutableArray *optionEmbedCodes;
 @end
