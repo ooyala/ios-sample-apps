@@ -7,9 +7,10 @@
 
 #import "OOAnalyticsPluginProtocol.h"
 @class OOIQConfiguration;
+@class OOOoyalaPlayer;
 
 @interface OOIQAnalyticsPlugin : NSObject<OOAnalyticsPluginProtocol>
 
-- (instancetype)initWithPcode:(NSString *)pcode iqConfiguration:(OOIQConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player iqConfiguration:(OOIQConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
 
 @end

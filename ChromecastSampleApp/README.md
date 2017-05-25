@@ -1,4 +1,5 @@
-This directory contains a sample sender application for iOS that runs a working version of the sender component of the Ooyala Chromecast Integration.
+# Chromecast Sample App
+This project contains a sample sender application for iOS that runs a working version of the sender component of the Ooyala Chromecast Integration.
 
 See [http://support.ooyala.com/developers/documentation/tasks/ios_cast_sample_app.html](http://support.ooyala.com/developers/documentation/tasks/ios_cast_sample_app.html) for documentation that explains how to get started with this sample application.
 
