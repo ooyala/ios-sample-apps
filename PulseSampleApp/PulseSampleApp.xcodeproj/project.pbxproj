@@ -49,6 +49,8 @@
 		C4A99EC01C6227AD00F55208 /* PulseManagerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A99EBE1C6227AD00F55208 /* PulseManagerViewController.h */; };
 		C4A99EC11C6227AD00F55208 /* PulseManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A99EBF1C6227AD00F55208 /* PulseManagerViewController.m */; };
 		C4BB04431C75FCD100871138 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BB04421C75FCD100871138 /* TableCell.xib */; };
+		CA351F191EE0D7510058807B /* Pulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA351F171EE0D74B0058807B /* Pulse.framework */; };
+		CA351F1A1EE0D7510058807B /* Pulse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA351F171EE0D74B0058807B /* Pulse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CA351F1A1EE0D7510058807B /* Pulse.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +130,7 @@
 		C4A99EBE1C6227AD00F55208 /* PulseManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseManagerViewController.h; sourceTree = "<group>"; };
 		C4A99EBF1C6227AD00F55208 /* PulseManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseManagerViewController.m; sourceTree = "<group>"; };
 		C4BB04421C75FCD100871138 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		CA351F171EE0D74B0058807B /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulse.framework; path = VendorLibraries/Pulse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 				C477A8011C884815000B4890 /* libz.tbd in Frameworks */,
 				C477A7FF1C884776000B4890 /* MessageUI.framework in Frameworks */,
 				C477A7FD1C884770000B4890 /* Social.framework in Frameworks */,
+				CA351F191EE0D7510058807B /* Pulse.framework in Frameworks */,
 				C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */,
 				C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */,
 				0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */,
@@ -210,6 +215,7 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA351F171EE0D74B0058807B /* Pulse.framework */,
 				26EF171B1D50918900BACD9C /* AVKit.framework */,
 				C4082C181D2144E200CC3BC4 /* libc++.tbd */,
 				C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */,
