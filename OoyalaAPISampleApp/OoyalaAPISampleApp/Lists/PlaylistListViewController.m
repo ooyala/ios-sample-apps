@@ -17,7 +17,10 @@
 @implementation PlaylistListViewController
 - (void)viewDidLoad {
   [super viewDidLoad];
-
+    self.navigationController.navigationBar.translucent = NO;
+    
+    
+   
   // NOTE: hardcoded pcode and playlist ID
   self.pcode = @"c0cTkxOqALQviQIGAHWY5hP0q9gU";
   self.playlistId = @"4fef485d588a4a818f913db2089a3a7a";
@@ -55,6 +58,7 @@
   return videos.count;
 }
 
+ 
 /**
  * Take each video (in reverse order) and put it into the TableView
  *
@@ -91,7 +95,9 @@
                                                                             pcode:self.pcode
                                                                            domain:self.playerDomain
                                                                    viewController:[ChannelContentTreeDetailViewController class]];
-  ChannelContentTreeDetailViewController *controller = [[ChannelContentTreeDetailViewController alloc] initWithPlayerSelectionOption:selection];
+  ChannelContentTreeDetailViewController *controller = [[ChannelContentTreeDetailViewController alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaModeEnabled];
+    controller.qaModeEnabled = self.qaModeEnabled;
+    
   [self.navigationController pushViewController:controller animated:YES];
 }
 
