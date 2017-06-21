@@ -302,6 +302,21 @@ extern NSString *const OOOoyalaPlayerCastVolumeChangeNotification;
  */
 extern NSString *const OOOoyalaPlayerBitrateChangedNotification;
 
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief Notification when buffering starts in the player.
+ * \details No additional data provided. This notification is for the user to know that the current buffer of the player is empty and it is trying to get more data to resume playback.
+ */
+extern NSString *const OOOoyalaPlayerBufferingStartedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief Notification when buffering completes in the player.
+ * \details No additional data provided. This notification is for the user to know that the current buffer of the player is full and it is ready to resume playback.
+ */
+extern NSString *const OOOoyalaPlayerBufferingCompletedNotification;
+
 /** the string for live closed captions */
 extern NSString *const OOLiveClosedCaptionsLanguage;
 
