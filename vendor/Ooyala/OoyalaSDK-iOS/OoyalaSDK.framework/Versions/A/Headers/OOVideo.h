@@ -33,6 +33,7 @@
 @property(readonly, nonatomic) Float64 duration;                       /**< The OOVideo's Total Duration (Length) */
 @property(readonly, nonatomic) BOOL live;                              /**< Whether or not the video is live */
 @property(readonly, nonatomic) NSURL *fairplayKeyURL;                  /**< If this is an offline Fairplay asset, this is where the Fairplay key is located */
+@property(nonatomic) int retryCount;                                   /**< Keeps track of the number of retries already done for a given error. Used by the HA plugin to try an reset the video with the player. */
 
 /**
  * Initialize a OOVideo using the specified data (subclasses should override this)
