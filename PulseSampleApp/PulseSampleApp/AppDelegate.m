@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
-  [OOPulse setLogListener:^(VPLogItem *logItem) {
+  [OOPulse setLogListener:^(OOLogItem *logItem) {
     NSLog(@"Pulse: %@", logItem.description);
   }];
   [OOPulse setPulseHost:@"https://pulse-demo.videoplaza.tv" deviceContainer:nil persistentId:nil];
