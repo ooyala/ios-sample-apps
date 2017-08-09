@@ -13,8 +13,8 @@
 @class OOPulseManager;
 @protocol OOPulseVideoAd;
 @protocol OOPulseSession;
-@class VPContentMetadata;
-@class VPRequestSettings;
+@class OOContentMetadata;
+@class OORequestSettings;
 
 /**
  *  The OOPulseManagerDelegate protocol provides a way for the OOPulseManager
@@ -44,8 +44,8 @@
 - (id<OOPulseSession>)pulseManager:(OOPulseManager *)manager
              createSessionForVideo:(OOVideo *)video
                      withPulseHost:(NSString *)pulseHost
-                   contentMetadata:(VPContentMetadata *)contentMetadata
-                   requestSettings:(VPRequestSettings *)requestSettings;
+                   contentMetadata:(OOContentMetadata *)contentMetadata
+                   requestSettings:(OORequestSettings *)requestSettings;
 
 @optional
 
