@@ -317,6 +317,13 @@ extern NSString *const OOOoyalaPlayerBufferingStartedNotification;
  */
 extern NSString *const OOOoyalaPlayerBufferingCompletedNotification;
 
+/**
+ * \memberof OOOoyalaPlayer
+ * \brief Notificaation when video get connected or disconnected to airplay.
+ * \details No additional data provided. This notification is for the user to know that phone is now connected or disconnected with airplay.
+ */
+extern NSString *const OOOoyalaplayerExternalPlaybackActiveNotification;
+
 /** the string for live closed captions */
 extern NSString *const OOLiveClosedCaptionsLanguage;
 
