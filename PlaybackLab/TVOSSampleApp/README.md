@@ -6,7 +6,7 @@ While our tvOS integration cannot use the same Skin UI as our Android and iOS li
 
 This app requires the tvOS Pulse SDK library to run.  In order to get this you must:
 
-1. Go to [help.ooyala.com/downloads](help.ooyala.com/downloads)
+1. Go to [help.ooyala.com/downloads](http://help.ooyala.com/downloads)
 1. Download "tvOS 2.x SDK framework"
 1. Take the resulting Pulse_tvOS.framework and paste it in `TVOSSampleApp/VendorLibraries
 1. In Xcode, add Pulse_tvOS.framework to Linked Frameworks and Libraries of the TVOSSampleApp target
