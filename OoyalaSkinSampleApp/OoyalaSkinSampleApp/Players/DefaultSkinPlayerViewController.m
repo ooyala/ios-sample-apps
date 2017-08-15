@@ -9,7 +9,6 @@
 #import "DefaultSkinPlayerViewController.h"
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
-#import "AppDelegate.h"
 
 @interface DefaultSkinPlayerViewController ()
 
@@ -22,23 +21,20 @@
 @end
 
 @implementation DefaultSkinPlayerViewController
-{
-  AppDelegate *appDel;
-}
 
 NSMutableArray *_sharePlugins;
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+
   _sharePlugins = [[NSMutableArray alloc] init];
+
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.playerDomain;
+    self.playerDomain = playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
-    
-    NSLog(@"%@s", self.playerDomain);
   }
   return self;
 }
@@ -50,7 +46,6 @@ NSMutableArray *_sharePlugins;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  appDel = [[UIApplication sharedApplication] delegate];
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
@@ -68,15 +63,6 @@ NSMutableArray *_sharePlugins;
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.skinController];
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:ooyalaPlayer];
-  
-  // In QA Mode , making textView visible
-  if (self.qaModeEnabled == YES){
-    self.textView.hidden = NO;
-  }
 
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
@@ -87,24 +73,17 @@ NSMutableArray *_sharePlugins;
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
-  
-  // Ignore TimeChangedNotificiations for shorter logs
+
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
-  
-  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
-                       [self.skinController.player playheadTime], appDel.count];
-  NSLog(@"%@",message);
-  
-  //In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
-    NSString *string = self.textView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
-    [self.textView setText:appendString];
+
+  // Check for FullScreenChanged notification
+  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
+                         [notification name],
+                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+    NSLog(@"%@", message);
   }
-  appDel.count++;
 }
 @end
