@@ -114,6 +114,16 @@ NS_CLASS_AVAILABLE_IOS(10.0)
 - (void)startDownload;
 
 /**
+ Pause a download in progress.
+ */
+- (void)pauseDownload;
+
+/**
+ Resume a paused download.
+ */
+- (void)resumeDownload;
+
+/**
  Stops and deletes the contents of a download in progress.
  
  Calls the downloadCompletedAtLocation:withError: method of OOAssetDownloadManagerDelegate.
