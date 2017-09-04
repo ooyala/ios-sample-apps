@@ -1,0 +1,6 @@
+framework module OoyalaSDK {
+  umbrella header "OoyalaSDK.h"
+
+  export *
+  module * { export * }
+}
