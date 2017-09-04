@@ -53,8 +53,10 @@
 		523E46311F55ADB800C29D8D /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 523E46291F55ADB800C29D8D /* RobotoCondensed-Regular.ttf */; };
 		523E46331F55BD4600C29D8D /* fontawesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 523E46321F55BD4600C29D8D /* fontawesome.ttf */; };
 		52B0C4291F5D43220097B856 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C4281F5D43220097B856 /* main.jsbundle */; };
-		52B0C46C1F5D814E0097B856 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0C46A1F5D814E0097B856 /* OoyalaSDK.framework */; };
-		52B0C46D1F5D814E0097B856 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0C46B1F5D814E0097B856 /* OoyalaSkinSDK.framework */; };
+		52B0C7311F5DAC6A0097B856 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0C72F1F5DAC6A0097B856 /* OoyalaSDK.framework */; };
+		52B0C7321F5DAC6A0097B856 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0C7301F5DAC6A0097B856 /* OoyalaSkinSDK.framework */; };
+		52B0C7331F5DAC7D0097B856 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0C72F1F5DAC6A0097B856 /* OoyalaSDK.framework */; };
+		52B0C7341F5DAC7D0097B856 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0C7301F5DAC6A0097B856 /* OoyalaSkinSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		52B0C4281F5D43220097B856 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		52B0C46A1F5D814E0097B856 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
 		52B0C46B1F5D814E0097B856 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = VendorLibraries/OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		52B0C72F1F5DAC6A0097B856 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		52B0C7301F5DAC6A0097B856 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B0C46C1F5D814E0097B856 /* OoyalaSDK.framework in Frameworks */,
-				52B0C46D1F5D814E0097B856 /* OoyalaSkinSDK.framework in Frameworks */,
+				52B0C7331F5DAC7D0097B856 /* OoyalaSDK.framework in Frameworks */,
+				52B0C7341F5DAC7D0097B856 /* OoyalaSkinSDK.framework in Frameworks */,
 				523E45D31F559F0400C29D8D /* libxml2.tbd in Frameworks */,
 				523E45D11F559EFD00C29D8D /* libz.tbd in Frameworks */,
 				523E45CF1F559EF600C29D8D /* libc++abi.tbd in Frameworks */,
@@ -175,6 +179,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B0C7311F5DAC6A0097B856 /* OoyalaSDK.framework in Frameworks */,
+				52B0C7321F5DAC6A0097B856 /* OoyalaSkinSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +196,7 @@
 				523E45181F559C7500C29D8D /* VRSampleApp */,
 				523E45321F559C7600C29D8D /* VRSampleAppTests */,
 				523E453D1F559C7600C29D8D /* VRSampleAppUITests */,
+				52B0C72E1F5DAC6A0097B856 /* VendorLibraries */,
 				523E45171F559C7500C29D8D /* Products */,
 				523E45A91F559E1F00C29D8D /* Frameworks */,
 			);
@@ -316,6 +323,15 @@
 			name = Fonts;
 			path = "/Users/ivan_sakharovskii/Projects/Ooyala/ios/Sample-apps/ios-sample-apps/OoyalaSkinSampleApp/../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts";
 			sourceTree = "<absolute>";
+		};
+		52B0C72E1F5DAC6A0097B856 /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				52B0C72F1F5DAC6A0097B856 /* OoyalaSDK.framework */,
+				52B0C7301F5DAC6A0097B856 /* OoyalaSkinSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -687,6 +703,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = VRSampleAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRSampleAppUITests;
@@ -699,6 +719,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = VRSampleAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRSampleAppUITests;
