@@ -1,6 +1,0 @@
-framework module OoyalaSkinSDK {
-  umbrella header "OoyalaSkinSDK.h"
-
-  export *
-  module * { export * }
-}
