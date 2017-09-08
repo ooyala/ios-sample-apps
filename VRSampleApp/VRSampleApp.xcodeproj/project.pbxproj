@@ -37,8 +37,8 @@
 		523E45D11F559EFD00C29D8D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45D01F559EFD00C29D8D /* libz.tbd */; };
 		523E45D31F559F0400C29D8D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45D21F559F0400C29D8D /* libxml2.tbd */; };
 		528517AD1F5EA6C800FC840B /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528517AB1F5EA6C800FC840B /* OoyalaSDK.framework */; };
-		528517AE1F5EA6C800FC840B /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528517AC1F5EA6C800FC840B /* OoyalaSkinSDK.framework */; };
-		52B0C4291F5D43220097B856 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C4281F5D43220097B856 /* main.jsbundle */; };
+		52A25DD71F62EABA007E151E /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528517AC1F5EA6C800FC840B /* OoyalaSkinSDK.framework */; };
+		52A25DD91F62EAEC007E151E /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 52A25DD81F62EAEC007E151E /* main.jsbundle */; };
 		52B0C74C1F5DB3EC0097B856 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7451F5DB3EB0097B856 /* alice.ttf */; };
 		52B0C74D1F5DB3EC0097B856 /* fontawesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7461F5DB3EB0097B856 /* fontawesome.ttf */; };
 		52B0C74E1F5DB3EC0097B856 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7471F5DB3EB0097B856 /* ooyala-slick-type.ttf */; };
@@ -115,7 +115,7 @@
 		523E45D21F559F0400C29D8D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		528517AB1F5EA6C800FC840B /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		528517AC1F5EA6C800FC840B /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
-		52B0C4281F5D43220097B856 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		52A25DD81F62EAEC007E151E /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		52B0C46A1F5D814E0097B856 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
 		52B0C46B1F5D814E0097B856 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = VendorLibraries/OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		52B0C7451F5DB3EB0097B856 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
@@ -148,12 +148,12 @@
 				523E45CD1F559EE900C29D8D /* libc.tbd in Frameworks */,
 				523E45CB1F559EE200C29D8D /* libc++.tbd in Frameworks */,
 				523E45C91F559EA800C29D8D /* MediaPlayer.framework in Frameworks */,
-				528517AE1F5EA6C800FC840B /* OoyalaSkinSDK.framework in Frameworks */,
 				523E45C71F559EA200C29D8D /* MediaAccessibility.framework in Frameworks */,
 				523E45C51F559E9200C29D8D /* SystemConfiguration.framework in Frameworks */,
 				528517AD1F5EA6C800FC840B /* OoyalaSDK.framework in Frameworks */,
 				523E45C31F559E8B00C29D8D /* CoreMedia.framework in Frameworks */,
 				523E45C11F559E8500C29D8D /* CoreGraphics.framework in Frameworks */,
+				52A25DD71F62EABA007E151E /* OoyalaSkinSDK.framework in Frameworks */,
 				523E45BF1F559E7800C29D8D /* CoreText.framework in Frameworks */,
 				523E45BD1F559E6A00C29D8D /* Security.framework in Frameworks */,
 				523E45BB1F559E5D00C29D8D /* UIKit.framework in Frameworks */,
@@ -188,7 +188,7 @@
 		523E450D1F559C7500C29D8D = {
 			isa = PBXGroup;
 			children = (
-				52B0C4281F5D43220097B856 /* main.jsbundle */,
+				52A25DD81F62EAEC007E151E /* main.jsbundle */,
 				52B0C7441F5DB3EB0097B856 /* Fonts */,
 				52B0C7531F5DB3F30097B856 /* skin-config */,
 				523E45181F559C7500C29D8D /* VRSampleApp */,
@@ -449,7 +449,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B0C4291F5D43220097B856 /* main.jsbundle in Resources */,
 				52B0C7641F5DB3F30097B856 /* zh.json in Resources */,
 				52B0C74C1F5DB3EC0097B856 /* alice.ttf in Resources */,
 				52B0C74E1F5DB3EC0097B856 /* ooyala-slick-type.ttf in Resources */,
@@ -457,6 +456,7 @@
 				52B0C7521F5DB3EC0097B856 /* RobotoCondensed-Regular.ttf in Resources */,
 				52B0C7681F5DB3F30097B856 /* skin.json in Resources */,
 				523E45291F559C7500C29D8D /* LaunchScreen.storyboard in Resources */,
+				52A25DD91F62EAEC007E151E /* main.jsbundle in Resources */,
 				52B0C7631F5DB3F30097B856 /* ja.json in Resources */,
 				52B0C74D1F5DB3EC0097B856 /* fontawesome.ttf in Resources */,
 				523E45261F559C7500C29D8D /* Assets.xcassets in Resources */,
