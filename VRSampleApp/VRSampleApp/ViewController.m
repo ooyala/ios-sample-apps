@@ -2,7 +2,6 @@
 //  ViewController.m
 //  VRSampleApp
 //
-//  Created by Ivan Sakharovskii on 8/29/17.
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
@@ -26,14 +25,6 @@
 NSString *embedCode = @"cyY2E1YzE69lqpla_GFSgBXDOzrgJ9GG";
 NSString *pcode = @"N3OGsyOvOM7AJke1SYl9_aSJzdp5";
 NSString *playerDomain = @"http://www.ooyala.com";
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
-    return YES;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-  return UIInterfaceOrientationMaskAll;
-}
 
 #pragma mark - Life cycle
 
@@ -69,7 +60,5 @@ NSString *playerDomain = @"http://www.ooyala.com";
 
   [ooyalaPlayer setEmbedCode:embedCode];
 }
-
-#pragma mark - Override
 
 @end
