@@ -6,6 +6,7 @@
 
 #import <OoyalaSDK/OOFCCTVRatingConfiguration.h>
 #import <OoyalaSDK/OOIQConfiguration.h>
+#import <OoyalaSDK/OODeviceInfo.h>
 #import <OoyalaSDK/OOOptions.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOPlayerInfo.h>

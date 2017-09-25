@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import "OODeviceInfo.h"
 
 /**
  * \memberof OOOoyalaPlayer
@@ -37,6 +38,38 @@ extern NSString* const OOIQCONFIGURATION_DEFAULT_BACKEND_ENDPOINT_URL;
  * The default reporting timeout, in seconds: 10
  */
 extern int const OOIQCONFIGURATION_DEFAULT_BACKEND_ENDPOINT_TIMEOUT;
+/**
+ * \memberof OOIQConfiguration
+ * The default browser in device information
+ */
+extern NSString* const OOIQCONFIGURATION_DEFAULT_BROWSER;
+/**
+ * \memberof OOIQConfiguration
+ * The default browser version in device information
+ */
+extern NSString* const OOIQCONFIGURATION_DEFAULT_BROWSER_VERSION;
+/**
+ * \memberof OOIQConfiguration
+ * The default os in device information
+ */
+extern NSString* const OOIQCONFIGURATION_DEFAULT_OS;
+/**
+ * \memberof OOIQConfiguration
+ * The default os version in device information
+ */
+extern NSString* const OOIQCONFIGURATION_DEFAULT_OS_VERSION;
+/**
+ * \memberof OOIQConfiguration
+ * The default device brand in device information
+ */
+extern NSString* const OOIQCONFIGURATION_DEFAULT_DEVICE_BRAND;
+/**
+ * \memberof OOIQConfiguration
+ * The default model in device information
+ */
+extern NSString* const OOIQCONFIGURATION_DEFAULT_MODEL;
+
+
 
 /**
  * Configurable values for IQ Analytics.
@@ -52,5 +85,6 @@ extern int const OOIQCONFIGURATION_DEFAULT_BACKEND_ENDPOINT_TIMEOUT;
 @property (nonatomic) NSString *domain;     /**< The domain/traffic source url used for IQ Analytics reporting. If null, IQ will use the domain provided in the OOOoyalaPlayer initializer */
 @property (nonatomic) NSString *backendEndpointURL;     /**< The analytics endpoint used for reporting. */
 @property (nonatomic) int backendEndpointTimeout;     /**< The timeout to use when posting data to the analytics endpoint, in seconds.*/
+@property (nonatomic) OODeviceInfo *deviceInfo;     /**< The device info that can be customized. */
 
 @end
