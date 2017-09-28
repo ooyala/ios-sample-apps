@@ -21,12 +21,14 @@
  - AssetNotDownloaded
  - AssetAuthorizing
  - AssetDownloading
+ - AssetPaused
  - AssetDownloaded
  */
 typedef NS_ENUM(NSInteger, AssetPersistenceState) {
   AssetNotDownloaded,
   AssetAuthorizing,
   AssetDownloading,
+  AssetPaused,
   AssetDownloaded,
 };
 
@@ -88,6 +90,10 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
  @param option PlayerSelectionOption having the information about the asset to download.
  */
 - (void)startDownloadForOption:(PlayerSelectionOption *)option;
+
+- (void)pauseDownloadForEmbedCode:(NSString *)embedCode;
+
+- (void)resumeDownloadForEmbedCode:(NSString *)embedCode;
 
 /**
  If a download is in progress, this will cancel it and broadcasts a AssetPersistenceStateChangedNotification notification with the new download state of the asset.

@@ -9,7 +9,6 @@
 #import "IMAPlayerViewController.h"
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
-#import "AppDelegate.h"
 
 @interface IMAPlayerViewController ()
 @property (nonatomic, retain) OOIMAManager *adsManager;
@@ -21,18 +20,15 @@
 @end
 
 @implementation IMAPlayerViewController
-{
-  AppDelegate *appDel;
-  
-}
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.playerDomain;
+    self.playerDomain = playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
   }
   return self;
@@ -45,7 +41,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  appDel = [[UIApplication sharedApplication] delegate];
+
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
@@ -58,20 +54,17 @@
   [self addChildViewController:_skinController];
   [_skinController.view setFrame:self.videoView.bounds];
   [ooyalaPlayer setEmbedCode:self.embedCode];
-  
+
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:ooyalaPlayer];
-  
+
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.skinController];
-  // In QA Mode , making textView visible
-  if (self.qaModeEnabled == YES){
-    self.textView.hidden = NO;
-  }
+
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
   self.adsManager.imaAdsManagerDelegate = self;
   
@@ -80,25 +73,23 @@
 }
 
 - (void) notificationHandler:(NSNotification*) notification {
-  
+
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
-  
-  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
-                       [self.skinController.player playheadTime], appDel.count];
-  NSLog(@"%@",message);
-  
-  //In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
-    NSString *string = self.textView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.textView setText:appendString];
+  // Check for FullScreenChanged notification
+  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
+                         [notification name],
+                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+    NSLog(@"%@", message);
   }
-  appDel.count++;
+
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+        [notification name],
+        [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
+        [self.skinController.player playheadTime]);
 }
 
 -(void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
@@ -153,4 +144,5 @@
       return [NSString stringWithFormat:@"Unknown type %ld", (long)type];
   }
 }
+
 @end

@@ -123,6 +123,10 @@
       self.stateLabel.text = @"State: Downloading";
       self.playOfflineButton.enabled = NO;
       break;
+    case AssetPaused:
+      self.stateLabel.text = @"State: Paused";
+      self.playOfflineButton.enabled = NO;
+      break;
     case AssetDownloaded:
       self.stateLabel.text = @"State: Downloaded";
       self.playOfflineButton.enabled = YES;
@@ -144,8 +148,8 @@
 
 - (void)handleProgressChanged:(NSNotification *)notification {
   NSString *embedCode = notification.userInfo[AssetNameKey];
-  
-  if ([embedCode isEqualToString:self.option.embedCode]) {
+  AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
+  if ([embedCode isEqualToString:self.option.embedCode] && state == AssetDownloading) {
     // Update progressView with the percentage progress of the notification. We assume it has a value between 0.0 and 1.0.
     dispatch_async(dispatch_get_main_queue(), ^{
       NSNumber *percentage = notification.userInfo[AssetProgressKey];

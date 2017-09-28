@@ -23,6 +23,7 @@ NSString * const AssetProgressKey = @"percentage";
 
 @property (nonatomic) NSMutableSet *downloadsPendingAuth;         // Set of OOAssetDownloadManager
 @property (nonatomic) NSMutableSet *activeDownloads;              // Set of OOAssetDownloadManager
+@property (nonatomic) NSMutableSet *pausedDownloads;              // Set of OOAssetDownloadManager
 
 @end
 
@@ -52,6 +53,18 @@ NSString * const AssetProgressKey = @"percentage";
     _downloadsPendingAuth = [NSMutableSet new];
   }
   return _downloadsPendingAuth;
+}
+
+/**
+ Initializes the pausedDownloads Set when it is first used.
+ 
+ @return NSMutableSet instance.
+ */
+- (NSMutableSet *)pausedDownloads {
+  if (!_pausedDownloads) {
+    _pausedDownloads = [NSMutableSet new];
+  }
+  return _pausedDownloads;
 }
 
 
@@ -101,6 +114,12 @@ NSString * const AssetProgressKey = @"percentage";
       }
     }
     
+    for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
+      if ([downloadManager.embedCode isEqualToString:embedCode]) {
+        return AssetPaused;
+      }
+    }
+    
     // if nothing else applies then the asset is not downloaded.
     return AssetNotDownloaded;
   }
@@ -121,6 +140,53 @@ NSString * const AssetProgressKey = @"percentage";
   NSLog(@"[AssetPersistenceManager] download intent started for embed code: %@, current download state:  Authorizing", downloadManager.embedCode);
 }
 
+- (void)pauseDownloadForEmbedCode:(NSString *)embedCode {
+  // find a download in progress for the given embed code, pause the download.
+  NSLog(@"[AssetPersistenceManager] Attempting to pause a download for embed code: %@", embedCode);
+  
+  for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager pauseDownload];
+      [self.pausedDownloads addObject:downloadManager];
+      [self.downloadsPendingAuth removeObject:downloadManager];
+      
+      NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                                 AssetStateKey: @(AssetPaused)};
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+      return;
+    }
+  }
+  for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager pauseDownload];
+      [self.pausedDownloads addObject:downloadManager];
+      [self.activeDownloads removeObject:downloadManager];
+      
+      NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                                 AssetStateKey: @(AssetPaused)};
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+      break;
+    }
+  }
+}
+
+- (void)resumeDownloadForEmbedCode:(NSString *)embedCode {
+  // find a paused download for the given embed code, resume the download.
+  NSLog(@"[AssetPersistenceManager] Attempting to resume a download for embed code: %@", embedCode);
+  for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager resumeDownload];
+      [self.activeDownloads addObject:downloadManager];
+      [self.pausedDownloads removeObject:downloadManager];
+      
+      NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                                 AssetStateKey: @(AssetDownloading)};
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+      break;
+    }
+  }
+}
+
 - (void)cancelDownloadForEmbedCode:(NSString *)embedCode {
   // find a download in progress for the given embed code, cancel the download and remove the remaining contents if something was downloaded already.
   NSLog(@"[AssetPersistenceManager] Attempting to cancel a download for embed code: %@", embedCode);
@@ -138,6 +204,15 @@ NSString * const AssetProgressKey = @"percentage";
       [downloadManager cancelDownload];
       [self deleteDownloadedFileForEmbedCode:embedCode];
       [self.activeDownloads removeObject:downloadManager];
+      return;
+    }
+  }
+  
+  for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager cancelDownload];
+      [self deleteDownloadedFileForEmbedCode:embedCode];
+      [self.pausedDownloads removeObject:downloadManager];
       break;
     }
   }
