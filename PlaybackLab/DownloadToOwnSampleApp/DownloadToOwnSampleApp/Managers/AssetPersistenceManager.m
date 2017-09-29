@@ -185,7 +185,7 @@ NSString * const AssetProgressKey = @"percentage";
       [self.activeDownloads addObject:downloadManager];
       
       NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
-                                 AssetStateKey: @(AssetResuming)};
+                                 AssetStateKey: @(AssetDownloading)};
       [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
                                                           object:nil
                                                         userInfo:userInfo];

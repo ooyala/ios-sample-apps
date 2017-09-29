@@ -73,10 +73,6 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
       stateStr = @"paused download";
       self.downloadProgressView.hidden = true;
       break;
-    case AssetResuming:
-      stateStr = @"resuming download";
-      self.downloadProgressView.hidden = true;
-      break;
     case AssetDownloaded:
       stateStr = @"downloaded";
       self.downloadProgressView.hidden = true;

@@ -95,7 +95,6 @@
     }
     case AssetAuthorizing:
     case AssetDownloading:
-    case AssetResuming:
     {
       alertActions = [[NSArray alloc] initWithObjects:
                       [UIAlertAction actionWithTitle:@"Pause"
