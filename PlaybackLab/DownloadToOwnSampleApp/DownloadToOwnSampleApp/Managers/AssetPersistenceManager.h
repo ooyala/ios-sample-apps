@@ -17,16 +17,18 @@
 
 /**
  Identifies the different states for a download process. All the states are mutually exclusive for a single download task.
-
+ 
  - AssetNotDownloaded
  - AssetAuthorizing
  - AssetDownloading
+ - AssetPaused
  - AssetDownloaded
  */
 typedef NS_ENUM(NSInteger, AssetPersistenceState) {
   AssetNotDownloaded,
   AssetAuthorizing,
   AssetDownloading,
+  AssetPaused,
   AssetDownloaded,
 };
 
@@ -63,7 +65,7 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
 
 /**
  Get the singleton instance of this class.
-
+ 
  @return AssetPersistenceManager singleton instance.
  */
 + (AssetPersistenceManager *)sharedManager;
@@ -76,7 +78,7 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
 
 /**
  Asks for the download state for a given embed code.
-
+ 
  @param embedCode to retrieve state from.
  @return AssetPersistenceState value.
  */
@@ -84,14 +86,28 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
 
 /**
  Starts a download task with the given parameter options. If a download successfully starts, an AssetPersistenceStateChangedNotification notification will be sent with the new state of the download.
-
+ 
  @param option PlayerSelectionOption having the information about the asset to download.
  */
 - (void)startDownloadForOption:(PlayerSelectionOption *)option;
 
 /**
- If a download is in progress, this will cancel it and broadcasts a AssetPersistenceStateChangedNotification notification with the new download state of the asset.
+ Pauses a download in progress.
+ 
+ @param embedCode about which asset to pause.
+ */
+- (void)pauseDownloadForEmbedCode:(NSString *)embedCode;
 
+/**
+ Resume a paused download.
+ 
+@param embedCode about which asset to resume.
+ */
+- (void)resumeDownloadForEmbedCode:(NSString *)embedCode;
+
+/**
+ If a download is in progress, this will cancel it and broadcasts a AssetPersistenceStateChangedNotification notification with the new download state of the asset.
+ 
  @param embedCode about which asset to cancel.
  */
 - (void)cancelDownloadForEmbedCode:(NSString *)embedCode;
@@ -99,7 +115,7 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
 
 /**
  Deletes the downloaded contents of an asset, including the Fairplay license if it is a DRM protected video.
-
+ 
  @param embedCode of the asset to delete.
  */
 - (void)deleteDownloadedFileForEmbedCode:(NSString *)embedCode;
@@ -107,10 +123,11 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
 
 /**
  After an asset is downloaded, calling this method builds an OOOfflineVideo instance that you can send to an OOOoyalaPlayer to play a downloaded video.
-
+ 
  @param embedCode of the local asset that you want to play.
  @return a valid OOOfflineVideo instance if the downloaded asset was found, or nil otherwise.
  */
 - (OOOfflineVideo *)videoForEmbedCode:(NSString *)embedCode;
 
 @end
+

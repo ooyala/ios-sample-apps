@@ -35,7 +35,7 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
 
 /**
  When we set the option for a cell, each cell becomes a notification observer of the AssetPersistenceStateChangedNotification and AssetDownloadProgressNotification notifications.
-
+ 
  @param option with the title and embed code info that this cell can use to render its UI.
  */
 - (void)setOption:(PlayerSelectionOption *)option {
@@ -50,7 +50,7 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
 
 /**
  Updates the cell's UI given a download state and asset title.
-
+ 
  @param state of the download process for this asset.
  @param title of the asset.
  */
@@ -66,7 +66,12 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
       break;
     case AssetDownloading:
       stateStr = @"download starting";
+      [self.downloadProgressView setProgress:0.0f animated:YES];
       self.downloadProgressView.hidden = false;
+      break;
+    case AssetPaused:
+      stateStr = @"paused download";
+      self.downloadProgressView.hidden = true;
       break;
     case AssetDownloaded:
       stateStr = @"downloaded";
@@ -83,7 +88,7 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
 
 /**
  When there's a download state change, this method gets called. It will update the cell's UI if the given notification has the same embed code as this cell's embed code.
-
+ 
  @param notification containing information about which embed code has a state change and what is the state.
  */
 - (void)handleAssetStateChanged:(NSNotification *)notification {
@@ -101,13 +106,13 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
 
 /**
  We'll get this notification when there's an active download in progress. This lets us know about the percentage progress.
-
+ 
  @param notification containing information about the download progress of a given embed code.
  */
 - (void)handleProgressChanged:(NSNotification *)notification {
   NSString *embedCode = notification.userInfo[AssetNameKey];
-  
-  if ([embedCode isEqualToString:self.option.embedCode]) {
+  AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
+  if ([embedCode isEqualToString:self.option.embedCode] && state == AssetDownloading) {
     // Update progressView with the percentage progress of the notification. We assume it has a value between 0.0 and 1.0.
     dispatch_async(dispatch_get_main_queue(), ^{
       NSNumber *percentage = notification.userInfo[AssetProgressKey];
@@ -118,3 +123,4 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
 }
 
 @end
+

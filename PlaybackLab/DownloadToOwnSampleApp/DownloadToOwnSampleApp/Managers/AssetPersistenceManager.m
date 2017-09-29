@@ -23,6 +23,7 @@ NSString * const AssetProgressKey = @"percentage";
 
 @property (nonatomic) NSMutableSet *downloadsPendingAuth;         // Set of OOAssetDownloadManager
 @property (nonatomic) NSMutableSet *activeDownloads;              // Set of OOAssetDownloadManager
+@property (nonatomic) NSMutableSet *pausedDownloads;              // Set of OOAssetDownloadManager
 
 @end
 
@@ -54,10 +55,22 @@ NSString * const AssetProgressKey = @"percentage";
   return _downloadsPendingAuth;
 }
 
+/**
+ Initializes the pausedDownloads Set when it is first used.
+ 
+ @return NSMutableSet instance.
+ */
+- (NSMutableSet *)pausedDownloads {
+  if (!_pausedDownloads) {
+    _pausedDownloads = [NSMutableSet new];
+  }
+  return _pausedDownloads;
+}
+
 
 /**
  Builds an OOAssetDownloadManager with the given options.
-
+ 
  @param option PlayerSelectionOption with the asset information.
  @return new OOAssetDownloadManager instance.
  */
@@ -101,6 +114,12 @@ NSString * const AssetProgressKey = @"percentage";
       }
     }
     
+    for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
+      if ([downloadManager.embedCode isEqualToString:embedCode]) {
+        return AssetPaused;
+      }
+    }
+    
     // if nothing else applies then the asset is not downloaded.
     return AssetNotDownloaded;
   }
@@ -121,13 +140,66 @@ NSString * const AssetProgressKey = @"percentage";
   NSLog(@"[AssetPersistenceManager] download intent started for embed code: %@, current download state:  Authorizing", downloadManager.embedCode);
 }
 
+- (void)pauseDownloadForEmbedCode:(NSString *)embedCode {
+  // find a download in progress for the given embed code, pause the download.
+  NSLog(@"[AssetPersistenceManager] Attempting to pause a download for embed code: %@", embedCode);
+  
+  for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager pauseDownload];
+      [self.downloadsPendingAuth removeObject:downloadManager];
+      [self.pausedDownloads addObject:downloadManager];
+      
+      NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                                 AssetStateKey: @(AssetPaused)};
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                          object:nil
+                                                        userInfo:userInfo];
+      return;
+    }
+  }
+  
+  for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager pauseDownload];
+      [self.activeDownloads removeObject:downloadManager];
+      [self.pausedDownloads addObject:downloadManager];
+      
+      NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                                 AssetStateKey: @(AssetPaused)};
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                          object:nil
+                                                        userInfo:userInfo];
+      break;
+    }
+  }
+}
+
+- (void)resumeDownloadForEmbedCode:(NSString *)embedCode {
+  // find a paused download for the given embed code, resume the download.
+  NSLog(@"[AssetPersistenceManager] Attempting to resume a download for embed code: %@", embedCode);
+  for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
+    if ([downloadManager.embedCode isEqualToString:embedCode]) {
+      [downloadManager resumeDownload];
+      [self.pausedDownloads removeObject:downloadManager];
+      [self.activeDownloads addObject:downloadManager];
+      
+      NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                                 AssetStateKey: @(AssetDownloading)};
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                          object:nil
+                                                        userInfo:userInfo];
+      break;
+    }
+  }
+}
+
 - (void)cancelDownloadForEmbedCode:(NSString *)embedCode {
   // find a download in progress for the given embed code, cancel the download and remove the remaining contents if something was downloaded already.
   NSLog(@"[AssetPersistenceManager] Attempting to cancel a download for embed code: %@", embedCode);
   for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
-      [self deleteDownloadedFileForEmbedCode:embedCode];
       [self.downloadsPendingAuth removeObject:downloadManager];
       return;
     }
@@ -136,9 +208,8 @@ NSString * const AssetProgressKey = @"percentage";
   for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
-      [self deleteDownloadedFileForEmbedCode:embedCode];
       [self.activeDownloads removeObject:downloadManager];
-      break;
+      return;
     }
   }
 }
@@ -203,14 +274,19 @@ NSString * const AssetProgressKey = @"percentage";
 }
 
 - (void)downloadManager:(OOAssetDownloadManager *)manager downloadCompletedAtLocation:(NSURL *)location withError:(OOOoyalaError *)error {
-  AssetPersistenceState downloadState = AssetDownloaded;
+  AssetPersistenceState downloadState = AssetDownloading;
+  
+  // Save the location in NSUserDefaults. The location is needed it if we want to delete the file after an error.
+  [[NSUserDefaults standardUserDefaults] setURL:location forKey:manager.embedCode];
+  
   if (error) {
     NSLog(@"[AssetPersistenceManager] error completing a download for embed code: %@, current download state: Not Downloaded, error object: %@", manager.embedCode, error);
     downloadState = AssetNotDownloaded;
+    
+    [self deleteDownloadedFileForEmbedCode:manager.embedCode];
   } else {
-    // A download completed successfuly, save the location in NSUserDefaults
-    [[NSUserDefaults standardUserDefaults] setURL:location forKey:manager.embedCode];
-    NSLog(@"[AssetPersistenceManager] download completed successfuly for embed code: %@ current download state: Downloaded. Saving video location in NSUserDefaults using key: %@", manager.embedCode, manager.embedCode);
+    NSLog(@"[AssetPersistenceManager] download completed successfuly for embed code: %@ current download state: Downloaded.", manager.embedCode);
+    downloadState = AssetDownloaded;
   }
   
   // At this point the download completed successfuly or not, either way we must remove the manager from the activeDownloads Set.

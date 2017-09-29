@@ -60,17 +60,17 @@
     options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.apiSecret];
     
     player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
-                                                            domain:[OOPlayerDomain domainWithString:self.option.domain]
-                                               embedTokenGenerator:self.option.embedTokenGenerator
-                                                           options:options];
-  
+                                            domain:[OOPlayerDomain domainWithString:self.option.domain]
+                               embedTokenGenerator:self.option.embedTokenGenerator
+                                           options:options];
+    
   } else { // This is a regular HLS asset with non DRM protection
     player = [[OOOoyalaPlayer alloc] initWithPcode:self.option.pcode
-                                                            domain:[OOPlayerDomain domainWithString:self.option.domain]];
+                                            domain:[OOPlayerDomain domainWithString:self.option.domain]];
   }
   
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-//  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+  //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:nil jsCodeLocation:jsCodeLocation configFileName:@"skin" overrideConfigs:nil];
   self.ooyalaPlayerViewController = [[OOSkinViewController alloc] initWithPlayer:player skinOptions:skinOptions parent:self.playerView launchOptions:nil];
   
@@ -106,7 +106,7 @@
 
 /**
  Update the UI depending on the download state of the given asset.
-
+ 
  @param state download state to use to update the UI.
  */
 - (void)updateUIUsingState:(NSNumber *)state {
@@ -121,6 +121,10 @@
       break;
     case AssetDownloading:
       self.stateLabel.text = @"State: Downloading";
+      self.playOfflineButton.enabled = NO;
+      break;
+    case AssetPaused:
+      self.stateLabel.text = @"State: Paused";
       self.playOfflineButton.enabled = NO;
       break;
     case AssetDownloaded:
@@ -144,8 +148,8 @@
 
 - (void)handleProgressChanged:(NSNotification *)notification {
   NSString *embedCode = notification.userInfo[AssetNameKey];
-  
-  if ([embedCode isEqualToString:self.option.embedCode]) {
+  AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
+  if ([embedCode isEqualToString:self.option.embedCode] && state == AssetDownloading) {
     // Update progressView with the percentage progress of the notification. We assume it has a value between 0.0 and 1.0.
     dispatch_async(dispatch_get_main_queue(), ^{
       NSNumber *percentage = notification.userInfo[AssetProgressKey];
@@ -168,3 +172,4 @@
 }
 
 @end
+
