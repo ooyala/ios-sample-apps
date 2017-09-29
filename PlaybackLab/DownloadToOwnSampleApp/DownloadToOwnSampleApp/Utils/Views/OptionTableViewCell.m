@@ -66,10 +66,15 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
       break;
     case AssetDownloading:
       stateStr = @"download starting";
+      [self.downloadProgressView setProgress:0.0f animated:YES];
       self.downloadProgressView.hidden = false;
       break;
     case AssetPaused:
       stateStr = @"paused download";
+      self.downloadProgressView.hidden = true;
+      break;
+    case AssetResuming:
+      stateStr = @"resuming download";
       self.downloadProgressView.hidden = true;
       break;
     case AssetDownloaded:
@@ -110,7 +115,7 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
  */
 - (void)handleProgressChanged:(NSNotification *)notification {
   NSString *embedCode = notification.userInfo[AssetNameKey];
-  AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:_option.embedCode];
+  AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
   if ([embedCode isEqualToString:self.option.embedCode] && state == AssetDownloading) {
     // Update progressView with the percentage progress of the notification. We assume it has a value between 0.0 and 1.0.
     dispatch_async(dispatch_get_main_queue(), ^{

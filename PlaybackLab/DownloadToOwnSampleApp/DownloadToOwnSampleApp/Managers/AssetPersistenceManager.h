@@ -22,6 +22,7 @@
  - AssetAuthorizing
  - AssetDownloading
  - AssetPaused
+ - AssetResuming
  - AssetDownloaded
  */
 typedef NS_ENUM(NSInteger, AssetPersistenceState) {
@@ -29,6 +30,7 @@ typedef NS_ENUM(NSInteger, AssetPersistenceState) {
   AssetAuthorizing,
   AssetDownloading,
   AssetPaused,
+  AssetResuming,
   AssetDownloaded,
 };
 

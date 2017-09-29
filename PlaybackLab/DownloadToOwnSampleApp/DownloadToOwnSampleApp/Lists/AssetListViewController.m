@@ -95,33 +95,39 @@
     }
     case AssetAuthorizing:
     case AssetDownloading:
+    case AssetResuming:
     {
       alertActions = [[NSArray alloc] initWithObjects:
-                      [UIAlertAction actionWithTitle:@"Pause" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[AssetPersistenceManager sharedManager] pauseDownloadForEmbedCode:option.embedCode];
-      }],
-                      [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[AssetPersistenceManager sharedManager] cancelDownloadForEmbedCode:option.embedCode];
-      }], nil];
+                      [UIAlertAction actionWithTitle:@"Pause"
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * _Nonnull action) {
+                                               [[AssetPersistenceManager sharedManager] pauseDownloadForEmbedCode:option.embedCode];
+                                             }],
+                      [UIAlertAction actionWithTitle:@"Cancel"
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * _Nonnull action) {
+                                               [[AssetPersistenceManager sharedManager] cancelDownloadForEmbedCode:option.embedCode];
+                                             }], nil];
       break;
     }
     case AssetPaused:
     {
       alertActions = [[NSArray alloc] initWithObjects:
-                      [UIAlertAction actionWithTitle:@"Resume" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[AssetPersistenceManager sharedManager] resumeDownloadForEmbedCode:option.embedCode];
-      }],
-                      [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[AssetPersistenceManager sharedManager] cancelDownloadForEmbedCode:option.embedCode];
-      }], nil];
+                      [UIAlertAction actionWithTitle:@"Resume"
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * _Nonnull action) {
+                                               [[AssetPersistenceManager sharedManager] resumeDownloadForEmbedCode:option.embedCode];
+                                             }], nil];
       break;
     }
     case AssetDownloaded:
     {
       alertActions = [[NSArray alloc] initWithObjects:
-                      [UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[AssetPersistenceManager sharedManager] deleteDownloadedFileForEmbedCode:option.embedCode];
-      }], nil];
+                      [UIAlertAction actionWithTitle:@"Delete"
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction * _Nonnull action) {
+                                               [[AssetPersistenceManager sharedManager] deleteDownloadedFileForEmbedCode:option.embedCode];
+                                             }], nil];
       break;
     }
   }

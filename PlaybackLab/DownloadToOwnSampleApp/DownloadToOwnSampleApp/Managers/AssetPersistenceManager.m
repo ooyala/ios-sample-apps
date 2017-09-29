@@ -147,24 +147,29 @@ NSString * const AssetProgressKey = @"percentage";
   for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager pauseDownload];
-      [self.pausedDownloads addObject:downloadManager];
       [self.downloadsPendingAuth removeObject:downloadManager];
+      [self.pausedDownloads addObject:downloadManager];
       
       NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
                                  AssetStateKey: @(AssetPaused)};
-      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                          object:nil
+                                                        userInfo:userInfo];
       return;
     }
   }
+  
   for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager pauseDownload];
-      [self.pausedDownloads addObject:downloadManager];
       [self.activeDownloads removeObject:downloadManager];
+      [self.pausedDownloads addObject:downloadManager];
       
       NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
                                  AssetStateKey: @(AssetPaused)};
-      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                          object:nil
+                                                        userInfo:userInfo];
       break;
     }
   }
@@ -176,12 +181,14 @@ NSString * const AssetProgressKey = @"percentage";
   for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager resumeDownload];
-      [self.activeDownloads addObject:downloadManager];
       [self.pausedDownloads removeObject:downloadManager];
+      [self.activeDownloads addObject:downloadManager];
       
       NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
-                                 AssetStateKey: @(AssetDownloading)};
-      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
+                                 AssetStateKey: @(AssetResuming)};
+      [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                          object:nil
+                                                        userInfo:userInfo];
       break;
     }
   }
@@ -193,7 +200,6 @@ NSString * const AssetProgressKey = @"percentage";
   for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
-      [self deleteDownloadedFileForEmbedCode:embedCode];
       [self.downloadsPendingAuth removeObject:downloadManager];
       return;
     }
@@ -202,18 +208,8 @@ NSString * const AssetProgressKey = @"percentage";
   for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
-      [self deleteDownloadedFileForEmbedCode:embedCode];
       [self.activeDownloads removeObject:downloadManager];
       return;
-    }
-  }
-  
-  for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
-    if ([downloadManager.embedCode isEqualToString:embedCode]) {
-      [downloadManager cancelDownload];
-      [self deleteDownloadedFileForEmbedCode:embedCode];
-      [self.pausedDownloads removeObject:downloadManager];
-      break;
     }
   }
 }
@@ -278,14 +274,19 @@ NSString * const AssetProgressKey = @"percentage";
 }
 
 - (void)downloadManager:(OOAssetDownloadManager *)manager downloadCompletedAtLocation:(NSURL *)location withError:(OOOoyalaError *)error {
-  AssetPersistenceState downloadState = AssetDownloaded;
+  AssetPersistenceState downloadState = AssetDownloading;
+  
+  // Save the location in NSUserDefaults. The location is needed it if we want to delete the file after an error.
+  [[NSUserDefaults standardUserDefaults] setURL:location forKey:manager.embedCode];
+  
   if (error) {
     NSLog(@"[AssetPersistenceManager] error completing a download for embed code: %@, current download state: Not Downloaded, error object: %@", manager.embedCode, error);
     downloadState = AssetNotDownloaded;
+    
+    [self deleteDownloadedFileForEmbedCode:manager.embedCode];
   } else {
-    // A download completed successfuly, save the location in NSUserDefaults
-    [[NSUserDefaults standardUserDefaults] setURL:location forKey:manager.embedCode];
-    NSLog(@"[AssetPersistenceManager] download completed successfuly for embed code: %@ current download state: Downloaded. Saving video location in NSUserDefaults using key: %@", manager.embedCode, manager.embedCode);
+    NSLog(@"[AssetPersistenceManager] download completed successfuly for embed code: %@ current download state: Downloaded.", manager.embedCode);
+    downloadState = AssetDownloaded;
   }
   
   // At this point the download completed successfuly or not, either way we must remove the manager from the activeDownloads Set.
