@@ -82,7 +82,6 @@
   
   AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:option.embedCode];
   NSArray *alertActions = nil;
-  //  UIAlertAction *alertAction = nil;
   
   switch (state) {
     case AssetNotDownloaded:
