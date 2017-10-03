@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.h>
+#import <OoyalaIMASDK/OOIMAManager.h>
 #import "SampleAppPlayerViewController.h"
 
-@interface IMAPlayerViewController : SampleAppPlayerViewController
+
+@interface IMAPlayerViewController : SampleAppPlayerViewController<OOIMAAdsManagerDelegate>
 
 @property (nonatomic, retain) IBOutlet UIView *videoView;
 

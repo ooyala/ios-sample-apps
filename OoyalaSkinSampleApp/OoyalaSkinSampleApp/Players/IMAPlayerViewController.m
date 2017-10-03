@@ -7,7 +7,6 @@
 //
 
 #import "IMAPlayerViewController.h"
-#import <OoyalaIMASDK/OOIMAManager.h>
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
@@ -67,8 +66,8 @@
                                              object:self.skinController];
 
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
-
-
+  self.adsManager.imaAdsManagerDelegate = self;
+  
   // Load the video
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
@@ -93,4 +92,56 @@
         [self.skinController.player playheadTime]);
 }
 
+-(void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
+  NSLog(@"IMA Ad Manager: event %@.",  [self IMAAdEventTypeName:event.type]);
+}
+
+-(void)adsManagerDidRequestContentResume:(IMAAdsManager *)adsManager {
+  NSLog(@"IMA Ad Manager: Content Resume.");
+}
+
+-(void)adsManagerDidRequestContentPause:(IMAAdsManager *)adsManager {
+  NSLog(@"IMA Ad Manager: Content Pause.");
+}
+
+-(void)adsLoader:(IMAAdsLoader *)loader adsLoadedWithData:(IMAAdsLoadedData *)adsLoadedData {
+  NSLog(@"IMA Ads Loaded With Data.");
+}
+
+-(void)displayContainerUpdated:(IMAAdDisplayContainer *)adDisplayContainer {
+  NSLog(@"IMA Display Container Updated");
+}
+
+-(NSString *)IMAAdEventTypeName:(IMAAdEventType)type{
+  switch (type) {
+    case kIMAAdEvent_AD_BREAK_READY:
+      return @"AdBreakReady";
+    case kIMAAdEvent_ALL_ADS_COMPLETED:
+      return @"AllAdsCompleted";
+    case kIMAAdEvent_CLICKED:
+      return @"Clicked";
+    case kIMAAdEvent_COMPLETE:
+      return @"Complete";
+    case kIMAAdEvent_FIRST_QUARTILE:
+      return @"FirstQuartile";
+    case kIMAAdEvent_LOADED:
+      return @"Loaded";
+    case kIMAAdEvent_MIDPOINT:
+      return @"MidPoint";
+    case kIMAAdEvent_PAUSE:
+      return @"Pause";
+    case kIMAAdEvent_RESUME:
+      return @"Resume";
+    case kIMAAdEvent_SKIPPED:
+      return @"Skipped";
+    case kIMAAdEvent_STARTED:
+      return @"Started";
+    case kIMAAdEvent_TAPPED:
+      return @"Tapped";
+    case kIMAAdEvent_THIRD_QUARTILE:
+      return @"ThirdQuartile";
+    default:
+      return [NSString stringWithFormat:@"Unknown type %ld", (long)type];
+  }
+}
 @end
