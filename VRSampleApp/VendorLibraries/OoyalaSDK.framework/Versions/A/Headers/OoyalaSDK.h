@@ -1,154 +1,171 @@
 
 #ifndef OoyalaSDK_h
 #define OoyalaSDK_h
-#import <OoyalaSDK/OOOoyalaPlayerViewController.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
 
-#import <OoyalaSDK/OOFCCTVRatingConfiguration.h>
-#import <OoyalaSDK/OOIQConfiguration.h>
-#import <OoyalaSDK/OOOptions.h>
-#import <OoyalaSDK/OOPlayerDomain.h>
-#import <OoyalaSDK/OOPlayerInfo.h>
-#import <OoyalaSDK/OODefaultPlayerInfo.h>
+
+#import "OOOoyalaPlayer.h"
+
+#import "OOFCCTVRatingConfiguration.h"
+#import "OOIQConfiguration.h"
+#import "OOOptions.h"
+#import "OOPlayerDomain.h"
+#import "OOPlayerInfo.h"
+#import "OODefaultPlayerInfo.h"
 
 // VAST ad classes
-#import <OoyalaSDK/OOVASTConstants.h>
-#import <OoyalaSDK/OOVASTCreative.h>
-#import <OoyalaSDK/OOVASTVMAPAdHelper.h>
-#import <OoyalaSDK/OOVASTOffset.h>
-#import <OoyalaSDK/OOVASTResource.h>
-#import <OoyalaSDK/OOVASTCompanionAds.h>
-#import <OoyalaSDK/OOVASTNonLinearAds.h>
-#import <OoyalaSDK/OOVASTIcon.h>
-#import <OoyalaSDK/OOVASTNonLinear.h>
-#import <OoyalaSDK/OOVASTCompanion.h>
-#import <OoyalaSDK/OOVASTVMAPAdSpot.h>
-#import <OoyalaSDK/OOVASTAd.h>
-#import <OoyalaSDK/OOVASTAdSpot.h>
-#import <OoyalaSDK/OOVASTLinearAd.h>
-#import <OoyalaSDK/OOVASTStream.h>
-#import <OoyalaSDK/OOVASTUtils.h>
+#import "OOVASTConstants.h"
+#import "OOVASTCreative.h"
+#import "OOVASTVMAPAdHelper.h"
+#import "OOVASTOffset.h"
+#import "OOVASTResource.h"
+#import "OOVASTCompanionAds.h"
+#import "OOVASTNonLinearAds.h"
+#import "OOVASTIcon.h"
+#import "OOVASTNonLinear.h"
+#import "OOVASTCompanion.h"
+#import "OOVASTVMAPAdSpot.h"
+#import "OOVASTAd.h"
+#import "OOVASTAdSpot.h"
+#import "OOVASTLinearAd.h"
+#import "OOVASTStream.h"
+#import "OOVASTUtils.h"
 
 // Old UI classes
-#import <OoyalaSDK/OOFCCTVRatingStampView.h>
-#import <OoyalaSDK/OOFCCTVRatingVideoView.h>
-#import <OoyalaSDK/OOTransparentToolbar.h>
-#import <OoyalaSDK/OOUIProgressSliderIOS7.h>
-#import <OoyalaSDK/OOBufferView.h>
-#import <OoyalaSDK/OOCuePointsView.h>
-#import <OoyalaSDK/OOClosedCaptionsSelectorViewController.h>
-#import <OoyalaSDK/OOClosedCaptionsSelectorBackgroundViewController.h>
-#import <OoyalaSDK/OOClosedCaptionsView.h>
-#import <OoyalaSDK/OOClosedCaptionsButton.h>
-#import <OoyalaSDK/OOAdsLearnMoreButton.h>
-#import <OoyalaSDK/OOFullscreenButton.h>
-#import <OoyalaSDK/OOPlayPauseButton.h>
-#import <OoyalaSDK/OOVideoGravityButton.h>
-#import <OoyalaSDK/OOVolumeButton.h>
-#import <OoyalaSDK/iOS7ScrubberSliderFraming.h>
-#import <OoyalaSDK/OOControlsViewController.h>
-#import <OoyalaSDK/OOImagesIOS7.h>
-#import <OoyalaSDK/OOUIUtils.h>
+#import "OOFCCTVRatingStampView.h"
+#import "OOFCCTVRatingVideoView.h"
+#import "OOUIUtils.h"
+#import "OOClosedCaptionsView.h"
+
+#if !TARGET_OS_TV // Check is tvOS
+
+#import "OOOoyalaPlayerViewController.h"
+
+#import "OOTransparentToolbar.h"
+#import "OOUIProgressSliderIOS7.h"
+#import "OOBufferView.h"
+#import "OOCuePointsView.h"
+#import "OOClosedCaptionsSelectorViewController.h"
+#import "OOClosedCaptionsSelectorBackgroundViewController.h"
+#import "OOClosedCaptionsButton.h"
+#import "OOAdsLearnMoreButton.h"
+#import "OOFullscreenButton.h"
+#import "OOPlayPauseButton.h"
+#import "OOVideoGravityButton.h"
+#import "OOVolumeButton.h"
+#import "iOS7ScrubberSliderFraming.h"
+#import "OOControlsViewController.h"
+#import "OOImagesIOS7.h"
+
+#else
+
+// TVOS GVR
+#import "OOOoyalaTVPlayerViewController.h"
+
+#endif
 
 // Performance Monitoring classes
-#import <OoyalaSDK/OOPerformanceEventWatchMemoryProfiling.h>
-#import <OoyalaSDK/OOPerformanceCPUProfilingStatistics.h>
-#import <OoyalaSDK/OOPerformanceFileSpaceProfilingStatistics.h>
-#import <OoyalaSDK/OOPerformanceMemoryProfilingStatistics.h>
-#import <OoyalaSDK/OOPerformanceEventWatchFileSpaceProfiling.h>
-#import <OoyalaSDK/OOPerformanceEventWatchCPUProfiling.h>
-#import <OoyalaSDK/OOPerformanceMonitor.h>
-#import <OoyalaSDK/OOPerformanceNotificationNameMatcher.h>
-#import <OoyalaSDK/OOPerformanceCountingStatistics.h>
-#import <OoyalaSDK/OOPerformanceStartEndStatistics.h>
-#import <OoyalaSDK/OOPerformanceMonitorBuilder.h>
-#import <OoyalaSDK/OOPerformanceNotificationNameStateMatcher.h>
-#import <OoyalaSDK/OOPerformanceEventMatcherProtocol.h>
-#import <OoyalaSDK/OOPerformanceEventWatchStartEnd.h>
-#import <OoyalaSDK/OOPerformanceStatisticsProtocol.h>
-#import <OoyalaSDK/OOPerformanceEventWatchProtocol.h>
-#import <OoyalaSDK/OOPerformanceStatisticsSnapshot.h>
-#import <OoyalaSDK/OOPerformanceEventWatchCounting.h>
-#import <OoyalaSDK/OOMovingAverage.h>
+#import "OOPerformanceEventWatchMemoryProfiling.h"
+#import "OOPerformanceCPUProfilingStatistics.h"
+#import "OOPerformanceFileSpaceProfilingStatistics.h"
+#import "OOPerformanceMemoryProfilingStatistics.h"
+#import "OOPerformanceEventWatchFileSpaceProfiling.h"
+#import "OOPerformanceEventWatchCPUProfiling.h"
+#import "OOPerformanceMonitor.h"
+#import "OOPerformanceNotificationNameMatcher.h"
+#import "OOPerformanceCountingStatistics.h"
+#import "OOPerformanceStartEndStatistics.h"
+#import "OOPerformanceMonitorBuilder.h"
+#import "OOPerformanceNotificationNameStateMatcher.h"
+#import "OOPerformanceEventMatcherProtocol.h"
+#import "OOPerformanceEventWatchStartEnd.h"
+#import "OOPerformanceStatisticsProtocol.h"
+#import "OOPerformanceEventWatchProtocol.h"
+#import "OOPerformanceStatisticsSnapshot.h"
+#import "OOPerformanceEventWatchCounting.h"
+#import "OOMovingAverage.h"
 
 // Player Interfaces
-#import <OoyalaSDK/OOPlayerProtocol.h>
-#import <OoyalaSDK/OOPlayer.h>
-#import <OoyalaSDK/OOStreamPlayer.h>
+#import "OOPlayerProtocol.h"
+#import "OOPlayer.h"
+#import "OOStreamPlayer.h"
 
 // Ad manager classes
-#import <OoyalaSDK/OOAdSpot.h>
-#import <OoyalaSDK/OOAdSpotManager.h>
-#import <OoyalaSDK/OOManagedAdSpot.h>
-#import <OoyalaSDK/OOOoyalaAdSpot.h>
-#import <OoyalaSDK/OOAdPlugin.h>
-#import <OoyalaSDK/OOAdPluginManagerProtocol.h>
-#import <OoyalaSDK/OOAdSpotPlugin.h>
+#import "OOAdSpot.h"
+#import "OOAdSpotManager.h"
+#import "OOManagedAdSpot.h"
+#import "OOOoyalaAdSpot.h"
+#import "OOAdPlugin.h"
+#import "OOAdPluginManagerProtocol.h"
+#import "OOAdSpotPlugin.h"
 
 // Message data
-#import <OoyalaSDK/OOAdPodInfo.h>
-#import <OoyalaSDK/OOAdOverlayInfo.h>
-#import <OoyalaSDK/OOClientId.h>
-#import <OoyalaSDK/OOSeekInfo.h>
-
+#import "OOAdPodInfo.h"
+#import "OOAdOverlayInfo.h"
+#import "OOClientId.h"
+#import "OOSeekInfo.h"
 
 // Caption information
-#import <OoyalaSDK/OOCaption.h>
-#import <OoyalaSDK/OOClosedCaptions.h>
-#import <OoyalaSDK/OOClosedCaptionsStyle.h>
-#import <OoyalaSDK/OOClosedCaptionsLabel.h>
+#import "OOCaption.h"
+#import "OOClosedCaptions.h"
+#import "OOClosedCaptionsStyle.h"
+#import "OOClosedCaptionsLabel.h"
 
 // Content Item Data Model classes
-#import <OoyalaSDK/OOChannel.h>
-#import <OoyalaSDK/OOChannelSet.h>
-#import <OoyalaSDK/OOContentItem.h>
-#import <OoyalaSDK/OODynamicChannel.h>
-#import <OoyalaSDK/OOPaginatedParentItem.h>
-#import <OoyalaSDK/OOStream.h>
-#import <OoyalaSDK/OOVideo.h>
-#import <OoyalaSDK/OOAuthorizableItem.h>
-#import <OoyalaSDK/OOClosedCaptionsItem.h>
-#import <OoyalaSDK/OOUnbundledVideo.h>
-#import <OoyalaSDK/OOOfflineVideo.h>
-#import <OoyalaSDK/OOPlayableItem.h>
-#import <OoyalaSDK/OOFCCTVRating.h>
-#import <OoyalaSDK/OOAudioTrack.h>
-#import <OoyalaSDK/OOAudioTrackProtocol.h>
+#import "OOChannel.h"
+#import "OOChannelSet.h"
+#import "OOContentItem.h"
+#import "OODynamicChannel.h"
+#import "OOPaginatedParentItem.h"
+#import "OOStream.h"
+#import "OOVideo.h"
+#import "OOAuthorizableItem.h"
+#import "OOClosedCaptionsItem.h"
+#import "OOUnbundledVideo.h"
+#import "OOOfflineVideo.h"
+#import "OOPlayableItem.h"
+#import "OOFCCTVRating.h"
+#import "OOAudioTrack.h"
+#import "OOAudioTrackProtocol.h"
 
 // Offline
-#import <OoyalaSDK/OOAssetDownloadOptions.h>
-#import <OoyalaSDK/OOAssetDownloadManager.h>
+#import "OOAssetDownloadOptions.h"
+
+#if !TARGET_OS_TV // Check is tvOS
+
+#import "OOAssetDownloadManager.h"
+
+#endif
 
 // API access classes
-#import <OoyalaSDK/OODiscoveryManager.h>
-#import <OoyalaSDK/OODiscoveryOptions.h>
-#import <OoyalaSDK/OOOoyalaAPIClient.h>
+#import "OODiscoveryManager.h"
+#import "OODiscoveryOptions.h"
+#import "OOOoyalaAPIClient.h"
 
 // Utils classes
-#import <OoyalaSDK/OODebugMode.h>
-#import <OoyalaSDK/OOOoyalaError.h>
-#import <OoyalaSDK/OOOrderedDictionary.h>
-#import <OoyalaSDK/OOTBXML.h>
+#import "OODebugMode.h"
+#import "OOOoyalaError.h"
+#import "OOOrderedDictionary.h"
+#import "OOTBXML.h"
 
 // Signature generation classes
-#import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
-#import <OoyalaSDK/OOEmbeddedSignatureGenerator.h>
-#import <OoyalaSDK/OOEmbedTokenGenerator.h>
-#import <OoyalaSDK/OOSecureURLGenerator.h>
-#import <OoyalaSDK/OOSignatureGenerator.h>
+#import "OOEmbeddedSecureURLGenerator.h"
+#import "OOEmbeddedSignatureGenerator.h"
+#import "OOEmbedTokenGenerator.h"
+#import "OOSecureURLGenerator.h"
+#import "OOSignatureGenerator.h"
 
-#import <OoyalaSDK/OOCastModeOptions.h>
-#import <OoyalaSDK/OOCastManagerProtocol.h>
-#import <OoyalaSDK/OOCallbacks.h>
-#import <OoyalaSDK/OOModule.h>
-#import <OoyalaSDK/OOReturnState.h>
-#import <OoyalaSDK/OOUserInfo.h>
-#import <OoyalaSDK/OOStreamPlayerMappingCreator.h>
-#import <OoyalaSDK/OOStreamPlayerMappingPredicate.h>
-#import <OoyalaSDK/OOLifeCycle.h>
-#import <OoyalaSDK/OOManagedAdsPlugin.h>
-#import <OoyalaSDK/OOStateNotifier.h>
-#import <OoyalaSDK/OOAssetLoaderDelegate.h>
-#import <OoyalaSDK/OODeliveryTypeConstants.h>
+#import "OOCastModeOptions.h"
+#import "OOCastManagerProtocol.h"
+#import "OOCallbacks.h"
+#import "OOModule.h"
+#import "OOReturnState.h"
+#import "OOUserInfo.h"
+#import "OOStreamPlayerMappingCreator.h"
+#import "OOStreamPlayerMappingPredicate.h"
+#import "OOLifeCycle.h"
+#import "OOManagedAdsPlugin.h"
+#import "OOStateNotifier.h"
+#import "OOAssetLoaderDelegate.h"
+#import "OODeliveryTypeConstants.h"
 
 #endif /* OoyalaSDK_h */

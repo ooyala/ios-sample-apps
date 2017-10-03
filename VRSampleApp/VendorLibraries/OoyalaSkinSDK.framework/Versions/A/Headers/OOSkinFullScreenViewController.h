@@ -2,7 +2,7 @@
 //  OOSkinFullScreenViewController.h
 //  OoyalaSkinSDK
 //
-//  Created by Ivan Sakharovskii on 9/15/17.
+//  Created by Ivan Sakharovskii on 10/2/17.
 //  Copyright © 2017 ooyala. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface OOSkinFullScreenViewController : UIViewController
 
-@property(nonatomic) BOOL isStereoMode;
+@property (nonatomic) BOOL isStereoMode;
 
 @end
