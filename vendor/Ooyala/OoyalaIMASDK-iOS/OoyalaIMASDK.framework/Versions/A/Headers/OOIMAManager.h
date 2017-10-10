@@ -13,16 +13,33 @@
 @class OOOoyalaPlayer;
 @class OOIMAConfiguration;
 
+@class IMAAdsManager;
+@class IMAAdsLoader;
+@class IMAAdEvent;
+@class IMAAdsLoadedData;
+@class IMAAdDisplayContainer;
+
 @protocol OOIMAManagerDelegate
 -(void)adsReady;
 -(void)onError;
+@end
+
+@protocol OOIMAAdsManagerDelegate
+-(void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event;
+-(void)adsManagerDidRequestContentResume:(IMAAdsManager *)adsManager;
+-(void)adsManagerDidRequestContentPause:(IMAAdsManager *)adsManager;
+-(void)adsLoader:(IMAAdsLoader *)loader adsLoadedWithData:(IMAAdsLoadedData *)adsLoadedData;
+-(void)displayContainerUpdated:(IMAAdDisplayContainer *)adDisplayContainer;
 @end
 
 @interface OOIMAManager : NSObject<OOAdPlugin>
 
 @property(nonatomic, weak) id<OOIMAManagerDelegate> delegate;
 @property(nonatomic, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
+@property(readonly) IMAAdDisplayContainer *adDisplayContainer;
 @property(readonly) OOStateNotifier *stateNotifier;
+
+@property(nonatomic, weak) id<OOIMAAdsManagerDelegate> imaAdsManagerDelegate;
 
 /**
  * Configure IMA ads from given URL.

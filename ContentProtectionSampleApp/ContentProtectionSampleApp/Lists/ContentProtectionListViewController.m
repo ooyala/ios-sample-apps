@@ -39,21 +39,23 @@
 //                                                                pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
 //                                                               domain:@"http://www.ooyala.com"
 //                                                       viewController: [AdobePassPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unconfigured)"
-                                                            embedCode:@""
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                               domain:@"http://www.ooyala.com"
-                                                       viewController: [DeviceManagementPlayerViewController class]]];
+// TODO: [PBA-5945] Fix asset configuration
+//  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Device Management (Unconfigured)"
+//                                                            embedCode:@""
+//                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+//                                                               domain:@"http://www.ooyala.com"
+//                                                       viewController: [DeviceManagementPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Player Token (Unconfigured)"
                                                             embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                domain:@"http://www.ooyala.com"
                                                        viewController: [OoyalaPlayerTokenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"FairPlay (Unconfigured)"
-                                                            embedCode:@"BuMjEwMDE6b8-bX45pBkcgFieNehCcln"
-                                                                pcode:@"RkcjMxOtMYDwJzrPy3sWJLl6blS1"
-                                                               domain:@"http://www.ooyala.com"
-                                                       viewController: [FairplayPlayerViewController class]]];
+// TODO: [PBA-5945] Fix asset configuration
+//  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"FairPlay (Unconfigured)"
+//                                                            embedCode:@"BuMjEwMDE6b8-bX45pBkcgFieNehCcln"
+//                                                                pcode:@"RkcjMxOtMYDwJzrPy3sWJLl6blS1"
+//                                                               domain:@"http://www.ooyala.com"
+//                                                       viewController: [FairplayPlayerViewController class]]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"FairPlay Ooyala Player Token (Unconfigured)"
                                                             embedCode:@"c1cGpjMzE6-7Fi9nhZ01iK3Gfsyrddiu"
                                                                 pcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
