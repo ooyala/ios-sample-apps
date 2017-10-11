@@ -1,0 +1,2 @@
+vendor/Ooyala/OoyalaGVRFrameworks/OoyalaTVSDK.framework/Versions/A/OoyalaTVSDK filter=lfs diff=lfs merge=lfs -text
+vendor/Ooyala/OoyalaGVRFrameworks/OoyalaSDK.framework/Versions/A/OoyalaSDK filter=lfs diff=lfs merge=lfs -text
