@@ -28,7 +28,7 @@ extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fir
 /**
  Programatically change the fullscreen mode of the player.
  */
-@property (nonatomic, getter=isFullscreen) BOOL fullscreen;
+@property(nonatomic, getter=isFullscreen) BOOL fullscreen;
 
 - (instancetype)init __attribute__((unavailable("init not available")));
 - (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
