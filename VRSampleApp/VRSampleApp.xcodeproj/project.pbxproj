@@ -56,7 +56,7 @@
 		52B0C7671F5DB3F30097B856 /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C75D1F5DB3F30097B856 /* skin-schema.json */; };
 		52B0C7681F5DB3F30097B856 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C75E1F5DB3F30097B856 /* skin.json */; };
 		52B0C7691F5DB3F30097B856 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C75F1F5DB3F30097B856 /* validate.js */; };
-		752A43431F85287700350120 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 752A43421F85287100350120 /* main.jsbundle */; };
+		52BFFEDE1F8E689A00C08F46 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 52BFFEDD1F8E689500C08F46 /* main.jsbundle */; };
 		75806A0A1F8BD401004248C6 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A061F8BD3F7004248C6 /* OoyalaSDK.framework */; };
 		75806A0B1F8BD401004248C6 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A071F8BD3F7004248C6 /* OoyalaSkinSDK.framework */; };
 		759B2EC81F7CEF5400041A57 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759B2EC61F7CEF5400041A57 /* GLKit.framework */; };
@@ -155,7 +155,7 @@
 		52B0C75D1F5DB3F30097B856 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		52B0C75E1F5DB3F30097B856 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
 		52B0C75F1F5DB3F30097B856 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
-		752A43421F85287100350120 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		52BFFEDD1F8E689500C08F46 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.jsbundle; path = "../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
 		75806A061F8BD3F7004248C6 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		75806A071F8BD3F7004248C6 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		759B2EC61F7CEF5400041A57 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -213,7 +213,7 @@
 		523E450D1F559C7500C29D8D = {
 			isa = PBXGroup;
 			children = (
-				752A43421F85287100350120 /* main.jsbundle */,
+				52BFFEDD1F8E689500C08F46 /* main.jsbundle */,
 				52B0C7441F5DB3EB0097B856 /* Fonts */,
 				52B0C7531F5DB3F30097B856 /* skin-config */,
 				523E45181F559C7500C29D8D /* VRSampleApp */,
@@ -490,8 +490,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BFFEDE1F8E689A00C08F46 /* main.jsbundle in Resources */,
 				52B0C7641F5DB3F30097B856 /* zh.json in Resources */,
-				752A43431F85287700350120 /* main.jsbundle in Resources */,
 				52B0C74C1F5DB3EC0097B856 /* alice.ttf in Resources */,
 				52B0C74E1F5DB3EC0097B856 /* ooyala-slick-type.ttf in Resources */,
 				52B0C7611F5DB3F30097B856 /* en.json in Resources */,
