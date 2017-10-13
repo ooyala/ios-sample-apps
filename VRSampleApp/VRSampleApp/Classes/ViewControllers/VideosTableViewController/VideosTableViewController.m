@@ -25,7 +25,7 @@
   
 #pragma mark - Constants
   
-  static NSString *kDefaultPCode = @"NsaGsyOsKcRsCFZkHnYdKEw7vFn-";
+  static NSString *kDefaultPCode = @"BzY2syOq6kIK6PTXN7mmrGVSJEFj";
   static NSString *kDefaultDomain = @"http://www.ooyala.com";
   static NSString *kTableViewCellReuseID = @"VideosTableViewControllerTableViewCellReuseID";
 
@@ -85,90 +85,75 @@
   // No Ad
   [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach"
                                                                             embedCode:@"ZwdTE5YzE69c3U3cXy2CCzfnCkzMMqUP"
-                                                                                pcode:@"570d91bf920b42cbae587bb1447e6fd8"
+                                                                                pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
   [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Crystal Showers watermark"
                                                                              embedCode:@"tvaTluYzE6gfZg5nhqlqxPV7YbEukBCj"
-                                                                                 pcode:@"087d2ef5-9d39-43ed-a57a-16a312c87c0b"
+                                                                                 pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
   [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Park long description"
                                                                              embedCode:@"syazl0YzE6sGVc6vA5sPUZK6RWp5aplu"
-                                                                                 pcode:@"570d91bf920b42cbae587bb1447e6fd8"
+                                                                                 pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
 
   // IMA
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Bridge Pre-Roll"
-                                                                         embedCode:@"84NGJqYzE6147F1LN5EYgD3Sx7yi02nw"
-                                                                                pcode:@"NsaGsyOsKcRsCFZkHnYdKEw7vFn-"
-                                                                            domain:kDefaultDomain]];
-  
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Park Pre-Roll"
-                                                                            embedCode:@"4yZ2tkYzE6fzd6n0mesHpSZuCjo7Vr4H"
-                                                                                pcode:@"3e961eabae664aad9e3c788b638da096"
-                                                                               domain:kDefaultDomain]];
-  
   [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"London Pre-Roll"
                                                                             embedCode:@"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"
-                                                                                pcode:@"bb4c1914044a40c2af381c5ac4c98618"
+                                                                                pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach_1 In-Stream"
-                                                                            embedCode:@"wzZGRnYzE61sAU0_gD0qYH-zAzA-uyZX"
-                                                                                pcode:@"3e961eabae664aad9e3c788b638da096"
-                                                                               domain:kDefaultDomain]];
-  
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach_2 In-Stream"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach In-Stream"
                                                                             embedCode:@"Q0dWFtYzE6RFRGuFP0WzuPE5dvBzJ8_R"
-                                                                                pcode:@"bb4c1914044a40c2af381c5ac4c98618"
+                                                                                pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
   [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Post-Roll"
                                                                             embedCode:@"N4bmNtYzE63wuc3QizkmmkA0HDZou83_"
-                                                                                pcode:@"bb4c1914044a40c2af381c5ac4c98618"
+                                                                                pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
   [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Pre-Mid-Post"
                                                                             embedCode:@"J0dmFtYzE675zb3G_f6UsvggJYTXVsF4"
-                                                                                pcode:@"bb4c1914044a40c2af381c5ac4c98618"
+                                                                                pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
   [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Podded Pre-Mid-Post"
                                                                             embedCode:@"0wd2FtYzE6b3_hyeGPsLYUKzOIqXHKFi"
-                                                                                pcode:@"bb4c1914044a40c2af381c5ac4c98618"
+                                                                                pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
   // VAST
   [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Roll"
                                                                             embedCode:@"o5bm1rYzE6Iv00WKa3Wd67QUuulRGtTb"
-                                                                                pcode:@"570d91bf920b42cbae587bb1447e6fd8"
+                                                                                pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
   [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach In-Stream"
                                                                              embedCode:@"F3bW1rYzE6gd0C5kJ8ETeB-0yeawf2Cd"
-                                                                                 pcode:@"570d91bf920b42cbae587bb1447e6fd8"
+                                                                                 pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
   [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"London Post-Roll"
                                                                              embedCode:@"h4dGFtYzE6pjfgMHC5ioFOiaq5BywAL6"
-                                                                                 pcode:@"570d91bf920b42cbae587bb1447e6fd8"
+                                                                                 pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
   [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
                                                                              embedCode:@"g4YmNsYzE6zLuWf3eCAtcOdi0--i081X"
-                                                                                 pcode:@"570d91bf920b42cbae587bb1447e6fd8"
+                                                                                 pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
   [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Podded Pre-Mid-Post"
                                                                              embedCode:@"ZpZGxoYzE6oThg4Hapb2gwUC-HBDJy8T"
-                                                                                 pcode:@"087d2ef5-9d39-43ed-a57a-16a312c87c0b"
+                                                                                 pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
   // Ooyala
   [_playerOoyalaSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ayutthaya Pre-Roll"
                                                                              embedCode:@"NibG1rYzE6B7m54kL380ZXwEsUUy4bIe"
-                                                                                 pcode:@"570d91bf920b42cbae587bb1447e6fd8"
+                                                                                 pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
 
