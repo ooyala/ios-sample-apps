@@ -55,7 +55,6 @@
   
   OOOptions *options = [OOOptions new];
   
-  options.bypassPCodeMatching = YES;
   options.showPromoImage = YES;
 
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:_playerSelectionOption.pcode
@@ -84,7 +83,7 @@
   
   // Load video
   [ooyalaPlayer setEmbedCode:_playerSelectionOption.embedCode];
-
+  
   // Configure objects
   [self configureObjects];
 }
