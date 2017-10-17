@@ -16,16 +16,18 @@
 
 @property(weak, nonatomic) IBOutlet UIView *skinContainerView;
 @property (weak, nonatomic) IBOutlet UITextView *qaInfoTextView;
-@property(nonatomic) AppDelegate *appDelegate;
-@property(nonatomic) OOSkinViewController *skinController;
-@property(nonatomic) PlayerSelectionOption *playerSelectionOption;
-@property(nonatomic) BOOL qaModeEnabled;
+@property (nonatomic) AppDelegate *appDelegate;
+@property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic, strong) PlayerSelectionOption *playerSelectionOption;
+@property (nonatomic) BOOL qaModeEnabled;
 @property (nonatomic) OOIMAManager *adsManager;
 
 @end
 
 
 @implementation IMAVideoViewController
+
+#pragma mark - Life cycle
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -40,7 +42,10 @@
   OOOptions *options = [OOOptions new];
   
   options.showPromoImage = YES;
-  options.bypassPCodeMatching = YES;
+  options.bypassPCodeMatching = NO;
+  
+  NSLog(@"\n pcode *** = %@", _playerSelectionOption.pcode);
+
   
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:_playerSelectionOption.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:_playerSelectionOption.domain]
@@ -69,6 +74,15 @@
   
   // Configure objects
   [self configureObjects];
+}
+
+#pragma mark - Public functions
+
+- (void)configureWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+  _playerSelectionOption = playerSelectionOption;
+  _qaModeEnabled = qaModeEnabled;
+  
+    NSLog(@"\n count = %@", playerSelectionOption.debugDescription);
 }
 
 #pragma mark - Private functions

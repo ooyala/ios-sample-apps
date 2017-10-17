@@ -13,12 +13,12 @@
 
 @interface VideoViewController ()
 
-@property(weak, nonatomic) IBOutlet UIView *skinContainerView;
+@property (weak, nonatomic) IBOutlet UIView *skinContainerView;
 @property (weak, nonatomic) IBOutlet UITextView *qaInfoTextView;
-@property(nonatomic) AppDelegate *appDelegate;
-@property(nonatomic) OOSkinViewController *skinController;
-@property(nonatomic) PlayerSelectionOption *playerSelectionOption;
-@property(nonatomic) BOOL qaModeEnabled;
+@property (nonatomic) AppDelegate *appDelegate;
+@property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic) PlayerSelectionOption *playerSelectionOption;
+@property (nonatomic) BOOL qaModeEnabled;
 
 @end
 
@@ -54,7 +54,7 @@
   OOOptions *options = [OOOptions new];
   
   options.showPromoImage = YES;
-  options.bypassPCodeMatching = YES;
+  options.bypassPCodeMatching = NO;
 
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:_playerSelectionOption.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:_playerSelectionOption.domain]

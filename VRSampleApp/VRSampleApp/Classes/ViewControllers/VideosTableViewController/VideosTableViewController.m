@@ -84,13 +84,6 @@
   }
   
   // No Ad
-  
-  // test
-  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach"
-                                                                             embedCode:@"xvdnJtYzE6AGavqHz4NicycL2LcZyVX4"
-                                                                                 pcode:@"NsaGsyOsKcRsCFZkHnYdKEw7vFn-"
-                                                                                domain:kDefaultDomain]];
-  
   [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach"
                                                                             embedCode:@"ZwdTE5YzE69c3U3cXy2CCzfnCkzMMqUP"
                                                                                 pcode:kDefaultPCode
@@ -107,23 +100,33 @@
                                                                                 domain:kDefaultDomain]];
 
   // IMA
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"London Pre-Roll"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Pre-Mid-Post"
+                                                                            embedCode:@"UyZGUyZDE6ht1KgaWXgoWhw2P2Kp8_Nb"
+                                                                                pcode:kDefaultPCode
+                                                                               domain:kDefaultDomain]];
+  
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Mid"
+                                                                            embedCode:@"B0Y2UyZDE6pvNJDlxvB8dEEbHCqJth0p"
+                                                                                pcode:kDefaultPCode
+                                                                               domain:kDefaultDomain]];
+  
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Roll"
                                                                             embedCode:@"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach In-Stream"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"In-Stream"
                                                                             embedCode:@"Q0dWFtYzE6RFRGuFP0WzuPE5dvBzJ8_R"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Post-Roll"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Post-Roll"
                                                                             embedCode:@"N4bmNtYzE63wuc3QizkmmkA0HDZou83_"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Pre-Mid-Post"
-                                                                            embedCode:@"J0dmFtYzE675zb3G_f6UsvggJYTXVsF4"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
+                                                                            embedCode:@"Z4Y2UyZDE6bi5ZhPJE860W8GcE3z6WkE"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
@@ -149,7 +152,7 @@
                                                                                 domain:kDefaultDomain]];
   
   [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
-                                                                             embedCode:@"g4YmNsYzE6zLuWf3eCAtcOdi0--i081X"
+                                                                             embedCode:@"Z4Y2UyZDE6bi5ZhPJE860W8GcE3z6WkE"
                                                                                  pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
@@ -168,6 +171,7 @@
 }
 
 - (PlayerSelectionOption *)playerSelectionOptionAtArray:(NSArray *)array andIndex:(NSInteger)index {
+  
   if (index <= array.count - 1) {
     return array[index];
   }
@@ -176,6 +180,7 @@
 }
 
 - (void)openDefaultVideoViewControllerWith:(PlayerSelectionOption *)playerOption {
+  
   if (playerOption) {
     
     VideoViewController *videoViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"VideoViewController"];
@@ -187,9 +192,10 @@
 }
 
 - (void)openIMAVideoViewControllerWith:(PlayerSelectionOption *)playerOption {
+  
   if (playerOption) {
-    
-    IMAVideoViewController *videoViewController = (IMAVideoViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"VideoViewController"];
+
+    IMAVideoViewController *videoViewController = [[IMAVideoViewController alloc] initWithNibName:@"IMAVideoViewController" bundle:NULL];
     
     [videoViewController configureWithPlayerSelectionOption:playerOption qaModeEnabled:_qaModeEnabled];
     

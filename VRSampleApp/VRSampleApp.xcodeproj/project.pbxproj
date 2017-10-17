@@ -43,6 +43,8 @@
 		7545576B1F8E53BC00BEF43C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45B21F559E4100C29D8D /* AVKit.framework */; };
 		75806A0A1F8BD401004248C6 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A061F8BD3F7004248C6 /* OoyalaSDK.framework */; };
 		75806A0B1F8BD401004248C6 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A071F8BD3F7004248C6 /* OoyalaSkinSDK.framework */; };
+		75962CFD1F96498900EE408C /* IMAVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75962CFC1F96498900EE408C /* IMAVideoViewController.xib */; };
+		75962CFE1F964A9700EE408C /* IMAVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75962CFB1F96496C00EE408C /* IMAVideoViewController.m */; };
 		75D619AD1F8D2D0F00F0CAD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D619A21F8D2BED00F0CAD8 /* AppDelegate.m */; };
 		75D619AF1F8D2D5600F0CAD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D619AE1F8D2D5600F0CAD8 /* main.m */; };
 		75D619B31F8D2DCD00F0CAD8 /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D619B21F8D2DCD00F0CAD8 /* VideosTableViewController.m */; };
@@ -119,6 +121,9 @@
 		754557671F8E536C00BEF43C /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
 		75806A061F8BD3F7004248C6 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		75806A071F8BD3F7004248C6 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		75962CFA1F96496C00EE408C /* IMAVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAVideoViewController.h; sourceTree = "<group>"; };
+		75962CFB1F96496C00EE408C /* IMAVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAVideoViewController.m; sourceTree = "<group>"; };
+		75962CFC1F96498900EE408C /* IMAVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IMAVideoViewController.xib; sourceTree = "<group>"; };
 		759B2EC61F7CEF5400041A57 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		759B2EC71F7CEF5400041A57 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		75D619A11F8D2BED00F0CAD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -302,6 +307,15 @@
 			path = VendorLibraries;
 			sourceTree = "<group>";
 		};
+		75962CF91F96496C00EE408C /* IMAVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				75962CFA1F96496C00EE408C /* IMAVideoViewController.h */,
+				75962CFB1F96496C00EE408C /* IMAVideoViewController.m */,
+			);
+			path = IMAVideoViewController;
+			sourceTree = "<group>";
+		};
 		75D6199B1F8D2BEC00F0CAD8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				75D619A81F8D2CB000F0CAD8 /* VideosTableViewController */,
+				75962CF91F96496C00EE408C /* IMAVideoViewController */,
 				75D619A91F8D2CB000F0CAD8 /* VideoViewController */,
 			);
 			path = ViewControllers;
@@ -360,6 +375,7 @@
 		75D619B01F8D2DB300F0CAD8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75962CFC1F96498900EE408C /* IMAVideoViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -441,6 +457,7 @@
 				52B0C7611F5DB3F30097B856 /* en.json in Resources */,
 				52A09FF61F6AE89B00884D90 /* GoogleKitDialogs.bundle in Resources */,
 				52B0C7521F5DB3EC0097B856 /* RobotoCondensed-Regular.ttf in Resources */,
+				75962CFD1F96498900EE408C /* IMAVideoViewController.xib in Resources */,
 				52B0C7681F5DB3F30097B856 /* skin.json in Resources */,
 				52A09FF81F6AE89B00884D90 /* MaterialRobotoFontLoader.bundle in Resources */,
 				75D619B41F8D367A00F0CAD8 /* LaunchScreen.storyboard in Resources */,
@@ -468,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75962CFE1F964A9700EE408C /* IMAVideoViewController.m in Sources */,
 				75D619AD1F8D2D0F00F0CAD8 /* AppDelegate.m in Sources */,
 				52B0C7661F5DB3F30097B856 /* README.md in Sources */,
 				754557621F8E150500BEF43C /* VideoViewController.m in Sources */,
