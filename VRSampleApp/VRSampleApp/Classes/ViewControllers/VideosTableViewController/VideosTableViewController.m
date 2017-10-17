@@ -8,6 +8,7 @@
 #import "VideosTableViewController.h"
 #import "PlayerSelectionOption.h"
 #import "VideoViewController.h"
+#import "IMAVideoViewController.h"
 
 
 @interface VideosTableViewController ()
@@ -83,6 +84,13 @@
   }
   
   // No Ad
+  
+  // test
+  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach"
+                                                                             embedCode:@"xvdnJtYzE6AGavqHz4NicycL2LcZyVX4"
+                                                                                 pcode:@"NsaGsyOsKcRsCFZkHnYdKEw7vFn-"
+                                                                                domain:kDefaultDomain]];
+  
   [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach"
                                                                             embedCode:@"ZwdTE5YzE69c3U3cXy2CCzfnCkzMMqUP"
                                                                                 pcode:kDefaultPCode
@@ -165,6 +173,28 @@
   }
   
   return  NULL;
+}
+
+- (void)openDefaultVideoViewControllerWith:(PlayerSelectionOption *)playerOption {
+  if (playerOption) {
+    
+    VideoViewController *videoViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"VideoViewController"];
+    
+    [videoViewController configureWithPlayerSelectionOption:playerOption qaModeEnabled:_qaModeEnabled];
+    
+    [self.navigationController pushViewController:videoViewController animated:YES];
+  }
+}
+
+- (void)openIMAVideoViewControllerWith:(PlayerSelectionOption *)playerOption {
+  if (playerOption) {
+    
+    IMAVideoViewController *videoViewController = (IMAVideoViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"VideoViewController"];
+    
+    [videoViewController configureWithPlayerSelectionOption:playerOption qaModeEnabled:_qaModeEnabled];
+    
+    [self.navigationController pushViewController:videoViewController animated:YES];
+  }
 }
 
 #pragma mark - Actions
@@ -277,33 +307,29 @@
   PlayerSelectionOption *playerOption;
   
   switch (indexPath.section) {
-    case 0:
+    case 0: // No Ad
       playerOption = [self playerSelectionOptionAtArray:_playerNoAdSelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
-    case 1:
+    case 1: // Ooyala
       playerOption = [self playerSelectionOptionAtArray:_playerOoyalaSelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
-    case 2:
+    case 2: // IMA
       playerOption = [self playerSelectionOptionAtArray:_playerIMASelectionOptions andIndex:indexPath.row];
+      [self openIMAVideoViewControllerWith:playerOption];
       break;
       
-    case 3:
+    case 3: // VAST
       playerOption = [self playerSelectionOptionAtArray:_playerVASTSelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
     default:
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
-  }
-  
-  if (playerOption) {
-    
-    VideoViewController *videoViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"VideoViewController"];
-    
-    [videoViewController configureWithPlayerSelectionOption:playerOption qaModeEnabled:_qaModeEnabled];
-    
-    [self.navigationController pushViewController:videoViewController animated:YES];
   }
 }
 
