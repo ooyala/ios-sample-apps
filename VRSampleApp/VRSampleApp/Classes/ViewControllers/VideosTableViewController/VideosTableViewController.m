@@ -8,6 +8,7 @@
 #import "VideosTableViewController.h"
 #import "PlayerSelectionOption.h"
 #import "VideoViewController.h"
+#import "IMAVideoViewController.h"
 
 
 @interface VideosTableViewController ()
@@ -99,23 +100,33 @@
                                                                                 domain:kDefaultDomain]];
 
   // IMA
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"London Pre-Roll"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Pre-Mid-Post"
+                                                                            embedCode:@"UyZGUyZDE6ht1KgaWXgoWhw2P2Kp8_Nb"
+                                                                                pcode:kDefaultPCode
+                                                                               domain:kDefaultDomain]];
+  
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Mid"
+                                                                            embedCode:@"B0Y2UyZDE6pvNJDlxvB8dEEbHCqJth0p"
+                                                                                pcode:kDefaultPCode
+                                                                               domain:kDefaultDomain]];
+  
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Roll"
                                                                             embedCode:@"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach In-Stream"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"In-Stream"
                                                                             embedCode:@"Q0dWFtYzE6RFRGuFP0WzuPE5dvBzJ8_R"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Post-Roll"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Post-Roll"
                                                                             embedCode:@"N4bmNtYzE63wuc3QizkmmkA0HDZou83_"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Pre-Mid-Post"
-                                                                            embedCode:@"J0dmFtYzE675zb3G_f6UsvggJYTXVsF4"
+  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
+                                                                            embedCode:@"Z4Y2UyZDE6bi5ZhPJE860W8GcE3z6WkE"
                                                                                 pcode:kDefaultPCode
                                                                                domain:kDefaultDomain]];
   
@@ -141,7 +152,7 @@
                                                                                 domain:kDefaultDomain]];
   
   [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
-                                                                             embedCode:@"g4YmNsYzE6zLuWf3eCAtcOdi0--i081X"
+                                                                             embedCode:@"Z4Y2UyZDE6bi5ZhPJE860W8GcE3z6WkE"
                                                                                  pcode:kDefaultPCode
                                                                                 domain:kDefaultDomain]];
   
@@ -160,11 +171,36 @@
 }
 
 - (PlayerSelectionOption *)playerSelectionOptionAtArray:(NSArray *)array andIndex:(NSInteger)index {
+  
   if (index <= array.count - 1) {
     return array[index];
   }
   
   return  NULL;
+}
+
+- (void)openDefaultVideoViewControllerWith:(PlayerSelectionOption *)playerOption {
+  
+  if (playerOption) {
+    
+    VideoViewController *videoViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"VideoViewController"];
+    
+    [videoViewController configureWithPlayerSelectionOption:playerOption qaModeEnabled:_qaModeEnabled];
+    
+    [self.navigationController pushViewController:videoViewController animated:YES];
+  }
+}
+
+- (void)openIMAVideoViewControllerWith:(PlayerSelectionOption *)playerOption {
+  
+  if (playerOption) {
+
+    IMAVideoViewController *videoViewController = [[IMAVideoViewController alloc] initWithNibName:@"IMAVideoViewController" bundle:NULL];
+    
+    [videoViewController configureWithPlayerSelectionOption:playerOption qaModeEnabled:_qaModeEnabled];
+    
+    [self.navigationController pushViewController:videoViewController animated:YES];
+  }
 }
 
 #pragma mark - Actions
@@ -277,33 +313,29 @@
   PlayerSelectionOption *playerOption;
   
   switch (indexPath.section) {
-    case 0:
+    case 0: // No Ad
       playerOption = [self playerSelectionOptionAtArray:_playerNoAdSelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
-    case 1:
+    case 1: // Ooyala
       playerOption = [self playerSelectionOptionAtArray:_playerOoyalaSelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
-    case 2:
+    case 2: // IMA
       playerOption = [self playerSelectionOptionAtArray:_playerIMASelectionOptions andIndex:indexPath.row];
+      [self openIMAVideoViewControllerWith:playerOption];
       break;
       
-    case 3:
+    case 3: // VAST
       playerOption = [self playerSelectionOptionAtArray:_playerVASTSelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
     default:
+      [self openDefaultVideoViewControllerWith:playerOption];
       break;
-  }
-  
-  if (playerOption) {
-    
-    VideoViewController *videoViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"VideoViewController"];
-    
-    [videoViewController configureWithPlayerSelectionOption:playerOption qaModeEnabled:_qaModeEnabled];
-    
-    [self.navigationController pushViewController:videoViewController animated:YES];
   }
 }
 
