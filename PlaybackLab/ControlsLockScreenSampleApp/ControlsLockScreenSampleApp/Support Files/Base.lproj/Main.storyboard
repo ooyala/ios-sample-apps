@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Plq-8o-sqS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Controls Lock Screen Sample App-->
+        <scene sceneID="Xke-mE-Yhc">
+            <objects>
+                <tableViewController id="qzj-16-b48" customClass="ListTableViewController" customModule="ControlsLockScreenSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tOW-4V-Kjk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellOption" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellOption" id="xIk-Wb-tUs">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xIk-Wb-tUs" id="Ere-9o-fiR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qzj-16-b48" id="C7s-VL-7dr"/>
+                            <outlet property="delegate" destination="qzj-16-b48" id="HNy-b7-L6e"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Controls Lock Screen Sample App" id="JTR-s6-cma"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mjc-C8-0Be" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="105"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="HP3-em-Xb5">
+            <objects>
+                <viewController storyboardIdentifier="VideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6h-QC-i9f" customClass="VideoViewController" customModule="ControlsLockScreenSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2rh-yY-B91">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ort-Z3-JIb">
+                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1It-8e-NVd" firstAttribute="trailing" secondItem="ort-Z3-JIb" secondAttribute="trailing" constant="10" id="HtU-R8-mWe"/>
+                            <constraint firstItem="ort-Z3-JIb" firstAttribute="leading" secondItem="1It-8e-NVd" secondAttribute="leading" constant="10" id="OAE-K7-0yd"/>
+                            <constraint firstItem="1It-8e-NVd" firstAttribute="bottom" secondItem="ort-Z3-JIb" secondAttribute="bottom" constant="10" id="Oo8-XZ-GVr"/>
+                            <constraint firstItem="ort-Z3-JIb" firstAttribute="top" secondItem="1It-8e-NVd" secondAttribute="top" constant="10" id="rgG-EM-GLY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1It-8e-NVd"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="ort-Z3-JIb" id="Z5p-ZJ-Gsz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6K-iC-TQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="48"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hOx-yo-dpY">
+            <objects>
+                <navigationController id="Plq-8o-sqS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C4s-Zj-kYw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qzj-16-b48" kind="relationship" relationship="rootViewController" id="1j8-pO-Qtv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzM-6e-cze" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433" y="105"/>
+        </scene>
+    </scenes>
+</document>
