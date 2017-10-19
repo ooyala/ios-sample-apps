@@ -14,7 +14,7 @@ class VideoViewController: OOOoyalaPlayerViewController {
   
   @IBOutlet weak var playerView: UIView!
   
-  // properties for the video to be played
+  // properties for the video
   private var option: PlayerSelectionOption!
   
   // properties required for a Fairplay asset
@@ -84,7 +84,7 @@ class VideoViewController: OOOoyalaPlayerViewController {
       return MPRemoteCommandHandlerStatus.success
     })
     
-    // Set properties of the asset.
+    // Set properties of the asset to be shown in the screen (no required).
     var nowPlayingInfo: [String : Any] = [MPMediaItemPropertyTitle: option.getTitle(),
                                           MPMediaItemPropertyArtist: "Ooyala",
                                           MPMediaItemPropertyAlbumTitle: "Controls Lock Screen"
@@ -133,6 +133,7 @@ class VideoViewController: OOOoyalaPlayerViewController {
     updateControlCenter()
   }
   
+  // this method updates the time labels.
   func updateControlCenter() {
     let playingInfoCenter: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
     if var displayInfo = playingInfoCenter.nowPlayingInfo {
