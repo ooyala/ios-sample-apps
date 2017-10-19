@@ -91,6 +91,7 @@ class VideoViewController: OOOoyalaPlayerViewController {
     ]
     
     // Set albumArt to show in the screen if image is available
+    // The albumArt needs to be an UIImage, the image can be added in the assets of the project or retrieve the image using an URL
     if let imageData: NSData = NSData(contentsOf: option.getThumbnailURL()), let image: UIImage = UIImage(data: imageData as Data) {
       let albumArt: MPMediaItemArtwork = MPMediaItemArtwork(boundsSize: image.size, requestHandler: { (size) -> UIImage in return image })
       nowPlayingInfo[MPMediaItemPropertyArtwork] = albumArt
