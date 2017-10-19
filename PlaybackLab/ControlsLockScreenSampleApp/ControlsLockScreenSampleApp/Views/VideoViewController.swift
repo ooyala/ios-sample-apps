@@ -62,13 +62,11 @@ class VideoViewController: OOOoyalaPlayerViewController {
     let remoteCommandCenter: MPRemoteCommandCenter = MPRemoteCommandCenter.shared()
     remoteCommandCenter.playCommand.addTarget { (event) -> MPRemoteCommandHandlerStatus in
       self.player.play()
-      self.updateControlCenter()
       return MPRemoteCommandHandlerStatus.success
     }
     
     remoteCommandCenter.pauseCommand.addTarget(handler: { (event) -> MPRemoteCommandHandlerStatus in
       self.player.pause()
-      self.updateControlCenter()
       return MPRemoteCommandHandlerStatus.success
     })
     
