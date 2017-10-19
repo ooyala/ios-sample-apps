@@ -25,7 +25,7 @@ class OptionDataSource: NSObject {
                             embedTokenGenerator: BasicEmbedTokenGenerator(pcode: "x0b2cyOupu0FFK5hCr4zXg8KKcrm",
                                                                           apiKey: "API_KEY",
                                                                           apiSecret: "API_SECRET",
-                                                                          accountId: "",
+                                                                          accountId: "ACCOUNT_ID",
                                                                           authorizeHost: "http://www.ooyala.com"))
       // if required, add more test cases here
     ]
