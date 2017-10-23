@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  ControlsLockScreenSampleApp
 //
-//  Created by Carlos Ceja on 10/18/17.
 //  Copyright © 2017 Ooyala. All rights reserved.
 //
 
@@ -21,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // The session has to be set before to play content.
     let session: AVAudioSession = AVAudioSession.sharedInstance()
     do {
-      try session.setCategory(AVAudioSessionCategoryPlayback, with: [])
+      try session.setCategory(AVAudioSessionCategoryPlayback)
       print("AVAudioSession Category Playback OK")
       do {
         try session.setActive(true)

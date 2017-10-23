@@ -2,7 +2,6 @@
 //  ListTableViewController.swift
 //  ControlsLockScreenSampleApp
 //
-//  Created by Carlos Ceja on 10/18/17.
 //  Copyright © 2017 Ooyala. All rights reserved.
 //
 
@@ -10,9 +9,9 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
   
+  private let PLAYER_SEGUE: String = "PlayerViewControllerSegue"
+    
   private let options: [PlayerSelectionOption] = OptionDataSource.options()
-  
-  private var cellIdentifier: String = "cellOption"
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,34 +19,30 @@ class ListTableViewController: UITableViewController {
     tableView.bounces = false
   }
   
-  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    return .portrait
-  }
-  
-  override var shouldAutorotate: Bool {
-    return false
-  }
-  
   // MARK: - Table view data source
-  
-  override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return options.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-    cell.textLabel?.text = options[indexPath.item].getTitle()
+    let option: PlayerSelectionOption = options[indexPath.item]
+    let cell: OptionTableViewCell = tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath) as! OptionTableViewCell
+    cell.option = option
+    cell.textLabel?.text = option.title
     return cell
   }
   
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let option = options[indexPath.item]
-    let videoViewController: VideoViewController = VideoViewController.instantiate(with: option)
-    show(videoViewController, sender: nil)
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // When tapping on a cell, we'll transition to the PlayerViewController.
+    // If that's the case set the PlayerSelectionOption for the player.
+    
+    if let cell: OptionTableViewCell = sender as? OptionTableViewCell,
+      let option: PlayerSelectionOption = cell.option,
+      segue.identifier == PLAYER_SEGUE {
+      let playerViewController = segue.destination as! PlayerViewController
+      playerViewController.option = option
+    }
   }
   
 }

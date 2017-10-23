@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,13 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellOption" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellOption" id="xIk-Wb-tUs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellOption" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellOption" id="xIk-Wb-tUs" customClass="OptionTableViewCell" customModule="ControlsLockScreenSampleApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xIk-Wb-tUs" id="Ere-9o-fiR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="D6h-QC-i9f" kind="show" identifier="PlayerViewControllerSegue" id="lt3-fK-TM0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -38,16 +42,16 @@
             </objects>
             <point key="canvasLocation" x="519" y="105"/>
         </scene>
-        <!--Video View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="HP3-em-Xb5">
             <objects>
-                <viewController storyboardIdentifier="VideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6h-QC-i9f" customClass="VideoViewController" customModule="ControlsLockScreenSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6h-QC-i9f" customClass="PlayerViewController" customModule="ControlsLockScreenSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2rh-yY-B91">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ort-Z3-JIb">
-                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                                <rect key="frame" x="10" y="74" width="355" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>

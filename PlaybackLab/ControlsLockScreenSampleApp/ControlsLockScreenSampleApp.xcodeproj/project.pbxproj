@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AEE93E551F97C5FC004ABE42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E541F97C5FC004ABE42 /* AppDelegate.swift */; };
-		AEE93E571F97C5FC004ABE42 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E561F97C5FC004ABE42 /* VideoViewController.swift */; };
+		AEE93E571F97C5FC004ABE42 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E561F97C5FC004ABE42 /* PlayerViewController.swift */; };
 		AEE93E5A1F97C5FC004ABE42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE93E581F97C5FC004ABE42 /* Main.storyboard */; };
 		AEE93E5C1F97C5FC004ABE42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE93E5B1F97C5FC004ABE42 /* Assets.xcassets */; };
 		AEE93E5F1F97C5FC004ABE42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE93E5D1F97C5FC004ABE42 /* LaunchScreen.storyboard */; };
@@ -34,12 +34,13 @@
 		AEE93E981F97E919004ABE42 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E781F97E6BF004ABE42 /* Security.framework */; };
 		AEE93E991F97E919004ABE42 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E801F97E6BF004ABE42 /* SystemConfiguration.framework */; };
 		AEE93E9A1F97E919004ABE42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E811F97E6BF004ABE42 /* UIKit.framework */; };
+		AEE93ECD1F9D942E004ABE42 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93ECC1F9D942E004ABE42 /* OptionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AEE93E511F97C5FC004ABE42 /* ControlsLockScreenSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlsLockScreenSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE93E541F97C5FC004ABE42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AEE93E561F97C5FC004ABE42 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		AEE93E561F97C5FC004ABE42 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		AEE93E591F97C5FC004ABE42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEE93E5B1F97C5FC004ABE42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEE93E5E1F97C5FC004ABE42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		AEE93E841F97E6C0004ABE42 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AEE93E851F97E6C0004ABE42 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		AEE93E861F97E6C0004ABE42 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AEE93ECC1F9D942E004ABE42 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +169,9 @@
 		AEE93E6B1F97CA36004ABE42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AEE93E561F97C5FC004ABE42 /* VideoViewController.swift */,
+				AEE93E561F97C5FC004ABE42 /* PlayerViewController.swift */,
 				AEE93E6C1F97CA50004ABE42 /* ListTableViewController.swift */,
+				AEE93ECC1F9D942E004ABE42 /* OptionTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,11 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE93E6D1F97CA50004ABE42 /* ListTableViewController.swift in Sources */,
-				AEE93E571F97C5FC004ABE42 /* VideoViewController.swift in Sources */,
+				AEE93E571F97C5FC004ABE42 /* PlayerViewController.swift in Sources */,
 				AEE93E731F97CF0C004ABE42 /* BasicEmbedTokenGenerator.swift in Sources */,
 				AEE93E701F97CACC004ABE42 /* PlayerSelectionOption.swift in Sources */,
 				AEE93E551F97C5FC004ABE42 /* AppDelegate.swift in Sources */,
 				AEE93E751F97D135004ABE42 /* OptionDataSource.swift in Sources */,
+				AEE93ECD1F9D942E004ABE42 /* OptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

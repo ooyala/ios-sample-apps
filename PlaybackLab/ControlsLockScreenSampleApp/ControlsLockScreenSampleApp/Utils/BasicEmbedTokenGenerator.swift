@@ -2,7 +2,6 @@
 //  BasicEmbedTokenGenerator.swift
 //  ControlsLockScreenSampleApp
 //
-//  Created by Carlos Ceja on 10/18/17.
 //  Copyright © 2017 Ooyala. All rights reserved.
 //
 
@@ -10,15 +9,15 @@ import UIKit
 
 class BasicEmbedTokenGenerator: NSObject, OOEmbedTokenGenerator {
   
-  private var pcode: String
+  public private(set) var pcode: String
   
-  private var apiKey: String
+  public private(set) var apiKey: String
   
-  private var apiSecret: String
+  public private(set) var apiSecret: String
   
-  private var accountId: String
+  public private(set) var accountId: String
   
-  private var authorizeHost: String
+  public private(set) var authorizeHost: String
   
   init(pcode: String, apiKey: String, apiSecret: String, accountId: String, authorizeHost: String) {
     self.pcode = pcode
@@ -27,14 +26,6 @@ class BasicEmbedTokenGenerator: NSObject, OOEmbedTokenGenerator {
     self.accountId = accountId
     self.authorizeHost = authorizeHost
     super.init()
-  }
-  
-  func getApiKey() -> String {
-    return apiKey
-  }
-  
-  func getApiSecret() -> String {
-    return apiSecret
   }
   
   func token(forEmbedCodes embedCodes: [Any]!, callback: OOEmbedTokenCallback!) {
