@@ -74,11 +74,11 @@ class PlayerViewController: OOOoyalaPlayerViewController {
     
     remoteCommandCenter.skipBackwardCommand.isEnabled = true
     remoteCommandCenter.skipBackwardCommand.preferredIntervals = [15]
-    remoteCommandCenter.skipBackwardCommand.addTarget(self, action: #selector(skipBackwardCommand))
+    remoteCommandCenter.skipBackwardCommand.addTarget(self, action: #selector(skipBackwardCommand(_:)))
     
     remoteCommandCenter.skipForwardCommand.isEnabled = true
     remoteCommandCenter.skipForwardCommand.preferredIntervals = [15]
-    remoteCommandCenter.skipForwardCommand.addTarget(self, action: #selector(skipForwardCommand))
+    remoteCommandCenter.skipForwardCommand.addTarget(self, action: #selector(skipForwardCommand(_:)))
     
     remoteCommandCenter.changePlaybackPositionCommand.isEnabled = true
     remoteCommandCenter.changePlaybackPositionCommand.addTarget(self, action: #selector(changePlaybackPositionCommand(_:)))
