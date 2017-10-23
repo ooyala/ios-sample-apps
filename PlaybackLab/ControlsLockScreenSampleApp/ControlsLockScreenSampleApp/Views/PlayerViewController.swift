@@ -149,7 +149,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   }
   
   @objc func applicationDidEnterBackground(_ notification: Notification) {
-    player.perform(#selector(player.play as () -> Void), with: nil, afterDelay: 1.0)
+    player.perform(#selector(player.play as () -> Void), with: nil, afterDelay: 0.01)
   }
   
   @objc func playerStateChange(_ notification: Notification) {
