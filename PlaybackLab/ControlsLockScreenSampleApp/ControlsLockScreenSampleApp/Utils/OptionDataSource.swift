@@ -25,12 +25,7 @@ class OptionDataSource: NSObject {
                                                                           apiKey: "API_KEY",
                                                                           apiSecret: "API_SECRET",
                                                                           accountId: "ACCOUNT_ID",
-                                                                          authorizeHost: "http://www.ooyala.com")),
-      PlayerSelectionOption(pcode: "ZsdGgyOnugo44o442aALkge_dVVK",
-                            embedCode: "xra2FoYzE6GdOtvlCx4jmNgTBRczgFJ7",
-                            title: "Big Buck Bunny",
-                            thumbnailURL: URL(string: "http://1.bp.blogspot.com/-PDLHHV4yQ8U/VNdDJJXbynI/AAAAAAAABhI/6Lz2d5xF7zs/s1600/poster.jpg")!,
-                            domain: OOPlayerDomain(string: "http://www.ooyala.com"))
+                                                                          authorizeHost: "http://www.ooyala.com"))
       // if required, add more test cases here
     ]
   }
