@@ -57,8 +57,8 @@ NSString *const PLAYER_DOMAIN = @"http://www.ooyala.com";
 - (id<OOPulseSession>)pulseManager:(OOPulseManager *)manager
              createSessionForVideo:(OOVideo *)video
                      withPulseHost:(NSString *)pulseHost
-                   contentMetadata:(VPContentMetadata *)contentMetadata
-                   requestSettings:(VPRequestSettings *)requestSettings
+                   contentMetadata:(OOContentMetadata *)contentMetadata
+                   requestSettings:(OORequestSettings *)requestSettings
 {
   // Here we assume a landscape orientation for video playback
   requestSettings.width = (NSInteger)MAX(self.view.frame.size.width, self.view.frame.size.height);
