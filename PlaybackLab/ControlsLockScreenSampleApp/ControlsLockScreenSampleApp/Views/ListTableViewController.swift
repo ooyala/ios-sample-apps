@@ -25,8 +25,8 @@ class ListTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let option: PlayerSelectionOption = options[indexPath.item]
-    let cell: OptionTableViewCell = tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath) as! OptionTableViewCell
+    let option = options[indexPath.item]
+    let cell = tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath) as! OptionTableViewCell
     cell.option = option
     cell.textLabel?.text = option.title
     return cell
@@ -37,10 +37,10 @@ class ListTableViewController: UITableViewController {
     // When tapping on a cell, we'll transition to the PlayerViewController.
     // If that's the case set the PlayerSelectionOption for the player.
     
-    if let cell: OptionTableViewCell = sender as? OptionTableViewCell,
-      let option: PlayerSelectionOption = cell.option,
+    if let cell = sender as? OptionTableViewCell,
+      let option = cell.option,
       segue.identifier == PLAYER_SEGUE {
-      let playerViewController: PlayerViewController = segue.destination as! PlayerViewController
+      let playerViewController = segue.destination as! PlayerViewController
       playerViewController.option = option
     }
   }

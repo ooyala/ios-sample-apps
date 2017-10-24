@@ -10,7 +10,7 @@ import AVFoundation
 import MediaPlayer
 
 class PlayerViewController: OOOoyalaPlayerViewController {
-    
+  
   // properties for the video
   public var option: PlayerSelectionOption!
   
@@ -19,7 +19,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   private var apiSecret: String?
   
   // remote control center
-  private let remoteCommandCenter: MPRemoteCommandCenter = MPRemoteCommandCenter.shared()
+  private let remoteCommandCenter = MPRemoteCommandCenter.shared()
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -84,15 +84,15 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   
   func setupPlayingInfoCenter() {
     // Set properties of the asset to be shown in the screen (no required).
-    var nowPlayingInfo: [String: Any] = [MPMediaItemPropertyTitle: option.title,
-                                         MPMediaItemPropertyArtist: "Ooyala",
-                                         MPMediaItemPropertyAlbumTitle: "Controls Lock Screen"
+    var nowPlayingInfo: [String : Any] = [MPMediaItemPropertyTitle: option.title,
+                                          MPMediaItemPropertyArtist: "Ooyala",
+                                          MPMediaItemPropertyAlbumTitle: "Controls Lock Screen"
     ]
     
     // Set albumArt to show in the screen if image is available
     // The albumArt needs to be an UIImage, the image can be added in the assets of the project or retrieve the image using an URL
-    if let imageData: NSData = NSData(contentsOf: option.thumbnailURL), let image: UIImage = UIImage(data: imageData as Data) {
-      let albumArt: MPMediaItemArtwork = MPMediaItemArtwork(boundsSize: image.size, requestHandler: { (size) -> UIImage in return image })
+    if let imageData = NSData(contentsOf: option.thumbnailURL), let image = UIImage(data: imageData as Data) {
+      let albumArt = MPMediaItemArtwork(boundsSize: image.size, requestHandler: { (size) -> UIImage in return image })
       nowPlayingInfo[MPMediaItemPropertyArtwork] = albumArt
     }
     
@@ -101,7 +101,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   
   // Updates the time labels.
   func updatePlayingInfoCenter() {
-    let playingInfoCenter: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+    let playingInfoCenter = MPNowPlayingInfoCenter.default()
     if var displayInfo = playingInfoCenter.nowPlayingInfo {
       displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
       displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
