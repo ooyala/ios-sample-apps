@@ -158,7 +158,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   }
   
   deinit {
-    // Remove observers, remot targets and destroy the player.
+    // Remove observers, targets and destroy the player.
     NotificationCenter.default.removeObserver(self)
     remoteCommandCenter.playCommand.removeTarget(self)
     remoteCommandCenter.pauseCommand.removeTarget(self)
