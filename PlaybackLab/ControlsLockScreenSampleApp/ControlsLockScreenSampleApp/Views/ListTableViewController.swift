@@ -40,7 +40,7 @@ class ListTableViewController: UITableViewController {
     if let cell: OptionTableViewCell = sender as? OptionTableViewCell,
       let option: PlayerSelectionOption = cell.option,
       segue.identifier == PLAYER_SEGUE {
-      let playerViewController = segue.destination as! PlayerViewController
+      let playerViewController: PlayerViewController = segue.destination as! PlayerViewController
       playerViewController.option = option
     }
   }
