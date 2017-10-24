@@ -1,10 +1,4 @@
-//
-//  OOOoyalaTVPlayerViewController.h
-//  OoyalaTVSkinSDK
-//
-//  Copyright © 2016 Ooyala, Inc. All rights reserved.
-//
-
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @class OOOoyalaPlayer;
@@ -35,5 +29,15 @@
  * Hide progress bar;
  */
 - (void)hideProgressBar;
+
+- (NSArray *)availableOptions;
+
+- (BOOL)closedCaptionMenuDisplayed;
+
+- (void)setupClosedCaptionsMenu;
+
+- (void)addClosedCaptionsView;
+
+- (void)removeClosedCaptionsMenu;
 
 @end
