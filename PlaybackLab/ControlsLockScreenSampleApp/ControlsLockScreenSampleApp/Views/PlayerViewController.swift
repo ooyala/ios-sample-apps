@@ -10,9 +10,7 @@ import AVFoundation
 import MediaPlayer
 
 class PlayerViewController: OOOoyalaPlayerViewController {
-  
-  @IBOutlet weak var playerView: UIView!
-  
+    
   // properties for the video
   public var option: PlayerSelectionOption!
   
@@ -101,7 +99,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
     MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
   }
   
-  // this method updates the time labels.
+  // Updates the time labels.
   func updatePlayingInfoCenter() {
     let playingInfoCenter: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
     if var displayInfo = playingInfoCenter.nowPlayingInfo {
@@ -149,6 +147,8 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   }
   
   @objc func applicationDidEnterBackground(_ notification: Notification) {
+    // The app detects that is running in background, we need to call the play method twice
+    // to let the AudioSession works and play the audio.
     player.perform(#selector(player.play as () -> Void))
     player.perform(#selector(player.play as () -> Void), with: nil, afterDelay: 0.1)
   }
@@ -158,6 +158,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   }
   
   deinit {
+    // Remove observers, remot targets and destroy the player.
     NotificationCenter.default.removeObserver(self)
     remoteCommandCenter.playCommand.removeTarget(self)
     remoteCommandCenter.pauseCommand.removeTarget(self)
