@@ -34,27 +34,8 @@
 		75614BA61F71217F005F26B7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75614B9F1F71217F005F26B7 /* Roboto-Regular.ttf */; };
 		75614BA71F71217F005F26B7 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75614BA01F71217F005F26B7 /* RobotoCondensed-Bold.ttf */; };
 		75614BA81F71217F005F26B7 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75614BA11F71217F005F26B7 /* RobotoCondensed-Regular.ttf */; };
-		75614C3F1F712488005F26B7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C3D1F712488005F26B7 /* libc++.tbd */; };
-		75614C401F712488005F26B7 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C3E1F712488005F26B7 /* libc.tbd */; };
-		75614C421F71248E005F26B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C411F71248E005F26B7 /* libz.tbd */; };
-		75614C441F71249C005F26B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C431F71249C005F26B7 /* UIKit.framework */; };
-		75614C461F7124A3005F26B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C451F7124A3005F26B7 /* Foundation.framework */; };
-		75614C4A1F7124AA005F26B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C471F7124AA005F26B7 /* AVFoundation.framework */; };
-		75614C4B1F7124AA005F26B7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C481F7124AA005F26B7 /* AVKit.framework */; };
-		75614C4C1F7124AA005F26B7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C491F7124AA005F26B7 /* JavaScriptCore.framework */; };
-		75614C4F1F7124B2005F26B7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C4D1F7124B2005F26B7 /* CoreAudio.framework */; };
-		75614C501F7124B2005F26B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C4E1F7124B2005F26B7 /* CoreGraphics.framework */; };
-		75614C541F7124BE005F26B7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C511F7124BE005F26B7 /* CoreMedia.framework */; };
-		75614C551F7124BE005F26B7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C521F7124BE005F26B7 /* CoreText.framework */; };
-		75614C561F7124BE005F26B7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C531F7124BE005F26B7 /* CoreVideo.framework */; };
-		75614C581F7124C4005F26B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C571F7124C4005F26B7 /* Security.framework */; };
-		75614C5A1F7124CA005F26B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C591F7124CA005F26B7 /* SystemConfiguration.framework */; };
-		75614C6B1F713996005F26B7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C691F713996005F26B7 /* GLKit.framework */; };
-		75614C6C1F713996005F26B7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75614C6A1F713996005F26B7 /* OpenGLES.framework */; };
-		75806A081F8BD3FB004248C6 /* OoyalaTVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A041F8BD3EB004248C6 /* OoyalaTVSDK.framework */; };
 		75806A091F8BD3FB004248C6 /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A051F8BD3EB004248C6 /* OoyalaTVSkinSDK.framework */; };
-		75C8A48D1F729545007CFDC7 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C8A48C1F729545007CFDC7 /* MediaAccessibility.framework */; };
-		75C8A48F1F729555007CFDC7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C8A48E1F729555007CFDC7 /* MediaPlayer.framework */; };
+		75E1C1721FA0A66200330550 /* OoyalaVRTVSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E1C1711FA0A66200330550 /* OoyalaVRTVSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,10 +89,10 @@
 		75614C5B1F7124D0005F26B7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		75614C691F713996005F26B7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		75614C6A1F713996005F26B7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		75806A041F8BD3EB004248C6 /* OoyalaTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaTVSDK.framework; sourceTree = "<group>"; };
 		75806A051F8BD3EB004248C6 /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaTVSkinSDK.framework; sourceTree = "<group>"; };
 		75C8A48C1F729545007CFDC7 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		75C8A48E1F729555007CFDC7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		75E1C1711FA0A66200330550 /* OoyalaVRTVSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaVRTVSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,27 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C8A48D1F729545007CFDC7 /* MediaAccessibility.framework in Frameworks */,
-				75C8A48F1F729555007CFDC7 /* MediaPlayer.framework in Frameworks */,
-				75614C6B1F713996005F26B7 /* GLKit.framework in Frameworks */,
-				75614C6C1F713996005F26B7 /* OpenGLES.framework in Frameworks */,
-				75614C5A1F7124CA005F26B7 /* SystemConfiguration.framework in Frameworks */,
-				75614C581F7124C4005F26B7 /* Security.framework in Frameworks */,
-				75614C541F7124BE005F26B7 /* CoreMedia.framework in Frameworks */,
-				75614C551F7124BE005F26B7 /* CoreText.framework in Frameworks */,
-				75614C561F7124BE005F26B7 /* CoreVideo.framework in Frameworks */,
-				75614C4F1F7124B2005F26B7 /* CoreAudio.framework in Frameworks */,
-				75614C501F7124B2005F26B7 /* CoreGraphics.framework in Frameworks */,
-				75806A081F8BD3FB004248C6 /* OoyalaTVSDK.framework in Frameworks */,
+				75E1C1721FA0A66200330550 /* OoyalaVRTVSDK.framework in Frameworks */,
 				75806A091F8BD3FB004248C6 /* OoyalaTVSkinSDK.framework in Frameworks */,
-				75614C4A1F7124AA005F26B7 /* AVFoundation.framework in Frameworks */,
-				75614C4B1F7124AA005F26B7 /* AVKit.framework in Frameworks */,
-				75614C4C1F7124AA005F26B7 /* JavaScriptCore.framework in Frameworks */,
-				75614C461F7124A3005F26B7 /* Foundation.framework in Frameworks */,
-				75614C441F71249C005F26B7 /* UIKit.framework in Frameworks */,
-				75614C421F71248E005F26B7 /* libz.tbd in Frameworks */,
-				75614C3F1F712488005F26B7 /* libc++.tbd in Frameworks */,
-				75614C401F712488005F26B7 /* libc.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +168,7 @@
 		75614B781F71214A005F26B7 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				75806A041F8BD3EB004248C6 /* OoyalaTVSDK.framework */,
+				75E1C1711FA0A66200330550 /* OoyalaVRTVSDK.framework */,
 				75806A051F8BD3EB004248C6 /* OoyalaTVSkinSDK.framework */,
 			);
 			path = VendorLibraries;
@@ -319,6 +281,7 @@
 				TargetAttributes = {
 					75614B591F711F5A005F26B7 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 53APD5F9YQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -495,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 53APD5F9YQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -502,7 +466,7 @@
 				INFOPLIST_FILE = VRTVSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRTVSampleApp.VRTVSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.ooyala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -513,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 53APD5F9YQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -520,7 +485,7 @@
 				INFOPLIST_FILE = VRTVSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRTVSampleApp.VRTVSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.ooyala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};

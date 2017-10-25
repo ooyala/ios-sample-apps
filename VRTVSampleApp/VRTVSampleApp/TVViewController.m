@@ -6,7 +6,7 @@
 //
 
 #import "TVViewController.h"
-#import <OoyalaTVSDK/OoyalaSDK.h>
+#import <OoyalaVRTVSDK/OoyalaVRTVSDK.h>
 #import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
 
 
@@ -37,11 +37,11 @@ NSString *TV_EMBEDCODE_TEST4 = @"xvdnJtYzE6AGavqHz4NicycL2LcZyVX4"; // ---> Lond
   
   OOOptions *options = [OOOptions new];
   
-  OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:TV_PCODE_TEST
+  OOOoyalaVRTVPlayer *ooyalaVRTVPlayer = [[OOOoyalaVRTVPlayer alloc] initWithPcode:TV_PCODE_TEST
                                                                 domain:[[OOPlayerDomain alloc] initWithString:TV_PLAYERDOMAIN_TEST]
                                                                options:options];
   
-  _skinController = [[OOOoyalaTVPlayerViewController alloc] initWithPlayer:ooyalaPlayer];
+  _skinController = [[OOOoyalaTVPlayerViewController alloc] initWithPlayer:ooyalaVRTVPlayer];
 
   _skinController.view.frame = _skinContainerView.bounds;
   _skinController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -50,7 +50,7 @@ NSString *TV_EMBEDCODE_TEST4 = @"xvdnJtYzE6AGavqHz4NicycL2LcZyVX4"; // ---> Lond
   
   [self addChildViewController:_skinController];
   
-  [ooyalaPlayer setEmbedCode:TV_EMBEDCODE_TEST0];
+  [ooyalaVRTVPlayer setEmbedCode:TV_EMBEDCODE_TEST0];
 }
 
 @end
