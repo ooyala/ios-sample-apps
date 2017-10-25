@@ -6,7 +6,7 @@
 //
 
 #import "IMAVideoViewController.h"
-#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaVRSDK/OoyalaVRSDK.h>
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaIMASDK/OOIMAManager.h>
 #import "AppDelegate.h"
@@ -47,7 +47,7 @@
   NSLog(@"\n pcode *** = %@", _playerSelectionOption.pcode);
 
   
-  OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:_playerSelectionOption.pcode
+  OOOoyalaVRPlayer *ooyalaVRPlayer = [[OOOoyalaVRPlayer alloc] initWithPcode:_playerSelectionOption.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:_playerSelectionOption.domain]
                                                                options:options];
   
@@ -60,17 +60,17 @@
                                                                 configFileName:@"skin"
                                                                overrideConfigs:overrideConfigs];
   
-  _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
+  _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaVRPlayer
                                                      skinOptions:skinOptions
                                                           parent:_skinContainerView
                                                    launchOptions:nil];
   [self addChildViewController:_skinController];
   
   // Create ADS manager
-  _adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
+  _adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaVRPlayer];
   
   // Load video
-  [ooyalaPlayer setEmbedCode:_playerSelectionOption.embedCode];
+  [ooyalaVRPlayer setEmbedCode:_playerSelectionOption.embedCode];
   
   // Configure objects
   [self configureObjects];

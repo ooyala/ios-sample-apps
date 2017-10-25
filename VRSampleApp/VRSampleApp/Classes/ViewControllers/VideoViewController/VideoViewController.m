@@ -6,7 +6,7 @@
 //
 
 #import "VideoViewController.h"
-#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaVRSDK/OoyalaVRSDK.h>
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import "AppDelegate.h"
 
@@ -25,10 +25,9 @@
 
 @implementation VideoViewController
 
-
 #pragma mark - Initialization
 
--(void)dealloc {
+- (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -56,7 +55,7 @@
   options.showPromoImage = YES;
   options.bypassPCodeMatching = NO;
 
-  OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:_playerSelectionOption.pcode
+  OOOoyalaVRPlayer *ooyalaVRPlayer = [[OOOoyalaVRPlayer alloc] initWithPcode:_playerSelectionOption.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:_playerSelectionOption.domain]
                                                                options:options];
                   
@@ -69,14 +68,14 @@
                                                                 configFileName:@"skin"
                                                                overrideConfigs:overrideConfigs];
 
-  _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
+  _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaVRPlayer
                                                      skinOptions:skinOptions
                                                           parent:_skinContainerView
                                                    launchOptions:nil];
   [self addChildViewController:_skinController];
 
   // Load video
-  [ooyalaPlayer setEmbedCode:_playerSelectionOption.embedCode];
+  [ooyalaVRPlayer setEmbedCode:_playerSelectionOption.embedCode];
   
   // Configure objects
   [self configureObjects];
