@@ -7,6 +7,7 @@
 
 #import "OOFCCTVRatingConfiguration.h"
 #import "OOIQConfiguration.h"
+#import "OODeviceInfo.h"
 #import "OOOptions.h"
 #import "OOPlayerDomain.h"
 #import "OOPlayerInfo.h"
