@@ -41,7 +41,6 @@
 		754557691F8E537500BEF43C /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 754557671F8E536C00BEF43C /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7545576A1F8E53A600BEF43C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45C81F559EA800C29D8D /* MediaPlayer.framework */; };
 		7545576B1F8E53BC00BEF43C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45B21F559E4100C29D8D /* AVKit.framework */; };
-		75806A0A1F8BD401004248C6 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A061F8BD3F7004248C6 /* OoyalaSDK.framework */; };
 		75806A0B1F8BD401004248C6 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75806A071F8BD3F7004248C6 /* OoyalaSkinSDK.framework */; };
 		75962CFD1F96498900EE408C /* IMAVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75962CFC1F96498900EE408C /* IMAVideoViewController.xib */; };
 		75962CFE1F964A9700EE408C /* IMAVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75962CFB1F96496C00EE408C /* IMAVideoViewController.m */; };
@@ -51,6 +50,7 @@
 		75D619B41F8D367A00F0CAD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D619A61F8D2C2400F0CAD8 /* LaunchScreen.storyboard */; };
 		75D619B51F8D367A00F0CAD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D619A41F8D2C2400F0CAD8 /* Main.storyboard */; };
 		75D619B91F8E12C000F0CAD8 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D619B81F8E12C000F0CAD8 /* PlayerSelectionOption.m */; };
+		75E1C1701FA093D100330550 /* OoyalaVRSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E1C16F1FA093D100330550 /* OoyalaVRSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,7 +119,6 @@
 		52BFFEDD1F8E689500C08F46 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.jsbundle; path = "../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
 		754557651F8E524000BEF43C /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaIMASDK.framework; sourceTree = "<group>"; };
 		754557671F8E536C00BEF43C /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
-		75806A061F8BD3F7004248C6 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		75806A071F8BD3F7004248C6 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		75962CFA1F96496C00EE408C /* IMAVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAVideoViewController.h; sourceTree = "<group>"; };
 		75962CFB1F96496C00EE408C /* IMAVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAVideoViewController.m; sourceTree = "<group>"; };
@@ -137,6 +136,7 @@
 		75D619B21F8D2DCD00F0CAD8 /* VideosTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
 		75D619B71F8E12C000F0CAD8 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		75D619B81F8E12C000F0CAD8 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		75E1C16F1FA093D100330550 /* OoyalaVRSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaVRSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,12 +144,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E1C1701FA093D100330550 /* OoyalaVRSDK.framework in Frameworks */,
+				75806A0B1F8BD401004248C6 /* OoyalaSkinSDK.framework in Frameworks */,
+				754557661F8E524100BEF43C /* OoyalaIMASDK.framework in Frameworks */,
 				7545576B1F8E53BC00BEF43C /* AVKit.framework in Frameworks */,
 				7545576A1F8E53A600BEF43C /* MediaPlayer.framework in Frameworks */,
 				754557681F8E537500BEF43C /* GoogleInteractiveMediaAds.framework in Frameworks */,
-				754557661F8E524100BEF43C /* OoyalaIMASDK.framework in Frameworks */,
-				75806A0A1F8BD401004248C6 /* OoyalaSDK.framework in Frameworks */,
-				75806A0B1F8BD401004248C6 /* OoyalaSkinSDK.framework in Frameworks */,
 				523E45AF1F559E2D00C29D8D /* CoreMotion.framework in Frameworks */,
 				523E45D11F559EFD00C29D8D /* libz.tbd in Frameworks */,
 				523E45CD1F559EE900C29D8D /* libc.tbd in Frameworks */,
@@ -299,9 +299,9 @@
 		75806A031F8BD299004248C6 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				75E1C16F1FA093D100330550 /* OoyalaVRSDK.framework */,
 				754557671F8E536C00BEF43C /* GoogleInteractiveMediaAds.framework */,
 				754557651F8E524000BEF43C /* OoyalaIMASDK.framework */,
-				75806A061F8BD3F7004248C6 /* OoyalaSDK.framework */,
 				75806A071F8BD3F7004248C6 /* OoyalaSkinSDK.framework */,
 			);
 			path = VendorLibraries;
@@ -421,7 +421,6 @@
 				TargetAttributes = {
 					523E45151F559C7500C29D8D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 556Y9XWD3N;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -613,7 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,7 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

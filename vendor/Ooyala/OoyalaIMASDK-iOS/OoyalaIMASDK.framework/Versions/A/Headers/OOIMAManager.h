@@ -4,7 +4,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <OoyalaSDK/OOAdPlugin.h>
+#import <OoyalaVRSDK/OOAdPlugin.h>
 #import <UIKit/UIKit.h>
 
 @protocol IMAAdPlaybackInfo;
