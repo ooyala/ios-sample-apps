@@ -6,9 +6,11 @@
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
+#import <SceneKit/SceneKit.h>
 #import <UIKit/UIKit.h>
 #import "OOOoyalaPlayer.h"
 #import "OOEmbedTokenGenerator.h"
+
 
 extern NSString *const OOOoyalaPlayerViewControllerFullscreenEnter;
 extern NSString *const OOOoyalaPlayerViewControllerFullscreenExit;
@@ -19,6 +21,9 @@ extern NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible;
 @class OOControlsViewController;
 @class OOPlayerDomain;
 @class OOClosedCaptionsStyle;
+@protocol OOMotionManagement;
+@class OOCameraPanGestureRecognizer;
+@class OOOoyalaPlayerViewController;
 
 typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
   /** an inline player, expandable to fullscreen */
@@ -26,6 +31,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
   /** a fullscreen player, not shrinkable to inline */
   OOOoyalaPlayerControlTypeFullScreen
 };
+
 
 /**
  * Main ViewController class for Ooyala player.
@@ -77,14 +83,14 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
  * }
  * @returns the dictionary of available localization.
  */
-+ (NSDictionary *) availableLocalizations;
++ (NSDictionary *)availableLocalizations;
 
 /**
  * Sets the available localizations for the OoyalaPlayer.
  * The "en" key must exist, do not remove it, but you can update any of the values there.
  * @param[in] localizations the dictionary of translation dictionaries
  */
-+ (void) setAvailableLocalizations:(NSDictionary *)localizations;
++ (void)setAvailableLocalizations:(NSDictionary *)localizations;
 
 /**
  * Loads a dictionary of language strings according to language settings in the device

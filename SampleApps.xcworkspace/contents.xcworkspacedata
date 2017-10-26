@@ -26,10 +26,10 @@
       location = "group:FreewheelSampleApp/FreewheelSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:IMASampleApp/IMASampleApp.xcodeproj">
+      location = "group:NPAWSampleApp/NPAWSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:NPAWSampleApp/NPAWSampleApp.xcodeproj">
+      location = "group:IMASampleApp/IMASampleApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:OoyalaAPISampleApp/OoyalaAPISampleApp.xcodeproj">
