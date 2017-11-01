@@ -14,9 +14,13 @@
 @interface VideosTableViewController ()
 
   @property (nonatomic) NSMutableArray *playerNoAdSelectionOptions;
-  @property (nonatomic) NSMutableArray *playerOoyalaSelectionOptions;
-	@property (nonatomic) NSMutableArray *playerIMASelectionOptions;
-  @property (nonatomic) NSMutableArray *playerVASTSelectionOptions;
+  @property (nonatomic) NSMutableArray *playerIMA360SelectionOptions;
+  @property (nonatomic) NSMutableArray *playerOoyalaADS360SelectionOptions;
+  @property (nonatomic) NSMutableArray *playerVAST360SelectionOptions;
+  @property (nonatomic) NSMutableArray *playerIMA2DSelectionOptions;
+  @property (nonatomic) NSMutableArray *playerOoyalaADS2DSelectionsOptions;
+  @property (nonatomic) NSMutableArray *playerVAST2DSelectionOptions;
+  @property (nonatomic) NSMutableArray *playerDiscoverySelectionOptions;
   @property(nonatomic) BOOL qaModeEnabled;
 
 @end
@@ -25,10 +29,8 @@
 @implementation VideosTableViewController
   
 #pragma mark - Constants
-  
-  static NSString *kDefaultPCode = @"BzY2syOq6kIK6PTXN7mmrGVSJEFj";
-  static NSString *kDefaultDomain = @"http://www.ooyala.com";
-  static NSString *kTableViewCellReuseID = @"VideosTableViewControllerTableViewCellReuseID";
+
+static NSString *kTableViewCellReuseID = @"VideosTableViewControllerTableViewCellReuseID";
 
 #pragma mark - View controller life cycle
 
@@ -71,103 +73,132 @@
     _playerNoAdSelectionOptions = [NSMutableArray new];
   }
   
-  if (!_playerOoyalaSelectionOptions) {
-    _playerOoyalaSelectionOptions = [NSMutableArray new];
+  if (!_playerIMA360SelectionOptions) {
+    _playerIMA360SelectionOptions = [NSMutableArray new];
   }
   
-  if (!_playerIMASelectionOptions) {
-    _playerIMASelectionOptions = [NSMutableArray new];
+  if (!_playerOoyalaADS360SelectionOptions) {
+    _playerOoyalaADS360SelectionOptions = [NSMutableArray new];
   }
   
-  if (!_playerVASTSelectionOptions) {
-    _playerVASTSelectionOptions = [NSMutableArray new];
+  if (!_playerVAST360SelectionOptions) {
+    _playerVAST360SelectionOptions = [NSMutableArray new];
+  }
+  
+  if (!_playerIMA2DSelectionOptions) {
+    _playerIMA2DSelectionOptions = [NSMutableArray new];
+  }
+  
+  if (!_playerOoyalaADS2DSelectionsOptions) {
+    _playerOoyalaADS2DSelectionsOptions = [NSMutableArray new];
+  }
+  
+  if (!_playerVAST2DSelectionOptions) {
+    _playerVAST2DSelectionOptions = [NSMutableArray new];
+  }
+  
+  if (!_playerDiscoverySelectionOptions) {
+    _playerDiscoverySelectionOptions = [NSMutableArray new];
   }
   
   // No Ad
-  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach"
-                                                                            embedCode:@"ZwdTE5YzE69c3U3cXy2CCzfnCkzMMqUP"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"2D Video"
+                                                                            embedCode:@"VzZHd2YzE612sYDbk2UyuurOXrLgsVx9"]];
   
-  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Crystal Showers watermark"
-                                                                             embedCode:@"tvaTluYzE6gfZg5nhqlqxPV7YbEukBCj"
-                                                                                 pcode:kDefaultPCode
-                                                                                domain:kDefaultDomain]];
+  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Video 360"
+                                                                             embedCode:@"ZwdTE5YzE69c3U3cXy2CCzfnCkzMMqUP"]];
   
-  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Park long description"
-                                                                             embedCode:@"syazl0YzE6sGVc6vA5sPUZK6RWp5aplu"
-                                                                                 pcode:kDefaultPCode
-                                                                                domain:kDefaultDomain]];
+  [_playerNoAdSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Video 360 long description"
+                                                                             embedCode:@"syazl0YzE6sGVc6vA5sPUZK6RWp5aplu"]];
+  
+  [_playerNoAdSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Video 360 watermark"
+                                                                            embedCode:@"tvaTluYzE6gfZg5nhqlqxPV7YbEukBCj"]];
+  
+  [_playerNoAdSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Video 360 High quality"
+                                                                            embedCode:@"N5N2c2ZDE6DCsvCvSrgPHE5zerJ0oJYe"
+                                                                                pcode:@"15OGsyOs7wTVvirAtV0F611vIpKH"]];
 
-  // IMA
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Pre-Mid-Post"
-                                                                            embedCode:@"UyZGUyZDE6ht1KgaWXgoWhw2P2Kp8_Nb"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  // IMA 360
+  [_playerIMA360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-roll"
+                                                                              embedCode:@"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Podded Mid"
-                                                                            embedCode:@"B0Y2UyZDE6pvNJDlxvB8dEEbHCqJth0p"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  [_playerIMA360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Mid-roll skippable"
+                                                                              embedCode:@"Q0dWFtYzE6RFRGuFP0WzuPE5dvBzJ8_R"]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Roll"
-                                                                            embedCode:@"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  [_playerIMA360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Post-roll"
+                                                                              embedCode:@"N4bmNtYzE63wuc3QizkmmkA0HDZou83_"]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"In-Stream"
-                                                                            embedCode:@"Q0dWFtYzE6RFRGuFP0WzuPE5dvBzJ8_R"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  [_playerIMA360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post skippable"
+                                                                              embedCode:@"Z4Y2UyZDE6bi5ZhPJE860W8GcE3z6WkE"]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Post-Roll"
-                                                                            embedCode:@"N4bmNtYzE63wuc3QizkmmkA0HDZou83_"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  [_playerIMA360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Podded 3Pre-3Mid-3Post"
+                                                                              embedCode:@"UyZGUyZDE6ht1KgaWXgoWhw2P2Kp8_Nb"]];
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
-                                                                            embedCode:@"Z4Y2UyZDE6bi5ZhPJE860W8GcE3z6WkE"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  //Ooyala ADS 360
   
-  [_playerIMASelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Podded Pre-Mid-Post"
-                                                                            embedCode:@"0wd2FtYzE6b3_hyeGPsLYUKzOIqXHKFi"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+  [_playerOoyalaADS360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-roll"
+                                                                                    embedCode:@"NibG1rYzE6B7m54kL380ZXwEsUUy4bIe"]];
   
-  // VAST
-  [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Roll"
-                                                                            embedCode:@"o5bm1rYzE6Iv00WKa3Wd67QUuulRGtTb"
-                                                                                pcode:kDefaultPCode
-                                                                               domain:kDefaultDomain]];
+   //VAST 360
+   
+   [_playerVAST360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-roll"
+                                                                                embedCode:@"o5bm1rYzE6Iv00WKa3Wd67QUuulRGtTb"]];
+   
+   [_playerVAST360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Mid-roll skippable"
+                                                                                embedCode:@"F3bW1rYzE6gd0C5kJ8ETeB-0yeawf2Cd"]];
+   
+   [_playerVAST360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Post-roll"
+                                                                                embedCode:@"h4dGFtYzE6pjfgMHC5ioFOiaq5BywAL6"]];
+   
+   [_playerVAST360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
+                                                                                embedCode:@"g4YmNsYzE6zLuWf3eCAtcOdi0--i081X"]];
+   
+   [_playerVAST360SelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Podded 2Pre-2Mid-2Post"
+                                                                                embedCode:@"ZpZGxoYzE6oThg4Hapb2gwUC-HBDJy8T"]];
+   
+   //IMA 2D
+   
+   [_playerIMA2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-roll"
+                                                                              embedCode:@"tqd282ZDE6bX2evvxui_wI5HezO6oLZ1"]];
+   
+   [_playerIMA2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Mid-roll skippable"
+                                                                              embedCode:@"dyeW82ZDE6cFE2fW4sWqaOSmRHVWj8yp"]];
+   
+   [_playerIMA2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Post-roll skippable"
+                                                                              embedCode:@"tod282ZDE6wCNaEqZYcSaYPHVNX4_mSX"]];
+   
+   [_playerIMA2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post skippable"
+                                                                              embedCode:@"tsd282ZDE6ntnpHkMcWP4MnuBQXR2PAw"]];
+   
+   //Ooyala 2D
   
-  [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach In-Stream"
-                                                                             embedCode:@"F3bW1rYzE6gd0C5kJ8ETeB-0yeawf2Cd"
-                                                                                 pcode:kDefaultPCode
-                                                                                domain:kDefaultDomain]];
+  [_playerOoyalaADS2DSelectionsOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-roll"
+                                                                                    embedCode:@"dmNXA2ZDE636pnqwBZiB0askbt9JHYwQ"]];
+   
+   //VAST 2D
   
-  [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"London Post-Roll"
-                                                                             embedCode:@"h4dGFtYzE6pjfgMHC5ioFOiaq5BywAL6"
-                                                                                 pcode:kDefaultPCode
-                                                                                domain:kDefaultDomain]];
+  [_playerVAST2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-roll skippable"
+                                                                              embedCode:@"ltNHA2ZDE6utNFZtF3-nH9-3otMkG_Eq"]];
   
-  [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post"
-                                                                             embedCode:@"Z4Y2UyZDE6bi5ZhPJE860W8GcE3z6WkE"
-                                                                                 pcode:kDefaultPCode
-                                                                                domain:kDefaultDomain]];
+  [_playerVAST2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Mid-roll skippable"
+                                                                              embedCode:@"wwNnA2ZDE6SIhAkXssgiR6svHXAGBq-P"]];
   
-  [_playerVASTSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Beach Podded Pre-Mid-Post"
-                                                                             embedCode:@"ZpZGxoYzE6oThg4Hapb2gwUC-HBDJy8T"
-                                                                                 pcode:kDefaultPCode
-                                                                                domain:kDefaultDomain]];
+  [_playerVAST2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Post-roll skippable"
+                                                                              embedCode:@"lxNHA2ZDE6uRDirY6LZsJRRGh2aBC6ZR"]];
   
-  // Ooyala
-  [_playerOoyalaSelectionOptions addObject: [[PlayerSelectionOption alloc] initWithTitle:@"Ayutthaya Pre-Roll"
-                                                                             embedCode:@"NibG1rYzE6B7m54kL380ZXwEsUUy4bIe"
-                                                                                 pcode:kDefaultPCode
-                                                                                domain:kDefaultDomain]];
+  [_playerVAST2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Pre-Mid-Post skippable"
+                                                                              embedCode:@"lvNHA2ZDE6Zc-4j2o0-CmHAj6lJOKnSN"]];
   
-
+  [_playerVAST2DSelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Podded 2Pre-2Mid-2Post skippable"
+                                                                              embedCode:@"lzNHA2ZDE6_oDV04VtY7sg4Pr7jGErfG"]];
+   
+   //Discovery
+  
+  [_playerDiscoverySelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Video 360"
+                                                                                 embedCode:@"hwZnUxZDE6CyfgVaLAOw4HlCzVUZGPnB"]];
+  
+  [_playerDiscoverySelectionOptions addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Video 2D"
+                                                                                 embedCode:@"N2eG42ZDE6Zq5lNIARlre7Lp0wzglOvA"]];
 }
 
 - (PlayerSelectionOption *)playerSelectionOptionAtArray:(NSArray *)array andIndex:(NSInteger)index {
@@ -216,7 +247,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 4;
+	return 8;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -226,17 +257,33 @@
       break;
       
     case 1:
-      return _playerOoyalaSelectionOptions.count;
+      return _playerIMA360SelectionOptions.count;
       break;
       
     case 2:
-      return _playerIMASelectionOptions.count;
+      return _playerOoyalaADS360SelectionOptions.count;
       break;
       
     case 3:
-      return _playerVASTSelectionOptions.count;
+      return _playerVAST360SelectionOptions.count;
       break;
-      
+    
+    case 4:
+      return _playerIMA2DSelectionOptions.count;
+      break;
+    
+    case 5:
+      return _playerOoyalaADS2DSelectionsOptions.count;
+      break;
+    
+    case 6:
+      return _playerVAST2DSelectionOptions.count;
+      break;
+    
+    case 7:
+      return _playerDiscoverySelectionOptions.count;
+      break;
+    
     default:
       return 0;
   }
@@ -258,14 +305,31 @@
       break;
       
     case 1:
-      playerOption = [self playerSelectionOptionAtArray:_playerOoyalaSelectionOptions andIndex:indexPath.row];
+      playerOption = [self playerSelectionOptionAtArray:_playerIMA360SelectionOptions andIndex:indexPath.row];
+      break;
       
     case 2:
-      playerOption = [self playerSelectionOptionAtArray:_playerIMASelectionOptions andIndex:indexPath.row];
+      playerOption = [self playerSelectionOptionAtArray:_playerOoyalaADS360SelectionOptions andIndex:indexPath.row];
       break;
       
     case 3:
-      playerOption = [self playerSelectionOptionAtArray:_playerVASTSelectionOptions andIndex:indexPath.row];
+      playerOption = [self playerSelectionOptionAtArray:_playerVAST360SelectionOptions andIndex:indexPath.row];
+      break;
+    
+    case 4:
+      playerOption = [self playerSelectionOptionAtArray:_playerIMA2DSelectionOptions andIndex:indexPath.row];
+      break;
+    
+    case 5:
+      playerOption = [self playerSelectionOptionAtArray:_playerOoyalaADS2DSelectionsOptions andIndex:indexPath.row];
+      break;
+    
+    case 6:
+      playerOption = [self playerSelectionOptionAtArray:_playerVAST2DSelectionOptions andIndex:indexPath.row];
+      break;
+    
+    case 7:
+      playerOption = [self playerSelectionOptionAtArray:_playerDiscoverySelectionOptions andIndex:indexPath.row];
       break;
       
     default:
@@ -284,21 +348,29 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
   switch (section) {
     case 0:
-      return @"No Ad";
-      break;
+      return @"No ADS";
       
     case 1:
-      return @"Ooyala";
-      break;
+      return @"IMA ADS Video 360";
       
     case 2:
-      return @"IMA";
-      break;
+      return @"Ooyala ADS Video 360";
       
     case 3:
-      return @"VAST";
-      break;
-      
+      return @"VAST ADS Video 360";
+    
+    case 4:
+      return @"IMA ADS Video 2D";
+    
+    case 5:
+      return @"Ooyala ADS Video 2D";
+    
+    case 6:
+      return @"VAST ADS Video 2D";
+    
+    case 7:
+      return @"Discovery";
+    
     default:
       break;
   }
@@ -318,18 +390,38 @@
       [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
-    case 1: // Ooyala
-      playerOption = [self playerSelectionOptionAtArray:_playerOoyalaSelectionOptions andIndex:indexPath.row];
-      [self openDefaultVideoViewControllerWith:playerOption];
-      break;
-      
-    case 2: // IMA
-      playerOption = [self playerSelectionOptionAtArray:_playerIMASelectionOptions andIndex:indexPath.row];
+    case 1: // IMA 360
+      playerOption = [self playerSelectionOptionAtArray:_playerIMA360SelectionOptions andIndex:indexPath.row];
       [self openIMAVideoViewControllerWith:playerOption];
       break;
       
-    case 3: // VAST
-      playerOption = [self playerSelectionOptionAtArray:_playerVASTSelectionOptions andIndex:indexPath.row];
+    case 2: // Ooyala 360
+      playerOption = [self playerSelectionOptionAtArray:_playerOoyalaADS360SelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
+      break;
+      
+    case 3: // VAST 360
+      playerOption = [self playerSelectionOptionAtArray:_playerVAST360SelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
+      break;
+    
+    case 4: // IMA 2D
+      playerOption = [self playerSelectionOptionAtArray:_playerIMA2DSelectionOptions andIndex:indexPath.row];
+      [self openIMAVideoViewControllerWith:playerOption];
+      break;
+    
+    case 5: // Ooyala 2D
+      playerOption = [self playerSelectionOptionAtArray:_playerOoyalaADS2DSelectionsOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
+      break;
+    
+    case 6: // VAST 2D
+      playerOption = [self playerSelectionOptionAtArray:_playerVAST2DSelectionOptions andIndex:indexPath.row];
+      [self openDefaultVideoViewControllerWith:playerOption];
+      break;
+    
+    case 7: // Discovery
+      playerOption = [self playerSelectionOptionAtArray:_playerDiscoverySelectionOptions andIndex:indexPath.row];
       [self openDefaultVideoViewControllerWith:playerOption];
       break;
       
