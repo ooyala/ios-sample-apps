@@ -15,8 +15,10 @@
  Measure the Scrubber Slider with buttons
  @param[in] buttonArray the array of buttons used in the scrubber
  @param[in] baseWidth the width of the scrubber to use for caluclations
+ @param[in] fullscreen indicates if we are currently in fullscreen mode
  @returns the frame where you can plase the scrubber
  */
 +(CGRect)calculateScrubberSliderFramewithButtons:(NSArray *)buttonArray
-                                           baseWidth:(CGFloat)baseWidth;
+                                       baseWidth:(CGFloat)baseWidth
+                                      fullscreen:(BOOL)fullscreen;
 @end
