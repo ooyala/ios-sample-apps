@@ -301,8 +301,10 @@
 
   [buttonList addObject: _videoGravityButton];
 
-  return [iOS7ScrubberSliderFraming calculateScrubberSliderFramewithButtons: buttonList
-                                                           baseWidth:_navigationBar.bounds.size.width];
+  return [iOS7ScrubberSliderFraming
+          calculateScrubberSliderFramewithButtons: buttonList
+          baseWidth:_navigationBar.bounds.size.width
+          fullscreen:YES];
 }
 
 - (void)setIsPlayShowing:(BOOL)showing {

@@ -115,7 +115,8 @@
   [buttonList removeObject:_slider];
   return [iOS7ScrubberSliderFraming
       calculateScrubberSliderFramewithButtons: buttonList
-                                    baseWidth:_navigationBar.bounds.size.width];
+          baseWidth:_navigationBar.bounds.size.width
+          fullscreen:NO];
 }
 
 - (void)setIsPlayShowing:(BOOL)showing {
