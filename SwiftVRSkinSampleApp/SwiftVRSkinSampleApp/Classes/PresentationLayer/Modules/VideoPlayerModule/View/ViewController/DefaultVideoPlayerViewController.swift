@@ -103,7 +103,7 @@ class DefaultVideoPlayerViewController: UIViewController {
       return
     }
     
-    let message = "Notification Received: \(notification.name)." +
+    let message = "Notification Received: \(notification.name.rawValue)." +
       " state: \(OOOoyalaVRPlayer.playerState(toString: skinController.player.state())). " +
       "playhead: \(skinController.player.playheadTime())"
     
