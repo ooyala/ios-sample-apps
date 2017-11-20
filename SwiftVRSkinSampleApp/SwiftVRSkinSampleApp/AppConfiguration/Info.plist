@@ -44,5 +44,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ooyala-slick-type.ttf</string>
+		<string>fontawesome.ttf</string>
+		<string>alice.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
+		<string>RobotoCondensed-Regular.ttf</string>
+	</array>
 </dict>
 </plist>
