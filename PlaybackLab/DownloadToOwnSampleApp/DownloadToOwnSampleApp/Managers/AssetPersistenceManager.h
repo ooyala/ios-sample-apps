@@ -92,11 +92,39 @@ FOUNDATION_EXPORT NSString * const AssetProgressKey;
 - (void)startDownloadForOption:(PlayerSelectionOption *)option;
 
 /**
+ Check if any asset is being downloaded.
+
+ @return YES if any asset is being downloaded.
+ */
+- (BOOL)isDownloading;
+
+/**
+ Check if there are any pending downloads.
+
+ @return YES if there are any pending downloads.
+ */
+- (BOOL)arePendingDownloads;
+
+/**
+ Pauses all downloads.
+
+ */
+- (void)pauseDownloads;
+
+
+/**
  Pauses a download in progress.
  
  @param embedCode about which asset to pause.
  */
 - (void)pauseDownloadForEmbedCode:(NSString *)embedCode;
+
+/**
+ Resume all pending downloads.
+
+ */
+- (void)resumeDownloads;
+
 
 /**
  Resume a paused download.

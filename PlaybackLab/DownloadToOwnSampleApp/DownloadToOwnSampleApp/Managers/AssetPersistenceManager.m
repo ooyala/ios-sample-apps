@@ -6,9 +6,12 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
+#import "Alert.h"
 #import "AssetPersistenceManager.h"
-#import <OoyalaSDK/OoyalaSDK.h>
 #import "PlayerSelectionOption.h"
+#import "Utility.h"
+#import <OoyalaSDK/OoyalaSDK.h>
+
 
 #define FAIRPLAY_KEY_NAME @"OO_DTO_%@.key"
 
@@ -126,6 +129,11 @@ NSString * const AssetProgressKey = @"percentage";
 }
 
 - (void)startDownloadForOption:(PlayerSelectionOption *)option {
+  BOOL shouldDownload = [Utility shouldDownload];
+  if (!shouldDownload) {
+    [Alert showAlertInWindow:[[UIApplication sharedApplication] keyWindow] title:@"No Network Connection" andMessage:@"Please connect to wifi or allow downloads on cellular network"];
+    return;
+  }
   OOAssetDownloadManager *downloadManager = [self buildDownloadManagerForOption:option];
   // this class becomes the delegate of the newly created OOAssetDownloadManager instance.
   // After starting a download, we'll be notified about it in the OOAssetDownloadManagerDelegate methods.
@@ -138,6 +146,42 @@ NSString * const AssetProgressKey = @"percentage";
                              AssetStateKey: @(AssetAuthorizing)};
   [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification object:nil userInfo:userInfo];
   NSLog(@"[AssetPersistenceManager] download intent started for embed code: %@, current download state:  Authorizing", downloadManager.embedCode);
+}
+
+- (BOOL)isDownloading {
+    return self.activeDownloads.count > 0;
+}
+
+- (BOOL)arePendingDownloads {
+    return self.pausedDownloads.count > 0;
+}
+
+- (void)pauseDownloads {
+  // find all downloads in progress and pause them.
+  for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
+    [downloadManager pauseDownload];
+    [self.pausedDownloads addObject:downloadManager];
+
+    NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                               AssetStateKey: @(AssetPaused)};
+    [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                            object:nil
+                                                          userInfo:userInfo];
+  }
+  [self.downloadsPendingAuth removeAllObjects];
+
+  for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
+    [downloadManager pauseDownload];
+    [self.pausedDownloads addObject:downloadManager];
+
+    NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                               AssetStateKey: @(AssetPaused)};
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                        object:nil
+                                                      userInfo:userInfo];
+  }
+  [self.activeDownloads removeAllObjects];
 }
 
 - (void)pauseDownloadForEmbedCode:(NSString *)embedCode {
@@ -175,7 +219,29 @@ NSString * const AssetProgressKey = @"percentage";
   }
 }
 
+- (void)resumeDownloads {
+  // find all paused downloads and resume download.
+  for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
+    [downloadManager resumeDownload];
+    [self.activeDownloads addObject:downloadManager];
+
+    NSDictionary *userInfo = @{AssetNameKey: downloadManager.embedCode,
+                               AssetStateKey: @(AssetDownloading)};
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:AssetPersistenceStateChangedNotification
+                                                        object:nil
+                                                      userInfo:userInfo];
+  }
+
+  [self.pausedDownloads removeAllObjects];
+}
+
 - (void)resumeDownloadForEmbedCode:(NSString *)embedCode {
+  BOOL shouldDownload = [Utility shouldDownload];
+  if (!shouldDownload) {
+    [Alert showAlertInWindow:[[UIApplication sharedApplication] keyWindow] title:@"No Network Connection" andMessage:@"Please connect to wifi or allow downloads on cellular network"];
+    return;
+  }
   // find a paused download for the given embed code, resume the download.
   NSLog(@"[AssetPersistenceManager] Attempting to resume a download for embed code: %@", embedCode);
   for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {

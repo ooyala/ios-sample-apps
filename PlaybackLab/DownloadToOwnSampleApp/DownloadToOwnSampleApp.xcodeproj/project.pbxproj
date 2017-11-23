@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5114C21FC7489300540F91 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5114C11FC7489300540F91 /* Alert.m */; };
+		3F5114CA1FC7640000540F91 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5114C91FC7640000540F91 /* Utility.m */; };
+		3F6915871FBF738800915717 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6915851FBF738800915717 /* Reachability.m */; };
+		3F6915891FBF73E100915717 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F6915881FBF73E000915717 /* LICENSE.txt */; };
+		3F69158B1FC4A34500915717 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F69158A1FC4A34500915717 /* Settings.bundle */; };
 		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
 		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
 		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
@@ -44,6 +49,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F5114C11FC7489300540F91 /* Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Alert.m; path = Utils/Views/Alert.m; sourceTree = "<group>"; };
+		3F5114C71FC763A800540F91 /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Alert.h; path = Utils/Views/Alert.h; sourceTree = "<group>"; };
+		3F5114C81FC763F200540F91 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Utils/Utility.h; sourceTree = "<group>"; };
+		3F5114C91FC7640000540F91 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = Utils/Utility.m; sourceTree = "<group>"; };
+		3F6915851FBF738800915717 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3F6915861FBF738800915717 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3F6915881FBF73E000915717 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		3F69158A1FC4A34500915717 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -111,6 +124,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6915841FBF736C00915717 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3F6915861FBF738800915717 /* Reachability.h */,
+				3F6915851FBF738800915717 /* Reachability.m */,
+				3F6915881FBF73E000915717 /* LICENSE.txt */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		CA38F13F1D6CF9E70039D633 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +146,7 @@
 		CA38F15A1D6D08600039D633 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3F6915841FBF736C00915717 /* Reachability */,
 				CAFA5BAF1DDD410000CAE010 /* Views */,
 				CA38F15B1D6D086D0039D633 /* PlayerSelectionOption.h */,
 				CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */,
@@ -130,6 +154,8 @@
 				CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */,
 				CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */,
 				CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */,
+				3F5114C91FC7640000540F91 /* Utility.m */,
+				3F5114C81FC763F200540F91 /* Utility.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -219,6 +245,7 @@
 				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
 				CA7ED9071D5964E700EA0A57 /* Assets.xcassets */,
 				CA7ED8FB1D5964E700EA0A57 /* Supporting Files */,
+				3F69158A1FC4A34500915717 /* Settings.bundle */,
 			);
 			path = DownloadToOwnSampleApp;
 			sourceTree = "<group>";
@@ -265,6 +292,8 @@
 			children = (
 				CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */,
 				CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */,
+				3F5114C71FC763A800540F91 /* Alert.h */,
+				3F5114C11FC7489300540F91 /* Alert.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -302,6 +331,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeamName = "Ooyala Inc";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -328,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F69158B1FC4A34500915717 /* Settings.bundle in Resources */,
 				CA79B8911E00BA040027754F /* en.json in Resources */,
 				CA79B89C1E00BA110027754F /* alice.ttf in Resources */,
 				CA79B89E1E00BA110027754F /* Roboto-Bold.ttf in Resources */,
@@ -340,6 +375,7 @@
 				CA79B8921E00BA040027754F /* es.json in Resources */,
 				CA7ED9081D5964E700EA0A57 /* Assets.xcassets in Resources */,
 				CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */,
+				3F6915891FBF73E100915717 /* LICENSE.txt in Resources */,
 				CA79B89F1E00BA110027754F /* Roboto-Regular.ttf in Resources */,
 				CA79AF921E00B53F0027754F /* main.jsbundle in Resources */,
 				CA79AF681E00B0B80027754F /* OoyalaSkinSDK.xcassets in Resources */,
@@ -356,12 +392,15 @@
 				CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */,
 				CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */,
 				CA561E6E1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m in Sources */,
+				3F5114C21FC7489300540F91 /* Alert.m in Sources */,
 				CA38F15D1D6D086D0039D633 /* PlayerSelectionOption.m in Sources */,
+				3F6915871FBF738800915717 /* Reachability.m in Sources */,
 				CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */,
 				CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */,
 				CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */,
 				CAEAD3D21DDD385700E95E08 /* PlayerViewController.m in Sources */,
 				CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */,
+				3F5114CA1FC7640000540F91 /* Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
