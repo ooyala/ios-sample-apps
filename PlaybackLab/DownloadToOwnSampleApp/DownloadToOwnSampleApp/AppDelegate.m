@@ -13,7 +13,7 @@
 @interface AppDelegate ()
 
 @property (nonatomic, retain) Reachability *reachability;
-
+@property (nonatomic) UIBackgroundTaskIdentifier bgTask;
 @end
 
 @implementation AppDelegate
@@ -87,6 +87,29 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
   // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
   // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+  BOOL isDownloading = [[AssetPersistenceManager sharedManager] isDownloading];
+  if (!isDownloading) {
+    return;
+  }
+
+  // Workaround to get network notifications, OS will eventually kill this task
+  self.bgTask = [application beginBackgroundTaskWithName:@"CheckNetworkTask" expirationHandler:^{
+    [application endBackgroundTask:self.bgTask];
+    self.bgTask = UIBackgroundTaskInvalid;
+  }];
+
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    BOOL isDownloading = [[AssetPersistenceManager sharedManager] isDownloading];
+    BOOL arePendingDownloads = [[AssetPersistenceManager sharedManager] arePendingDownloads];
+
+    while (isDownloading || arePendingDownloads) {
+      [NSThread sleepForTimeInterval:1.0f];
+      arePendingDownloads  = [[AssetPersistenceManager sharedManager] arePendingDownloads];
+      isDownloading = [[AssetPersistenceManager sharedManager] isDownloading];
+    }
+    [application endBackgroundTask:self.bgTask];
+    self.bgTask = UIBackgroundTaskInvalid;
+  });
 }
 
 
