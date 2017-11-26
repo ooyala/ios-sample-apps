@@ -7,13 +7,13 @@
 
 import UIKit
 
-
 class DefaultVideoPlayerViewController: UIViewController {
   
   // MARK: - Public properties
   
   var viewModel: VideoPlayerViewModel!
   var skinController: OOSkinViewController!
+  var appDelegate: AppDelegate?
 
   // MARK: - IBOutlets
   
@@ -38,6 +38,12 @@ class DefaultVideoPlayerViewController: UIViewController {
   // MARK: - Private functions
   
   private func configureObjects() {
+    
+    // App Delegate
+  
+    if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+      self.appDelegate = appDelegate
+    }
     
     // VR player
     
@@ -105,7 +111,8 @@ class DefaultVideoPlayerViewController: UIViewController {
     
     let message = "Notification Received: \(notification.name.rawValue)." +
       " state: \(OOOoyalaVRPlayer.playerState(toString: skinController.player.state())). " +
-      "playhead: \(skinController.player.playheadTime())"
+      "playhead: \(skinController.player.playheadTime())." +
+    " count: \(appDelegate?.count ?? 0)"
     
     NSLog(message)
     
@@ -117,6 +124,8 @@ class DefaultVideoPlayerViewController: UIViewController {
       
       qaInfoTextView.text = appendString
     }
+    
+    appDelegate?.count += 1
   }
   
   

@@ -10,8 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  
   var window: UIWindow?
+  var count: Int = 0
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     return true
   }
+
 
   // MARK: - Private functions
   
