@@ -52,11 +52,11 @@
                                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                  domain:@"http://www.ooyala.com"
                                                          viewController: [PlayWithInitialTimePlayerViewController class]]];
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls"
-                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                 domain:@"http://www.ooyala.com"
-                                                         viewController: [CustomControlsPlayerViewController class]]];
+//    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls"
+//                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+//                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+//                                                                 domain:@"http://www.ooyala.com"
+//                                                         viewController: [CustomControlsPlayerViewController class]]];
     [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Overlay"
                                                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
