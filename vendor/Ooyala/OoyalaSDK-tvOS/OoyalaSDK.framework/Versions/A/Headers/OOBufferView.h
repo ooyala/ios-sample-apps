@@ -4,7 +4,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "OOUIProgressSliderIOS7.h"
+#import "OOProgressSliderView.h"
 
 /**
  A wrappper of the Progress Slider that allows a view for the buffering duration to appear
@@ -21,5 +21,5 @@
  @param[in] slider the existing UIProgressSlider render with
  @returns an initialized OOBufferView, or nil
  */
-- (instancetype)initWithFrame:(CGRect)frame slider:(OOUIProgressSliderIOS7*)slider;
+- (instancetype)initWithFrame:(CGRect)frame slider:(OOProgressSliderView*)slider;
 @end
