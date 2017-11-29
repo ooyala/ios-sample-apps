@@ -511,6 +511,8 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
+					"-weak_framework",
+					AVFoundation,
 				);
 				PRODUCT_NAME = FreewheelSampleApp;
 				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
@@ -544,6 +546,8 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
+					"-weak_framework",
+					AVFoundation,
 				);
 				PRODUCT_NAME = FreewheelSampleApp;
 				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
