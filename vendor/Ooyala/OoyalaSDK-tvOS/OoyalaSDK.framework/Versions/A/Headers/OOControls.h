@@ -14,6 +14,5 @@
 - (void)setVideoGravityButtonShowing:(BOOL)showing;
 - (void)setGravityState:(BOOL)isZoomed;
 - (void)setHiddenControls:(BOOL)hidden;
-- (void)updateTopBarSpacing:(CGFloat)height;
 
 @end
