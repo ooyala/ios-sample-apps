@@ -7,7 +7,5 @@
  * \ingroup captions
  */
 @interface OOClosedCaptionsSelectorBackgroundViewController : UIViewController
-
-- (instancetype)initWithSelectorView:(OOClosedCaptionsSelectorViewController*)selectorController;
-
+-(id) initWithSelectorView:(OOClosedCaptionsSelectorViewController*) selectorController;
 @end
