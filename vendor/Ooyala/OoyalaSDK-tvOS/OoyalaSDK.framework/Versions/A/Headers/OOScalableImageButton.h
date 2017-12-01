@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OOImages.h"
 
 
 @interface OOScalableImageButton : UIButton
