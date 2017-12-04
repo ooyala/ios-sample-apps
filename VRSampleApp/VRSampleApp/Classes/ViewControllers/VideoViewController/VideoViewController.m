@@ -109,6 +109,25 @@
                                                name:nil
                                              object:_skinController.player];
   
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(switchFullScreenNotificationHandler:)
+                                               name:OOOoyalaPlayerSwitchSceneNotification
+                                             object:nil];
+  
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector:@selector(touchesNotificationHandler:)
+                                               name:OOOoyalaPlayerHandleTouchNotification
+                                             object:nil];
+  
+}
+
+- (void)printLogInTextViewIfNeeded:(NSString *)logMessage {
+  // In QA Mode , adding notifications to the TextView
+  if (_qaModeEnabled) {
+    NSString *string = _qaInfoTextView.text;
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, logMessage];
+    [_qaInfoTextView setText:appendString];
+  }
 }
 
 #pragma mark - Actions
@@ -125,16 +144,37 @@
                        [OOOoyalaPlayer playerStateToString:[_skinController.player state]],
                        [_skinController.player playheadTime], (long)_appDelegate.count];
   
+  if ([notification.name isEqualToString:OOOoyalaPlayerVideoHasVRContent]) {
+    NSDictionary *vrContentUserInfo = notification.userInfo;
+    BOOL isVrContent = [[vrContentUserInfo objectForKey:@"vrContent"] boolValue];
+    
+    message = [message stringByAppendingString:[NSString stringWithFormat:@" vrContentEvent: %@", isVrContent ? @"true" : @"false"]];
+  }
+  
   NSLog(@"%@",message);
   
-  // In QA Mode , adding notifications to the TextView
-  if (_qaModeEnabled) {
-    NSString *string = _qaInfoTextView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string,message];
-    [_qaInfoTextView setText:appendString];
-    
-  }
+  [self printLogInTextViewIfNeeded:message];
+  
   _appDelegate.count++;
+}
+
+- (void)switchFullScreenNotificationHandler:(NSNotification*)notification {
+  NSString *message = [NSString stringWithFormat:@"Notification Received: vrModeChanged."];
+  
+  NSLog(@"%@",message);
+  
+  [self printLogInTextViewIfNeeded:message];
+}
+
+- (void)touchesNotificationHandler:(NSNotification*)notification {
+  NSDictionary *notificationObject = notification.object;
+  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. touchesEventName: %@.",
+                       @"gvrViewRotated",
+                       notificationObject[@"eventName"]];
+  
+  NSLog(@"%@",message);
+  
+  [self printLogInTextViewIfNeeded:message];
 }
 
 @end

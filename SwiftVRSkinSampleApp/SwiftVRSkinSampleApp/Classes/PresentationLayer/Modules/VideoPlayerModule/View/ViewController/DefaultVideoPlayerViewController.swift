@@ -20,6 +20,10 @@ class DefaultVideoPlayerViewController: UIViewController {
   @IBOutlet weak var skinContainerView: UIView!
   @IBOutlet weak var qaInfoTextView: UITextView!
   
+  // MARK: - Private properties
+  
+  private var textLayer: CATextLayer!
+  
   // MARK: - Init/deinit
   
   deinit {
@@ -66,8 +70,20 @@ class DefaultVideoPlayerViewController: UIViewController {
     
     // Subscribe for notifications with QA mode enabled
     
-    NotificationCenter.default.addObserver(
-      self, selector: #selector(notificationHandler(notification:)), name: nil, object: skinController.player)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(notificationHandler(notification:)),
+                                           name: nil,
+                                           object: skinController.player)
+
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(switchFullScreenNotificationHandler(notification:)),
+                                           name: NSNotification.Name.OOOoyalaPlayerSwitchScene,
+                                           object: nil)
+    
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(touchesNotificationHandler(notification:)),
+                                           name: NSNotification.Name.OOOoyalaPlayerHandleTouch,
+                                           object: nil)
     
     // Set video embed code
     
@@ -99,6 +115,20 @@ class DefaultVideoPlayerViewController: UIViewController {
     qaInfoTextView.isHidden = !viewModel.QAModeEnabled
   }
   
+  private func printLogInTextViewIfNeeded(logMessage: String) {
+
+    // In QA Mode , adding notifications to the TextView
+
+    if viewModel.QAModeEnabled {
+      DispatchQueue.main.async {
+        let string = self.qaInfoTextView.text
+        let appendString = "\(string ?? "") :::::::::: \(logMessage)"
+
+        self.qaInfoTextView.text = appendString
+      }
+    }
+  }
+  
   // MARK: - Notifications
   
   @objc private func notificationHandler(notification: Notification) {
@@ -109,23 +139,41 @@ class DefaultVideoPlayerViewController: UIViewController {
       return
     }
     
-    let message = "Notification Received: \(notification.name.rawValue)." +
-      " state: \(OOOoyalaVRPlayer.playerState(toString: skinController.player.state())). " +
-      "playhead: \(skinController.player.playheadTime())." +
-    " count: \(appDelegate?.count ?? 0)"
+    var message = "Notification Received: \(notification.name.rawValue). " +
+      "state: \(OOOoyalaVRPlayer.playerState(toString: skinController.player.state())). " +
+      "playhead: \(skinController.player.playheadTime()). " +
+      "count: \(appDelegate?.count ?? 0)"
+    
+    if notification.name.rawValue == OOOoyalaPlayerVideoHasVRContent {
+      let vrContentUserInfo = notification.userInfo
+      let isVrContent = vrContentUserInfo?["vrContent"] as? Bool
+      
+      message += " vrContentEvent: \(isVrContent ?? false)"
+    }
     
     NSLog(message)
     
-    // In QA Mode , adding notifications to the TextView
-
-    if viewModel.QAModeEnabled {
-      let string = qaInfoTextView.text
-      let appendString = "\(string ?? "") :::::::::: \(message)"
-      
-      qaInfoTextView.text = appendString
-    }
+    printLogInTextViewIfNeeded(logMessage: message)
     
     appDelegate?.count += 1
+  }
+  
+  @objc private func switchFullScreenNotificationHandler(notification: Notification) {
+    let message = "Notification Received: vrModeChanged."
+    
+    NSLog(message)
+    
+    printLogInTextViewIfNeeded(logMessage: message)
+  }
+  
+  @objc private func touchesNotificationHandler(notification: Notification) {
+    let notificationObject = notification.object as? [String : Any]
+    let message = "Notification Received: gvrViewRotated. " +
+      "touchesEventName: \(notificationObject?["eventName"] as? String ?? "unknow")."
+    
+    NSLog(message)
+    
+    printLogInTextViewIfNeeded(logMessage: message)
   }
   
   
