@@ -6,23 +6,29 @@
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-
 #import "BasicSimplePlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
 
-@interface BasicSimplePlayerViewController ()
-@property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
+@interface BasicSimplePlayerViewController ()
+
+#pragma mark - Private properties
+
+@property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *nib;
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *playerDomain;
+
 @end
 
-@implementation BasicSimplePlayerViewController{
+
+@implementation BasicSimplePlayerViewController {
     AppDelegate *appDel;
 }
+
+#pragma mark - Initialization
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
@@ -40,6 +46,8 @@
   return self;
 }
 
+#pragma mark - Life cycle
+
 - (void)loadView {
   [super loadView];
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
@@ -47,33 +55,51 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  appDel = [[UIApplication sharedApplication] delegate];
-
+  appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
+  
   // Create Ooyala ViewController
-  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
+                                                          domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
-  [[NSNotificationCenter defaultCenter] addObserver: self
+  [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.ooyalaPlayerViewController.player];
   
   // In QA Mode , making textView visible
-  if(self.qaModeEnabled==YES){
+  if (self.qaModeEnabled == YES) {
     self.textView.hidden = NO;
-
   }
   
   // Attach it to current view
-  [self addChildViewController:self.ooyalaPlayerViewController];
-  [self.playerView addSubview:self.ooyalaPlayerViewController.view];
-  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  [self addPlayerViewController:self.ooyalaPlayerViewController];
   
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   [self.ooyalaPlayerViewController.player play];
-  
 }
+
+#pragma mark - Private functions
+
+- (void)addPlayerViewController:(UIViewController *)playerViewController {
+  playerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+  
+  [self addChildViewController:playerViewController];
+  [self.playerView addSubview:playerViewController.view];
+
+  // Add constraints
+  
+  [NSLayoutConstraint activateConstraints:@[
+                                            [playerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
+                                            [playerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
+                                            [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
+                                            [playerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
+                                            ]];
+}
+
+#pragma mark - Actions
 
 - (void) notificationHandler:(NSNotification*) notification {
   
@@ -89,14 +115,15 @@
   
   NSLog(@"%@",message);
   
-  //In QA Mode , adding notifications to the TextView
-  if(self.qaModeEnabled==YES) {
-  NSString *string = self.textView.text;
-  NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
-  [self.textView setText:appendString];
-    
+  // In QA Mode , adding notifications to the TextView
+  if (self.qaModeEnabled == YES) {
+    NSString *string = self.textView.text;
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
+    [self.textView setText:appendString];
   }
   
   appDel.count++;
 }
+
+
 @end
