@@ -64,4 +64,11 @@
  */
 @property (nonatomic) NSNumber *minimumBitrate;
 
+/**
+ When this property is enabled users will be able to download an asset using cellular data, e.g. 4G, LTE, 3G.
+ Set it to false (NO) to only allow WiFi to be used.
+ By default it is true (YES)
+ */
+@property (nonatomic) BOOL allowsCellularAccess;
+
 @end
