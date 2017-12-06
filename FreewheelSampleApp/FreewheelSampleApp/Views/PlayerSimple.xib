@@ -25,14 +25,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OR2-mc-zFZ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vU-CD-UGU">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-I6-1aN">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                            <rect key="frame" x="0.0" y="-20" width="375" height="323.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -48,7 +48,7 @@
                 <constraint firstItem="OR2-mc-zFZ" firstAttribute="leading" secondItem="0oc-PZ-gHz" secondAttribute="leading" id="0Kf-yI-sck"/>
                 <constraint firstItem="0oc-PZ-gHz" firstAttribute="trailing" secondItem="OR2-mc-zFZ" secondAttribute="trailing" id="Z0f-EQ-wba"/>
                 <constraint firstItem="0oc-PZ-gHz" firstAttribute="bottom" secondItem="OR2-mc-zFZ" secondAttribute="bottom" id="avv-Q6-cOD"/>
-                <constraint firstItem="OR2-mc-zFZ" firstAttribute="top" secondItem="0oc-PZ-gHz" secondAttribute="top" constant="-20" id="krW-lM-UVI"/>
+                <constraint firstItem="OR2-mc-zFZ" firstAttribute="top" secondItem="0oc-PZ-gHz" secondAttribute="top" id="krW-lM-UVI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="0oc-PZ-gHz"/>
             <point key="canvasLocation" x="169.5" y="961.5"/>
