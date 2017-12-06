@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,21 +27,21 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nDV-Bf-bxP">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="sO5-fg-VSp">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="389"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="442.5"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLf-zR-k5P">
-                            <rect key="frame" x="0.0" y="389" width="600" height="91"/>
+                            <rect key="frame" x="0.0" y="442.5" width="375" height="91"/>
                             <subviews>
                                 <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cZ-vq-5ZY">
-                                    <rect key="frame" x="550" y="4" width="46" height="30"/>
+                                    <rect key="frame" x="325" y="4" width="46" height="30"/>
                                     <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="Button">
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,7 +54,7 @@
                                     <rect key="frame" x="10" y="50" width="51" height="31"/>
                                 </switch>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch label 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1d-od-jpn">
-                                    <rect key="frame" x="84" y="55" width="107" height="21"/>
+                                    <rect key="frame" x="84" y="55.5" width="106.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
@@ -61,7 +63,7 @@
                                     <rect key="frame" x="10" y="4" width="51" height="31"/>
                                 </switch>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch label 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esn-Yv-de6">
-                                    <rect key="frame" x="84" y="9" width="105" height="21"/>
+                                    <rect key="frame" x="84" y="9.5" width="104.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
@@ -83,11 +85,8 @@
                             </constraints>
                         </view>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MvV-oR-GdY">
-                            <rect key="frame" x="0.0" y="480" width="600" height="120"/>
+                            <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="120" id="VJG-2w-eEJ"/>
-                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
@@ -96,11 +95,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="nDV-Bf-bxP" secondAttribute="trailing" id="2GU-EQ-CBl"/>
-                <constraint firstItem="nDV-Bf-bxP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YQc-f0-L7G"/>
-                <constraint firstAttribute="bottom" secondItem="nDV-Bf-bxP" secondAttribute="bottom" id="Ywc-45-iwC"/>
-                <constraint firstItem="nDV-Bf-bxP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wX1-HL-miZ"/>
+                <constraint firstItem="La7-mQ-OhD" firstAttribute="trailing" secondItem="nDV-Bf-bxP" secondAttribute="trailing" id="2GU-EQ-CBl"/>
+                <constraint firstItem="nDV-Bf-bxP" firstAttribute="top" secondItem="La7-mQ-OhD" secondAttribute="top" constant="-20" id="YQc-f0-L7G"/>
+                <constraint firstItem="La7-mQ-OhD" firstAttribute="bottom" secondItem="nDV-Bf-bxP" secondAttribute="bottom" id="Ywc-45-iwC"/>
+                <constraint firstItem="MvV-oR-GdY" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:5" id="kaC-ME-d3G"/>
+                <constraint firstItem="nDV-Bf-bxP" firstAttribute="leading" secondItem="La7-mQ-OhD" secondAttribute="leading" id="wX1-HL-miZ"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="La7-mQ-OhD"/>
             <point key="canvasLocation" x="716.5" y="772.5"/>
         </view>
     </objects>

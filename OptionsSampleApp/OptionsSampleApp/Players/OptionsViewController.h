@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
 
+
 @interface OptionsViewController : SampleAppPlayerViewController
+
+#pragma mark - Public properties
 
 @property int initialTime;
 
