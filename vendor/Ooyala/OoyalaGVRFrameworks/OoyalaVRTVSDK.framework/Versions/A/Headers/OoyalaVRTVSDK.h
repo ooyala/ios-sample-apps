@@ -6,10 +6,10 @@
 //
 
 
-#ifndef OoyalaSDK_h
-#define OoyalaSDK_h
+#ifndef OoyalaVRTVSDK_h
+#define OoyalaVRTVSDK_h
 
 #import "OOOoyalaVRTVPlayer.h"
 #import "OoyalaSDK.h"
 
-#endif /* OoyalaSDK_h */
+#endif /* OoyalaVRTVSDK_h */

@@ -10,4 +10,5 @@
 
 @interface OOOoyalaVRPlayer : OOOoyalaPlayer
 
+
 @end
