@@ -2,7 +2,6 @@
 //  PulseManagerViewController.h
 //  PulseSampleApp
 //
-//  Created by Jacques du Toit on 03/02/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 

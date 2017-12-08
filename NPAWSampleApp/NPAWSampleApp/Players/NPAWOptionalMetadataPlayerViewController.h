@@ -5,10 +5,9 @@
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-
 #import "SampleAppPlayerViewController.h"
 
-@interface NPAWOptionalMetadataPlayerViewController : SampleAppPlayerViewController
 
+@interface NPAWOptionalMetadataPlayerViewController : SampleAppPlayerViewController
 
 @end
