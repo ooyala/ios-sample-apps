@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		523027F61FD83413002696CA /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523027F51FD83412002696CA /* OoyalaIMASDK.framework */; };
 		75614B5F1F711F5A005F26B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B5E1F711F5A005F26B7 /* main.m */; };
 		75614B621F711F5A005F26B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B611F711F5A005F26B7 /* AppDelegate.m */; };
 		75614B651F711F5A005F26B7 /* TVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B641F711F5A005F26B7 /* TVViewController.m */; };
@@ -57,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523027F61FD83413002696CA /* OoyalaIMASDK.framework in Frameworks */,
 				75E1C1721FA0A66200330550 /* OoyalaVRTVSDK.framework in Frameworks */,
 				75806A091F8BD3FB004248C6 /* OoyalaTVSkinSDK.framework in Frameworks */,
 			);
