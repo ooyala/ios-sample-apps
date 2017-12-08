@@ -2,7 +2,6 @@
 //  PulseManagerViewController.m
 //  PulseSampleApp
 //
-//  Created by Jacques du Toit on 03/02/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
@@ -10,15 +9,16 @@
 #define PLAYER_DOMAIN @"http://www.ooyala.com"
 
 #import "PulseManagerViewController.h"
-
 #import <OoyalaPulseIntegration/OOPulseManager.h>
-
 #import <Pulse/Pulse.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 
 
 @interface PulseManagerViewController () <OOPulseManagerDelegate>
+
+#pragma mark - Private properties
+
 @property (strong, nonatomic) OOOoyalaPlayer *player;
 @property (strong, nonatomic) UIViewController *playerViewController;
 @property (strong, nonatomic) OOPulseManager *manager;
@@ -31,8 +31,9 @@
 
 @implementation PulseManagerViewController
 
-- (id)initWithVideoItem:(VideoItem *)video
-{
+#pragma mark - Initialization
+
+- (id)initWithVideoItem:(VideoItem *)video {
   self = [super init];
   if (self) {
     _videoItem = video;
@@ -40,6 +41,8 @@
   }
   return self;
 }
+
+#pragma mark - Life cycle
 
 - (void)loadView {
   [super loadView];
@@ -52,14 +55,15 @@
   // Create Ooyala ViewController
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:PCODE
                                                domain:[[OOPlayerDomain alloc] initWithString:PLAYER_DOMAIN]];
-  [[NSNotificationCenter defaultCenter] addObserver: self
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.player];
 
   [self prepareSkinned];
 
-  [[NSNotificationCenter defaultCenter] addObserver: self
+  [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.playerViewController];
@@ -73,10 +77,12 @@
   [self.player setEmbedCode:self.videoItem.embedCode];
 }
 
-- (void)prepareSkinned
-{
+#pragma mark - Private functions
+
+- (void)prepareSkinned {
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main"
                                                   withExtension:@"jsbundle"];
+  
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
                                                                             limit:10
                                                                           timeout:60];
@@ -93,11 +99,9 @@
   // Attach it to current view
   [self addChildViewController:self.playerViewController];
   [self.playerViewController.view setFrame:self.playerView.bounds];
-
 }
 
-- (void)prepareUnskinned
-{
+- (void)prepareUnskinned {
   self.playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:self.player];
   
   // Attach it to current view
@@ -106,14 +110,34 @@
   [self.playerViewController.view setFrame:self.playerView.bounds];
 }
 
+- (void)notificationHandler:(NSNotification*)notification {
+  
+  // Ignore TimeChangedNotificiations for shorter logs
+  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    return;
+  }
+  
+  // Check for FullScreenChanged notification
+  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]){
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
+                         [notification name],
+                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+    NSLog(@"%@", message);
+  }
+  
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+        [notification name],
+        [OOOoyalaPlayer playerStateToString:[self.player state]],
+        [self.player playheadTime]);
+}
+
 #pragma mark - OOPulseManagerDelegate
 
 - (id<OOPulseSession>)pulseManager:(OOPulseManager *)manager
              createSessionForVideo:(OOVideo *)video
                      withPulseHost:(NSString *)pulseHost
                    contentMetadata:(OOContentMetadata *)contentMetadata
-                   requestSettings:(OORequestSettings *)requestSettings
-{
+                   requestSettings:(OORequestSettings *)requestSettings {
   // Override the content metadata for the Pulse Ad Session request.
   contentMetadata.category = self.videoItem.category;
   contentMetadata.tags = self.videoItem.tags;
@@ -135,7 +159,7 @@
   // If the ad set connected to the video does not have a Pulse host specified,
   //   and you do not wish to set it manually, return nil here.
   
-  if(!pulseHost) {
+  if (!pulseHost) {
     return nil;
   }
   
@@ -147,24 +171,5 @@
                              requestSettings:requestSettings];
 }
 
-- (void) notificationHandler:(NSNotification*) notification {
 
-  // Ignore TimeChangedNotificiations for shorter logs
-  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
-    return;
-  }
-  
-  // Check for FullScreenChanged notification
-  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]){
-    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
-                        [notification name],
-                        [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
-    NSLog(@"%@", message);
-  }
-    
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.player state]],
-        [self.player playheadTime]);
-}
 @end
