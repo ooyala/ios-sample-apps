@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Videos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListOfVideosViewController" customModule="VRSkinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListOfVideosViewController" customModule="SwiftVRSkinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
         <!--Default Video Player View Controller-->
         <scene sceneID="cbe-Rp-wlu">
             <objects>
-                <viewController storyboardIdentifier="DefaultVideoPlayerViewController" id="VXG-zb-zdY" customClass="DefaultVideoPlayerViewController" customModule="VRSkinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DefaultVideoPlayerViewController" id="VXG-zb-zdY" customClass="DefaultVideoPlayerViewController" customModule="SwiftVRSkinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YFL-nh-Frw"/>
                         <viewControllerLayoutGuide type="bottom" id="fi6-Tc-oaW"/>
@@ -87,9 +87,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fi6-Tc-oaW" firstAttribute="top" secondItem="350-nj-yBB" secondAttribute="bottom" id="jKG-ef-Ppn"/>
-                            <constraint firstAttribute="trailing" secondItem="350-nj-yBB" secondAttribute="trailing" id="lYt-Vi-LDa"/>
-                            <constraint firstItem="350-nj-yBB" firstAttribute="leading" secondItem="2MN-uR-iRc" secondAttribute="leading" id="vDb-WW-dhI"/>
+                            <constraint firstItem="PLJ-m9-nzh" firstAttribute="bottom" secondItem="350-nj-yBB" secondAttribute="bottom" id="jKG-ef-Ppn"/>
+                            <constraint firstItem="PLJ-m9-nzh" firstAttribute="trailing" secondItem="350-nj-yBB" secondAttribute="trailing" id="lYt-Vi-LDa"/>
+                            <constraint firstItem="350-nj-yBB" firstAttribute="leading" secondItem="PLJ-m9-nzh" secondAttribute="leading" id="vDb-WW-dhI"/>
                             <constraint firstItem="350-nj-yBB" firstAttribute="height" secondItem="2MN-uR-iRc" secondAttribute="height" multiplier="1:3" id="z6Z-1z-mgc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PLJ-m9-nzh"/>
@@ -107,7 +107,7 @@
         <!--Video Player View Controller-->
         <scene sceneID="cVl-br-cKe">
             <objects>
-                <viewController storyboardIdentifier="IMAVideoPlayerViewController" id="sXW-88-vRS" customClass="IMAVideoPlayerViewController" customModule="VRSkinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IMAVideoPlayerViewController" id="sXW-88-vRS" customClass="IMAVideoPlayerViewController" customModule="SwiftVRSkinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HEg-Qr-GxM"/>
                         <viewControllerLayoutGuide type="bottom" id="4f2-gZ-8YH"/>
@@ -130,10 +130,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4f2-gZ-8YH" firstAttribute="top" secondItem="t17-Eu-NR0" secondAttribute="bottom" id="OOl-rP-hMF"/>
+                            <constraint firstItem="Qfh-Qq-Bvu" firstAttribute="bottom" secondItem="t17-Eu-NR0" secondAttribute="bottom" id="OOl-rP-hMF"/>
                             <constraint firstItem="t17-Eu-NR0" firstAttribute="height" secondItem="rKR-rB-7Fp" secondAttribute="height" multiplier="1:3" id="W6G-Zf-hpX"/>
-                            <constraint firstItem="t17-Eu-NR0" firstAttribute="leading" secondItem="rKR-rB-7Fp" secondAttribute="leading" id="fas-lS-egq"/>
-                            <constraint firstAttribute="trailing" secondItem="t17-Eu-NR0" secondAttribute="trailing" id="hwh-hc-UuF"/>
+                            <constraint firstItem="t17-Eu-NR0" firstAttribute="leading" secondItem="Qfh-Qq-Bvu" secondAttribute="leading" id="fas-lS-egq"/>
+                            <constraint firstItem="Qfh-Qq-Bvu" firstAttribute="trailing" secondItem="t17-Eu-NR0" secondAttribute="trailing" id="hwh-hc-UuF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qfh-Qq-Bvu"/>
                     </view>
