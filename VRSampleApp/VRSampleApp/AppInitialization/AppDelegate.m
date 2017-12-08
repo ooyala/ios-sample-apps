@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <OoyalaVRSDK/OoyalaVRSDK.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +16,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    return YES;
+  [OOOoyalaVRPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
+  return YES;
 }
 
 @end

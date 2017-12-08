@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     initRootViewController()
     
+    setStagingEnvironment()
+    
     return true
   }
 
@@ -41,6 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = listOfVideosNavigationController
     
     window?.makeKeyAndVisible()
+  }
+  
+  private func setStagingEnvironment() {
+    OOOoyalaVRPlayer.setEnvironment(OOOoyalaPlayerEnvironmentStaging)
   }
 
   
