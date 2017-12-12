@@ -10,12 +10,11 @@
 #import <UIKit/UIKit.h>
 
 @interface PlayerSelectionOption : NSObject
-@property (nonatomic) NSString *embedCode;
-@property (nonatomic) NSString *pcode;
-@property (nonatomic) NSString *domain;
-@property (nonatomic) NSString *title;
-@property (nonatomic) NSString *playerDomain;
-@property (nonatomic) NSString *nib;
+@property NSString *embedCode;
+@property NSString *title;
+@property NSString *nib;
+@property NSString *playerDomain;
+@property NSString *pcode;
 @property Class viewController;
 
 - (id)initWithTitle:(NSString *)title

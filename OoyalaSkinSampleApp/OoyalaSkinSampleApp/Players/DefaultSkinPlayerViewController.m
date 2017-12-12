@@ -8,7 +8,6 @@
 #import "DefaultSkinPlayerViewController.h"
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
-#import "AppDelegate.h"
 
 
 @interface DefaultSkinPlayerViewController ()
@@ -33,15 +32,15 @@ NSMutableArray *_sharePlugins;
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+  
   _sharePlugins = [[NSMutableArray alloc] init];
+
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.playerDomain;
+    self.playerDomain = playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
-    
-    NSLog(@"%@s", self.playerDomain);
   }
   return self;
 }
@@ -57,6 +56,7 @@ NSMutableArray *_sharePlugins;
   [super viewDidLoad];
   
   appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];

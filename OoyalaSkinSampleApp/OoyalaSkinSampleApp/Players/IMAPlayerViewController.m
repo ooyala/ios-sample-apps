@@ -8,7 +8,6 @@
 #import "IMAPlayerViewController.h"
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
-#import "AppDelegate.h"
 
 
 @interface IMAPlayerViewController ()
@@ -31,13 +30,14 @@ AppDelegate *appDel;
 
 #pragma mark - Initialization
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.playerDomain;
+    self.playerDomain = playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
   }
   return self;

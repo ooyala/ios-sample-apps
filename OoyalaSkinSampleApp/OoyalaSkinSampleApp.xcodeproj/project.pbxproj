@@ -506,7 +506,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaFreewheelSDK-iOS/**",
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaIMASDK-iOS/**",
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaSDK-iOS",
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaSkinSDK-iOS",
+					"$(PROJECT_DIR)/../vendor/GoogleIMA/**",
+					"$(PROJECT_DIR)/../vendor/Freewheel/**",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -527,7 +534,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaFreewheelSDK-iOS/**",
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaIMASDK-iOS/**",
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaSDK-iOS",
+					"$(PROJECT_DIR)/../vendor/Ooyala/OoyalaSkinSDK-iOS",
+					"$(PROJECT_DIR)/../vendor/GoogleIMA/**",
+					"$(PROJECT_DIR)/../vendor/Freewheel/**",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

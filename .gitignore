@@ -1,3 +1,4 @@
+.DS_Store
 # Xcode
 sdk/build/*
 *.pbxuser
@@ -13,6 +14,8 @@ sdk/build/*
 xcuserdata
 profile
 *.moved-aside
+*.DS_Store
+
 
 go_script/pkg
 go_script/bin

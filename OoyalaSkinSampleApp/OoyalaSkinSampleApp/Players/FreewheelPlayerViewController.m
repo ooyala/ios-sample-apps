@@ -9,7 +9,6 @@
 #import <OoyalaFreewheelSDK/OOFreewheelManager.h>
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
-#import "AppDelegate.h"
 
 
 @interface FreewheelPlayerViewController ()
@@ -32,13 +31,14 @@ AppDelegate *appDel;
 
 #pragma mark - Initializaiton
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.playerDomain;
+    self.playerDomain = playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
   }
   return self;
@@ -62,8 +62,9 @@ AppDelegate *appDel;
                                                                 domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-  //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+//  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause; //This is reccomended to make sure the endscreen shows up as expected
+
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
@@ -74,7 +75,6 @@ AppDelegate *appDel;
   [_skinController.view setFrame:self.videoView.bounds];
   [ooyalaPlayer setEmbedCode:self.embedCode];
   
-  
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
                                                name:nil
@@ -84,7 +84,7 @@ AppDelegate *appDel;
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.skinController];
-  
+
   self.adsManager = [[OOFreewheelManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
   
   // In QA Mode , making textView visible
@@ -98,10 +98,11 @@ AppDelegate *appDel;
   //[fwParameters setObject:@"ooyala_test_site_section" forKey:@"fw_ios_site_section_id"];
   //[fwParameters setObject:@"ooyala_test_video_with_bvi_cuepoints" forKey:@"fw_ios_video_asset_id"];
   [self.adsManager overrideFreewheelParameters:fwParameters];
-  
+
   // Load the video
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
+
 
 #pragma mark - Private functions
 
@@ -111,7 +112,7 @@ AppDelegate *appDel;
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
-  
+
   // Check for FullScreenChanged notification
   if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
     NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
