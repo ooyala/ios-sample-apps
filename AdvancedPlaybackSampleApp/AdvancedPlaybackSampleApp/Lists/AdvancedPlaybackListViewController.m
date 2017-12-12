@@ -32,11 +32,12 @@
     return self;
 }
 - (void)addAllPlayerSelectionOptions {
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Plugin Player"
-                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                 domain:@"http://www.ooyala.com"
-                                                         viewController: [PluginPlayerViewController class]]];
+  // TODO: Check why Plugin Player is failing
+//    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Plugin Player"
+//                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+//                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+//                                                                 domain:@"http://www.ooyala.com"
+//                                                         viewController: [PluginPlayerViewController class]]];
     [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Change Video Programmatically"
                                                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
@@ -52,11 +53,11 @@
                                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                                  domain:@"http://www.ooyala.com"
                                                          viewController: [PlayWithInitialTimePlayerViewController class]]];
-    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls"
-                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                 domain:@"http://www.ooyala.com"
-                                                         viewController: [CustomControlsPlayerViewController class]]];
+//    [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Controls"
+//                                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+//                                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+//                                                                 domain:@"http://www.ooyala.com"
+//                                                         viewController: [CustomControlsPlayerViewController class]]];
     [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Custom Overlay"
                                                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"

@@ -12,6 +12,9 @@
  * To play OPT-enabled videos, you must implement the OOEmbedTokenGenerator interface
  */
 @interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
+
+#pragma mark - Private properties
+
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
 @property NSString *embedCode;
@@ -28,9 +31,13 @@
 
 @property(nonatomic, strong) UIAlertView *nicknameDialog;
 @property(nonatomic) NSString *publicDeviceId;
+
 @end
 
+
 @implementation FairplayPlayerViewController
+
+#pragma mark - Initializaiton
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
@@ -60,6 +67,8 @@
   return self;
 }
 
+#pragma mark - Life cycle
+
 - (void)loadView {
   [super loadView];
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
@@ -83,20 +92,46 @@
 
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
-  [[NSNotificationCenter defaultCenter] addObserver: self
+  [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationReceived:)
                                                name:nil
                                              object:self.ooyalaPlayerViewController.player];
+  
+  [self addPlayerViewController:self.ooyalaPlayerViewController onView:self.playerView];
 
-  [self addChildViewController:self.ooyalaPlayerViewController];
-  [self.playerView addSubview:self.ooyalaPlayerViewController.view];
-  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
-
+  // Begin play
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   [self.ooyalaPlayerViewController.player play];
 }
 
-- (void) notificationReceived:(NSNotification*) notification {
+#pragma mark - Private functions
+
+- (void)addPlayerViewController:(UIViewController *)playerViewController onView:(UIView *)view {
+  [self addChildViewController:playerViewController];
+  [view addSubview:playerViewController.view];
+  
+  // Add constraints
+  
+  playerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+  
+  if (@available(iOS 11.0, *)) {
+    [NSLayoutConstraint activateConstraints:@[
+                                              [playerViewController.view.topAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.topAnchor],
+                                              [playerViewController.view.trailingAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.trailingAnchor],
+                                              [playerViewController.view.bottomAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.bottomAnchor],
+                                              [playerViewController.view.leadingAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.leadingAnchor]
+                                              ]];
+  } else {
+    [NSLayoutConstraint activateConstraints:@[
+                                              [playerViewController.view.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor],
+                                              [playerViewController.view.trailingAnchor constraintEqualToAnchor:view.trailingAnchor],
+                                              [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.topAnchor],
+                                              [playerViewController.view.leadingAnchor constraintEqualToAnchor:view.leadingAnchor]
+                                              ]];
+  }
+}
+
+- (void)notificationReceived:(NSNotification*) notification {
 
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
@@ -124,4 +159,6 @@
   NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
   callback([embedTokenUrl absoluteString]);
 }
+
+
 @end

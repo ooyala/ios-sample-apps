@@ -23,7 +23,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *text2;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic) BOOL qaModeEnabled;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerBottomSpace;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewTrailingConstraint;
 
 @property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
 

@@ -21,7 +21,7 @@
            
            // Fairplay assets require an embedTokenGenerator instance.
            // We provide an example, use BasicEmbedTokenGenerator to test your own assets too.
-           [[PlayerSelectionOption alloc] initWithTitle:@"HLS Fairplay"
+           [[PlayerSelectionOption alloc] initWithTitle:@"HLS Fairplay (unconfigured)"
                                               embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
                                                   pcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
                                                  domain:@"http://www.ooyala.com"

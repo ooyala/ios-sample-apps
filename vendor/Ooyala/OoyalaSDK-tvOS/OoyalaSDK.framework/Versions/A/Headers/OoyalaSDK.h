@@ -6,6 +6,7 @@
 
 #import <OoyalaSDK/OOFCCTVRatingConfiguration.h>
 #import <OoyalaSDK/OOIQConfiguration.h>
+#import <OoyalaSDK/OODeviceInfo.h>
 #import <OoyalaSDK/OOOptions.h>
 #import <OoyalaSDK/OOPlayerDomain.h>
 #import <OoyalaSDK/OOPlayerInfo.h>
@@ -33,7 +34,6 @@
 #import <OoyalaSDK/OOFCCTVRatingStampView.h>
 #import <OoyalaSDK/OOFCCTVRatingVideoView.h>
 #import <OoyalaSDK/OOTransparentToolbar.h>
-#import <OoyalaSDK/OOUIProgressSliderIOS7.h>
 #import <OoyalaSDK/OOBufferView.h>
 #import <OoyalaSDK/OOCuePointsView.h>
 #import <OoyalaSDK/OOClosedCaptionsSelectorViewController.h>

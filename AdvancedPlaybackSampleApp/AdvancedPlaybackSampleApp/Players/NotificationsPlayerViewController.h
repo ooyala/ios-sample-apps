@@ -5,10 +5,11 @@
  * @copyright  Copyright (c) Ooyala, Inc. All rights reserved.
  */
 
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
 
+
 @interface NotificationsPlayerViewController : SampleAppPlayerViewController
+
 @end

@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleAppPlayerViewController">
             <connections>
-                <outlet property="playerBottomSpace" destination="qSZ-mf-Lmn" id="swK-41-iqJ"/>
                 <outlet property="playerView" destination="iN0-l3-epB" id="9Th-Yt-L8r"/>
                 <outlet property="textView" destination="5JG-7h-bBs" id="VcE-mI-JV7"/>
+                <outlet property="textViewHeightConstraint" destination="4wS-1X-ydV" id="D0d-dK-E5F"/>
+                <outlet property="textViewLeadingConstraint" destination="Sl8-CO-btq" id="Ple-r6-rhg"/>
+                <outlet property="textViewTrailingConstraint" destination="O1k-4w-SUp" id="kMo-xm-DnL"/>
                 <outlet property="view" destination="4TQ-c6-OhF" id="1mV-OR-s6k"/>
             </connections>
         </placeholder>
@@ -24,12 +26,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="508"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="536"/>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5JG-7h-bBs">
-                    <rect key="frame" x="16" y="516" width="390" height="212"/>
+                    <rect key="frame" x="0.0" y="536" width="414" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="4wS-1X-ydV"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
@@ -39,11 +43,10 @@
                 <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="4TQ-c6-OhF" secondAttribute="top" id="36g-CM-qUg"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="4TQ-c6-OhF" secondAttribute="leading" id="3Oh-xo-2fj"/>
                 <constraint firstItem="5JG-7h-bBs" firstAttribute="bottom" secondItem="4TQ-c6-OhF" secondAttribute="bottomMargin" id="5AJ-lc-Kea"/>
-                <constraint firstItem="5JG-7h-bBs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="8" symbolic="YES" id="Hxs-C7-mAm"/>
-                <constraint firstItem="5JG-7h-bBs" firstAttribute="leading" secondItem="4TQ-c6-OhF" secondAttribute="leading" constant="16" id="Sl8-CO-btq"/>
-                <constraint firstItem="5JG-7h-bBs" firstAttribute="trailing" secondItem="4TQ-c6-OhF" secondAttribute="trailingMargin" id="UKQ-hG-rrf"/>
+                <constraint firstAttribute="trailing" secondItem="5JG-7h-bBs" secondAttribute="trailing" id="O1k-4w-SUp"/>
+                <constraint firstItem="5JG-7h-bBs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="bottom" id="PBR-cf-wtj"/>
+                <constraint firstItem="5JG-7h-bBs" firstAttribute="leading" secondItem="4TQ-c6-OhF" secondAttribute="leading" id="Sl8-CO-btq"/>
                 <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="fn0-2D-mZC"/>
-                <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="228" id="qSZ-mf-Lmn"/>
             </constraints>
         </view>
     </objects>

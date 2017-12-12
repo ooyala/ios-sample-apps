@@ -20,6 +20,10 @@ profile
 go_script/pkg
 go_script/bin
 
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
 
 **/OoyalaSecurePlayerSDK-iOS
 **/OoyalaSecurePlayerSDK.framework
