@@ -43,6 +43,7 @@
 @property (nonatomic, assign) BOOL heartbeatRequired;
 @property (readonly, nonatomic) OOFCCTVRating *tvRating;
 @property(readonly, nonatomic, strong) NSString *assetPcode;  /**< The OOContentItem's Promo Image URL */
+@property(readonly, nonatomic) NSDictionary *movieAttributes;
 
 /**
  * Initialize a OOContentItem
