@@ -16,7 +16,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [OOOoyalaVRTVPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
   return YES;
 }
 
