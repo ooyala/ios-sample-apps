@@ -126,7 +126,9 @@
   if (_qaModeEnabled) {
     NSString *string = _qaInfoTextView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, logMessage];
-    [_qaInfoTextView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^ {
+      [_qaInfoTextView setText:appendString];
+    });
   }
 }
 
