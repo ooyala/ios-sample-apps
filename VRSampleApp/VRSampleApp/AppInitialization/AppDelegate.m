@@ -16,7 +16,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [OOOoyalaVRPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
   return YES;
 }
 

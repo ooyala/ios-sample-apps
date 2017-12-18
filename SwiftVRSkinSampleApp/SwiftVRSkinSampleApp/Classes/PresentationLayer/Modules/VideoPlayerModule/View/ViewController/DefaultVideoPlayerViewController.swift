@@ -139,16 +139,20 @@ class DefaultVideoPlayerViewController: UIViewController {
       return
     }
     
+    let playerState = OOOoyalaVRPlayer.playerState(toString: skinController.player.state()) ?? "unknow"
+    let playhead = skinController.player.playheadTime()
+    let notificationsCount = appDelegate?.count ?? 0
+
     var message = "Notification Received: \(notification.name.rawValue). " +
-      "state: \(OOOoyalaVRPlayer.playerState(toString: skinController.player.state())). " +
-      "playhead: \(skinController.player.playheadTime()). " +
-      "count: \(appDelegate?.count ?? 0)"
+      "state: \(playerState). " +
+      "playhead: \(playhead). " +
+      "count: \(notificationsCount)"
     
     if notification.name.rawValue == OOOoyalaPlayerVideoHasVRContent {
       let vrContentUserInfo = notification.userInfo
-      let isVrContent = vrContentUserInfo?["vrContent"] as? Bool
+      let isVrContent = vrContentUserInfo?["vrContent"] as? Bool ?? false
       
-      message += " vrContentEvent: \(isVrContent ?? false)"
+      message += " vrContentEvent: \(isVrContent)"
     }
     
     NSLog(message)
@@ -159,21 +163,34 @@ class DefaultVideoPlayerViewController: UIViewController {
   }
   
   @objc private func switchFullScreenNotificationHandler(notification: Notification) {
-    let message = "Notification Received: vrModeChanged."
+    let playhead = skinController.player.playheadTime()
+    let notificationsCount = appDelegate?.count ?? 0
+
+    let message = "Notification Received: vrModeChanged. playhead: \(playhead). count: \(notificationsCount)"
     
     NSLog(message)
     
     printLogInTextViewIfNeeded(logMessage: message)
+    
+    appDelegate?.count += 1
   }
   
   @objc private func touchesNotificationHandler(notification: Notification) {
     let notificationObject = notification.object as? [String : Any]
-    let message = "Notification Received: gvrViewRotated. " +
-      "touchesEventName: \(notificationObject?["eventName"] as? String ?? "unknow")."
+    let playhead = skinController.player.playheadTime()
+    let notificationsCount = appDelegate?.count ?? 0
+    let touchesEventName = notificationObject?["eventName"] as? String ?? "unknow"
     
+    let message = "Notification Received: gvrViewRotated. " +
+      "touchesEventName: \(touchesEventName). " +
+      "playhead: \(playhead). " +
+      "count: \(notificationsCount)"
+
     NSLog(message)
     
     printLogInTextViewIfNeeded(logMessage: message)
+    
+    appDelegate?.count += 1
   }
   
   

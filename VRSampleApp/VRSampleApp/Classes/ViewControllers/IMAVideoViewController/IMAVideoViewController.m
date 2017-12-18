@@ -168,22 +168,38 @@
 }
 
 - (void)switchFullScreenNotificationHandler:(NSNotification*)notification {
-  NSString *message = [NSString stringWithFormat:@"Notification Received: vrModeChanged."];
+  Float64 playhead = [_skinController.player playheadTime];
+  long notificationsCount = (long)_appDelegate.count;
   
-  NSLog(@"%@",message);
+  NSString *message = [NSString stringWithFormat: @"Notification Received: %@. playhead: %f count: %ld",
+                       @"vrModeChanged",
+                       playhead,
+                       notificationsCount];
+  
+  NSLog(@"%@", message);
   
   [self printLogInTextViewIfNeeded:message];
+  
+  _appDelegate.count++;
 }
 
 - (void)touchesNotificationHandler:(NSNotification*)notification {
   NSDictionary *notificationObject = notification.object;
-  NSString *message = [NSString stringWithFormat:@"Notification Received: %@. touchesEventName: %@.",
-                       @"gvrViewRotated",
-                       notificationObject[@"eventName"]];
+  Float64 playhead = [_skinController.player playheadTime];
+  long notificationsCount = (long)_appDelegate.count;
   
-  NSLog(@"%@",message);
+  NSString *message = [NSString stringWithFormat: @"Notification Received: %@. touchesEventName: %@. playhead: %f count: %ld",
+                       @"gvrViewRotated",
+                       notificationObject[@"eventName"],
+                       playhead,
+                       notificationsCount];
+  
+  NSLog(@"%@", message);
   
   [self printLogInTextViewIfNeeded:message];
+  
+  _appDelegate.count++;
 }
+
 
 @end
