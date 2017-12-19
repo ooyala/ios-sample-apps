@@ -18,7 +18,6 @@
 		52A09FF71F6AE89B00884D90 /* GoogleKitHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52A09FF21F6AE89B00884D90 /* GoogleKitHUD.bundle */; };
 		52A09FF81F6AE89B00884D90 /* MaterialRobotoFontLoader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52A09FF31F6AE89B00884D90 /* MaterialRobotoFontLoader.bundle */; };
 		52B0C74C1F5DB3EC0097B856 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7451F5DB3EB0097B856 /* alice.ttf */; };
-		52B0C74D1F5DB3EC0097B856 /* fontawesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7461F5DB3EB0097B856 /* fontawesome.ttf */; };
 		52B0C74E1F5DB3EC0097B856 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7471F5DB3EB0097B856 /* ooyala-slick-type.ttf */; };
 		52B0C74F1F5DB3EC0097B856 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7481F5DB3EB0097B856 /* Roboto-Bold.ttf */; };
 		52B0C7501F5DB3EC0097B856 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B0C7491F5DB3EB0097B856 /* Roboto-Regular.ttf */; };
@@ -100,7 +99,6 @@
 		52B0C46A1F5D814E0097B856 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
 		52B0C46B1F5D814E0097B856 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = VendorLibraries/OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		52B0C7451F5DB3EB0097B856 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
-		52B0C7461F5DB3EB0097B856 /* fontawesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.ttf; sourceTree = "<group>"; };
 		52B0C7471F5DB3EB0097B856 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		52B0C7481F5DB3EB0097B856 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		52B0C7491F5DB3EB0097B856 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				52B0C7451F5DB3EB0097B856 /* alice.ttf */,
-				52B0C7461F5DB3EB0097B856 /* fontawesome.ttf */,
 				52B0C7471F5DB3EB0097B856 /* ooyala-slick-type.ttf */,
 				52B0C7481F5DB3EB0097B856 /* Roboto-Bold.ttf */,
 				52B0C7491F5DB3EB0097B856 /* Roboto-Regular.ttf */,
@@ -462,7 +459,6 @@
 				52A09FF81F6AE89B00884D90 /* MaterialRobotoFontLoader.bundle in Resources */,
 				75D619B41F8D367A00F0CAD8 /* LaunchScreen.storyboard in Resources */,
 				52B0C7631F5DB3F30097B856 /* ja.json in Resources */,
-				52B0C74D1F5DB3EC0097B856 /* fontawesome.ttf in Resources */,
 				523E45261F559C7500C29D8D /* Assets.xcassets in Resources */,
 				52B0C7511F5DB3EC0097B856 /* RobotoCondensed-Bold.ttf in Resources */,
 				52B0C7691F5DB3F30097B856 /* validate.js in Resources */,
