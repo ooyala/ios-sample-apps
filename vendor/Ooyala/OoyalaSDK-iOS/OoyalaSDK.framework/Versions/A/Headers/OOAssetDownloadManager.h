@@ -9,6 +9,7 @@
 
 @class OOAssetDownloadOptions;
 @class OOOoyalaError;
+@class OOAssetDownloadStream;
 @class OOAssetDownloadManager;
 
 /**
@@ -63,13 +64,13 @@
  
  Here is an example on how to use this class:
  @code
- OOAssetDownloadOptions *options = [OOAssetDownloadOptions new]; 
+ OOAssetDownloadOptions *options = [OOAssetDownloadOptions new];
  // set required properties for this options object
  OOAssetDownloadManager *manager = [[OOAssetDownloadManager alloc] initWithOptions:options];
  downloadManager.delegate = self;
  [downloadManager startDownload];
  @endcode
-
+ 
  The delegate is an implementation of OOAssetDownloadManagerDelegate.
  
  \ingroup offline
@@ -131,6 +132,11 @@ NS_CLASS_AVAILABLE_IOS(10.0)
 - (void)cancelDownload;
 
 /**
+ Returns an array with the available streams and their information if it is available for the embed code.
+ */
+- (NSArray <OOAssetDownloadStream *> *)getstreams;
+
+/**
  It is the responsability of the consumer of this class to save the location of both downloadable assets and it persistent key, in case it is a Fairplay asset.
  
  You should use the downloadManager:downloadCompletedAtLocation:withError: method of the delegate, to know where the asset was saved.
@@ -145,3 +151,4 @@ NS_CLASS_AVAILABLE_IOS(10.0)
 + (BOOL)deleteFileAtLocation:(NSURL *)location;
 
 @end
+
