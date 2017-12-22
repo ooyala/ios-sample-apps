@@ -53,6 +53,9 @@
 		75AEE5C81FB34F2C00C3E1F2 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 75AEE5C71FB34F2C00C3E1F2 /* data.json */; };
 		75AEE5CE1FB3604400C3E1F2 /* DefaultVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEE5CD1FB3604400C3E1F2 /* DefaultVideoPlayerViewController.swift */; };
 		75AEE5D01FB3606C00C3E1F2 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEE5CF1FB3606C00C3E1F2 /* VideoPlayerViewModel.swift */; };
+		ACBB12A61FEBF35900A0A7F1 /* CustomVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB12A51FEBF35900A0A7F1 /* CustomVideoViewController.swift */; };
+		ACBB12A81FEC5AB600A0A7F1 /* CustomVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB12A71FEC5AB600A0A7F1 /* CustomVideoViewModel.swift */; };
+		ACBB12AB1FEC60EC00A0A7F1 /* CustomVideoTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB12AA1FEC60EC00A0A7F1 /* CustomVideoTransitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +121,9 @@
 		75AEE5C71FB34F2C00C3E1F2 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		75AEE5CD1FB3604400C3E1F2 /* DefaultVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		75AEE5CF1FB3606C00C3E1F2 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		ACBB12A51FEBF35900A0A7F1 /* CustomVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoViewController.swift; sourceTree = "<group>"; };
+		ACBB12A71FEC5AB600A0A7F1 /* CustomVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoViewModel.swift; sourceTree = "<group>"; };
+		ACBB12AA1FEC60EC00A0A7F1 /* CustomVideoTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoTransitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +324,7 @@
 		75AEE5A01FB3380300C3E1F2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ACBB12A11FEBF2B000A0A7F1 /* CustomVideoModule */,
 				75AEE5BE1FB348C100C3E1F2 /* ListOfVideosModule */,
 				75AEE5C91FB3589400C3E1F2 /* VideoPlayerModule */,
 			);
@@ -383,17 +390,9 @@
 		75AEE5BF1FB348C100C3E1F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				75AEE5C01FB348C100C3E1F2 /* Cells */,
 				75AEE5C11FB348C100C3E1F2 /* ViewController */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		75AEE5C01FB348C100C3E1F2 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		75AEE5C11FB348C100C3E1F2 /* ViewController */ = {
@@ -445,6 +444,48 @@
 				75AEE5CF1FB3606C00C3E1F2 /* VideoPlayerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACBB12A11FEBF2B000A0A7F1 /* CustomVideoModule */ = {
+			isa = PBXGroup;
+			children = (
+				ACBB12A31FEBF34500A0A7F1 /* View */,
+				ACBB12A21FEBF34500A0A7F1 /* ViewModel */,
+			);
+			path = CustomVideoModule;
+			sourceTree = "<group>";
+		};
+		ACBB12A21FEBF34500A0A7F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACBB12A71FEC5AB600A0A7F1 /* CustomVideoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACBB12A31FEBF34500A0A7F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACBB12A91FEC60BC00A0A7F1 /* Transition */,
+				ACBB12A41FEBF34500A0A7F1 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACBB12A41FEBF34500A0A7F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACBB12A51FEBF35900A0A7F1 /* CustomVideoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ACBB12A91FEC60BC00A0A7F1 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				ACBB12AA1FEC60EC00A0A7F1 /* CustomVideoTransitionManager.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,7 +587,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				75AEE5BD1FB3458B00C3E1F2 /* VideItemSection.swift in Sources */,
+				ACBB12A61FEBF35900A0A7F1 /* CustomVideoViewController.swift in Sources */,
 				75AEE5C61FB348E200C3E1F2 /* ListOfVideosViewController.swift in Sources */,
+				ACBB12AB1FEC60EC00A0A7F1 /* CustomVideoTransitionManager.swift in Sources */,
 				75AEE5B81FB33B1E00C3E1F2 /* VideoItem.swift in Sources */,
 				75653C5B1FB5EF17001DF291 /* ListOfVideosFactory.swift in Sources */,
 				75AEE5CE1FB3604400C3E1F2 /* DefaultVideoPlayerViewController.swift in Sources */,
@@ -557,6 +600,7 @@
 				75AEE5C41FB348DA00C3E1F2 /* ListOfVideosViewModel.swift in Sources */,
 				75AEE5AA1FB3380300C3E1F2 /* AppDelegate.swift in Sources */,
 				75AEE5B51FB33A2700C3E1F2 /* TestDataService.swift in Sources */,
+				ACBB12A81FEC5AB600A0A7F1 /* CustomVideoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +739,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,7 +749,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ooyala;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftVRSkinSampleApp/Supporting Files/VRSkinSampleApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -720,7 +764,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -730,7 +774,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ooyala;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftVRSkinSampleApp/Supporting Files/VRSkinSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
