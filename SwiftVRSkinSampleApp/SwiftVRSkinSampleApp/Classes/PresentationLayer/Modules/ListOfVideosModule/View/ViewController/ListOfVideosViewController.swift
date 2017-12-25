@@ -15,6 +15,7 @@ class ListOfVideosViewController: UIViewController {
   var viewModel: ListOfVideosViewModel!
   
   // MARK: - Private properties
+  
   private var QAModeSwitch: UISwitch!
   
   // MARK: - Life cycle
@@ -104,8 +105,8 @@ extension ListOfVideosViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    if let videItemSection = viewModel.getVideoItemSectionAt(section: section) {
-      return videItemSection.title
+    if let videoItemSection = viewModel.getVideoItemSectionAt(section: section) {
+      return videoItemSection.title
     }
     
     return "Unknow section title"

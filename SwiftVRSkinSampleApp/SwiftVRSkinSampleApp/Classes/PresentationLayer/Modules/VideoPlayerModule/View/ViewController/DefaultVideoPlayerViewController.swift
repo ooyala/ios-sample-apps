@@ -20,10 +20,6 @@ class DefaultVideoPlayerViewController: UIViewController {
   @IBOutlet weak var skinContainerView: UIView!
   @IBOutlet weak var qaInfoTextView: UITextView!
   
-  // MARK: - Private properties
-  
-  private var textLayer: CATextLayer!
-  
   // MARK: - Init/deinit
   
   deinit {
