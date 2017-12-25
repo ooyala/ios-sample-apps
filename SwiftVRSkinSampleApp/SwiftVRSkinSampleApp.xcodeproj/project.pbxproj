@@ -27,7 +27,6 @@
 		75653CCC1FB5FB31001DF291 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 75653CB91FB5FB31001DF291 /* skin.json */; };
 		75653CCD1FB5FB31001DF291 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBA1FB5FB31001DF291 /* validate.js */; };
 		75653CCE1FB5FB31001DF291 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBC1FB5FB31001DF291 /* alice.ttf */; };
-		75653CCF1FB5FB31001DF291 /* fontawesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBD1FB5FB31001DF291 /* fontawesome.ttf */; };
 		75653CD01FB5FB31001DF291 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBE1FB5FB31001DF291 /* ooyala-slick-type.ttf */; };
 		75653CD11FB5FB31001DF291 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBF1FB5FB31001DF291 /* Roboto-Bold.ttf */; };
 		75653CD21FB5FB31001DF291 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CC01FB5FB31001DF291 /* Roboto-Regular.ttf */; };
@@ -94,7 +93,6 @@
 		75653CB91FB5FB31001DF291 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
 		75653CBA1FB5FB31001DF291 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		75653CBC1FB5FB31001DF291 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
-		75653CBD1FB5FB31001DF291 /* fontawesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.ttf; sourceTree = "<group>"; };
 		75653CBE1FB5FB31001DF291 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		75653CBF1FB5FB31001DF291 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		75653CC01FB5FB31001DF291 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -219,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				75653CBC1FB5FB31001DF291 /* alice.ttf */,
-				75653CBD1FB5FB31001DF291 /* fontawesome.ttf */,
 				75653CBE1FB5FB31001DF291 /* ooyala-slick-type.ttf */,
 				75653CBF1FB5FB31001DF291 /* Roboto-Bold.ttf */,
 				75653CC01FB5FB31001DF291 /* Roboto-Regular.ttf */,
@@ -558,7 +555,6 @@
 				75653CD41FB5FB31001DF291 /* RobotoCondensed-Regular.ttf in Resources */,
 				75653C8D1FB5F878001DF291 /* GoogleKitDialogs.bundle in Resources */,
 				75653CCC1FB5FB31001DF291 /* skin.json in Resources */,
-				75653CCF1FB5FB31001DF291 /* fontawesome.ttf in Resources */,
 				75653C8C1FB5F878001DF291 /* GoogleKitCore.bundle in Resources */,
 				75AEE5AF1FB3380300C3E1F2 /* Assets.xcassets in Resources */,
 				75AEE5C81FB34F2C00C3E1F2 /* data.json in Resources */,

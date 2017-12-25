@@ -128,10 +128,10 @@
 #import "OOAudioTrackProtocol.h"
 
 // Offline
-#import "OOAssetDownloadOptions.h"
-
 #if !TARGET_OS_TV // Check is tvOS
 
+#import "OOAssetDownloadOptions.h"
+#import "OOAssetDownloadStream.h"
 #import "OOAssetDownloadManager.h"
 
 #endif
