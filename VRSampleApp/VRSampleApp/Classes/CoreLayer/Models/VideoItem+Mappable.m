@@ -37,10 +37,10 @@
       } else if ([parsedAdTypeString isEqualToString:@"FREEWHEEL"]) {
         parsedAdType = FREEWHEEL;
       } else {
-        parsedAdType = UNKNOW;
+        parsedAdType = UNKNOWN;
       }
     } else {
-      parsedAdType = UNKNOW;
+      parsedAdType = UNKNOWN;
     }
     
     newVideoItem = [[VideoItem alloc] initWithEmbedCode:embedCode andTitle:title];

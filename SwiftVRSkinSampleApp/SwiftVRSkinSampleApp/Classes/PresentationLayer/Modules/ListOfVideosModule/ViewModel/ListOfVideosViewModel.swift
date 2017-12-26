@@ -79,7 +79,7 @@ class ListOfVideosViewModel {
     return listOfVideosFactory.configuredCustomVideoViewController { (pCode, embedCode) in
       let videoItem = VideoItem(embedCode: embedCode, title: Constants.customVideoTitle)
       videoItem.pcode = pCode
-      videoItem.videoAdType = .unknow
+      videoItem.videoAdType = .unknown
       
       completion?(videoItem)
     }

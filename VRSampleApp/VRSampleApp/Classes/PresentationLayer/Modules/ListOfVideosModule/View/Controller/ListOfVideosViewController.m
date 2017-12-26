@@ -96,7 +96,7 @@
   if (videoItem) {
     cell.textLabel.text = videoItem.title;
   } else {
-    cell.textLabel.text = @"Unknow video";
+    cell.textLabel.text = @"Unknown video";
   }
   
   return cell;

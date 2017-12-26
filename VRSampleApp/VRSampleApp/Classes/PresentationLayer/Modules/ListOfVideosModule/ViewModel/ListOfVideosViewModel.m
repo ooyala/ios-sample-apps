@@ -91,7 +91,7 @@ NSString *kCustomVideoTitle = @"Custom video";
   return [self.listOfVideosFactory configuredCustomVideoViewControllerWithCompletion:^(NSString *pCode, NSString *embedCode) {
     VideoItem *videoItem = [[VideoItem alloc] initWithEmbedCode:embedCode andTitle:kCustomVideoTitle];
     videoItem.pcode = pCode;
-    videoItem.videoAdType = UNKNOW;
+    videoItem.videoAdType = UNKNOWN;
     
     completion(videoItem);
   }];

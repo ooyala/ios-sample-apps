@@ -9,7 +9,7 @@
 
 
 typedef enum : NSUInteger {
-  UNKNOW,
+  UNKNOWN,
   NOADS,
   OOYALA,
   IMA,

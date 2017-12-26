@@ -135,7 +135,7 @@ class DefaultVideoPlayerViewController: UIViewController {
       return
     }
     
-    let playerState = OOOoyalaVRPlayer.playerState(toString: skinController.player.state()) ?? "unknow"
+    let playerState = OOOoyalaVRPlayer.playerState(toString: skinController.player.state()) ?? "unknown"
     let playhead = skinController.player.playheadTime()
     let notificationsCount = appDelegate?.count ?? 0
 
@@ -175,7 +175,7 @@ class DefaultVideoPlayerViewController: UIViewController {
     let notificationObject = notification.object as? [String : Any]
     let playhead = skinController.player.playheadTime()
     let notificationsCount = appDelegate?.count ?? 0
-    let touchesEventName = notificationObject?["eventName"] as? String ?? "unknow"
+    let touchesEventName = notificationObject?["eventName"] as? String ?? "unknown"
     
     let message = "Notification Received: gvrViewRotated. " +
       "touchesEventName: \(touchesEventName). " +

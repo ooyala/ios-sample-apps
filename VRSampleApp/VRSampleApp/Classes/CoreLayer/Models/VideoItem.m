@@ -18,7 +18,7 @@
   if (self) {
     self.embedCode = embedCode;
     self.title = title;
-    self.videoAdType = UNKNOW;
+    self.videoAdType = UNKNOWN;
   }
   
   return self;

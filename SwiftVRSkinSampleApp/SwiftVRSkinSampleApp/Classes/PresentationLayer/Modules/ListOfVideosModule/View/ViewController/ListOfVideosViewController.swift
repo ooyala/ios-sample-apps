@@ -98,7 +98,7 @@ extension ListOfVideosViewController: UITableViewDataSource {
     if let videoItem = viewModel.getVideoItemAt(indexPath: indexPath) {
       cell?.textLabel?.text = videoItem.title
     } else {
-      cell?.textLabel?.text = "Unknow video"
+      cell?.textLabel?.text = "Unknown video"
     }
     
     return cell!
@@ -109,7 +109,7 @@ extension ListOfVideosViewController: UITableViewDataSource {
       return videoItemSection.title
     }
     
-    return "Unknow section title"
+    return "Unknown section title"
   }
   
   
