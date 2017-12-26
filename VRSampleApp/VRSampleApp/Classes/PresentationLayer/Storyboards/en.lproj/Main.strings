@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "EmbedCode"; ObjectID = "EHx-GY-2cH"; */
+"EHx-GY-2cH.text" = "EmbedCode";
+
+/* Class = "UITextField"; placeholder = "Enter your Embed code"; ObjectID = "OIF-5s-NTR"; */
+"OIF-5s-NTR.placeholder" = "Enter your Embed code";
+
+/* Class = "UINavigationItem"; title = "VR Sample"; ObjectID = "UGb-aS-Fha"; */
+"UGb-aS-Fha.title" = "VR Sample";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "ZA7-sE-k47"; */
+"ZA7-sE-k47.normalTitle" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "Enter your Provider code"; ObjectID = "cPK-tI-4Yb"; */
+"cPK-tI-4Yb.placeholder" = "Enter your Provider code";
+
+/* Class = "UIButton"; normalTitle = "Open"; ObjectID = "dgo-qY-agX"; */
+"dgo-qY-agX.normalTitle" = "Open";
+
+/* Class = "UINavigationItem"; title = "Videos"; ObjectID = "iOv-yN-6Hf"; */
+"iOv-yN-6Hf.title" = "Videos";
+
+/* Class = "UILabel"; text = "PCode"; ObjectID = "nwe-8W-Pof"; */
+"nwe-8W-Pof.text" = "PCode";
