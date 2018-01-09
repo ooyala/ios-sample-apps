@@ -35,7 +35,6 @@
 		755B35DD1FF25E31009CD1F7 /* VideoPlayerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B35A41FF25E31009CD1F7 /* VideoPlayerViewModel.m */; };
 		755B35DE1FF25E31009CD1F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755B35A61FF25E31009CD1F7 /* LaunchScreen.storyboard */; };
 		755B35DF1FF25E31009CD1F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755B35A81FF25E31009CD1F7 /* Main.storyboard */; };
-		755B35E01FF25E31009CD1F7 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 755B35AA1FF25E31009CD1F7 /* Main.strings */; };
 		755B35E11FF25E31009CD1F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755B35AD1FF25E31009CD1F7 /* Assets.xcassets */; };
 		755B35E21FF25E31009CD1F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 755B35AE1FF25E31009CD1F7 /* data.json */; };
 		755B35E31FF25E31009CD1F7 /* CardboardSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 755B35B01FF25E31009CD1F7 /* CardboardSDK.bundle */; };
@@ -143,7 +142,6 @@
 		755B35A41FF25E31009CD1F7 /* VideoPlayerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewModel.m; sourceTree = "<group>"; };
 		755B35A71FF25E31009CD1F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		755B35A91FF25E31009CD1F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		755B35AB1FF25E31009CD1F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		755B35AD1FF25E31009CD1F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		755B35AE1FF25E31009CD1F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		755B35B01FF25E31009CD1F7 /* CardboardSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CardboardSDK.bundle; sourceTree = "<group>"; };
@@ -479,7 +477,6 @@
 			children = (
 				755B35A61FF25E31009CD1F7 /* LaunchScreen.storyboard */,
 				755B35A81FF25E31009CD1F7 /* Main.storyboard */,
-				755B35AA1FF25E31009CD1F7 /* Main.strings */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -656,7 +653,6 @@
 				755B35E31FF25E31009CD1F7 /* CardboardSDK.bundle in Resources */,
 				755B364D1FF26020009CD1F7 /* RobotoCondensed-Regular.ttf in Resources */,
 				755B36461FF2601F009CD1F7 /* validate.js in Resources */,
-				755B35E01FF25E31009CD1F7 /* Main.strings in Resources */,
 				755B35CE1FF25E31009CD1F7 /* Info.plist in Resources */,
 				755B35E51FF25E31009CD1F7 /* GoogleKitDialogs.bundle in Resources */,
 				755B35E61FF25E31009CD1F7 /* GoogleKitHUD.bundle in Resources */,
@@ -712,14 +708,6 @@
 				755B35A91FF25E31009CD1F7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		755B35AA1FF25E31009CD1F7 /* Main.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				755B35AB1FF25E31009CD1F7 /* en */,
-			);
-			name = Main.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

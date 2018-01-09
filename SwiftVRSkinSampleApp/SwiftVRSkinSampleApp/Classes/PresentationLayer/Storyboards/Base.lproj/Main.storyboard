@@ -219,6 +219,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="350-nj-yBB">
                                 <rect key="frame" x="0.0" y="444.5" width="375" height="222.5"/>
                                 <color key="backgroundColor" red="0.3441965045" green="0.36631719559999998" blue="0.32943376990000001" alpha="0.1929742518" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="qaInfoTextView"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -262,6 +263,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t17-Eu-NR0">
                                 <rect key="frame" x="0.0" y="444.5" width="375" height="222.5"/>
                                 <color key="backgroundColor" red="0.3441965045" green="0.36631719559999998" blue="0.32943376990000001" alpha="0.1929742518" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="qaInfoTextView"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
