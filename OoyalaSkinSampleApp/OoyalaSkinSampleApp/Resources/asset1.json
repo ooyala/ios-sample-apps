@@ -1,0 +1,24 @@
+{
+  "content": {
+    "title": "Test asset 1",
+    "duration": 0.597,
+    "description": "HA ENABLED STREAM",
+    "captions": {},
+    "posterImages": [
+      {
+        "url": "http://cf.c.ooyala.com/l1MzhtNTE6eOf81reieCvXoynnA7TUdp/3Gduepif0T1UGY8H4xMDoxOjBrO-I4W8"
+      }
+    ],
+    "streams": [
+      {
+        "delivery_type": "hls",
+        "url": "http://player.ooyala.com/player/all/l1MzhtNTE6eOf81reieCvXoynnA7TUdp.m3u8?secure_ios_token=cDV4ZnhVWmFGRXkvTUxGU254RW1QRkRiZXluTWdhMURIdWgyTzgzc2kyZzduYU0wanhDOEcwejZZZmVQCnlHaWVmRVhqcC9MbHcwUHNQMHBJOFR0S2lRPT0K"
+      }
+    ]
+  },
+  "highAvailability": {
+    "enabled": true,
+    "ignoreMaxTimeout": true
+  },
+  "id": "h00lsk"
+}
