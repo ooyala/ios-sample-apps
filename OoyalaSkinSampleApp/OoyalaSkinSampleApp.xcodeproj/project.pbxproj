@@ -33,6 +33,11 @@
 		0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */; };
 		0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */; };
 		0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */; };
+		752F36AC20063328007BF377 /* SetAssetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F36AB20063328007BF377 /* SetAssetListViewController.m */; };
+		752F36AF2006340D007BF377 /* SetAssetPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F36AE2006340D007BF377 /* SetAssetPlayerViewController.m */; };
+		752F36B120063469007BF377 /* SetAssetSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */; };
+		752F36B520064F1C007BF377 /* asset1.json in Resources */ = {isa = PBXBuildFile; fileRef = 752F36B320064F1C007BF377 /* asset1.json */; };
+		752F36B620064F1C007BF377 /* asset2.json in Resources */ = {isa = PBXBuildFile; fileRef = 752F36B420064F1C007BF377 /* asset2.json */; };
 		972ED77E1AE184CE005043DC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 972ED77D1AE184CE005043DC /* libz.dylib */; };
 		9756A7581CF677D500D292F0 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */; };
 		97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */; };
@@ -116,6 +121,13 @@
 		0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallSkinPlayerView.xib; sourceTree = "<group>"; };
 		0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidePlayerView.xib; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* OoyalaSkinSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OoyalaSkinSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		752F36AA20063328007BF377 /* SetAssetListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetAssetListViewController.h; sourceTree = "<group>"; };
+		752F36AB20063328007BF377 /* SetAssetListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetAssetListViewController.m; sourceTree = "<group>"; };
+		752F36AD2006340D007BF377 /* SetAssetPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetAssetPlayerViewController.h; sourceTree = "<group>"; };
+		752F36AE2006340D007BF377 /* SetAssetPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetAssetPlayerViewController.m; sourceTree = "<group>"; };
+		752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetAssetSkinPlayerView.xib; sourceTree = "<group>"; };
+		752F36B320064F1C007BF377 /* asset1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = asset1.json; sourceTree = "<group>"; };
+		752F36B420064F1C007BF377 /* asset2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = asset2.json; sourceTree = "<group>"; };
 		972ED77D1AE184CE005043DC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		97930C0B1B670971009B3512 /* FreewheelPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreewheelPlayerViewController.h; sourceTree = "<group>"; };
@@ -239,6 +251,8 @@
 				97930C181B670D9F009B3512 /* FreewheelTestsListViewController.m */,
 				97930C1A1B670E77009B3512 /* BasicTestsListViewController.h */,
 				97930C1B1B670E77009B3512 /* BasicTestsListViewController.m */,
+				752F36AA20063328007BF377 /* SetAssetListViewController.h */,
+				752F36AB20063328007BF377 /* SetAssetListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -265,6 +279,7 @@
 				0B78246A1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib */,
 				0B7824661B2FA0BD00D718AB /* DefaultSkinPlayerView.xib */,
 				0B7824561B2B841800D718AB /* TableCell.xib */,
+				752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +293,8 @@
 				97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */,
 				97930C291B6952D0009B3512 /* IMAPlayerViewController.h */,
 				97930C2A1B6952D0009B3512 /* IMAPlayerViewController.m */,
+				752F36AD2006340D007BF377 /* SetAssetPlayerViewController.h */,
+				752F36AE2006340D007BF377 /* SetAssetPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -311,6 +328,16 @@
 			name = VendorLibraries;
 			sourceTree = "<group>";
 		};
+		752F36B220064F01007BF377 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				752F36B320064F1C007BF377 /* asset1.json */,
+				752F36B420064F1C007BF377 /* asset2.json */,
+			);
+			name = Resources;
+			path = OoyalaSkinSampleApp/Resources;
+			sourceTree = "<group>";
+		};
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +346,7 @@
 				0BB8E7A81BE043FB00003E2D /* VendorLibraries */,
 				0B8E7F251BDED4F80078155C /* Fonts */,
 				CA63276F1C442130008F3667 /* skin-config */,
+				752F36B220064F01007BF377 /* Resources */,
 				972ED7581AE1827B005043DC /* Frameworks */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				0BB8E7A41BE0438300003E2D /* README.md */,
@@ -395,7 +423,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = Facebook;
+				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 556Y9XWD3N;
@@ -426,6 +454,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752F36B520064F1C007BF377 /* asset1.json in Resources */,
+				752F36B120063469007BF377 /* SetAssetSkinPlayerView.xib in Resources */,
 				0B4731341C5199A300F1E7FD /* Main.storyboard in Resources */,
 				CA63276E1C442126008F3667 /* main.jsbundle in Resources */,
 				CA6327851C4421A0008F3667 /* Roboto-Bold.ttf in Resources */,
@@ -448,6 +478,7 @@
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
 				CA63277D1C442130008F3667 /* skin.json in Resources */,
 				0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */,
+				752F36B620064F1C007BF377 /* asset2.json in Resources */,
 				0B7824671B2FA0BD00D718AB /* DefaultSkinPlayerView.xib in Resources */,
 				CA63277A1C442130008F3667 /* package.json in Resources */,
 			);
@@ -460,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752F36AF2006340D007BF377 /* SetAssetPlayerViewController.m in Sources */,
 				97930C161B670D70009B3512 /* IMATestsListViewController.m in Sources */,
 				0B7824461B2B82C000D718AB /* OoyalaSkinListViewController.m in Sources */,
 				97930C131B670D49009B3512 /* LayoutListViewController.m in Sources */,
@@ -474,6 +506,7 @@
 				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
 				CA63277B1C442130008F3667 /* README.md in Sources */,
 				97930C191B670D9F009B3512 /* FreewheelTestsListViewController.m in Sources */,
+				752F36AC20063328007BF377 /* SetAssetListViewController.m in Sources */,
 				0B78245B1B2B855500D718AB /* DefaultSkinPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
