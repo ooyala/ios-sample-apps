@@ -21,6 +21,7 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 @property (nonatomic) UIView *controls;
 @property (nonatomic) bool isVisible;
 @property (nonatomic) NSTimer *hideControlsTimer;
+@property (nonatomic) BOOL autohideControls;
 
 - (id) initWithControlsType:(OOOoyalaPlayerControlType)controlsType player:(OOOoyalaPlayer *)player  overlay:(UIView *) overlay delegate:(id)delegate;
 
