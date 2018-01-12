@@ -47,6 +47,9 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
 
 @property(nonatomic, strong) OOClosedCaptionsStyle *closedCaptionsStyle; /**< The OOClosedCaptionsStyle to use when displaying closed captions */
 
+@property (nonatomic) BOOL autohideControls; /**< Property to decide if we want to enable or disable autohiding the controls after some time. Default: true */
+
+
 
 /**
  * Get the fullscreen state
