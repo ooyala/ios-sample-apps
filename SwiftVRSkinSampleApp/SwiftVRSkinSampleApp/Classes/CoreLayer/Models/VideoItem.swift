@@ -10,7 +10,7 @@ final class VideoItem {
   // MARK: - Public properties
   
   enum VideoAdType: String {
-    case unknow
+    case unknown
     case noAds     = "NO-ADS"
     case ooyala    = "OOYALA"
     case ima       = "IMA"
@@ -21,7 +21,7 @@ final class VideoItem {
   var embedCode: String
   var title: String
   var pcode: String?
-  var videoAdType: VideoAdType = .unknow
+  var videoAdType: VideoAdType = .unknown
   
   // MARK: - Initialization
   

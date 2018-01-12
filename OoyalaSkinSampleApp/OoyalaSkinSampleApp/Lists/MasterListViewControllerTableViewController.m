@@ -10,6 +10,8 @@
 #import "BasicTestsListViewController.h"
 #import "FreewheelTestsListViewController.h"
 #import "IMATestsListViewController.h"
+#import "SetAssetListViewController.h"
+
 
 @interface MasterListViewControllerTableViewController ()
 
@@ -22,7 +24,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-  self.playlists = [NSArray arrayWithObjects:@"Layouts", @"Basic Playback", @"Freewheel", @"Google IMA", nil];
+  self.playlists = [NSArray arrayWithObjects:@"Layouts", @"Basic Playback", @"Freewheel", @"Google IMA", @"Set asset", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +69,8 @@
       break;
     case 3:
       controller = [IMATestsListViewController new];
+    case 4:
+      controller = [SetAssetListViewController new];
       break;
     default:
       break;

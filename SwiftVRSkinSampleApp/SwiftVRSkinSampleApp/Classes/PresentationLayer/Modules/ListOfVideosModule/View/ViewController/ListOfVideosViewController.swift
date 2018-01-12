@@ -15,6 +15,7 @@ class ListOfVideosViewController: UIViewController {
   var viewModel: ListOfVideosViewModel!
   
   // MARK: - Private properties
+  
   private var QAModeSwitch: UISwitch!
   
   // MARK: - Life cycle
@@ -22,25 +23,54 @@ class ListOfVideosViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    configureNavigationBar()
+  }
+  
+  // MARK: - Private functions
+  
+  private func configureNavigationBar() {
+    
+    // Add QA switch
+    
     QAModeSwitch = UISwitch()
     let QALabel = UILabel(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     
     QALabel.textAlignment = .right
     QALabel.text = "QA"
-
+    
     let QASwitchBarButtonItem = UIBarButtonItem(customView: QAModeSwitch)
     let QALabelBarButtonItem = UIBarButtonItem(customView: QALabel)
     
+    // Add custom video bar button item
+    
+    let customVideoBarButtonItem = UIBarButtonItem(
+      barButtonSystemItem: .add, target: self, action: #selector(customVideoBarButtonAction))
+    
+    // Add elements to navigation bar
+    
     navigationItem.rightBarButtonItems = [QASwitchBarButtonItem, QALabelBarButtonItem]
+    navigationItem.leftBarButtonItems = [customVideoBarButtonItem]
   }
   
-  // MARK: - Private functions
-  
+  private func showCustomVideoItemViewController() {
+    let customVideoViewController = viewModel.configuredCustomVideoViewController(completion: { videoItem in
+      self.openVideoPlayerModule(withVideoItem: videoItem)
+    })
+    
+    self.present(customVideoViewController, animated: true, completion: nil)
+  }
+    
   private func openVideoPlayerModule(withVideoItem: VideoItem) {
     let viewController = viewModel.configuredVideoViewController(
       withVideoItem: withVideoItem, QAModeEnabled: QAModeSwitch.isOn)
     
     navigationController?.pushViewController(viewController, animated: true)
+  }
+  
+  // MARK: - Actions
+  
+  @objc private func customVideoBarButtonAction(_ sender: Any?) {
+    showCustomVideoItemViewController()
   }
   
   
@@ -68,18 +98,18 @@ extension ListOfVideosViewController: UITableViewDataSource {
     if let videoItem = viewModel.getVideoItemAt(indexPath: indexPath) {
       cell?.textLabel?.text = videoItem.title
     } else {
-      cell?.textLabel?.text = "Unknow video"
+      cell?.textLabel?.text = "Unknown video"
     }
     
     return cell!
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    if let videItemSection = viewModel.getVideoItemSectionAt(section: section) {
-      return videItemSection.title
+    if let videoItemSection = viewModel.getVideoItemSectionAt(section: section) {
+      return videoItemSection.title
     }
     
-    return "Unknow section title"
+    return "Unknown section title"
   }
   
   
