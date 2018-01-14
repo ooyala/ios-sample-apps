@@ -74,6 +74,13 @@
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 
+/** @internal
+ * Update the OOVideo high availability parameters using the specified data
+ * @param[in] data the NSDictionary containing the data to use to update this OOVideo
+ * @returns a BOOL value based on if the data matched or not (or parsing failed)
+ */
+- (BOOL)updateHighAvailabilityWithDictionary:(NSDictionary *)data;
+
 /**
  * Get the first OOVideo for this OOVideo, which is this OOVideo
  * @returns self

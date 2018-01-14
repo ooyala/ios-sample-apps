@@ -71,6 +71,13 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 - (id)initWithDictionary:(NSDictionary *)data;
 
 /** @internal
+ * Initialize a OOStream using the specified asset data (subclasses should override this)
+ * @param[in] asset data the NSDictionary containing the data to use to initialize this OOStream
+ * @returns the initialized OOStream
+ */
+- (id)initWithAssetDictionary:(NSDictionary *)data;
+
+/** @internal
  * Update the OOStream using the specified data (subclasses should override and call this)
  * @param[in] data the NSDictionary containing the data to use to update this OOStream
  * @returns OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful

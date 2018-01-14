@@ -609,6 +609,12 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (void)setRootItem:(OOContentItem *)theRootItem;
 
 /**
+ * Reinitializes the player with a new asset JSON.
+ * @param[in] asset the new asset JSON to use
+ */
+- (void)setAsset:(NSDictionary *)asset;
+
+/**
  * Sets the current video in a channel, if the video is present.
  * @param[in] embedCode the embed code of the video to play
  * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
