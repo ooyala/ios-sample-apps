@@ -230,7 +230,7 @@
       {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":240 },
       {"name":"live", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45},
-      {"name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":145 },
+      {"name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":145 },
       {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
       {"name":"share", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":45 },
       {"name":"discovery", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":45 },
@@ -253,7 +253,7 @@
     "mobileContent": [
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
       {"name":"live", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45},
-      {"name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":100 },
+      {"name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
       {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
       {"name":"share", "location":"moreOptions" },
       {"name":"discovery", "location":"moreOptions" },
