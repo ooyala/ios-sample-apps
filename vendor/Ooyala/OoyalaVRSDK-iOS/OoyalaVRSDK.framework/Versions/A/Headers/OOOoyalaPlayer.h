@@ -628,6 +628,12 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
 - (BOOL)changeCurrentItemToVideo:(OOVideo *)video;
 
 /**
+ * Set the unbundled HA video.
+ * @returns a BOOL indicating that the item was successfully changed
+ */
+- (BOOL) changeUnbundledVideo:(OOVideo *)video;
+
+/**
  * Performs authorization on the current item, refreshing teh auth token if necessary
  * @returns an OOAsyncTask that can be cancelled if necessary
  */
