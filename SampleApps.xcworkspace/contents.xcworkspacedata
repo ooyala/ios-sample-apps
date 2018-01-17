@@ -50,6 +50,9 @@
       location = "group:SecurePlayerSampleApp/SecurePlayerSampleApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:AssetDownloadManagerSampleApp/AssetDownloadManagerSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:README.md">
    </FileRef>
 </Workspace>
