@@ -17,8 +17,6 @@
     ]
   },
   "highAvailability": {
-    "enabled": true,
-    "ignoreMaxTimeout": true
-  },
-  "id": "h00lsk"
+    "enabled": false
+  }
 }
