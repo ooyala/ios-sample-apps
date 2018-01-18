@@ -110,21 +110,16 @@
   }
   
   // Set hidden text view with QA mode enabled
-
+  
   [self.qaInfoTextView setHidden:!self.viewModel.QAModeEnabled];
 }
 
-- (void)printLogInTextViewIfNeeded:(NSString *)logMessage {
-  
-  // In QA Mode , adding notifications to the TextView
-  
-  if (self.viewModel.QAModeEnabled) {
+- (void)printLogInTextView:(NSString *)logMessage {
+  dispatch_async(dispatch_get_main_queue(), ^ {
     NSString *string = _qaInfoTextView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, logMessage];
-    dispatch_async(dispatch_get_main_queue(), ^ {
-      [_qaInfoTextView setText:appendString];
-    });
-  }
+    [_qaInfoTextView setText:appendString];
+  });
 }
 
 #pragma mark - Actions
@@ -150,7 +145,12 @@
   
   NSLog(@"%@",message);
   
-  [self printLogInTextViewIfNeeded:message];
+  // In QA Mode , adding notifications to the TextView and file
+  
+  if (self.viewModel.QAModeEnabled) {
+    [self printLogInTextView:message];
+    [self.viewModel debugPrint:message];
+  }
   
   _appDelegate.count++;
 }
@@ -166,8 +166,13 @@
   
   NSLog(@"%@", message);
   
-  [self printLogInTextViewIfNeeded:message];
+  // In QA Mode , adding notifications to the TextView and file
   
+  if (self.viewModel.QAModeEnabled) {
+    [self printLogInTextView:message];
+    [self.viewModel debugPrint:message];
+  }
+
   _appDelegate.count++;
 }
 
@@ -184,8 +189,13 @@
   
   NSLog(@"%@", message);
   
-  [self printLogInTextViewIfNeeded:message];
+  // In QA Mode , adding notifications to the TextView and file
   
+  if (self.viewModel.QAModeEnabled) {
+    [self printLogInTextView:message];
+    [self.viewModel debugPrint:message];
+  }
+
   _appDelegate.count++;
 }
 

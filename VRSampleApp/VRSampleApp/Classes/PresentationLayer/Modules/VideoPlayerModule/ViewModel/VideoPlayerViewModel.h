@@ -21,4 +21,6 @@
                            domain:(NSString *)domain
                  andQAModeEnabled:(BOOL)QAModeEnabled;
 
+- (void)debugPrint:(NSString *)debugString;
+
 @end
