@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B345ADC1B5626ED006CD3B0 /* Discovery.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B345ADB1B5626ED006CD3B0 /* Discovery.xcassets */; };
+		0B4731331C5199A300F1E7FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B47312F1C5199A300F1E7FD /* LaunchScreen.xib */; };
+		0B4731341C5199A300F1E7FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4731311C5199A300F1E7FD /* Main.storyboard */; };
+		0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824241B2B7EB600D718AB /* AppDelegate.m */; };
+		0B7824351B2B7EB600D718AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78242C1B2B7EB600D718AB /* main.m */; };
+		0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824491B2B834F00D718AB /* PlayerSelectionOption.m */; };
+		0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78244B1B2B834F00D718AB /* SampleAppPlayerViewController.m */; };
+		0B78245B1B2B855500D718AB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78245A1B2B855500D718AB /* PlayerViewController.m */; };
+		0B7824671B2FA0BD00D718AB /* OOplayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7824661B2FA0BD00D718AB /* OOplayer.xib */; };
+		0BB8E7A51BE0438300003E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8E7A41BE0438300003E2D /* README.md */; };
+		C1032ED51F8EC7FF00E57BE6 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1032ED41F8EC7FF00E57BE6 /* OoyalaSDK.framework */; };
+		C1032ED71F8EC80E00E57BE6 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1032ED61F8EC80E00E57BE6 /* OoyalaSkinSDK.framework */; };
+		C1032ED91F8ECD5000E57BE6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1032ED81F8ECD5000E57BE6 /* AVKit.framework */; };
+		C1032EDB1F8ECD7800E57BE6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1032EDA1F8ECD7800E57BE6 /* MediaPlayer.framework */; };
+		C121B45D1EDE18120065F5D0 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C121B45C1EDE18120065F5D0 /* libc++abi.dylib */; };
+		C121B4611EDE18540065F5D0 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C121B4601EDE18540065F5D0 /* libxml2.2.dylib */; };
+		C121B4631EDE18790065F5D0 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C121B4621EDE18790065F5D0 /* libz.1.tbd */; };
+		C12263881F5A221C009EDD2E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12263871F5A221C009EDD2E /* TableViewController.m */; };
+		C18E9F741F44D5D40022CEA8 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = DB22A3BD1EAFE15300FA3E3C /* config.json */; };
+		C18E9F791F46143B0022CEA8 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1B96D761EE1E20800C3F89F /* RobotoCondensed-Regular.ttf */; };
+		C18E9F7A1F4614410022CEA8 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1B96D721EE1E20100C3F89F /* Roboto-Regular.ttf */; };
+		C18E9F7B1F4614430022CEA8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1B96D701EE1E1FE00C3F89F /* Roboto-Bold.ttf */; };
+		C18E9F7C1F4614450022CEA8 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1B96D741EE1E20400C3F89F /* RobotoCondensed-Bold.ttf */; };
+		C18E9F7D1F46144B0022CEA8 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1B96D6E1EE1E04700C3F89F /* ooyala-slick-type.ttf */; };
+		C18E9F7E1F46144E0022CEA8 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C18E9F6C1F43B01B0022CEA8 /* alice.ttf */; };
+		C1A70BFC1F7460190022F9D4 /* skin-config in Resources */ = {isa = PBXBuildFile; fileRef = C1A70BFB1F7460190022F9D4 /* skin-config */; };
+		C1A70BFE1F74601E0022F9D4 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = C1A70BFD1F74601E0022F9D4 /* skin.json */; };
+		C1A70C001F7460240022F9D4 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = C1A70BFF1F7460240022F9D4 /* main.jsbundle */; };
+		C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */; };
+		C1D0E9EA1F61B26900B8B9DD /* BrowseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D0E9E91F61B26900B8B9DD /* BrowseButton.m */; };
+		C1E957761EDF77B400B3FD22 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E957751EDF77B400B3FD22 /* libc++.tbd */; };
+		DB22A39F1EA0111F00FA3E3C /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A39E1EA0111F00FA3E3C /* MainView.m */; };
+		DB22A3A71EA803B400FA3E3C /* TableViewEmbedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A3A61EA803B400FA3E3C /* TableViewEmbedCell.m */; };
+		DB22A3A91EA803D500FA3E3C /* EmbedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB22A3A81EA803D500FA3E3C /* EmbedCell.xib */; };
+		DB22A3B41EA9617500FA3E3C /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A3AC1EA9617500FA3E3C /* CJSONDeserializer.m */; };
+		DB22A3B51EA9617500FA3E3C /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A3AE1EA9617500FA3E3C /* CJSONSerializer.m */; };
+		DB22A3C11EAFE1DE00FA3E3C /* DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B345ADB1B5626ED006CD3B0 /* Discovery.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Discovery.xcassets; sourceTree = "<group>"; };
+		0B4731301C5199A300F1E7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		0B4731321C5199A300F1E7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		0B7824231B2B7EB600D718AB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0B7824241B2B7EB600D718AB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0B78242A1B2B7EB600D718AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B78242C1B2B7EB600D718AB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B7824481B2B834F00D718AB /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
+		0B7824491B2B834F00D718AB /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		0B78244A1B2B834F00D718AB /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
+		0B78244B1B2B834F00D718AB /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
+		0B7824591B2B855500D718AB /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		0B78245A1B2B855500D718AB /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		0B7824661B2FA0BD00D718AB /* OOplayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OOplayer.xib; sourceTree = "<group>"; };
+		0BB8E7A41BE0438300003E2D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0BB8E7AB1BE0449000003E2D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0BB8E7AD1BE0449500003E2D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		13B07F961A680F5B00A75B9A /* Discovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97930E261B699595009B3512 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		97930E281B6995CB009B3512 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		97B22E4D1BD05D1900D89589 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C1032ED21F8EC7EE00E57BE6 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInteractiveMediaAds.framework; path = VendorLibraries/GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
+		C1032ED41F8EC7FF00E57BE6 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
+		C1032ED61F8EC80E00E57BE6 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = VendorLibraries/OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		C1032ED81F8ECD5000E57BE6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		C1032EDA1F8ECD7800E57BE6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C121B45C1EDE18120065F5D0 /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "../../../../../usr/lib/libc++abi.dylib"; sourceTree = "<group>"; };
+		C121B45E1EDE183F0065F5D0 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
+		C121B4601EDE18540065F5D0 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
+		C121B4621EDE18790065F5D0 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = "../under-armour_ios/libz.1.tbd"; sourceTree = "<group>"; };
+		C12263871F5A221C009EDD2E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		C122638B1F5A2229009EDD2E /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		C16F7D1F1EDCD703005DB3F2 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
+		C16F7D211EDCDADE005DB3F2 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
+		C16F7D231EDCDB57005DB3F2 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "OoyalaSkinSDK-iOS/Fonts"; sourceTree = "<group>"; };
+		C18E9F6C1F43B01B0022CEA8 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alice.ttf; path = "OoyalaSkinSDK-iOS/Fonts/alice.ttf"; sourceTree = "<group>"; };
+		C1A70BFB1F7460190022F9D4 /* skin-config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "skin-config"; sourceTree = "<group>"; };
+		C1A70BFD1F74601E0022F9D4 /* skin.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = skin.json; path = "skin-config/skin.json"; sourceTree = "<group>"; };
+		C1A70BFF1F7460240022F9D4 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.jsbundle; path = "skin-config/main.jsbundle"; sourceTree = "<group>"; };
+		C1B49E2D1F47B11500C02AA2 /* OoyalaSkinSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = OoyalaSkinSDK; path = OoyalaSkinSDK.framework/OoyalaSkinSDK; sourceTree = "<group>"; };
+		C1B49E2F1F47B12900C02AA2 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		C1B96D6E1EE1E04700C3F89F /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ooyala-slick-type.ttf"; path = "OoyalaSkinSDK-iOS/Fonts/ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		C1B96D701EE1E1FE00C3F89F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "OoyalaSkinSDK-iOS/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		C1B96D721EE1E20100C3F89F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "OoyalaSkinSDK-iOS/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		C1B96D741EE1E20400C3F89F /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		C1B96D761EE1E20800C3F89F /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseView.m; sourceTree = "<group>"; };
+		C1D0E9E11F5DEFF600B8B9DD /* BrowseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseView.h; sourceTree = "<group>"; };
+		C1D0E9E91F61B26900B8B9DD /* BrowseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseButton.m; sourceTree = "<group>"; };
+		C1D0E9EB1F61B27600B8B9DD /* BrowseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseButton.h; sourceTree = "<group>"; };
+		C1E957751EDF77B400B3FD22 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DB0B10481ECB9746005576A6 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		DB22A39D1EA0111F00FA3E3C /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		DB22A39E1EA0111F00FA3E3C /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		DB22A3A51EA803B400FA3E3C /* TableViewEmbedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewEmbedCell.h; sourceTree = "<group>"; };
+		DB22A3A61EA803B400FA3E3C /* TableViewEmbedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewEmbedCell.m; sourceTree = "<group>"; };
+		DB22A3A81EA803D500FA3E3C /* EmbedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmbedCell.xib; sourceTree = "<group>"; };
+		DB22A3AB1EA9617500FA3E3C /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		DB22A3AC1EA9617500FA3E3C /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		DB22A3AD1EA9617500FA3E3C /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		DB22A3AE1EA9617500FA3E3C /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		DB22A3B81EA963FC00FA3E3C /* JSONRepresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		DB22A3BD1EAFE15300FA3E3C /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoSettings.h; path = Views/DemoSettings.h; sourceTree = "<group>"; };
+		DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoSettings.m; path = Views/DemoSettings.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1032EDB1F8ECD7800E57BE6 /* MediaPlayer.framework in Frameworks */,
+				C1032ED91F8ECD5000E57BE6 /* AVKit.framework in Frameworks */,
+				C1032ED71F8EC80E00E57BE6 /* OoyalaSkinSDK.framework in Frameworks */,
+				C1032ED51F8EC7FF00E57BE6 /* OoyalaSDK.framework in Frameworks */,
+				C1E957761EDF77B400B3FD22 /* libc++.tbd in Frameworks */,
+				C121B4631EDE18790065F5D0 /* libz.1.tbd in Frameworks */,
+				C121B4611EDE18540065F5D0 /* libxml2.2.dylib in Frameworks */,
+				C121B45D1EDE18120065F5D0 /* libc++abi.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B47312D1C51997500F1E7FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B78242A1B2B7EB600D718AB /* Info.plist */,
+				0B78242C1B2B7EB600D718AB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B47312E1C5199A300F1E7FD /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0B47312F1C5199A300F1E7FD /* LaunchScreen.xib */,
+				0B4731311C5199A300F1E7FD /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		0B7824221B2B7EB600D718AB /* DiscoveryApp */ = {
+			isa = PBXGroup;
+			children = (
+				DB22A3AA1EA9616900FA3E3C /* Json */,
+				0B7824231B2B7EB600D718AB /* AppDelegate.h */,
+				0B7824241B2B7EB600D718AB /* AppDelegate.m */,
+				0B47312E1C5199A300F1E7FD /* Base.lproj */,
+				0B7824581B2B855500D718AB /* Players */,
+				0B47312D1C51997500F1E7FD /* Supporting Files */,
+				0B7824471B2B834F00D718AB /* Utils */,
+				0B7824551B2B841800D718AB /* Views */,
+				DB22A39D1EA0111F00FA3E3C /* MainView.h */,
+				DB22A39E1EA0111F00FA3E3C /* MainView.m */,
+				DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */,
+				DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */,
+				C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */,
+				C1D0E9E11F5DEFF600B8B9DD /* BrowseView.h */,
+			);
+			name = DiscoveryApp;
+			path = OoyalaSkinSampleApp;
+			sourceTree = "<group>";
+		};
+		0B7824471B2B834F00D718AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB22A3A51EA803B400FA3E3C /* TableViewEmbedCell.h */,
+				DB22A3A61EA803B400FA3E3C /* TableViewEmbedCell.m */,
+				0B7824481B2B834F00D718AB /* PlayerSelectionOption.h */,
+				0B7824491B2B834F00D718AB /* PlayerSelectionOption.m */,
+				0B78244A1B2B834F00D718AB /* SampleAppPlayerViewController.h */,
+				0B78244B1B2B834F00D718AB /* SampleAppPlayerViewController.m */,
+				C12263871F5A221C009EDD2E /* TableViewController.m */,
+				C122638B1F5A2229009EDD2E /* TableViewController.h */,
+				C1D0E9E91F61B26900B8B9DD /* BrowseButton.m */,
+				C1D0E9EB1F61B27600B8B9DD /* BrowseButton.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0B7824551B2B841800D718AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB22A3A81EA803D500FA3E3C /* EmbedCell.xib */,
+				0B7824661B2FA0BD00D718AB /* OOplayer.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B7824581B2B855500D718AB /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				0B7824591B2B855500D718AB /* PlayerViewController.h */,
+				0B78245A1B2B855500D718AB /* PlayerViewController.m */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		0BB8E7A81BE043FB00003E2D /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VendorLibraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				C1A70BFF1F7460240022F9D4 /* main.jsbundle */,
+				C1A70BFD1F74601E0022F9D4 /* skin.json */,
+				C1A70BFB1F7460190022F9D4 /* skin-config */,
+				C1B96D761EE1E20800C3F89F /* RobotoCondensed-Regular.ttf */,
+				C1B96D741EE1E20400C3F89F /* RobotoCondensed-Bold.ttf */,
+				C1B96D721EE1E20100C3F89F /* Roboto-Regular.ttf */,
+				C1B96D701EE1E1FE00C3F89F /* Roboto-Bold.ttf */,
+				C1B96D6E1EE1E04700C3F89F /* ooyala-slick-type.ttf */,
+				C18E9F6C1F43B01B0022CEA8 /* alice.ttf */,
+				DB22A3BD1EAFE15300FA3E3C /* config.json */,
+				DB22A3BC1EAFCD4A00FA3E3C /* assets */,
+				0B345ADB1B5626ED006CD3B0 /* Discovery.xcassets */,
+				0B7824221B2B7EB600D718AB /* DiscoveryApp */,
+				0BB8E7A81BE043FB00003E2D /* VendorLibraries */,
+				972ED7581AE1827B005043DC /* Frameworks */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				0BB8E7A41BE0438300003E2D /* README.md */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Discovery.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		972ED7581AE1827B005043DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1032EDA1F8ECD7800E57BE6 /* MediaPlayer.framework */,
+				C1032ED81F8ECD5000E57BE6 /* AVKit.framework */,
+				C1032ED61F8EC80E00E57BE6 /* OoyalaSkinSDK.framework */,
+				C1032ED41F8EC7FF00E57BE6 /* OoyalaSDK.framework */,
+				C1032ED21F8EC7EE00E57BE6 /* GoogleInteractiveMediaAds.framework */,
+				C1B49E2F1F47B12900C02AA2 /* OoyalaSkinSDK.framework */,
+				C1B49E2D1F47B11500C02AA2 /* OoyalaSkinSDK */,
+				C1E957751EDF77B400B3FD22 /* libc++.tbd */,
+				C121B4621EDE18790065F5D0 /* libz.1.tbd */,
+				C121B4601EDE18540065F5D0 /* libxml2.2.dylib */,
+				C121B45E1EDE183F0065F5D0 /* libc++.1.dylib */,
+				C121B45C1EDE18120065F5D0 /* libc++abi.dylib */,
+				C16F7D211EDCDADE005DB3F2 /* OoyalaSkinSDK.framework */,
+				C16F7D1F1EDCD703005DB3F2 /* GoogleInteractiveMediaAds.framework */,
+				DB0B10481ECB9746005576A6 /* OoyalaSDK.framework */,
+				0BB8E7AD1BE0449500003E2D /* MessageUI.framework */,
+				0BB8E7AB1BE0449000003E2D /* Social.framework */,
+				97B22E4D1BD05D1900D89589 /* AdSupport.framework */,
+				97930E281B6995CB009B3512 /* WebKit.framework */,
+				97930E261B699595009B3512 /* EventKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB22A3AA1EA9616900FA3E3C /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				DB22A3AB1EA9617500FA3E3C /* CJSONDeserializer.h */,
+				DB22A3AC1EA9617500FA3E3C /* CJSONDeserializer.m */,
+				DB22A3AD1EA9617500FA3E3C /* CJSONSerializer.h */,
+				DB22A3B81EA963FC00FA3E3C /* JSONRepresentation.h */,
+				DB22A3AE1EA9617500FA3E3C /* CJSONSerializer.m */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
+		DB22A3BC1EAFCD4A00FA3E3C /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				C16F7D231EDCDB57005DB3F2 /* Fonts */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B07F861A680F5B00A75B9A /* Discovery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Discovery" */;
+			buildPhases = (
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Discovery;
+			productName = "Hello World";
+			productReference = 13B07F961A680F5B00A75B9A /* Discovery.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = ZW9EE2U92J;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Discovery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* Discovery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18E9F7E1F46144E0022CEA8 /* alice.ttf in Resources */,
+				C18E9F7D1F46144B0022CEA8 /* ooyala-slick-type.ttf in Resources */,
+				C18E9F7C1F4614450022CEA8 /* RobotoCondensed-Bold.ttf in Resources */,
+				C18E9F7B1F4614430022CEA8 /* Roboto-Bold.ttf in Resources */,
+				C18E9F7A1F4614410022CEA8 /* Roboto-Regular.ttf in Resources */,
+				C18E9F791F46143B0022CEA8 /* RobotoCondensed-Regular.ttf in Resources */,
+				C1A70BFC1F7460190022F9D4 /* skin-config in Resources */,
+				C18E9F741F44D5D40022CEA8 /* config.json in Resources */,
+				0B4731341C5199A300F1E7FD /* Main.storyboard in Resources */,
+				C1A70BFE1F74601E0022F9D4 /* skin.json in Resources */,
+				C1A70C001F7460240022F9D4 /* main.jsbundle in Resources */,
+				0B4731331C5199A300F1E7FD /* LaunchScreen.xib in Resources */,
+				DB22A3A91EA803D500FA3E3C /* EmbedCell.xib in Resources */,
+				0B345ADC1B5626ED006CD3B0 /* Discovery.xcassets in Resources */,
+				0B7824671B2FA0BD00D718AB /* OOplayer.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B7824351B2B7EB600D718AB /* main.m in Sources */,
+				C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */,
+				DB22A3B51EA9617500FA3E3C /* CJSONSerializer.m in Sources */,
+				C1D0E9EA1F61B26900B8B9DD /* BrowseButton.m in Sources */,
+				DB22A3A71EA803B400FA3E3C /* TableViewEmbedCell.m in Sources */,
+				0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */,
+				DB22A3C11EAFE1DE00FA3E3C /* DemoSettings.m in Sources */,
+				DB22A39F1EA0111F00FA3E3C /* MainView.m in Sources */,
+				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
+				C12263881F5A221C009EDD2E /* TableViewController.m in Sources */,
+				DB22A3B41EA9617500FA3E3C /* CJSONDeserializer.m in Sources */,
+				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
+				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
+				0B78245B1B2B855500D718AB /* PlayerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0B47312F1C5199A300F1E7FD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B4731301C5199A300F1E7FD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		0B4731311C5199A300F1E7FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B4731321C5199A300F1E7FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZW9EE2U92J;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../vendor/**",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OoyalaSkinSDK-iOS",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PROJECT_DIR}/../react/node_modules/react-native/React",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OoyalaSkinSDK.framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.nuoala.Discovery;
+				PRODUCT_NAME = Discovery;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZW9EE2U92J;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../vendor/**",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OoyalaSkinSDK-iOS",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PROJECT_DIR}/../react/node_modules/react-native/React",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OoyalaSkinSDK.framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.nuoala.Discovery;
+				PRODUCT_NAME = Discovery;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Discovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Discovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
