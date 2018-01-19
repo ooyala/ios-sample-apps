@@ -26,6 +26,7 @@
   NSString *hostedAtURL;    
   OOPlayerAPIClient *api;
   BOOL authorized;
+  BOOL haEnabled;
   OOAuthCode authCode;
 }
 
@@ -44,6 +45,8 @@
 @property (readonly, nonatomic) OOFCCTVRating *tvRating;
 @property(readonly, nonatomic, strong) NSString *assetPcode;  /**< The OOContentItem's Promo Image URL */
 @property(readonly, nonatomic) NSDictionary *movieAttributes;
+@property (readonly, nonatomic) BOOL haEnabled;
+
 
 /**
  * Initialize a OOContentItem
