@@ -36,7 +36,7 @@ NSString *kLogFileName = @"ooyalaDebugLog.log";
     self.QAModeEnabled = QAModeEnabled;
   }
   
-  [self removeOldNewLogFileWithName:kLogFileName];
+  [self removeLogFileWithName:kLogFileName];
   
   return self;
 }
@@ -73,7 +73,7 @@ NSString *kLogFileName = @"ooyalaDebugLog.log";
   return [documentsDirectory stringByAppendingPathComponent:fileName];
 }
 
-- (void)removeOldNewLogFileWithName:(NSString *)fileName {
+- (void)removeLogFileWithName:(NSString *)fileName {
   NSString *logFilePath = [self pathToLogFileWithName:fileName];
   NSFileManager *fileManager = NSFileManager.defaultManager;
   

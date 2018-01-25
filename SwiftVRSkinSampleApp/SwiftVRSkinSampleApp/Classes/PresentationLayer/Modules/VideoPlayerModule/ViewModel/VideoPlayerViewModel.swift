@@ -28,7 +28,7 @@ class VideoPlayerViewModel {
     self.domain        = domain
     self.QAModeEnabled = QAModeEnabled
     
-    removeOldNewLogFile(with: Constants.logFileName)
+    removeLogFile(with: Constants.logFileName)
   }
   
   // MARK: - Public functions
@@ -63,13 +63,11 @@ class VideoPlayerViewModel {
     return (documentsDirectory as NSString).appendingPathComponent(name)
   }
   
-  private func removeOldNewLogFile(with name: String) {
+  private func removeLogFile(with name: String) {
     let logFilePath = pathToLogFile(with: name)
 
     if FileManager.default.fileExists(atPath: logFilePath) {
       try? FileManager.default.removeItem(atPath: logFilePath)
     }
   }
-  
-  
 }
