@@ -9,19 +9,23 @@ final class VideoItem {
   
   // MARK: - Public properties
   
-  enum VideoAdType: String {
+  enum VideoType: String {
     case unknown
-    case noAds     = "NO-ADS"
-    case ooyala    = "OOYALA"
-    case ima       = "IMA"
-    case vast      = "VAST"
-    case freewheel = "FREEWHEEL"
+    case noAds        = "NO-ADS"
+    case ooyala       = "OOYALA"
+    case ima          = "IMA"
+    case vast         = "VAST"
+    case freewheel    = "FREEWHEEL"
+    case geoblocking  = "GEOBLOCKING"
   }
   
   var embedCode: String
   var title: String
   var pcode: String?
-  var videoAdType: VideoAdType = .unknown
+  var accountId: String?
+  var secretKey: String?
+  var apiKey: String?
+  var videoAdType: VideoType = .unknown
   
   // MARK: - Initialization
   
@@ -45,12 +49,15 @@ extension VideoItem: Mappable {
     let newVideoItem = VideoItem(embedCode: embedCode, title: title)
     
     if let parsedAdTypeString = json["ad-type"],
-      let parsedAdType = VideoAdType(rawValue: parsedAdTypeString) {
+      let parsedAdType = VideoType(rawValue: parsedAdTypeString) {
       
       newVideoItem.videoAdType = parsedAdType
     }
     
     newVideoItem.pcode = json["provider-code"]
+    newVideoItem.apiKey = json["api-key"]
+    newVideoItem.secretKey = json["secret-key"]
+    newVideoItem.accountId = json["account-id"]
     
     return newVideoItem as? T
   }

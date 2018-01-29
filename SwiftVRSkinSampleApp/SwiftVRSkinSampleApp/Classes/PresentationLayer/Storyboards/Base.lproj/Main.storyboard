@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZb-FF-nX6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="134"/>
+            <point key="canvasLocation" x="1135" y="134"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="cVl-br-cKe">
@@ -291,6 +291,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7b-VY-RHa" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1767" y="134"/>
+        </scene>
+        <!--Geoblocking Video Player View Controller-->
+        <scene sceneID="yyw-4K-UaI">
+            <objects>
+                <viewController storyboardIdentifier="GeoblockingVideoPlayerViewController" id="120-Uh-rEX" customClass="GeoblockingVideoPlayerViewController" customModule="SwiftVRSkinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1vi-gv-V7N"/>
+                        <viewControllerLayoutGuide type="bottom" id="eSX-1G-Vc2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cLq-2c-z5e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qv8-JF-Gq7">
+                                <rect key="frame" x="0.0" y="444.5" width="375" height="222.5"/>
+                                <color key="backgroundColor" red="0.3441965045" green="0.36631719559999998" blue="0.32943376990000001" alpha="0.1929742518" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="qaInfoTextView"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ar1-tc-U5d">
+                                <rect key="frame" x="42" y="106" width="290" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qv8-JF-Gq7" firstAttribute="height" secondItem="cLq-2c-z5e" secondAttribute="height" multiplier="1:3" id="3LF-aY-Jat"/>
+                            <constraint firstItem="dsB-v9-5Fa" firstAttribute="bottom" secondItem="Qv8-JF-Gq7" secondAttribute="bottom" id="BS1-J2-eV0"/>
+                            <constraint firstItem="dsB-v9-5Fa" firstAttribute="trailing" secondItem="Qv8-JF-Gq7" secondAttribute="trailing" id="saq-AE-zcF"/>
+                            <constraint firstItem="Qv8-JF-Gq7" firstAttribute="leading" secondItem="dsB-v9-5Fa" secondAttribute="leading" id="yG8-tQ-9Hf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dsB-v9-5Fa"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="qaInfoTextView" destination="Qv8-JF-Gq7" id="thm-b3-BLc"/>
+                        <outlet property="skinContainerView" destination="ar1-tc-U5d" id="Qq6-36-dyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdQ-j3-zGs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2425" y="134"/>
         </scene>
     </scenes>
 </document>

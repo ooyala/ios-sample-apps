@@ -18,6 +18,8 @@ class ListOfVideosFactory {
     switch withVideoItem.videoAdType {
     case .ima:
       configuredViewController = createIMAViewPlayerModule(withVideoItem: withVideoItem, pcode: pcode, domain: domain, QAModeEnabled: QAModeEnabled)
+    case .geoblocking:
+      configuredViewController = createGeoblockingPlayerModule(withVideoItem: withVideoItem, pcode: pcode, domain: domain, QAModeEnabled: QAModeEnabled)
     default:
       configuredViewController = createDefaultVideoPlayerModule(withVideoItem: withVideoItem, pcode: pcode, domain: domain, QAModeEnabled: QAModeEnabled)
     }
@@ -53,6 +55,14 @@ class ListOfVideosFactory {
     let videoPlayerViewModel = VideoPlayerViewModel(videoItem: withVideoItem, pcode: pcode, domain: domain, QAModeEnabled: QAModeEnabled)
     let videoPlayerViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IMAVideoPlayerViewController") as! IMAVideoPlayerViewController
     
+    videoPlayerViewController.viewModel = videoPlayerViewModel
+    
+    return videoPlayerViewController
+  }
+  
+  private func createGeoblockingPlayerModule(withVideoItem: VideoItem, pcode: String, domain: String, QAModeEnabled: Bool) -> UIViewController {
+    let videoPlayerViewModel = VideoPlayerViewModel(videoItem: withVideoItem, pcode: pcode, domain: domain, QAModeEnabled: QAModeEnabled)
+    let videoPlayerViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeoblockingVideoPlayerViewController") as! GeoblockingVideoPlayerViewController
     videoPlayerViewController.viewModel = videoPlayerViewModel
     
     return videoPlayerViewController

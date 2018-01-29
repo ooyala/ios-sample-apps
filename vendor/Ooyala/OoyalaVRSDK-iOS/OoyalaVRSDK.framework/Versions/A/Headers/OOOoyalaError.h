@@ -41,7 +41,8 @@ typedef enum {
   OOOoyalaErrorCodeAdvertistingIdFailure = 25, /**< Failed to obtain advertising Id */
   OOOoyalaErrorCodeDiscoveryGetFailure = 26, /**< Failed to get discovery results */
   OOOoyalaErrorCodeDiscoveryPostFailure = 27, /**< Failed to post discovery pins */
-  OOOoyalaErrorCodeUnknownError = 28, /**< Unknown error */
+  OOOoyalaErrorCodeUnknownError = 29, /**< Unknown error */
+  OOOoyalaErrorCodeGeoBlockingError = 31, /**< Geo blocking error */
   
 } OOOoyalaErrorCode;
 
