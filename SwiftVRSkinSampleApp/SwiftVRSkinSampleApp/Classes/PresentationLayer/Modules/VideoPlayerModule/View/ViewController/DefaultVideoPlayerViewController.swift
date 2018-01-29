@@ -111,17 +111,12 @@ class DefaultVideoPlayerViewController: UIViewController {
     qaInfoTextView.isHidden = !viewModel.QAModeEnabled
   }
   
-  private func printLogInTextViewIfNeeded(logMessage: String) {
+  private func printLogInTextView(logMessage: String) {
+    DispatchQueue.main.async {
+      let string = self.qaInfoTextView.text
+      let appendString = "\(string ?? "") :::::::::: \(logMessage)"
 
-    // In QA Mode , adding notifications to the TextView
-
-    if viewModel.QAModeEnabled {
-      DispatchQueue.main.async {
-        let string = self.qaInfoTextView.text
-        let appendString = "\(string ?? "") :::::::::: \(logMessage)"
-
-        self.qaInfoTextView.text = appendString
-      }
+      self.qaInfoTextView.text = appendString
     }
   }
   
@@ -153,7 +148,12 @@ class DefaultVideoPlayerViewController: UIViewController {
     
     NSLog(message)
     
-    printLogInTextViewIfNeeded(logMessage: message)
+    // In QA Mode , adding notifications to the TextView and file
+    
+    if viewModel.QAModeEnabled {
+      printLogInTextView(logMessage: message)
+      viewModel.debugPrint(debugString: message)
+    }
     
     appDelegate?.count += 1
   }
@@ -166,8 +166,13 @@ class DefaultVideoPlayerViewController: UIViewController {
     
     NSLog(message)
     
-    printLogInTextViewIfNeeded(logMessage: message)
+    // In QA Mode , adding notifications to the TextView and file
     
+    if viewModel.QAModeEnabled {
+      printLogInTextView(logMessage: message)
+      viewModel.debugPrint(debugString: message)
+    }
+
     appDelegate?.count += 1
   }
   
@@ -184,8 +189,13 @@ class DefaultVideoPlayerViewController: UIViewController {
 
     NSLog(message)
     
-    printLogInTextViewIfNeeded(logMessage: message)
+    // In QA Mode , adding notifications to the TextView and file
     
+    if viewModel.QAModeEnabled {
+      printLogInTextView(logMessage: message)
+      viewModel.debugPrint(debugString: message)
+    }
+
     appDelegate?.count += 1
   }
   
