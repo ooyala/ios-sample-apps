@@ -69,6 +69,7 @@
       break;
     case 3:
       controller = [IMATestsListViewController new];
+      break;
     case 4:
       controller = [SetAssetListViewController new];
       break;
