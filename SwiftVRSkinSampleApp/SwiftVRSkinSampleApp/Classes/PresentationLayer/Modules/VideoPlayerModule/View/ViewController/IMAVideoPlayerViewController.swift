@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class IMAVideoPlayerViewController: DefaultVideoPlayerViewController {
   
   // MARK: - Private properties

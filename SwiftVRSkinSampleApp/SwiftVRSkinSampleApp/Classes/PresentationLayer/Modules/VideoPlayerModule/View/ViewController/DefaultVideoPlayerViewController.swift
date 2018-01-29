@@ -14,6 +14,7 @@ class DefaultVideoPlayerViewController: UIViewController {
   var viewModel: VideoPlayerViewModel!
   var skinController: OOSkinViewController!
   var appDelegate: AppDelegate?
+  var player: OOOoyalaPlayer?
 
   // MARK: - IBOutlets
   
@@ -33,6 +34,12 @@ class DefaultVideoPlayerViewController: UIViewController {
     
     configureObjects()
     configureUI()
+  }
+  
+  // MARK: - public functions
+  
+  public func definePlayer(pcode: String, domain: OOPlayerDomain?, options: OOOptions?) -> OOOoyalaPlayer {
+    return OOOoyalaVRPlayer(pcode: pcode, domain: domain, options: options)
   }
   
   // MARK: - Private functions
@@ -55,14 +62,14 @@ class DefaultVideoPlayerViewController: UIViewController {
     options?.bypassPCodeMatching = false
     
     let domain = OOPlayerDomain(string: viewModel.domain)
-    let ooyalaVRPlayer = OOOoyalaVRPlayer(pcode: viewModel.pcode, domain: domain, options: options)
+    player = self.definePlayer(pcode: viewModel.pcode, domain: domain, options: options)
     
     // Skin
     
     let discoveryOptions = OODiscoveryOptions(type: .popular, limit: 10, timeout: 60)
     let skinOptions = OOSkinOptions(discoveryOptions: discoveryOptions, jsCodeLocation: jsCodeLocation, configFileName: "skin", overrideConfigs: overrideConfigs)
     
-    skinController = OOSkinViewController(player: ooyalaVRPlayer, skinOptions: skinOptions, parent: skinContainerView, launchOptions: nil)
+    skinController = OOSkinViewController(player: player, skinOptions: skinOptions, parent: skinContainerView, launchOptions: nil)
     
     // Subscribe for notifications with QA mode enabled
     
@@ -83,7 +90,7 @@ class DefaultVideoPlayerViewController: UIViewController {
     
     // Set video embed code
     
-    ooyalaVRPlayer?.setEmbedCode(viewModel.videoItem.embedCode)
+    player?.setEmbedCode(viewModel.videoItem.embedCode)
   }
   
   private func configureUI() {

@@ -198,5 +198,19 @@
         "ad-type" : "NO-ADS"
       }
     ]
+  },
+  {
+    "title" : "Geoblocking videos",
+    "videos" : [
+      {
+        "title":"Midstream geocheck",
+        "embed-code" : "1xbjk1ZTE6I_7_bB93RURHX9VZHrPSJI",
+        "provider-code" : "BzY2syOq6kIK6PTXN7mmrGVSJEFj",
+        "api-key" : "BzY2syOq6kIK6PTXN7mmrGVSJEFj.APkQ3",
+        "secret-key" : "nYDE1TkyZOhyQ2HZBRjCZ1E0tCNFvgk8b2UmvHd1",
+        "account-id" : "110698",
+        "ad-type" : "GEOBLOCKING"
+      }
+    ]
   }
 ]

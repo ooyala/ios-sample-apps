@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52239330201F5AD4004003DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75AEE59A1FB3380300C3E1F2 /* Info.plist */; };
+		52ABE500201F6F47008158C4 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ABE4FF201F6F47008158C4 /* OoyalaIMASDK.framework */; };
+		52ABE502201F6F51008158C4 /* OoyalaVRSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ABE501201F6F51008158C4 /* OoyalaVRSDK.framework */; };
+		52D865FA201CDB7D00020D3E /* GeoblockingVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D865F9201CDB7D00020D3E /* GeoblockingVideoPlayerViewController.swift */; };
 		75653C571FB5E9C1001DF291 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75653C561FB5E9B9001DF291 /* libc++.tbd */; };
 		75653C591FB5E9DA001DF291 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75653C581FB5E9CE001DF291 /* CoreMotion.framework */; };
 		75653C5B1FB5EF17001DF291 /* ListOfVideosFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75653C5A1FB5EF17001DF291 /* ListOfVideosFactory.swift */; };
@@ -33,11 +37,9 @@
 		75653CD31FB5FB31001DF291 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CC11FB5FB31001DF291 /* RobotoCondensed-Bold.ttf */; };
 		75653CD41FB5FB31001DF291 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CC21FB5FB31001DF291 /* RobotoCondensed-Regular.ttf */; };
 		75653CD61FB5FE9D001DF291 /* IMAVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75653CD51FB5FE9D001DF291 /* IMAVideoPlayerViewController.swift */; };
-		75653CD81FB600DE001DF291 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75653CD71FB600DE001DF291 /* OoyalaIMASDK.framework */; };
 		75653CDE1FB602F9001DF291 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75653CD91FB60158001DF291 /* GoogleInteractiveMediaAds.framework */; };
 		75653CDF1FB602F9001DF291 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75653CD91FB60158001DF291 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75AEE5961FB3362700C3E1F2 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AEE5941FB3362700C3E1F2 /* OoyalaSkinSDK.framework */; };
-		75AEE5971FB3362700C3E1F2 /* OoyalaVRSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AEE5951FB3362700C3E1F2 /* OoyalaVRSDK.framework */; };
 		75AEE5AA1FB3380300C3E1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEE5991FB3380300C3E1F2 /* AppDelegate.swift */; };
 		75AEE5AD1FB3380300C3E1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AEE5A31FB3380300C3E1F2 /* LaunchScreen.storyboard */; };
 		75AEE5AE1FB3380300C3E1F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AEE5A51FB3380300C3E1F2 /* Main.storyboard */; };
@@ -72,6 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		52ABE4FF201F6F47008158C4 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaIMASDK.framework; path = "../vendor/Ooyala/OoyalaIMASDK-iOS/OoyalaIMASDK.framework"; sourceTree = "<group>"; };
+		52ABE501201F6F51008158C4 /* OoyalaVRSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaVRSDK.framework; path = "../vendor/Ooyala/OoyalaVRSDK-iOS/OoyalaVRSDK.framework"; sourceTree = "<group>"; };
+		52D865F9201CDB7D00020D3E /* GeoblockingVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoblockingVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		75653C521FB5BCEF001DF291 /* VRSkinSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VRSkinSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		75653C561FB5E9B9001DF291 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		75653C581FB5E9CE001DF291 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -130,10 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				75653CDE1FB602F9001DF291 /* GoogleInteractiveMediaAds.framework in Frameworks */,
-				75AEE5971FB3362700C3E1F2 /* OoyalaVRSDK.framework in Frameworks */,
 				75AEE5961FB3362700C3E1F2 /* OoyalaSkinSDK.framework in Frameworks */,
-				75653CD81FB600DE001DF291 /* OoyalaIMASDK.framework in Frameworks */,
 				75653C591FB5E9DA001DF291 /* CoreMotion.framework in Frameworks */,
+				52ABE502201F6F51008158C4 /* OoyalaVRSDK.framework in Frameworks */,
+				52ABE500201F6F47008158C4 /* OoyalaIMASDK.framework in Frameworks */,
 				75653C571FB5E9C1001DF291 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +157,8 @@
 		75653C551FB5E9B9001DF291 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52ABE501201F6F51008158C4 /* OoyalaVRSDK.framework */,
+				52ABE4FF201F6F47008158C4 /* OoyalaIMASDK.framework */,
 				75653C581FB5E9CE001DF291 /* CoreMotion.framework */,
 				75653C561FB5E9B9001DF291 /* libc++.tbd */,
 			);
@@ -431,6 +438,7 @@
 			children = (
 				75AEE5CD1FB3604400C3E1F2 /* DefaultVideoPlayerViewController.swift */,
 				75653CD51FB5FE9D001DF291 /* IMAVideoPlayerViewController.swift */,
+				52D865F9201CDB7D00020D3E /* GeoblockingVideoPlayerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -546,6 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52239330201F5AD4004003DB /* Info.plist in Resources */,
 				75653CC91FB5FB31001DF291 /* package.json in Resources */,
 				75AEE5AE1FB3380300C3E1F2 /* Main.storyboard in Resources */,
 				75653CD21FB5FB31001DF291 /* Roboto-Regular.ttf in Resources */,
@@ -594,6 +603,7 @@
 				75653CD61FB5FE9D001DF291 /* IMAVideoPlayerViewController.swift in Sources */,
 				75AEE5B31FB33A1E00C3E1F2 /* TestDataServiceProtocol.swift in Sources */,
 				75AEE5C41FB348DA00C3E1F2 /* ListOfVideosViewModel.swift in Sources */,
+				52D865FA201CDB7D00020D3E /* GeoblockingVideoPlayerViewController.swift in Sources */,
 				75AEE5AA1FB3380300C3E1F2 /* AppDelegate.swift in Sources */,
 				75AEE5B51FB33A2700C3E1F2 /* TestDataService.swift in Sources */,
 				ACBB12A81FEC5AB600A0A7F1 /* CustomVideoViewModel.swift in Sources */,
