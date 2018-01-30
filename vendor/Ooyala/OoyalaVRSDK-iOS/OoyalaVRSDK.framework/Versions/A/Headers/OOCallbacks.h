@@ -65,4 +65,10 @@ typedef void (^OOAuthorizeCallback)(OOOoyalaError *error);
  */
 typedef void (^OOHeartbeatCallback)(OOOoyalaError *error);
 
+/**
+ * The calback used for geoblocking check
+ * @param[in] error the OOOoyalaError if one occurred
+ */
+typedef void (^OOGeoblockingCallback)(NSData *data, NSHTTPURLResponse *response, NSError *error);
+
 #endif
