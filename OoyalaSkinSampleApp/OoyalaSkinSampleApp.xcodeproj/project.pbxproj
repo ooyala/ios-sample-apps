@@ -33,6 +33,9 @@
 		0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */; };
 		0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */; };
 		0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */; };
+		52B59C3C201FD88C004F165F /* GeoblockingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */; };
+		52B59C3F201FD914004F165F /* GeoblockingSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3E201FD914004F165F /* GeoblockingSkinViewController.m */; };
+		52B59C43201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C42201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m */; };
 		752F36AC20063328007BF377 /* SetAssetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F36AB20063328007BF377 /* SetAssetListViewController.m */; };
 		752F36AF2006340D007BF377 /* SetAssetPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F36AE2006340D007BF377 /* SetAssetPlayerViewController.m */; };
 		752F36B120063469007BF377 /* SetAssetSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */; };
@@ -121,6 +124,12 @@
 		0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallSkinPlayerView.xib; sourceTree = "<group>"; };
 		0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidePlayerView.xib; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* OoyalaSkinSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OoyalaSkinSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B59C3A201FD88C004F165F /* GeoblockingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingTableViewController.h; sourceTree = "<group>"; };
+		52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoblockingTableViewController.m; sourceTree = "<group>"; };
+		52B59C3D201FD914004F165F /* GeoblockingSkinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingSkinViewController.h; sourceTree = "<group>"; };
+		52B59C3E201FD914004F165F /* GeoblockingSkinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoblockingSkinViewController.m; sourceTree = "<group>"; };
+		52B59C41201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingPlayerSelectionOptions.h; sourceTree = "<group>"; };
+		52B59C42201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoblockingPlayerSelectionOptions.m; sourceTree = "<group>"; };
 		752F36AA20063328007BF377 /* SetAssetListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetAssetListViewController.h; sourceTree = "<group>"; };
 		752F36AB20063328007BF377 /* SetAssetListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetAssetListViewController.m; sourceTree = "<group>"; };
 		752F36AD2006340D007BF377 /* SetAssetPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetAssetPlayerViewController.h; sourceTree = "<group>"; };
@@ -253,6 +262,8 @@
 				97930C1B1B670E77009B3512 /* BasicTestsListViewController.m */,
 				752F36AA20063328007BF377 /* SetAssetListViewController.h */,
 				752F36AB20063328007BF377 /* SetAssetListViewController.m */,
+				52B59C3A201FD88C004F165F /* GeoblockingTableViewController.h */,
+				52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -266,6 +277,8 @@
 				0B7824491B2B834F00D718AB /* PlayerSelectionOption.m */,
 				0B78244A1B2B834F00D718AB /* SampleAppPlayerViewController.h */,
 				0B78244B1B2B834F00D718AB /* SampleAppPlayerViewController.m */,
+				52B59C41201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.h */,
+				52B59C42201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -295,6 +308,8 @@
 				97930C2A1B6952D0009B3512 /* IMAPlayerViewController.m */,
 				752F36AD2006340D007BF377 /* SetAssetPlayerViewController.h */,
 				752F36AE2006340D007BF377 /* SetAssetPlayerViewController.m */,
+				52B59C3D201FD914004F165F /* GeoblockingSkinViewController.h */,
+				52B59C3E201FD914004F165F /* GeoblockingSkinViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -492,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				752F36AF2006340D007BF377 /* SetAssetPlayerViewController.m in Sources */,
+				52B59C3F201FD914004F165F /* GeoblockingSkinViewController.m in Sources */,
 				97930C161B670D70009B3512 /* IMATestsListViewController.m in Sources */,
 				0B7824461B2B82C000D718AB /* OoyalaSkinListViewController.m in Sources */,
 				97930C131B670D49009B3512 /* LayoutListViewController.m in Sources */,
@@ -503,9 +519,11 @@
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
 				97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */,
+				52B59C3C201FD88C004F165F /* GeoblockingTableViewController.m in Sources */,
 				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
 				CA63277B1C442130008F3667 /* README.md in Sources */,
 				97930C191B670D9F009B3512 /* FreewheelTestsListViewController.m in Sources */,
+				52B59C43201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m in Sources */,
 				752F36AC20063328007BF377 /* SetAssetListViewController.m in Sources */,
 				0B78245B1B2B855500D718AB /* DefaultSkinPlayerViewController.m in Sources */,
 			);

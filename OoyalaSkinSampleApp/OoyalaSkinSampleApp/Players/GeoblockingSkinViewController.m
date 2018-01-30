@@ -1,44 +1,51 @@
 //
-//  IMAPlayerViewController.m
+//  GeoblockingSkinViewController.m
 //  OoyalaSkinSampleApp
 //
-//  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-#import "IMAPlayerViewController.h"
+#import "GeoblockingSkinViewController.h"
+#import "GeoblockingPlayerSelectionOptions.h"
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
-#import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
 
 
-@interface IMAPlayerViewController ()
+@interface GeoblockingSkinViewController ()
 
 #pragma mark - Private properties
 
-@property (nonatomic, retain) OOIMAManager *adsManager;
 @property (nonatomic, retain) OOSkinViewController *skinController;
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
+@property (nonatomic) NSString *apiKey;
+@property (nonatomic) NSString *secretKey;
+@property (nonatomic) NSString *accountId;
+
 
 @end
 
 
-@implementation IMAPlayerViewController
+@implementation GeoblockingSkinViewController
+
 
 AppDelegate *appDel;
 
-#pragma mark - Initialization
+#pragma mark - Initializaiton
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-  if (self.playerSelectionOption) {
+  if (self.playerSelectionOption && [self.playerSelectionOption isKindOfClass:[GeoblockingPlayerSelectionOptions class]]) {
     self.nib = self.playerSelectionOption.nib;
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
     self.playerDomain = self.playerSelectionOption.playerDomain;
     self.pcode = playerSelectionOption.pcode;
+    self.apiKey = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).apiKey;
+    self.secretKey = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).secretKey;
+    self.accountId = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).accountId;
   }
   return self;
 }
@@ -52,13 +59,15 @@ AppDelegate *appDel;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
   
   appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
   
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
+                                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self
+                                                               options:options];
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
   //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
@@ -73,6 +82,7 @@ AppDelegate *appDel;
   [_skinController.view setFrame:self.videoView.bounds];
   [ooyalaPlayer setEmbedCode:self.embedCode];
   
+  
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
                                                name:nil
@@ -82,14 +92,28 @@ AppDelegate *appDel;
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.skinController];
+  
+  
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
-
-  self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
-  self.adsManager.imaAdsManagerDelegate = self;
   
   // Load the video
   [ooyalaPlayer setEmbedCode:self.embedCode];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentProduction];
+}
+
+#pragma mark - EmbedTokenGenerator protocol
+
+- (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
+  NSMutableDictionary* params = [NSMutableDictionary dictionary];
+  params[@"account_id"] = self.accountId;  //Only used for concurrent streams
+  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secretKey];
+  NSURL* embedTokenUrl = [urlGen secureURL:@"http://player.ooyala.com" uri:uri params:params];
+  callback([embedTokenUrl absoluteString]);
 }
 
 #pragma mark - Private functions
@@ -101,10 +125,19 @@ AppDelegate *appDel;
     return;
   }
   
+  // Check for FullScreenChanged notification
+  if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
+    NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
+                         [notification name],
+                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+    NSLog(@"%@", message);
+  }
+  
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
                        [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
                        [self.skinController.player playheadTime], appDel.count];
+  
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
@@ -116,61 +149,5 @@ AppDelegate *appDel;
   
   appDel.count++;
 }
-
-#pragma mark - OOIMAAdsManagerDelegate
-
-- (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
-  NSLog(@"IMA Ad Manager: event %@.",  [self IMAAdEventTypeName:event.type]);
-}
-
-- (void)adsManagerDidRequestContentResume:(IMAAdsManager *)adsManager {
-  NSLog(@"IMA Ad Manager: Content Resume.");
-}
-
-- (void)adsManagerDidRequestContentPause:(IMAAdsManager *)adsManager {
-  NSLog(@"IMA Ad Manager: Content Pause.");
-}
-
-- (void)adsLoader:(IMAAdsLoader *)loader adsLoadedWithData:(IMAAdsLoadedData *)adsLoadedData {
-  NSLog(@"IMA Ads Loaded With Data.");
-}
-
-- (void)displayContainerUpdated:(IMAAdDisplayContainer *)adDisplayContainer {
-  NSLog(@"IMA Display Container Updated");
-}
-
-- (NSString *)IMAAdEventTypeName:(IMAAdEventType)type{
-  switch (type) {
-    case kIMAAdEvent_AD_BREAK_READY:
-      return @"AdBreakReady";
-    case kIMAAdEvent_ALL_ADS_COMPLETED:
-      return @"AllAdsCompleted";
-    case kIMAAdEvent_CLICKED:
-      return @"Clicked";
-    case kIMAAdEvent_COMPLETE:
-      return @"Complete";
-    case kIMAAdEvent_FIRST_QUARTILE:
-      return @"FirstQuartile";
-    case kIMAAdEvent_LOADED:
-      return @"Loaded";
-    case kIMAAdEvent_MIDPOINT:
-      return @"MidPoint";
-    case kIMAAdEvent_PAUSE:
-      return @"Pause";
-    case kIMAAdEvent_RESUME:
-      return @"Resume";
-    case kIMAAdEvent_SKIPPED:
-      return @"Skipped";
-    case kIMAAdEvent_STARTED:
-      return @"Started";
-    case kIMAAdEvent_TAPPED:
-      return @"Tapped";
-    case kIMAAdEvent_THIRD_QUARTILE:
-      return @"ThirdQuartile";
-    default:
-      return [NSString stringWithFormat:@"Unknown type %ld", (long)type];
-  }
-}
-
 
 @end
