@@ -507,7 +507,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.BasicPlaybackSampleApp-oo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.BasicPlaybackSampleApp;
 				PRODUCT_NAME = BasicPlaybackSampleApp;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -538,7 +538,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.BasicPlaybackSampleApp-oo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.BasicPlaybackSampleApp;
 				PRODUCT_NAME = BasicPlaybackSampleApp;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
