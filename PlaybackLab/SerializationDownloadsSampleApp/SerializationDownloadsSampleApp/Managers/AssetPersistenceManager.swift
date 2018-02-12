@@ -217,6 +217,10 @@ class AssetPersistenceManager: NSObject {
       downloadManager.cancelDownload()
       activeDownloads.remove(embedCode)
     }
+    else if let downloadManager = queuedDownloads.getOOAssetDownloadManager(embedCode) {
+      downloadManager.cancelDownload()
+      queuedDownloads.remove(embedCode)
+    }
   }
   
 }
