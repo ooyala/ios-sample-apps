@@ -41,11 +41,11 @@ class AssetPersistenceManager: NSObject {
   
   static let shared = AssetPersistenceManager()
   
-  fileprivate var pendingDownloads = Queue<OOAssetDownloadManager>()
-  fileprivate var activeDownloads = Queue<OOAssetDownloadManager>()
-  fileprivate var pausedDownloads = Queue<OOAssetDownloadManager>()
-  fileprivate var failedDownloads = Queue<OOAssetDownloadManager>()
-  fileprivate var queuedDownloads = Queue<OOAssetDownloadManager>()
+  fileprivate var pendingDownloads = Queue()
+  fileprivate var activeDownloads = Queue()
+  fileprivate var pausedDownloads = Queue()
+  fileprivate var failedDownloads = Queue()
+  fileprivate var queuedDownloads = Queue()
   fileprivate var retriesDownloads = [String: Int]()
   
   fileprivate func buildDownloadManager(for option: PlayerSelectionOption) -> OOAssetDownloadManager {

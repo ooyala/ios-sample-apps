@@ -25,7 +25,7 @@ class PlayerViewController: UIViewController {
    The cell cares a lot about the embed code to know what to do
    when it gets the embed code through a notification, for example.
    */
-  public private(set) var option: PlayerSelectionOption!
+  var option: PlayerSelectionOption!
   
   // properties required for a Fairplay asset
   private var apiKey = ""
@@ -110,10 +110,6 @@ class PlayerViewController: UIViewController {
     
     // Remove this class as an observer.
     NotificationCenter.default.removeObserver(self)
-  }
-  
-  public func setOption(_ option: PlayerSelectionOption) {
-    self.option = option
   }
   
   private func updateUI(usingState state: AssetPersistenceState) {

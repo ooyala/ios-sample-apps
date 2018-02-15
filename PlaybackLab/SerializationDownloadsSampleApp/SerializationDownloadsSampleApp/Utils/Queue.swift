@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Queue<T> {
+struct Queue {
   fileprivate var array = [OOAssetDownloadManager]()
   
   var isEmpty: Bool {

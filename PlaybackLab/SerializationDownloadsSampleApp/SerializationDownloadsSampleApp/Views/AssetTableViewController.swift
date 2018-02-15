@@ -39,8 +39,8 @@ class AssetTableViewController: UITableViewController, OptionTableViewCellDelega
   
   override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
     let cell = tableView.cellForRow(at: indexPath) as! OptionTableViewCell
-    let option = cell.option as! PlayerSelectionOption
-    let state = AssetPersistenceManager.shared.downloadState(forEmbedCode: option.embedCode)
+    let option = cell.option
+    let state = AssetPersistenceManager.shared.downloadState(forEmbedCode: (option?.embedCode)!)
     var alertActions: [UIAlertAction]
     
     switch state {
@@ -48,40 +48,40 @@ class AssetTableViewController: UITableViewController, OptionTableViewCellDelega
       alertActions = [UIAlertAction(title: "Download",
                                     style: .default,
                                     handler: {(_ action: UIAlertAction) -> Void in
-                                      AssetPersistenceManager.shared.startDownload(for: option)
+                                      AssetPersistenceManager.shared.startDownload(for: option!)
       })]
     case .assetAuthorizing, .assetDownloading:
       alertActions = [UIAlertAction(title: "Pause",
                                     style: .default,
                                     handler: {(_ action: UIAlertAction) -> Void in
-                                       AssetPersistenceManager.shared.pauseDownload(forEmbedCode: option.embedCode)
+                                      AssetPersistenceManager.shared.pauseDownload(forEmbedCode: (option?.embedCode)!)
       }),
                       UIAlertAction(title: "Cancel",
                                     style: .default,
                                     handler: {(_ action: UIAlertAction) -> Void in
-                                      AssetPersistenceManager.shared.cancelDownload(forEmbedCode: option.embedCode)
+                                      AssetPersistenceManager.shared.cancelDownload(forEmbedCode: (option?.embedCode)!)
                       })]
     case .assetPaused:
       alertActions = [UIAlertAction(title: "Resume",
                                     style: .default,
                                     handler: {(_ action: UIAlertAction) -> Void in
-                                      AssetPersistenceManager.shared.resumeDownload(forEmbedCode: option.embedCode)
+                                      AssetPersistenceManager.shared.resumeDownload(forEmbedCode: (option?.embedCode)!)
       })]
     case .assetDownloaded:
       alertActions = [UIAlertAction(title: "Delete",
                                     style: .default,
                                     handler: {(_ action: UIAlertAction) -> Void in
-                                      AssetPersistenceManager.shared.deleteDownloadedFile(forEmbedCode: option.embedCode)
+                                      AssetPersistenceManager.shared.deleteDownloadedFile(forEmbedCode: (option?.embedCode)!)
       })]
     case .assetInQueue:
       alertActions = [UIAlertAction(title: "Cancel",
                                     style: .default,
                                     handler: {(_ action: UIAlertAction) -> Void in
-                                      AssetPersistenceManager.shared.pauseDownload(forEmbedCode: option.embedCode)
+                                      AssetPersistenceManager.shared.pauseDownload(forEmbedCode: (option?.embedCode)!)
       })]
     }
     
-    let alertController = UIAlertController(title: option.title, message: "Select an option", preferredStyle: .actionSheet)
+    let alertController = UIAlertController(title: option?.title, message: "Select an option", preferredStyle: .actionSheet)
     for action: UIAlertAction in alertActions {
       alertController.addAction(action)
     }
@@ -103,7 +103,7 @@ class AssetTableViewController: UITableViewController, OptionTableViewCellDelega
       let option = cell.option,
       segue.identifier == PLAYER_SEGUE {
       let playerViewController = segue.destination as! PlayerViewController
-      playerViewController.setOption(option)
+      playerViewController.option = option
     }
   }
   
