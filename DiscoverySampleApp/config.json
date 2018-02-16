@@ -1,0 +1,47 @@
+{
+  "playerParameters": {
+    "pcode": "w5YXkxOoscIo8LfVGlQiBS7b8PCF",
+    "domain": "http://www.ooyala.com",
+    "playerId": "b589068e7b20402cb517401a50e446a7"
+  },
+  
+  "initasset": {
+    "title": "Liquid Doundation Team Rider Ed Custodio",
+    "embedCode": "c0b2c5eTrA3nJlr0Em5M9sE0bLSJ5nGu"
+  },
+  "carousels": [
+                
+                
+                {
+                "title": "SIMILAR middleware",
+                "url": "http://vet.ooyala.com/services/discovery/similar/[embedcode]?limit=30",
+                "jsonRoot": "results",
+                "handler": "middleware",
+                "realoadOnEmbedcodeChange": true
+                },
+                {
+                "title": "MOMENTUM",
+                "type": "Momentum",
+                "handler": "discoveryAPI"
+                },
+                {
+                "title": "SIMILAR",
+                "type": "Similar",
+                "handler": "discoveryAPI"
+                
+                },
+                
+                {
+                "title": "RECENT",
+                "url": "http://vet.ooyala.com/services/discovery/recent?limit=30",
+                "jsonRoot": "items",
+                "handler": "middleware"
+                },
+                {
+                "title": "PROMOTED",
+                "url": "http://vet.ooyala.com/services/discovery/promoted?limit=30",
+                "jsonRoot": "results",
+                "handler": "middleware"
+                }
+                ]
+}
