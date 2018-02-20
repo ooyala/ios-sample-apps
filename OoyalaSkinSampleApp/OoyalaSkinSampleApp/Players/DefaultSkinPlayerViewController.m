@@ -20,6 +20,7 @@
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
+@property (nonatomic) UIImageView *screenshotView;
 
 @end
 
@@ -90,6 +91,35 @@ NSMutableArray *_sharePlugins;
   self.textView.hidden = !self.qaModeEnabled;
 
   [ooyalaPlayer setEmbedCode:self.embedCode];
+  
+  [self configureScreenshot];
+}
+
+#pragma mark - Screenshot
+
+- (void)configureScreenshot {
+  self.screenshotView = [[UIImageView alloc] initWithFrame:self.videoView.frame];
+  self.screenshotView.hidden = YES;
+  self.screenshotView.layer.borderColor = UIColor.whiteColor.CGColor;
+  self.screenshotView.layer.borderWidth = 2.0;
+  
+  [self.videoView addSubview:self.screenshotView];
+  
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Screenshot"
+                                                                            style:UIBarButtonItemStylePlain
+                                                                           target:self
+                                                                           action:@selector(showScreenshot)];
+}
+
+- (void)showScreenshot {
+  self.screenshotView.image = self.skinController.player.screenshot;
+  self.screenshotView.hidden = NO;
+  self.screenshotView.alpha = 1.0f;
+  [UIView animateWithDuration:0.5 delay:2.0 options:0 animations:^{
+    self.screenshotView.alpha = 0.0f;
+  } completion:^(BOOL finished) {
+    self.screenshotView.hidden = YES;
+  }];
 }
 
 #pragma mark - Private functions
