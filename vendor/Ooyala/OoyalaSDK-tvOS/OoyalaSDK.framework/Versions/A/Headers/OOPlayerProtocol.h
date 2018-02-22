@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CMTimeRange.h>
 
+@class UIImage;
+
 /**
  * Defines different gravity modes, which control how video is adjusted to available screen size
  */
@@ -96,6 +98,11 @@ typedef enum
  * @param[in] time CMTime to set the playhead time to
  */
 - (void)seekToTime:(Float64)time;
+
+/**
+ * @returns current frame of playing asset
+ */
+- (UIImage *)screenshot;
 
 - (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity;
 
