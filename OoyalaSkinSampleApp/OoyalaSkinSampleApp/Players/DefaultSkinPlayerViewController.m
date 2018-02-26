@@ -98,6 +98,7 @@ NSMutableArray *_sharePlugins;
 
 - (void)configureScreenshot {
   self.screenshotView = [[UIImageView alloc] initWithFrame:self.videoView.frame];
+  self.screenshotView.contentMode = UIViewContentModeScaleAspectFit;
   self.screenshotView.hidden = YES;
   self.screenshotView.layer.borderColor = UIColor.whiteColor.CGColor;
   self.screenshotView.layer.borderWidth = 2.0;
