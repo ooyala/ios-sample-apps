@@ -486,7 +486,6 @@
 			children = (
 				755B35AD1FF25E31009CD1F7 /* Assets.xcassets */,
 				755B35AE1FF25E31009CD1F7 /* data.json */,
-				755B35AF1FF25E31009CD1F7 /* GVRLibraries */,
 				755B35B51FF25E31009CD1F7 /* SkinConfig */,
 			);
 			path = Resources;
@@ -565,6 +564,7 @@
 		75806A031F8BD299004248C6 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				755B35AF1FF25E31009CD1F7 /* GVRLibraries */,
 				75E1C16F1FA093D100330550 /* OoyalaVRSDK.framework */,
 				754557671F8E536C00BEF43C /* GoogleInteractiveMediaAds.framework */,
 				754557651F8E524000BEF43C /* OoyalaIMASDK.framework */,
@@ -605,7 +605,7 @@
 				TargetAttributes = {
 					523E45151F559C7500C29D8D = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -808,6 +808,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -819,8 +820,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -828,6 +830,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -839,8 +842,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
