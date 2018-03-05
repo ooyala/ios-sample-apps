@@ -65,6 +65,8 @@ AppDelegate *appDel;
   
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
+  // Currently needed for Fairplay
+  options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secretKey];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self
                                                                options:options];
