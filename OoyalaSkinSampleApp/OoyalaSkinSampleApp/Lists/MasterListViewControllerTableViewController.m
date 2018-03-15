@@ -12,6 +12,7 @@
 #import "IMATestsListViewController.h"
 #import "SetAssetListViewController.h"
 #import "GeoblockingTableViewController.h"
+#import "MultiAudioListViewController.h"
 
 
 @interface MasterListViewControllerTableViewController ()
@@ -25,7 +26,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-  self.playlists = [NSArray arrayWithObjects:@"Layouts", @"Basic Playback", @"Freewheel", @"Google IMA", @"Set asset", @"Geoblocking", nil];
+  self.playlists = [NSArray arrayWithObjects:@"Layouts", @"Basic Playback", @"Freewheel", @"Google IMA", @"Set asset", @"Geoblocking", @"Multi audio", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +77,9 @@
       break;
     case 5:
       controller = [GeoblockingTableViewController new];
+      break;
+    case 6:
+      controller = [MultiAudioListViewController new];
       break;
     default:
       break;
