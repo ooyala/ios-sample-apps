@@ -13,6 +13,7 @@
 #import "OOUnbundledVideo.h"
 #import "OOAudioTrack.h"
 
+
 @class OOContentItem;
 @class OOVideo;
 @class OOOoyalaError;
@@ -357,6 +358,18 @@ extern NSString *const OOOoyalaPlayerSwitchSceneNotification;
  */
 
 extern NSString *const OOOoyalaPlayerHandleTouchNotification;
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when asset have multi audio.
+ */
+extern NSString *const OOOoyalaPlayerMultiAudioEnabledNotification;
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when audio track changed.
+ */
+extern NSString *const OOOoyalaPlayerAudioTrackChangedNotification;
 
 /**
  * The OoyalaPlayer is the heart of the playback system.
@@ -878,5 +891,10 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * Return an OOUserInfo
  */
 - (OOUserInfo *)userInfo;
+
+/**
+ * @returns current frame of current asset
+ */
+- (UIImage *)screenshot;
 
 @end

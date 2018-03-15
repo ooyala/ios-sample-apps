@@ -41,7 +41,10 @@ typedef enum {
   OOOoyalaErrorCodeAdvertistingIdFailure = 25, /**< Failed to obtain advertising Id */
   OOOoyalaErrorCodeDiscoveryGetFailure = 26, /**< Failed to get discovery results */
   OOOoyalaErrorCodeDiscoveryPostFailure = 27, /**< Failed to post discovery pins */
-  OOOoyalaErrorCodeUnknownError = 28, /**< Unknown error */
+  OOOoyalaErrorCodePlayerFormatMissmatch = 28, /**< Player and player content do not correspond */
+  OOOoyalaErrorCodeCreateVRPlayerFailed = 29, /**< Failed to create VR player. */
+  OOOoyalaErrorCodeUnknownError = 30, /**< Unknown error */
+  OOOoyalaErrorCodeGeoBlockingError = 31, /**< Geo blocking error */
   
 } OOOoyalaErrorCode;
 
