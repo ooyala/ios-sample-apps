@@ -38,6 +38,7 @@
 		752F36B120063469007BF377 /* SetAssetSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */; };
 		752F36B520064F1C007BF377 /* asset1.json in Resources */ = {isa = PBXBuildFile; fileRef = 752F36B320064F1C007BF377 /* asset1.json */; };
 		752F36B620064F1C007BF377 /* asset2.json in Resources */ = {isa = PBXBuildFile; fileRef = 752F36B420064F1C007BF377 /* asset2.json */; };
+		7539E080205ABFE200964F9C /* MultiAudioListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539E07F205ABFE200964F9C /* MultiAudioListViewController.m */; };
 		972ED77E1AE184CE005043DC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 972ED77D1AE184CE005043DC /* libz.dylib */; };
 		9756A7581CF677D500D292F0 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */; };
 		97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */; };
@@ -128,6 +129,8 @@
 		752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetAssetSkinPlayerView.xib; sourceTree = "<group>"; };
 		752F36B320064F1C007BF377 /* asset1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = asset1.json; sourceTree = "<group>"; };
 		752F36B420064F1C007BF377 /* asset2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = asset2.json; sourceTree = "<group>"; };
+		7539E07E205ABFE200964F9C /* MultiAudioListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiAudioListViewController.h; sourceTree = "<group>"; };
+		7539E07F205ABFE200964F9C /* MultiAudioListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiAudioListViewController.m; sourceTree = "<group>"; };
 		972ED77D1AE184CE005043DC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		97930C0B1B670971009B3512 /* FreewheelPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreewheelPlayerViewController.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				97930C1B1B670E77009B3512 /* BasicTestsListViewController.m */,
 				752F36AA20063328007BF377 /* SetAssetListViewController.h */,
 				752F36AB20063328007BF377 /* SetAssetListViewController.m */,
+				7539E07E205ABFE200964F9C /* MultiAudioListViewController.h */,
+				7539E07F205ABFE200964F9C /* MultiAudioListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
+				7539E080205ABFE200964F9C /* MultiAudioListViewController.m in Sources */,
 				97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */,
 				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
 				CA63277B1C442130008F3667 /* README.md in Sources */,
