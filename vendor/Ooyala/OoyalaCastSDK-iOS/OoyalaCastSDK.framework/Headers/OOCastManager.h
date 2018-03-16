@@ -44,7 +44,7 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
 /**
  * Return the cast button
  */
-- (UIButton *)getCastButton;
+- (UIButton *)castButton;
 
 /**
  * Set the videoView to be displayed on ooyalaPlayer during casting
