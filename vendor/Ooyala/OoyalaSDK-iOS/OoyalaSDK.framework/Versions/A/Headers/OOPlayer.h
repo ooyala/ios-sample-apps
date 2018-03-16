@@ -34,9 +34,9 @@ extern NSString *const PlayerErrorNotification;
 
 - (BOOL)isAudioOnlyStreamPlaying;
 
-- (CMTimeRange) seekableTimeRange;
+- (CMTimeRange)seekableTimeRange;
 
--(CGRect)videoRect;
+- (CGRect)videoRect;
 
 - (void)setState:(OOOoyalaPlayerState)state;
 @end

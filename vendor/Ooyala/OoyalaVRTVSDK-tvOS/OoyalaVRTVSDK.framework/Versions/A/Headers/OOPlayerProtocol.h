@@ -26,7 +26,7 @@ typedef enum
 /**
  * Defines different possible player states
  */
-typedef enum
+typedef NS_ENUM(NSUInteger, OOOoyalaPlayerState)
 {
   /** Initial state, player is created but no content is loaded */
   OOOoyalaPlayerStateInit,
@@ -42,7 +42,7 @@ typedef enum
   OOOoyalaPlayerStateCompleted,
   /** Player has encountered an error, check OOOoyalaPlayer.error */
   OOOoyalaPlayerStateError
-} OOOoyalaPlayerState;
+};
 
 typedef enum
 {

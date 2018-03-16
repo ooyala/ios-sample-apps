@@ -10,31 +10,30 @@
 #import <GoogleCast/GoogleCast.h>
 #import <OoyalaSDK/OOPlayerProtocol.h>
 #import <OoyalaSDK/OOStateNotifier.h>
-#import "OOCastMiniControllerProtocol.h"
 
 @class OOCastManager;
 @class OOCastModeOptions;
 @class OOOoyalaPlayer;
+@protocol OOCastMiniControllerProtocol;
 
-@interface OOCastPlayer : GCKCastChannel<OOPlayerProtocol, GCKMediaControlChannelDelegate>
+@interface OOCastPlayer : GCKCastChannel<OOPlayerProtocol>
 
-@property(nonatomic, strong) OOStateNotifier *stateNotifier;
+@property (nonatomic, strong) OOStateNotifier *stateNotifier;
 
-@property(nonatomic, strong) NSString *embedCode;
+@property (nonatomic, strong) NSString *embedCode;
 
-@property(nonatomic) Float64 playheadTime;
+@property (nonatomic) Float64 playheadTime;
 
-@property(nonatomic, strong) NSString *castItemTitle;
+@property (nonatomic, strong) NSString *castItemTitle;
 
-@property(nonatomic, strong) NSString *castItemDescription;
+@property (nonatomic, strong) NSString *castItemDescription;
 
-@property(nonatomic, strong) NSString *castItemPromoImg;
+@property (nonatomic, strong) NSString *castItemPromoImg;
 
 @property (nonatomic, readonly) BOOL isMiniControllerInteractionAvailable;
 
-- (id)init __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
-- (id)initWithNamespace:(NSString *)appNamespace __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
-- (id)initWithNamespace:(NSString *)appNamespace deviceManager:(GCKDeviceManager *)deviceManager castManager:(OOCastManager *)castManager;
+- (instancetype)init __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
+- (instancetype)initWithNamespace:(NSString *)appNamespace castSession:(GCKCastSession *)castSession castManager:(OOCastManager *)castManager;
 
 - (void)initStateNotifier:(OOStateNotifier *)stateNotifier;
 
@@ -42,7 +41,7 @@
 
 - (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription;
 
-- (void)enterCastModeWithOptions:(OOCastModeOptions *)options embedToken:(NSString *)embedToken additionalInitParams:(NSDictionary *)params isReconnecting:(BOOL)isReconnecting;
+- (void)enterCastModeWithOptions:(OOCastModeOptions *)options embedToken:(NSString *)embedToken additionalInitParams:(NSDictionary *)params;
 
 - (void)registerMiniController:(id<OOCastMiniControllerProtocol>) miniController;
 
@@ -50,5 +49,6 @@
 
 - (void)onExitCastMode;
 
--(void) forceAssetRejoin;
+- (void)forceAssetRejoin;
+
 @end

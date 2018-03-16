@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <GoogleCast/GoogleCast.h>
 #import <OoyalaSDK/OOCastManagerProtocol.h>
 
 @class OOCastPlayer, OOOoyalaPlayer;
+@class GCKDevice;
 
 @protocol OOCastManagerDelegate
 - (UIViewController *) currentTopUIViewController;
@@ -23,15 +23,7 @@ extern NSString *const OOCastExitCastModeNotification; /**< Fires when exit cast
 extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when a mini controller is clicked*/
 extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors*/
 
-@interface OOCastManager : UIViewController<OOCastManagerProtocol, GCKDeviceScannerListener,GCKDeviceManagerDelegate,GCKMediaControlChannelDelegate, UIActionSheetDelegate>
-
-@property(nonatomic, strong) GCKDeviceScanner* deviceScanner;
-
-/**
- * When YES (the default), the OOCastManager will attempt to reconnect to the last selected device
- * when recovering from lost network connectivity. Set this to NO to disable such behaviour.
- */
-@property(nonatomic) BOOL automaticallyReconnect;
+@interface OOCastManager : UIViewController<OOCastManagerProtocol>
 
 @property(nonatomic, readonly) GCKDevice *selectedDevice;
 
@@ -39,8 +31,10 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
 
 /**
  * Initiate and get a singleton OOCastManager with the given reveiverAppID and nameSpace
+ * @param receiverAppID identifier of receiever's application
+ * @param namespace application namespace
  */
-+ (OOCastManager *)getCastManagerWithAppID:(NSString *)receiverAppID namespace:(NSString *)appNamespace;
++ (OOCastManager *)castManagerWithAppID:(NSString *)receiverAppID namespace:(NSString *)appNamespace;
 
 /**
  * Disconnect the OOCastManager from ooyalaPlayer
@@ -50,7 +44,7 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
 /**
  * Return the cast button
  */
-- (UIButton *)getCastButton;
+- (UIButton *)castButton;
 
 /**
  * Set the videoView to be displayed on ooyalaPlayer during casting

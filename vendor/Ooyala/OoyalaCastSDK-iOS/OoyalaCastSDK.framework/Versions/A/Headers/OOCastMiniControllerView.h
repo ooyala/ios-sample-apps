@@ -13,5 +13,5 @@
 
 @interface OOCastMiniControllerView : UIView<OOCastMiniControllerProtocol>
 @property(nonatomic, strong) UITableViewCell *cell;
-- (id)initWithFrame:(CGRect)frame castManager:(OOCastManager *)castManager delegate:(id<OOCastMiniControllerDelegate>)delegate;
+- (instancetype)initWithFrame:(CGRect)frame castManager:(OOCastManager *)castManager delegate:(id<OOCastMiniControllerDelegate>)delegate;
 @end
