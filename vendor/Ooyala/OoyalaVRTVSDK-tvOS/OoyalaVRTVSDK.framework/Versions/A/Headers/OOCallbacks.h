@@ -67,7 +67,9 @@ typedef void (^OOHeartbeatCallback)(OOOoyalaError *error);
 
 /**
  * The calback used for geoblocking check
- * @param[in] error the OOOoyalaError if one occurred
+ * @param[in] data the NSData returned by the server
+ * @param[in] response the NSHTTPURLResponse object that provides response metadata, such as HTTP headers and status code
+ * @param[in] error the NSError object that indicates why the request failed, or nil if the request was successful
  */
 typedef void (^OOGeoblockingCallback)(NSData *data, NSHTTPURLResponse *response, NSError *error);
 

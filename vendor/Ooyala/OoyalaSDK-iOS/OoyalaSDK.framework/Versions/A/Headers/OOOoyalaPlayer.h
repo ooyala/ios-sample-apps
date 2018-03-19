@@ -473,6 +473,15 @@ extern NSString *const OOOoyalaPlayerAudioTrackChangedNotification;
  */
 @property (nonatomic) float volume;
 
+/**
+ * This property can be used to set the User-Agent for manifest requests served by AVPlayer.
+ * This will not change User-Agent for player api requests.
+ * Note : [player setUserAgent:@"<value>"] should be called after initializing
+ * player but before calling [player setEmbedCode:] method.
+ *
+ */
+@property (nonatomic) NSString *userAgent;
+
 @property (nonatomic) NSString *customDrmData;
 @property (nonatomic, readonly) OOStreamPlayerMapping *streamPlayerMapping;
 @property (nonatomic, readonly) NSString *pcode;
