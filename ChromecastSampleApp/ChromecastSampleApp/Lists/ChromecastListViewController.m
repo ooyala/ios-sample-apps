@@ -38,7 +38,7 @@
   self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
 
-  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
+  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
   self.navigationBar.rightBarButtonItem = rightButton;
   [self buildMediaDictionary];
   [self buildTableViewCells];
