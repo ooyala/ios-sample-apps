@@ -79,4 +79,14 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  */
 - (void)setAudioTrack:(OOAudioTrack *)audioTrack;
 
+/**
+ *
+ */
+- (void)setDefaultAudioTrack:(OOAudioTrack *)audioTrack;
+
+/**
+ *
+ */
+- (OOAudioTrack *)defaultAudioTrack;
+
 @end

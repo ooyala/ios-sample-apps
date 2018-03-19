@@ -73,6 +73,8 @@
       break;
     case 4:
       controller = [SetAssetListViewController new];
+    case 5:
+      controller = [MultiAudioListViewController new];
       break;
     case 5:
       controller = [GeoblockingTableViewController new];
