@@ -24,6 +24,8 @@
 @property (nonatomic) BOOL bypassPCodeMatching; /** Bypass the check to ensure the provided PCode matches the asset's Pcode */
 @property (nonatomic) BOOL disableVASTOoyalaAds; /** Disable the support of VAST and Ooyala Ads that is enabled in the SDK by default */
 @property (nonatomic) NSArray<NSString *> *dynamicFilters; /** Dynamic Filters to be sent to Azure */
+@property (nonatomic, getter=isHEVCEnabled) BOOL HEVCEnabled; /** Will try to play the video using HEVC, if possible */
+
 /**
  * Initialize an OOOptions object with the all properties with default values
  * @returns the initialized OOOptions
