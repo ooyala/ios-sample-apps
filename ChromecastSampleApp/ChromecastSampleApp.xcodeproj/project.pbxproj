@@ -27,6 +27,9 @@
 		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
+		7AB3313D205BC51E006C4313 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; };
+		7AB3313E205BC525006C4313 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; };
+		7AB3313F205BC525006C4313 /* GoogleCast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97E5874E1D4ADFDD00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */; };
 		FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */; };
 		FF21F0DC19CB7A2100FE9D07 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D419CB7A2100FE9D07 /* CFNetwork.framework */; };
@@ -44,6 +47,20 @@
 		FF49D20D19CBAB84001B156F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20C19CBAB84001B156F /* UIKit.framework */; };
 		FF49D20F19CBAB91001B156F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7AB33140205BC525006C4313 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7AB3313F205BC525006C4313 /* GoogleCast.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B1AFBC11B0C09BB00347DFA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +90,7 @@
 		5E5B755B1C472C4200371A9E /* CastPlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastPlaybackView.m; sourceTree = "<group>"; };
 		5EA5A7E71B6C07DC008C691C /* OOCastManagerFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCastManagerFetcher.h; sourceTree = "<group>"; };
 		5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOCastManagerFetcher.m; sourceTree = "<group>"; };
+		7AB3313C205BC51E006C4313 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = VendorLibraries/GoogleCast.framework; sourceTree = "<group>"; };
 		97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FF21F07619CB5ABC00FE9D07 /* ChromecastSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromecastSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +120,7 @@
 			files = (
 				97E5874E1D4ADFDD00202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E2A1D2F30B80040B0B2 /* AVKit.framework in Frameworks */,
+				7AB3313D205BC51E006C4313 /* GoogleCast.framework in Frameworks */,
 				5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */,
 				5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */,
 				5E3B14391C5806D50078E075 /* GoogleCast.framework in Frameworks */,
@@ -115,6 +134,7 @@
 				FF49D20519CBAB3F001B156F /* EventKit.framework in Frameworks */,
 				FF49D20319CBAB28001B156F /* MessageUI.framework in Frameworks */,
 				FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */,
+				7AB3313E205BC525006C4313 /* GoogleCast.framework in Frameworks */,
 				FF21F0DC19CB7A2100FE9D07 /* CFNetwork.framework in Frameworks */,
 				FF21F0DD19CB7A2100FE9D07 /* CoreMedia.framework in Frameworks */,
 				FF21F0DF19CB7A2100FE9D07 /* MediaAccessibility.framework in Frameworks */,
@@ -201,6 +221,7 @@
 		0B1AFBE71B0C0B5900347DFA /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				7AB3313C205BC51E006C4313 /* GoogleCast.framework */,
 				FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */,
 				FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */,
 			);
@@ -262,6 +283,7 @@
 				FF21F07219CB5ABC00FE9D07 /* Sources */,
 				FF21F07319CB5ABC00FE9D07 /* Frameworks */,
 				FF21F07419CB5ABC00FE9D07 /* Resources */,
+				7AB33140205BC525006C4313 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

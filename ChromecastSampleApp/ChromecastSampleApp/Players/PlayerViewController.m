@@ -53,7 +53,7 @@
   self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
   
-  UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager getCastButton]];
+  UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
   self.navigationBar.rightBarButtonItem = leftbutton;
   
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
