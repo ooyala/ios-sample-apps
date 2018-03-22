@@ -5,6 +5,9 @@
 //  Created on 2/9/17.
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 
+@class OOAudioTrack;
+
+
 /**
  This protocol defines all the required methods to manage audio tracks for an asset.
  */
@@ -80,12 +83,9 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
 - (void)setAudioTrack:(OOAudioTrack *)audioTrack;
 
 /**
- *
- */
-- (void)setDefaultAudioTrack:(OOAudioTrack *)audioTrack;
+ Gets the default audio track from manifest.
 
-/**
- *
+ @return An OOAudioTrack object or nil if nothing was found
  */
 - (OOAudioTrack *)defaultAudioTrack;
 

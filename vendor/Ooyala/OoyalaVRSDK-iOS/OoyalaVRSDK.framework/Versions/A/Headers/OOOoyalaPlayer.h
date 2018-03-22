@@ -11,7 +11,7 @@
 #import "OOPlayerProtocol.h"
 #import "OOStream.h"
 #import "OOUnbundledVideo.h"
-#import "OOAudioTrack.h"
+#import "OOMultiAudioProtocol.h"
 
 
 @class OOContentItem;
@@ -376,7 +376,7 @@ extern NSString *const OOOoyalaPlayerAudioTrackChangedNotification;
  * Use it to configure and control asset playback, and to be aware of playback state changes.
 * \ingroup key
  */
-@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol, OOAudioTrackProtocol>
+@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol, OOMultiAudioProtocol>
 
 #pragma mark Statics
 /**
