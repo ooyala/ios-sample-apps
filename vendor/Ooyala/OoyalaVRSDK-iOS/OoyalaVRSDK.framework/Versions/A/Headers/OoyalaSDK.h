@@ -124,7 +124,7 @@
 #import "OOOfflineVideo.h"
 #import "OOPlayableItem.h"
 #import "OOFCCTVRating.h"
-#import "OOAudioTrack.h"
+#import "OOMultiAudioProtocol.h"
 #import "OOAudioTrackProtocol.h"
 
 // Offline

@@ -30,7 +30,6 @@
 @class OOManagedAdsPlugin;
 @class OOUserInfo;
 @class OOPlayer;
-@protocol OOAudioTrackProtocol;
 
 /**
  * \defgroup key Most Commonly Used Classes

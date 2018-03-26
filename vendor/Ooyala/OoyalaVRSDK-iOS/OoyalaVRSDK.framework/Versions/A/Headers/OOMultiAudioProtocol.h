@@ -5,7 +5,7 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-@class OOAudioTrack;
+@protocol OOAudioTrackProtocol;
 
 
 /**
@@ -17,7 +17,7 @@
  Searchs for all of the audio tracks for the current asset.
  It requires that a video has already loaded.
  
- @return NSArray of OOAudioTrack objects. It could be empty if no audio tracks were found.
+ @return NSArray of OOAudioTrackProtocol objects. It could be empty if no audio tracks were found.
  */
 - (nonnull NSArray *)availableAudioTracks;
 
@@ -25,26 +25,26 @@
  Gets the currently selected (loaded) audio track.
  It requires that a video has already loaded.
 
- @return An OOAudioTrack object or nil if nothing was found.
+ @return An OOAudioTrackProtocol object or nil if nothing was found.
  */
-- (nullable OOAudioTrack *)selectedAudioTrack;
+- (nullable id<OOAudioTrackProtocol>)selectedAudioTrack;
 
 /**
  Requests to change the current audio track to the one provided as a parameter.
  It requires that a video has already loaded.
  
- @remark If the supplied OOAudioTrack isn't part of the current video asset nothing will happen.
- @param audioTrack OOAudioTrack to be used.
+ @remark If the supplied OOAudioTrackProtocol isn't part of the current video asset nothing will happen.
+ @param audioTrack OOAudioTrackProtocol to be used.
  */
-- (void)setAudioTrack:(nonnull OOAudioTrack *)audioTrack;
+- (void)setAudioTrack:(nonnull id<OOAudioTrackProtocol>)audioTrack;
 
 /**
  Change the current default audio track to the one provided as a parameter.
 
  @remark This method doesn't change current playable audio track.
- @param audioTrack OOAudioTrack to be used.
+ @param audioTrack OOAudioTrackProtocol to be used.
  */
-- (void)setDefaultAudioTrack:(nonnull OOAudioTrack *)audioTrack;
+- (void)setDefaultAudioTrack:(nonnull id<OOAudioTrackProtocol>)audioTrack;
 
 /**
  Change the current default audio track language code to the one provided as a parameter.
@@ -63,8 +63,8 @@
 /**
  Gets the default audio track from manifest.
  
- @return An OOAudioTrack object or nil if nothing was found
+ @return An OOAudioTrackProtocol object or nil if nothing was found
  */
-- (nullable OOAudioTrack *)defaultAudioTrack;
+- (nullable id<OOAudioTrackProtocol>)defaultAudioTrack;
 
 @end

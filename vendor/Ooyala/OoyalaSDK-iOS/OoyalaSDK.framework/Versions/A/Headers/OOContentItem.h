@@ -30,24 +30,24 @@
   OOAuthCode authCode;
 }
 
-@property(readonly, nonatomic, strong) NSString *embedCode;    /**< The OOContentItem's Embed Code */
-@property(readonly, nonatomic, strong) NSString *externalId;   /**< The OOContentItem's External ID if it exists */
-@property(readonly, nonatomic, strong) NSString *title;        /**< The OOContentItem's Title */
-@property(readonly, nonatomic, strong) NSString *itemDescription;  /**< The OOContentItem's Description */
-@property(readonly, nonatomic, strong) NSString *promoImageURL;  /**< The OOContentItem's Promo Image URL */
-@property(readonly, nonatomic, strong) NSString *hostedAtURL;    /**< The OOContentItem's Hosted At URL */
-@property(readonly, nonatomic, strong) OOPlayerAPIClient *api;   /**< @internal The API that was used to fetch the OOContentItem */
-@property(readonly, nonatomic) BOOL authorized;                /**< Whether or not this OOContentItem is authorized */
-@property(readonly, nonatomic) OOAuthCode authCode;              /**< The response code from the authorize call */
-@property (readonly, nonatomic, strong) NSDictionary *metadata;
-@property (readonly, nonatomic, strong) NSDictionary *moduleData;
+@property (readonly, nonatomic) NSString *embedCode;    /**< The OOContentItem's Embed Code */
+@property (readonly, nonatomic) NSString *externalId;   /**< The OOContentItem's External ID if it exists */
+@property (readonly, nonatomic) NSString *title;        /**< The OOContentItem's Title */
+@property (readonly, nonatomic) NSString *itemDescription;  /**< The OOContentItem's Description */
+@property (readonly, nonatomic) NSString *promoImageURL;  /**< The OOContentItem's Promo Image URL */
+@property (readonly, nonatomic) NSString *hostedAtURL;    /**< The OOContentItem's Hosted At URL */
+@property (readonly, nonatomic) OOPlayerAPIClient *api;   /**< @internal The API that was used to fetch the OOContentItem */
+@property (readonly, nonatomic) BOOL authorized;                /**< Whether or not this OOContentItem is authorized */
+@property (readonly, nonatomic) OOAuthCode authCode;              /**< The response code from the authorize call */
+@property (readonly, nonatomic) NSDictionary *metadata;
+@property (readonly, nonatomic) NSDictionary *moduleData;
 @property (nonatomic, assign) BOOL heartbeatRequired;
 @property (readonly, nonatomic) OOFCCTVRating *tvRating;
-@property(readonly, nonatomic, strong) NSString *assetPcode;  /**< The OOContentItem's Promo Image URL */
-@property(readonly, nonatomic) NSDictionary *movieAttributes;
+@property (readonly, nonatomic) NSString *assetPcode;  /**< The OOContentItem's Promo Image URL */
+@property (readonly, nonatomic) NSDictionary *movieAttributes;
 @property (readonly, nonatomic) BOOL haEnabled;
-@property(readonly, nonatomic) BOOL needsMidStreamCheck;
-@property(readonly, nonatomic) int midStreamCheckInterval;
+@property (readonly, nonatomic) BOOL needsMidStreamCheck;
+@property (readonly, nonatomic) int midStreamCheckInterval;
 
 /**
  * Initialize a OOContentItem

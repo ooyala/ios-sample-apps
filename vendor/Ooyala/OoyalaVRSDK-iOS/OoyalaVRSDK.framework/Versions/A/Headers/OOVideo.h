@@ -27,13 +27,14 @@
   BOOL live;
 }
 
-@property(readonly, nonatomic, strong) NSMutableArray *ads;            /**< @internal An NSMutableArray containing the ads */
-@property(readonly, nonatomic, strong) OOClosedCaptions *closedCaptions; /**< @internal An NSMutableArray containing the closedCaptions */
-@property(readonly, nonatomic, strong) OOChannel *parent;                /**< This OOVideo's parent OOChannel if it exists (could be a OODynamicChannel) */
-@property(readonly, nonatomic) Float64 duration;                       /**< The OOVideo's Total Duration (Length) */
-@property(readonly, nonatomic) BOOL live;                              /**< Whether or not the video is live */
-@property(readonly, nonatomic) NSURL *fairplayKeyURL;                  /**< If this is an offline Fairplay asset, this is where the Fairplay key is located */
-@property(nonatomic) int retryCount;                                   /**< Keeps track of the number of retries already done for a given error. Used by the HA plugin to try an reset the video with the player. */
+@property (readonly, nonatomic) NSMutableArray *ads;                    /**< @internal An NSMutableArray containing the ads */
+@property (readonly, nonatomic) OOClosedCaptions *closedCaptions;       /**< @internal An NSMutableArray containing the closedCaptions */
+@property (readonly, nonatomic) OOChannel *parent;                      /**< This OOVideo's parent OOChannel if it exists (could be a OODynamicChannel) */
+@property (readonly, nonatomic) Float64 duration;                       /**< The OOVideo's Total Duration (Length) */
+@property (readonly, nonatomic) BOOL live;                              /**< Whether or not the video is live */
+@property (readonly, nonatomic) NSURL *fairplayKeyURL;                  /**< If this is an offline Fairplay asset, this is where the Fairplay key is located */
+@property (nonatomic) int retryCount;                                   /**< Keeps track of the number of retries already done for a given error. Used by the HA plugin to try an reset the video with the player. */
+@property (readonly, nonatomic) NSString *defaultLanguageCode;          /**< The OOContentItem's Default language Code (eng, deu etc.) */
 
 /**
  * Initialize a OOVideo using the specified data (subclasses should override this)
