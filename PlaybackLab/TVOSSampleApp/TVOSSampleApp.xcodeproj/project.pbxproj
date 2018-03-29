@@ -24,6 +24,7 @@
 		0BD644E01CF7C08B005AD8CB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */; };
 		0BE8AA2F1CFF889200152888 /* FairplayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */; };
 		0BE8AA321D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA311D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m */; };
+		52780FC0206CE0B1001ED3A6 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52780FBF206CE0B1001ED3A6 /* VideoToolbox.framework */; };
 		7503EEA31FE16ADD00D877CC /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7503EEA21FE16ADD00D877CC /* OoyalaTVSkinSDK.framework */; };
 		7503EEA91FE1704000D877CC /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7503EEA81FE1704000D877CC /* OoyalaSDK.framework */; };
 		75BBCF241FE1689B005B9F72 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BBCF201FE1689B005B9F72 /* OoyalaPulseIntegration.framework */; };
@@ -82,6 +83,7 @@
 		0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FairplayPlayerViewController.m; sourceTree = "<group>"; };
 		0BE8AA301D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaPlayerTokenPlayerViewController.h; sourceTree = "<group>"; };
 		0BE8AA311D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaPlayerTokenPlayerViewController.m; sourceTree = "<group>"; };
+		52780FBF206CE0B1001ED3A6 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		7503EEA21FE16ADD00D877CC /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaTVSkinSDK.framework; sourceTree = "<group>"; };
 		7503EEA81FE1704000D877CC /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		75BBCF201FE1689B005B9F72 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaPulseIntegration.framework; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52780FC0206CE0B1001ED3A6 /* VideoToolbox.framework in Frameworks */,
 				CA7DC1AE20212BE300565B4E /* libz.tbd in Frameworks */,
 				7503EEA31FE16ADD00D877CC /* OoyalaTVSkinSDK.framework in Frameworks */,
 				75BBCF241FE1689B005B9F72 /* OoyalaPulseIntegration.framework in Frameworks */,
@@ -223,6 +226,7 @@
 		CA49FD6A1C8E84E00017E19F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52780FBF206CE0B1001ED3A6 /* VideoToolbox.framework */,
 				CA7DC1AD20212BE300565B4E /* libz.tbd */,
 				AA4D8C951DAE66C900FFD124 /* OoyalaPulseIntegration.framework */,
 				0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */,
