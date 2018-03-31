@@ -13,7 +13,7 @@
 @protocol OOFairplayContentKeyDelegate;
 
 @interface OOAssetLoaderDelegate : NSObject<AVAssetResourceLoaderDelegate>
--(instancetype) init NS_UNAVAILABLE;
+-(instancetype) init ;
 
 -(instancetype) initWithAsset:(AVURLAsset *)asset
                         pcode:(NSString *)pcode

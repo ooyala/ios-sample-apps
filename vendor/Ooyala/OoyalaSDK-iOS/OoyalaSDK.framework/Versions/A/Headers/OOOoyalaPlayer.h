@@ -12,6 +12,7 @@
 #import "OOStream.h"
 #import "OOUnbundledVideo.h"
 #import "OOMultiAudioProtocol.h"
+#import "OOAssetLoaderDelegate.h"
 
 
 @class OOContentItem;
@@ -481,6 +482,12 @@ extern NSString *const OOOoyalaPlayerAudioTrackChangedNotification;
  */
 @property (nonatomic) NSString *userAgent;
 
+/**
+ * This property can be used to pass Custom Implamentation of AVAssetResourceLoaderDelegate
+ * from AVFoundation.
+ * Note : This only for special purposes. Not recommend to use this property often.
+ */
+@property (nonatomic) OOAssetLoaderDelegate *assetLoaderDelegate;
 @property (nonatomic) NSString *customDrmData;
 @property (nonatomic, readonly) OOStreamPlayerMapping *streamPlayerMapping;
 @property (nonatomic, readonly) NSString *pcode;

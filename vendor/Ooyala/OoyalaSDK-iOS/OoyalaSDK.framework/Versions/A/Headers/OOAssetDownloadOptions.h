@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OOEmbedTokenGenerator.h"
+#import "OOAssetLoaderDelegate.h"
 
 @class OOPlayerDomain;
 
@@ -70,5 +71,12 @@
  By default it is true (YES)
  */
 @property (nonatomic) BOOL allowsCellularAccess;
+
+/**
+ This property can be used to pass Custom Implamentation of AVAssetResourceLoaderDelegatefrom AVFoundation.
+ 
+ Note : This only for special purposes. Not recommend to use this property often.
+ */
+@property (nonatomic) OOAssetLoaderDelegate *assetLoaderDelegate;
 
 @end
