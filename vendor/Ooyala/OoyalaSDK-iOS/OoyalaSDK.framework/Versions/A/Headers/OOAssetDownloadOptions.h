@@ -73,9 +73,10 @@
 @property (nonatomic) BOOL allowsCellularAccess;
 
 /**
- This property can be used to pass Custom Implamentation of AVAssetResourceLoaderDelegatefrom AVFoundation.
+ This property can be used to pass Custom Implementation of AVAssetResourceLoaderDelegate from AVFoundation.
  
  Note : This only for special purposes. Not recommend to use this property often.
+        When this property is in use, you CAN NOT use FairPlay.
  */
 @property (nonatomic) OOAssetLoaderDelegate *assetLoaderDelegate;
 
