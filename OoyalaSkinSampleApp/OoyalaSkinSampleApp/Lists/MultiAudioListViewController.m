@@ -6,6 +6,7 @@
 //
 
 #import "MultiAudioListViewController.h"
+#import "IMAPlayerViewController.h"
 
 
 @interface MultiAudioListViewController ()
@@ -26,8 +27,9 @@
   [self addCommonWithTitle:@"DASH" embedCode:@"tyOTBvZTE6Gq2ib-GtRchnRCQmk3jLRT" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
   [self addCommonWithTitle:@"HLS" embedCode:@"tsYjVwZTE6zgfSBx4_gvsVuFuwy844q_" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
   [self addCommonWithTitle:@"7+ tracks + CC" embedCode:@"p5amdwZTE6NgCrrm18YoUTrgJsI7D26f" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
-  [self addCommonWithTitle:@"Mid-roll" embedCode:@"FrZGVyZTE6Bv2s5QwtytNT48VJfq9vdh" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
-  [self addCommonWithTitle:@"Post-roll" embedCode:@"ppZGVyZTE6dX1q1yTHtygM4lyiRwDFDM" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
+  [self insertNewObject:[self IMAOptionWithTitle:@"Mid-roll" embedCode:@"FrZGVyZTE6Bv2s5QwtytNT48VJfq9vdh" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"]];
+  [self insertNewObject:[self IMAOptionWithTitle:@"Post-roll" embedCode:@"ppZGVyZTE6dX1q1yTHtygM4lyiRwDFDM" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"]];
+
   [self addCommonWithTitle:@"MP4 without CC" embedCode:@"g0Z2hwZTE6i-ODpQETJqhOCt2jOE6Y2c" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
   [self addCommonWithTitle:@"MP4 with CC" embedCode:@"xkaGhwZTE6hghIcejjoTfu0BG2sLdtxp" pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
 
@@ -69,6 +71,17 @@
   
   [self addCommonWithTitle:@"Elemental HLS MT-Variant-5" embedCode:@"xmMXdzZTE6Bydd2tPBEOg-q5yvQgjebE" pcode:@"k0a2gyOt0QGNJLSuzKfdY4R-hw2b"];
   [self addCommonWithTitle:@"Elemental eHLS MT-Variant-5" embedCode:@"ViNXdzZTE6CxtLfMiTQH4Me8jz-p2cbS" pcode:@"k0a2gyOt0QGNJLSuzKfdY4R-hw2b"];
+}
+
+- (PlayerSelectionOption *)IMAOptionWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode {
+  NSString *playerDomain = @"http://www.ooyala.com";
+  NSString *nib = @"DefaultSkinPlayerView";
+  
+  return [[PlayerSelectionOption alloc] initWithTitle:title
+                                            embedCode:embedCode
+                                                pcode:pcode
+                                         playerDomain:playerDomain
+                                       viewController:[IMAPlayerViewController class] nib:nib];
 }
 
 @end
