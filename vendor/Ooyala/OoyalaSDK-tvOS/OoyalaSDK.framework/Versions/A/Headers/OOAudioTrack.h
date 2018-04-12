@@ -8,6 +8,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
+
 /**
  Encapsulates important information of an AVMediaSelectionOption instance.
  
@@ -18,13 +19,17 @@
  */
 @interface OOAudioTrack : NSObject
 
+/// Meaningful name for the audio track, retrieved from the video asset
+@property (nonatomic, readonly) NSString *name;
 
-/**
- Meaningful name for the audio track, retrieved from the video asset
- */
-@property(nonatomic, readonly) NSString *name;
+/// Meaningful title for the audio track, created in implemenation of file
+@property (nonatomic, readonly) NSString *title;
 
-@property(nonatomic, readonly) AVMediaSelectionOption *mediaSelectionOption;
+/// Laguage code of audio track, retrived from AVMediaSelectionOption (mediaSelectionOption)
+@property (nonatomic, readonly) NSString *languageCode;
+
+/// Media selection option from AVMediaSelectionGroup
+@property (nonatomic, readonly) AVMediaSelectionOption *mediaSelectionOption;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithMediaSelectionOption:(AVMediaSelectionOption *)option NS_DESIGNATED_INITIALIZER;

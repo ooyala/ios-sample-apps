@@ -11,7 +11,8 @@
 #import "OOPlayerProtocol.h"
 #import "OOStream.h"
 #import "OOUnbundledVideo.h"
-#import "OOAudioTrack.h"
+#import "OOMultiAudioProtocol.h"
+#import "OOAssetLoaderDelegate.h"
 
 
 @class OOContentItem;
@@ -30,7 +31,6 @@
 @class OOManagedAdsPlugin;
 @class OOUserInfo;
 @class OOPlayer;
-@protocol OOAudioTrackProtocol;
 
 /**
  * \defgroup key Most Commonly Used Classes
@@ -376,7 +376,7 @@ extern NSString *const OOOoyalaPlayerAudioTrackChangedNotification;
  * Use it to configure and control asset playback, and to be aware of playback state changes.
 * \ingroup key
  */
-@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol, OOAudioTrackProtocol>
+@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol, OOMultiAudioProtocol>
 
 #pragma mark Statics
 /**
@@ -482,6 +482,13 @@ extern NSString *const OOOoyalaPlayerAudioTrackChangedNotification;
  */
 @property (nonatomic) NSString *userAgent;
 
+/**
+ * This property can be used to pass Custom Implementation of AVAssetResourceLoaderDelegate
+ * from AVFoundation.
+ * Note : This only for special purposes. Not recommend to use this property often.
+ *        When this property is in use, you CAN NOT use FairPlay.
+ */
+@property (nonatomic) OOAssetLoaderDelegate *assetLoaderDelegate;
 @property (nonatomic) NSString *customDrmData;
 @property (nonatomic, readonly) OOStreamPlayerMapping *streamPlayerMapping;
 @property (nonatomic, readonly) NSString *pcode;

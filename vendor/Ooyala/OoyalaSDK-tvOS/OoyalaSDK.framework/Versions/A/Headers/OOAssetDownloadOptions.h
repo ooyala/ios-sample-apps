@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OOEmbedTokenGenerator.h"
+#import "OOAssetLoaderDelegate.h"
 
 @class OOPlayerDomain;
 
@@ -70,5 +71,21 @@
  By default it is true (YES)
  */
 @property (nonatomic) BOOL allowsCellularAccess;
+
+/**
+ This property can be used to pass Custom Implementation of AVAssetResourceLoaderDelegate from AVFoundation.
+ This SHOULD always be used with fakeURLScheme property available in OOAssetDownloadOptions.
+ Note : This only for special purposes. It's NOT recommend to use this property.
+        When this property is in use, you CAN NOT use FairPlay.
+ */
+@property (nonatomic) OOAssetLoaderDelegate *assetLoaderDelegate;
+
+/**
+ This property can be used to set a fake URL scheme. For example, it changes "http" or "https" TO "fakeScheme" in the
+ 'assetLoaderDelegate' property. This SHOULD always be used with 'assetLoaderDelegate' property available in
+ OOAssetDownloadOptions.
+ Note: This is only for special purposes. It's not recommended to use this property.
+ */
+@property (nonatomic) NSString *fakeURLScheme;
 
 @end
