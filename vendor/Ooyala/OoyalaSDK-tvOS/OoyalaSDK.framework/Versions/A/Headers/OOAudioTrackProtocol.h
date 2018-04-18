@@ -22,7 +22,7 @@
 /// Meaningful name for the audio track, retrieved from the video asset
 @property (nonatomic, readonly) NSString *name;
 
-/// Meaningful title for the audio track, created in implemenation of file. By default equal language
+/// Meaningful title for the audio track, created in implemenation of file. By default, is equal to the language
 @property (nonatomic, readonly) NSString *title;
 
 /// Laguage code of audio track, retrived from AVMediaSelectionOption (mediaSelectionOption)
