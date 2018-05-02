@@ -8,10 +8,13 @@ import AVKit
 import AVFoundation
 import UIKit
 
-class PlayerViewController: AVPlayerViewController {
+class ViewController: UIViewController {
     
     let PING_FREQUENCY_S = 10
     let SSAI_GUID = "HeartbeatSampleTest";
+    var playerViewController = AVPlayerViewController()
+    var playerView = AVPlayer()
+
     var timer : Timer?
 
     override func viewDidLoad() {
@@ -31,17 +34,19 @@ class PlayerViewController: AVPlayerViewController {
         guard let url = URL(string: urlString) else {
             return
         }
-        
-        let player = AVPlayer(url: url)
-        self.player = player
-        
+
+        playerView = AVPlayer(url: url)
+        playerViewController.player = playerView
+
         // Add observers
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
-        self.player?.addObserver(self, forKeyPath: "rate", options: NSKeyValueObservingOptions(rawValue: 0), context: nil)
+        playerViewController.player?.addObserver(self, forKeyPath: "rate", options: NSKeyValueObservingOptions(rawValue: 0), context: nil)
 
-        // Show a frame
-        let initTime = CMTime(seconds: 0.01, preferredTimescale: 1)
-        self.player?.seek(to: initTime)
+        self.present(playerViewController, animated: true) {
+            // Show a frame
+            let initTime = CMTime(seconds: 0.01, preferredTimescale: 1)
+            self.playerViewController.player?.seek(to: initTime)
+        }
     }
     
     func startScheduledCalls() {
@@ -69,7 +74,7 @@ class PlayerViewController: AVPlayerViewController {
             return
         }
         
-        let timePassedSeconds = self.player?.currentTime().seconds ?? 0
+        let timePassedSeconds = playerViewController.player?.currentTime().seconds ?? 0
         
         let json: [String: Int] = ["playheadpos": Int(timePassedSeconds),
                                    "pingfrequency": PING_FREQUENCY_S]
@@ -91,7 +96,7 @@ class PlayerViewController: AVPlayerViewController {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "rate", let playRate = self.player?.rate {
+        if keyPath == "rate", let playRate = playerViewController.player?.rate {
             if playRate == 0.0 {
                 stopScheduledCalls()
             } else {
