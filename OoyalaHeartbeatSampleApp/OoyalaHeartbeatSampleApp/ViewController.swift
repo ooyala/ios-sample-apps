@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     let PING_FREQUENCY_S = 10
-    let SSAI_GUID = "HeartbeatSampleTest";
+    let SSAI_GUID = "HeartbeatSampleTest"
     var playerViewController = AVPlayerViewController()
-    var playerView = AVPlayer()
+    var playerView : AVPlayer?
 
     var timer : Timer?
 
