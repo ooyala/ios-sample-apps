@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     let PING_FREQUENCY_S = 10
     let SSAI_GUID = "HeartbeatSampleTest"
     var playerViewController = AVPlayerViewController()
-    var playerView : AVPlayer?
+    var player : AVPlayer?
 
     var timer : Timer?
 
@@ -35,8 +35,8 @@ class ViewController: UIViewController {
             return
         }
 
-        playerView = AVPlayer(url: url)
-        playerViewController.player = playerView
+        player = AVPlayer(url: url)
+        playerViewController.player = player
 
         // Add observers
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
