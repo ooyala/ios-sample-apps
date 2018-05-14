@@ -37,6 +37,9 @@
 - (instancetype)initWithAdContainer:(UIView *)adContainer
                      companionSlots:(NSArray *)companionSlots NS_DESIGNATED_INITIALIZER;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

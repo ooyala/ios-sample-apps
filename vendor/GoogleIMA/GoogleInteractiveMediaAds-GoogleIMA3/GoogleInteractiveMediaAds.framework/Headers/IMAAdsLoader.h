@@ -51,7 +51,7 @@
 @interface IMAAdLoadingErrorData : NSObject
 
 /**
- *  The ad error that occured while loading the ad.
+ *  The ad error that occurred while loading the ad.
  */
 @property(nonatomic, strong, readonly) IMAAdError *adError;
 
@@ -145,7 +145,7 @@
 - (void)requestAdsWithRequest:(IMAAdsRequest *)request;
 
 /**
- *  Request a stream with with ads inserted dynamically. Reusing the same IMAAdsLoader instance is
+ *  Request a stream with ads inserted dynamically. Reusing the same IMAAdsLoader instance is
  *  encouraged when making stream requests in order to minimize stream request latency.
  *
  *  @param request the stream request

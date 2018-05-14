@@ -19,7 +19,7 @@
 @property(nonatomic, copy) NSString *ppid;
 
 /**
- *  Language specification used for localization. |Language| must be formated as
+ *  Language specification used for localization. |Language| must be formatted as
  *  a canonicalized IETF BCP 47 language identifier such as would be returned by
  *  [NSLocale preferredLanguages]. Setting this property after it has been sent
  *  to the IMAAdsLoader will be ignored and a warning will be logged.
