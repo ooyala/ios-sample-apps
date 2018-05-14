@@ -10,12 +10,16 @@
 #import <UIKit/UIKit.h>
 #import <OoyalaSDK/OOCastManagerProtocol.h>
 
-@class OOCastPlayer, OOOoyalaPlayer;
-@class GCKDevice;
+
+@class OOCastPlayer, OOOoyalaPlayer, GCKDevice;
+
 
 @protocol OOCastManagerDelegate
-- (UIViewController *) currentTopUIViewController;
+
+- (UIViewController *)currentTopUIViewController;
+
 @end
+
 
 extern NSString *const OOCastManagerDidDisconnectNotification; /**< Fires when a OOCastManager disconnects from chromecast device*/
 extern NSString *const OOCastEnterCastModeNotification; /**< Fires when enter cast mode*/
@@ -23,11 +27,11 @@ extern NSString *const OOCastExitCastModeNotification; /**< Fires when exit cast
 extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when a mini controller is clicked*/
 extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors*/
 
-@interface OOCastManager : UIViewController<OOCastManagerProtocol>
 
-@property(nonatomic, readonly) GCKDevice *selectedDevice;
+@interface OOCastManager : UIViewController <OOCastManagerProtocol>
 
-@property(nonatomic, weak) id<OOCastManagerDelegate> delegate;
+@property (nonatomic, readonly) GCKDevice *selectedDevice;
+@property (nonatomic, weak) id<OOCastManagerDelegate> delegate;
 
 /**
  * Initiate and get a singleton OOCastManager with the given reveiverAppID and nameSpace
@@ -56,4 +60,5 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
  * added to this will overwrite anything set by default in the init.
  */
 - (void)setAdditionalInitParams:(NSDictionary *)params;
+
 @end

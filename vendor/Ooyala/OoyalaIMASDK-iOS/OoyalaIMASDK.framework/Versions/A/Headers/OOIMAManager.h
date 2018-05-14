@@ -56,6 +56,12 @@
 @property(nonatomic) NSString *adUrlOverride;
 
 /**
+ * Configure VAST load timeout in milliseconds for Google IMA AdRequests.
+ * This parameter will override the default timeout set by Google IMA.
+ */
+@property(nonatomic) float vastLoadTimeout;
+
+/**
  * Initialize a OOIMAManager using the OOOoyalaPlayer
  * @param[in] player the OOOoyalaPlayer
  * @returns the initialized OOIMAManager
