@@ -106,7 +106,8 @@
 - (void)initializeWithAdsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings;
 
 /**
- *  Returns the stream time with ads for a given content time. Returns 0 for live streams.
+ *  Returns the stream time with ads for a given content time. Returns the given content time
+ *  for live streams.
  *
  *  @param contentTime   the content time without any ads (in seconds)
  *
@@ -115,7 +116,8 @@
 - (NSTimeInterval)streamTimeForContentTime:(NSTimeInterval)contentTime;
 
 /**
- *  Returns the content time without ads for a given stream time. Returns 0 for live streams.
+ *  Returns the content time without ads for a given stream time. Returns the given stream time
+ *  for live streams.
  *
  *  @param streamTime   the stream time with inserted ads (in seconds)
  *
@@ -134,6 +136,9 @@
  */
 - (IMACuepoint *)previousCuepointForStreamTime:(NSTimeInterval)streamTime;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 /**

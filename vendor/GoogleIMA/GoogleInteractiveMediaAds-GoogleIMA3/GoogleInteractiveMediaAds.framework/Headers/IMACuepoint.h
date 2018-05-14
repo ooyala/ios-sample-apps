@@ -27,6 +27,9 @@
  */
 @property(nonatomic, readonly, getter=isPlayed) BOOL played;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

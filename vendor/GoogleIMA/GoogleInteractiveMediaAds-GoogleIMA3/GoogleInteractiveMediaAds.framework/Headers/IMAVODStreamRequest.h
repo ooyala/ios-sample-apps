@@ -63,6 +63,9 @@
                            videoDisplay:(id<IMAVideoDisplay>)videoDisplay
                   pictureInPictureProxy:(IMAPictureInPictureProxy *)pictureInPictureProxy;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

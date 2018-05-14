@@ -16,16 +16,16 @@
  */
 typedef NS_ENUM(NSInteger, IMAErrorType){
   /**
-   *  An unexpected error occured while loading or playing the ads.
+   *  An unexpected error occurred while loading or playing the ads.
    *  This may mean that the SDK wasn't loaded properly.
    */
   kIMAAdUnknownErrorType,
   /**
-   *  An error occured while loading the ads.
+   *  An error occurred while loading the ads.
    */
   kIMAAdLoadingFailed,
   /**
-   *  An error occured while playing the ads.
+   *  An error occurred while playing the ads.
    */
   kIMAAdPlayingFailed,
 };
@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger, IMAErrorCode){
   kIMAError_VIDEO_PLAY_ERROR = 400,
   /**
    *  Failed to load media assets from a VAST response.
-   *  The default timeout for media loading is 15 seconds.
+   *  The default timeout for media loading is 8 seconds.
    */
   kIMAError_VAST_MEDIA_LOAD_TIMEOUT = 402,
   /**
@@ -146,12 +146,12 @@ typedef NS_ENUM(NSInteger, IMAErrorCode){
 #pragma mark - IMAAdError
 
 /**
- *  Surfaces an error that occured during ad loading or playing.
+ *  Surfaces an error that occurred during ad loading or playing.
  */
 @interface IMAAdError : NSObject
 
 /**
- *  The type of error that occured during ad loading or ad playing.
+ *  The type of error that occurred during ad loading or ad playing.
  */
 @property(nonatomic, readonly) IMAErrorType type;
 
@@ -165,6 +165,9 @@ typedef NS_ENUM(NSInteger, IMAErrorCode){
  */
 @property(nonatomic, copy, readonly) NSString *message;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

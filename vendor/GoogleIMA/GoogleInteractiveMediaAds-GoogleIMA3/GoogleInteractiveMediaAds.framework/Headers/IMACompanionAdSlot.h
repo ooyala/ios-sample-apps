@@ -80,6 +80,9 @@
  */
 - (instancetype)initWithView:(UIView *)view width:(int)width height:(int)height;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
