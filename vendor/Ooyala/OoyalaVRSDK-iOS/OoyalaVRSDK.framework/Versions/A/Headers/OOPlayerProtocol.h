@@ -108,6 +108,8 @@ typedef enum
 
 - (void)setClosedCaptionsLanguage:(NSString *)language;
 
+- (void)disablePlaylistClosedCaptions;
+
 /**
  * This returns the player state
  *

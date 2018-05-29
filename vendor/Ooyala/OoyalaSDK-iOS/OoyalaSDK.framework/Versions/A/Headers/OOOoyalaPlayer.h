@@ -912,5 +912,9 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * @returns current frame of current asset
  */
 - (UIImage *)screenshot;
+/**
+ * Disables the CC in the HLS Playlist.
+ */
+- (void)disablePlaylistClosedCaptions;
 
 @end

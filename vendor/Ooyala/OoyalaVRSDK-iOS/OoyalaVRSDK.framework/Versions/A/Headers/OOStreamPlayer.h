@@ -33,4 +33,9 @@
  */
 - (void)togglePictureInPictureMode;
 
+/**
+ * Disables the CC in the HLS Playlist.
+ */
+- (void)disablePlaylistClosedCaptions;
+
 @end
