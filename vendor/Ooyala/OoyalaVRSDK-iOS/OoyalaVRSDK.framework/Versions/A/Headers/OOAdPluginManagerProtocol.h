@@ -11,8 +11,7 @@
 /**
  * Defines player behavior after video playback has ended, defaults to OOOoyalaPlayerActionAtEndContinue
  */
-typedef enum
-{
+typedef NS_ENUM(NSInteger, OOAdMode) {
   OOAdModeNone,
   OOAdModeContentChanged,
   OOAdModeInitialPlay,
@@ -21,7 +20,7 @@ typedef enum
   OOAdModeContentFinished,
   OOAdModeContentError,
   OOAdModePluginInitiated
-} OOAdMode;
+};
 
 @protocol OOAdPluginManagerProtocol
 

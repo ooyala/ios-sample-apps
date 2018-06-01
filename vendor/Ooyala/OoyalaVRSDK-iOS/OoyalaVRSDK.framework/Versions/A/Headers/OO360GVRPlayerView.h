@@ -13,10 +13,10 @@
 /**
  * An enum whose cases describe how a user can change the video type.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, OO360VideoType) {
   Mono,
   Stereo,
-} OO360VideoType;
+};
 
 @property (nonatomic, assign) OO360VideoType videoType;
 

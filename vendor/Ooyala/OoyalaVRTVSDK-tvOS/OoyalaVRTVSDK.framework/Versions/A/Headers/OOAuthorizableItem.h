@@ -4,7 +4,7 @@
 /**
  * Authorize response codes
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, OOAuthCode) {
   OOAuthCodeUnknown = -2,                    /**< The authorization code was invalid */
   OOAuthCodeNotRequested = -1,               /**< The authorization has not been requested for this item */
   OOAuthCodeMin = 0,                         /**< The minimum value for auth codes from the server */
@@ -34,7 +34,7 @@ typedef enum {
   OOAuthCodeProviderOverCapTrial = 23,
   OOAuthCodeProxyDetected = 24,
   OOAuthCodeMax = 24                         /**< The maximum value for auth codes from the server */
-} OOAuthCode;
+};
 
 /**
  * A protocol that represents a content item that requires authorization to play.

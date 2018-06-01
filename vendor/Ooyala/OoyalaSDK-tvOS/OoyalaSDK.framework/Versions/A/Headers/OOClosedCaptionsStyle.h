@@ -29,14 +29,14 @@
 @property (nonatomic) CGFloat windowOpacity;
 
 /** Closed captions presentation, deprecated */
-typedef enum {
+typedef NS_ENUM(NSInteger, OOClosedCaptionPresentation) {
   /** text that appears all at once */
   OOClosedCaptionPopOn,
   /** text that scrolls up as new text appears */
   OOClosedCaptionRollUp,
   /** text where each new letter or word is displayed as it arrives */
   OOClosedCaptionPaintOn
-} OOClosedCaptionPresentation;
+};
 
 /** Closed captions presentation */
 @property (nonatomic) OOClosedCaptionPresentation presentation;
