@@ -44,8 +44,7 @@
 /**
  * Defines player behavior after video playback has ended, defaults to OOOoyalaPlayerActionAtEndContinue
  */
-typedef enum
-{
+typedef NS_ENUM(NSInteger, OOOoyalaPlayerActionAtEnd) {
     /** Start playing next video if available, otherwise pause */
     OOOoyalaPlayerActionAtEndContinue,
     /** Pause at the end of the video */
@@ -54,14 +53,13 @@ typedef enum
     OOOoyalaPlayerActionAtEndStop,
     /** Pause and reset to the beginning of the current video */
     OOOoyalaPlayerActionAtEndReset
-} OOOoyalaPlayerActionAtEnd;
+};
 
 /**
  * Defines which Ooyala API environment is used for API calls.
  * Defaults to OOOoyalaPlayerEnvironmentProduction and should never change for customer apps.
  */
-typedef enum
-{
+typedef NS_ENUM(NSInteger, OOOoyalaPlayerEnvironment) {
   /** Ooyala production environment */
   OOOoyalaPlayerEnvironmentProduction,
   /** Ooyala staging environment */
@@ -70,26 +68,25 @@ typedef enum
   OOOoyalaPlayerEnvironmentNextStaging,
   /** Ooyala local environment */
   OOOoyalaPlayerEnvironmentLocal
-} OOOoyalaPlayerEnvironment;
+};
 
 /** @internal
  * Defines different seek modes, which control the way seeking of the video is performed
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, OOSeekStyle) {
   /** @internal No seeking is allowed */
   OOSeekStyleNone,
   /** @internal Seeking is expensive and can only be performed at the end of user action */
   OOSeekStyleBasic,
   /** @internal Continous seeking is allowed */
   OOSeekStyleEnhanced
-} OOSeekStyle;
+};
 
 /**
  * Defines different slider UI styles
  * Defaults to OOOoyalaPlayerEnvironmentProduction and should never change for customer apps.
  */
-typedef NS_ENUM(NSInteger, OOUIProgressSliderMode)
-{
+typedef NS_ENUM(NSInteger, OOUIProgressSliderMode) {
   OOUIProgressSliderModeLive,
   OOUIProgressSliderModeAdInLive,
   OOUIProgressSliderModeNormal,
@@ -912,5 +909,9 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * @returns current frame of current asset
  */
 - (UIImage *)screenshot;
+/**
+ * Disables the CC in the HLS Playlist.
+ */
+- (void)disablePlaylistClosedCaptions;
 
 @end

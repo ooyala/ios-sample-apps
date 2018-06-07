@@ -13,21 +13,19 @@
 /**
  * Defines different gravity modes, which control how video is adjusted to available screen size
  */
-typedef enum
-{
+typedef NS_ENUM(NSInteger, OOOoyalaPlayerVideoGravity) {
   /** Specifies that the video should be stretched to fill the layer’s bounds. */
   OOOoyalaPlayerVideoGravityResize,
   /** Specifies that the player should preserve the video’s aspect ratio and fit the video within the layer’s bounds */
   OOOoyalaPlayerVideoGravityResizeAspect,
   /** Specifies that the player should preserve the video’s aspect ratio and fill the layer’s bounds. */
   OOOoyalaPlayerVideoGravityResizeAspectFill
-} OOOoyalaPlayerVideoGravity;
+};
 
 /**
  * Defines different possible player states
  */
-typedef NS_ENUM(NSUInteger, OOOoyalaPlayerState)
-{
+typedef NS_ENUM(NSUInteger, OOOoyalaPlayerState) {
   /** Initial state, player is created but no content is loaded */
   OOOoyalaPlayerStateInit,
   /** Loading content */
@@ -44,13 +42,12 @@ typedef NS_ENUM(NSUInteger, OOOoyalaPlayerState)
   OOOoyalaPlayerStateError
 };
 
-typedef enum
-{
+typedef NS_ENUM(NSInteger, OOOoyalaPlayerDesiredState) {
   /** user is playing a video */
   OOOoyalaPlayerDesiredStatePlaying,
   /** user is paused, video is showing */
   OOOoyalaPlayerDesiredStatePaused,
-} OOOoyalaPlayerDesiredState;
+};
 
 @protocol OOPlayerProtocol<NSObject>
 
@@ -107,6 +104,8 @@ typedef enum
 - (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity;
 
 - (void)setClosedCaptionsLanguage:(NSString *)language;
+
+- (void)disablePlaylistClosedCaptions;
 
 /**
  * This returns the player state

@@ -48,6 +48,12 @@
  */
 @property (nonatomic) id<OOSecureURLGenerator> secureURLGenerator;
 /**
+ * Enables PiP mode for devices that support it.
+ * This does not activate PiP, it will only instantiate the necessary objects needed for PiP mode.
+ * Default: NO
+ */
+@property (nonatomic) BOOL enablePictureInPictureSupport;
+/**
  * The picture in picture delegate to receive PIP events
  */
 @property (weak, nonatomic) id<AVPictureInPictureControllerDelegate> pipDelegate;

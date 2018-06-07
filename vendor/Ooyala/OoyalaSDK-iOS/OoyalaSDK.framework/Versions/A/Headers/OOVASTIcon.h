@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, ResourceType) {
   Static,
   IFrame,
   HTML
-} ResourceType;
+};
 
 
 /**

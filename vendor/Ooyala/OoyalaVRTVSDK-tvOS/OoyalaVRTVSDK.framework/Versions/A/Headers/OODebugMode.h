@@ -4,11 +4,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DebugMode) {
   None,
   LogOnly,
   LogAndAbort
-} DebugMode;
+};
 
 /**
  * Enable or disable Ooyala debug logs

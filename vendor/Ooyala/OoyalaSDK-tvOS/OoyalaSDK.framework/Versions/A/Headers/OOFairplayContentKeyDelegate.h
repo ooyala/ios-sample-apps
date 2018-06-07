@@ -22,8 +22,10 @@
  
  @param error description of what went wrong.
  */
-- (void)contentKeyFailedToRetriveWithError:(NSError *)error;
+- (void)contentKeyFailedToRetrieveWithError:(NSError *)error;
 
+
+@optional
 /**
  If we intent to download the Fairplay asset, this will be called after saving the Fairplay key retrieved from the server.
  
