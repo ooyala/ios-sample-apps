@@ -1,3 +1,4 @@
 vendor/Ooyala/OoyalaGVRFrameworks/OoyalaVRSDK.framework/Versions/A/OoyalaVRSDK filter=lfs diff=lfs merge=lfs -text
 vendor/Ooyala/OoyalaVRSDK-iOS/OoyalaVRSDK.framework/Versions/A/OoyalaVRSDK filter=lfs diff=lfs merge=lfs -text
 vendor/Ooyala/OoyalaVRTVSDK-tvOS/OoyalaVRTVSDK.framework/Versions/A/OoyalaVRTVSDK filter=lfs diff=lfs merge=lfs -text
+vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework filter=lfs diff=lfs merge=lfs -text
