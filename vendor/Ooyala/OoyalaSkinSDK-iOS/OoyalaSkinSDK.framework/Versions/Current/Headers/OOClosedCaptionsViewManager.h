@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RCTViewManager.h"
+#import <React/RCTViewManager.h>
+
 
 @interface OOClosedCaptionsViewManager : RCTViewManager
 
