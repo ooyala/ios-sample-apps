@@ -1,1 +1,0 @@
-You can view and download the NPAWSampleApp from our iOS Sample App Github Repository: https://github.com/ooyala/ios-sample-apps
