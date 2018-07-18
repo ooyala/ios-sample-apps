@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RCTView.h"
+#import <React/RCTView.h>
+
 
 @interface OOGradientView : RCTView
 
