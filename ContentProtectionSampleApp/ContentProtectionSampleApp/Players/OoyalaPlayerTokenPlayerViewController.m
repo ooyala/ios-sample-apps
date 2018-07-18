@@ -96,6 +96,15 @@
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
   [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  
+  // Add constraints
+  
+  [NSLayoutConstraint activateConstraints:@[
+                                            [self.ooyalaPlayerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
+                                            [self.ooyalaPlayerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
+                                            [self.ooyalaPlayerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
+                                            [self.ooyalaPlayerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
+                                            ]];
 
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   [self.ooyalaPlayerViewController.player play];
