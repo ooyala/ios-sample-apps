@@ -31,6 +31,7 @@
 @class OOManagedAdsPlugin;
 @class OOUserInfo;
 @class OOPlayer;
+@class OOSsaiAdsMetadata;
 
 /**
  * \defgroup key Most Commonly Used Classes
@@ -367,6 +368,24 @@ extern NSString *const OOOoyalaPlayerMultiAudioEnabledNotification;
  *   \brief Notification when audio track changed.
  */
 extern NSString *const OOOoyalaPlayerAudioTrackChangedNotification;
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when received the ads metadata for SSAI.
+ */
+extern NSString *const OOOoyalaPlayerSsaiAdsMetadataReceivedNotification;
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when an ssai ad break has started.
+ */
+extern NSString *const OOOoyalaPlayerSsaiPlaySingleAdNotification;
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when an SSAI ad break has ended.
+ */
+extern NSString *const OOOoyalaPlayerSsaiSingleAdPlayedNotification;
 
 /**
  * The OoyalaPlayer is the heart of the playback system.
@@ -913,5 +932,6 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * Disables the CC in the HLS Playlist.
  */
 - (void)disablePlaylistClosedCaptions;
+
 
 @end

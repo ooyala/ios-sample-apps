@@ -8,6 +8,8 @@
 #import "OOAnalyticsPluginProtocol.h"
 @class OOIQConfiguration;
 @class OOOoyalaPlayer;
+@class OOSsaiAdsMetadata;
+@class OOSsaiAdBreak;
 
 @interface OOIQAnalyticsPlugin : NSObject<OOAnalyticsPluginProtocol>
 

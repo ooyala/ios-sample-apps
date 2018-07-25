@@ -14,6 +14,7 @@
 @class OOChannel;
 @class OOClosedCaptions;
 @class OOUnbundledVideo;
+@class SsaiMetadata;
 
 /**
  * this class implements video stream object
@@ -142,5 +143,7 @@
  * @param predicate block that returns TRUE for ads to keep, FALSE for ads to remove.
  */
 -(void)filterAds:(NSPredicate*)predicate;
+
+-(BOOL)isSsaiEnabled;
 
 @end

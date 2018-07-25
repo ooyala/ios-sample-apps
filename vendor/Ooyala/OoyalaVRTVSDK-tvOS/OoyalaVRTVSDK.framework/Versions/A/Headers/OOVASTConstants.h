@@ -110,6 +110,22 @@ extern NSString *const OO_ATTRIBUTE_TEMPLATE_TYPE;            /**< The XML attri
 extern NSString *const OO_MIME_TYPE_MP4;                      /**< The MIME type for .mp4 files */
 extern NSString *const OO_MIME_TYPE_M3U8;                     /**< The MIME type for .m3u8 files */
 
+extern NSString *const OO_TAG_START;                          /**< The tag for start event */
+extern NSString *const OO_TAG_FIRST_QUARTILE;                 /**< The tag for first quartile event */
+extern NSString *const OO_TAG_MIDPOINT;                       /**< The tag for midpoint event */
+extern NSString *const OO_TAG_THIRD_QUARTILE;                 /**< The tag for third quartile event */
+extern NSString *const OO_TAG_COMPLETE;                       /**< The tag for complete event */
+extern NSString *const OO_TAG_MUTE;                           /**< The tag for mute event */
+extern NSString *const OO_TAG_UNMUTE;                         /**< The tag for unmute event */
+extern NSString *const OO_TAG_PAUSE;                          /**< The tag for pause event */
+extern NSString *const OO_TAG_RESUME;                         /**< The tag for resume event */
+extern NSString *const OO_TAG_FULLSCREEN;                     /**< The tag for fullscreen event */
+extern NSString *const OO_TAG_EXIT_FULLSCREEN;                /**< The tag for exit fullscreen event */
+extern NSString *const OO_TAG_SKIP;                           /**< The tag for skip event */
+extern NSString *const OO_TAG_REWIND;                         /**< The tag for rewind event */
+extern NSString *const OO_TAG_CLOSE_LINEAR;                   /**< The tag for close linear event */
+extern NSString *const OO_TAG_CLICK_THROUGH;                  /**< The tag for click through event */
+
 extern NSInteger const OO_ERROR_XML_PARSE;                    /**< The code of XML parsing error */
 extern NSInteger const OO_ERROR_VAST_SCHEMA;                  /**< The code of VAST schema validation error */
 extern NSInteger const OO_ERROR_VAST_VERSION;                 /**< The code of VAST version of response not supported error */

@@ -12,6 +12,7 @@
 @class OOPlayerAPIClient;
 @class OOVideo;
 @class OOFCCTVRating;
+@class SsaiMetadata;
 
 /**
  * A single playable content item, such as video
@@ -28,6 +29,7 @@
   BOOL authorized;
   BOOL haEnabled;
   OOAuthCode authCode;
+  SsaiMetadata *ssaiMetadata;
 }
 
 @property (readonly, nonatomic) NSString *embedCode;    /**< The OOContentItem's Embed Code */
@@ -48,6 +50,7 @@
 @property (readonly, nonatomic) BOOL haEnabled;
 @property (readonly, nonatomic) BOOL needsMidStreamCheck;
 @property (readonly, nonatomic) int midStreamCheckInterval;
+@property (readonly, nonatomic) SsaiMetadata *ssaiMetadata;
 
 /**
  * Initialize a OOContentItem

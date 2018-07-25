@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaErrorCode) {
   OOOoyalaErrorCodeCreateVRPlayerFailed = 29, /**< Failed to create VR player. */
   OOOoyalaErrorCodeUnknownError = 30, /**< Unknown error */
   OOOoyalaErrorCodeGeoBlockingError = 31, /**< Geo blocking error */
+  OOOoyalaErrorCodeEmbedCodeMetadataError = 32, /**< Embed Code Metadata error */
 };
 
 
