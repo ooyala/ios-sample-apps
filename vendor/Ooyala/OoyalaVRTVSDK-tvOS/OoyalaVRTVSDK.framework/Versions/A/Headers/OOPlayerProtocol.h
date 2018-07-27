@@ -116,6 +116,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerDesiredState) {
 @property (nonatomic)           BOOL seekable;
 @property (nonatomic, readonly) CMTimeRange seekableTimeRange;
 @property (nonatomic)           BOOL allowsExternalPlayback;
+@property (nonatomic)           BOOL usesExternalPlaybackWhileExternalScreenIsActive;
 @property (nonatomic, readonly) BOOL externalPlaybackActive;
 @property (nonatomic)           float rate; // playback rate
 @property (nonatomic, readonly) double bitrate;

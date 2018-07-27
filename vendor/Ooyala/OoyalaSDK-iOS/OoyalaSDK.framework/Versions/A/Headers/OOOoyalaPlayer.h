@@ -475,6 +475,9 @@ extern NSString *const OOOoyalaPlayerSsaiSingleAdPlayedNotification;
 @property (readonly, nonatomic, getter = isExternalPlaybackActive) BOOL externalPlaybackActive;
 
 @property (nonatomic) BOOL allowsExternalPlayback;
+
+@property (nonatomic) BOOL usesExternalPlaybackWhileExternalScreenIsActive; /** When external playback is enabled, this will share the video view to the external screen only, instead of mirroring the device. */
+
 @property (nonatomic) float playbackRate; /**< the rate of playback. 1 is the normal speed.  Set to .5 for half speed, 2 for double speed, etc. */
 @property (readonly, nonatomic) NSString *authToken; /**< The Auth Token provided by Ooyala Authorization, when using Ooyala Player Token */
 
