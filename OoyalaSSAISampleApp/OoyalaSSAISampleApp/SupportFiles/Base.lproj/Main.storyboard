@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jd0-Nq-oT7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="A6q-ZB-Fit">
+            <objects>
+                <navigationController id="jd0-Nq-oT7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIT-2l-zNM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OfW-1I-24u" kind="relationship" relationship="rootViewController" id="yPS-BP-n0g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ik-yz-i7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671" y="37"/>
+        </scene>
+        <!--Ooyala SSAI Sample App-->
+        <scene sceneID="uTE-oh-ZxH">
+            <objects>
+                <viewController id="OfW-1I-24u" customClass="AssetListViewController" customModule="OoyalaSSAISampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kxh-xD-iUo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M1f-tZ-mF6">
+                                <rect key="frame" x="0.0" y="134" width="375" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="BOg-JF-033">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCellReuseIdentifier" id="htR-oW-AvI">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="htR-oW-AvI" id="wEn-B3-8OV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uJq-ir-GvV" kind="show" identifier="PlayerViewControllerSegue" id="ggO-EU-fQ9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OfW-1I-24u" id="dWG-Ho-9Tr"/>
+                                    <outlet property="delegate" destination="OfW-1I-24u" id="3Ar-il-Ze8"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hg9-Zm-Siy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="70"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YrK-Ay-tcm">
+                                        <rect key="frame" x="20" y="20" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dcf-cU-a94">
+                                        <rect key="frame" x="183" y="19" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nk-CJ-Xmt">
+                                        <rect key="frame" x="84" y="21" width="49.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W03-kN-YKM">
+                                        <rect key="frame" x="247" y="20.5" width="35" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="W03-kN-YKM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dcf-cU-a94" secondAttribute="trailing" symbolic="YES" id="4mv-m8-XDR"/>
+                                    <constraint firstItem="5Nk-CJ-Xmt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YrK-Ay-tcm" secondAttribute="trailing" symbolic="YES" id="9Fp-d0-5nz"/>
+                                    <constraint firstItem="W03-kN-YKM" firstAttribute="centerY" secondItem="hg9-Zm-Siy" secondAttribute="centerY" id="Cng-T7-hK8"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Nk-CJ-Xmt" secondAttribute="trailing" constant="241.5" id="Czc-gH-76B"/>
+                                    <constraint firstAttribute="height" constant="70" id="GdR-ZS-qLK"/>
+                                    <constraint firstItem="YrK-Ay-tcm" firstAttribute="centerY" secondItem="hg9-Zm-Siy" secondAttribute="centerY" id="KE2-b6-EU3"/>
+                                    <constraint firstItem="Dcf-cU-a94" firstAttribute="centerY" secondItem="hg9-Zm-Siy" secondAttribute="centerY" id="YwI-6B-4HN"/>
+                                    <constraint firstAttribute="trailing" secondItem="W03-kN-YKM" secondAttribute="trailing" constant="93" id="bUU-Qo-rDj"/>
+                                    <constraint firstItem="5Nk-CJ-Xmt" firstAttribute="centerY" secondItem="hg9-Zm-Siy" secondAttribute="centerY" id="kBX-KI-Q34"/>
+                                    <constraint firstItem="YrK-Ay-tcm" firstAttribute="leading" secondItem="hg9-Zm-Siy" secondAttribute="leading" constant="20" id="mBM-30-5dP"/>
+                                    <constraint firstItem="Dcf-cU-a94" firstAttribute="centerX" secondItem="hg9-Zm-Siy" secondAttribute="centerX" constant="20" id="rWa-ZX-4qb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="US0-sI-4SE" firstAttribute="trailing" secondItem="M1f-tZ-mF6" secondAttribute="trailing" id="1v1-4S-xbl"/>
+                            <constraint firstItem="hg9-Zm-Siy" firstAttribute="leading" secondItem="US0-sI-4SE" secondAttribute="leading" id="G4v-I7-xlO"/>
+                            <constraint firstItem="US0-sI-4SE" firstAttribute="trailing" secondItem="hg9-Zm-Siy" secondAttribute="trailing" id="Lg1-iU-Ly1"/>
+                            <constraint firstItem="M1f-tZ-mF6" firstAttribute="top" secondItem="US0-sI-4SE" secondAttribute="top" constant="70" id="N6E-uB-VqQ"/>
+                            <constraint firstItem="M1f-tZ-mF6" firstAttribute="leading" secondItem="US0-sI-4SE" secondAttribute="leading" id="TSm-wS-Q7T"/>
+                            <constraint firstItem="US0-sI-4SE" firstAttribute="bottom" secondItem="M1f-tZ-mF6" secondAttribute="bottom" id="YuX-Fm-Vyd"/>
+                            <constraint firstItem="hg9-Zm-Siy" firstAttribute="top" secondItem="US0-sI-4SE" secondAttribute="top" id="g2A-mR-5wf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="US0-sI-4SE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ooyala SSAI Sample App" id="Xzz-I3-Vwo">
+                        <barButtonItem key="backBarButtonItem" title=" " id="sW4-JJ-9N7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="swtQA" destination="Dcf-cU-a94" id="8LB-2a-evJ"/>
+                        <outlet property="swtSkin" destination="YrK-Ay-tcm" id="em7-Oa-nMx"/>
+                        <outlet property="tableAssetList" destination="M1f-tZ-mF6" id="1f4-0P-EV0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5s9-IE-9jy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="36.431784107946029"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="aXy-Eq-lAw">
+            <objects>
+                <viewController id="uJq-ir-GvV" customClass="PlayerViewController" customModule="OoyalaSSAISampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zzm-ac-elO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8a5-Pa-yNx">
+                                <rect key="frame" x="20" y="84" width="335" height="220"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecu-d6-16G" customClass="MyTextView" customModule="OoyalaSSAISampleApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="351" width="335" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpf-g0-Dwx" customClass="MyButton" customModule="OoyalaSSAISampleApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="311" width="335" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Set Player Params"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-3X-ldW" customClass="MyTextView" customModule="OoyalaSSAISampleApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="459" width="335" height="188"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vFo-fq-ZEE"/>
+                    </view>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="btnSetPlayerParams" destination="zpf-g0-Dwx" id="m9R-SM-1rK"/>
+                        <outlet property="playerView" destination="8a5-Pa-yNx" id="HN8-4W-CAu"/>
+                        <outlet property="txtViewLog" destination="g2c-3X-ldW" id="IGP-G5-pdn"/>
+                        <outlet property="txtViewPlayerParams" destination="ecu-d6-16G" id="X1c-c6-yZR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abc-TQ-gle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093.5999999999999" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>
