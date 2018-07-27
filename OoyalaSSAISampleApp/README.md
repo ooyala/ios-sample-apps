@@ -60,8 +60,8 @@ ssaiPlugin.setParams(params);
 | Query String Parameters for Ooyala Pulse | Ooyala SSAI Parameters |
 | -----------------------------------------| ---------------------- |
 | pulse_host                               | vpDomain               |
-| pulse_tags                               | playerLevelShares      |
-| pulse_category                           | playerLevelTags        |
+| pulse_category                           | playerLevelShares      |
+| pulse_tags                               | playerLevelTags        |
 | pulse_linear_cuepoints                   | playerLevelCuePoints   |
 |                                          | position *             |
 
