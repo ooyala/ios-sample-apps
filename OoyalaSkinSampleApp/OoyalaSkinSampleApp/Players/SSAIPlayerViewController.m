@@ -55,9 +55,14 @@ AppDelegate *appDel;
                                                      domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
                                                     options:options];
   
+  // Bundle from OoyalaSkinSDK-iOS
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  
+  // Uncomment for local debugging
   //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
-  self.ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause; //This is recommended to make sure the endscreen shows up as expected
+  
+  //This is recommended to make sure the endscreen shows up as expected
+  self.ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
   
   NSDictionary *overrideConfig = @{ @"adScreen" : @{ @"showControlBar" : @true } };
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:nil
@@ -103,6 +108,13 @@ AppDelegate *appDel;
                                              object:self.skinController];
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+  [super viewDidDisappear:animated];
+  
+  [self.ssaiPlugin deregisterPlayer:self.ooyalaPlayer];
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - Private functions
 
 - (void)notificationHandler:(NSNotification*)notification {
@@ -135,10 +147,6 @@ AppDelegate *appDel;
   if  ( [self.ssaiPlugin setParams:params] && [self.ssaiPlugin.player state] != OOOoyalaPlayerStatePlaying ) {
     [self.ooyalaPlayer setEmbedCode:self.playerSelectionOption.embedCode];
   }
-}
-
--(void)dealloc{
-  [self.ssaiPlugin deregisterPlayer:self.ooyalaPlayer];
 }
 
 @end
