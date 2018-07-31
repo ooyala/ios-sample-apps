@@ -80,7 +80,7 @@ AppDelegate *appDel;
   // Load the video
   [self.ooyalaPlayer setEmbedCode:self.embedCode];
   
-  // Initialize Ooyala SSAI Plugin
+  // Ooyala SSAI Plugin initialization
   self.ssaiPlugin = [[OOSsaiPlugin alloc] init];
   
   // In QA Mode , making textView visible
