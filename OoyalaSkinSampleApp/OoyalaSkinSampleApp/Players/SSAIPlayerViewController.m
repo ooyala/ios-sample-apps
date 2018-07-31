@@ -81,7 +81,6 @@ AppDelegate *appDel;
   [self.ooyalaPlayer setEmbedCode:self.embedCode];
   
   self.ssaiPlugin = [[OOSsaiPlugin alloc] init];
-  [self.ssaiPlugin registerPlayer:self.ooyalaPlayer];
   
   // In QA Mode , making textView visible
   self.qaView.hidden = !self.qaModeEnabled;
@@ -108,7 +107,12 @@ AppDelegate *appDel;
                                              object:self.skinController];
 }
 
--(void)viewDidDisappear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
+  [super viewWillAppear:animated];
+  [self.ssaiPlugin registerPlayer:self.ooyalaPlayer];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
   [super viewDidDisappear:animated];
   
   [self.ssaiPlugin deregisterPlayer:self.ooyalaPlayer];
