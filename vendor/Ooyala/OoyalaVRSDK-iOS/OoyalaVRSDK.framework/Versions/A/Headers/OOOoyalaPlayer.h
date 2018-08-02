@@ -95,6 +95,26 @@ typedef NS_ENUM(NSInteger, OOUIProgressSliderMode) {
   OOUIProgressSliderModeElapsedDuration
 };
 
+/**
+ Defines states for Ooyala Analytics (IQ) tracking.
+ 
+ - OOIQAnalyticsTrackingStateDefault:
+    Analytics is enabled and sends data to analytics servers
+    Device guid will stay same until app is present on phone.
+    Device guid will be stored in local storage
+ - OOIQAnalyticsTrackingStateDisabled:
+    Analytics will be completely disabled and no data will be send to analytics servers
+ - OOIQAnalyticsTrackingStateAnonymouse:
+    Analytics data will be send to analytics servers
+    Each time video plays new device guid will be generated
+    Device guid will NOT be stored on device.
+ */
+typedef NS_ENUM(NSUInteger, OOIQAnalyticsTrackingState) {
+  OOIQAnalyticsTrackingStateDefault,
+  OOIQAnalyticsTrackingStateDisabled,
+  OOIQAnalyticsTrackingStateAnonymouse,
+};
+
 #define OOOOYALAPLAYER_DURATION_MISSING (-1)
 
 #pragma mark Notification Names
@@ -449,7 +469,20 @@ extern NSString *const OOOoyalaPlayerSsaiSingleAdPlayedNotification;
  * YES means to try to use local/debug DRM modes,
  * NO means to use regular DRM config.
  */
-+(void)setUseDebugDRMPlayback:(BOOL)enable;
++ (void)setUseDebugDRMPlayback:(BOOL)enable;
+
+/**
+ Use to get state for Ooyala Analytics (IQ) tracking.
+ @return Returns state for Ooyala Analytics (IQ) tracking.
+ */
++ (OOIQAnalyticsTrackingState)iqAnalyticsTrackingState;
+
+/**
+ Use to set different states for Ooyala Analytics (IQ) tracking. Default OOIQAnalyticsTrackingStateDefault.
+ @warning Property should be set before creating an instance of OOoyalaPlayer.
+ @param[in] state The IQ analytics state
+ */
++ (void)setIqAnalyticsTrackingState:(OOIQAnalyticsTrackingState)state;
 
 #pragma mark Properties
 
