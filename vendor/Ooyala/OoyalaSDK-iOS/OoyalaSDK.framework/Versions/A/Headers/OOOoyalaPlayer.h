@@ -104,7 +104,7 @@ typedef NS_ENUM(NSInteger, OOUIProgressSliderMode) {
     Device guid will be stored in local storage
  - OOIQAnalyticsTrackingStateDisabled:
     Analytics will be completely disabled and no data will be send to analytics servers
- - OOIQAnalyticsTrackingStateAnonymouse:
+ - OOIQAnalyticsTrackingStateAnonymous:
     Analytics data will be send to analytics servers
     Each time video plays new device guid will be generated
     Device guid will NOT be stored on device.
@@ -112,7 +112,7 @@ typedef NS_ENUM(NSInteger, OOUIProgressSliderMode) {
 typedef NS_ENUM(NSUInteger, OOIQAnalyticsTrackingState) {
   OOIQAnalyticsTrackingStateDefault,
   OOIQAnalyticsTrackingStateDisabled,
-  OOIQAnalyticsTrackingStateAnonymouse,
+  OOIQAnalyticsTrackingStateAnonymous,
 };
 
 #define OOOOYALAPLAYER_DURATION_MISSING (-1)
