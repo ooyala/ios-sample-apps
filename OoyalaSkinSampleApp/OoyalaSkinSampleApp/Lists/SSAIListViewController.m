@@ -27,7 +27,12 @@
                                                          playerDomain:@"http://www.ooyala.com"
                                                         adSetProvider:@"google_dfp"
                                                        viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
-  
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / LIVE / Ooyala Pulse"
+                                                            embedCode:@"lkb2cyZjE6wp94YSGIEjm6Em1yH0P3zT"
+                                                                pcode:@"RpOWUyOq86gFq-STNqpgzhzIcXHV"
+                                                         playerDomain:@"http://www.ooyala.com"
+                                                        adSetProvider:@"ooyala_pulse"
+                                                       viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
 }
 
 @end
