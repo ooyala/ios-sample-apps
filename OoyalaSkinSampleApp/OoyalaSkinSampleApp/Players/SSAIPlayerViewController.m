@@ -115,8 +115,7 @@ AppDelegate *appDel;
 
 - (void)viewWillDisappear:(BOOL)animated{
   [super viewWillDisappear:animated];
-  OOOoyalaPlayer *test = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
-  [self.ssaiPlugin deregisterPlayer:test];
+  [self.ssaiPlugin deregisterPlayer:self.ooyalaPlayer];
 }
 
 #pragma mark - Private functions
