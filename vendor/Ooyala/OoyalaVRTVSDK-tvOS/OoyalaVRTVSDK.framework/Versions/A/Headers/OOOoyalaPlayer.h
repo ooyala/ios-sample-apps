@@ -271,6 +271,13 @@ extern NSString *const OOOoyalaPlayerAdErrorNotification;
 
 /**
  * \memberof OOOoyalaPlayer
+ * \brief The name used for notifications which fire when the closed captions are in manifest.
+ * \details Nothing is provided through UserInfo.
+ */
+extern NSString *const OOOoyalaPlayerCCManifestChangedNotification;
+
+/**
+ * \memberof OOOoyalaPlayer
  * \brief The name used for notifications which fire when the closed captions language is changed.
  * \details Nothing is provided through UserInfo. You can get the language from closedCaptionsLanguage.
  * @see closedCaptionsLanguage
