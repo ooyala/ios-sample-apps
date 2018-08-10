@@ -108,16 +108,15 @@ AppDelegate *appDel;
                                              object:self.skinController];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated{
   [super viewWillAppear:animated];
   [self.ssaiPlugin registerPlayer:self.ooyalaPlayer];
 }
 
-- (void)viewDidDisappear:(BOOL)animated{
-  [super viewDidDisappear:animated];
-  
-  [self.ssaiPlugin deregisterPlayer:self.ooyalaPlayer];
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
+- (void)viewWillDisappear:(BOOL)animated{
+  [super viewWillDisappear:animated];
+  OOOoyalaPlayer *test = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  [self.ssaiPlugin deregisterPlayer:test];
 }
 
 #pragma mark - Private functions
@@ -152,6 +151,10 @@ AppDelegate *appDel;
   if  ( [self.ssaiPlugin setParams:params] && [self.ssaiPlugin.player state] != OOOoyalaPlayerStatePlaying ) {
     [self.ooyalaPlayer setEmbedCode:self.playerSelectionOption.embedCode];
   }
+}
+
+- (void)dealloc{
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
