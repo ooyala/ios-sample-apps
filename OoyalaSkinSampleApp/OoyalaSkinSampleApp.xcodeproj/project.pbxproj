@@ -59,8 +59,8 @@
 		97DE27B01B212BC00071DBFE /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE27AF1B212BC00071DBFE /* libc++abi.dylib */; };
 		97DE27B21B212BCD0071DBFE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE27B11B212BCD0071DBFE /* libc++.dylib */; };
 		97DE27B41B212BD90071DBFE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DE27B31B212BD90071DBFE /* libxml2.dylib */; };
-		B8A4A486211D053900038BC0 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA3A5F210F8B0F004C6D7F /* OoyalaSSAISDK.framework */; };
 		B8A4A487211D054500038BC0 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8E7F1D1BDED4C40078155C /* OoyalaSDK.framework */; };
+		B8BB8813211E1E8B00169C40 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA3A5F210F8B0F004C6D7F /* OoyalaSSAISDK.framework */; };
 		B8FA3A5E210F880F004C6D7F /* SSAIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FA3A5D210F880F004C6D7F /* SSAIListViewController.m */; };
 		B8FA3A64210F8BFD004C6D7F /* SSAIPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FA3A62210F8BFD004C6D7F /* SSAIPlayerViewController.m */; };
 		B8FA3A65210F8BFD004C6D7F /* SSAIPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8FA3A63210F8BFD004C6D7F /* SSAIPlayerViewController.xib */; };
@@ -205,8 +205,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8BB8813211E1E8B00169C40 /* OoyalaSSAISDK.framework in Frameworks */,
 				B8A4A487211D054500038BC0 /* OoyalaSDK.framework in Frameworks */,
-				B8A4A486211D053900038BC0 /* OoyalaSSAISDK.framework in Frameworks */,
 				0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */,
 				97B22E4E1BD05D1900D89589 /* AdSupport.framework in Frameworks */,
 				0B8E7F1C1BDED4BD0078155C /* OoyalaIMASDK.framework in Frameworks */,
