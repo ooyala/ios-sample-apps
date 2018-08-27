@@ -57,4 +57,12 @@
 
 // the user Agent of this particular player
 @property (nonatomic, readonly) NSString *userAgent;
+
+/*
+ Additional params send to the SAS request.
+ The dictionary should contain [NSString:NSString] key-value pairs.
+ The dictionary key will be the query param name and the value will be the value of that query param.
+ */
+@property (nonatomic, readonly) NSDictionary *additionalParams;
+
 @end
