@@ -82,6 +82,7 @@ AppDelegate *appDel;
   
   // Ooyala SSAI Plugin initialization
   self.ssaiPlugin = [[OOSsaiPlugin alloc] init];
+  [self.ssaiPlugin registerPlayer:self.ooyalaPlayer];
   
   // In QA Mode , making textView visible
   self.qaView.hidden = !self.qaModeEnabled;
@@ -106,16 +107,6 @@ AppDelegate *appDel;
                                            selector:@selector(notificationHandler:)
                                                name:nil
                                              object:self.skinController];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-  [super viewWillAppear:animated];
-  [self.ssaiPlugin registerPlayer:self.ooyalaPlayer];
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-  [super viewWillDisappear:animated];
-  [self.ssaiPlugin deregisterPlayer:self.ooyalaPlayer];
 }
 
 #pragma mark - Private functions
@@ -153,6 +144,7 @@ AppDelegate *appDel;
 }
 
 - (void)dealloc{
+  [self.ssaiPlugin deregisterPlayer:self.ooyalaPlayer];
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
