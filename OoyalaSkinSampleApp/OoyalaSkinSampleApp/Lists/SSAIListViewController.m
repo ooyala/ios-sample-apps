@@ -33,6 +33,12 @@
                                                          playerDomain:@"http://www.ooyala.com"
                                                         adSetProvider:@"ooyala_pulse"
                                                        viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / LIVE / Google DFP"
+                                                            embedCode:@"s2M213ZDE6A-DU2Tr-k0DI-8PgnFIcmU"
+                                                                pcode:@"RpOWUyOq86gFq-STNqpgzhzIcXHV"
+                                                         playerDomain:@"http://www.ooyala.com"
+                                                        adSetProvider:@"google_dfp"
+                                                       viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
 }
 
 @end
