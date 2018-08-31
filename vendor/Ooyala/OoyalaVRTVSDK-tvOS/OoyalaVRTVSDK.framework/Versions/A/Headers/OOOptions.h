@@ -4,6 +4,7 @@
 @class OOFCCTVRatingConfiguration;
 @class OOIQConfiguration;
 @protocol AVPictureInPictureControllerDelegate;
+@protocol OOPlayerInfo;
 
 /**
  * Configurations to change the behavior of the OoyalaPlayer
@@ -61,6 +62,12 @@
  * Bypass the check to ensure the provided PCode matches the asset's Pcode
  */
 @property (nonatomic) BOOL bypassPCodeMatching;
+
+/**
+ * The PlayerInfo used when making network requests to the Ooyala servers
+ */
+@property (nonatomic) id<OOPlayerInfo> playerInfo;
+
 /**
  * Disable the support of VAST and Ooyala Ads that is enabled in the SDK by default
  */
