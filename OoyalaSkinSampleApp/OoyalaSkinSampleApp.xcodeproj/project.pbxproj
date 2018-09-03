@@ -44,6 +44,7 @@
 		7539E080205ABFE200964F9C /* MultiAudioListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539E07F205ABFE200964F9C /* MultiAudioListViewController.m */; };
 		75905FEB20ECED480089AF4D /* DRMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75905FEA20ECED480089AF4D /* DRMPlayerViewController.m */; };
 		75905FEE20ECF2590089AF4D /* DRMPlayerSelectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75905FED20ECF2590089AF4D /* DRMPlayerSelectionOptions.m */; };
+		75FC0798213D936C00D91A01 /* PlaybackSpeedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FC0797213D936C00D91A01 /* PlaybackSpeedListViewController.m */; };
 		972ED77E1AE184CE005043DC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 972ED77D1AE184CE005043DC /* libz.dylib */; };
 		9756A7581CF677D500D292F0 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */; };
 		97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */; };
@@ -154,6 +155,8 @@
 		75905FEA20ECED480089AF4D /* DRMPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMPlayerViewController.m; sourceTree = "<group>"; };
 		75905FEC20ECF2590089AF4D /* DRMPlayerSelectionOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMPlayerSelectionOptions.h; sourceTree = "<group>"; };
 		75905FED20ECF2590089AF4D /* DRMPlayerSelectionOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMPlayerSelectionOptions.m; sourceTree = "<group>"; };
+		75FC0796213D936C00D91A01 /* PlaybackSpeedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaybackSpeedListViewController.h; sourceTree = "<group>"; };
+		75FC0797213D936C00D91A01 /* PlaybackSpeedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaybackSpeedListViewController.m; sourceTree = "<group>"; };
 		972ED77D1AE184CE005043DC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		97930C0B1B670971009B3512 /* FreewheelPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreewheelPlayerViewController.h; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				7539E07F205ABFE200964F9C /* MultiAudioListViewController.m */,
 				B8FA3A5C210F880F004C6D7F /* SSAIListViewController.h */,
 				B8FA3A5D210F880F004C6D7F /* SSAIListViewController.m */,
+				75FC0796213D936C00D91A01 /* PlaybackSpeedListViewController.h */,
+				75FC0797213D936C00D91A01 /* PlaybackSpeedListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */,
 				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
+				75FC0798213D936C00D91A01 /* PlaybackSpeedListViewController.m in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
 				75905FEE20ECF2590089AF4D /* DRMPlayerSelectionOptions.m in Sources */,
 				7539E080205ABFE200964F9C /* MultiAudioListViewController.m in Sources */,
