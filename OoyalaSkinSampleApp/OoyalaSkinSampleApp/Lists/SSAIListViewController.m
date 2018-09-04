@@ -27,6 +27,18 @@
                                                          playerDomain:@"http://www.ooyala.com"
                                                         adSetProvider:@"google_dfp"
                                                        viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / VOD / Ooyala Pulse / CC DFXP"
+                                                            embedCode:@"8yZXE0ZzE6596qdcG58aTnvzADUBLC2I"
+                                                                pcode:@"ZsdGgyOnugo44o442aALkge_dVVK"
+                                                         playerDomain:@"http://www.ooyala.com"
+                                                        adSetProvider:@"ooyala_pulse"
+                                                       viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / VOD / Google DFP / CC DFXP"
+                                                            embedCode:@"54ZHE0ZzE6JQBu_T099L8NWvzzqsnrKG"
+                                                                pcode:@"ZsdGgyOnugo44o442aALkge_dVVK"
+                                                         playerDomain:@"http://www.ooyala.com"
+                                                        adSetProvider:@"google_dfp"
+                                                       viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / LIVE / Ooyala Pulse"
                                                             embedCode:@"lkb2cyZjE6wp94YSGIEjm6Em1yH0P3zT"
                                                                 pcode:@"RpOWUyOq86gFq-STNqpgzhzIcXHV"
