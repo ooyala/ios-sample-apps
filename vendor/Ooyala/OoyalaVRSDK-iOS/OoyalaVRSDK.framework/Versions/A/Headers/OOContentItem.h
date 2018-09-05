@@ -51,6 +51,7 @@
 @property (readonly, nonatomic) BOOL needsMidStreamCheck;
 @property (readonly, nonatomic) int midStreamCheckInterval;
 @property (readonly, nonatomic) SsaiMetadata *ssaiMetadata;
+@property (readonly, nonatomic) NSMutableArray *externalAds;
 
 /**
  * Initialize a OOContentItem

@@ -12,6 +12,7 @@
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong, readonly) NSString *type;
 @property (nonatomic, strong, readonly) NSDictionary *metadata;
+@property (nonatomic) NSDictionary *ads;
 
 - (id)initWithName:(NSString *)name type:(NSString *)type metadata:(NSDictionary *)metadata;
 
