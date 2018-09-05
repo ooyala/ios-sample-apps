@@ -9,7 +9,6 @@
 #import "ChromecastListViewController.h"
 #import "PlayerViewController.h"
 #import "Utils.h"
-#import "CustomizedMiniControllerView.h"
 #import "ChromecastPlayerSelectionOption.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
@@ -18,14 +17,14 @@
 #import "OOCastManagerFetcher.h"
 
 @interface ChromecastListViewController ()
-@property(nonatomic, strong) IBOutlet UINavigationItem *navigationBar;
-@property(nonatomic, strong) NSMutableArray *mediaList;
-@property(nonatomic, strong) ChromecastPlayerSelectionOption *currentMediaInfo;
-@property(nonatomic, strong) OOCastManager *castManager;
+@property (nonatomic) IBOutlet UINavigationItem *navigationBar;
+@property (nonatomic) NSMutableArray *mediaList;
+@property (nonatomic) ChromecastPlayerSelectionOption *currentMediaInfo;
+@property (nonatomic) OOCastManager *castManager;
 
-@property (strong, nonatomic) UIBarButtonItem *castButton;
-@property (strong, nonatomic) CustomizedMiniControllerView *bottomMiniControllerView;
-@property (strong, nonatomic) NSMutableArray *cells;
+@property (nonatomic) UIBarButtonItem *castButton;
+@property (nonatomic) OOCastMiniControllerView *bottomMiniControllerView;
+@property (nonatomic) NSMutableArray *cells;
 
 @property (nonatomic) NSIndexPath *lastSelected;
 @end
@@ -81,7 +80,7 @@
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  self.bottomMiniControllerView = [[CustomizedMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
+  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
   [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
