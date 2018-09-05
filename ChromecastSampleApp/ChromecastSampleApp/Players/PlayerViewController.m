@@ -53,6 +53,18 @@
   self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
   
+  // Add custom parameters
+  
+  NSMutableDictionary<NSString *, NSString *> *customParams = [NSMutableDictionary new];
+  
+  customParams[@"userName"] = @"User";
+  customParams[@"initialVolume"] = @"1";
+  customParams[@"embedToken"] = @"some-uu-embed-token";
+  customParams[@"title"] = @"New title";
+  customParams[@"description"] = @"New description";
+  
+  self.castManager.additionalInitParams = customParams;
+  
   UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
   self.navigationBar.rightBarButtonItem = leftbutton;
   
