@@ -17,14 +17,14 @@
 #import "OOCastManagerFetcher.h"
 
 @interface ChromecastListViewController ()
-@property(nonatomic, strong) IBOutlet UINavigationItem *navigationBar;
-@property(nonatomic, strong) NSMutableArray *mediaList;
-@property(nonatomic, strong) ChromecastPlayerSelectionOption *currentMediaInfo;
-@property(nonatomic, strong) OOCastManager *castManager;
+@property (nonatomic) IBOutlet UINavigationItem *navigationBar;
+@property (nonatomic) NSMutableArray *mediaList;
+@property (nonatomic) ChromecastPlayerSelectionOption *currentMediaInfo;
+@property (nonatomic) OOCastManager *castManager;
 
-@property (strong, nonatomic) UIBarButtonItem *castButton;
-@property (strong, nonatomic) OOCastMiniControllerView *bottomMiniControllerView;
-@property (strong, nonatomic) NSMutableArray *cells;
+@property (nonatomic) UIBarButtonItem *castButton;
+@property (nonatomic) OOCastMiniControllerView *bottomMiniControllerView;
+@property (nonatomic) NSMutableArray *cells;
 
 @property (nonatomic) NSIndexPath *lastSelected;
 @end
