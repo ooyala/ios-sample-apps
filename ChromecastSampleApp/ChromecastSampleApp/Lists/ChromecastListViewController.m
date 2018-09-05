@@ -9,7 +9,6 @@
 #import "ChromecastListViewController.h"
 #import "PlayerViewController.h"
 #import "Utils.h"
-#import "CustomizedMiniControllerView.h"
 #import "ChromecastPlayerSelectionOption.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaCastSDK/OOCastMiniControllerView.h>
@@ -24,7 +23,7 @@
 @property(nonatomic, strong) OOCastManager *castManager;
 
 @property (strong, nonatomic) UIBarButtonItem *castButton;
-@property (strong, nonatomic) CustomizedMiniControllerView *bottomMiniControllerView;
+@property (strong, nonatomic) OOCastMiniControllerView *bottomMiniControllerView;
 @property (strong, nonatomic) NSMutableArray *cells;
 
 @property (nonatomic) NSIndexPath *lastSelected;
@@ -81,7 +80,7 @@
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  self.bottomMiniControllerView = [[CustomizedMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
+  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
   [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
