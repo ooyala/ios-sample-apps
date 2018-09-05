@@ -5,7 +5,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OOAdSpotManager.h"
 
 #ifdef OoyalaVRSDK_h
   #import <OoyalaVRSDK/OoyalaVRSDK.h>
@@ -20,6 +19,7 @@
 @class OOOoyalaPlayer;
 @class OOIMAConfiguration;
 @class OOIMAAdPlayer;
+@class OOAdSpotManager;
 
 @class IMAAdsManager;
 @class IMAAdsLoader;
