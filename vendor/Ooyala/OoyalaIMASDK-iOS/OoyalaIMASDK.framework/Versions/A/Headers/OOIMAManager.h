@@ -46,7 +46,7 @@
 @property(nonatomic, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
 @property(readonly) IMAAdDisplayContainer *adDisplayContainer;
 @property(readonly) OOStateNotifier *stateNotifier;
-@property(readonly, nonatomic) NSMutableArray *externalAds;
+
 @property(nonatomic, weak) id<OOIMAAdsManagerDelegate> imaAdsManagerDelegate;
 
 /**
@@ -104,13 +104,5 @@
  * This is meant to be called only by the OOIMAAdPlayer.
  */
 -(void)pause;
-
-
-/**
- * Parse the JSON array corresponding to the "all_ads" field in the metadata and extract this
- * data into an Array with data about position and the ad tag URL
- *
- */
-- (OOAdSpotManager *)parseAllAdsMetadata:(NSMutableArray *)adsMetadata;
 
 @end

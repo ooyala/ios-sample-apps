@@ -70,33 +70,4 @@
  */
 - (NSUInteger)count;
 
-/**
- * Get first ad in ad array
- *
- * @returns OOAdSpot
- */
-- (OOAdSpot *)getFirstAd;
-
-/**
- * Get last ad in ad array
- *
- * @returns OOAdSpot
- */
-- (OOAdSpot *)getLastAd;
-
-/**
- * Returns YES if all ads were already played
- *
- * @returns YES or NO
- */
-- (BOOL)allAdsPlayed;
-
-/**
- * Returns YES if ad was already played
- *
- * @returns YES or NO
- */
-- (BOOL)adPlayed:(OOAdSpot *)ad;
-
-
 @end
