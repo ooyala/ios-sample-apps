@@ -82,15 +82,21 @@
 @property (nonatomic, getter=isHEVCEnabled) BOOL HEVCEnabled;
 
 /**
+ * The initial playback speed rate. Default 1.0.
+ * @warning: Not working for live, Ad's and VR assets.
+ */
+@property (nonatomic) Float64 initialPlaybackSpeedRate;
+
+/**
  * Initialize an OOOptions object with the all properties with default values
  * @returns the initialized OOOptions
  */
--(instancetype) init;
+- (instancetype)init;
 
 /**
  * Logs all properties that are part of this OOOptions.
  *
  */
--(void) logProperties;
+- (void)logProperties;
 
 @end

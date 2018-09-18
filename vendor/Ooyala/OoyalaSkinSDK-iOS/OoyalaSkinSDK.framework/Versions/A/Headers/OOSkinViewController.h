@@ -28,7 +28,7 @@ extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fir
 /**
  Programatically change the fullscreen mode of the player.
  */
-@property (nonatomic, getter=isFullscreen) BOOL fullscreen DEPRECATED_MSG_ATTRIBUTE("Setter is deprecated and will be removed in a future version. Use autoFullscreenWithRotatedEnabled instead for enable/disable auto full screen mode after device rotation changes.");
+@property (nonatomic, getter=isFullscreen) BOOL fullscreen;
 
 /**
  Auto enter/exit full screen mode when device orientation changed. Default NO.

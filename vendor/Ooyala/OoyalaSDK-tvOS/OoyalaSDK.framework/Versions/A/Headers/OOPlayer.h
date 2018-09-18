@@ -14,9 +14,10 @@
 #import "OOPlayerProtocol.h"
 #import "OOLifeCycle.h"
 #import "OOAudioTrackSelectionProtocol.h"
+#import "OOPlaybackSpeedSelectionProtocol.h"
 
 
-@interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle, OOAudioTrackSelectionProtocol> { // really, an Abstract class.
+@interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle, OOAudioTrackSelectionProtocol, OOPlaybackSpeedSelectionProtocol> { // really, an Abstract class.
 @protected
   OOOoyalaError *playerError;
   UIView *view;

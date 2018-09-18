@@ -13,6 +13,7 @@
 #import "OOUnbundledVideo.h"
 #import "OOMultiAudioProtocol.h"
 #import "OOAssetLoaderDelegate.h"
+#import "OOPlaybackSpeedProtocol.h"
 
 
 @class OOContentItem;
@@ -415,11 +416,23 @@ extern NSString *const OOOoyalaPlayerSsaiPlaySingleAdNotification;
 extern NSString *const OOOoyalaPlayerSsaiSingleAdPlayedNotification;
 
 /**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when asset is available for playback speed.
+ */
+extern NSString *const OOOoyalaPlayerPlaybackSpeedEnabledNotification;
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when playback speed rate changed.
+ */
+extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification;
+
+/**
  * The OoyalaPlayer is the heart of the playback system.
  * Use it to configure and control asset playback, and to be aware of playback state changes.
 * \ingroup key
  */
-@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol, OOMultiAudioProtocol>
+@interface OOOoyalaPlayer : NSObject<OOAdPluginManagerProtocol, OOMultiAudioProtocol, OOPlaybackSpeedProtocol>
 
 #pragma mark Statics
 /**
