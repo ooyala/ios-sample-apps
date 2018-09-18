@@ -26,6 +26,8 @@
 		CA8D5327215189CF00E3EB2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA8D532E21518A0B00E3EB2E /* CapsGeneratorFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CapsGeneratorFramework.framework; sourceTree = "<group>"; };
 		CA8D532F21518A0B00E3EB2E /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		CA8D533221518B9300E3EB2E /* DDMMSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDMMSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA8D533321518B9400E3EB2E /* DeleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DeleteViewController.h; path = DDMMSampleApp/DeleteViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +46,11 @@
 		CA8D530F215189CE00E3EB2E = {
 			isa = PBXGroup;
 			children = (
+				CA8D533321518B9400E3EB2E /* DeleteViewController.h */,
 				CA8D531A215189CF00E3EB2E /* DDMMSampleApp */,
 				CA8D532D21518A0B00E3EB2E /* VendorLibraries */,
 				CA8D5319215189CF00E3EB2E /* Products */,
+				CA8D533221518B9300E3EB2E /* DDMMSampleApp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +116,7 @@
 				TargetAttributes = {
 					CA8D5317215189CF00E3EB2E = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -298,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +316,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DDMMSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DDMMSampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,6 +340,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DDMMSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DDMMSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
