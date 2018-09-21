@@ -21,13 +21,12 @@
 		0B1AFBE61B0C09BB00347DFA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD81B0C09BB00347DFA /* Utils.m */; };
 		0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */; };
 		0BCC6E2A1D2F30B80040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E291D2F30B80040B0B2 /* AVKit.framework */; };
-		5E3B14391C5806D50078E075 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B14381C5806D40078E075 /* GoogleCast.framework */; };
+		39B612D02155330F00E2277C /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B612CF2155330F00E2277C /* GoogleCast.framework */; };
 		5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143A1C5807230078E075 /* libxml2.tbd */; };
 		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
 		7AB3313D205BC51E006C4313 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; };
-		7AB3313E205BC525006C4313 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; };
 		7AB3313F205BC525006C4313 /* GoogleCast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97E5874E1D4ADFDD00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */; };
 		FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */; };
@@ -81,7 +80,7 @@
 		0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastPlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BCC6E291D2F30B80040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSampleApp.entitlements; sourceTree = "<group>"; };
-		5E3B14381C5806D40078E075 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "../vendor/GoogleCast/GoogleCastSDK-2.7.1-Release/GoogleCast.framework"; sourceTree = "<group>"; };
+		39B612CF2155330F00E2277C /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = VendorLibraries/GoogleCast.framework; sourceTree = "<group>"; };
 		5E3B143A1C5807230078E075 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		5E3B143C1C5807430078E075 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5E5B755A1C472C4200371A9E /* CastPlaybackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastPlaybackView.h; sourceTree = "<group>"; };
@@ -120,7 +119,6 @@
 				7AB3313D205BC51E006C4313 /* GoogleCast.framework in Frameworks */,
 				5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */,
 				5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */,
-				5E3B14391C5806D50078E075 /* GoogleCast.framework in Frameworks */,
 				0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */,
 				0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */,
 				FF49D20F19CBAB91001B156F /* SystemConfiguration.framework in Frameworks */,
@@ -131,7 +129,7 @@
 				FF49D20519CBAB3F001B156F /* EventKit.framework in Frameworks */,
 				FF49D20319CBAB28001B156F /* MessageUI.framework in Frameworks */,
 				FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */,
-				7AB3313E205BC525006C4313 /* GoogleCast.framework in Frameworks */,
+				39B612D02155330F00E2277C /* GoogleCast.framework in Frameworks */,
 				FF21F0DC19CB7A2100FE9D07 /* CFNetwork.framework in Frameworks */,
 				FF21F0DD19CB7A2100FE9D07 /* CoreMedia.framework in Frameworks */,
 				FF21F0DF19CB7A2100FE9D07 /* MediaAccessibility.framework in Frameworks */,
@@ -249,7 +247,7 @@
 				0BCC6E291D2F30B80040B0B2 /* AVKit.framework */,
 				5E3B143C1C5807430078E075 /* libz.tbd */,
 				5E3B143A1C5807230078E075 /* libxml2.tbd */,
-				5E3B14381C5806D40078E075 /* GoogleCast.framework */,
+				39B612CF2155330F00E2277C /* GoogleCast.framework */,
 				FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */,
 				FF49D20C19CBAB84001B156F /* UIKit.framework */,
 				FF49D20A19CBAB78001B156F /* Foundation.framework */,
@@ -385,13 +383,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -401,6 +409,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -429,13 +438,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -444,6 +463,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
