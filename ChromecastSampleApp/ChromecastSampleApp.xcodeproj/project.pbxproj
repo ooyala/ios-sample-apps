@@ -18,7 +18,6 @@
 		0B1AFBE21B0C09BB00347DFA /* ChromecastListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBCF1B0C09BB00347DFA /* ChromecastListViewController.m */; };
 		0B1AFBE31B0C09BB00347DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD01B0C09BB00347DFA /* main.m */; };
 		0B1AFBE41B0C09BB00347DFA /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD31B0C09BB00347DFA /* PlayerViewController.m */; };
-		0B1AFBE51B0C09BB00347DFA /* CustomizedMiniControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD61B0C09BB00347DFA /* CustomizedMiniControllerView.m */; };
 		0B1AFBE61B0C09BB00347DFA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD81B0C09BB00347DFA /* Utils.m */; };
 		0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */; };
 		0BCC6E2A1D2F30B80040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E291D2F30B80040B0B2 /* AVKit.framework */; };
@@ -76,13 +75,12 @@
 		0B1AFBD01B0C09BB00347DFA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B1AFBD21B0C09BB00347DFA /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		0B1AFBD31B0C09BB00347DFA /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
-		0B1AFBD51B0C09BB00347DFA /* CustomizedMiniControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizedMiniControllerView.h; sourceTree = "<group>"; };
-		0B1AFBD61B0C09BB00347DFA /* CustomizedMiniControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizedMiniControllerView.m; sourceTree = "<group>"; };
 		0B1AFBD71B0C09BB00347DFA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		0B1AFBD81B0C09BB00347DFA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		0B89E24E1B1FC85300306176 /* ChromecastPlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromecastPlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastPlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BCC6E291D2F30B80040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSampleApp.entitlements; sourceTree = "<group>"; };
 		5E3B14381C5806D40078E075 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "../vendor/GoogleCast/GoogleCastSDK-2.7.1-Release/GoogleCast.framework"; sourceTree = "<group>"; };
 		5E3B143A1C5807230078E075 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		5E3B143C1C5807430078E075 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -102,7 +100,6 @@
 		FF21F0D919CB7A2100FE9D07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FF21F0DA19CB7A2100FE9D07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FF42649F1B18D79900CED97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ChromecastSampleApp/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		FF49D1FE19CBA9C6001B156F /* libWViPhoneAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWViPhoneAPI.a; path = ../../sdk/OoyalaSDK/Classes/Internal/Players/libWViPhoneAPI.a; sourceTree = "<group>"; };
 		FF49D20219CBAB28001B156F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FF49D20419CBAB3F001B156F /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		FF49D20819CBAB5A001B156F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -150,6 +147,7 @@
 		0B1AFBC01B0C09BB00347DFA /* ChromecastSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */,
 				0B1AFBC11B0C09BB00347DFA /* AppDelegate.h */,
 				0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */,
 				0B1AFBC31B0C09BB00347DFA /* LaunchScreen.xib */,
@@ -202,8 +200,6 @@
 			children = (
 				0B89E24E1B1FC85300306176 /* ChromecastPlayerSelectionOption.h */,
 				0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */,
-				0B1AFBD51B0C09BB00347DFA /* CustomizedMiniControllerView.h */,
-				0B1AFBD61B0C09BB00347DFA /* CustomizedMiniControllerView.m */,
 				0B1AFBD71B0C09BB00347DFA /* Utils.h */,
 				0B1AFBD81B0C09BB00347DFA /* Utils.m */,
 			);
@@ -254,7 +250,6 @@
 				5E3B143C1C5807430078E075 /* libz.tbd */,
 				5E3B143A1C5807230078E075 /* libxml2.tbd */,
 				5E3B14381C5806D40078E075 /* GoogleCast.framework */,
-				FF49D1FE19CBA9C6001B156F /* libWViPhoneAPI.a */,
 				FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */,
 				FF49D20C19CBAB84001B156F /* UIKit.framework */,
 				FF49D20A19CBAB78001B156F /* Foundation.framework */,
@@ -300,7 +295,7 @@
 		FF21F06E19CB5ABC00FE9D07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Liusha Huang";
 				TargetAttributes = {
 					FF21F07519CB5ABC00FE9D07 = {
@@ -356,7 +351,6 @@
 				0B1AFBE61B0C09BB00347DFA /* Utils.m in Sources */,
 				0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */,
 				5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */,
-				0B1AFBE51B0C09BB00347DFA /* CustomizedMiniControllerView.m in Sources */,
 				5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChromecastSampleApp/ChromecastSampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = NO;
@@ -500,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChromecastSampleApp/ChromecastSampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				ENABLE_BITCODE = NO;
