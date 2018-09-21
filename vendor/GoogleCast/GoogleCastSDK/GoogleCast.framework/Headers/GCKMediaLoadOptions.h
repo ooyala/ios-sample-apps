@@ -7,6 +7,13 @@
 GCK_ASSUME_NONNULL_BEGIN
 
 /**
+ * A constant indicating credentials that have been received from the cloud.
+ *
+ * @since 4.1.1
+ */
+GCK_EXTERN NSString *const kGCKCredentialsTypeCloud;
+
+/**
  * Options for loading media with GCKRemoteMediaClient.
  *
  * @since 4.0
@@ -46,6 +53,20 @@ GCK_EXPORT
  * <a href="https://goo.gl/0vd4Q2"><b>NSJSONSerialization</b></a>, or <code>nil</code>.
  */
 @property(nonatomic, strong, readwrite, GCK_NULLABLE) id customData;
+
+/**
+ * The user credentials for the media item being loaded.
+ *
+ * @since 4.1.1
+ */
+@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *credentials;
+
+/**
+ * The type of user credentials specified in #GCKMediaLoadOptions::credentials.
+ *
+ * @since 4.1.1
+ */
+@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *credentialsType;
 
 @end
 

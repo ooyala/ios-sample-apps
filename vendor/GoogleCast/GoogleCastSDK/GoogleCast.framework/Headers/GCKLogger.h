@@ -39,13 +39,20 @@ GCK_EXPORT
 @property(nonatomic, assign, readwrite) BOOL loggingEnabled;
 
 /**
- * Flag for enabling or disabling file logging. On by default. If enabled, log messages are written
- * to a set of rotating files in the app's cache directory. The number and maximum size of these
- * files can be configured via other properties of this class.
+ * Flag for enabling or disabling file logging. Off by default. If enabled, log messages are
+ * written to a set of rotating files in the app's cache directory. The number and maximum size
+ * of these files can be configured via other properties of this class.
  *
  * @since 3.1
  */
 @property(nonatomic, assign, readwrite) BOOL fileLoggingEnabled;
+
+/**
+ * Flag for enabling or disabling logging directly to the console (via NSLog). Off by default.
+ *
+ * @since 4.1
+ */
+@property(nonatomic, assign, readwrite) BOOL consoleLoggingEnabled;
 
 /**
  * The maximum size of a log file, in bytes. The minimum is 32 KiB. If the value is 0, the default

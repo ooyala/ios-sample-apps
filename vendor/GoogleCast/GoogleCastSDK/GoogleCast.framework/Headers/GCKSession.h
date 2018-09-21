@@ -60,7 +60,7 @@ GCK_EXPORT
 @property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *deviceStatusText;
 
 /** The session traits. */
-@property(nonatomic, copy, readonly) GCKSessionTraits *traits;
+@property(nonatomic, copy, readonly, GCK_NULLABLE) GCKSessionTraits *traits;
 
 /** The current device volume, in the range [0.0, 1.0]. */
 @property(nonatomic, assign, readonly) float currentDeviceVolume;
@@ -91,8 +91,8 @@ GCK_EXPORT
  * session; otherwise <code>nil</code> if it will be used to start a new session.
  */
 - (instancetype)initWithDevice:(GCKDevice *)device
-                        traits:(GCKSessionTraits *)traits
-                     sessionID:(NSString * GCK_NULLABLE_TYPE)sessionID;
+                        traits:(GCKSessionTraits *GCK_NULLABLE_TYPE)traits
+                     sessionID:(NSString *GCK_NULLABLE_TYPE)sessionID;
 
 /**
  * Initializes a new session object for the given device.
@@ -106,9 +106,9 @@ GCK_EXPORT
  * @since 4.0
  */
 - (instancetype)initWithDevice:(GCKDevice *)device
-                        traits:(GCKSessionTraits *)traits
-                     sessionID:(NSString * GCK_NULLABLE_TYPE)sessionID
-                sessionOptions:(GCKSessionOptions * GCK_NULLABLE_TYPE)sessionOptions;
+                        traits:(GCKSessionTraits *GCK_NULLABLE_TYPE)traits
+                     sessionID:(NSString *GCK_NULLABLE_TYPE)sessionID
+                sessionOptions:(GCKSessionOptions *GCK_NULLABLE_TYPE)sessionOptions;
 
 /**
  * Sets the device's volume. This is an asynchronous operation. The default implementation is a

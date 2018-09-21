@@ -105,6 +105,37 @@ GCK_EXPORT
  * @param streamType The stream type.
  * @param contentType The content (MIME) type.
  * @param metadata The media item metadata.
+ * @param adBreaks The list of ad breaks in this content.
+ * @param adBreakClips The list of ad break clips in this content.
+ * @param streamDuration The stream duration.
+ * @param mediaTracks The media tracks, if any, otherwise <code>nil</code>.
+ * @param textTrackStyle The text track style, if any, otherwise <code>nil</code>.
+ * @param customData The custom application-specific data. Must either be an object that can be
+ * serialized to JSON using <a href="https://goo.gl/0vd4Q2"><b>NSJSONSerialization</b></a>, or
+ * <code>nil</code>.
+ *
+ * @since 4.3
+ */
+- (instancetype)initWithContentID:(NSString *)contentID
+                       streamType:(GCKMediaStreamType)streamType
+                      contentType:(NSString *)contentType
+                         metadata:(GCKMediaMetadata *GCK_NULLABLE_TYPE)metadata
+                         adBreaks:(NSArray<GCKAdBreakInfo *> *GCK_NULLABLE_TYPE)adBreaks
+                     adBreakClips:(NSArray<GCKAdBreakClipInfo *> *GCK_NULLABLE_TYPE)adBreakClips
+                   streamDuration:(NSTimeInterval)streamDuration
+                      mediaTracks:(NSArray<GCKMediaTrack *> *GCK_NULLABLE_TYPE)mediaTracks
+                   textTrackStyle:(GCKMediaTextTrackStyle *GCK_NULLABLE_TYPE)textTrackStyle
+                       customData:(id GCK_NULLABLE_TYPE)customData;
+
+/**
+ * Deprecated. Use initWithContentID:streamType:contentType:metadata:adBreaks:
+ * adBreakClips:streamDuration:mediaTracks:textTrackStyle:entity:customData:
+ * for ads and entity support.
+ *
+ * @param contentID The content ID.
+ * @param streamType The stream type.
+ * @param contentType The content (MIME) type.
+ * @param metadata The media item metadata.
  * @param streamDuration The stream duration.
  * @param mediaTracks The media tracks, if any, otherwise <code>nil</code>.
  * @param textTrackStyle The text track style, if any, otherwise <code>nil</code>.
@@ -119,7 +150,11 @@ GCK_EXPORT
                    streamDuration:(NSTimeInterval)streamDuration
                       mediaTracks:(NSArray<GCKMediaTrack *> *GCK_NULLABLE_TYPE)mediaTracks
                    textTrackStyle:(GCKMediaTextTrackStyle *GCK_NULLABLE_TYPE)textTrackStyle
-                       customData:(id GCK_NULLABLE_TYPE)customData;
+                       customData:(id GCK_NULLABLE_TYPE)customData
+    GCK_DEPRECATED(
+        "Use "
+        "initWithContentID:streamType:contentType:metadata:adBreaks:adBreakClips:streamDuration:"
+        "mediaTracks:textTrackStyle:entity:customData: for ads and entity support.");
 
 /**
  * Searches for a media track with the given track ID.

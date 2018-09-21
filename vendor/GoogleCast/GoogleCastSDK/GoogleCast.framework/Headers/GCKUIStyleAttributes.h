@@ -80,6 +80,8 @@ GCK_EXPORT
 @property(nonatomic, strong, readwrite) UIFont *buttonTextFont;
 /**
  * The color to be used in labels of buttons in the framework's default views.
+ *
+ * @since 3.4
  */
 @property(nonatomic, strong, readwrite) UIColor *buttonTextColor;
 /**

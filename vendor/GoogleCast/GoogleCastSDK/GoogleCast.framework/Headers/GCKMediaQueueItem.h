@@ -12,13 +12,20 @@
 @class GCKMediaInformation;
 @class GCKMediaQueueItemBuilder;
 
+/**
+ * A media queue item ID.
+ *
+ * @since 4.1
+ */
+typedef NSUInteger GCKMediaQueueItemID;
+
 GCK_ASSUME_NONNULL_BEGIN
 
 /**
  * @var kGCKMediaQueueInvalidItemID
  * An invalid queue item ID.
  */
-GCK_EXTERN const NSUInteger kGCKMediaQueueInvalidItemID;
+GCK_EXTERN const GCKMediaQueueItemID kGCKMediaQueueInvalidItemID;
 
 /**
  * A class representing a media queue item. Instances of this object are immutable.
@@ -38,7 +45,7 @@ GCK_EXPORT
 @property(nonatomic, strong, readonly) GCKMediaInformation *mediaInformation;
 
 /** The item ID, or @ref kGCKMediaQueueInvalidItemID if one has not yet been assigned. */
-@property(nonatomic, assign, readonly) NSUInteger itemID;
+@property(nonatomic, assign, readonly) GCKMediaQueueItemID itemID;
 
 /**
  * Whether the item should automatically start playback when it becomes the current item in the
