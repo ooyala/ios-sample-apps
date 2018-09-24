@@ -8,7 +8,7 @@
 
 /**
  * @file GCKSession+Protected.h
- * GCKSessionEndAction enum.
+ * GCKSessionEndAction and GCKSessionState enums.
  */
 
 GCK_ASSUME_NONNULL_BEGIN

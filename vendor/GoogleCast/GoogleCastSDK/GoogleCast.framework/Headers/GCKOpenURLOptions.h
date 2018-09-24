@@ -20,6 +20,7 @@ GCK_ASSUME_NONNULL_BEGIN
  *
  * @since 4.0
  */
+GCK_EXPORT
 @interface GCKOpenURLOptions : NSObject<NSCopying, NSSecureCoding>
 
 /**

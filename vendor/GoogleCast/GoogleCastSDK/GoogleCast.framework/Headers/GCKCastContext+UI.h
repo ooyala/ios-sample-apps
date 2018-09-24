@@ -10,9 +10,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class GCKUICastButton;
 @class GCKUICastContainerViewController;
 @class GCKUIExpandedMediaControlsViewController;
 @class GCKUIMiniMediaControlsViewController;
+
 @protocol GCKUIImageCache;
 @protocol GCKUIImagePicker;
 
@@ -80,13 +82,30 @@ GCK_EXTERN NSString *const kGCKUICastDialogDidHideNotification;
 - (GCKUIMiniMediaControlsViewController *)createMiniMediaControlsViewController;
 
 /**
- * If it has not been shown before, presents a fullscreen modal view controller that calls attention
- * to the Cast button and displays some brief instructional text about its use.
+ * If it has not been shown before, presents a fullscreen modal view controller
+ * that calls attention to the Cast button and displays some brief instructional
+ * text about its use.
  *
- * @return <code>YES</code> if the view controller was shown, <code>NO</code> if it was not shown
- * because it had already been shown before.
+ * @return <code>YES</code> if the view controller was shown, <code>NO</code> if
+ * it was not shown because it had already been shown before. Since version 4.1,
+ * <code>NO</code> is also returned if the Cast Button was not found.
+ * @deprecated Use presentCastInstructionsViewControllerOnceWithCastButton:.
  */
-- (BOOL)presentCastInstructionsViewControllerOnce;
+- (BOOL)presentCastInstructionsViewControllerOnce
+    GCK_DEPRECATED("Use presentCastInstructionsViewControllerOnceWithCastButton:");
+
+/**
+ * If it has not been shown before, presents a fullscreen modal view controller
+ * that calls attention to the Cast button, whose view is passed in, and displays
+ * some brief instructional text about its use.
+ *
+ * @return <code>YES</code> if the view controller was shown, <code>NO</code> if
+ * it was not shown because it had already been shown before. <code>NO</code> is
+ * also returned if the Cast Button was not found.
+ *
+ * @since 4.1
+ */
+- (BOOL)presentCastInstructionsViewControllerOnceWithCastButton:(GCKUICastButton *)castButton;
 
 /**
  * Clears the persistent flag that tracks whether the Cast instructions modal view controller has

@@ -36,6 +36,8 @@ typedef NS_ENUM(NSInteger, GCKHLSSegmentFormat) {
   GCKHLSSegmentFormatMP3 = 3,
   /** HLS segment type TS. */
   GCKHLSSegmentFormatTS = 4,
+  /** HLS segment type TS AAC. */
+  GCKHLSSegmentFormatTS_AAC = 5,
 };
 
 /**
@@ -46,6 +48,20 @@ typedef NS_ENUM(NSInteger, GCKHLSSegmentFormat) {
  */
 GCK_EXPORT
 @interface GCKMediaRequestItem : NSObject <NSCopying, NSSecureCoding>
+
+/**
+ * Helper to convert from <code>GCKHLSSegmentFormat</code> to <code>NSString</code>
+ *
+ * @since 4.1
+ */
++ (NSString *)mapHLSSegmentFormatToString:(GCKHLSSegmentFormat)hlsSegmentFormat;
+
+/**
+ * Helper to convert from <code>NSString</code> to <code>GCKHLSSegmentFormat</code>
+ *
+ * @since 4.1
+ */
++ (GCKHLSSegmentFormat)mapHLSSegmentFormatStringToEnum:(NSString *)hlsSegmentFormatString;
 
 /**
  * Designated initializer. Initializes a GCKMediaRequestItem with URL, protocol type, initial time,

@@ -202,6 +202,18 @@ GCK_EXPORT
  */
 - (void)didRemoveDeviceAtIndex:(NSUInteger)index;
 
+/**
+ * Called when a previously-discovered device has gone offline and has been
+ * removed from the list of devices. This is an alternative to @ref
+ * didRemoveDeviceAtIndex:. If both are implemented, both will be called.
+ *
+ * @param device The device that was removed.
+ * @param index The list index of the device that was removed.
+ *
+ * @since 4.1
+ */
+- (void)didRemoveDevice:(GCKDevice *)device atIndex:(NSUInteger)index;
+
 @end
 
 GCK_ASSUME_NONNULL_END

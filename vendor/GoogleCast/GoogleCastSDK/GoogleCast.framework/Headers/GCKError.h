@@ -137,6 +137,29 @@ typedef NS_ENUM(NSInteger, GCKErrorCode) {
   GCKErrorCodeInvalidApplicationSessionID = 22,
 
   /**
+   * Error code indicating a TLS error. The underlying error is one of the
+   * error codes as documented here:
+   * https://developer.apple.com/library/mac/documentation/Security/Reference/secureTransportRef/
+   */
+  GCKErrorCodeSecureTransportError = 23,
+
+  /**
+   * Error indicating that a connect attempt was made on a socket that is already connected.
+   */
+  GCKErrorCodeSocketAlreadyConnected = 24,
+
+  /**
+   * Error indicating that an invalid network or socket address or address type was supplied to
+   * a method or initializer.
+   */
+  GCKErrorCodeSocketInvalidAddress = 25,
+
+  /**
+   * Error indicating that an invalid parameter was supplied to a method or initializer.
+   */
+  GCKErrorCodeSocketInvalidParameter = 26,
+
+  /**
    * Error code indicating that a media load failed on the receiver side.
    */
   GCKErrorCodeMediaLoadFailed = 30,
@@ -252,6 +275,11 @@ typedef NS_ENUM(NSInteger, GCKErrorCode) {
    * Error code indicating that the broadcast encryption key is failed to be generated.
    */
   GCKErrorCodeBroadcastFailedToGenerateEncryptionKey = 59,
+
+  /**
+   * Error code indicating that the listening failed.
+   */
+  GCKErrorCodeGuestModeListenFailed = 60,
 
   /**
    * Error code indicating that an unspecified Remote Display error has occurred. Additional details

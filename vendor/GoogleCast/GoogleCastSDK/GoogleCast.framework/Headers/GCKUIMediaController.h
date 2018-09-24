@@ -399,6 +399,20 @@ GCK_EXPORT
 @property(nonatomic, weak, readwrite, GCK_NULLABLE) UIActivityIndicatorView *mediaLoadingIndicator;
 
 /**
+ * A label for displaying the amount of time left until the ad can be skipped.
+ *
+ * @since 4.3
+ */
+@property(nonatomic, weak, readwrite, GCK_NULLABLE) UILabel *skipAdLabel;
+
+/**
+ * A button for skipping the current ad.
+ *
+ * @since 4.3
+ */
+@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *skipAdButton;
+
+/**
  * Initializes an instance.
  */
 - (instancetype)init;
@@ -492,6 +506,13 @@ GCK_EXPORT
  * A convenience method for displaying the media track selection UI.
  */
 - (void)selectTracks;
+
+/**
+ * Sends and monitors the skip ad request.
+ *
+ * @since 4.3
+ */
+- (void)skipAd;
 
 @end
 

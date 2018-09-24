@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3dR-We-72h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3dR-We-72h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpU-Sv-4XA">
-                                            <rect key="frame" x="36" y="-1.5" width="35" height="22"/>
+                                            <rect key="frame" x="36" y="-1.5" width="35" height="22.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="Ie3-dP-LSG"/>
                                             </constraints>
@@ -39,6 +38,7 @@
                                     <constraints>
                                         <constraint firstItem="MpU-Sv-4XA" firstAttribute="leading" secondItem="rmE-TP-UcN" secondAttribute="leadingMargin" constant="20" id="2Ds-Sx-wci"/>
                                         <constraint firstAttribute="centerY" secondItem="MpU-Sv-4XA" secondAttribute="centerY" id="dnt-4F-olE"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MpU-Sv-4XA" secondAttribute="trailing" constant="20" symbolic="YES" id="tgr-XW-X0n"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -52,7 +52,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
                         <outlet property="navigationBar" destination="S3C-Lo-vIV" id="95e-hk-IE7"/>
-                        <segue destination="xSG-6Z-pQV" kind="push" identifier="play" id="5W6-4j-RGj"/>
+                        <segue destination="xSG-6Z-pQV" kind="show" identifier="play" id="5W6-4j-RGj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KN9-T7-kmW" userLabel="First Responder" sceneMemberID="firstResponder"/>

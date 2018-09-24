@@ -4,6 +4,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <GoogleCast/GCKNetworkAddress.h>
+
 /**
  * @file GCKDevice.h
  * GCKDeviceStatus enum.
@@ -79,8 +81,21 @@ GCK_EXTERN NSString *const kGCKCastDeviceCategory;
 GCK_EXPORT
 @interface GCKDevice : NSObject <NSCopying, NSSecureCoding>
 
-/** The device's IPv4 address, in dot-notation. Used when making network requests. */
-@property(nonatomic, copy, readonly) NSString *ipAddress;
+- (instancetype)init NS_UNAVAILABLE;
+
+/**
+ * @deprecated Use @ref networkAddress
+ * The device's IPv4 address, in dot-notation. Used when making network requests.
+ * This will be an empty string for @ref GCKDevice objects that are created with an IPv6 address.
+ */
+@property(nonatomic, copy, readonly)
+    NSString *ipAddress GCK_DEPRECATED("Use networkAddress for both IPv4 and IPv6 support");
+
+/**
+ * The device's IP address. Used when making network requests.
+ * @since 4.2
+ */
+@property(nonatomic, copy, readonly) GCKNetworkAddress *networkAddress;
 
 /** The device's service port. */
 @property(nonatomic, assign, readonly) uint16_t servicePort;

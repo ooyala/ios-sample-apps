@@ -44,6 +44,13 @@ GCK_EXPORT
 @property(nonatomic, strong, readonly) NSArray<NSString *> *adBreakClipIDs;
 
 /**
+ * Whether the ad break is embedded.
+ *
+ * @since 4.1
+ */
+@property(nonatomic, assign, readonly) BOOL embedded;
+
+/**
  * Designated initializer. Constructs a new GCKAdBreakInfo.
  * @param playbackPosition The playback position in seconds for this ad break.
  */
