@@ -17,7 +17,6 @@
 		7545576A1F8E53A600BEF43C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45C81F559EA800C29D8D /* MediaPlayer.framework */; };
 		7545576B1F8E53BC00BEF43C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45B21F559E4100C29D8D /* AVKit.framework */; };
 		755B35CD1FF25E31009CD1F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B356E1FF25E31009CD1F7 /* AppDelegate.m */; };
-		755B35CE1FF25E31009CD1F7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 755B356F1FF25E31009CD1F7 /* Info.plist */; };
 		755B35CF1FF25E31009CD1F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B35701FF25E31009CD1F7 /* main.m */; };
 		755B35D01FF25E31009CD1F7 /* TestDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B35761FF25E31009CD1F7 /* TestDataService.m */; };
 		755B35D11FF25E31009CD1F7 /* VideoItem+Mappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B357D1FF25E31009CD1F7 /* VideoItem+Mappable.m */; };
@@ -652,7 +651,6 @@
 				755B35E31FF25E31009CD1F7 /* CardboardSDK.bundle in Resources */,
 				755B364D1FF26020009CD1F7 /* RobotoCondensed-Regular.ttf in Resources */,
 				755B36461FF2601F009CD1F7 /* validate.js in Resources */,
-				755B35CE1FF25E31009CD1F7 /* Info.plist in Resources */,
 				755B35E51FF25E31009CD1F7 /* GoogleKitDialogs.bundle in Resources */,
 				755B35E61FF25E31009CD1F7 /* GoogleKitHUD.bundle in Resources */,
 				755B364B1FF2601F009CD1F7 /* Roboto-Regular.ttf in Resources */,
