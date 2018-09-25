@@ -31,5 +31,5 @@
 @end
 
 @protocol OOCastMiniControllerDelegate <NSObject>
--(void)onDismissMiniController:(id<OOCastMiniControllerProtocol>)miniControllerView;
+- (void)onDismissMiniController:(id<OOCastMiniControllerProtocol>)miniControllerView;
 @end

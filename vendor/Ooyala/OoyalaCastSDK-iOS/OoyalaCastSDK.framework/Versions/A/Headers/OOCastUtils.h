@@ -13,6 +13,8 @@
  * the userInfo dictionary is nil.
  * @param extras if non-nil will be used as the base for the userInfo dictionary (@param error won't be over-written in userInfo).
  */
-+(void) postCastErrorNotificationFrom:(id)from error:(NSError*)error extras:(NSDictionary*)extras;
++ (void)postCastErrorNotificationFrom:(id)from
+                                error:(NSError *)error
+                               extras:(NSDictionary *)extras;
 
 @end

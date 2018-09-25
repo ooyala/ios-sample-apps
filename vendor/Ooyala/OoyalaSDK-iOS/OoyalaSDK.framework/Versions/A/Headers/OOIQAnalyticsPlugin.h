@@ -14,5 +14,6 @@
 @interface OOIQAnalyticsPlugin : NSObject<OOAnalyticsPluginProtocol>
 
 - (instancetype)initWithPlayer:(OOOoyalaPlayer *)player iqConfiguration:(OOIQConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
+- (BOOL)isNetworkAvailable;
 
 @end

@@ -6,18 +6,15 @@
 //  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <OoyalaSDK/OOCastManagerProtocol.h>
 
-
-@class OOCastPlayer, OOOoyalaPlayer, GCKDevice;
-
+@class OOCastPlayer;
+@class OOOoyalaPlayer;
+@class GCKDevice;
 
 @protocol OOCastManagerDelegate
-
 - (UIViewController *)currentTopUIViewController;
-
 @end
 
 

@@ -68,8 +68,13 @@ extern NSString* const OOIQCONFIGURATION_DEFAULT_DEVICE_BRAND;
  * The default model in device information
  */
 extern NSString* const OOIQCONFIGURATION_DEFAULT_MODEL;
-
-
+/**
+ * \memberof OOIQConfiguration
+ * The default network to send analytics data,
+ * "NO" is the default and will use any available (local or wifi)
+ * "YES" to only use wifi network to send data
+ */
+extern BOOL const OOIQCONFIGURATION_DEFAULT_NETWORK_WIFI;
 
 /**
  * Configurable values for IQ Analytics.
@@ -86,5 +91,6 @@ extern NSString* const OOIQCONFIGURATION_DEFAULT_MODEL;
 @property (nonatomic) NSString *backendEndpointURL;     /**< The analytics endpoint used for reporting. */
 @property (nonatomic) int backendEndpointTimeout;     /**< The timeout to use when posting data to the analytics endpoint, in seconds.*/
 @property (nonatomic) OODeviceInfo *deviceInfo;     /**< The device info that can be customized. */
+@property (nonatomic) BOOL useWifiOnly;            /**< The default network to send analytics data is any available */
 
 @end

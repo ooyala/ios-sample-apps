@@ -5,13 +5,13 @@
 //  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <GoogleCast/GoogleCast.h>
 #import <OoyalaSDK/OOPlayerProtocol.h>
-#import <OoyalaSDK/OOStateNotifier.h>
 
-
-@class OOCastManager, OOCastModeOptions, OOOoyalaPlayer;
+@class OOCastManager;
+@class OOCastModeOptions;
+@class OOOoyalaPlayer;
+@class OOStateNotifier;
 @protocol OOCastMiniControllerProtocol;
 
 
@@ -26,13 +26,19 @@
 @property (nonatomic, readonly) BOOL isMiniControllerInteractionAvailable;
 
 - (instancetype)init __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
-- (instancetype)initWithNamespace:(NSString *)appNamespace castSession:(GCKCastSession *)castSession castManager:(OOCastManager *)castManager;
+- (instancetype)initWithNamespace:(NSString *)appNamespace
+                      castSession:(GCKCastSession *)castSession
+                      castManager:(OOCastManager *)castManager;
 
 - (void)initStateNotifier:(OOStateNotifier *)stateNotifier;
-- (void)registerWithOoyalaPlayer:(OOOoyalaPlayer*)ooyalaPlayer;
-- (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg castItemTitle:(NSString *)castItemTitle castItemDescription:(NSString *)castItemDescription;
-- (void)enterCastModeWithOptions:(OOCastModeOptions *)options embedToken:(NSString *)embedToken additionalInitParams:(NSDictionary *)params;
-- (void)registerMiniController:(id<OOCastMiniControllerProtocol>) miniController;
+- (void)registerWithOoyalaPlayer:(OOOoyalaPlayer *)ooyalaPlayer;
+- (void)updateMetadataFromOoyalaPlayer:(NSString *)castItemPromoImg
+                         castItemTitle:(NSString *)castItemTitle
+                   castItemDescription:(NSString *)castItemDescription;
+- (void)enterCastModeWithOptions:(OOCastModeOptions *)options
+                      embedToken:(NSString *)embedToken
+            additionalInitParams:(NSDictionary *)params;
+- (void)registerMiniController:(id<OOCastMiniControllerProtocol>)miniController;
 - (void)deregisterMiniController:(id<OOCastMiniControllerProtocol>)miniController;
 - (void)onExitCastMode;
 - (void)forceAssetRejoin;
