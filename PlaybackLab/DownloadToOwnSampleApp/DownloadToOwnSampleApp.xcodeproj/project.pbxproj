@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8066C4B215B932200E573D0 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8066C4A215B932200E573D0 /* OoyalaSDK.framework */; };
 		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
 		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
 		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
@@ -40,10 +41,10 @@
 		CA919FEE1D74D4D8002B0870 /* AssetPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA919FED1D74D4D8002B0870 /* AssetPersistenceManager.m */; };
 		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
 		CAEAD3D21DDD385700E95E08 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */; };
-		CAFA5BAE1DDD400500CAE010 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFA5BAD1DDD400500CAE010 /* OoyalaSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8066C4A215B932200E573D0 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -95,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFA5BAE1DDD400500CAE010 /* OoyalaSDK.framework in Frameworks */,
+				B8066C4B215B932200E573D0 /* OoyalaSDK.framework in Frameworks */,
 				CA79B8A21E00BA350027754F /* OoyalaSkinSDK.framework in Frameworks */,
 				CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */,
 				CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */,
@@ -246,6 +247,7 @@
 		CAC620481D63C9AB004902F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8066C4A215B932200E573D0 /* OoyalaSDK.framework */,
 				CA79AF471E00B0B80027754F /* OoyalaSkinSDK-iOS */,
 				CAFA5BAD1DDD400500CAE010 /* OoyalaSDK.framework */,
 				CA34EEB31D7640B500E168F6 /* AVKit.framework */,
@@ -300,6 +302,7 @@
 				TargetAttributes = {
 					CA7ED8F71D5964E700EA0A57 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = QMWN2G5MW4;
 						DevelopmentTeamName = "Ooyala Inc";
 						ProvisioningStyle = Automatic;
 					};
@@ -477,7 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QMWN2G5MW4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",
@@ -495,7 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QMWN2G5MW4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",
