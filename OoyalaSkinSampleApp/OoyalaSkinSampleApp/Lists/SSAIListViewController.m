@@ -22,7 +22,7 @@
                                                         adSetProvider:@"ooyala_pulse"
                                                        viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / VOD / Google DFP"
-                                                            embedCode:@"13bm11ZjE6Wl7CQ2iKPH_Z1VpspHGOud"
+                                                            embedCode:@"ZhbzNiZzE64qnD5YMEnoi2DcwqSfH4z8"
                                                                 pcode:@"ZsdGgyOnugo44o442aALkge_dVVK"
                                                          playerDomain:@"http://www.ooyala.com"
                                                         adSetProvider:@"google_dfp"
