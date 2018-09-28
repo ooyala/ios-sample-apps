@@ -14,6 +14,8 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 
+#define REFRESH_RATE 0.5
+
 @interface PlayerViewController ()
 
 
@@ -24,12 +26,16 @@
  */
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playOfflineButton;
+@property (weak, nonatomic) IBOutlet UITextView *analyticsData;
 
 @property (nonatomic) OOSkinViewController *ooyalaPlayerViewController;
 
 // properties required for a Fairplay asset
 @property (nonatomic) NSString *apiKey;
 @property (nonatomic) NSString *apiSecret;
+
+// for refresh the data from analytics offline
+@property (nonatomic) NSTimer *refreshTimer;
 
 @end
 
@@ -81,6 +87,13 @@
   
   AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
   [self updateUIUsingState:@(state)];
+  
+  self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:REFRESH_RATE
+                                                       target:self
+                                                     selector:@selector(onTimer:)
+                                                     userInfo:nil
+                                                      repeats:YES];
+  
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -169,6 +182,13 @@
   if (video) {
     [self.ooyalaPlayerViewController.player setUnbundledVideo:video];
   }
+}
+
+#pragma mark - Timer
+
+- (void)onTimer:(NSTimer *)timer {
+  NSString *dataFromAnalytics = [self.ooyalaPlayerViewController.player dataFromFile:self.option.embedCode];
+  self.analyticsData.text = dataFromAnalytics;
 }
 
 @end
