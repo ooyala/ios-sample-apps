@@ -984,10 +984,17 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * @returns current frame of current asset
  */
 - (UIImage *)screenshot;
+
 /**
  * Disables the CC in the HLS Playlist.
  */
 - (void)disablePlaylistClosedCaptions;
 
+/**
+ Returns a string with all the actions made by offline analytics
+ @param[in] embedCode of the offline file
+ @returns a string with a list of the actions
+ */
+- (NSString *)dataFromFile:(NSString *)embedCode;
 
 @end
