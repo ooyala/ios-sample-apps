@@ -11,7 +11,10 @@
 
 @implementation PlayerSelectionOption
 
-- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain {
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain {
   if (self = [super init]) {
     self.title = title;
     self.embedCode = embedCode;
@@ -21,7 +24,11 @@
   return self;
 }
 
-- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator {
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+          embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator {
   if (self = [self initWithTitle:title embedCode:embedCode pcode:pcode domain:domain]) {
     _embedTokenGenerator = embedTokenGenerator;
   }

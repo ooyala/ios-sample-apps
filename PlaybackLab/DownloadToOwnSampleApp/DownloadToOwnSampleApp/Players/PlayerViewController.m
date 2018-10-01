@@ -18,7 +18,6 @@
 
 @interface PlayerViewController ()
 
-
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 
 /**
@@ -87,31 +86,36 @@
   
   AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
   [self updateUIUsingState:@(state)];
-  
-  self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:REFRESH_RATE
-                                                       target:self
-                                                     selector:@selector(onTimer:)
-                                                     userInfo:nil
-                                                      repeats:YES];
-  
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  
+ 
   // Become an observer for the AssetPersistenceStateChangedNotification notification.
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(handleAssetStateChanged:)
                                                name:AssetPersistenceStateChangedNotification
                                              object:nil];
+  
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(handleProgressChanged:)
                                                name:AssetDownloadProgressNotification
                                              object:nil];
+  
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:REFRESH_RATE
+                                                       target:self
+                                                     selector:@selector(onTimer:)
+                                                     userInfo:nil
+                                                      repeats:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
+  [self.refreshTimer invalidate];
+  self.refreshTimer = nil;
+}
+
+- (void)dealloc {
   // Remove this class as an observer.
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
