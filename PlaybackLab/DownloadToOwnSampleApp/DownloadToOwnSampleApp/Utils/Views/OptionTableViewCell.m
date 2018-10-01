@@ -40,7 +40,7 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
  */
 - (void)setOption:(PlayerSelectionOption *)option {
   _option = option;
-  
+
   [self updateWithState:@([[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:_option.embedCode]) title:_option.title];
   
   [[NSNotificationCenter defaultCenter] addObserver:self
@@ -52,7 +52,6 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
                                                name:AssetDownloadProgressNotification
                                              object:nil];
 }
-
 
 /**
  Updates the cell's UI given a download state and asset title.
