@@ -49,7 +49,8 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
   
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(handleProgressChanged:)
-                                               name:AssetDownloadProgressNotification object:nil];
+                                               name:AssetDownloadProgressNotification
+                                             object:nil];
 }
 
 
