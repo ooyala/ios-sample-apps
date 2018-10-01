@@ -44,7 +44,8 @@ NSString *const OptionCellReusableIdentifier = @"option cell";
   [self updateWithState:@([[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:_option.embedCode]) title:_option.title];
   
   [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(handleAssetStateChanged:) name:AssetPersistenceStateChangedNotification
+                                           selector:@selector(handleAssetStateChanged:)
+                                               name:AssetPersistenceStateChangedNotification
                                              object:nil];
   
   [[NSNotificationCenter defaultCenter] addObserver:self
