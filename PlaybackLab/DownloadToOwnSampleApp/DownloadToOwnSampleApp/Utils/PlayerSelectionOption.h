@@ -39,7 +39,15 @@
 @property (nonatomic) id<OOEmbedTokenGenerator> embedTokenGenerator;
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain NS_DESIGNATED_INITIALIZER;
-- (instancetype)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+          embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
 
 @end

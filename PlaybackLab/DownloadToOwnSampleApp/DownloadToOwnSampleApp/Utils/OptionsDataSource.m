@@ -25,11 +25,12 @@
                                               embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
                                                   pcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
                                                  domain:@"http://www.ooyala.com"
-                                    embedTokenGenerator:[[BasicEmbedTokenGenerator alloc] initWithPcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
-                                                                                                 apiKey:@"API_KEY"
-                                                                                              apiSecret:@"API_SECRET"
-                                                                                              accountId:nil
-                                                                                          authorizeHost:@"http://player.ooyala.com"]],
+                                    embedTokenGenerator:
+            [[BasicEmbedTokenGenerator alloc] initWithPcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
+                                                     apiKey:@"API_KEY"
+                                                  apiSecret:@"API_SECRET"
+                                                  accountId:nil
+                                              authorizeHost:@"http://player.ooyala.com"]],
            
            // if required, add more test cases here
            ];
