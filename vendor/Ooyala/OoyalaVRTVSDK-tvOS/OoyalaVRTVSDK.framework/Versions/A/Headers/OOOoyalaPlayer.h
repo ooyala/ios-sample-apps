@@ -594,7 +594,7 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification
  * @param[in] apiClient the initialized OOOoyalaAPIClient to use
  * @returns the initialized OOOoyalaPlayer
  */
-- (id)initWithOoyalaAPIClient:(OOOoyalaAPIClient *)apiClient;
+- (instancetype)initWithOoyalaAPIClient:(OOOoyalaAPIClient *)apiClient;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -602,8 +602,8 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification
  * @param[in] domain Your Embed Domain
  * @returns the initialized OOOoyalaPlayer
  */
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain;
+- (instancetype)initWithPcode:(NSString *)pcode
+                       domain:(OOPlayerDomain *)domain;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -612,9 +612,9 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification
  * @param[in] options the options
  * @returns the initialized OOOoyalaPlayer
  */
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-            options:(OOOptions *)options;
+- (instancetype)initWithPcode:(NSString *)pcode
+                       domain:(OOPlayerDomain *)domain
+                      options:(OOOptions *)options;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -623,9 +623,9 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification
  * @param[in] embedTokenGenerator the initialized OOEmbedTokenGenerator to use
  * @returns the initialized OOOoyalaPlayer
  */
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
+- (instancetype)initWithPcode:(NSString *)pcode
+                       domain:(OOPlayerDomain *)domain
+          embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -635,10 +635,10 @@ embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
  * @param[in] options Extra settings
  * @returns the initialized OOOoyalaPlayer
  */
-- (id)initWithPcode:(NSString *)pcode
-             domain:(OOPlayerDomain *)domain
-embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
-            options:(OOOptions*)options;
+- (instancetype)initWithPcode:(NSString *)pcode
+                       domain:(OOPlayerDomain *)domain
+          embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
+                      options:(OOOptions*)options;
 
 
 #pragma mark Content Setters
