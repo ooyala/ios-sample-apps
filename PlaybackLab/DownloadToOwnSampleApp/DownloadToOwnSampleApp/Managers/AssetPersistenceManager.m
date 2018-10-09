@@ -144,7 +144,9 @@ NSString * const AssetProgressKey = @"percentage";
   // find a download in progress for the given embed code, pause the download.
   NSLog(@"[AssetPersistenceManager] Attempting to pause a download for embed code: %@", embedCode);
   
-  for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
+  NSSet *downloadsPendingAuthCopy = self.downloadsPendingAuth.copy;
+  
+  for (OOAssetDownloadManager *downloadManager in downloadsPendingAuthCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager pauseDownload];
       [self.downloadsPendingAuth removeObject:downloadManager];
@@ -159,9 +161,12 @@ NSString * const AssetProgressKey = @"percentage";
     }
   }
   
-  for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
+  NSSet *activeDownloadsCopy = self.activeDownloads.copy;
+  
+  for (OOAssetDownloadManager *downloadManager in activeDownloadsCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager pauseDownload];
+      
       [self.activeDownloads removeObject:downloadManager];
       [self.pausedDownloads addObject:downloadManager];
       
@@ -178,9 +183,13 @@ NSString * const AssetProgressKey = @"percentage";
 - (void)resumeDownloadForEmbedCode:(NSString *)embedCode {
   // find a paused download for the given embed code, resume the download.
   NSLog(@"[AssetPersistenceManager] Attempting to resume a download for embed code: %@", embedCode);
-  for (OOAssetDownloadManager *downloadManager in self.pausedDownloads) {
+  
+  NSSet *pausedDownloadsCopy = self.pausedDownloads.copy;
+  
+  for (OOAssetDownloadManager *downloadManager in pausedDownloadsCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager resumeDownload];
+      
       [self.pausedDownloads removeObject:downloadManager];
       [self.activeDownloads addObject:downloadManager];
       
@@ -197,7 +206,10 @@ NSString * const AssetProgressKey = @"percentage";
 - (void)cancelDownloadForEmbedCode:(NSString *)embedCode {
   // find a download in progress for the given embed code, cancel the download and remove the remaining contents if something was downloaded already.
   NSLog(@"[AssetPersistenceManager] Attempting to cancel a download for embed code: %@", embedCode);
-  for (OOAssetDownloadManager *downloadManager in self.downloadsPendingAuth) {
+  
+  NSSet *downloadsPendingAuthCopy = self.downloadsPendingAuth.copy;
+  
+  for (OOAssetDownloadManager *downloadManager in downloadsPendingAuthCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
       [self.downloadsPendingAuth removeObject:downloadManager];
@@ -205,7 +217,9 @@ NSString * const AssetProgressKey = @"percentage";
     }
   }
   
-  for (OOAssetDownloadManager *downloadManager in self.activeDownloads) {
+  NSSet *activeDownloadsCopy = self.activeDownloads.copy;
+  
+  for (OOAssetDownloadManager *downloadManager in activeDownloadsCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
       [downloadManager cancelDownload];
       [self.activeDownloads removeObject:downloadManager];
