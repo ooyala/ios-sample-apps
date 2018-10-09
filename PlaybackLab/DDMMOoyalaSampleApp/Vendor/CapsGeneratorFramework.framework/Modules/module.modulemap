@@ -1,0 +1,11 @@
+framework module CapsGeneratorFramework {
+  umbrella header "CapsGeneratorFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module CapsGeneratorFramework.Swift {
+    header "CapsGeneratorFramework-Swift.h"
+    requires objc
+}
