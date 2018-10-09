@@ -144,7 +144,7 @@ NSString * const AssetProgressKey = @"percentage";
   // find a download in progress for the given embed code, pause the download.
   NSLog(@"[AssetPersistenceManager] Attempting to pause a download for embed code: %@", embedCode);
   
-  NSMutableSet *downloadsPendingAuthCopy = self.downloadsPendingAuth.copy;
+  NSSet *downloadsPendingAuthCopy = self.downloadsPendingAuth.copy;
   
   for (OOAssetDownloadManager *downloadManager in downloadsPendingAuthCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
@@ -161,7 +161,7 @@ NSString * const AssetProgressKey = @"percentage";
     }
   }
   
-  NSMutableSet *activeDownloadsCopy = self.activeDownloads.copy;
+  NSSet *activeDownloadsCopy = self.activeDownloads.copy;
   
   for (OOAssetDownloadManager *downloadManager in activeDownloadsCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
@@ -184,7 +184,7 @@ NSString * const AssetProgressKey = @"percentage";
   // find a paused download for the given embed code, resume the download.
   NSLog(@"[AssetPersistenceManager] Attempting to resume a download for embed code: %@", embedCode);
   
-  NSMutableSet *pausedDownloadsCopy = self.pausedDownloads.copy;
+  NSSet *pausedDownloadsCopy = self.pausedDownloads.copy;
   
   for (OOAssetDownloadManager *downloadManager in pausedDownloadsCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
@@ -207,7 +207,7 @@ NSString * const AssetProgressKey = @"percentage";
   // find a download in progress for the given embed code, cancel the download and remove the remaining contents if something was downloaded already.
   NSLog(@"[AssetPersistenceManager] Attempting to cancel a download for embed code: %@", embedCode);
   
-  NSMutableSet *downloadsPendingAuthCopy = self.downloadsPendingAuth.copy;
+  NSSet *downloadsPendingAuthCopy = self.downloadsPendingAuth.copy;
   
   for (OOAssetDownloadManager *downloadManager in downloadsPendingAuthCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
@@ -217,7 +217,7 @@ NSString * const AssetProgressKey = @"percentage";
     }
   }
   
-  NSMutableSet *activeDownloadsCopy = self.activeDownloads.copy;
+  NSSet *activeDownloadsCopy = self.activeDownloads.copy;
   
   for (OOAssetDownloadManager *downloadManager in activeDownloadsCopy) {
     if ([downloadManager.embedCode isEqualToString:embedCode]) {
