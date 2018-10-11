@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class PlayerSelectionOption;
+@class OODtoAsset;
 
 @interface PlayerViewController : UIViewController
 
-@property (nonatomic) PlayerSelectionOption *option;
+@property (nonatomic) OODtoAsset *dtoAsset;
 
 @end
