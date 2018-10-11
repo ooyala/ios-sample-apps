@@ -1,7 +1,7 @@
-Ooyala SDK Version: v4.40.0_RC10
-Git SHA: 35b8ae7480b0051ae4b2764a6baec59d06b5133f
+Ooyala SDK Version: v4.40.0_RC12
+Git SHA: 34e33c0727a01afb7d10cdeded53d9654dc79f74
 
 #define FW_SDK_VERSION @"6.5.0"
 #define FW_BUILD_STAMP "6.5.0-r10900-201511170350"
 
-Created On: Tue Oct  2 18:59:19 PDT 2018
+Created On: Wed Oct 10 09:08:31 PDT 2018
