@@ -10,7 +10,6 @@
 #import "OptionTableViewCell.h"
 #import "OptionsDataSource.h"
 #import "PlayerSelectionOption.h"
-#import "AssetPersistenceManager.h"
 
 #import "PlayerViewController.h"
 
