@@ -21,6 +21,7 @@
 @interface AssetListViewController ()
 
 @property (nonatomic) NSMutableArray<OODtoAsset *> *dtoAssets;
+@property NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -38,6 +39,13 @@
   }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  if (self.selectedIndexPath) {
+    [self reloadSelectedCell];
+  }
+}
+
 /**
  Builds an OODtoAsset with the given options.
 
@@ -51,6 +59,26 @@
   options.domain = [OOPlayerDomain domainWithString:option.domain];
   options.embedTokenGenerator = option.embedTokenGenerator;
   return [[OODtoAsset alloc] initWithOptions:options andName:option.title];
+}
+
+- (void)reloadSelectedCell {
+  OODtoAsset *dtoAsset = self.dtoAssets[self.selectedIndexPath.row];
+  OptionTableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.selectedIndexPath];
+  cell.downloadProgressView.hidden = dtoAsset.state == OODtoAssetStateDownloaded ? YES : NO;
+
+  [dtoAsset progressWithProgressClosure:^(double progress) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
+                                 dtoAsset.stateText, progress*100];
+      cell.downloadProgressView.progress = (float)progress;
+    });
+  }];
+
+  [dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.tableView reloadData];
+    });
+  }];
 }
 
 #pragma mark - Table view data source
@@ -81,8 +109,7 @@
   NSArray *alertActions = nil;
   
   switch (dtoAsset.state) {
-    case OODtoAssetStateNotDownloaded:
-    {
+    case OODtoAssetStateNotDownloaded: {
       alertActions = @[[UIAlertAction actionWithTitle:@"Download"
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
@@ -91,7 +118,8 @@
         [dtoAsset downloadWithProgressClosure:^(double progress) {
           dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"progress %f", progress);
-            cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%", dtoAsset.stateText, progress*100];
+            cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
+                                       dtoAsset.stateText, progress*100];
             cell.downloadProgressView.progress = (float)progress;
           });
         }];
@@ -102,15 +130,16 @@
           });
         }];
         [dtoAsset onErrorWithErrorClosure:^(OOOoyalaError *error) {
-          NSLog(@"LOGLOG error");
+          dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            NSLog(@"LOGLOG error");
+          });
         }];
-                      }]
-                      ];
+                      }]];
       break;
     }
     case OODtoAssetStateAuthorizing:
-    case OODtoAssetStateDownloading:
-    {
+    case OODtoAssetStateDownloading: {
       alertActions = @[[UIAlertAction actionWithTitle:@"Pause"
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
@@ -120,12 +149,10 @@
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
         [dtoAsset cancelDownload];
-                                             }]
-                      ];
+                     }]];
       break;
     }
-    case OODtoAssetStatePaused:
-    {
+    case OODtoAssetStatePaused: {
       alertActions = @[[UIAlertAction actionWithTitle:@"Resume"
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
@@ -134,15 +161,13 @@
                        ];
       break;
     }
-    case OODtoAssetStateDownloaded:
-    {
+    case OODtoAssetStateDownloaded: {
       alertActions = @[[UIAlertAction actionWithTitle:@"Delete"
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
        [dtoAsset deleteAsset];
        [self.tableView reloadData];
-                                             }]
-                       ];
+                     }]];
       break;
     }
   }
@@ -154,7 +179,9 @@
   for (UIAlertAction *action in alertActions) {
     [alertController addAction:action];
   }
-  [alertController addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil]];
+  [alertController addAction:[UIAlertAction actionWithTitle:@"Dismiss"
+                                                      style:UIAlertActionStyleCancel
+                                                    handler:nil]];
   
   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
     alertController.popoverPresentationController.sourceView = cell;
@@ -166,18 +193,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   OODtoAsset *dtoAsset = self.dtoAssets[indexPath.row];
+  self.selectedIndexPath = indexPath;
   [self performSegueWithIdentifier:PLAYER_SEGUE sender:dtoAsset];
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  // When tapping on a cell, we'll transition to the PlayerViewController. If that's the case set the PlayerSelectionOption for the player.
-  if ([sender isKindOfClass:OODtoAsset.class] && [segue.identifier isEqualToString:PLAYER_SEGUE]) {
+  if ([sender isKindOfClass:OODtoAsset.class] &&
+      [segue.identifier isEqualToString:PLAYER_SEGUE]) {
     PlayerViewController *playerViewController = segue.destinationViewController;
     OODtoAsset *dtoAsset = sender;
     playerViewController.dtoAsset = dtoAsset;
-//    playerViewController.option = cell.option;
   }
 }
 
