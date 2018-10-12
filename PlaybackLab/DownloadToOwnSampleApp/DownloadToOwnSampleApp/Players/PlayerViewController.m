@@ -93,22 +93,23 @@
   self.stateLabel.text = self.dtoAsset.stateText;
   self.playOfflineButton.enabled = self.dtoAsset.state == OODtoAssetStateDownloaded ? YES : NO;
 
+  __weak PlayerViewController *weakSelf = self;
   [self.dtoAsset progressWithProgressClosure:^(double progress) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      self.stateLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
-                              self.dtoAsset.stateText, progress*100];
+      weakSelf.stateLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
+                                  weakSelf.dtoAsset.stateText, progress*100];
     });
   }];
   [self.dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      self.stateLabel.text = self.dtoAsset.stateText;
-      self.playOfflineButton.enabled = YES;
+      weakSelf.stateLabel.text = weakSelf.dtoAsset.stateText;
+      weakSelf.playOfflineButton.enabled = YES;
     });
   }];
   [self.dtoAsset onErrorWithErrorClosure:^(OOOoyalaError * _Nullable error) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      self.stateLabel.text = self.dtoAsset.stateText;
-      self.playOfflineButton.enabled = NO;
+      weakSelf.stateLabel.text = weakSelf.dtoAsset.stateText;
+      weakSelf.playOfflineButton.enabled = NO;
     });
   }];
 }
