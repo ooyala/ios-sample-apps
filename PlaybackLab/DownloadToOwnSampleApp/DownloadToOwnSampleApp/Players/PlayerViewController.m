@@ -74,7 +74,7 @@
                                             domain:[OOPlayerDomain domainWithString:self.dtoAsset.options.domain.asString]];
   }
   
-  NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  NSURL *jsCodeLocation = [NSBundle.mainBundle URLForResource:@"main" withExtension:@"jsbundle"];
   //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:nil
                                                                 jsCodeLocation:jsCodeLocation
@@ -92,18 +92,6 @@
   
   OODtoAssetState state = self.dtoAsset.state;
   [self updateUIUsingState:@(state)];
- 
-  // Become an observer for the AssetPersistenceStateChangedNotification notification.
-//  [[NSNotificationCenter defaultCenter] addObserver:self
-//                                           selector:@selector(handleAssetStateChanged:)
-//                                               name:AssetPersistenceStateChangedNotification
-//                                             object:nil];
-//  
-//  [[NSNotificationCenter defaultCenter] addObserver:self
-//                                           selector:@selector(handleProgressChanged:)
-//                                               name:AssetDownloadProgressNotification
-//                                             object:nil];
-  
 }
 
 - (void)viewWillAppear:(BOOL)animated {
