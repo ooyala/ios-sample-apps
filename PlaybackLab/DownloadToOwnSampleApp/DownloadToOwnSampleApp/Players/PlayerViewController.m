@@ -90,8 +90,27 @@
   self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   [self.ooyalaPlayerViewController didMoveToParentViewController:self];
   
-  OODtoAssetState state = self.dtoAsset.state;
-  [self updateUIUsingState:@(state)];
+  self.stateLabel.text = self.dtoAsset.stateText;
+  self.playOfflineButton.enabled = self.dtoAsset.state == OODtoAssetStateDownloaded ? YES : NO;
+
+  [self.dtoAsset progressWithProgressClosure:^(double progress) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.stateLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
+                              self.dtoAsset.stateText, progress*100];
+    });
+  }];
+  [self.dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.stateLabel.text = self.dtoAsset.stateText;
+      self.playOfflineButton.enabled = YES;
+    });
+  }];
+  [self.dtoAsset onErrorWithErrorClosure:^(OOOoyalaError * _Nullable error) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.stateLabel.text = self.dtoAsset.stateText;
+      self.playOfflineButton.enabled = NO;
+    });
+  }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -108,60 +127,6 @@
   [self.refreshTimer invalidate];
   self.refreshTimer = nil;
 }
-
-/**
- Update the UI depending on the download state of the given asset.
- 
- @param state download state to use to update the UI.
- */
-- (void)updateUIUsingState:(NSNumber *)state {
-  switch ([state intValue]) {
-    case OODtoAssetStateNotDownloaded:
-      self.stateLabel.text = @"State: Not Downloaded";
-      self.playOfflineButton.enabled = NO;
-      break;
-    case OODtoAssetStateAuthorizing:
-      self.stateLabel.text = @"State: Authorizing";
-      self.playOfflineButton.enabled = NO;
-      break;
-    case OODtoAssetStateDownloading:
-      self.stateLabel.text = @"State: Downloading";
-      self.playOfflineButton.enabled = NO;
-      break;
-    case OODtoAssetStatePaused:
-      self.stateLabel.text = @"State: Paused";
-      self.playOfflineButton.enabled = NO;
-      break;
-    case OODtoAssetStateDownloaded:
-      self.stateLabel.text = @"State: Downloaded";
-      self.playOfflineButton.enabled = YES;
-      break;
-  }
-}
-
-//- (void)handleAssetStateChanged:(NSNotification *)notification {
-//  NSString *embedCode = notification.userInfo[AssetNameKey];
-//  NSNumber *state = notification.userInfo[AssetStateKey];
-//
-//  // update the UI only if it is the correct embed code.
-//  if ([embedCode isEqualToString:self.option.embedCode]) {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//      [self updateUIUsingState:state];
-//    });
-//  }
-//}
-
-//- (void)handleProgressChanged:(NSNotification *)notification {
-//  NSString *embedCode = notification.userInfo[AssetNameKey];
-//  AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:self.option.embedCode];
-//  if ([embedCode isEqualToString:self.option.embedCode] && state == AssetDownloading) {
-//    // Update progressView with the percentage progress of the notification. We assume it has a value between 0.0 and 1.0.
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//      NSNumber *percentage = notification.userInfo[AssetProgressKey];
-//      self.stateLabel.text = [NSString stringWithFormat:@"State: Downloading (%.0f%%)", [percentage floatValue] * 100];
-//    });
-//  }
-//}
 
 // action linked to the online video button
 - (IBAction)playOnline {
