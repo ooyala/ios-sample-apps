@@ -63,11 +63,16 @@
 
 - (void)reloadSelectedCell {
   OODtoAsset *dtoAsset = self.dtoAssets[self.selectedIndexPath.row];
+
   OptionTableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.selectedIndexPath];
-  cell.downloadProgressView.hidden = dtoAsset.state == OODtoAssetStateDownloaded ? YES : NO;
+  cell.subtitleLabel.text = dtoAsset.stateText;
+  BOOL showProgress = dtoAsset.state == OODtoAssetStateDownloading ||
+                      dtoAsset.state == OODtoAssetStatePaused;
+  cell.downloadProgressView.hidden = showProgress;
 
   [dtoAsset progressWithProgressClosure:^(double progress) {
     dispatch_async(dispatch_get_main_queue(), ^{
+      cell.downloadProgressView.hidden = NO;
       cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
                                  dtoAsset.stateText, progress*100];
       cell.downloadProgressView.progress = (float)progress;
@@ -76,7 +81,8 @@
 
   [dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self.tableView reloadData];
+      NSIndexPath *path = self.selectedIndexPath.copy;
+      [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
     });
   }];
 }
@@ -117,7 +123,6 @@
         cell.downloadProgressView.progress = 0;
         [dtoAsset downloadWithProgressClosure:^(double progress) {
           dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"progress %f", progress);
             cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
                                        dtoAsset.stateText, progress*100];
             cell.downloadProgressView.progress = (float)progress;
@@ -125,13 +130,14 @@
         }];
         [dtoAsset finishWithRelativePath:^(NSString *relativePath) {
           dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-            NSLog(@"%@", relativePath);
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationLeft];
           });
         }];
         [dtoAsset onErrorWithErrorClosure:^(OOOoyalaError *error) {
           dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationRight];
             NSLog(@"LOGLOG error");
           });
         }];
@@ -144,6 +150,9 @@
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
         [dtoAsset pauseDownload];
+        dispatch_async(dispatch_get_main_queue(), ^{
+          cell.subtitleLabel.text = dtoAsset.stateText;
+        });
                                              }],
                       [UIAlertAction actionWithTitle:@"Cancel"
                                                style:UIAlertActionStyleDefault
@@ -156,9 +165,8 @@
       alertActions = @[[UIAlertAction actionWithTitle:@"Resume"
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
-       [dtoAsset resumeDownload];
-                                             }]
-                       ];
+        [dtoAsset resumeDownload];
+                     }]];
       break;
     }
     case OODtoAssetStateDownloaded: {
@@ -166,7 +174,8 @@
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
        [dtoAsset deleteAsset];
-       [self.tableView reloadData];
+       [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationLeft];
                      }]];
       break;
     }
