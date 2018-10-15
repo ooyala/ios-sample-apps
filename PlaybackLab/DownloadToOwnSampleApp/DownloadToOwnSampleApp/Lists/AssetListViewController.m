@@ -121,6 +121,7 @@
                                              handler:^(UIAlertAction *action) {
         cell.downloadProgressView.hidden = NO;
         cell.downloadProgressView.progress = 0;
+        cell.subtitleLabel.text = @"Authorizing";
         [dtoAsset downloadWithProgressClosure:^(double progress) {
           dispatch_async(dispatch_get_main_queue(), ^{
             cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
@@ -138,7 +139,7 @@
           dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadRowsAtIndexPaths:@[indexPath]
                                   withRowAnimation:UITableViewRowAnimationRight];
-            NSLog(@"LOGLOG error");
+            NSLog(@"Error occured: %@", error.message);
           });
         }];
                       }]];
@@ -147,16 +148,16 @@
     case OODtoAssetStateAuthorizing:
     case OODtoAssetStateDownloading: {
       alertActions = @[[UIAlertAction actionWithTitle:@"Pause"
-                                               style:UIAlertActionStyleDefault
-                                             handler:^(UIAlertAction *action) {
+                                                style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction *action) {
         [dtoAsset pauseDownload];
         dispatch_async(dispatch_get_main_queue(), ^{
           cell.subtitleLabel.text = dtoAsset.stateText;
         });
                                              }],
-                      [UIAlertAction actionWithTitle:@"Cancel"
-                                               style:UIAlertActionStyleDefault
-                                             handler:^(UIAlertAction *action) {
+                       [UIAlertAction actionWithTitle:@"Cancel"
+                                                style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction *action) {
         [dtoAsset cancelDownload];
                      }]];
       break;
