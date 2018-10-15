@@ -93,6 +93,7 @@
   self.stateLabel.text = self.dtoAsset.stateText;
   self.playOfflineButton.enabled = self.dtoAsset.state == OODtoAssetStateDownloaded ? YES : NO;
 
+  // We're setting progress and finish closures for the given OODtoAsset in order to represent state
   __weak PlayerViewController *weakSelf = self;
   [self.dtoAsset progressWithProgressClosure:^(double progress) {
     dispatch_async(dispatch_get_main_queue(), ^{

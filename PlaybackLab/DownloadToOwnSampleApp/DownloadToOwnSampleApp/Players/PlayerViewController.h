@@ -11,7 +11,9 @@
 @class OODtoAsset;
 
 @interface PlayerViewController : UIViewController
-
+/**
+ OODtoAsset to play from, either online or offline
+ */
 @property (nonatomic) OODtoAsset *dtoAsset;
 
 @end

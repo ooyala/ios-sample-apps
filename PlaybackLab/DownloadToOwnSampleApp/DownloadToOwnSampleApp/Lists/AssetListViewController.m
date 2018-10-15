@@ -61,6 +61,9 @@
   return [[OODtoAsset alloc] initWithOptions:options andName:option.title];
 }
 
+/**
+ Re-sets closures for the selected cell after coming back from PlayerViewController
+ */
 - (void)reloadSelectedCell {
   OODtoAsset *dtoAsset = self.dtoAssets[self.selectedIndexPath.row];
 
