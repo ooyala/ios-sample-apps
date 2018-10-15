@@ -7,13 +7,6 @@
 //
 //  The OptionTableViewCell will render each asset in a UITableView.
 //  It is linked to an UITableView in the Storyboard.
-//
-//  It uses the PlayerSelectionOption to show components like the title of the asset and uses
-//  the embed code to update itself if necessary.
-//
-//  It listens to notifications broadcasted by AssetPersistenceManager
-//  (e.g. AssetPersistenceStateChangedNotification) and notifies its OptionTableViewCellDelegate
-//  about changes of the downloaded state for the embed code that this cell is interested in.
 
 #import <UIKit/UIKit.h>
 
