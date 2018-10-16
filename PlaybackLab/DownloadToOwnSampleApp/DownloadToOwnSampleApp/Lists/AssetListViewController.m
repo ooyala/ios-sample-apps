@@ -35,7 +35,7 @@
   _dtoAssets = [NSMutableArray array];
   NSArray *options = [OptionsDataSource options];
   for (PlayerSelectionOption *oneOption in options) {
-    [_dtoAssets addObject:[self buildDownloadManagerForOption:oneOption]];
+    [self.dtoAssets addObject:[self buildDtoAssetForOption:oneOption]];
   }
 }
 
@@ -52,7 +52,7 @@
  @param option PlayerSelectionOption with the asset information.
  @return new OODtoAsset instance.
  */
-- (OODtoAsset *)buildDownloadManagerForOption:(PlayerSelectionOption *)option {
+- (OODtoAsset *)buildDtoAssetForOption:(PlayerSelectionOption *)option {
   OOAssetDownloadOptions *options = [OOAssetDownloadOptions new];
   options.pcode = option.pcode;
   options.embedCode = option.embedCode;
