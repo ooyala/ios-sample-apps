@@ -89,22 +89,10 @@
   self.castPlaybackView = [[CastPlaybackView alloc] initWithParentView:self.videoView];
   [self.castManager setCastModeVideoView:self.castPlaybackView];
 
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(onCastManagerNotification:)
-                                               name:nil
-                                             object:self.castManager];
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:_ooyalaPlayerViewController.player];
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(onCastModeEnter)
-                                               name:OOCastEnterCastModeNotification
-                                             object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(onCastModeExit)
-                                               name:OOCastExitCastModeNotification
-                                             object:nil];
+  [NSNotificationCenter.defaultCenter addObserver: self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
 
   // Init the castManager in the ooyalaPlayer
   [self.ooyalaPlayer initCastManager:self.castManager];
@@ -146,22 +134,25 @@
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime]);
 }
-- (void)onCastModeEnter {
+
+#pragma mark - OOCastManagerDelegate
+
+- (void)castManagerDidEnterCastMode:(OOCastManager *)manager {
   [self.ooyalaPlayerViewController setFullScreenButtonShowing:NO];
   [self.ooyalaPlayerViewController setVolumeButtonShowing:YES];
 }
 
-- (void)onCastModeExit {
+- (void)castManagerDidExitCastMode:(OOCastManager *)manager {
   [self.ooyalaPlayerViewController setVolumeButtonShowing:NO];
   [self.ooyalaPlayerViewController setFullScreenButtonShowing:YES];
 }
 
--(void) onCastManagerNotification:(NSNotification*)notification {
-  LOG( @"onCastManagerNotification: %@", notification );
+- (void)castManagerDidDisconnect:(OOCastManager *)manager {
 }
 
-- (UIViewController *)currentTopUIViewController {
-  return [Utils currentTopUIViewController];
+- (void)castManager:(OOCastManager *)manager
+   didFailWithError:(NSError *)error
+          andExtras:(NSDictionary *)extras {
 }
 
 # pragma mark -
