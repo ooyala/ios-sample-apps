@@ -2,8 +2,8 @@
 //  ViewController.m
 //  ChromecastSampleApp
 //
-//  Created by Liusha Huang on 9/18/14.
-//  Copyright (c) 2014 Liusha Huang. All rights reserved.
+//  Created on 9/18/14.
+//  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
 #import "ChromecastListViewController.h"
@@ -17,6 +17,7 @@
 #import "OOCastManagerFetcher.h"
 
 @interface ChromecastListViewController ()
+
 @property (nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (nonatomic) NSMutableArray *mediaList;
 @property (nonatomic) ChromecastPlayerSelectionOption *currentMediaInfo;
@@ -27,9 +28,12 @@
 @property (nonatomic) NSMutableArray *cells;
 
 @property (nonatomic) NSIndexPath *lastSelected;
+
 @end
 
 @implementation ChromecastListViewController
+
+#pragma mark - Life cycle
 
 - (void)viewDidLoad {
   [super viewDidLoad];

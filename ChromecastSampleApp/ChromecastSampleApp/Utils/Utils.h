@@ -2,11 +2,10 @@
 //  Utils.h
 //  ChromecastSampleApp
 //
-//  Created by Liusha Huang on 9/18/14.
-//  Copyright (c) 2014 Liusha Huang. All rights reserved.
+//  Created on 9/18/14.
+//  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CommonCrypto/CommonHMAC.h>
 
@@ -28,7 +27,7 @@
  * @param[in] input the NSString to be hashed
  * @returns hased NSString
  */
-+ (NSString *)sha1HashForString: (NSString *) input;
++ (NSString *)sha1HashForString:(NSString *)input;
 
 /**
  * Scale image to the given size
