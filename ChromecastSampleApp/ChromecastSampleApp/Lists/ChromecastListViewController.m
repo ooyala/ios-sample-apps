@@ -11,9 +11,7 @@
 #import "Utils.h"
 #import "ChromecastPlayerSelectionOption.h"
 #import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaCastSDK/OOCastMiniControllerView.h>
 #import <OoyalaCastSDK/OOCastPlayer.h>
-#import <OoyalaCastSDK/OOCastMiniControllerView.h>
 #import "OOCastManagerFetcher.h"
 
 @interface ChromecastListViewController ()
@@ -51,23 +49,18 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
   [self dismissMiniController];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissMiniController) name:OOCastManagerDidDisconnectNotification object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(miniControllerClicked) name:OOCastMiniControllerClickedNotification object:nil];
   self.castManager.delegate = self;
   if ([self.castManager isMiniControllerInteractionAvailable]) {
     [self displayMiniController];
   }
 }
 
-- (UIViewController *)currentTopUIViewController {
-  return [Utils currentTopUIViewController];
-}
+#pragma mark - PlayerViewController
 
 - (void)initPlayerViewControllerwithEmbedcode {
   if (self.lastSelected && ![self.navigationController.topViewController isKindOfClass:[PlayerViewController class]]) {
@@ -77,14 +70,18 @@
   }
 }
 
+#pragma mark - Mini Controller
 
 - (void)displayMiniController {
   [self.navigationController setToolbarHidden:NO animated:YES];
-  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(initPlayerViewControllerwithEmbedcode)];
+  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                        action:@selector(initPlayerViewControllerwithEmbedcode)];
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame castManager:self.castManager delegate:self];
+  self.bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame
+                                                                      castManager:self.castManager
+                                                                         delegate:self];
   [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
@@ -103,12 +100,32 @@
   [self.navigationController setToolbarHidden:YES animated:YES];
 }
 
--(void)onDismissMiniController:(id<OOCastMiniControllerProtocol>)miniControllerView {
+#pragma mark OOCastMiniControllerDelegate
+
+- (void)miniControllerDidClickOn:(id<OOCastMiniControllerProtocol>)miniControllerView
+                   withEmbedCode:(NSString *)embedCode {
+  [self initPlayerViewControllerwithEmbedcode];
+}
+
+- (void)miniControllerDidDismiss:(id<OOCastMiniControllerProtocol>)miniControllerView {
   [self.navigationController setToolbarHidden:YES animated:YES];
 }
 
--(void)miniControllerClicked {
-  [self initPlayerViewControllerwithEmbedcode];
+#pragma mark - OOCastManagerDelegate
+
+- (void)castManagerDidEnterCastMode:(OOCastManager *)manager {
+}
+
+- (void)castManagerDidExitCastMode:(OOCastManager *)manager {
+}
+
+- (void)castManagerDidDisconnect:(OOCastManager *)manager {
+  [self dismissMiniController];
+}
+
+- (void)castManager:(OOCastManager *)manager
+   didFailWithError:(NSError *)error
+          andExtras:(NSDictionary *)extras {
 }
 
 #pragma mark - Table View
