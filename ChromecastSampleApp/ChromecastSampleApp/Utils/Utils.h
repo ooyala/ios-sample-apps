@@ -37,5 +37,4 @@
  */
 + (UIImage *)scaleImage:(UIImage *)image toSize:(CGSize)newSize;
 
-+ (UIViewController*) currentTopUIViewController;
 @end

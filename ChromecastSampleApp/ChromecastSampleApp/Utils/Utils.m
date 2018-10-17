@@ -100,13 +100,4 @@
   return scaledImage;
 }
 
-+ (UIViewController*) currentTopUIViewController {
-  UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
-
-  while (topController.presentedViewController) {
-    topController = topController.presentedViewController;
-  }
-  return topController;
-}
-
 @end
