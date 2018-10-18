@@ -16,12 +16,12 @@
 
 @interface PlayerViewController ()
 
-@property (strong, nonatomic) IBOutlet UINavigationItem *navigationBar;
-@property (strong, nonatomic) IBOutlet UIView *videoView;
-@property (strong, nonatomic) IBOutlet UIView *mediaDetailView;
-@property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
-@property (strong, nonatomic) OOOoyalaPlayer *ooyalaPlayer;
-@property (strong, nonatomic) OOCastManager *castManager;
+@property (nonatomic) IBOutlet UINavigationItem *navigationBar;
+@property (nonatomic) IBOutlet UIView *videoView;
+@property (nonatomic) IBOutlet UIView *mediaDetailView;
+@property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
+@property (nonatomic) OOCastManager *castManager;
 
 @property NSString *embedCode;
 @property NSString *embedCode2;

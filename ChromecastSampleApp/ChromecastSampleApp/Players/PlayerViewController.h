@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <OoyalaCastSDK/OOcastManager.h>
+#import <OoyalaSDK/OOEmbedTokenGenerator.h>
 
 @class ChromecastPlayerSelectionOption;
 
 @interface PlayerViewController : UIViewController <OOCastManagerDelegate, OOEmbedTokenGenerator>
 
-@property (strong, nonatomic) ChromecastPlayerSelectionOption *mediaInfo;
+@property (nonatomic) ChromecastPlayerSelectionOption *mediaInfo;
 
 @end
