@@ -7,39 +7,35 @@
 
 import UIKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
+
   var window: UIWindow?
   var count: Int = 0
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     initRootViewController()
-    
     return true
   }
 
-
   // MARK: - Private functions
-  
   private func initRootViewController() {
-    
-    guard let listOfVideosNavigationController = UIStoryboard.init(name: "Main", bundle: nil)
-      .instantiateViewController(withIdentifier: "ListOfVidesNavigationController") as? UINavigationController,
-      let listOfVideosViewController = listOfVideosNavigationController.viewControllers.first as? ListOfVideosViewController else {
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+    guard let listOfVideosNavigationController =
+      mainStoryboard.instantiateViewController(withIdentifier: "ListOfVidesNavigationController")
+        as? UINavigationController,
+          let listOfVideosViewController = listOfVideosNavigationController.viewControllers.first
+        as? ListOfVideosViewController else {
         fatalError("AppDelegate - initRootViewController, error")
     }
-    
+
     let listOfVideosViewModel = ListOfVideosViewModel()
-    
     listOfVideosViewController.viewModel = listOfVideosViewModel
-    
+
     window = UIWindow()
-    
     window?.rootViewController = listOfVideosNavigationController
-    
     window?.makeKeyAndVisible()
   }
 }
