@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fullscreen Player View Controller-->
+        <scene sceneID="7fF-uQ-9XP">
+            <objects>
+                <viewController id="Ld2-95-Tyi" customClass="FullscreenPlayerViewController" customModule="TVOSSwiftSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wcG-fK-4op"/>
+                        <viewControllerLayoutGuide type="bottom" id="CBo-HS-au6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ogH-9H-clw">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7Zb-aV-U3d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVs-9N-dvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="3164"/>
+        </scene>
+        <!--Ooyala Player Token Player View Controller-->
+        <scene sceneID="b6M-1N-JII">
+            <objects>
+                <viewController id="PHp-lO-87z" customClass="OoyalaPlayerTokenPlayerViewController" customModule="TVOSSwiftSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Es4-jz-FD3"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4v-of-TaG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xfR-7d-0Qq">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iCi-OG-HFU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30Z-2f-4Ov" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579" y="-815"/>
+        </scene>
+        <!--Video Table View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VideoTableViewController" customModule="TVOSSwiftSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                    </view>
+                    <connections>
+                        <segue destination="Ld2-95-Tyi" kind="show" identifier="fullscreenSegue" id="Z30-6m-zEE"/>
+                        <segue destination="tUw-hK-orT" kind="show" identifier="childSegue" id="ZEK-ok-24R"/>
+                        <segue destination="cSy-Ju-gpl" kind="show" identifier="fairplaySegue" id="YVH-Bv-b9f"/>
+                        <segue destination="PHp-lO-87z" kind="show" identifier="playerTokenSegue" id="Vdp-Bl-SU3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Child Player View Controller-->
+        <scene sceneID="vOy-hp-fL4">
+            <objects>
+                <viewController id="tUw-hK-orT" customClass="ChildPlayerViewController" customModule="TVOSSwiftSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gjT-Gx-rfV"/>
+                        <viewControllerLayoutGuide type="bottom" id="cCf-Pu-rSy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vho-n4-qQ6" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0s-od-hFD">
+                                <rect key="frame" x="110" y="425" width="195" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NuO-zp-BLz">
+                                <rect key="frame" x="370" y="68" width="1180" height="801"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSy-zG-ObP">
+                                <rect key="frame" x="1615" y="425" width="195" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NuO-zp-BLz" firstAttribute="top" secondItem="gjT-Gx-rfV" secondAttribute="bottom" constant="20" id="1A7-n9-t3q"/>
+                            <constraint firstItem="A0s-od-hFD" firstAttribute="centerY" secondItem="NuO-zp-BLz" secondAttribute="centerY" id="8Nl-4k-soq"/>
+                            <constraint firstItem="rSy-zG-ObP" firstAttribute="leading" secondItem="NuO-zp-BLz" secondAttribute="trailing" constant="60" id="LQP-1A-MWi"/>
+                            <constraint firstItem="rSy-zG-ObP" firstAttribute="centerY" secondItem="NuO-zp-BLz" secondAttribute="centerY" id="XQc-ab-jTa"/>
+                            <constraint firstItem="NuO-zp-BLz" firstAttribute="centerX" secondItem="Vho-n4-qQ6" secondAttribute="centerX" id="bJ0-dE-rG1"/>
+                            <constraint firstItem="NuO-zp-BLz" firstAttribute="leading" secondItem="A0s-od-hFD" secondAttribute="trailing" constant="60" id="eeF-Yv-dad"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w9Q-yP-ZPR"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="NuO-zp-BLz" id="bag-hG-JdK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdc-n5-RwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579" y="3164"/>
+        </scene>
+        <!--Fairplay Player View Controller-->
+        <scene sceneID="YuB-b2-I6w">
+            <objects>
+                <viewController id="cSy-Ju-gpl" customClass="FairplayPlayerViewController" customModule="TVOSSwiftSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lEL-zo-iyf"/>
+                        <viewControllerLayoutGuide type="bottom" id="lN3-Qf-ZBh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tTL-JL-OVA">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UEl-Dn-CrQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypx-3R-Qeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579" y="1073"/>
+        </scene>
+    </scenes>
+</document>
