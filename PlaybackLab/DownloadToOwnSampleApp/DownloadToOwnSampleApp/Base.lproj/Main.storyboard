@@ -91,11 +91,11 @@
                                 <rect key="frame" x="16" y="88" width="343" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-N5-OVq">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="128.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="984" height="251.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqN-n5-ecd">
-                                        <rect key="frame" x="0.0" y="128.66666666666669" width="343" height="561.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="251.5" width="984" height="446.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State of the Asset" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXs-My-WiR">
                                                 <rect key="frame" x="10" y="10" width="323" height="24"/>
@@ -127,7 +127,7 @@
                                                 </constraints>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pkX-Vz-MdJ">
-                                                <rect key="frame" x="10" y="84.000000000000028" width="323" height="467.33333333333337"/>
+                                                <rect key="frame" x="10" y="84" width="964" height="352.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -149,7 +149,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="vqN-n5-ecd" firstAttribute="width" secondItem="1rh-N5-OVq" secondAttribute="height" multiplier="16:6" id="yhr-fh-Nk6"/>
+                                    <constraint firstItem="vqN-n5-ecd" firstAttribute="height" secondItem="1rh-N5-OVq" secondAttribute="height" multiplier="16:9" id="yhr-fh-Nk6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
