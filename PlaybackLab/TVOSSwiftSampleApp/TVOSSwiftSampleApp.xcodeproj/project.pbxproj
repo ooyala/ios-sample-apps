@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C125993121750A6800E448B2 /* FullscreenPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */; };
+		C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27262175357100ED8299 /* ChildPlayerViewController.swift */; };
+		C13A27292175367600ED8299 /* AbstractPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */; };
+		C13A272B21753C3A00ED8299 /* FairplayPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A272A21753C3A00ED8299 /* FairplayPlayerViewController.swift */; };
+		C13A2733217681B400ED8299 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A272D217681B300ED8299 /* Roboto-Bold.ttf */; };
+		C13A2734217681B400ED8299 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A272E217681B300ED8299 /* Roboto-Regular.ttf */; };
+		C13A2735217681B400ED8299 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A272F217681B300ED8299 /* RobotoCondensed-Regular.ttf */; };
+		C13A2736217681B400ED8299 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A2730217681B300ED8299 /* RobotoCondensed-Bold.ttf */; };
+		C13A2737217681B400ED8299 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A2731217681B300ED8299 /* alice.ttf */; };
+		C13A2738217681B400ED8299 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A2732217681B400ED8299 /* ooyala-slick-type.ttf */; };
+		C13A273E2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A273D2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift */; };
+		C1A4D143216FCF64008D505D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4D142216FCF64008D505D /* AppDelegate.swift */; };
+		C1A4D145216FCF64008D505D /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4D144216FCF64008D505D /* VideoTableViewController.swift */; };
+		C1A4D148216FCF64008D505D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A4D146216FCF64008D505D /* Main.storyboard */; };
+		C1A4D14A216FCF67008D505D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A4D149216FCF67008D505D /* Assets.xcassets */; };
+		C1A4D155216FCF67008D505D /* TVOSSwiftSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4D154216FCF67008D505D /* TVOSSwiftSampleAppTests.swift */; };
+		C1A4D17A216FDFB5008D505D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D179216FDFB5008D505D /* VideoToolbox.framework */; };
+		C1A4D17C216FDFC1008D505D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D17B216FDFC1008D505D /* JavaScriptCore.framework */; };
+		C1A4D17E216FDFCA008D505D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D17D216FDFCA008D505D /* MediaPlayer.framework */; };
+		C1A4D180216FDFCF008D505D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D17F216FDFCF008D505D /* SystemConfiguration.framework */; };
+		C1A4D182216FDFDC008D505D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D181216FDFDB008D505D /* libz.tbd */; };
+		C1A68254217A9556002047B3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D16F216FCFF7008D505D /* OoyalaSDK.framework */; };
+		C1A6825F217A958A002047B3 /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A6825C217A9583002047B3 /* OoyalaTVSkinSDK.framework */; };
+		C1B0EDAF216FF5CC00EB48E7 /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1A4D151216FCF67008D505D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1A4D137216FCF64008D505D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1A4D13E216FCF64008D505D;
+			remoteInfo = TVOSSwiftSampleApp;
+		};
+		C1A6825B217A9583002047B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 97C8DD111CE14CA2007F3F54;
+			remoteInfo = OoyalaTVSkinSDK;
+		};
+		C1A6825D217A9583002047B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B2277A81D13432C00640DD3;
+			remoteInfo = OoyalaTVSkinSDKTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenPlayerViewController.swift; sourceTree = "<group>"; };
+		C13A27262175357100ED8299 /* ChildPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildPlayerViewController.swift; sourceTree = "<group>"; };
+		C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractPlayerViewController.swift; sourceTree = "<group>"; };
+		C13A272A21753C3A00ED8299 /* FairplayPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairplayPlayerViewController.swift; sourceTree = "<group>"; };
+		C13A272D217681B300ED8299 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		C13A272E217681B300ED8299 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		C13A272F217681B300ED8299 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		C13A2730217681B300ED8299 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		C13A2731217681B300ED8299 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
+		C13A2732217681B400ED8299 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		C13A273D2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OoyalaPlayerTokenPlayerViewController.swift; sourceTree = "<group>"; };
+		C1A4D13F216FCF64008D505D /* TVOSSwiftSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVOSSwiftSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A4D142216FCF64008D505D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1A4D144216FCF64008D505D /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
+		C1A4D147216FCF64008D505D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1A4D149216FCF67008D505D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1A4D14B216FCF67008D505D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A4D150216FCF67008D505D /* TVOSSwiftSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVOSSwiftSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A4D154216FCF67008D505D /* TVOSSwiftSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVOSSwiftSampleAppTests.swift; sourceTree = "<group>"; };
+		C1A4D156216FCF67008D505D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A4D16E216FCFF7008D505D /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaPulseIntegration.framework; path = "../../../vendor/Ooyala/OoyalaPulseIntegration-tvOS/OoyalaPulseIntegration.framework"; sourceTree = "<group>"; };
+		C1A4D16F216FCFF7008D505D /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../../vendor/Ooyala/OoyalaSDK-tvOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
+		C1A4D170216FCFF7008D505D /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSkinSDK.framework; path = "../../../vendor/Ooyala/OoyalaSkinSDK-tvOS/OoyalaTVSkinSDK.framework"; sourceTree = "<group>"; };
+		C1A4D179216FDFB5008D505D /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		C1A4D17B216FDFC1008D505D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C1A4D17D216FDFCA008D505D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C1A4D17F216FDFCF008D505D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C1A4D181216FDFDB008D505D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C1A4D183216FE068008D505D /* TVOSSwiftSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVOSSwiftSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		C1A681EC217A8997002047B3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OoyalaTVSkinSDK.xcodeproj; path = "../../../native-skin/sdk/tvOS/OoyalaTVSkinSDK.xcodeproj"; sourceTree = "<group>"; };
+		C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1A4D13C216FCF64008D505D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A6825F217A958A002047B3 /* OoyalaTVSkinSDK.framework in Frameworks */,
+				C1A68254217A9556002047B3 /* OoyalaSDK.framework in Frameworks */,
+				C1A4D182216FDFDC008D505D /* libz.tbd in Frameworks */,
+				C1A4D180216FDFCF008D505D /* SystemConfiguration.framework in Frameworks */,
+				C1A4D17E216FDFCA008D505D /* MediaPlayer.framework in Frameworks */,
+				C1A4D17C216FDFC1008D505D /* JavaScriptCore.framework in Frameworks */,
+				C1A4D17A216FDFB5008D505D /* VideoToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A4D14D216FCF67008D505D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C125992E217509F500E448B2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4D144216FCF64008D505D /* VideoTableViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C125992F21750A3400E448B2 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */,
+				C13A27262175357100ED8299 /* ChildPlayerViewController.swift */,
+				C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */,
+				C13A272A21753C3A00ED8299 /* FairplayPlayerViewController.swift */,
+				C13A273D2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		C13A272C2176817D00ED8299 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C13A2731217681B300ED8299 /* alice.ttf */,
+				C13A2732217681B400ED8299 /* ooyala-slick-type.ttf */,
+				C13A272D217681B300ED8299 /* Roboto-Bold.ttf */,
+				C13A272E217681B300ED8299 /* Roboto-Regular.ttf */,
+				C13A2730217681B300ED8299 /* RobotoCondensed-Bold.ttf */,
+				C13A272F217681B300ED8299 /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C1A4D136216FCF64008D505D = {
+			isa = PBXGroup;
+			children = (
+				C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */,
+				C1A4D16D216FCF8D008D505D /* VendorLibraries */,
+				C1A4D141216FCF64008D505D /* TVOSSwiftSampleApp */,
+				C1A4D153216FCF67008D505D /* TVOSSwiftSampleAppTests */,
+				C1A4D140216FCF64008D505D /* Products */,
+				C1A4D178216FDFB5008D505D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C1A4D140216FCF64008D505D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4D13F216FCF64008D505D /* TVOSSwiftSampleApp.app */,
+				C1A4D150216FCF67008D505D /* TVOSSwiftSampleAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1A4D141216FCF64008D505D /* TVOSSwiftSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				C13A272C2176817D00ED8299 /* Fonts */,
+				C125992F21750A3400E448B2 /* Players */,
+				C125992E217509F500E448B2 /* List */,
+				C1B0EDAD216FF5BA00EB48E7 /* Utils */,
+				C1A4D183216FE068008D505D /* TVOSSwiftSampleApp-Bridging-Header.h */,
+				C1A4D142216FCF64008D505D /* AppDelegate.swift */,
+				C1A4D146216FCF64008D505D /* Main.storyboard */,
+				C1A4D149216FCF67008D505D /* Assets.xcassets */,
+				C1A4D14B216FCF67008D505D /* Info.plist */,
+			);
+			path = TVOSSwiftSampleApp;
+			sourceTree = "<group>";
+		};
+		C1A4D153216FCF67008D505D /* TVOSSwiftSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4D154216FCF67008D505D /* TVOSSwiftSampleAppTests.swift */,
+				C1A4D156216FCF67008D505D /* Info.plist */,
+			);
+			path = TVOSSwiftSampleAppTests;
+			sourceTree = "<group>";
+		};
+		C1A4D16D216FCF8D008D505D /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4D16E216FCFF7008D505D /* OoyalaPulseIntegration.framework */,
+				C1A4D16F216FCFF7008D505D /* OoyalaSDK.framework */,
+				C1A4D170216FCFF7008D505D /* OoyalaTVSkinSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
+		C1A4D178216FDFB5008D505D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1A681EC217A8997002047B3 /* CoreFoundation.framework */,
+				C1A4D181216FDFDB008D505D /* libz.tbd */,
+				C1A4D17F216FDFCF008D505D /* SystemConfiguration.framework */,
+				C1A4D17D216FDFCA008D505D /* MediaPlayer.framework */,
+				C1A4D17B216FDFC1008D505D /* JavaScriptCore.framework */,
+				C1A4D179216FDFB5008D505D /* VideoToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1A68256217A9583002047B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1A6825C217A9583002047B3 /* OoyalaTVSkinSDK.framework */,
+				C1A6825E217A9583002047B3 /* OoyalaTVSkinSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1B0EDAD216FF5BA00EB48E7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1A4D13E216FCF64008D505D /* TVOSSwiftSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1A4D164216FCF67008D505D /* Build configuration list for PBXNativeTarget "TVOSSwiftSampleApp" */;
+			buildPhases = (
+				C1A4D13B216FCF64008D505D /* Sources */,
+				C1A4D13C216FCF64008D505D /* Frameworks */,
+				C1A4D13D216FCF64008D505D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVOSSwiftSampleApp;
+			productName = TVOSSwiftSampleApp;
+			productReference = C1A4D13F216FCF64008D505D /* TVOSSwiftSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1A4D14F216FCF67008D505D /* TVOSSwiftSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1A4D167216FCF67008D505D /* Build configuration list for PBXNativeTarget "TVOSSwiftSampleAppTests" */;
+			buildPhases = (
+				C1A4D14C216FCF67008D505D /* Sources */,
+				C1A4D14D216FCF67008D505D /* Frameworks */,
+				C1A4D14E216FCF67008D505D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1A4D152216FCF67008D505D /* PBXTargetDependency */,
+			);
+			name = TVOSSwiftSampleAppTests;
+			productName = TVOSSwiftSampleAppTests;
+			productReference = C1A4D150216FCF67008D505D /* TVOSSwiftSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1A4D137216FCF64008D505D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					C1A4D13E216FCF64008D505D = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					C1A4D14F216FCF67008D505D = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = C1A4D13E216FCF64008D505D;
+					};
+				};
+			};
+			buildConfigurationList = C1A4D13A216FCF64008D505D /* Build configuration list for PBXProject "TVOSSwiftSampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1A4D136216FCF64008D505D;
+			productRefGroup = C1A4D140216FCF64008D505D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C1A68256217A9583002047B3 /* Products */;
+					ProjectRef = C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C1A4D13E216FCF64008D505D /* TVOSSwiftSampleApp */,
+				C1A4D14F216FCF67008D505D /* TVOSSwiftSampleAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C1A6825C217A9583002047B3 /* OoyalaTVSkinSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OoyalaTVSkinSDK.framework;
+			remoteRef = C1A6825B217A9583002047B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C1A6825E217A9583002047B3 /* OoyalaTVSkinSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OoyalaTVSkinSDKTests.xctest;
+			remoteRef = C1A6825D217A9583002047B3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1A4D13D216FCF64008D505D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13A2738217681B400ED8299 /* ooyala-slick-type.ttf in Resources */,
+				C13A2737217681B400ED8299 /* alice.ttf in Resources */,
+				C13A2736217681B400ED8299 /* RobotoCondensed-Bold.ttf in Resources */,
+				C1A4D14A216FCF67008D505D /* Assets.xcassets in Resources */,
+				C1A4D148216FCF64008D505D /* Main.storyboard in Resources */,
+				C13A2734217681B400ED8299 /* Roboto-Regular.ttf in Resources */,
+				C13A2735217681B400ED8299 /* RobotoCondensed-Regular.ttf in Resources */,
+				C13A2733217681B400ED8299 /* Roboto-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A4D14E216FCF67008D505D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1A4D13B216FCF64008D505D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */,
+				C13A27292175367600ED8299 /* AbstractPlayerViewController.swift in Sources */,
+				C13A272B21753C3A00ED8299 /* FairplayPlayerViewController.swift in Sources */,
+				C1A4D145216FCF64008D505D /* VideoTableViewController.swift in Sources */,
+				C1A4D143216FCF64008D505D /* AppDelegate.swift in Sources */,
+				C13A273E2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift in Sources */,
+				C125993121750A6800E448B2 /* FullscreenPlayerViewController.swift in Sources */,
+				C1B0EDAF216FF5CC00EB48E7 /* PlayerSelectionOption.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A4D14C216FCF67008D505D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A4D155216FCF67008D505D /* TVOSSwiftSampleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1A4D152216FCF67008D505D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1A4D13E216FCF64008D505D /* TVOSSwiftSampleApp */;
+			targetProxy = C1A4D151216FCF67008D505D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1A4D146216FCF64008D505D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1A4D147216FCF64008D505D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1A4D162216FCF67008D505D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		C1A4D163216FCF67008D505D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1A4D165216FCF67008D505D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW9EE2U92J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TVOSSwiftSampleApp/Utils",
+					"$(PROJECT_DIR)/TVOSSwiftSampleApp",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = TVOSSwiftSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/TVOSSwiftSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+			};
+			name = Debug;
+		};
+		C1A4D166216FCF67008D505D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW9EE2U92J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TVOSSwiftSampleApp/Utils",
+					"$(PROJECT_DIR)/TVOSSwiftSampleApp",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = TVOSSwiftSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/TVOSSwiftSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		C1A4D168216FCF67008D505D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW9EE2U92J;
+				INFOPLIST_FILE = TVOSSwiftSampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVOSSwiftSampleApp.app/TVOSSwiftSampleApp";
+			};
+			name = Debug;
+		};
+		C1A4D169216FCF67008D505D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW9EE2U92J;
+				INFOPLIST_FILE = TVOSSwiftSampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVOSSwiftSampleApp.app/TVOSSwiftSampleApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1A4D13A216FCF64008D505D /* Build configuration list for PBXProject "TVOSSwiftSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A4D162216FCF67008D505D /* Debug */,
+				C1A4D163216FCF67008D505D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1A4D164216FCF67008D505D /* Build configuration list for PBXNativeTarget "TVOSSwiftSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A4D165216FCF67008D505D /* Debug */,
+				C1A4D166216FCF67008D505D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1A4D167216FCF67008D505D /* Build configuration list for PBXNativeTarget "TVOSSwiftSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A4D168216FCF67008D505D /* Debug */,
+				C1A4D169216FCF67008D505D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1A4D137216FCF64008D505D /* Project object */;
+}

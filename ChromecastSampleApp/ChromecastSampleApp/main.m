@@ -1,9 +1,9 @@
-  //
+//
 //  main.m
 //  ChromecastSampleApp
 //
-//  Created by Liusha Huang on 9/18/14.
-//  Copyright (c) 2014 Liusha Huang. All rights reserved.
+//  Created on 9/18/14.
+//  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,6 +11,6 @@
 
 int main(int argc, char * argv[]) {
   @autoreleasepool {
-      return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+      return UIApplicationMain(argc, argv, nil, NSStringFromClass(AppDelegate.class));
   }
 }
