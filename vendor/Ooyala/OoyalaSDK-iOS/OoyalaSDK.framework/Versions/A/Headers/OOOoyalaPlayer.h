@@ -461,7 +461,7 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification
 
 /**
  * Converts PlayerDesiredState to a String.
- * @param[in] state the PlayerState
+ * @param[in] desiredState the PlayerState
  * @returns an external facing DesiredState string
  */
 + (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
@@ -854,7 +854,7 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * Return a collection of the times at which to show cue points.
  * E.g. for the content player, show when ads are scheduled to play.
  */
--(NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSecondsForCurrentPlayer;
+- (NSSet *)getCuePointsAtSecondsForCurrentPlayer; ///<NSNumber int seconds>
 
 /**
  * @returns the video rect

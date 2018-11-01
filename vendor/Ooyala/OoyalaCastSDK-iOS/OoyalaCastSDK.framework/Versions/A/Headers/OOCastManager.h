@@ -2,8 +2,8 @@
 //  OOCastManager.h
 //  OoyalaSDK
 //
-//  Created by Liusha Huang on 8/29/14.
-//  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+//  Created on 8/29/14.
+//  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,30 +12,53 @@
 @class OOCastPlayer;
 @class OOOoyalaPlayer;
 @class GCKDevice;
+@class OOCastManager;
 
 @protocol OOCastManagerDelegate
-- (UIViewController *)currentTopUIViewController;
+
+/**
+ Fires when a OOCastManager disconnects from chromecast device
+
+ @param manager OOCastManager instance
+ */
+- (void)castManagerDidEnterCastMode:(nonnull OOCastManager *)manager;
+/**
+ Fires when enter cast mode
+
+ @param manager OOCastManager instance
+ */
+- (void)castManagerDidExitCastMode:(nonnull OOCastManager *)manager;
+/**
+ Fires when exit cast mode
+
+ @param manager OOCastManager instance
+ */
+- (void)castManagerDidDisconnect:(nonnull OOCastManager *)manager;
+/**
+ Fires to report Cast errors
+
+ @param manager OOCastManager instance
+ @param error error occured
+ */
+- (void)castManager:(nonnull OOCastManager *)manager
+   didFailWithError:(nonnull NSError *)error
+          andExtras:(nullable NSDictionary *)extras;
+
 @end
-
-
-extern NSString *const OOCastManagerDidDisconnectNotification; /**< Fires when a OOCastManager disconnects from chromecast device*/
-extern NSString *const OOCastEnterCastModeNotification; /**< Fires when enter cast mode*/
-extern NSString *const OOCastExitCastModeNotification; /**< Fires when exit cast mode*/
-extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when a mini controller is clicked*/
-extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors*/
 
 
 @interface OOCastManager : UIViewController <OOCastManagerProtocol>
 
-@property (nonatomic, readonly) GCKDevice *selectedDevice;
-@property (nonatomic, weak) id<OOCastManagerDelegate> delegate;
+@property (nonatomic, readonly, nullable) GCKDevice *selectedDevice;
+@property (nonatomic, weak, nullable) id<OOCastManagerDelegate> delegate;
 
 /**
  * Initiate and get a singleton OOCastManager with the given reveiverAppID and nameSpace
  * @param receiverAppID identifier of receiever's application
  * @param namespace application namespace
  */
-+ (OOCastManager *)castManagerWithAppID:(NSString *)receiverAppID namespace:(NSString *)appNamespace;
++ (nonnull OOCastManager *)castManagerWithAppID:(nonnull NSString *)receiverAppID
+                                      namespace:(nonnull NSString *)appNamespace;
 
 /**
  * Disconnect the OOCastManager from ooyalaPlayer
@@ -45,17 +68,17 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
 /**
  * Return the cast button
  */
-- (UIButton *)castButton;
+- (nonnull UIButton *)castButton;
 
 /**
  * Set the videoView to be displayed on ooyalaPlayer during casting
  */
-- (void)setCastModeVideoView:(UIView *)castView;
+- (void)setCastModeVideoView:(nonnull UIView *)castView;
 
 /**
  * Provide key-value pairs that will be passed to the Receiver upon Cast Playback. Anything
  * added to this will overwrite anything set by default in the init.
  */
-- (void)setAdditionalInitParams:(NSDictionary *)params;
+- (void)setAdditionalInitParams:(nullable NSDictionary *)params;
 
 @end
