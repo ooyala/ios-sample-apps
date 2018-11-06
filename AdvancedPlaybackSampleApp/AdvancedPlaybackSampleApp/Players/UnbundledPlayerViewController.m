@@ -24,8 +24,9 @@
 @end
 
 
-@implementation UnbundledPlayerViewController
-AppDelegate *appDel;
+@implementation UnbundledPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 

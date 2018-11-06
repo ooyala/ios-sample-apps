@@ -30,8 +30,9 @@
 @end
 
 
-@implementation ProgrammaticVolumePlayerViewController
-AppDelegate *appDel;
+@implementation ProgrammaticVolumePlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 

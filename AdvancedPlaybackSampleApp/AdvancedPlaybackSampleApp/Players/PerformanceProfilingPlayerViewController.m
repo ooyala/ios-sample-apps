@@ -21,7 +21,7 @@
 @end
 
 
-@implementation PerformanceProfilingPlayerViewController{
+@implementation PerformanceProfilingPlayerViewController {
   AppDelegate *appDel;
 }
 

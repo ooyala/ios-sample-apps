@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B140F591A2E4709001324EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F581A2E4709001324EE /* main.m */; };
 		0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F5B1A2E4709001324EE /* AppDelegate.m */; };
-		0B17A0E71A78205E009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0E61A78205E009D1C50 /* libc++.dylib */; };
 		0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */; };
 		0B19FED41A3A901F003E57DF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */; };
 		0B19FEDE1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
@@ -51,7 +50,6 @@
 		0B7AC4251A79A93B0085BC97 /* InsertAdPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC41F1A79A93B0085BC97 /* InsertAdPlayerViewController.m */; };
 		0B7AC4261A79A93B0085BC97 /* PluginPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B7AC4201A79A93B0085BC97 /* PluginPlayerViewController.h */; };
 		0B7AC4271A79A93B0085BC97 /* PluginPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC4211A79A93B0085BC97 /* PluginPlayerViewController.m */; };
-		0B9457CD1AC32A17000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457CC1AC32A17000DD545 /* libxml2.dylib */; };
 		0B9457D11AC32C5B000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457D01AC32C5B000DD545 /* OoyalaSDK.framework */; };
 		0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B94591B1AC33A9C000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457D01AC32C5B000DD545 /* OoyalaSDK.framework */; };
@@ -66,10 +64,6 @@
 		0BC947D01A817732004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947CA1A817732004CB997 /* TableCell.xib */; };
 		0BC94BF21A84719D004CB997 /* CustomControlsPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */; };
 		0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */; };
-		0BCA694E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA693E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h */; };
-		0BCA694F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA693F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m */; };
-		0BCA69501A848E6400225119 /* OOFullScreenIOS7ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69401A848E6400225119 /* OOFullScreenIOS7ViewController.h */; };
-		0BCA69511A848E6400225119 /* OOFullScreenIOS7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69411A848E6400225119 /* OOFullScreenIOS7ViewController.m */; };
 		0BCA69541A848E6400225119 /* CustomControlsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69441A848E6400225119 /* CustomControlsView.h */; };
 		0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69451A848E6400225119 /* CustomControlsView.m */; };
 		0BCA69561A848E6400225119 /* CustomControlsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69461A848E6400225119 /* CustomControlsViewController.h */; };
@@ -90,6 +84,8 @@
 		0BEE35E81E3049DD00618269 /* ProgrammaticVolumePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* PlayWithInitialTimePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
+		39278C9A2191D61900F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278C992191D61900F6F4E2 /* libxml2.tbd */; };
+		39278C9C2191D62100F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278C9B2191D62100F6F4E2 /* libc++.tbd */; };
 		5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */; };
 		5E32B2CE1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */; };
 		5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */; };
@@ -124,7 +120,6 @@
 		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0B17A0E61A78205E009D1C50 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B19FECF1A3A8E6C003E57DF /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0B19FED31A3A901F003E57DF /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayWithInitialTimePlayerViewController.h; sourceTree = "<group>"; };
@@ -158,8 +153,6 @@
 		0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		0B7AC4421A7A26F70085BC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B7AC4441A7A27090085BC97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0B7AC4481A7A296B0085BC97 /* libOoyalaSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaSDK.a; path = "../vendor/Ooyala/OoyalaSDK-iOS/libOoyalaSDK.a"; sourceTree = "<group>"; };
-		0B9457CC1AC32A17000DD545 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0B9457D01AC32C5B000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BC947C51A817732004CB997 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
@@ -170,10 +163,6 @@
 		0BC947CA1A817732004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsPlayerViewController.h; sourceTree = "<group>"; };
 		0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsPlayerViewController.m; sourceTree = "<group>"; };
-		0BCA693E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFullScreenIOS7ControlsView.h; sourceTree = "<group>"; };
-		0BCA693F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOFullScreenIOS7ControlsView.m; sourceTree = "<group>"; };
-		0BCA69401A848E6400225119 /* OOFullScreenIOS7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOFullScreenIOS7ViewController.h; sourceTree = "<group>"; };
-		0BCA69411A848E6400225119 /* OOFullScreenIOS7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOFullScreenIOS7ViewController.m; sourceTree = "<group>"; };
 		0BCA69441A848E6400225119 /* CustomControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsView.h; sourceTree = "<group>"; };
 		0BCA69451A848E6400225119 /* CustomControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsView.m; sourceTree = "<group>"; };
 		0BCA69461A848E6400225119 /* CustomControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsViewController.h; sourceTree = "<group>"; };
@@ -181,6 +170,8 @@
 		0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammaticVolumePlayerViewController.h; sourceTree = "<group>"; };
 		0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammaticVolumePlayerViewController.m; sourceTree = "<group>"; };
+		39278C992191D61900F6F4E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		39278C9B2191D62100F6F4E2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceProfilingPlayerViewController.h; sourceTree = "<group>"; };
 		5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceProfilingPlayerViewController.m; sourceTree = "<group>"; };
 		5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnbundledPlayerViewController.h; sourceTree = "<group>"; };
@@ -195,12 +186,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39278C9C2191D62100F6F4E2 /* libc++.tbd in Frameworks */,
+				39278C9A2191D61900F6F4E2 /* libxml2.tbd in Frameworks */,
 				97E5874A1D4ADF7300202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E281D2F2EFF0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9457D11AC32C5B000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */,
-				0B9457CD1AC32A17000DD545 /* libxml2.dylib in Frameworks */,
-				0B17A0E71A78205E009D1C50 /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,16 +252,15 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39278C9B2191D62100F6F4E2 /* libc++.tbd */,
+				39278C992191D61900F6F4E2 /* libxml2.tbd */,
 				97E587491D4ADF7300202E09 /* JavaScriptCore.framework */,
 				0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */,
-				0B9457CC1AC32A17000DD545 /* libxml2.dylib */,
-				0B7AC4481A7A296B0085BC97 /* libOoyalaSDK.a */,
 				0B7AC4441A7A27090085BC97 /* UIKit.framework */,
 				0B7AC4421A7A26F70085BC97 /* Foundation.framework */,
 				0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */,
 				0B7AC43E1A7A26CA0085BC97 /* CFNetwork.framework */,
 				0B7AC43C1A7A26BA0085BC97 /* CoreGraphics.framework */,
-				0B17A0E61A78205E009D1C50 /* libc++.dylib */,
 				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
 				0B140F8C1A2E53B0001324EE /* Security.framework */,
 				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
@@ -370,10 +360,6 @@
 		0BC94BF41A847534004CB997 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				0BCA693E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h */,
-				0BCA693F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m */,
-				0BCA69401A848E6400225119 /* OOFullScreenIOS7ViewController.h */,
-				0BCA69411A848E6400225119 /* OOFullScreenIOS7ViewController.m */,
 				0BCA69441A848E6400225119 /* CustomControlsView.h */,
 				0BCA69451A848E6400225119 /* CustomControlsView.m */,
 				0BCA69461A848E6400225119 /* CustomControlsViewController.h */,
@@ -405,8 +391,6 @@
 				0B7333AB1A7AEEBD00F0EC32 /* OOSampleAdPlayer.h in Headers */,
 				0B7AC4241A79A93B0085BC97 /* InsertAdPlayerViewController.h in Headers */,
 				0B19FEDE1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h in Headers */,
-				0BCA69501A848E6400225119 /* OOFullScreenIOS7ViewController.h in Headers */,
-				0BCA694E1A848E6400225119 /* OOFullScreenIOS7ControlsView.h in Headers */,
 				0BCA69561A848E6400225119 /* CustomControlsViewController.h in Headers */,
 				0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */,
 				0B4111551B604C7800DF47AB /* CustomOverlayView.h in Headers */,
@@ -472,7 +456,7 @@
 		0B140F4B1A2E4709001324EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
@@ -527,7 +511,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BCA694F1A848E6400225119 /* OOFullScreenIOS7ControlsView.m in Sources */,
 				CA6D61761DA5E05C009D43D8 /* LocalizationLanguagesViewController.m in Sources */,
 				0B4111561B604C7800DF47AB /* CustomOverlayView.m in Sources */,
 				0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */,
@@ -541,7 +524,6 @@
 				0B7AC4271A79A93B0085BC97 /* PluginPlayerViewController.m in Sources */,
 				0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */,
 				0B19FED41A3A901F003E57DF /* SampleAppPlayerViewController.m in Sources */,
-				0BCA69511A848E6400225119 /* OOFullScreenIOS7ViewController.m in Sources */,
 				0B4111521B604C0D00DF47AB /* CustomOverlayPlayerViewController.m in Sources */,
 				0B7AC4231A79A93B0085BC97 /* ChangeVideoPlayerViewController.m in Sources */,
 				0B50E1CB1DDD18E900817DD8 /* NotificationsPlayerViewController.m in Sources */,
@@ -611,13 +593,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -627,6 +619,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -639,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -655,13 +648,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -670,13 +673,14 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -697,18 +701,19 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = AdvancedPlaybackSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/yigu/repos/ios_sample_apps/vendor/Ooyala/OoyalaSDK-iOS",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
 				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -727,18 +732,19 @@
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = AdvancedPlaybackSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"/Users/yigu/repos/ios_sample_apps/vendor/Ooyala/OoyalaSDK-iOS",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
 				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -752,10 +758,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"../vendor/Ooyala/OoyalaSDK-iOS",
