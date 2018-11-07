@@ -8,7 +8,6 @@
 
 #import "InterfaceController.h"
 
-
 @interface InterfaceController()
 @property (strong, nonatomic) IBOutlet WKInterfaceButton *button;
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *label;
@@ -44,14 +43,14 @@
   NSDictionary *applicationData = [[NSDictionary alloc] initWithObjects:@[action] forKeys:@[@"action"]];
 
   //Handle reciever in app delegate of parent app
-  [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
-    NSLog(@"%@ %@",replyInfo, error);
-    NSLog(@"playheadTime = %@", [replyInfo objectForKey:@"playheadTime"]);
-    CGFloat playheadTime = [[replyInfo objectForKey:@"playheadTime"] doubleValue];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:playheadTime < 3600 ? @"m:ss" : @"H:mm:ss"];
-    [self.label setText:[NSString stringWithFormat:@"Playhead: %@", [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:playheadTime]]]];
-  }];
+//  [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
+//    NSLog(@"%@ %@",replyInfo, error);
+//    NSLog(@"playheadTime = %@", [replyInfo objectForKey:@"playheadTime"]);
+//    CGFloat playheadTime = [[replyInfo objectForKey:@"playheadTime"] doubleValue];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:playheadTime < 3600 ? @"m:ss" : @"H:mm:ss"];
+//    [self.label setText:[NSString stringWithFormat:@"Playhead: %@", [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:playheadTime]]]];
+//  }];
 }
 
 - (IBAction)play {
@@ -63,9 +62,9 @@
   NSDictionary *applicationData = [[NSDictionary alloc] initWithObjects:@[counterString] forKeys:@[@"action"]];
 
   //Handle reciever in app delegate of parent app
-  [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
-    NSLog(@"%@ %@",replyInfo, error);
-  }];
+//  [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
+//    NSLog(@"%@ %@",replyInfo, error);
+//  }];
 }
 
 - (IBAction)pause {
@@ -76,9 +75,9 @@
   NSDictionary *applicationData = [[NSDictionary alloc] initWithObjects:@[counterString] forKeys:@[@"action"]];
 
   //Handle reciever in app delegate of parent app
-  [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
-    NSLog(@"%@ %@",replyInfo, error);
-  }];
+//  [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
+//    NSLog(@"%@ %@",replyInfo, error);
+//  }];
 }
 
 

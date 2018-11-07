@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     return true
   }
@@ -40,28 +40,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
-  
-  func application(_ application: UIApplication, handleWatchKitExtensionRequest userInfo: [AnyHashable: Any]?, reply: (([AnyHashable: Any]?) -> Void)!) {
+
+  func application(_ application: UIApplication,
+                   handleWatchKitExtensionRequest userInfo: [AnyHashable : Any]?,
+                   reply: @escaping ([AnyHashable : Any]?) -> Void) {
     let info = userInfo as NSDictionary?
     let action:NSString = info!.object(forKey: "action") as! NSString
     let vc: ViewController = (self.window?.rootViewController as! UINavigationController).visibleViewController as! ViewController
-    
+
     if vc.isKind(of: ViewController.self) {
       if action == "play" {
         vc.play()
         reply(["action play executed":"YES"])
-      }else if action == "pause" {
+      } else if action == "pause" {
         vc.pause()
         reply(["action pause executed":"YES"]);
-      }else {
+      } else {
         let playhead = vc.getPlayhead()
         reply(["playheadTime":playhead]);
       }
-    }else {
+    } else {
       reply(["action executed":"NO"])
     }
   }
-  
+
 
 }
 

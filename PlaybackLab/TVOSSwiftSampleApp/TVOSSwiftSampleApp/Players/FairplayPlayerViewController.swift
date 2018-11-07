@@ -22,7 +22,7 @@ class FairplayPlayerViewController: OOOoyalaTVPlayerViewController, OOEmbedToken
     OODebugMode.setDebugMode(DebugMode.LogAndAbort)
     assert(apiKey.contains(option.pcode), "pcode must be the long prefix of apiKey.")
     
-    var options = OOOptions()
+    let options = OOOptions()
     
     // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
     // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
@@ -47,7 +47,7 @@ class FairplayPlayerViewController: OOOoyalaTVPlayerViewController, OOEmbedToken
   }
   
   func token(forEmbedCodes embedCodes: [Any]!, callback: OOEmbedTokenCallback!) {
-    var params: [String:Any] = [:]
+    var params: [String: Any] = [:]
     
     params["account_id"] = accountId
 
@@ -55,7 +55,7 @@ class FairplayPlayerViewController: OOOoyalaTVPlayerViewController, OOEmbedToken
     let uri = String(format: "/sas/embed_token/%@/%@", option.pcode, embedCodes.joined(separator: ","))
     
     let urlGen = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: secret)
-    let embedTokenUrl = urlGen?.secureURL(authorizeHost, uri: uri, params: params as! [AnyHashable : Any])
+    let embedTokenUrl = urlGen?.secureURL(authorizeHost, uri: uri, params: params)
     callback(embedTokenUrl?.absoluteString)
   }
 }

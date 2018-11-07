@@ -59,7 +59,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   }
   
   func addObservers() {
-    NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(playerStateChange(_:)), name: NSNotification.Name.OOOoyalaPlayerStateChanged, object: nil)
   }
   

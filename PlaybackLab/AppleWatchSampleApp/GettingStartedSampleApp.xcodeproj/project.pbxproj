@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B61B48918EB6CC10088A647 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B61B48818EB6CC10088A647 /* MediaAccessibility.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		0B61B48B18EB6CCF0088A647 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B61B48A18EB6CCF0088A647 /* QuartzCore.framework */; };
+		39278CD92192E0F200F6F4E2 /* GettingStartedSampleApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFA11C3D1A96618600AC143F /* GettingStartedSampleApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		39278CDC2192E0F200F6F4E2 /* GettingStartedSampleApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FFA11C4C1A96618600AC143F /* GettingStartedSampleApp WatchKit App.app */; };
 		3BACED371567159A004C436F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BACED361567159A004C436F /* SystemConfiguration.framework */; };
 		9501A73716388E93006A7485 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9501A73616388E93006A7485 /* CFNetwork.framework */; };
 		9501A73A16388EB6006A7485 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9501A73916388EB6006A7485 /* Default-568h@2x.png */; };
@@ -35,39 +37,48 @@
 		FFA11C441A96618600AC143F /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA11C431A96618600AC143F /* InterfaceController.m */; };
 		FFA11C471A96618600AC143F /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA11C461A96618600AC143F /* NotificationController.m */; };
 		FFA11C491A96618600AC143F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA11C481A96618600AC143F /* Images.xcassets */; };
-		FFA11C4D1A96618600AC143F /* GettingStartedSampleApp WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = FFA11C4C1A96618600AC143F /* GettingStartedSampleApp WatchKit App.app */; };
 		FFA11C551A96618600AC143F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA11C531A96618600AC143F /* Interface.storyboard */; };
 		FFA11C571A96618600AC143F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA11C561A96618600AC143F /* Images.xcassets */; };
-		FFA11C5B1A96618600AC143F /* GettingStartedSampleApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFA11C3D1A96618600AC143F /* GettingStartedSampleApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FFA11C4E1A96618600AC143F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95EF85F514C27988009DAD32 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FFA11C4B1A96618600AC143F;
-			remoteInfo = "GettingStartedSampleApp WatchKit App";
-		};
-		FFA11C581A96618600AC143F /* PBXContainerItemProxy */ = {
+		39278CD72192E0F200F6F4E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95EF85F514C27988009DAD32 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FFA11C3C1A96618600AC143F;
 			remoteInfo = "GettingStartedSampleApp WatchKit Extension";
 		};
+		39278CDA2192E0F200F6F4E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95EF85F514C27988009DAD32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFA11C4B1A96618600AC143F;
+			remoteInfo = "GettingStartedSampleApp WatchKit App";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FFA11C5A1A96618600AC143F /* Embed App Extensions */ = {
+		39278CDD2192E0F200F6F4E2 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FFA11C5B1A96618600AC143F /* GettingStartedSampleApp WatchKit Extension.appex in Embed App Extensions */,
+				39278CD92192E0F200F6F4E2 /* GettingStartedSampleApp WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39278CDE2192E0F200F6F4E2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				39278CDC2192E0F200F6F4E2 /* GettingStartedSampleApp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -398,12 +409,12 @@
 				95EF85FA14C27988009DAD32 /* Sources */,
 				95EF85FB14C27988009DAD32 /* Frameworks */,
 				95EF85FC14C27988009DAD32 /* Resources */,
-				FFA11C5A1A96618600AC143F /* Embed App Extensions */,
+				39278CDE2192E0F200F6F4E2 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FFA11C591A96618600AC143F /* PBXTargetDependency */,
+				39278CDB2192E0F200F6F4E2 /* PBXTargetDependency */,
 			);
 			name = GettingStartedSampleApp;
 			productName = SampleApp;
@@ -421,27 +432,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				FFA11C4F1A96618600AC143F /* PBXTargetDependency */,
 			);
 			name = "GettingStartedSampleApp WatchKit Extension";
 			productName = "GettingStartedSampleApp WatchKit Extension";
 			productReference = FFA11C3D1A96618600AC143F /* GettingStartedSampleApp WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		FFA11C4B1A96618600AC143F /* GettingStartedSampleApp WatchKit App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFA11C5C1A96618600AC143F /* Build configuration list for PBXNativeTarget "GettingStartedSampleApp WatchKit App" */;
 			buildPhases = (
 				FFA11C4A1A96618600AC143F /* Resources */,
+				39278CDD2192E0F200F6F4E2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				39278CD82192E0F200F6F4E2 /* PBXTargetDependency */,
 			);
 			name = "GettingStartedSampleApp WatchKit App";
 			productName = "GettingStartedSampleApp WatchKit App";
 			productReference = FFA11C4C1A96618600AC143F /* GettingStartedSampleApp WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
+			productType = "com.apple.product-type.application.watchapp2";
 		};
 /* End PBXNativeTarget section */
 
@@ -449,7 +461,7 @@
 		95EF85F514C27988009DAD32 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					95EF85FD14C27988009DAD32 = {
 						DevelopmentTeam = 556Y9XWD3N;
@@ -503,7 +515,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA11C491A96618600AC143F /* Images.xcassets in Resources */,
-				FFA11C4D1A96618600AC143F /* GettingStartedSampleApp WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,15 +553,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FFA11C4F1A96618600AC143F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FFA11C4B1A96618600AC143F /* GettingStartedSampleApp WatchKit App */;
-			targetProxy = FFA11C4E1A96618600AC143F /* PBXContainerItemProxy */;
-		};
-		FFA11C591A96618600AC143F /* PBXTargetDependency */ = {
+		39278CD82192E0F200F6F4E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FFA11C3C1A96618600AC143F /* GettingStartedSampleApp WatchKit Extension */;
-			targetProxy = FFA11C581A96618600AC143F /* PBXContainerItemProxy */;
+			targetProxy = 39278CD72192E0F200F6F4E2 /* PBXContainerItemProxy */;
+		};
+		39278CDB2192E0F200F6F4E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFA11C4B1A96618600AC143F /* GettingStartedSampleApp WatchKit App */;
+			targetProxy = 39278CDA2192E0F200F6F4E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -611,18 +622,30 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -637,7 +660,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -649,17 +672,28 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -668,7 +702,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,9 +713,6 @@
 		95EF862014C27988009DAD32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GettingStartedSampleApp/GettingStartedSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GettingStartedSampleApp/GettingStartedSampleApp-Info.plist";
@@ -690,10 +721,8 @@
 					"$(SRCROOT)",
 				);
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
-				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -701,9 +730,6 @@
 		95EF862114C27988009DAD32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GettingStartedSampleApp/GettingStartedSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GettingStartedSampleApp/GettingStartedSampleApp-Info.plist";
@@ -712,10 +738,8 @@
 					"$(SRCROOT)",
 				);
 				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
-				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -737,12 +761,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBSC_MODULE = GettingStartedSampleApp_WatchKit_Extension;
 				INFOPLIST_FILE = "GettingStartedSampleApp WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.GettingStartedSampleApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -761,12 +786,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBSC_MODULE = GettingStartedSampleApp_WatchKit_Extension;
 				INFOPLIST_FILE = "GettingStartedSampleApp WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.GettingStartedSampleApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -790,8 +816,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.GettingStartedSampleApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -813,8 +843,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.GettingStartedSampleApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};

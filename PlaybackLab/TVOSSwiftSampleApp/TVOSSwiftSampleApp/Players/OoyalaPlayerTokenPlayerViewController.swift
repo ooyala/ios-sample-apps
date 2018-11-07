@@ -36,7 +36,7 @@ class OoyalaPlayerTokenPlayerViewController: OOOoyalaTVPlayerViewController, OOE
     let uri = String(format: "/sas/embed_token/%@/%@", option.pcode, embedCodes.joined(separator: ","))
     
     let urlGen = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: secret)
-    let embedTokenUrl = urlGen?.secureURL(authorizeHost, uri: uri, params: params as? [AnyHashable : Any])
+    let embedTokenUrl = urlGen?.secureURL(authorizeHost, uri: uri, params: params)
     callback(embedTokenUrl?.absoluteString)
   }
 }
