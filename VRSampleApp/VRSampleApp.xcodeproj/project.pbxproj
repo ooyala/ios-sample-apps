@@ -604,7 +604,6 @@
 				TargetAttributes = {
 					523E45151F559C7500C29D8D = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
 					};
 				};
 			};
