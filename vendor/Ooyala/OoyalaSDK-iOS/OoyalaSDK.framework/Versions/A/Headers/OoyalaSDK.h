@@ -132,7 +132,7 @@
 
 #import "OOAssetDownloadOptions.h"
 #import "OOAssetDownloadStream.h"
-#import "OOAssetDownloadManager.h"
+#import "OODtoAsset.h"
 
 #endif
 

@@ -23,7 +23,7 @@ typedef void(^OODiscoveryResultsCallback)(NSArray *results, OOOoyalaError *error
 
 /**
  * get the discovery results
- * @param[in] option the discovery option;
+ * @param[in] options the discovery option;
  * @param[in] embedCode the embed code for discovery type similar assets, ignored for other discovery types
  * @param[in] pcode the pcode
  * @param[in] parameters the parameters as key value pair
