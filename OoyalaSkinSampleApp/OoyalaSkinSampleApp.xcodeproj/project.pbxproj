@@ -262,6 +262,7 @@
 		0B7824221B2B7EB600D718AB /* OoyalaSkinSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				0B345ADB1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets */,
 				0B7824231B2B7EB600D718AB /* AppDelegate.h */,
 				0B7824241B2B7EB600D718AB /* AppDelegate.m */,
 				0B47312E1C5199A300F1E7FD /* Base.lproj */,
@@ -396,7 +397,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				0B345ADB1B5626ED006CD3B0 /* OoyalaSkinSDK.xcassets */,
 				0B7824221B2B7EB600D718AB /* OoyalaSkinSampleApp */,
 				0BB8E7A81BE043FB00003E2D /* VendorLibraries */,
 				0B8E7F251BDED4F80078155C /* Fonts */,
@@ -605,19 +605,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				ENABLE_BITCODE = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/**";
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaSkinSampleApp;
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -625,19 +620,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				ENABLE_BITCODE = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/**";
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaSkinSampleApp;
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
