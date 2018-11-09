@@ -18,7 +18,7 @@
 @interface OOCastPlayer : GCKCastChannel <OOPlayerProtocol>
 
 @property (nullable, nonatomic) OOStateNotifier *stateNotifier;
-@property (nonnull, nonatomic) NSString *embedCode;
+@property (nullable, nonatomic) NSString *embedCode;
 @property (nonatomic) Float64 playheadTime;
 @property (nonnull, nonatomic) NSString *castItemTitle;
 @property (nonnull, nonatomic) NSString *castItemDescription;
