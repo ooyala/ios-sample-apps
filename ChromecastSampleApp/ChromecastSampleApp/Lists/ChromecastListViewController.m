@@ -174,8 +174,8 @@
                                                            domain:@"http://www.ooyala.com"
                                                    viewController:PlayerViewController.class],
            [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"DASH Live Channel"
-                                                        embedCode:@"g1anZxZDE6hyE_zQEqtMAGINv7-oSHH8"
-                                                            pcode:@"ViM2wyOicnaFHWsz2iQQj25bnQ32"
+                                                        embedCode:@"92Zm51ZjE6WiUvDqQ7JcqJ_yJK9e0cX4"
+                                                            pcode:@"t5MGs6osydJR0KO0RRrDqi_PXSRM"
                                                            domain:@"http://www.ooyala.com"
                                                    viewController:PlayerViewController.class],
            [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Encrypted HLS Asset"
