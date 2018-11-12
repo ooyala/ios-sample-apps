@@ -2,7 +2,7 @@
 //  VideoItem.h
 //  PulsePlayer
 //
-//  Created by Jacques du Toit on 23/10/15.
+//  Created on 23/10/15.
 //  Copyright © 2015 Ooyala. All rights reserved.
 //
 

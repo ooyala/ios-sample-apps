@@ -2,7 +2,7 @@
 //  main.m
 //  PulseSampleApp
 //
-//  Created by Michael Len on 12/2/14.
+//  Created on 12/2/14.
 //  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
 //
 

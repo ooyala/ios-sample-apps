@@ -2,7 +2,7 @@
 //  OOSampleAdSpot.h
 //  PluginSampleApp
 //
-//  Created by Zhihui Chen on 9/2/14.
+//  Created on 9/2/14.
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 

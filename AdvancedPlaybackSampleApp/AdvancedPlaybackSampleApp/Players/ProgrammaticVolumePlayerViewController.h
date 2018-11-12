@@ -2,7 +2,7 @@
 //  ProgrammaticVolumePlayerViewController.h
 //  AdvancedPlaybackSampleApp
 //
-//  Created by Michael Len on 1/18/17.
+//  Created on 1/18/17.
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  NotificationsPlayerViewController.m
 //  AdvancedPlaybackSampleApp
 //
-//  Created by Michael Len on 11/16/16.
+//  Created on 11/16/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
