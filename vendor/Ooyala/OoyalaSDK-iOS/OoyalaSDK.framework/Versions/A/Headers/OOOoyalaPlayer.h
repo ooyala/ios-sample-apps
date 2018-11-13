@@ -33,6 +33,8 @@
 @class OOUserInfo;
 @class OOPlayer;
 @class OOSsaiAdsMetadata;
+@class OOAudioSession;
+
 
 /**
  * \defgroup key Most Commonly Used Classes
@@ -586,6 +588,12 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification
  * @internal the ui slider mode
  */
 @property (nonatomic) OOUIProgressSliderMode normalSliderMode;
+
+
+/**
+ * @internal Audio Session
+ */
+@property (nonatomic) OOAudioSession *audioSession;
 
 #pragma mark Initializers
 

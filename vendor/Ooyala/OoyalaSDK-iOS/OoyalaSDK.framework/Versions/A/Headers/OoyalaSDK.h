@@ -56,6 +56,9 @@
 #import "OOControlsViewController.h"
 #import "OOImages.h"
 
+// Audio
+#import "OOAudioSession.h"
+
 #else
 
 // TVOS GVR
