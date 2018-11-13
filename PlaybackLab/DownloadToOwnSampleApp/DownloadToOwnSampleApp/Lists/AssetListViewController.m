@@ -76,8 +76,8 @@
   [dtoAsset progressWithProgressClosure:^(double progress) {
     dispatch_async(dispatch_get_main_queue(), ^{
       cell.downloadProgressView.hidden = NO;
-      cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
-                                 dtoAsset.stateText, progress*100];
+      cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %@ %.02f%%",
+                                 dtoAsset.stateText, dtoAsset.currentDownload, progress * 100];
       cell.downloadProgressView.progress = (float)progress;
     });
   }];
@@ -127,8 +127,8 @@
         cell.subtitleLabel.text = @"Authorizing";
         [dtoAsset downloadWithProgressClosure:^(double progress) {
           dispatch_async(dispatch_get_main_queue(), ^{
-            cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
-                                       dtoAsset.stateText, progress*100];
+            cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %@ %.02f%%",
+                                       dtoAsset.stateText, dtoAsset.currentDownload, progress * 100];
             cell.downloadProgressView.progress = (float)progress;
           });
         }];
