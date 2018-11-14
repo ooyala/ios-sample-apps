@@ -98,7 +98,7 @@
   [self.dtoAsset progressWithProgressClosure:^(double progress) {
     dispatch_async(dispatch_get_main_queue(), ^{
       weakSelf.stateLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
-                                  weakSelf.dtoAsset.stateText, progress*100];
+                                  weakSelf.dtoAsset.stateText, progress * 100];
     });
   }];
   [self.dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
