@@ -209,9 +209,6 @@
     // Notification when the OoyalaPlayer has gotten Timed Metadata from within the media stream
   } else if ([notification.name isEqualToString:OOOoyalaPlayerJsonReceivedNotification]) {
     
-    // Notification when, while casting, the volume  changes on the device and the UI needs to be updated
-  } else if ([notification.name isEqualToString:OOOoyalaPlayerCastVolumeChangeNotification]) {
-    
     // Notification when the bitrate changes in media playback
   } else if ([notification.name isEqualToString:OOOoyalaPlayerBitrateChangedNotification]) {
     NSLog(@"Note: Bitrate changed notification received: %f", self.ooyalaPlayerViewController.player.bitrate);
