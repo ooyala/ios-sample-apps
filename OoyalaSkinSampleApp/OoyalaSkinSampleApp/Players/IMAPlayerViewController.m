@@ -25,9 +25,9 @@
 @end
 
 
-@implementation IMAPlayerViewController
-
-AppDelegate *appDel;
+@implementation IMAPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 

@@ -25,10 +25,10 @@
 @end
 
 
-@implementation DefaultSkinPlayerViewController
-
-AppDelegate *appDel;
-NSMutableArray *_sharePlugins;
+@implementation DefaultSkinPlayerViewController {
+  AppDelegate *appDel;
+  NSMutableArray *_sharePlugins;
+}
 
 #pragma mark - Initialization
 

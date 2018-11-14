@@ -25,9 +25,9 @@
 
 @end
 
-@implementation SSAIPlayerViewController
-
-AppDelegate *appDel;
+@implementation SSAIPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 
