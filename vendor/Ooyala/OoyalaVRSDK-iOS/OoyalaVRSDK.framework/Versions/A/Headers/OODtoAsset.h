@@ -6,9 +6,9 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-@import Foundation;
-
+@import AVFoundation;
 @class AVURLAsset;
+@class AVMediaSelection;
 @class OOAssetDownloadOptions;
 @class OOAssetDownloadStream;
 @class OOOoyalaError;
@@ -52,6 +52,13 @@ NS_CLASS_AVAILABLE_IOS(10.0)
 @property (nonatomic, readonly, nonnull) OOAssetDownloadOptions *options;
 
 @property (nonatomic, nonnull) AVURLAsset *urlAsset;
+
+/**
+ AVMediaSelection set for a specific asset (e.g. closed captions).
+ */
+@property (nonatomic, nullable) AVMediaSelection *mediaSelection;
+
+@property (nonatomic, nullable) NSString *currentDownload;
 
 /**
  NSURL pointing to a local resource with the downloaded asset
