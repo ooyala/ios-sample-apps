@@ -16,8 +16,6 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSDK/OODtoAsset.h>
 
-#define PLAYER_SEGUE @"videoSegue"
-
 @interface AssetListViewController ()
 
 @property (nonatomic) NSMutableArray<OODtoAsset *> *dtoAssets;
@@ -27,13 +25,21 @@
 
 @implementation AssetListViewController
 
+#pragma mark - Constants
+
+static NSString *const playerSegue = @"videoSegue";
+
+#pragma mark - Life cycle
+
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+  // Configure table view
   self.tableView.tableFooterView = [UIView new];
 
-  _dtoAssets = [NSMutableArray array];
-  NSArray *options = [OptionsDataSource options];
+  // Create data for table view
+  self.dtoAssets = [NSMutableArray array];
+  NSArray *options = OptionsDataSource.options;
   for (PlayerSelectionOption *oneOption in options) {
     [self.dtoAssets addObject:[self buildDtoAssetForOption:oneOption]];
   }
@@ -45,6 +51,8 @@
     [self reloadSelectedCell];
   }
 }
+
+#pragma mark - Private functions
 
 /**
  Builds an OODtoAsset with the given options.
@@ -69,9 +77,8 @@
 
   OptionTableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.selectedIndexPath];
   cell.subtitleLabel.text = dtoAsset.stateText;
-  BOOL showProgress = dtoAsset.state == OODtoAssetStateDownloading ||
-                      dtoAsset.state == OODtoAssetStatePaused;
-  cell.downloadProgressView.hidden = showProgress;
+  BOOL showProgress = dtoAsset.state == OODtoAssetStateDownloading || dtoAsset.state == OODtoAssetStatePaused;
+  cell.downloadProgressView.hidden = !showProgress;
 
   [dtoAsset progressWithProgressClosure:^(double progress) {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -81,7 +88,7 @@
       cell.downloadProgressView.progress = (float)progress;
     });
   }];
-
+  
   [dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
     dispatch_async(dispatch_get_main_queue(), ^{
       NSIndexPath *path = self.selectedIndexPath.copy;
@@ -90,14 +97,13 @@
   }];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return self.dtoAssets.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   // OptionCellReusableIdentifier has to match the identifier set in the Storyboard for the cell.
   OptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:OptionCellReusableIdentifier
                                                               forIndexPath:indexPath];
@@ -110,12 +116,13 @@
   return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
 // Called when the accessoryButton in the cell is tapped.
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
   OptionTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
   OODtoAsset *dtoAsset = self.dtoAssets[indexPath.row];
-
-  NSArray *alertActions = nil;
+  NSArray *alertActions;
   
   switch (dtoAsset.state) {
     case OODtoAssetStateNotDownloaded: {
@@ -207,14 +214,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   OODtoAsset *dtoAsset = self.dtoAssets[indexPath.row];
   self.selectedIndexPath = indexPath;
-  [self performSegueWithIdentifier:PLAYER_SEGUE sender:dtoAsset];
+  [self performSegueWithIdentifier:playerSegue sender:dtoAsset];
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([sender isKindOfClass:OODtoAsset.class] &&
-      [segue.identifier isEqualToString:PLAYER_SEGUE]) {
+  if ([sender isKindOfClass:OODtoAsset.class] && [segue.identifier isEqualToString:playerSegue]) {
     PlayerViewController *playerViewController = segue.destinationViewController;
     OODtoAsset *dtoAsset = sender;
     playerViewController.dtoAsset = dtoAsset;
@@ -222,4 +228,3 @@
 }
 
 @end
-
