@@ -422,6 +422,13 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedEnabledNotification;
  */
 extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification;
 
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when application volume changed.
+ */
+extern NSString *const OOOoyalaPlayerApplicationVolumeChangedNotification;
+
 /**
  * The OoyalaPlayer is the heart of the playback system.
  * Use it to configure and control asset playback, and to be aware of playback state changes.

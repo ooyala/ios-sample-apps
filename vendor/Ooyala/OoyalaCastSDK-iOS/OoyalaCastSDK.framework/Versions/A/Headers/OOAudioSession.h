@@ -20,6 +20,7 @@
 @property (readonly) BOOL isMuted;
 @property (nonatomic, readonly) float playerVolume;
 @property (nonatomic, readonly) float deviceVolume;
+@property (nonatomic, readonly) float applicationVolume;
 @property id<OOAudioSessionDelegate> delegate;
 
 + (instancetype)sharedInstance;
