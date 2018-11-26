@@ -29,8 +29,8 @@ AppDelegate *appDel;
 
 #pragma mark - Initialization
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
-                      qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   if (self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:qaModeEnabled]) {
     _nib = playerSelectionOption.nib;
     _embedCode = playerSelectionOption.embedCode;
@@ -105,13 +105,13 @@ AppDelegate *appDel;
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
+                       notification.name,
                        [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
-                       [self.skinController.player playheadTime], appDel.count];
-  NSLog(@"%@",message);
+                       self.skinController.player.playheadTime, appDel.count];
+  NSLog(@"%@", message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.logTextView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string,message];
     self.logTextView.text = appendString;
