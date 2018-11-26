@@ -19,44 +19,46 @@
 
 @interface MasterListViewControllerTableViewController ()
 
-@property NSArray *playlists;
+@property (nonatomic) NSArray *playlists;
 
 @end
 
 @implementation MasterListViewControllerTableViewController
 
+#pragma mark - UIViewController override
+
 - (void)viewDidLoad {
+  
   [super viewDidLoad];
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-  self.playlists = [NSArray arrayWithObjects:@"Layouts", @"Basic Playback", @"Freewheel", @"Google IMA", @"Set asset", @"Geoblocking", @"Multi audio", @"Ooyala SSAI", @"Audio only", nil];
+  self.playlists = @[@"Layouts",
+                     @"Basic Playback",
+                     @"Freewheel",
+                     @"Google IMA",
+                     @"Set asset",
+                     @"Geoblocking",
+                     @"Multi audio",
+                     @"Ooyala SSAI",
+                     @"Audio only"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return self.playlists.count;
+  return self.playlists.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
-
-  cell.textLabel.text = [self.playlists objectAtIndex:indexPath.row];
+  cell.textLabel.text = self.playlists[indexPath.row];
   return cell;
-
-    return cell;
 }
+
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   // When a row is selected, load its desired PlayerViewController
