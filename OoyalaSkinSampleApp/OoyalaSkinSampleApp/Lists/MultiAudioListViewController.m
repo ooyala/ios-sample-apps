@@ -60,9 +60,9 @@
                  embedCode:@"FrZGVyZTE6Bv2s5QwtytNT48VJfq9vdh"
                      pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
   
-  [self addCommonWithTitle:@"Post-roll"
-                 embedCode:@"ppZGVyZTE6dX1q1yTHtygM4lyiRwDFDM"
-                     pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"];
+  [self insertNewObject:[self IMAOptionWithTitle:@"Post-roll"
+                                       embedCode:@"ppZGVyZTE6dX1q1yTHtygM4lyiRwDFDM"
+                                           pcode:@"BzY2syOq6kIK6PTXN7mmrGVSJEFj"]];
   
   [self addCommonWithTitle:@"MP4 without CC"
                  embedCode:@"g0Z2hwZTE6i-ODpQETJqhOCt2jOE6Y2c"
