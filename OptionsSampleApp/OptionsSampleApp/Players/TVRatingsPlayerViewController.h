@@ -6,9 +6,7 @@
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
-
 
 @interface TVRatingsPlayerViewController : SampleAppPlayerViewController
 
