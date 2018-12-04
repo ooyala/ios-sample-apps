@@ -10,7 +10,11 @@
 
 @implementation BasicEmbedTokenGenerator
 
-- (instancetype)initWithPcode:(NSString *)pcode apiKey:(NSString *)apiKey apiSecret:(NSString *)apiSecret accountId:(NSString *)accountId authorizeHost:(NSString *)authorizeHost {
+- (instancetype)initWithPcode:(NSString *)pcode
+                       apiKey:(NSString *)apiKey
+                    apiSecret:(NSString *)apiSecret
+                    accountId:(NSString *)accountId
+                authorizeHost:(NSString *)authorizeHost {
   if (self = [super init]) {
     _pcode = pcode;
     _apiKey = apiKey;
@@ -21,17 +25,20 @@
   return self;
 }
 
-- (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
+- (void)tokenForEmbedCodes:(NSArray *)embedCodes
+                  callback:(OOEmbedTokenCallback)callback {
   NSMutableDictionary* params = [NSMutableDictionary dictionary];
   
   params[@"account_id"] = self.accountId;
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@",
+                   self.pcode, [embedCodes componentsJoinedByString:@","]];
   
   // You should not be using OOEmbeddedSecureURLGenerator in your own app.
   // We recommend generating this URL in a remote server you own, as we discourage storing apiKey and apiSecret information within the app because of security concerns.
-  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.apiSecret];
+  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
+                                                                                       secret:self.apiSecret];
   NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
-  callback([embedTokenUrl absoluteString]);
+  callback(embedTokenUrl.absoluteString);
 }
 
 @end

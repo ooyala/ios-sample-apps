@@ -53,9 +53,6 @@
 
 /**
  * This is called when control is handed over to the plugin
- *
- * @param token
- *          passed from plugin in previous calls.
  */
 - (void)onAdModeEntered;
 
@@ -86,7 +83,7 @@
 /**
  * @return non-nil (possibly empty) array of cue point times for ads.
  */
-- (NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSeconds;
+- (NSSet *)getCuePointsAtSeconds; ///<NSNumber int seconds>
 
 /**
  * Called when an icon is clicked

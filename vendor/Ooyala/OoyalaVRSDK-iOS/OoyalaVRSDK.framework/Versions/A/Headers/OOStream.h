@@ -72,7 +72,7 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /** @internal
  * Initialize a OOStream using the specified asset data (subclasses should override this)
- * @param[in] asset data the NSDictionary containing the data to use to initialize this OOStream
+ * @param[in] data data the NSDictionary containing the data to use to initialize this OOStream
  * @returns the initialized OOStream
  */
 - (id)initWithAssetDictionary:(NSDictionary *)data;
