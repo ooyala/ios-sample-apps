@@ -141,7 +141,7 @@ AppDelegate *appDel;
   if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
     NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
                          [notification name],
-                         [[notification.userInfo objectForKey:@"fullScreen"] boolValue] ? @"YES" : @"NO"];
+                         [[notification.userInfo objectForKey:@"fullscreen"] boolValue] ? @"YES" : @"NO"];
     NSLog(@"%@", message);
   }
   

@@ -8,6 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CMTimeRange.h>
 
+#ifndef OOPlayerProtocol_h
+#define OOPlayerProtocol_h
+
 @class UIImage;
 
 /**
@@ -125,3 +128,5 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerDesiredState) {
 @property (nonatomic) float volume; /** the player volume*/
 
 @end
+
+#endif // OOPlayerProtocol_h

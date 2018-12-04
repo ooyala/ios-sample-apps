@@ -10,7 +10,7 @@
 
 @interface NSDictionary (Utils)
 
-+ (NSDictionary *) dictionaryFromSkinConfigFile:(NSString *)filename mergedWith:(NSDictionary *)dict;
++ (NSDictionary *)dictionaryFromSkinConfigFile:(NSString *)filename mergedWith:(NSDictionary *)dict;
 + (NSDictionary *)dictionaryFromJson:(NSString *)filename;
 
 @end

@@ -6,20 +6,20 @@
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-
 #import <Foundation/Foundation.h>
 
+@class OOReactSkinModel;
 @class OOOoyalaPlayer;
-@class OOSkinViewController;
 
 @interface OOSkinPlayerObserver : NSObject
 
-- (instancetype) init __attribute__((unavailable("init not available")));
-- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player skinViewController:(OOSkinViewController *)viewController;
+- (instancetype)init __attribute__((unavailable("init not available")));
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player ooReactSkinModel:(OOReactSkinModel *)ooReactSkinModel;
 
-- (void) bridgeCurrentItemChangedNotification:(NSNotification *)notification;
-- (void) bridgeErrorNotification:(NSNotification *)notification;
-- (void) bridgeStateChangedNotification:(NSNotification *)notification;
-- (void) bridgeDesiredStateChangedNotification:(NSNotification *)notification;
-- (void) bridgeCCManifestChangedNotification:(NSNotification *)notification;
+- (void)bridgeCurrentItemChangedNotification:(NSNotification *)notification;
+- (void)bridgeErrorNotification:(NSNotification *)notification;
+- (void)bridgeStateChangedNotification:(NSNotification *)notification;
+- (void)bridgeDesiredStateChangedNotification:(NSNotification *)notification;
+- (void)bridgeCCManifestChangedNotification:(NSNotification *)notification;
+
 @end

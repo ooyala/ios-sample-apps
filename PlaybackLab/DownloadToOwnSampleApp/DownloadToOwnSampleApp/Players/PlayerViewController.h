@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class PlayerSelectionOption;
+@class OODtoAsset;
 
 @interface PlayerViewController : UIViewController
-
-@property (nonatomic) PlayerSelectionOption *option;
+/**
+ OODtoAsset to play from, either online or offline
+ */
+@property (nonatomic) OODtoAsset *dtoAsset;
 
 @end
