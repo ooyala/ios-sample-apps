@@ -13,11 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+          if #available(iOS 10.0, *) {
+            try audioSession.setCategory(.playback, mode: .default, options: [])
+          } else {
+            // Fallback on earlier versions
+          }
         }
         catch {
             print("Setting category to AVAudioSessionCategoryPlayback failed.")
