@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT NSString * const kLocalizableStrings;
-FOUNDATION_EXPORT NSString * const kLocale;
+FOUNDATION_EXPORT NSString *const kLocalizableStrings;
+FOUNDATION_EXPORT NSString *const kLocale;
 
 @interface OOLocaleHelper : NSObject
 

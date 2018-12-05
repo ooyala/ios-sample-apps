@@ -56,6 +56,9 @@
 #import "OOControlsViewController.h"
 #import "OOImages.h"
 
+// Audio
+#import "OOAudioSession.h"
+
 #else
 
 // TVOS GVR
@@ -132,7 +135,7 @@
 
 #import "OOAssetDownloadOptions.h"
 #import "OOAssetDownloadStream.h"
-#import "OOAssetDownloadManager.h"
+#import "OODtoAsset.h"
 
 #endif
 

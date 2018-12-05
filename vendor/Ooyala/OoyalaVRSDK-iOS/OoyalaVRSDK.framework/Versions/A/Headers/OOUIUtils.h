@@ -11,11 +11,11 @@
 
 @interface OOUIUtils : NSObject
 
-+(void) doSafeGStateBlock:(void(^)(CGContextRef))block;
++ (void)doSafeGStateBlock:(void(^)(CGContextRef))block;
 
 + (UIColor *)colorByDarkening:(UIColor*)color by:(float)factor;
 
-+ (UIImage *)imageFromBase64String: (NSString *)string;
++ (UIImage *)imageFromBase64String:(NSString *)string;
 
 + (BOOL)isIpad;
 
@@ -24,8 +24,8 @@
 /**
  * If called on the main thread, the block will be invoked immediately.
  * Otherwise it will be dispatched to run on the main thread.
- * @param a block of code to run on the main thread.
+ * @param block of code to run on the main thread.
  */
-+(void) runOnMainThread:(void (^)(void))block;
++ (void)runOnMainThread:(void (^)(void))block;
 
 @end

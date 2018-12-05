@@ -13,9 +13,10 @@
 @protocol OOFairplayContentKeyDelegate;
 
 @interface OOAssetLoaderDelegate : NSObject<AVAssetResourceLoaderDelegate>
--(instancetype) init ;
 
--(instancetype) initWithAsset:(AVURLAsset *)asset
+- (instancetype)init;
+
+- (instancetype)initWithAsset:(AVURLAsset *)asset
                         pcode:(NSString *)pcode
                     authToken:(NSString *)authToken
            secureURLGenerator:(id<OOSecureURLGenerator>)secureURLGenerator
@@ -37,4 +38,5 @@
  * It should be nil for regular stream assets.
  */
 @property (nonatomic) NSURL *fairplayKeyURL;
+
 @end

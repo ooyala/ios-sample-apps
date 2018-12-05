@@ -27,7 +27,7 @@
 /**
  * Initialize a OOUnbundledVideo using the specified data (subclasses should override this)
  * @param[in] streams NSArray containing OOStreams.
- * @param[in] theAds NSArray containing OOManagedAdSpots.
+ * @param[in] ads NSArray containing OOManagedAdSpots.
  */
 - (id)initWithUnbundledStreams:(NSArray*)streams ads:(NSArray*)ads;
 
