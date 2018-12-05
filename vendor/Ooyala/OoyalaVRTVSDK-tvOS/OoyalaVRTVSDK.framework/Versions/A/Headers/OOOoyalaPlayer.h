@@ -33,6 +33,8 @@
 @class OOUserInfo;
 @class OOPlayer;
 @class OOSsaiAdsMetadata;
+@class OOAudioSession;
+
 
 /**
  * \defgroup key Most Commonly Used Classes
@@ -317,13 +319,6 @@ extern NSString *const OOOoyalaPlayerEmbedCodeSetNotification;
 
 /**
  * \memberof OOOoyalaPlayer
- * \brief The name used for notifications which fire when cast device volume changed.
- * \details Nothing is provided through UserInfo. This happens only during Chromecast playback, when the Chromecast volume is affected by a different sender device.
- */
-extern NSString *const OOOoyalaPlayerCastVolumeChangeNotification;
-
-/**
- * \memberof OOOoyalaPlayer
  * \brief The name used for notifications which fire when bitrate has changed in video playback.
  * \details Nothing is provided through UserInfo. You should be able to check OOOoyalaPlayer.bitrate for a new value.
  */
@@ -426,6 +421,13 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedEnabledNotification;
  *   \brief Notification when playback speed rate changed.
  */
 extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification;
+
+
+/**
+ *  \memberof OOOoyalaPlayer
+ *   \brief Notification when application volume changed.
+ */
+extern NSString *const OOOoyalaPlayerApplicationVolumeChangedNotification;
 
 /**
  * The OoyalaPlayer is the heart of the playback system.
@@ -586,6 +588,12 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification
  * @internal the ui slider mode
  */
 @property (nonatomic) OOUIProgressSliderMode normalSliderMode;
+
+
+/**
+ * @internal Audio Session
+ */
+@property (nonatomic) OOAudioSession *audioSession;
 
 #pragma mark Initializers
 

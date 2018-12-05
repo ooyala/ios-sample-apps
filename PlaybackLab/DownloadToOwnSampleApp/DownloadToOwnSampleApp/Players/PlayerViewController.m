@@ -15,6 +15,12 @@
 
 #define REFRESH_RATE 0.5
 
+typedef NS_ENUM(NSInteger, DownloadMode) {
+  Offline,
+  Online,
+  Undefined
+};
+
 @interface PlayerViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *playerView;
@@ -34,6 +40,9 @@
 
 // for refresh the data from analytics offline
 @property (nonatomic) NSTimer *refreshTimer;
+@property (nonatomic) DownloadMode currentMode;
+
+- (void)restartVideo;
 
 @end
 
@@ -41,7 +50,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
+
+  self.currentMode = Undefined;
   OOOoyalaPlayer *player = nil;
   // We assume we're dealing with a Fairplay asset because the Option instance has an embedTokenGenerator
   if (self.dtoAsset.options.embedTokenGenerator) {
@@ -98,7 +108,7 @@
   [self.dtoAsset progressWithProgressClosure:^(double progress) {
     dispatch_async(dispatch_get_main_queue(), ^{
       weakSelf.stateLabel.text = [NSString stringWithFormat:@"%@ %.02f%%",
-                                  weakSelf.dtoAsset.stateText, progress*100];
+                                  weakSelf.dtoAsset.stateText, progress * 100];
     });
   }];
   [self.dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
@@ -132,15 +142,31 @@
 
 // action linked to the online video button
 - (IBAction)playOnline {
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.dtoAsset.embedCode];
+  if (self.currentMode == Online) {
+    [self restartVideo];
+  } else {
+    [self.ooyalaPlayerViewController.player setEmbedCode:self.dtoAsset.embedCode];
+    self.currentMode = Online;
+  }
 }
 
 // action linked to the offline video button
 - (IBAction)playOffline {
-  OOOfflineVideo *video = self.dtoAsset.offlineVideo;
-  if (video) {
-    [self.ooyalaPlayerViewController.player setUnbundledVideo:video];
+  if (self.currentMode == Offline) {
+    [self restartVideo];
+  } else {
+    OOOfflineVideo *video = self.dtoAsset.offlineVideo;
+    if (video) {
+      [self.ooyalaPlayerViewController.player setUnbundledVideo:video];
+    }
+    self.currentMode = Offline;
   }
+}
+
+- (void)restartVideo {
+  [self.ooyalaPlayerViewController.player pause];
+  [self.ooyalaPlayerViewController.player setPlayheadTime:0];
+  [self.ooyalaPlayerViewController.player play];
 }
 
 #pragma mark - Timer

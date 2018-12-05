@@ -49,7 +49,7 @@
 /**
  Generates an embed token used for OPT (Ooyala Player Token), entitlements, and DRM assets
  */
-@property (nonatomic, weak, nullable) id<OOEmbedTokenGenerator> embedTokenGenerator;
+@property (nonatomic, nullable) id<OOEmbedTokenGenerator> embedTokenGenerator;
 
 /**
  How long to wait, in seconds, for the authorization requests previous to downloading an asset.

@@ -106,4 +106,11 @@
  */
 - (void)pause;
 
+/**
+ * Parse all_ads metadata obtained in https://player.ooyala.com/player_api/v1/metadata/embed_code/
+ * @param adsMetadata as NSMutableArray
+ * @return ad spot as OOAdSpotManager
+ */
+- (OOAdSpotManager *)parseAllAdsMetadata:(NSMutableArray *)adsMetadata;
+
 @end

@@ -48,6 +48,10 @@
 		7539E080205ABFE200964F9C /* MultiAudioListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539E07F205ABFE200964F9C /* MultiAudioListViewController.m */; };
 		75905FEB20ECED480089AF4D /* DRMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75905FEA20ECED480089AF4D /* DRMPlayerViewController.m */; };
 		75905FEE20ECF2590089AF4D /* DRMPlayerSelectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75905FED20ECF2590089AF4D /* DRMPlayerSelectionOptions.m */; };
+		75961E5121A56684000C421A /* AudioOnlyPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75961E5021A56684000C421A /* AudioOnlyPlayerViewController.xib */; };
+		75961E5421A5668E000C421A /* AudioOnlySkinPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75961E5321A5668E000C421A /* AudioOnlySkinPlayerViewController.m */; };
+		75961E5721A5669D000C421A /* AudioOnlyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75961E5621A5669D000C421A /* AudioOnlyListViewController.m */; };
+		972ED77E1AE184CE005043DC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 972ED77D1AE184CE005043DC /* libz.dylib */; };
 		9756A7581CF677D500D292F0 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */; };
 		97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */; };
 		97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97930C0F1B6709A9009B3512 /* MasterListViewControllerTableViewController.m */; };
@@ -158,6 +162,12 @@
 		75905FEA20ECED480089AF4D /* DRMPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMPlayerViewController.m; sourceTree = "<group>"; };
 		75905FEC20ECF2590089AF4D /* DRMPlayerSelectionOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMPlayerSelectionOptions.h; sourceTree = "<group>"; };
 		75905FED20ECF2590089AF4D /* DRMPlayerSelectionOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRMPlayerSelectionOptions.m; sourceTree = "<group>"; };
+		75961E5021A56684000C421A /* AudioOnlyPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioOnlyPlayerViewController.xib; sourceTree = "<group>"; };
+		75961E5221A5668E000C421A /* AudioOnlySkinPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOnlySkinPlayerViewController.h; sourceTree = "<group>"; };
+		75961E5321A5668E000C421A /* AudioOnlySkinPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOnlySkinPlayerViewController.m; sourceTree = "<group>"; };
+		75961E5521A5669D000C421A /* AudioOnlyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOnlyListViewController.h; sourceTree = "<group>"; };
+		75961E5621A5669D000C421A /* AudioOnlyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOnlyListViewController.m; sourceTree = "<group>"; };
+		972ED77D1AE184CE005043DC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9756A7571CF677D500D292F0 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		97930C0B1B670971009B3512 /* FreewheelPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreewheelPlayerViewController.h; sourceTree = "<group>"; };
 		97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreewheelPlayerViewController.m; sourceTree = "<group>"; };
@@ -296,6 +306,8 @@
 				7539E07F205ABFE200964F9C /* MultiAudioListViewController.m */,
 				B8FA3A5C210F880F004C6D7F /* SSAIListViewController.h */,
 				B8FA3A5D210F880F004C6D7F /* SSAIListViewController.m */,
+				75961E5521A5669D000C421A /* AudioOnlyListViewController.h */,
+				75961E5621A5669D000C421A /* AudioOnlyListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -328,6 +340,7 @@
 				0B7824561B2B841800D718AB /* TableCell.xib */,
 				752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */,
 				B8FA3A63210F8BFD004C6D7F /* SSAIPlayerViewController.xib */,
+				75961E5021A56684000C421A /* AudioOnlyPlayerViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +362,8 @@
 				75905FEA20ECED480089AF4D /* DRMPlayerViewController.m */,
 				B8FA3A61210F8BFD004C6D7F /* SSAIPlayerViewController.h */,
 				B8FA3A62210F8BFD004C6D7F /* SSAIPlayerViewController.m */,
+				75961E5221A5668E000C421A /* AudioOnlySkinPlayerViewController.h */,
+				75961E5321A5668E000C421A /* AudioOnlySkinPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -532,6 +547,7 @@
 				CA6327861C4421A0008F3667 /* Roboto-Regular.ttf in Resources */,
 				0620FF411DE64D0100D1B44E /* es.json in Resources */,
 				0620FF421DE64D0100D1B44E /* zh.json in Resources */,
+				75961E5121A56684000C421A /* AudioOnlyPlayerViewController.xib in Resources */,
 				0620FF401DE64D0100D1B44E /* en.json in Resources */,
 				CA30119A1ECA5911003BA426 /* ja.json in Resources */,
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
@@ -561,6 +577,7 @@
 				97930C1C1B670E77009B3512 /* BasicTestsListViewController.m in Sources */,
 				97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */,
 				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
+				75961E5721A5669D000C421A /* AudioOnlyListViewController.m in Sources */,
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
 				75905FEE20ECF2590089AF4D /* DRMPlayerSelectionOptions.m in Sources */,
@@ -572,6 +589,7 @@
 				97930C191B670D9F009B3512 /* FreewheelTestsListViewController.m in Sources */,
 				B8FA3A64210F8BFD004C6D7F /* SSAIPlayerViewController.m in Sources */,
 				52B59C43201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m in Sources */,
+				75961E5421A5668E000C421A /* AudioOnlySkinPlayerViewController.m in Sources */,
 				75905FEB20ECED480089AF4D /* DRMPlayerViewController.m in Sources */,
 				752F36AC20063328007BF377 /* SetAssetListViewController.m in Sources */,
 				B8FA3A5E210F880F004C6D7F /* SSAIListViewController.m in Sources */,
