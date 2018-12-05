@@ -40,6 +40,8 @@
 		39278C9E2191D99F00F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278C9D2191D99F00F6F4E2 /* libxml2.tbd */; };
 		39278CA02191D9A500F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278C9F2191D9A500F6F4E2 /* libc++.tbd */; };
 		39278CD22192D2A400F6F4E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39278CD12192D2A400F6F4E2 /* Images.xcassets */; };
+		39E0254721B7BF86000CC6A8 /* AudioOnlyPlayerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EFBD7F218C869F001D9527 /* AudioOnlyPlayerInfo.h */; };
+		39E0254821B7BF8B000CC6A8 /* AudioOnlyPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EFBD7D218C8691001D9527 /* AudioOnlyPlayerInfo.m */; };
 		39EFBD7E218C8691001D9527 /* AudioOnlyPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EFBD7D218C8691001D9527 /* AudioOnlyPlayerInfo.m */; };
 		39EFBD80218C86A4001D9527 /* AudioOnlyPlayerInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EFBD7F218C869F001D9527 /* AudioOnlyPlayerInfo.h */; };
 		9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAF71BFBE5720094A660 /* QRScannerViewController.h */; };
@@ -268,6 +270,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E0254721B7BF86000CC6A8 /* AudioOnlyPlayerInfo.h in Headers */,
 				0B19FF621A3B80FB003E57DF /* BasicPlaybackListViewController.h in Headers */,
 				0B19FF631A3B80FB003E57DF /* BasicSimplePlayerViewController.h in Headers */,
 			);
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4FE7961CE2AA99000DCC00 /* QRScannerViewController.m in Sources */,
+				39E0254821B7BF8B000CC6A8 /* AudioOnlyPlayerInfo.m in Sources */,
 				0B19FF1A1A3B755A003E57DF /* BasicPlaybackListViewController.m in Sources */,
 				0B19FF1C1A3B755A003E57DF /* BasicSimplePlayerViewController.m in Sources */,
 			);

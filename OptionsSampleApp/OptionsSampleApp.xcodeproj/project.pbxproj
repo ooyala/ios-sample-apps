@@ -32,6 +32,8 @@
 		0BF4FA0A1A685F9E0050A602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA071A685F9E0050A602 /* Main.storyboard */; };
 		39278CC22191DE1500F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC12191DE1500F6F4E2 /* libc++.tbd */; };
 		39278CC42191DE1B00F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC32191DE1B00F6F4E2 /* libxml2.tbd */; };
+		39E0254A21B7BFC7000CC6A8 /* IQConfigurationPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B50E24E1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h */; };
+		39E0254B21B7BFCB000CC6A8 /* IQConfigurationPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E24F1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m */; };
 		9772BF861A43B61500B255C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF851A43B61500B255C0 /* main.m */; };
 		9772BF891A43B61500B255C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF881A43B61500B255C0 /* AppDelegate.m */; };
 		9772BF911A43B61500B255C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9772BF901A43B61500B255C0 /* Images.xcassets */; };
@@ -258,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF4FA011A6852290050A602 /* OptionsListTableViewController.h in Headers */,
+				39E0254A21B7BFC7000CC6A8 /* IQConfigurationPlayerViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +366,7 @@
 			files = (
 				0B24B84A1AA66D6700F131C3 /* OptionsViewController.m in Sources */,
 				0BF4F9FF1A6852090050A602 /* TVRatingsPlayerViewController.m in Sources */,
+				39E0254B21B7BFCB000CC6A8 /* IQConfigurationPlayerViewController.m in Sources */,
 				0BF4F9FE1A6852030050A602 /* OptionsListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

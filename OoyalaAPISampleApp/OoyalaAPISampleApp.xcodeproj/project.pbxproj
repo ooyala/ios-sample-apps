@@ -21,6 +21,8 @@
 		0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */; };
 		39278CB62191DD5A00F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CB52191DD5A00F6F4E2 /* libxml2.tbd */; };
 		39278CB82191DD5F00F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CB72191DD5F00F6F4E2 /* libc++.tbd */; };
+		39E0254921B7BFA9000CC6A8 /* PlaylistListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63FB031DF7980400879D7E /* PlaylistListViewController.m */; };
+		39E0254C21B7BFDA000CC6A8 /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63FB001DF797F300879D7E /* ChannelContentTreePlayerViewController.m */; };
 		9751C7F41A956C5300C7364F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C7F31A956C5300C7364F /* main.m */; };
 		9751C7F71A956C5300C7364F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C7F61A956C5300C7364F /* AppDelegate.m */; };
 		9751C7FD1A956C5300C7364F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9751C7FB1A956C5300C7364F /* Main.storyboard */; };
@@ -325,6 +327,8 @@
 				0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */,
 				0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */,
 				0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */,
+				39E0254921B7BFA9000CC6A8 /* PlaylistListViewController.m in Sources */,
+				39E0254C21B7BFDA000CC6A8 /* ChannelContentTreePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
