@@ -2,14 +2,13 @@
 //  OptionsViewController.m
 //  OptionsSampleApp
 //
-//  Created by Zhihui Chen on 12/18/14.
+//  Created on 12/18/14.
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 
 #import "TVRatingsPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
-
 
 @interface TVRatingsPlayerViewController () <UITextFieldDelegate>
 
@@ -26,7 +25,6 @@
 
 @end
 
-
 @implementation TVRatingsPlayerViewController{
   AppDelegate *appDel;
 }
@@ -38,18 +36,20 @@
 @synthesize switch1 = _switch1;
 @synthesize switch2 = _switch2;
 @synthesize button1 = _button1;
+@dynamic playerView;
 
 #pragma mark - Initialization
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   _nib = @"PlayerDoubleSwitch";
   _tvRatingDuration = 5;
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _pcode = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -61,22 +61,22 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
   
-  if (_switch1 != nil) {
+  if (_switch1) {
     _switchLabel1.text = @"On = Top, Off = Bottom";
     _switch1.on = NO;
   }
-  if (_switch2 != nil) {
+  if (_switch2) {
     _switchLabel2.text = @"On = Left, Off = Right";
     _switch2.on = NO;
   }
@@ -87,9 +87,9 @@
 - (IBAction)onButtonClick:(id)sender {
   OOOptions *options = [OOOptions new];
   
-  if (_playerViewController) {
-    [_playerViewController removeFromParentViewController];
-    [_playerViewController.view removeFromSuperview];
+  if (self.playerViewController) {
+    [self.playerViewController removeFromParentViewController];
+    [self.playerViewController.view removeFromSuperview];
   }
   
   OOFCCTVRatingConfiguration *tvRatingConfig = [[OOFCCTVRatingConfiguration alloc] initWithDurationSeconds:_tvRatingDuration
@@ -110,7 +110,7 @@
   
   // Setup video view
   CGRect rect = self.playerView.bounds;
-  [_playerViewController.view setFrame:rect];
+  _playerViewController.view.frame = rect;
   [self addChildViewController:_playerViewController];
   [self.playerView addSubview:_playerViewController.view];
   
@@ -124,11 +124,11 @@
 #pragma mark - Private functions
 
 - (OOFCCTvRatingsPosition)getTVRatingPosition {
-  if (_switch1.on == YES && _switch2.on == YES) {
+  if (_switch1.on && _switch2.on) {
     return OOFCCTvRatingsPositionTopLeft;
-  } else if (_switch1.on == YES && _switch2.on == NO) {
+  } else if (_switch1.on&& !_switch2.on) {
     return OOFCCTvRatingsPositionTopRight;
-  } else if (_switch1.on == NO && _switch2.on == YES) {
+  } else if (!_switch1.on && _switch2.on) {
     return OOFCCTvRatingsPositionBottomLeft;
   } else { // if (_switch1.on == NO && _switch2.on == NO)
     return OOFCCTvRatingsPositionBottomRight;
@@ -136,21 +136,19 @@
 }
 
 - (void)notificationHandler:(NSNotification*)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
+                       notification.name,
                        [OOOoyalaPlayer playerStateToString:[self.playerViewController.player state]],
                        [self.playerViewController.player playheadTime], appDel.count];
-  
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
     [self.textView setText:appendString];
@@ -158,6 +156,5 @@
   
   appDel.count++;
 }
-
 
 @end

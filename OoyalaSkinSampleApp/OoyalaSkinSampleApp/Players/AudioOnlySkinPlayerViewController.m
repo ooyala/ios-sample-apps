@@ -5,12 +5,11 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
+#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
+
 #import "AudioOnlySkinPlayerViewController.h"
 #import "AppDelegate.h"
-
-@import OoyalaSDK;
-@import OoyalaSkinSDK;
-
 
 @interface AudioOnlySkinPlayerViewController ()
 

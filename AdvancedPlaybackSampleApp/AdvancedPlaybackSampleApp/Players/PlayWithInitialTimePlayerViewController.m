@@ -24,8 +24,9 @@
 @end
 
 
-@implementation PlayWithInitialTimePlayerViewController
-AppDelegate *appDel;
+@implementation PlayWithInitialTimePlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 

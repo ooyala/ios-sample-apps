@@ -26,9 +26,9 @@
 @end
 
 
-@implementation FreewheelPlayerViewController
-
-AppDelegate *appDel;
+@implementation FreewheelPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initializaiton
 

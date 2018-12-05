@@ -4,7 +4,7 @@
 target 'CocoaPodsSampleApp' do
 
 source 'https://github.com/ooyala/ios-sdk-podspecs.git'
-  pod 'OoyalaSDK', '~> 4.20.0'
+  pod 'OoyalaSDK'
 
 end
 

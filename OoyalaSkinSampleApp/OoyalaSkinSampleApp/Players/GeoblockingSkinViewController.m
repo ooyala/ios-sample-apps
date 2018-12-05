@@ -28,11 +28,9 @@
 @end
 
 
-@implementation GeoblockingSkinViewController
-
-
-AppDelegate *appDel;
-
+@implementation GeoblockingSkinViewController {
+  AppDelegate *appDel;
+}
 #pragma mark - Initializaiton
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {

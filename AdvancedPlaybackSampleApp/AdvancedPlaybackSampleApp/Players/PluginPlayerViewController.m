@@ -25,8 +25,9 @@
 @end
 
 
-@implementation PluginPlayerViewController
-AppDelegate *appDel;
+@implementation PluginPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 

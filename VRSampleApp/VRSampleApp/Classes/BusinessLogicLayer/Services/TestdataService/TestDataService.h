@@ -2,7 +2,7 @@
 //  TestDataService.h
 //  VRSampleApp
 //
-//  Created by Mark Mizinov on 12/22/17.
+//  Created on 12/22/17.
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 

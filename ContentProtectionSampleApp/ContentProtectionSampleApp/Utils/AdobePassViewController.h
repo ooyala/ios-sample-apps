@@ -2,7 +2,7 @@
 //  AdobePassViewController.h
 //  AdobePassDemoApp
 //
-//  Created by Chris Leonavicius on 5/16/12.
+//  Created on 5/16/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

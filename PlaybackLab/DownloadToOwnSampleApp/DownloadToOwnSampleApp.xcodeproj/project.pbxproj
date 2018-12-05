@@ -15,7 +15,6 @@
 		CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */; };
 		CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */; };
 		CA561E6E1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */; };
-		CA79AF681E00B0B80027754F /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA79AF511E00B0B80027754F /* OoyalaSkinSDK.xcassets */; };
 		CA79AF751E00B2CD0027754F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF741E00B2CD0027754F /* libxml2.tbd */; };
 		CA79AF771E00B2D30027754F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF761E00B2D30027754F /* libc++.tbd */; };
 		CA79AF791E00B2DF0027754F /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF781E00B2DF0027754F /* libc++abi.tbd */; };
@@ -57,7 +56,6 @@
 		CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEmbedTokenGenerator.h; path = Utils/BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
 		CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEmbedTokenGenerator.m; path = Utils/BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
 		CA79AF501E00B0B80027754F /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
-		CA79AF511E00B0B80027754F /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OoyalaSkinSDK.xcassets; sourceTree = "<group>"; };
 		CA79AF741E00B2CD0027754F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		CA79AF761E00B2D30027754F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		CA79AF781E00B2DF0027754F /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
@@ -147,7 +145,6 @@
 				CA79AF931E00B58D0027754F /* skin-config */,
 				CA79AF911E00B53F0027754F /* main.jsbundle */,
 				CA79AF501E00B0B80027754F /* OoyalaSkinSDK.framework */,
-				CA79AF511E00B0B80027754F /* OoyalaSkinSDK.xcassets */,
 			);
 			name = "OoyalaSkinSDK-iOS";
 			path = "VendorLibraries/OoyalaSkinSDK-iOS";
@@ -282,13 +279,12 @@
 		CA7ED8F01D5964E700EA0A57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Eric Vargas";
 				TargetAttributes = {
 					CA7ED8F71D5964E700EA0A57 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeamName = "Ooyala Inc";
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -329,7 +325,6 @@
 				CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */,
 				CA79B89F1E00BA110027754F /* Roboto-Regular.ttf in Resources */,
 				CA79AF921E00B53F0027754F /* main.jsbundle in Resources */,
-				CA79AF681E00B0B80027754F /* OoyalaSkinSDK.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",
@@ -501,7 +496,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",

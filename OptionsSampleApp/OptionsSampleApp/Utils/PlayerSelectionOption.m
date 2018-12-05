@@ -11,15 +11,19 @@
 
 @implementation PlayerSelectionOption
 
-- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain viewController:(Class) viewController {
-    if (self = [super init]) {
-        self.title = title;
-        self.embedCode = embedCode;
-        self.pcode = pcode;
-        self.domain = domain;
-        self.viewController = viewController;
-    }
-    return self;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController {
+  if (self = [super init]) {
+    _title = title;
+    _embedCode = embedCode;
+    _pcode = pcode;
+    _domain = domain;
+    _viewController = viewController;
+  }
+  return self;
 }
 
 @end

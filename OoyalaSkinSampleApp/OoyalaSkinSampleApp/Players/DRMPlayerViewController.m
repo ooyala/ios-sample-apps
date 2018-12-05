@@ -41,9 +41,9 @@
 @end
 
 
-@implementation DRMPlayerViewController
-
-AppDelegate *appDel;
+@implementation DRMPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 

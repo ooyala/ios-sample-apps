@@ -32,8 +32,9 @@
 @end
 
 
-@implementation CustomOverlayPlayerViewController
-AppDelegate *appDel;
+@implementation CustomOverlayPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 

@@ -6,7 +6,5 @@
 //
 
 protocol TestDataServiceProtocol {
-  
-  func obtainTestData() -> [VideItemSection]?
-  
+  var testData: [VideItemSection] { get }
 }

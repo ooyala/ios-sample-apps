@@ -26,9 +26,9 @@
 @end
 
 
-@implementation InsertAdPlayerViewController
-
-AppDelegate *appDel;
+@implementation InsertAdPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 
