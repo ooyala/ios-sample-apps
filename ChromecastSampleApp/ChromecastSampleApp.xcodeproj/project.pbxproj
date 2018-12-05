@@ -22,7 +22,6 @@
 		39AE421821772F7200F1C084 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39AE420F21772F7200F1C084 /* LaunchScreen.xib */; };
 		39AE421921772F7200F1C084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421121772F7200F1C084 /* Main.storyboard */; };
 		39AE421A21772F7200F1C084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421321772F7200F1C084 /* Images.xcassets */; };
-		39B612D02155330F00E2277C /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B612CF2155330F00E2277C /* GoogleCast.framework */; };
 		5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143A1C5807230078E075 /* libxml2.tbd */; };
 		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
@@ -129,7 +128,6 @@
 				FF49D20519CBAB3F001B156F /* EventKit.framework in Frameworks */,
 				FF49D20319CBAB28001B156F /* MessageUI.framework in Frameworks */,
 				FF21F0DB19CB7A2100FE9D07 /* AVFoundation.framework in Frameworks */,
-				39B612D02155330F00E2277C /* GoogleCast.framework in Frameworks */,
 				FF21F0DC19CB7A2100FE9D07 /* CFNetwork.framework in Frameworks */,
 				FF21F0DD19CB7A2100FE9D07 /* CoreMedia.framework in Frameworks */,
 				FF21F0DF19CB7A2100FE9D07 /* MediaAccessibility.framework in Frameworks */,
@@ -293,7 +291,7 @@
 		FF21F06E19CB5ABC00FE9D07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Liusha Huang";
 				TargetAttributes = {
 					FF21F07519CB5ABC00FE9D07 = {
