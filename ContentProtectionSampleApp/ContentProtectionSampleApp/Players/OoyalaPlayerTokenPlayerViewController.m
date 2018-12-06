@@ -4,7 +4,7 @@
  * @details    This is a non-runnable sample ViewController that demonstrates how to respond to Device Management notifications
  *  such as when new devices are registered.
  * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ * @copyright  Copyright © 2014 Ooyala Inc, Inc. All rights reserved.
  */
 
 #import "OoyalaPlayerTokenPlayerViewController.h"

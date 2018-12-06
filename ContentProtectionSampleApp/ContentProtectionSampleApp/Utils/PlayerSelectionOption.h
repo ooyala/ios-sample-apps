@@ -4,7 +4,7 @@
  * @details    An object that contains the information needed to represent an example.
  *             This object is passed between the List and the Player to transfer the information
  * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ * @copyright  Copyright © 2014 Ooyala Inc. All rights reserved.
  */
 
 #import <UIKit/UIKit.h>

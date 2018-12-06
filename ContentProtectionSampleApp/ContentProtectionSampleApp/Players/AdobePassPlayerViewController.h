@@ -3,19 +3,22 @@
 //  AdobePassDemoApp
 //
 //  Created on 5/15/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
+
 @class AdobePassViewController;
 @class OOOoyalaPlayerViewController;
 
 @interface AdobePassPlayerViewController : SampleAppPlayerViewController
 
-@property (nonatomic, strong) AdobePassViewController *passController;
-@property (nonatomic, strong) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property (nonatomic) AdobePassViewController *passController;
+@property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+
 - (void)setEmbedCode;
 - (void)login;
 - (void)logout;
+
 @end

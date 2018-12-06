@@ -3,7 +3,7 @@
 //  AdobePassDemoApp
 //
 //  Created on 5/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
 //
 
 #import "Util.h"
@@ -92,7 +92,8 @@
 }
 
 + (NSString *)urlEncode:(NSString *)str {
-  return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)str, NULL, (__bridge CFStringRef)@"|!*'\"();:@&=+$/?%#[]% ", CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+  return [str stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+
 }
 
 @end
