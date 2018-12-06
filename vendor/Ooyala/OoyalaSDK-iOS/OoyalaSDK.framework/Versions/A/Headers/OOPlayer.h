@@ -27,10 +27,10 @@
 
 extern NSString *const PlayerErrorNotification;
 
-@property(nonatomic) Float64 playheadTime; /** KVO compatible playhead time */
-@property(readonly, nonatomic, strong) OOOoyalaError *playerError; /**< The OOPlayer's current error if it exists */
-@property(readonly, nonatomic, strong) UIView *view;
-@property(nonatomic) BOOL completed;
+@property (nonatomic) Float64 playheadTime; /** KVO compatible playhead time */
+@property (nonatomic, readonly) OOOoyalaError *playerError; /**< The OOPlayer's current error if it exists */
+@property (nonatomic, readonly) UIView *view;
+@property (nonatomic) BOOL completed;
 
 - (BOOL)isPlaying;
 
@@ -41,4 +41,5 @@ extern NSString *const PlayerErrorNotification;
 - (CGRect)videoRect;
 
 - (void)setState:(OOOoyalaPlayerState)state;
+
 @end

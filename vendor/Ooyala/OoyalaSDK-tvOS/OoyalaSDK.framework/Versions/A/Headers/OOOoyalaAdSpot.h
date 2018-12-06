@@ -16,11 +16,11 @@
  */
 @interface OOOoyalaAdSpot : OOManagedAdSpot <OOAuthorizableItem, OOPlayableItem> 
 
-@property(readonly, nonatomic, strong) NSMutableArray *streams;
-@property(readonly, nonatomic, strong) NSString *embedCode; /**< The OOOoyalaAdSpot's Embed Code */
-@property(readonly, nonatomic) BOOL authorized;             /**< @internal Whether or not this OOOoyalaAdSpot is authorized */
-@property(readonly, nonatomic) OOAuthCode authCode;         /**< @internal The response code from the authorize call */
-@property(nonatomic, assign) BOOL heartbeatRequired;        /**< @internal if the heartbeat is required */
+@property (readonly, nonatomic) NSMutableArray *streams;
+@property (readonly, nonatomic) NSString *embedCode; /**< The OOOoyalaAdSpot's Embed Code */
+@property (readonly, nonatomic) BOOL authorized;             /**< @internal Whether or not this OOOoyalaAdSpot is authorized */
+@property (readonly, nonatomic) OOAuthCode authCode;         /**< @internal The response code from the authorize call */
+@property (nonatomic, assign) BOOL heartbeatRequired;        /**< @internal if the heartbeat is required */
 
 /**
  * Initialize an OOOoyalaAdSpot using the embed code
@@ -31,7 +31,11 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOOoyalaAdSpot
  * @returns the initialized OOOoyalaAdSpot
  */
-- (id)initWithTime:(NSNumber *)theTime clickURL:(NSURL *)theClickURL trackingURLs:(NSArray *)theTrackingURLs embedCode:(NSString *)theEmbedCode api:(OOOoyalaAPIClient *)theAPI;
+- (instancetype)initWithTime:(NSNumber *)theTime
+                    clickURL:(NSURL *)theClickURL
+                trackingURLs:(NSArray *)theTrackingURLs
+                   embedCode:(NSString *)theEmbedCode
+                         api:(OOOoyalaAPIClient *)theAPI;
 
 /** @internal
  * Initialize an OOOoyalaAdSpot using the specified data (subclasses should override this)
@@ -39,7 +43,8 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOOoyalaAdSpot
  * @returns the initialized OOOoyalaAdSpot
  */
-- (id)initWithDictionary:(NSDictionary *)data api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OOOoyalaAdSpot using the specified data (subclasses should override and call this)
@@ -49,10 +54,11 @@
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 
 /** @internal
- * Fetch the additional required info for the ad
- * @returns NO if errors occurred, YES if successful
+ Fetch the additional required info for the ad
+
+ @param callback NO if errors occurred, YES if successful
  */
-- (BOOL)fetchPlaybackInfo;
+- (void)fetchPlaybackInfoWithCallback:(void (^)(BOOL success))callback;
 
 /** @internal
  * The embed codes to authorize

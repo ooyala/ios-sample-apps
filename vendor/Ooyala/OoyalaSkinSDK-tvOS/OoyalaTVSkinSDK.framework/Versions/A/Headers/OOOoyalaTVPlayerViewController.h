@@ -18,6 +18,12 @@
  */
 @property (nonatomic) BOOL playbackControlsEnabled;
 
+/*!
+ @property progressTintColor
+ @abstract The color that will be used to tint the player's progress bar.
+ */
+@property (nonatomic) UIColor *progressTintColor;
+
 - (instancetype)initWithPlayer:(OOOoyalaPlayer *)player;
 
 /** 

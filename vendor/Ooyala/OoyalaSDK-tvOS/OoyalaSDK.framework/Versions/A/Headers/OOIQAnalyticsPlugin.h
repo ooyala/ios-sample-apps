@@ -13,7 +13,8 @@
 
 @interface OOIQAnalyticsPlugin : NSObject<OOAnalyticsPluginProtocol>
 
-- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player iqConfiguration:(OOIQConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
+               iqConfiguration:(OOIQConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
 
 /**
  Availability of the network using the network configuration for IQ

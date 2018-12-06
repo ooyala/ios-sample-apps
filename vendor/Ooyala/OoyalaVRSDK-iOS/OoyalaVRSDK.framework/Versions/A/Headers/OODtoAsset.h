@@ -158,7 +158,9 @@ NS_CLASS_AVAILABLE_IOS(10.0)
 
 /**
  Returns an array with the available streams and their information if it is available for the embed code.
+
+ @param callback a nullable array of streams
  */
-- (nullable NSArray<OOAssetDownloadStream *> *)streams;
+- (void)getStreamsWithCallback:(void (^_Nullable)(NSArray<OOAssetDownloadStream *> * _Nullable streams))callback;
 
 @end
