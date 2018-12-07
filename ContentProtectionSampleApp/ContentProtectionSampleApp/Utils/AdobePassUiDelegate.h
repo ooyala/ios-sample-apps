@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol AdobePassUiDelegate
+
 - (void)providerSelected:(NSString *)mvpdId;
 - (void)navigatedBackToApp;
+
 @end

@@ -11,6 +11,8 @@
 #import "AdobePassUiDelegate.h"
 
 @interface MvpdLoginViewController : UIViewController <UIWebViewDelegate>
-- (id)initWithString:(NSString *)url delegate:(id<AdobePassUiDelegate>)delegate;
-- (id)initWithUrl:(NSURL *)url delegate:(id<AdobePassUiDelegate>)delegate;
+
+- (instancetype)initWithString:(NSString *)url delegate:(id<AdobePassUiDelegate>)theDelegate;
+- (instancetype)initWithUrl:(NSURL *)url delegate:(id<AdobePassUiDelegate>)theDelegate;
+
 @end

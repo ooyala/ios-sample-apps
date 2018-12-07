@@ -29,7 +29,8 @@
 
   self.title = @"Content Protection Sample App";
   self.navigationController.navigationBar.translucent = NO;
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil] forCellReuseIdentifier:@"TableCell"];
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
+       forCellReuseIdentifier:@"TableCell"];
 
   _options = [NSArray array];
   _options = [self playerSelectionOptions];
@@ -62,7 +63,7 @@
                                                   pcode:@"x0b2cyOupu0FFK5hCr4zXg8KKcrm"
                                                  domain:@"http://www.ooyala.com"
                                          viewController:FairplayPlayerViewController.class]
-//             Adobe's sample Adobe Pass MVPD doesn't respect App Transport Security.  Commented out for now
+//  Adobe's sample Adobe Pass MVPD doesn't respect App Transport Security. Commented out for now
 //           [[PlayerSelectionOption alloc] initWithTitle:@"Adobe Pass"
 //                                              embedCode:@"VybW5lODrJ0uM9FBo7XTT6TNjTJfr_7G"
 //                                                  pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
@@ -79,7 +80,7 @@
 //                                              embedCode:@"BuMjEwMDE6b8-bX45pBkcgFieNehCcln"
 //                                                  pcode:@"RkcjMxOtMYDwJzrPy3sWJLl6blS1"
 //                                                 domain:@"http://www.ooyala.com"
-//                                         viewController:FairplayPlayerViewController.class],
+//                                         viewController:FairplayPlayerViewController.class]
            ];
 }
 

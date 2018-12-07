@@ -11,13 +11,15 @@
 
 @implementation Util
 
-+ (NSString *)signRequestorId:(NSString *)requestorId keystore:(NSString *)keyStoreName pass:(NSString *)keyStorePass {
++ (NSString *)signRequestorId:(NSString *)requestorId
+                     keystore:(NSString *)keyStoreName
+                         pass:(NSString *)keyStorePass {
   uint8_t *signedBytes = NULL;
   SecKeyRef privateKey = NULL;
   NSString *signedRequestorId = nil;
   OSStatus status;
 
-  NSString *thePath = [[NSBundle mainBundle] pathForResource:keyStoreName ofType:@"p12"];
+  NSString *thePath = [NSBundle.mainBundle pathForResource:keyStoreName ofType:@"p12"];
   NSData *PKCS12Data = [NSData dataWithContentsOfFile:thePath];
   CFDataRef inPKCS12Data = (__bridge CFDataRef)PKCS12Data;
   CFStringRef password =  (__bridge CFStringRef)keyStorePass;

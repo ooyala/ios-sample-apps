@@ -10,5 +10,8 @@
 #import "AdobePassUiDelegate.h"
 
 @interface MvpdTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
-- (id)initWithMvpds:(NSArray *)mvpds delegate:(id<AdobePassUiDelegate>)delegate;
+
+- (instancetype)initWithMvpds:(NSArray *)theMvpds
+                     delegate:(id<AdobePassUiDelegate>)theDelegate;
+
 @end

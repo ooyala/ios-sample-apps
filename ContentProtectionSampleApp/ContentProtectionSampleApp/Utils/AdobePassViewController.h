@@ -17,9 +17,13 @@ extern int const PASS_FAILURE;
 @end
 
 @interface AdobePassViewController : UIViewController <OOEmbedTokenGenerator>
+
 @property (nonatomic, assign) id<AdobePassViewControllerDelegate> delegate;
 
-- (id)initWithRequestor:(NSString *)requestor keystore:(NSString *)keystore keypass:(NSString *)keypass delegate:(id<AdobePassViewControllerDelegate>)delegate;
+- (instancetype)initWithRequestor:(NSString *)requestor
+                         keystore:(NSString *)keystore
+                          keypass:(NSString *)keypass
+                         delegate:(id<AdobePassViewControllerDelegate>)delegate;
 - (void)login;
 - (void)logout;
 - (void)checkAuth;
