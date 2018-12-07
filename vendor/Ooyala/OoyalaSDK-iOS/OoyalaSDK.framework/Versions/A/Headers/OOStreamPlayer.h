@@ -14,11 +14,13 @@
   @protected
   OOSeekStyle _seekStyle;
 }
-@property (nonatomic, readonly) OOSeekStyle seekStyle;
-+ (id<OOPlayerInfo>) defaultPlayerInfo;
-+ (void) setDefaultPlayerInfo:(id<OOPlayerInfo>) playerInfo;
 
-- (BOOL)setup:(NSArray *)streams parent:(OOOoyalaPlayer*)parent;
+@property (nonatomic, readonly) OOSeekStyle seekStyle;
+
++ (id<OOPlayerInfo>)defaultPlayerInfo;
++ (void)setDefaultPlayerInfo:(id<OOPlayerInfo>)playerInfo;
+
+- (BOOL)setup:(NSArray *)streams parent:(OOOoyalaPlayer *)parent;
 - (id<OOPlayerInfo>)playerInfo;
 
 /**
@@ -26,7 +28,7 @@
  * @param[in] time to seek
  * @param[in] onCompletion a callback when seek is completed
  */
-- (void)seekToTime:(Float64)time completion:(void (^)())onCompletion;
+- (void)seekToTime:(Float64)time completion:(void (^)(void))onCompletion;
 
 /**
  * toggle picture in picture mode

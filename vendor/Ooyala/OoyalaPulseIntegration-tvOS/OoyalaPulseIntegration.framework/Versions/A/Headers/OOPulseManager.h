@@ -2,7 +2,7 @@
 //  OOPulseManager.h
 //  PulseOVPTestApp
 //
-//  Created by Jacques du Toit on 03/02/16.
+//  Created on 03/02/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 

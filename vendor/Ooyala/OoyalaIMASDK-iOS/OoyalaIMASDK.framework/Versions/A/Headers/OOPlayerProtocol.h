@@ -58,7 +58,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerDesiredState) {
  * @returns YES if the player will put its own controls on-screen;
  * NO if the player wants the Ooyala controls to be used instead.
  */
-- (BOOL) hasCustomControls;
+- (BOOL)hasCustomControls;
 
 /**
  * This is called when pause is clicked

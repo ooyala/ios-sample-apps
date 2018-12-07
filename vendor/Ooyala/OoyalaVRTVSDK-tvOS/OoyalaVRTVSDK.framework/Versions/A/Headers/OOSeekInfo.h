@@ -2,7 +2,7 @@
 //  OOSeekInfo.h
 //  OoyalaSDK
 //
-//  Created by Unnath Kumar on 10/3/16.
+//  Created on 10/3/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 

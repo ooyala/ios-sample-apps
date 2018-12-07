@@ -21,8 +21,8 @@
   OOOrderedDictionary *channels;
 }
 
-@property(readonly, nonatomic, strong) NSString *nextChildren; /**< @internal the next children token */
-@property(readonly, nonatomic, strong) OOOrderedDictionary *channels; /**< The OOChannelSet's channels (keyed by embed code) */
+@property (readonly, nonatomic) NSString *nextChildren; /**< @internal the next children token */
+@property (readonly, nonatomic) OOOrderedDictionary *channels; /**< The OOChannelSet's channels (keyed by embed code) */
 
 /** @internal
  * Initialize a OOContentItem using the specified data (subclasses should override and call this)
@@ -31,7 +31,9 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOChannelSet
  * @returns the initialized OOChannelSet
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCode:(NSString *)theEmbedCode api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                         embedCode:(NSString *)theEmbedCode
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OOChannelSet using the specified data (subclasses should override and call this)
@@ -84,9 +86,8 @@
 /** @internal
  * Fetch and authorize more children if they exist. This method is thread safe.
  * @param[in] callback the callback to execute when the children are fetched
- * @returns YES if more children exist, NO if they don't or they are already in the process of being fetched
  */
-- (BOOL)fetchAndAuthorizeMoreChildren:(OOFetchMoreChildrenCallback)callback;
+- (void)fetchAndAuthorizeMoreChildren:(OOFetchMoreChildrenCallback)callback;
 
 /**
  * The number of channels this OOChannelSet has. Same as [channels count].
