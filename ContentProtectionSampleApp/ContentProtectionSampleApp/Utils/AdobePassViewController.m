@@ -163,9 +163,9 @@ int const PASS_FAILURE = 0;
 }
 
 - (void)selectedProvider:(MVPD *)mvpd {}
-- (void) sendTrackingData:(NSArray *)data forEventType:(int)event {}
-- (void) setMetadataStatus:(NSString *)metadata forKey:(int)key andArguments:(NSDictionary *)arguments {}
-- (void) preauthorizedResources:(NSArray *)resources {}
+- (void)sendTrackingData:(NSArray *)data forEventType:(int)event {}
+- (void)setMetadataStatus:(NSString *)metadata forKey:(int)key andArguments:(NSDictionary *)arguments {}
+- (void)preauthorizedResources:(NSArray *)resources {}
 
 #pragma mark - Ooyala Integration
 
