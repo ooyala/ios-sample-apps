@@ -17,7 +17,6 @@
 @property (nonatomic) AdobePassViewController *passController;
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
-- (void)setEmbedCode;
 - (void)login;
 - (void)logout;
 

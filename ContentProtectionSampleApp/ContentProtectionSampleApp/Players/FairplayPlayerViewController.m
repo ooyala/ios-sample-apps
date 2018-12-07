@@ -1,6 +1,3 @@
-#import "FairplayPlayerViewController.h"
-#import <OoyalaSDK/OoyalaSDK.h>
-
 /**
  * This activity illustrates how you configure your application to run Fairplay assets
  *
@@ -11,6 +8,10 @@
  *
  * To play OPT-enabled videos, you must implement the OOEmbedTokenGenerator interface
  */
+
+#import "FairplayPlayerViewController.h"
+#import <OoyalaSDK/OoyalaSDK.h>
+
 @interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 
 #pragma mark - Private properties
@@ -29,9 +30,6 @@
 @property NSString *authorizeHost;
 @property NSString *accountId;
 
-@property(nonatomic, strong) UIAlertView *nicknameDialog;
-@property(nonatomic) NSString *publicDeviceId;
-
 @end
 
 
@@ -39,7 +37,7 @@
 
 #pragma mark - Initializaiton
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
 
@@ -71,7 +69,7 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
@@ -92,10 +90,10 @@
 
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationReceived:)
-                                               name:nil
-                                             object:self.ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationReceived:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
   
   [self addPlayerViewController:self.ooyalaPlayerViewController onView:self.playerView];
 
@@ -111,35 +109,33 @@
   [view addSubview:playerViewController.view];
   
   // Add constraints
-  
   playerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
   
   if (@available(iOS 11.0, *)) {
     [NSLayoutConstraint activateConstraints:@[
-                                              [playerViewController.view.topAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.topAnchor],
-                                              [playerViewController.view.trailingAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.trailingAnchor],
-                                              [playerViewController.view.bottomAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.bottomAnchor],
-                                              [playerViewController.view.leadingAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.leadingAnchor]
-                                              ]];
+      [playerViewController.view.topAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.topAnchor],
+      [playerViewController.view.trailingAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.trailingAnchor],
+      [playerViewController.view.bottomAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.bottomAnchor],
+      [playerViewController.view.leadingAnchor constraintEqualToAnchor:view.safeAreaLayoutGuide.leadingAnchor]
+    ]];
   } else {
     [NSLayoutConstraint activateConstraints:@[
-                                              [playerViewController.view.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor],
-                                              [playerViewController.view.trailingAnchor constraintEqualToAnchor:view.trailingAnchor],
-                                              [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.topAnchor],
-                                              [playerViewController.view.leadingAnchor constraintEqualToAnchor:view.leadingAnchor]
-                                              ]];
+      [playerViewController.view.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor],
+      [playerViewController.view.trailingAnchor constraintEqualToAnchor:view.trailingAnchor],
+      [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.topAnchor],
+      [playerViewController.view.leadingAnchor constraintEqualToAnchor:view.leadingAnchor]
+    ]];
   }
 }
 
 - (void)notificationReceived:(NSNotification*) notification {
-
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
 
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
+        notification.name,
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime]);
 }
