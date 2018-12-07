@@ -60,7 +60,7 @@
   self.accountId = @"Fill me in";
   self.authorizeHost = @"http://player.ooyala.com";
   [OODebugMode setDebugMode:LogAndAbort];
-  ASSERT( [self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey." );
+  ASSERT([self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey.");
 
   return self;
 }
