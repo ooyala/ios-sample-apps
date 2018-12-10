@@ -125,12 +125,13 @@
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.qaLogTextView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.qaLogTextView setText:appendString];
-  }
-  
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.qaLogTextView.text = appendString;
+    });
+  }  
   appDel.count++;
 }
 

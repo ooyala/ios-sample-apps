@@ -119,7 +119,6 @@
 #pragma mark - Private functions
 
 - (void)notificationHandler:(NSNotification*)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -128,25 +127,26 @@
   // Check for FullScreenChanged notification
   if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
     NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
-                         [notification name],
-                         [[notification.userInfo objectForKey:@"fullscreen"] boolValue] ? @"YES" : @"NO"];
+                         notification.name,
+                         [notification.userInfo[@"fullscreen"] boolValue] ? @"YES" : @"NO"];
     NSLog(@"%@", message);
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
+                       notification.name,
                        [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
                        [self.skinController.player playheadTime], appDel.count];
   
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
-  
   appDel.count++;
 }
 

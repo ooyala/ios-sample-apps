@@ -142,7 +142,7 @@
 //  self.controls.scrubberSlider.mode = [super sliderMode];
 //  
 //  //Handle time
-//  if (seeking == NO) {
+//  if (!seeking) {
 //    self.controls.scrubberSlider.duration = self.player.duration;
 //    self.controls.scrubberSlider.currentTime = self.player.playheadTime;
 //    self.controls.scrubberSlider.currentAvailableTime = self.player.bufferedTime;
@@ -159,14 +159,14 @@
 //      [self hideControls];
 //    } else if (self.controls.playButton.isPlayShowing) {
 //      [self.controls.playButton setIsPlayShowing:NO];
-//      if (self.controls.hidden == NO) {
+//      if (!self.controls.hidden) {
 //        [self showControls];
 //        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
 //      }
 //    }
 //  } else if (!self.controls.playButton.isPlayShowing) {
 //      [self.controls.playButton setIsPlayShowing:YES];
-//      if (self.controls.hidden == NO) {
+//      if (!self.controls.hidden) {
 //        [self showControls];
 //        if (self.hideControlsTimer != nil) [self.hideControlsTimer invalidate];
 //    }
@@ -174,7 +174,7 @@
 //
 //  self.controls.scrubberSlider.scrubber.userInteractionEnabled = self.player.seekable;
 //
-//  if ((self.player.state == OOOoyalaPlayerStateLoading) && seeking == NO)
+//  if ((self.player.state == OOOoyalaPlayerStateLoading) && !seeking)
 //    [self.activityView startAnimating];
 //  else
 //    [self.activityView stopAnimating];

@@ -82,9 +82,7 @@
   
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [self.ooyalaPlayerViewController.player play];
-
-  
+  [self.ooyalaPlayerViewController.player play];  
 }
 
 #pragma mark - Private functions
@@ -124,7 +122,9 @@
   if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
   
   appDel.count++;
