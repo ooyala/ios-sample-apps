@@ -113,7 +113,9 @@ AppDelegate *appDel;
   if (self.qaModeEnabled) {
     NSString *string = self.logTextView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string,message];
-    self.logTextView.text = appendString;
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.logTextView.text = appendString;
+    });
   }
   
   appDel.count++;
