@@ -15,15 +15,13 @@
                     embedCode:(NSString *)embedCode
                         pcode:(NSString *)pcode
                        domain:(NSString *)domain
-               viewController:(Class)viewController
-                  isAudioOnly:(BOOL)audioOnly {
+               viewController:(Class)viewController {
   if (self = [super init]) {
     _title = title;
     _embedCode = embedCode;
     _pcode = pcode;
     _domain = domain;
     _viewController = viewController;
-    _isAudioOnly = audioOnly;
   }
   return self;
 }
