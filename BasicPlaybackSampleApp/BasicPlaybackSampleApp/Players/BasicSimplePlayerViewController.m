@@ -9,7 +9,6 @@
 #import "BasicSimplePlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
-#import "AudioOnlyPlayerInfo.h"
 
 @interface BasicSimplePlayerViewController ()
 
@@ -22,7 +21,6 @@
 @property (nonatomic) NSString *playerDomain;
 
 @end
-
 
 @implementation BasicSimplePlayerViewController {
     AppDelegate *appDel;
@@ -40,9 +38,6 @@
     _pcode = self.playerSelectionOption.pcode;
     _playerDomain = self.playerSelectionOption.domain;
     self.title = self.playerSelectionOption.title;
-    if (self.playerSelectionOption.isAudioOnly) {
-      [OOStreamPlayer setDefaultPlayerInfo:[AudioOnlyPlayerInfo new]];
-    }
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
