@@ -51,8 +51,6 @@ AppDelegate *appDel;
   
   self.title = self.playerSelectionOption.title;
   
-  [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
-  
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   OOOptions *options = [OOOptions new];
