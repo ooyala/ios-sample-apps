@@ -12,7 +12,6 @@
 #pragma mark - Private properties
 
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
-@property (nonatomic) OOPerformanceMonitor *performanceMonitor;
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *nib;
 @property (nonatomic) NSString *pcode;
@@ -57,8 +56,7 @@
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
-  self.performanceMonitor = [OOPerformanceMonitorBuilder getStandardAdsMonitor];
-  
+
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(notificationHandler:)
                                                name:nil
@@ -76,10 +74,6 @@
   [_ooyalaPlayerViewController.player play];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-  NSLog(@"%@", [[self.performanceMonitor buildStatisticsSnapshot] generateReport]);
-}
-
 - (void)notificationHandler:(NSNotification*) notification {
   
   // Ignore TimeChangedNotificiations for shorter logs
@@ -89,7 +83,7 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
                        [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
   
   NSLog(@"%@",message);
