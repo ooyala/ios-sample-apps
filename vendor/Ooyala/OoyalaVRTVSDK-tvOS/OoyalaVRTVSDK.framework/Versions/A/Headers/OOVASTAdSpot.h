@@ -62,6 +62,6 @@
  * Fetch the additional required info for the ad
  * @note As of right now, we only support VAST 2.0 Linear Ads. Information about Non-Linear and Companion Ads are stored in the dictionaries nonLinear and companion respectively.
  */
-- (void)fetchPlaybackInfoWithCallback:(void (^)(BOOL success))callback;
+- (BOOL)fetchPlaybackInfo;
 
 @end

@@ -118,7 +118,13 @@
  * Fetch the additional required info for playback (ads and closed captions)
  * @returns NO if errors occurred or YES if successful
  */
-- (void)fetchPlaybackInfoWithCallback:(void (^)(BOOL success))callback;
+- (BOOL)fetchPlaybackInfo;
+
+/**
+ * @internal
+ */
+- (id)fetchPlaybackInfo:(void (^)(BOOL))callback;
+
 
 /**
  * Check if the OOVideo has ads
