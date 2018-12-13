@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75599AFD21C27647006FFDAA /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D170216FCFF7008D505D /* OoyalaTVSkinSDK.framework */; };
 		C125993121750A6800E448B2 /* FullscreenPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */; };
 		C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27262175357100ED8299 /* ChildPlayerViewController.swift */; };
 		C13A27292175367600ED8299 /* AbstractPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */; };
@@ -29,7 +30,6 @@
 		C1A4D180216FDFCF008D505D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D17F216FDFCF008D505D /* SystemConfiguration.framework */; };
 		C1A4D182216FDFDC008D505D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D181216FDFDB008D505D /* libz.tbd */; };
 		C1A68254217A9556002047B3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D16F216FCFF7008D505D /* OoyalaSDK.framework */; };
-		C1A6825F217A958A002047B3 /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A6825C217A9583002047B3 /* OoyalaTVSkinSDK.framework */; };
 		C1B0EDAF216FF5CC00EB48E7 /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,20 +40,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C1A4D13E216FCF64008D505D;
 			remoteInfo = TVOSSwiftSampleApp;
-		};
-		C1A6825B217A9583002047B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 97C8DD111CE14CA2007F3F54;
-			remoteInfo = OoyalaTVSkinSDK;
-		};
-		C1A6825D217A9583002047B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0B2277A81D13432C00640DD3;
-			remoteInfo = OoyalaTVSkinSDKTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,7 +74,6 @@
 		C1A4D181216FDFDB008D505D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C1A4D183216FE068008D505D /* TVOSSwiftSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVOSSwiftSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C1A681EC217A8997002047B3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OoyalaTVSkinSDK.xcodeproj; path = "../../../native-skin/sdk/tvOS/OoyalaTVSkinSDK.xcodeproj"; sourceTree = "<group>"; };
 		C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1A6825F217A958A002047B3 /* OoyalaTVSkinSDK.framework in Frameworks */,
+				75599AFD21C27647006FFDAA /* OoyalaTVSkinSDK.framework in Frameworks */,
 				C1A68254217A9556002047B3 /* OoyalaSDK.framework in Frameworks */,
 				C1A4D182216FDFDC008D505D /* libz.tbd in Frameworks */,
 				C1A4D180216FDFCF008D505D /* SystemConfiguration.framework in Frameworks */,
@@ -153,7 +138,6 @@
 		C1A4D136216FCF64008D505D = {
 			isa = PBXGroup;
 			children = (
-				C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */,
 				C1A4D16D216FCF8D008D505D /* VendorLibraries */,
 				C1A4D141216FCF64008D505D /* TVOSSwiftSampleApp */,
 				C1A4D153216FCF67008D505D /* TVOSSwiftSampleAppTests */,
@@ -217,15 +201,6 @@
 				C1A4D179216FDFB5008D505D /* VideoToolbox.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C1A68256217A9583002047B3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C1A6825C217A9583002047B3 /* OoyalaTVSkinSDK.framework */,
-				C1A6825E217A9583002047B3 /* OoyalaTVSkinSDKTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C1B0EDAD216FF5BA00EB48E7 /* Utils */ = {
@@ -303,12 +278,6 @@
 			mainGroup = C1A4D136216FCF64008D505D;
 			productRefGroup = C1A4D140216FCF64008D505D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C1A68256217A9583002047B3 /* Products */;
-					ProjectRef = C1A68255217A9583002047B3 /* OoyalaTVSkinSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C1A4D13E216FCF64008D505D /* TVOSSwiftSampleApp */,
@@ -316,23 +285,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C1A6825C217A9583002047B3 /* OoyalaTVSkinSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OoyalaTVSkinSDK.framework;
-			remoteRef = C1A6825B217A9583002047B3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C1A6825E217A9583002047B3 /* OoyalaTVSkinSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OoyalaTVSkinSDKTests.xctest;
-			remoteRef = C1A6825D217A9583002047B3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C1A4D13D216FCF64008D505D /* Resources */ = {
