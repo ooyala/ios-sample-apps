@@ -14,6 +14,7 @@
 		0BC947CE1A817732004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C81A817732004CB997 /* PlayerSimple.xib */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		26EF171C1D50918900BACD9C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EF171B1D50918900BACD9C /* AVKit.framework */; };
+		7FF7389B21C2421000FCE2FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF7389A21C2421000FCE2FF /* Images.xcassets */; };
 		C402FB031CAD4123001D4BBD /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = C402FB021CAD4123001D4BBD /* library.json */; };
 		C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C402FB041CAD414E001D4BBD /* VideoItemCell.xib */; };
 		C402FB0A1CAD4163001D4BBD /* VideoLibraryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */; };
@@ -96,6 +97,7 @@
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BC947C81A817732004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		26EF171B1D50918900BACD9C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		7FF7389A21C2421000FCE2FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C402FB021CAD4123001D4BBD /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
 		C402FB041CAD414E001D4BBD /* VideoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLibraryViewController.h; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		0B140F551A2E4709001324EE /* PulseSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				7FF7389A21C2421000FCE2FF /* Images.xcassets */,
 				0B140F5A1A2E4709001324EE /* AppDelegate.h */,
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
 				0B19FEE51A3AB4E6003E57DF /* Base.lproj */,
@@ -426,6 +429,7 @@
 				0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */,
 				C4082C1B1D21461200CC3BC4 /* ooyala-slick-type.ttf in Resources */,
 				C4BB04431C75FCD100871138 /* TableCell.xib in Resources */,
+				7FF7389B21C2421000FCE2FF /* Images.xcassets in Resources */,
 				C4499B191CA18B8C00B6EE20 /* main.jsbundle in Resources */,
 				C4499B181CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf in Resources */,
 				0BC947CE1A817732004CB997 /* PlayerSimple.xib in Resources */,
