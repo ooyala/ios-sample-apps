@@ -383,7 +383,6 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 6C5B687R9E;
 						ProvisioningStyle = Automatic;
 					};
 					0B19FEFD1A3B7532003E57DF = {
@@ -594,7 +593,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C5B687R9E;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -629,7 +628,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C5B687R9E;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
