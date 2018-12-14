@@ -633,6 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.OoyalaSkinSampleApp1;
 				PRODUCT_NAME = OoyalaSkinSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -653,6 +654,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.OoyalaSkinSampleApp1;
 				PRODUCT_NAME = OoyalaSkinSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
