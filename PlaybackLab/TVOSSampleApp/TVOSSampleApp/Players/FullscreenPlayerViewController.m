@@ -12,8 +12,8 @@
 
 @interface FullscreenPlayerViewController ()
 
-@property (nonatomic, strong) NSString *pcode;
-@property (nonatomic, strong) NSString *playerDomain;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 
 @end
 
@@ -25,24 +25,27 @@
   self.pcode = self.option.pcode;
   self.playerDomain = self.option.domain;
 
-  self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  self.player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
+                                               domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationHandler:) name:nil object:self.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.player];
   
   [self.player setEmbedCode:self.option.embedCode];
   [self.player play];
 }
 
-- (void)notificationHandler:(NSNotification *)notification
-{
+- (void)notificationHandler:(NSNotification *)notification {
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
   
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.player state]],
-        [self.player playheadTime]);
+        notification.name,
+        [OOOoyalaPlayer playerStateToString:self.player.state],
+        self.player.playheadTime);
 }
 
 @end

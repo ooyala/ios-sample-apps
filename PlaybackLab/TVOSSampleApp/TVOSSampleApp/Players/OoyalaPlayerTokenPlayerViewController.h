@@ -6,13 +6,12 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-
-#import <UIKit/UIKit.h>
 #import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
 
 @class PlayerSelectionOption;
+
 @interface OoyalaPlayerTokenPlayerViewController : OOOoyalaTVPlayerViewController
 
-@property (nonatomic, strong) PlayerSelectionOption *option;
+@property (nonatomic) PlayerSelectionOption *option;
 
 @end
