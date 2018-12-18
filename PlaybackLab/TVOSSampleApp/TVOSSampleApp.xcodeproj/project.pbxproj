@@ -124,7 +124,6 @@
 		0B3BD61F1CF3E68200A8ACDA /* TVOSSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D8CA21DAE891000FFD124 /* library.json */,
 				0B3BD6201CF3E68200A8ACDA /* AppDelegate.h */,
 				0B3BD6211CF3E68200A8ACDA /* AppDelegate.m */,
 				0B3BD6261CF3E68200A8ACDA /* Lists */,
@@ -143,6 +142,7 @@
 				0B3BD6281CF3E68200A8ACDA /* VideoTableViewController.m */,
 				AA4D8C9C1DAE812300FFD124 /* PulseLibraryViewController.h */,
 				AA4D8C9D1DAE813C00FFD124 /* PulseLibraryViewController.m */,
+				AA4D8CA21DAE891000FFD124 /* library.json */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -471,7 +471,7 @@
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
@@ -494,7 +494,7 @@
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
