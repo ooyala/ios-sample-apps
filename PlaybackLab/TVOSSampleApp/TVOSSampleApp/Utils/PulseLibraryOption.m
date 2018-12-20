@@ -10,17 +10,18 @@
 
 @implementation PulseLibraryOption
 
-- (instancetype) initWithTitle:(NSString*)title embedCode:(NSString*)embedCode category:(NSString*)category tags:(id)tags midrollPositions:(id)midrollPositions {
-  self = [super init];
-  
-  if(self) {
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                     category:(NSString *)category
+                         tags:(NSArray *)tags
+             midrollPositions:(NSArray *)midrollPositions {
+  if (self = [super init]) {
     _title = title;
     _embedCode = embedCode;
     _category = category;
     _tags = tags;
     _midrollPositions = midrollPositions;
   }
-  
   return self;
 }
 

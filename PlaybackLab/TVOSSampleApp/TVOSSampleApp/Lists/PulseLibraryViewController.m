@@ -6,49 +6,41 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "PulseLibraryViewController.h"
 #import "PulsePlayerViewController.h"
 #import "PulseLibraryOption.h"
 
 @interface PulseLibraryViewController ()
 
-@property (nonatomic, strong) NSMutableArray *library; // Loaded from library.json
+@property (nonatomic) NSArray *library; // Loaded from library.json
 
 @end
 
 @implementation PulseLibraryViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
-  [self populateLibrary];
+  _library = [NSArray arrayWithArray:self.videosFromJson];
 }
 
-- (NSMutableArray *)library
-{
-  if (!_library) {
-    _library = [NSMutableArray array];
-  }
-  return _library;
-}
-
-- (void)populateLibrary
-{
+- (NSMutableArray *)videosFromJson {
+  NSMutableArray *videos = [NSMutableArray array];
   for (NSDictionary *jsonObject in self.JSONVideoObjects) {
-    [self.library addObject:[[PulseLibraryOption alloc] initWithTitle:jsonObject[@"content-title"] embedCode:jsonObject[@"content-code"] category:jsonObject[@"category"] tags:jsonObject[@"tags"] midrollPositions:jsonObject[@"midroll-positions"]]];
+    [videos addObject:[[PulseLibraryOption alloc] initWithTitle:jsonObject[@"content-title"]
+                                                      embedCode:jsonObject[@"content-code"]
+                                                       category:jsonObject[@"category"]
+                                                           tags:jsonObject[@"tags"]
+                                               midrollPositions:jsonObject[@"midroll-positions"]]];
   }
-  
-  [self.tableView reloadData];
+  return videos;
 }
 
 #pragma mark - Video libray
 
 // Load video library from library.json into a JSON array.
-- (NSArray *)JSONVideoObjects
-{
+- (NSArray *)JSONVideoObjects {
   NSError *jsonError;
-  NSString* path  = [[NSBundle mainBundle] pathForResource:@"library" ofType:@"json"];
+  NSString* path  = [NSBundle.mainBundle pathForResource:@"library" ofType:@"json"];
   NSArray *jsonObjects = [NSJSONSerialization JSONObjectWithData:[[NSData alloc] initWithContentsOfFile:path]
                                                          options:0
                                                            error:&jsonError];
@@ -58,24 +50,23 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     return self.library.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell" forIndexPath:indexPath];
-  
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell"
+                                                          forIndexPath:indexPath];
   PulseLibraryOption *option = self.library[indexPath.row];
   cell.textLabel.text = option.title;
-  
   return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  [self performSegueWithIdentifier:@"pulsePlayer" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  [self performSegueWithIdentifier:@"pulsePlayer"
+                            sender:[self.tableView cellForRowAtIndexPath:indexPath]];
 }
-
 
 #pragma mark - Navigation
 

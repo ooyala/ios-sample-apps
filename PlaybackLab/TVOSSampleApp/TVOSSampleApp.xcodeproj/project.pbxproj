@@ -72,7 +72,6 @@
 		0B3BD6301CF3E68200A8ACDA /* FullscreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenPlayerViewController.m; sourceTree = "<group>"; };
 		0B3BD6321CF3E68200A8ACDA /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B3BD6331CF3E68200A8ACDA /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
-		0B4F2AE41DAF1B340085E226 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
 		0BC1391D1D4BF5AA007EBDA4 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		0BC1391E1D4BF5AA007EBDA4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		0BC1391F1D4BF5AA007EBDA4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -125,17 +124,13 @@
 		0B3BD61F1CF3E68200A8ACDA /* TVOSSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D8CA21DAE891000FFD124 /* library.json */,
 				0B3BD6201CF3E68200A8ACDA /* AppDelegate.h */,
 				0B3BD6211CF3E68200A8ACDA /* AppDelegate.m */,
-				0B3BD6221CF3E68200A8ACDA /* Assets.xcassets */,
-				0B3BD6231CF3E68200A8ACDA /* Main.storyboard */,
-				0B3BD6251CF3E68200A8ACDA /* Info.plist */,
 				0B3BD6261CF3E68200A8ACDA /* Lists */,
-				0B3BD6291CF3E68200A8ACDA /* main.m */,
-				0BC1391C1D4BF5AA007EBDA4 /* Fonts */,
 				0B3BD62A1CF3E68200A8ACDA /* Players */,
 				0B3BD6311CF3E68200A8ACDA /* Utils */,
+				39BA476821C8F504002AD4CF /* Storyboards */,
+				39BA476721C8F4A3002AD4CF /* Supporting Files */,
 			);
 			path = TVOSSampleApp;
 			sourceTree = "<group>";
@@ -147,6 +142,7 @@
 				0B3BD6281CF3E68200A8ACDA /* VideoTableViewController.m */,
 				AA4D8C9C1DAE812300FFD124 /* PulseLibraryViewController.h */,
 				AA4D8C9D1DAE813C00FFD124 /* PulseLibraryViewController.m */,
+				AA4D8CA21DAE891000FFD124 /* library.json */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -190,8 +186,26 @@
 				0BC139201D4BF5AA007EBDA4 /* RobotoCondensed-Bold.ttf */,
 				0BC139211D4BF5AA007EBDA4 /* RobotoCondensed-Regular.ttf */,
 			);
-			name = Fonts;
-			path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts";
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		39BA476721C8F4A3002AD4CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BC1391C1D4BF5AA007EBDA4 /* Fonts */,
+				0B3BD6221CF3E68200A8ACDA /* Assets.xcassets */,
+				0B3BD6251CF3E68200A8ACDA /* Info.plist */,
+				0B3BD6291CF3E68200A8ACDA /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39BA476821C8F504002AD4CF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0B3BD6231CF3E68200A8ACDA /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		75BBCF1F1FE1689B005B9F72 /* VendorLibraries */ = {
@@ -208,9 +222,9 @@
 		CA49FD3C1C8E4D8A0017E19F = {
 			isa = PBXGroup;
 			children = (
-				75BBCF1F1FE1689B005B9F72 /* VendorLibraries */,
 				0B3BD61F1CF3E68200A8ACDA /* TVOSSampleApp */,
 				CA49FD6A1C8E84E00017E19F /* Frameworks */,
+				75BBCF1F1FE1689B005B9F72 /* VendorLibraries */,
 				CA49FD461C8E4D8A0017E19F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -232,7 +246,6 @@
 				0BD644DF1CF7C08B005AD8CB /* JavaScriptCore.framework */,
 				0B3BD61D1CF3DAD800A8ACDA /* OoyalaTVSkinSDK.framework */,
 				0B3BD6191CF3A6CD00A8ACDA /* OoyalaSDK.framework */,
-				0B4F2AE41DAF1B340085E226 /* OoyalaSDK.framework */,
 				CA49FD751C8E98640017E19F /* MediaPlayer.framework */,
 				CA49FD731C8E985F0017E19F /* SystemConfiguration.framework */,
 			);
@@ -458,13 +471,13 @@
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -481,13 +494,13 @@
 					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.MultipleLayoutsTVSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

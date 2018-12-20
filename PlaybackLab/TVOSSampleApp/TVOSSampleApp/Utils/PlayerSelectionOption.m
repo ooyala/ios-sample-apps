@@ -11,13 +11,17 @@
 
 @implementation PlayerSelectionOption
 
-- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode domain:(NSString *)domain segueName:(NSString *) segueName {
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+                    segueName:(NSString *) segueName {
   if (self = [super init]) {
-    self.title = title;
-    self.embedCode = embedCode;
-    self.pcode = pcode;
-    self.domain = domain;
-    self.segueName = segueName;
+    _title = title;
+    _embedCode = embedCode;
+    _pcode = pcode;
+    _domain = domain;
+    _segueName = segueName;
   }
   return self;
 }

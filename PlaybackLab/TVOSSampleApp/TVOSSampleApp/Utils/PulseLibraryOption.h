@@ -6,14 +6,20 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#include <Foundation/Foundation.h>
+@import Foundation;
 
 @interface PulseLibraryOption : NSObject
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *embedCode;
-@property (strong, nonatomic) NSString *category;
-@property (strong, nonatomic) NSArray *tags;
-@property (strong, nonatomic) NSArray *midrollPositions;
 
-- (instancetype) initWithTitle:(NSString*)title embedCode:(NSString*)embedCode category:(NSString*)category tags:(NSArray*)tags midrollPositions:(NSArray*)midrollPositions;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *category;
+@property (nonatomic) NSArray *tags;
+@property (nonatomic) NSArray *midrollPositions;
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                     category:(NSString *)category
+                         tags:(NSArray *)tags
+             midrollPositions:(NSArray *)midrollPositions;
+
 @end
