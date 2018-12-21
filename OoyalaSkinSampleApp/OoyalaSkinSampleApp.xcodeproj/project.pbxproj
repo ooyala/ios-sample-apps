@@ -56,7 +56,7 @@
 		393A470321CCCF8D005860F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F321CCCF6D005860F3 /* OoyalaSDK.framework */; };
 		393A470421CCCF8D005860F3 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F621CCCF6D005860F3 /* OoyalaSkinSDK.framework */; };
 		393A470821CCD13B005860F3 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F221CCCF6D005860F3 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		393A47E121CCDBC3005860F3 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47E021CCDBC3005860F3 /* OoyalaSSAISDK.framework */; };
+		393A48AD21CCF187005860F3 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48AC21CCF187005860F3 /* OoyalaSSAISDK.framework */; };
 		52B59C3C201FD88C004F165F /* GeoblockingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */; };
 		52B59C3F201FD914004F165F /* GeoblockingSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3E201FD914004F165F /* GeoblockingSkinViewController.m */; };
 		52B59C43201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C42201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m */; };
@@ -160,7 +160,7 @@
 		393A46F521CCCF6D005860F3 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaIMASDK.framework; path = VendorLibraries/OoyalaIMASDK.framework; sourceTree = "<group>"; };
 		393A46F621CCCF6D005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = VendorLibraries/OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		393A46F721CCCF6D005860F3 /* AdManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdManager.framework; path = VendorLibraries/AdManager.framework; sourceTree = "<group>"; };
-		393A47E021CCDBC3005860F3 /* OoyalaSSAISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSSAISDK.framework; path = "../vendor/Ooyala/OoyalaSSAISDK-iOS/OoyalaSSAISDK.framework"; sourceTree = "<group>"; };
+		393A48AC21CCF187005860F3 /* OoyalaSSAISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSSAISDK.framework; path = "../vendor/Ooyala/OoyalaSSAISDK-iOS/OoyalaSSAISDK.framework"; sourceTree = "<group>"; };
 		52B59C3A201FD88C004F165F /* GeoblockingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingTableViewController.h; sourceTree = "<group>"; };
 		52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoblockingTableViewController.m; sourceTree = "<group>"; };
 		52B59C3D201FD914004F165F /* GeoblockingSkinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingSkinViewController.h; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 				393A470421CCCF8D005860F3 /* OoyalaSkinSDK.framework in Frameworks */,
 				39278CC02191DDF300F6F4E2 /* libc++abi.tbd in Frameworks */,
 				39278CBE2191DDED00F6F4E2 /* libc++.tbd in Frameworks */,
-				393A47E121CCDBC3005860F3 /* OoyalaSSAISDK.framework in Frameworks */,
+				393A48AD21CCF187005860F3 /* OoyalaSSAISDK.framework in Frameworks */,
 				39278CBC2191DDE800F6F4E2 /* libz.tbd in Frameworks */,
 				39278CBA2191DDE200F6F4E2 /* libxml2.tbd in Frameworks */,
 				0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */,
@@ -368,7 +368,7 @@
 				393A46F521CCCF6D005860F3 /* OoyalaIMASDK.framework */,
 				393A46F321CCCF6D005860F3 /* OoyalaSDK.framework */,
 				393A46F621CCCF6D005860F3 /* OoyalaSkinSDK.framework */,
-				393A47E021CCDBC3005860F3 /* OoyalaSSAISDK.framework */,
+				393A48AC21CCF187005860F3 /* OoyalaSSAISDK.framework */,
 			);
 			name = VendorLibraries;
 			sourceTree = "<group>";

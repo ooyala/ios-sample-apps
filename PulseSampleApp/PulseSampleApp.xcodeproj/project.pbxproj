@@ -40,8 +40,7 @@
 		393A47D321CCDA3A005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A47D221CCDA3A005860F3 /* OoyalaSkinSDK.xcassets */; };
 		393A47D521CCDA7C005860F3 /* Pulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47D421CCDA7B005860F3 /* Pulse.framework */; };
 		393A47D621CCDA88005860F3 /* Pulse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47D421CCDA7B005860F3 /* Pulse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		393A48A821CCE664005860F3 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48A621CCE664005860F3 /* OoyalaPulseIntegration.framework */; };
-		393A48A921CCE664005860F3 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 393A48A721CCE664005860F3 /* VERSION */; };
+		393A48AB21CCF0CF005860F3 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48AA21CCF0CF005860F3 /* OoyalaPulseIntegration.framework */; };
 		C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C402FB041CAD414E001D4BBD /* VideoItemCell.xib */; };
 		C402FB0A1CAD4163001D4BBD /* VideoLibraryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */; };
 		C402FB0B1CAD4163001D4BBD /* VideoLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */; };
@@ -131,8 +130,7 @@
 		393A47D021CCD9E7005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		393A47D221CCDA3A005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		393A47D421CCDA7B005860F3 /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pulse.framework; sourceTree = "<group>"; };
-		393A48A621CCE664005860F3 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaPulseIntegration.framework; sourceTree = "<group>"; };
-		393A48A721CCE664005860F3 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		393A48AA21CCF0CF005860F3 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaPulseIntegration.framework; sourceTree = "<group>"; };
 		C402FB041CAD414E001D4BBD /* VideoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLibraryViewController.h; sourceTree = "<group>"; };
 		C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoLibraryViewController.m; sourceTree = "<group>"; };
@@ -168,7 +166,7 @@
 				393A47D121CCD9E7005860F3 /* OoyalaSkinSDK.framework in Frameworks */,
 				393A47D521CCDA7C005860F3 /* Pulse.framework in Frameworks */,
 				C477A7FF1C884776000B4890 /* MessageUI.framework in Frameworks */,
-				393A48A821CCE664005860F3 /* OoyalaPulseIntegration.framework in Frameworks */,
+				393A48AB21CCF0CF005860F3 /* OoyalaPulseIntegration.framework in Frameworks */,
 				C477A7FD1C884770000B4890 /* Social.framework in Frameworks */,
 				C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */,
 				C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */,
@@ -367,21 +365,12 @@
 		393A478A21CCD9AD005860F3 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				393A48A521CCE664005860F3 /* OoyalaPulseIntegration-iOS */,
+				393A48AA21CCF0CF005860F3 /* OoyalaPulseIntegration.framework */,
 				393A47D421CCDA7B005860F3 /* Pulse.framework */,
 				393A47D021CCD9E7005860F3 /* OoyalaSkinSDK.framework */,
 				393A47CE21CCD9C9005860F3 /* OoyalaSDK.framework */,
 			);
 			path = VendorLibraries;
-			sourceTree = "<group>";
-		};
-		393A48A521CCE664005860F3 /* OoyalaPulseIntegration-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				393A48A621CCE664005860F3 /* OoyalaPulseIntegration.framework */,
-				393A48A721CCE664005860F3 /* VERSION */,
-			);
-			path = "OoyalaPulseIntegration-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,7 +477,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				393A478921CCD904005860F3 /* validate.js in Resources */,
-				393A48A921CCE664005860F3 /* VERSION in Resources */,
 				0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */,
 				393A477521CCD904005860F3 /* library.json in Resources */,
 				393A478821CCD904005860F3 /* skin-schema.json in Resources */,
