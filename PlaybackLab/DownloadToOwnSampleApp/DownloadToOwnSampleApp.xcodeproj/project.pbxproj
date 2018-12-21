@@ -28,6 +28,7 @@
 		393A48D821CCF293005860F3 /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A48C521CCF292005860F3 /* skin-schema.json */; };
 		393A48D921CCF293005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A48C621CCF292005860F3 /* validate.js */; };
 		393A48DB21CCF2A1005860F3 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */; };
+		393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */; };
 		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
 		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
 		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
@@ -70,6 +71,7 @@
 		393A48C521CCF292005860F3 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		393A48C621CCF292005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -132,6 +134,7 @@
 		393A48AE21CCF292005860F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */,
 				393A48AF21CCF292005860F3 /* SkinConfig */,
 			);
 			path = Resources;
@@ -372,6 +375,7 @@
 				393A48C821CCF293005860F3 /* README.txt in Resources */,
 				393A48CA21CCF293005860F3 /* ooyala-slick-type.ttf in Resources */,
 				393A48CC21CCF293005860F3 /* RobotoCondensed-Regular.ttf in Resources */,
+				393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */,
 				CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
