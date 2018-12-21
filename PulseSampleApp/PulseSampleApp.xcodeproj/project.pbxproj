@@ -40,6 +40,7 @@
 		393A47D321CCDA3A005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A47D221CCDA3A005860F3 /* OoyalaSkinSDK.xcassets */; };
 		393A47D521CCDA7C005860F3 /* Pulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47D421CCDA7B005860F3 /* Pulse.framework */; };
 		393A47D621CCDA88005860F3 /* Pulse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47D421CCDA7B005860F3 /* Pulse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		393A47DC21CCDB43005860F3 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47DA21CCDB43005860F3 /* OoyalaPulseIntegration.framework */; };
 		C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C402FB041CAD414E001D4BBD /* VideoItemCell.xib */; };
 		C402FB0A1CAD4163001D4BBD /* VideoLibraryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */; };
 		C402FB0B1CAD4163001D4BBD /* VideoLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */; };
@@ -50,7 +51,6 @@
 		C4082C191D2144E200CC3BC4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4082C181D2144E200CC3BC4 /* libc++.tbd */; };
 		C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		C4499AF81CA1887200B6EE20 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */; };
-		C464E5341CB532210019ABD8 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */; };
 		C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FA1C884769000B4890 /* JavaScriptCore.framework */; };
 		C477A7FD1C884770000B4890 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FC1C884770000B4890 /* Social.framework */; };
 		C477A7FF1C884776000B4890 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FE1C884776000B4890 /* MessageUI.framework */; };
@@ -130,6 +130,7 @@
 		393A47D021CCD9E7005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		393A47D221CCDA3A005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		393A47D421CCDA7B005860F3 /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pulse.framework; sourceTree = "<group>"; };
+		393A47DA21CCDB43005860F3 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaPulseIntegration.framework; sourceTree = "<group>"; };
 		C402FB041CAD414E001D4BBD /* VideoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLibraryViewController.h; sourceTree = "<group>"; };
 		C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoLibraryViewController.m; sourceTree = "<group>"; };
@@ -139,7 +140,6 @@
 		C402FB0F1CAD425E001D4BBD /* VideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItem.m; sourceTree = "<group>"; };
 		C4082C181D2144E200CC3BC4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaPulseIntegration.framework; path = "VendorLibraries/OoyalaPulseIntegration-iOS/OoyalaPulseIntegration.framework"; sourceTree = "<group>"; };
 		C477A7FA1C884769000B4890 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		C477A7FC1C884770000B4890 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C477A7FE1C884776000B4890 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -168,9 +168,9 @@
 				C477A7FF1C884776000B4890 /* MessageUI.framework in Frameworks */,
 				C477A7FD1C884770000B4890 /* Social.framework in Frameworks */,
 				C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */,
+				393A47DC21CCDB43005860F3 /* OoyalaPulseIntegration.framework in Frameworks */,
 				C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */,
 				0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */,
-				C464E5341CB532210019ABD8 /* OoyalaPulseIntegration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +245,6 @@
 				C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */,
 				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
 				C477A7FE1C884776000B4890 /* MessageUI.framework */,
-				C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */,
 				0B140F8C1A2E53B0001324EE /* Security.framework */,
 				C477A7FC1C884770000B4890 /* Social.framework */,
 				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
@@ -366,6 +365,7 @@
 		393A478A21CCD9AD005860F3 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				393A47DA21CCDB43005860F3 /* OoyalaPulseIntegration.framework */,
 				393A47D421CCDA7B005860F3 /* Pulse.framework */,
 				393A47D021CCD9E7005860F3 /* OoyalaSkinSDK.framework */,
 				393A47CE21CCD9C9005860F3 /* OoyalaSDK.framework */,
@@ -670,6 +670,7 @@
 					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)/VendorLibraries/OoyalaPulseIntegration-iOS",
 				);
 				INFOPLIST_FILE = PulseSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -705,6 +706,7 @@
 					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)/VendorLibraries/OoyalaPulseIntegration-iOS",
 				);
 				INFOPLIST_FILE = PulseSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
