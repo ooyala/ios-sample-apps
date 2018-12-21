@@ -14,8 +14,27 @@
 		0BC947CE1A817732004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C81A817732004CB997 /* PlayerSimple.xib */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		26EF171C1D50918900BACD9C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EF171B1D50918900BACD9C /* AVKit.framework */; };
-		7FF7389B21C2421000FCE2FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF7389A21C2421000FCE2FF /* Images.xcassets */; };
-		C402FB031CAD4123001D4BBD /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = C402FB021CAD4123001D4BBD /* library.json */; };
+		393A477521CCD904005860F3 /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A475B21CCD904005860F3 /* library.json */; };
+		393A477621CCD904005860F3 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 393A475D21CCD904005860F3 /* VERSION */; };
+		393A477721CCD904005860F3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 393A475E21CCD904005860F3 /* main.jsbundle */; };
+		393A477821CCD904005860F3 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 393A475F21CCD904005860F3 /* README.txt */; };
+		393A477921CCD904005860F3 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A476121CCD904005860F3 /* RobotoCondensed-Bold.ttf */; };
+		393A477A21CCD904005860F3 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A476221CCD904005860F3 /* ooyala-slick-type.ttf */; };
+		393A477B21CCD904005860F3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A476321CCD904005860F3 /* Roboto-Regular.ttf */; };
+		393A477C21CCD904005860F3 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A476421CCD904005860F3 /* RobotoCondensed-Regular.ttf */; };
+		393A477D21CCD904005860F3 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A476521CCD904005860F3 /* alice.ttf */; };
+		393A477E21CCD904005860F3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A476621CCD904005860F3 /* Roboto-Bold.ttf */; };
+		393A477F21CCD904005860F3 /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A476921CCD904005860F3 /* zh.json */; };
+		393A478021CCD904005860F3 /* ja.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A476A21CCD904005860F3 /* ja.json */; };
+		393A478121CCD904005860F3 /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A476B21CCD904005860F3 /* en.json */; };
+		393A478221CCD904005860F3 /* ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A476C21CCD904005860F3 /* ko.json */; };
+		393A478321CCD904005860F3 /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A476D21CCD904005860F3 /* es.json */; };
+		393A478421CCD904005860F3 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A476E21CCD904005860F3 /* skin.json */; };
+		393A478521CCD904005860F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 393A476F21CCD904005860F3 /* README.md */; };
+		393A478621CCD904005860F3 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A477021CCD904005860F3 /* package.json */; };
+		393A478721CCD904005860F3 /* tv-skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A477221CCD904005860F3 /* tv-skin.json */; };
+		393A478821CCD904005860F3 /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A477321CCD904005860F3 /* skin-schema.json */; };
+		393A478921CCD904005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A477421CCD904005860F3 /* validate.js */; };
 		C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C402FB041CAD414E001D4BBD /* VideoItemCell.xib */; };
 		C402FB0A1CAD4163001D4BBD /* VideoLibraryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */; };
 		C402FB0B1CAD4163001D4BBD /* VideoLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */; };
@@ -24,22 +43,11 @@
 		C402FB101CAD425E001D4BBD /* VideoItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB0E1CAD425E001D4BBD /* VideoItem.h */; };
 		C402FB111CAD425E001D4BBD /* VideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C402FB0F1CAD425E001D4BBD /* VideoItem.m */; };
 		C4082C191D2144E200CC3BC4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4082C181D2144E200CC3BC4 /* libc++.tbd */; };
-		C4082C1B1D21461200CC3BC4 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4082C1A1D2145CA00CC3BC4 /* ooyala-slick-type.ttf */; };
 		C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		C4499AF81CA1887200B6EE20 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */; };
 		C4499AFA1CA18B6B00B6EE20 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AF91CA18B6B00B6EE20 /* OoyalaSkinSDK.framework */; };
 		C4499AFC1CA18B7800B6EE20 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AFB1CA18B7800B6EE20 /* OoyalaSDK.framework */; };
-		C4499B131CA18B8C00B6EE20 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499AFF1CA18B8C00B6EE20 /* alice.ttf */; };
-		C4499B151CA18B8C00B6EE20 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */; };
-		C4499B161CA18B8C00B6EE20 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */; };
-		C4499B171CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */; };
-		C4499B181CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4499B041CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf */; };
-		C4499B191CA18B8C00B6EE20 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = C4499B051CA18B8C00B6EE20 /* main.jsbundle */; };
 		C4499B1B1CA18B8C00B6EE20 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4499B071CA18B8C00B6EE20 /* OoyalaSkinSDK.xcassets */; };
-		C4499B1D1CA18B8C00B6EE20 /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = C4499B0A1CA18B8C00B6EE20 /* en.json */; };
-		C4499B1E1CA18B8C00B6EE20 /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = C4499B0B1CA18B8C00B6EE20 /* es.json */; };
-		C4499B221CA18B8C00B6EE20 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = C4499B0F1CA18B8C00B6EE20 /* skin.json */; };
-		C4499B241CA18B8C00B6EE20 /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = C4499B111CA18B8C00B6EE20 /* zh.json */; };
 		C464E5341CB532210019ABD8 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */; };
 		C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FA1C884769000B4890 /* JavaScriptCore.framework */; };
 		C477A7FD1C884770000B4890 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FC1C884770000B4890 /* Social.framework */; };
@@ -97,8 +105,27 @@
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BC947C81A817732004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		26EF171B1D50918900BACD9C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		7FF7389A21C2421000FCE2FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C402FB021CAD4123001D4BBD /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
+		393A475B21CCD904005860F3 /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
+		393A475D21CCD904005860F3 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		393A475E21CCD904005860F3 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		393A475F21CCD904005860F3 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		393A476121CCD904005860F3 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		393A476221CCD904005860F3 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		393A476321CCD904005860F3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		393A476421CCD904005860F3 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		393A476521CCD904005860F3 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
+		393A476621CCD904005860F3 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		393A476921CCD904005860F3 /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
+		393A476A21CCD904005860F3 /* ja.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ja.json; sourceTree = "<group>"; };
+		393A476B21CCD904005860F3 /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
+		393A476C21CCD904005860F3 /* ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ko.json; sourceTree = "<group>"; };
+		393A476D21CCD904005860F3 /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
+		393A476E21CCD904005860F3 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
+		393A476F21CCD904005860F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		393A477021CCD904005860F3 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		393A477221CCD904005860F3 /* tv-skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tv-skin.json"; sourceTree = "<group>"; };
+		393A477321CCD904005860F3 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
+		393A477421CCD904005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		C402FB041CAD414E001D4BBD /* VideoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLibraryViewController.h; sourceTree = "<group>"; };
 		C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoLibraryViewController.m; sourceTree = "<group>"; };
@@ -107,21 +134,10 @@
 		C402FB0E1CAD425E001D4BBD /* VideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoItem.h; sourceTree = "<group>"; };
 		C402FB0F1CAD425E001D4BBD /* VideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItem.m; sourceTree = "<group>"; };
 		C4082C181D2144E200CC3BC4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		C4082C1A1D2145CA00CC3BC4 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		C4499AF91CA18B6B00B6EE20 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "VendorLibraries/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
 		C4499AFB1CA18B7800B6EE20 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "VendorLibraries/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
-		C4499AFF1CA18B8C00B6EE20 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
-		C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		C4499B041CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		C4499B051CA18B8C00B6EE20 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../VendorLibraries/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
 		C4499B071CA18B8C00B6EE20 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../VendorLibraries/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
-		C4499B0A1CA18B8C00B6EE20 /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = en.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/en.json"; sourceTree = "<group>"; };
-		C4499B0B1CA18B8C00B6EE20 /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = es.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/es.json"; sourceTree = "<group>"; };
-		C4499B0F1CA18B8C00B6EE20 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
-		C4499B111CA18B8C00B6EE20 /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = zh.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/zh.json"; sourceTree = "<group>"; };
 		C464E5331CB532210019ABD8 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaPulseIntegration.framework; path = "VendorLibraries/OoyalaPulseIntegration-iOS/OoyalaPulseIntegration.framework"; sourceTree = "<group>"; };
 		C477A7FA1C884769000B4890 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		C477A7FC1C884770000B4890 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -189,13 +205,13 @@
 		0B140F551A2E4709001324EE /* PulseSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				7FF7389A21C2421000FCE2FF /* Images.xcassets */,
 				0B140F5A1A2E4709001324EE /* AppDelegate.h */,
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
 				0B19FEE51A3AB4E6003E57DF /* Base.lproj */,
 				0B19FEE01A3AB4BC003E57DF /* Lists */,
 				0B19FEDB1A3AB4B4003E57DF /* Players */,
 				0BC947C41A817732004CB997 /* Views */,
+				393A475A21CCD904005860F3 /* Resources */,
 				0B140F561A2E4709001324EE /* Supporting Files */,
 			);
 			path = PulseSampleApp;
@@ -204,13 +220,9 @@
 		0B140F561A2E4709001324EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4499AFE1CA18B8C00B6EE20 /* Fonts */,
-				C4499B091CA18B8C00B6EE20 /* skin-config */,
 				C4499B071CA18B8C00B6EE20 /* OoyalaSkinSDK.xcassets */,
-				C4499B051CA18B8C00B6EE20 /* main.jsbundle */,
 				0B140F571A2E4709001324EE /* Info.plist */,
 				0B140F581A2E4709001324EE /* main.m */,
-				C402FB021CAD4123001D4BBD /* library.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -285,30 +297,72 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C4499AFE1CA18B8C00B6EE20 /* Fonts */ = {
+		393A475A21CCD904005860F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C4082C1A1D2145CA00CC3BC4 /* ooyala-slick-type.ttf */,
-				C4499AFF1CA18B8C00B6EE20 /* alice.ttf */,
-				C4499B011CA18B8C00B6EE20 /* Roboto-Bold.ttf */,
-				C4499B021CA18B8C00B6EE20 /* Roboto-Regular.ttf */,
-				C4499B031CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf */,
-				C4499B041CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf */,
+				393A475B21CCD904005860F3 /* library.json */,
+				393A475C21CCD904005860F3 /* SkinConfig */,
 			);
-			name = Fonts;
-			path = "../VendorLibraries/OoyalaSkinSDK-iOS/Fonts";
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		C4499B091CA18B8C00B6EE20 /* skin-config */ = {
+		393A475C21CCD904005860F3 /* SkinConfig */ = {
 			isa = PBXGroup;
 			children = (
-				C4499B0A1CA18B8C00B6EE20 /* en.json */,
-				C4499B0B1CA18B8C00B6EE20 /* es.json */,
-				C4499B0F1CA18B8C00B6EE20 /* skin.json */,
-				C4499B111CA18B8C00B6EE20 /* zh.json */,
+				393A475D21CCD904005860F3 /* VERSION */,
+				393A475E21CCD904005860F3 /* main.jsbundle */,
+				393A475F21CCD904005860F3 /* README.txt */,
+				393A476021CCD904005860F3 /* Fonts */,
+				393A476721CCD904005860F3 /* skin-config */,
 			);
-			name = "skin-config";
-			path = "../VendorLibraries/OoyalaSkinSDK-iOS/skin-config";
+			path = SkinConfig;
+			sourceTree = "<group>";
+		};
+		393A476021CCD904005860F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				393A476121CCD904005860F3 /* RobotoCondensed-Bold.ttf */,
+				393A476221CCD904005860F3 /* ooyala-slick-type.ttf */,
+				393A476321CCD904005860F3 /* Roboto-Regular.ttf */,
+				393A476421CCD904005860F3 /* RobotoCondensed-Regular.ttf */,
+				393A476521CCD904005860F3 /* alice.ttf */,
+				393A476621CCD904005860F3 /* Roboto-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		393A476721CCD904005860F3 /* skin-config */ = {
+			isa = PBXGroup;
+			children = (
+				393A476821CCD904005860F3 /* languageFiles */,
+				393A476E21CCD904005860F3 /* skin.json */,
+				393A476F21CCD904005860F3 /* README.md */,
+				393A477021CCD904005860F3 /* package.json */,
+				393A477121CCD904005860F3 /* examples */,
+				393A477321CCD904005860F3 /* skin-schema.json */,
+				393A477421CCD904005860F3 /* validate.js */,
+			);
+			path = "skin-config";
+			sourceTree = "<group>";
+		};
+		393A476821CCD904005860F3 /* languageFiles */ = {
+			isa = PBXGroup;
+			children = (
+				393A476921CCD904005860F3 /* zh.json */,
+				393A476A21CCD904005860F3 /* ja.json */,
+				393A476B21CCD904005860F3 /* en.json */,
+				393A476C21CCD904005860F3 /* ko.json */,
+				393A476D21CCD904005860F3 /* es.json */,
+			);
+			path = languageFiles;
+			sourceTree = "<group>";
+		};
+		393A477121CCD904005860F3 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				393A477221CCD904005860F3 /* tv-skin.json */,
+			);
+			path = examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,25 +468,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4499B221CA18B8C00B6EE20 /* skin.json in Resources */,
-				C4499B1E1CA18B8C00B6EE20 /* es.json in Resources */,
-				C4499B241CA18B8C00B6EE20 /* zh.json in Resources */,
-				C4499B1D1CA18B8C00B6EE20 /* en.json in Resources */,
-				C4499B151CA18B8C00B6EE20 /* Roboto-Bold.ttf in Resources */,
+				393A478921CCD904005860F3 /* validate.js in Resources */,
 				0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */,
+				393A477521CCD904005860F3 /* library.json in Resources */,
+				393A478821CCD904005860F3 /* skin-schema.json in Resources */,
+				393A477821CCD904005860F3 /* README.txt in Resources */,
+				393A477D21CCD904005860F3 /* alice.ttf in Resources */,
+				393A477C21CCD904005860F3 /* RobotoCondensed-Regular.ttf in Resources */,
 				C4499B1B1CA18B8C00B6EE20 /* OoyalaSkinSDK.xcassets in Resources */,
-				C4499B161CA18B8C00B6EE20 /* Roboto-Regular.ttf in Resources */,
-				C4499B171CA18B8C00B6EE20 /* RobotoCondensed-Bold.ttf in Resources */,
-				C4499B131CA18B8C00B6EE20 /* alice.ttf in Resources */,
-				C402FB031CAD4123001D4BBD /* library.json in Resources */,
+				393A478521CCD904005860F3 /* README.md in Resources */,
+				393A477E21CCD904005860F3 /* Roboto-Bold.ttf in Resources */,
+				393A478721CCD904005860F3 /* tv-skin.json in Resources */,
+				393A478421CCD904005860F3 /* skin.json in Resources */,
+				393A477621CCD904005860F3 /* VERSION in Resources */,
 				C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */,
+				393A478021CCD904005860F3 /* ja.json in Resources */,
+				393A478121CCD904005860F3 /* en.json in Resources */,
+				393A477F21CCD904005860F3 /* zh.json in Resources */,
+				393A478621CCD904005860F3 /* package.json in Resources */,
+				393A478221CCD904005860F3 /* ko.json in Resources */,
+				393A477921CCD904005860F3 /* RobotoCondensed-Bold.ttf in Resources */,
 				0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */,
-				C4082C1B1D21461200CC3BC4 /* ooyala-slick-type.ttf in Resources */,
+				393A477B21CCD904005860F3 /* Roboto-Regular.ttf in Resources */,
 				C4BB04431C75FCD100871138 /* TableCell.xib in Resources */,
-				7FF7389B21C2421000FCE2FF /* Images.xcassets in Resources */,
-				C4499B191CA18B8C00B6EE20 /* main.jsbundle in Resources */,
-				C4499B181CA18B8C00B6EE20 /* RobotoCondensed-Regular.ttf in Resources */,
+				393A477A21CCD904005860F3 /* ooyala-slick-type.ttf in Resources */,
+				393A477721CCD904005860F3 /* main.jsbundle in Resources */,
 				0BC947CE1A817732004CB997 /* PlayerSimple.xib in Resources */,
+				393A478321CCD904005860F3 /* es.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
