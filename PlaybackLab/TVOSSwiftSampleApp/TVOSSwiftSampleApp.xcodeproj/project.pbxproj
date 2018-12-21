@@ -12,11 +12,6 @@
 		C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27262175357100ED8299 /* ChildPlayerViewController.swift */; };
 		C13A27292175367600ED8299 /* AbstractPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */; };
 		C13A272B21753C3A00ED8299 /* FairplayPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A272A21753C3A00ED8299 /* FairplayPlayerViewController.swift */; };
-		C13A2733217681B400ED8299 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A272D217681B300ED8299 /* Roboto-Bold.ttf */; };
-		C13A2734217681B400ED8299 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A272E217681B300ED8299 /* Roboto-Regular.ttf */; };
-		C13A2735217681B400ED8299 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A272F217681B300ED8299 /* RobotoCondensed-Regular.ttf */; };
-		C13A2736217681B400ED8299 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A2730217681B300ED8299 /* RobotoCondensed-Bold.ttf */; };
-		C13A2737217681B400ED8299 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A2731217681B300ED8299 /* alice.ttf */; };
 		C13A2738217681B400ED8299 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C13A2732217681B400ED8299 /* ooyala-slick-type.ttf */; };
 		C13A273E2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A273D2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift */; };
 		C1A4D143216FCF64008D505D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4D142216FCF64008D505D /* AppDelegate.swift */; };
@@ -48,11 +43,6 @@
 		C13A27262175357100ED8299 /* ChildPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildPlayerViewController.swift; sourceTree = "<group>"; };
 		C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractPlayerViewController.swift; sourceTree = "<group>"; };
 		C13A272A21753C3A00ED8299 /* FairplayPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairplayPlayerViewController.swift; sourceTree = "<group>"; };
-		C13A272D217681B300ED8299 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		C13A272E217681B300ED8299 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		C13A272F217681B300ED8299 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		C13A2730217681B300ED8299 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		C13A2731217681B300ED8299 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
 		C13A2732217681B400ED8299 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		C13A273D2176CA8F00ED8299 /* OoyalaPlayerTokenPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OoyalaPlayerTokenPlayerViewController.swift; sourceTree = "<group>"; };
 		C1A4D13F216FCF64008D505D /* TVOSSwiftSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVOSSwiftSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393A469321CCC469005860F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4D183216FE068008D505D /* TVOSSwiftSampleApp-Bridging-Header.h */,
+				C1A4D146216FCF64008D505D /* Main.storyboard */,
+				C1A4D149216FCF67008D505D /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C125992E217509F500E448B2 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +125,7 @@
 		C13A272C2176817D00ED8299 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C13A2731217681B300ED8299 /* alice.ttf */,
 				C13A2732217681B400ED8299 /* ooyala-slick-type.ttf */,
-				C13A272D217681B300ED8299 /* Roboto-Bold.ttf */,
-				C13A272E217681B300ED8299 /* Roboto-Regular.ttf */,
-				C13A2730217681B300ED8299 /* RobotoCondensed-Bold.ttf */,
-				C13A272F217681B300ED8299 /* RobotoCondensed-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -162,10 +157,8 @@
 				C125992F21750A3400E448B2 /* Players */,
 				C125992E217509F500E448B2 /* List */,
 				C1B0EDAD216FF5BA00EB48E7 /* Utils */,
-				C1A4D183216FE068008D505D /* TVOSSwiftSampleApp-Bridging-Header.h */,
+				393A469321CCC469005860F3 /* Supporting Files */,
 				C1A4D142216FCF64008D505D /* AppDelegate.swift */,
-				C1A4D146216FCF64008D505D /* Main.storyboard */,
-				C1A4D149216FCF67008D505D /* Assets.xcassets */,
 				C1A4D14B216FCF67008D505D /* Info.plist */,
 			);
 			path = TVOSSwiftSampleApp;
@@ -292,13 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13A2738217681B400ED8299 /* ooyala-slick-type.ttf in Resources */,
-				C13A2737217681B400ED8299 /* alice.ttf in Resources */,
-				C13A2736217681B400ED8299 /* RobotoCondensed-Bold.ttf in Resources */,
 				C1A4D14A216FCF67008D505D /* Assets.xcassets in Resources */,
 				C1A4D148216FCF64008D505D /* Main.storyboard in Resources */,
-				C13A2734217681B400ED8299 /* Roboto-Regular.ttf in Resources */,
-				C13A2735217681B400ED8299 /* RobotoCondensed-Regular.ttf in Resources */,
-				C13A2733217681B400ED8299 /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
