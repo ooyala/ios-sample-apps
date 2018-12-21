@@ -114,9 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				0B1AFB1C1B02BAAB00347DFA /* NPAWSampleApp */,
+				0B9457D21AC32C64000DD545 /* VendorLibraries */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B9457D21AC32C64000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};

@@ -147,9 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				0BF4FA0F1A686CB40050A602 /* IMASampleApp */,
+				0B94583C1AC32CB3000DD545 /* VendorLibraries */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B94583C1AC32CB3000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};

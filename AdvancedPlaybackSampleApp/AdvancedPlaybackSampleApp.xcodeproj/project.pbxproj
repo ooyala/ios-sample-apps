@@ -212,9 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				0B140F551A2E4709001324EE /* AdvancedPlaybackSampleApp */,
+				0B9457CF1AC32C5B000DD545 /* VendorLibraries */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B9457CF1AC32C5B000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};

@@ -140,9 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				9751C7F01A956C5300C7364F /* OoyalaAPISampleApp */,
+				0B9458601AC32CC4000DD545 /* VendorLibraries */,
 				0BDC4BBE1A9F9F1600576639 /* Frameworks */,
 				9751C7EF1A956C5300C7364F /* Products */,
-				0B9458601AC32CC4000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};

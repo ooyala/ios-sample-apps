@@ -223,9 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				0B1AFBC01B0C09BB00347DFA /* ChromecastSampleApp */,
+				0B1AFBE71B0C0B5900347DFA /* VendorLibraries */,
 				FF49D21519CBAC4D001B156F /* Frameworks */,
 				FF21F07719CB5ABC00FE9D07 /* Products */,
-				0B1AFBE71B0C0B5900347DFA /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};
