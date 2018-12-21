@@ -61,11 +61,11 @@
 		39278CCA2191DE8700F6F4E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC92191DE8700F6F4E2 /* libz.tbd */; };
 		39278CCC2191DE8D00F6F4E2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CCB2191DE8C00F6F4E2 /* libresolv.tbd */; };
 		39278CD62192D40F00F6F4E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39278CD52192D40F00F6F4E2 /* Images.xcassets */; };
+		393A47EB21CCDED5005860F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47E821CCDED5005860F3 /* OoyalaSDK.framework */; };
+		393A47EC21CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47E921CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework */; };
+		393A47ED21CCDED5005860F3 /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47EA21CCDED5005860F3 /* SecurePlayer.framework */; };
 		5E7EEE8E1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */; };
 		5E7EEE8F1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EEE8D1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m */; };
-		5E7EEE9E1CA9F9070049E43F /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7EEE9B1CA9F9060049E43F /* OoyalaSDK.framework */; };
-		5E7EEE9F1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7EEE9C1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework */; };
-		5E7EEEA01CA9F9070049E43F /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7EEE9D1CA9F9070049E43F /* SecurePlayer.framework */; };
 		9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */; };
 		9782DB021BFC1E9E0094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */; };
 		97E5875F1D4AE14800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */; };
@@ -139,11 +139,11 @@
 		39278CC92191DE8700F6F4E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		39278CCB2191DE8C00F6F4E2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		39278CD52192D40F00F6F4E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		393A47E821CCDED5005860F3 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		393A47E921CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSecurePlayerSDK.framework; sourceTree = "<group>"; };
+		393A47EA21CCDED5005860F3 /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurePlayer.framework; sourceTree = "<group>"; };
 		5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurePlayerPrePersonalizedPlayerViewController.h; sourceTree = "<group>"; };
 		5E7EEE8D1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurePlayerPrePersonalizedPlayerViewController.m; sourceTree = "<group>"; };
-		5E7EEE9B1CA9F9060049E43F /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
-		5E7EEE9C1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSecurePlayerSDK.framework; path = "../vendor/Ooyala/OoyalaSecurePlayerSDK-iOS/OoyalaSecurePlayerSDK.framework"; sourceTree = "<group>"; };
-		5E7EEE9D1CA9F9070049E43F /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurePlayer.framework; path = ../vendor/SecurePlayer/SecurePlayer.framework; sourceTree = "<group>"; };
 		9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -161,11 +161,10 @@
 				0BDC86FE1D5B96E00012EFA8 /* CoreLocation.framework in Frameworks */,
 				97E5875F1D4AE14800202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BDBDBE71D35C181003933D0 /* AVKit.framework in Frameworks */,
-				5E7EEE9E1CA9F9070049E43F /* OoyalaSDK.framework in Frameworks */,
-				5E7EEE9F1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework in Frameworks */,
-				5E7EEEA01CA9F9070049E43F /* SecurePlayer.framework in Frameworks */,
 				0BD84A111B911555006CB6D0 /* CoreMedia.framework in Frameworks */,
+				393A47ED21CCDED5005860F3 /* SecurePlayer.framework in Frameworks */,
 				0BD84A0F1B911550006CB6D0 /* OpenGLES.framework in Frameworks */,
+				393A47EC21CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework in Frameworks */,
 				0BD84A0D1B91154A006CB6D0 /* CoreGraphics.framework in Frameworks */,
 				0BD84A0B1B911545006CB6D0 /* UIKit.framework in Frameworks */,
 				0BD84A091B91153E006CB6D0 /* QuartzCore.framework in Frameworks */,
@@ -175,6 +174,7 @@
 				0BD84A021B911525006CB6D0 /* CoreText.framework in Frameworks */,
 				0BD84A001B91151F006CB6D0 /* Security.framework in Frameworks */,
 				0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */,
+				393A47EB21CCDED5005860F3 /* OoyalaSDK.framework in Frameworks */,
 				0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,10 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				0B140F551A2E4709001324EE /* SecurePlayerSampleApp */,
-				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0BD84A161B91179A006CB6D0 /* Resources */,
-				0B140F541A2E4709001324EE /* Products */,
 				0B9457D21AC32C64000DD545 /* VendorLibraries */,
+				0B140FAB1A2E6550001324EE /* Frameworks */,
+				0B140F541A2E4709001324EE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,29 +237,26 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39278CCB2191DE8C00F6F4E2 /* libresolv.tbd */,
-				39278CC92191DE8700F6F4E2 /* libz.tbd */,
-				39278CC72191DE8100F6F4E2 /* libxml2.tbd */,
-				39278CC52191DE7A00F6F4E2 /* libc++.tbd */,
-				0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */,
-				97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */,
-				0BDBDBE61D35C181003933D0 /* AVKit.framework */,
-				5E7EEE9B1CA9F9060049E43F /* OoyalaSDK.framework */,
-				5E7EEE9C1CA9F9070049E43F /* OoyalaSecurePlayerSDK.framework */,
-				5E7EEE9D1CA9F9070049E43F /* SecurePlayer.framework */,
-				0BD84A121B91159B006CB6D0 /* MediaAccessibility.framework */,
-				0BD84A101B911555006CB6D0 /* CoreMedia.framework */,
-				0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */,
-				0BD84A0C1B91154A006CB6D0 /* CoreGraphics.framework */,
-				0BD84A0A1B911545006CB6D0 /* UIKit.framework */,
-				0BD84A081B91153E006CB6D0 /* QuartzCore.framework */,
-				0BD84A061B911538006CB6D0 /* CFNetwork.framework */,
 				0BD84A041B911533006CB6D0 /* AudioToolbox.framework */,
-				0BD84A011B911525006CB6D0 /* CoreText.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
 				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0BDBDBE61D35C181003933D0 /* AVKit.framework */,
+				0BD84A061B911538006CB6D0 /* CFNetwork.framework */,
+				0BD84A0C1B91154A006CB6D0 /* CoreGraphics.framework */,
+				0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */,
+				0BD84A101B911555006CB6D0 /* CoreMedia.framework */,
+				0BD84A011B911525006CB6D0 /* CoreText.framework */,
+				97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */,
+				39278CC52191DE7A00F6F4E2 /* libc++.tbd */,
+				39278CCB2191DE8C00F6F4E2 /* libresolv.tbd */,
+				39278CC72191DE8100F6F4E2 /* libxml2.tbd */,
+				39278CC92191DE8700F6F4E2 /* libz.tbd */,
+				0BD84A121B91159B006CB6D0 /* MediaAccessibility.framework */,
 				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
+				0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */,
+				0BD84A081B91153E006CB6D0 /* QuartzCore.framework */,
+				0B140F8C1A2E53B0001324EE /* Security.framework */,
+				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
+				0BD84A0A1B911545006CB6D0 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,6 +310,9 @@
 		0B9457D21AC32C64000DD545 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				393A47E821CCDED5005860F3 /* OoyalaSDK.framework */,
+				393A47E921CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework */,
+				393A47EA21CCDED5005860F3 /* SecurePlayer.framework */,
 			);
 			path = VendorLibraries;
 			sourceTree = "<group>";
@@ -635,6 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -661,6 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
