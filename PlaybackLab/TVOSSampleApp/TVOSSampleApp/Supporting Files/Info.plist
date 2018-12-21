@@ -29,10 +29,6 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>RobotoCondensed-Regular.ttf</string>
-		<string>RobotoCondensed-Bold.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-Bold.ttf</string>
 		<string>ooyala-slick-type.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>

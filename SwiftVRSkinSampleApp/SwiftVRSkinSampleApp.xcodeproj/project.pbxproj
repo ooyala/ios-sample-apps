@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393A469B21CCC6AD005860F3 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469521CCC6AD005860F3 /* RobotoCondensed-Bold.ttf */; };
+		393A469C21CCC6AD005860F3 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469621CCC6AD005860F3 /* ooyala-slick-type.ttf */; };
+		393A469D21CCC6AD005860F3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469721CCC6AD005860F3 /* Roboto-Regular.ttf */; };
+		393A469E21CCC6AD005860F3 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469821CCC6AD005860F3 /* RobotoCondensed-Regular.ttf */; };
+		393A469F21CCC6AD005860F3 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469921CCC6AD005860F3 /* alice.ttf */; };
+		393A46A021CCC6AD005860F3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469A21CCC6AD005860F3 /* Roboto-Bold.ttf */; };
+		393A47EF21CCDF8A005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A47EE21CCDF8A005860F3 /* OoyalaSkinSDK.xcassets */; };
 		75653C571FB5E9C1001DF291 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75653C561FB5E9B9001DF291 /* libc++.tbd */; };
 		75653C591FB5E9DA001DF291 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75653C581FB5E9CE001DF291 /* CoreMotion.framework */; };
 		75653C5B1FB5EF17001DF291 /* ListOfVideosFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75653C5A1FB5EF17001DF291 /* ListOfVideosFactory.swift */; };
@@ -26,18 +33,11 @@
 		75653CCB1FB5FB31001DF291 /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 75653CB81FB5FB31001DF291 /* skin-schema.json */; };
 		75653CCC1FB5FB31001DF291 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 75653CB91FB5FB31001DF291 /* skin.json */; };
 		75653CCD1FB5FB31001DF291 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBA1FB5FB31001DF291 /* validate.js */; };
-		75653CCE1FB5FB31001DF291 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBC1FB5FB31001DF291 /* alice.ttf */; };
-		75653CD01FB5FB31001DF291 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBE1FB5FB31001DF291 /* ooyala-slick-type.ttf */; };
-		75653CD11FB5FB31001DF291 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CBF1FB5FB31001DF291 /* Roboto-Bold.ttf */; };
-		75653CD21FB5FB31001DF291 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CC01FB5FB31001DF291 /* Roboto-Regular.ttf */; };
-		75653CD31FB5FB31001DF291 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CC11FB5FB31001DF291 /* RobotoCondensed-Bold.ttf */; };
-		75653CD41FB5FB31001DF291 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75653CC21FB5FB31001DF291 /* RobotoCondensed-Regular.ttf */; };
 		75653CD61FB5FE9D001DF291 /* IMAVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75653CD51FB5FE9D001DF291 /* IMAVideoPlayerViewController.swift */; };
 		75653CDF1FB602F9001DF291 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75653CD91FB60158001DF291 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75AEE5AA1FB3380300C3E1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEE5991FB3380300C3E1F2 /* AppDelegate.swift */; };
 		75AEE5AD1FB3380300C3E1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AEE5A31FB3380300C3E1F2 /* LaunchScreen.storyboard */; };
 		75AEE5AE1FB3380300C3E1F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AEE5A51FB3380300C3E1F2 /* Main.storyboard */; };
-		75AEE5AF1FB3380300C3E1F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75AEE5A81FB3380300C3E1F2 /* Assets.xcassets */; };
 		75AEE5B31FB33A1E00C3E1F2 /* TestDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEE5B21FB33A1E00C3E1F2 /* TestDataServiceProtocol.swift */; };
 		75AEE5B51FB33A2700C3E1F2 /* TestDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEE5B41FB33A2700C3E1F2 /* TestDataService.swift */; };
 		75AEE5B81FB33B1E00C3E1F2 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEE5B71FB33B1E00C3E1F2 /* VideoItem.swift */; };
@@ -72,6 +72,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		393A469521CCC6AD005860F3 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		393A469621CCC6AD005860F3 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		393A469721CCC6AD005860F3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		393A469821CCC6AD005860F3 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		393A469921CCC6AD005860F3 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
+		393A469A21CCC6AD005860F3 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		393A47EE21CCDF8A005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		75653C521FB5BCEF001DF291 /* VRSkinSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VRSkinSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		75653C561FB5E9B9001DF291 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		75653C581FB5E9CE001DF291 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -92,12 +99,6 @@
 		75653CB81FB5FB31001DF291 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		75653CB91FB5FB31001DF291 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
 		75653CBA1FB5FB31001DF291 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
-		75653CBC1FB5FB31001DF291 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alice.ttf; sourceTree = "<group>"; };
-		75653CBE1FB5FB31001DF291 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
-		75653CBF1FB5FB31001DF291 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		75653CC01FB5FB31001DF291 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		75653CC11FB5FB31001DF291 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		75653CC21FB5FB31001DF291 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		75653CD51FB5FE9D001DF291 /* IMAVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMAVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		75653CD71FB600DE001DF291 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaIMASDK.framework; sourceTree = "<group>"; };
 		75653CD91FB60158001DF291 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		75AEE59A1FB3380300C3E1F2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75AEE5A41FB3380300C3E1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75AEE5A61FB3380300C3E1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		75AEE5A81FB3380300C3E1F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75AEE5B21FB33A1E00C3E1F2 /* TestDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataServiceProtocol.swift; sourceTree = "<group>"; };
 		75AEE5B41FB33A2700C3E1F2 /* TestDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataService.swift; sourceTree = "<group>"; };
 		75AEE5B71FB33B1E00C3E1F2 /* VideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
@@ -141,6 +141,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393A469421CCC6AD005860F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				393A469521CCC6AD005860F3 /* RobotoCondensed-Bold.ttf */,
+				393A469621CCC6AD005860F3 /* ooyala-slick-type.ttf */,
+				393A469721CCC6AD005860F3 /* Roboto-Regular.ttf */,
+				393A469821CCC6AD005860F3 /* RobotoCondensed-Regular.ttf */,
+				393A469921CCC6AD005860F3 /* alice.ttf */,
+				393A469A21CCC6AD005860F3 /* Roboto-Bold.ttf */,
+			);
+			name = Fonts;
+			path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts";
+			sourceTree = "<group>";
+		};
 		75653C511FB5BCE0001DF291 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +175,8 @@
 		75653C5C1FB5F729001DF291 /* SkinConfig */ = {
 			isa = PBXGroup;
 			children = (
+				393A469421CCC6AD005860F3 /* Fonts */,
 				75653CAD1FB5FB31001DF291 /* main.jsbundle */,
-				75653CBB1FB5FB31001DF291 /* Fonts */,
 				75653CAE1FB5FB31001DF291 /* skin-config */,
 			);
 			path = SkinConfig;
@@ -213,26 +227,13 @@
 			path = languageFiles;
 			sourceTree = "<group>";
 		};
-		75653CBB1FB5FB31001DF291 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				75653CBC1FB5FB31001DF291 /* alice.ttf */,
-				75653CBE1FB5FB31001DF291 /* ooyala-slick-type.ttf */,
-				75653CBF1FB5FB31001DF291 /* Roboto-Bold.ttf */,
-				75653CC01FB5FB31001DF291 /* Roboto-Regular.ttf */,
-				75653CC11FB5FB31001DF291 /* RobotoCondensed-Bold.ttf */,
-				75653CC21FB5FB31001DF291 /* RobotoCondensed-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		75AEE5701FB32F6F00C3E1F2 = {
 			isa = PBXGroup;
 			children = (
-				75AEE5931FB335B300C3E1F2 /* VendorLibraries */,
 				75AEE57B1FB32F6F00C3E1F2 /* SwiftVRSkinSampleApp */,
-				75AEE57A1FB32F6F00C3E1F2 /* Products */,
+				75AEE5931FB335B300C3E1F2 /* VendorLibraries */,
 				75653C551FB5E9B9001DF291 /* Frameworks */,
+				75AEE57A1FB32F6F00C3E1F2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,9 +342,9 @@
 		75AEE5A71FB3380300C3E1F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				393A47EE21CCDF8A005860F3 /* OoyalaSkinSDK.xcassets */,
 				75653C5C1FB5F729001DF291 /* SkinConfig */,
 				75AEE5C71FB34F2C00C3E1F2 /* data.json */,
-				75AEE5A81FB3380300C3E1F2 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -548,29 +549,29 @@
 			files = (
 				75653CC91FB5FB31001DF291 /* package.json in Resources */,
 				75AEE5AE1FB3380300C3E1F2 /* Main.storyboard in Resources */,
-				75653CD21FB5FB31001DF291 /* Roboto-Regular.ttf in Resources */,
 				75653CC41FB5FB31001DF291 /* tv-skin.json in Resources */,
 				75653CC71FB5FB31001DF291 /* ja.json in Resources */,
 				75653CC81FB5FB31001DF291 /* zh.json in Resources */,
-				75653CD41FB5FB31001DF291 /* RobotoCondensed-Regular.ttf in Resources */,
 				75653C8D1FB5F878001DF291 /* GoogleKitDialogs.bundle in Resources */,
+				393A469E21CCC6AD005860F3 /* RobotoCondensed-Regular.ttf in Resources */,
 				75653CCC1FB5FB31001DF291 /* skin.json in Resources */,
 				75653C8C1FB5F878001DF291 /* GoogleKitCore.bundle in Resources */,
-				75AEE5AF1FB3380300C3E1F2 /* Assets.xcassets in Resources */,
 				75AEE5C81FB34F2C00C3E1F2 /* data.json in Resources */,
 				75653CC51FB5FB31001DF291 /* en.json in Resources */,
 				75AEE5AD1FB3380300C3E1F2 /* LaunchScreen.storyboard in Resources */,
 				75653CCD1FB5FB31001DF291 /* validate.js in Resources */,
-				75653CD11FB5FB31001DF291 /* Roboto-Bold.ttf in Resources */,
-				75653CD01FB5FB31001DF291 /* ooyala-slick-type.ttf in Resources */,
+				393A46A021CCC6AD005860F3 /* Roboto-Bold.ttf in Resources */,
 				75653CCB1FB5FB31001DF291 /* skin-schema.json in Resources */,
-				75653CCE1FB5FB31001DF291 /* alice.ttf in Resources */,
 				75653CCA1FB5FB31001DF291 /* README.md in Resources */,
+				393A47EF21CCDF8A005860F3 /* OoyalaSkinSDK.xcassets in Resources */,
 				75653C8E1FB5F878001DF291 /* GoogleKitHUD.bundle in Resources */,
+				393A469C21CCC6AD005860F3 /* ooyala-slick-type.ttf in Resources */,
 				75653CC61FB5FB31001DF291 /* es.json in Resources */,
+				393A469D21CCC6AD005860F3 /* Roboto-Regular.ttf in Resources */,
 				75653CC31FB5FB31001DF291 /* main.jsbundle in Resources */,
+				393A469F21CCC6AD005860F3 /* alice.ttf in Resources */,
+				393A469B21CCC6AD005860F3 /* RobotoCondensed-Bold.ttf in Resources */,
 				75653C8B1FB5F878001DF291 /* CardboardSDK.bundle in Resources */,
-				75653CD31FB5FB31001DF291 /* RobotoCondensed-Bold.ttf in Resources */,
 				75653C8F1FB5F878001DF291 /* MaterialRobotoFontLoader.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393A47F121CCDFC6005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A47F021CCDFC6005860F3 /* OoyalaSkinSDK.xcassets */; };
 		523E45AF1F559E2D00C29D8D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45AE1F559E2D00C29D8D /* CoreMotion.framework */; };
 		523E45CB1F559EE200C29D8D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45CA1F559EE200C29D8D /* libc++.tbd */; };
 		523E45CD1F559EE900C29D8D /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45CC1F559EE900C29D8D /* libc.tbd */; };
@@ -34,7 +35,6 @@
 		755B35DD1FF25E31009CD1F7 /* VideoPlayerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B35A41FF25E31009CD1F7 /* VideoPlayerViewModel.m */; };
 		755B35DE1FF25E31009CD1F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755B35A61FF25E31009CD1F7 /* LaunchScreen.storyboard */; };
 		755B35DF1FF25E31009CD1F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755B35A81FF25E31009CD1F7 /* Main.storyboard */; };
-		755B35E11FF25E31009CD1F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755B35AD1FF25E31009CD1F7 /* Assets.xcassets */; };
 		755B35E21FF25E31009CD1F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 755B35AE1FF25E31009CD1F7 /* data.json */; };
 		755B35E31FF25E31009CD1F7 /* CardboardSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 755B35B01FF25E31009CD1F7 /* CardboardSDK.bundle */; };
 		755B35E41FF25E31009CD1F7 /* GoogleKitCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 755B35B11FF25E31009CD1F7 /* GoogleKitCore.bundle */; };
@@ -79,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		393A47F021CCDFC6005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		523E45161F559C7500C29D8D /* VRSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523E45AA1F559E2000C29D8D /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		523E45AC1F559E2700C29D8D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
@@ -140,7 +141,6 @@
 		755B35A41FF25E31009CD1F7 /* VideoPlayerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewModel.m; sourceTree = "<group>"; };
 		755B35A71FF25E31009CD1F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		755B35A91FF25E31009CD1F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		755B35AD1FF25E31009CD1F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		755B35AE1FF25E31009CD1F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		755B35B01FF25E31009CD1F7 /* CardboardSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CardboardSDK.bundle; sourceTree = "<group>"; };
 		755B35B11FF25E31009CD1F7 /* GoogleKitCore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleKitCore.bundle; sourceTree = "<group>"; };
@@ -198,8 +198,8 @@
 			children = (
 				755B356B1FF25E30009CD1F7 /* VRSampleApp */,
 				75806A031F8BD299004248C6 /* VendorLibraries */,
-				523E45171F559C7500C29D8D /* Products */,
 				523E45A91F559E1F00C29D8D /* Frameworks */,
+				523E45171F559C7500C29D8D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -481,7 +481,7 @@
 		755B35AC1FF25E31009CD1F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				755B35AD1FF25E31009CD1F7 /* Assets.xcassets */,
+				393A47F021CCDFC6005860F3 /* OoyalaSkinSDK.xcassets */,
 				755B35AE1FF25E31009CD1F7 /* data.json */,
 				755B35B51FF25E31009CD1F7 /* SkinConfig */,
 			);
@@ -642,6 +642,7 @@
 				755B35E41FF25E31009CD1F7 /* GoogleKitCore.bundle in Resources */,
 				755B363B1FF2601F009CD1F7 /* main.jsbundle in Resources */,
 				755B363F1FF2601F009CD1F7 /* es.json in Resources */,
+				393A47F121CCDFC6005860F3 /* OoyalaSkinSDK.xcassets in Resources */,
 				755B36451FF2601F009CD1F7 /* skin.json in Resources */,
 				755B36411FF2601F009CD1F7 /* zh.json in Resources */,
 				755B35E71FF25E31009CD1F7 /* MaterialRobotoFontLoader.bundle in Resources */,
@@ -655,7 +656,6 @@
 				755B36491FF2601F009CD1F7 /* ooyala-slick-type.ttf in Resources */,
 				755B35DE1FF25E31009CD1F7 /* LaunchScreen.storyboard in Resources */,
 				755B36471FF2601F009CD1F7 /* README.txt in Resources */,
-				755B35E11FF25E31009CD1F7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
