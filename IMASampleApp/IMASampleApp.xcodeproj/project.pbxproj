@@ -165,16 +165,16 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39278CAF2191DC9F00F6F4E2 /* libz.tbd */,
-				39278CAD2191DC9900F6F4E2 /* libxml2.tbd */,
-				39278CAB2191DC9300F6F4E2 /* libc++.tbd */,
-				97E587551D4AE08B00202E09 /* JavaScriptCore.framework */,
-				0BCC6E2F1D2F37930040B0B2 /* AVKit.framework */,
-				0BF4FA3C1A686FBC0050A602 /* WebKit.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
 				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0BCC6E2F1D2F37930040B0B2 /* AVKit.framework */,
+				97E587551D4AE08B00202E09 /* JavaScriptCore.framework */,
+				39278CAB2191DC9300F6F4E2 /* libc++.tbd */,
+				39278CAD2191DC9900F6F4E2 /* libxml2.tbd */,
+				39278CAF2191DC9F00F6F4E2 /* libz.tbd */,
 				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
+				0B140F8C1A2E53B0001324EE /* Security.framework */,
+				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
+				0BF4FA3C1A686FBC0050A602 /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

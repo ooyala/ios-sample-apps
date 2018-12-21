@@ -240,24 +240,24 @@
 		FF49D21519CBAC4D001B156F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */,
-				0BCC6E291D2F30B80040B0B2 /* AVKit.framework */,
-				5E3B143C1C5807430078E075 /* libz.tbd */,
-				5E3B143A1C5807230078E075 /* libxml2.tbd */,
-				FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */,
-				FF49D20C19CBAB84001B156F /* UIKit.framework */,
-				FF49D20A19CBAB78001B156F /* Foundation.framework */,
 				FF49D20819CBAB5A001B156F /* AdSupport.framework */,
-				FF49D20419CBAB3F001B156F /* EventKit.framework */,
-				FF49D20219CBAB28001B156F /* MessageUI.framework */,
 				FF21F0D319CB7A2100FE9D07 /* AVFoundation.framework */,
+				0BCC6E291D2F30B80040B0B2 /* AVKit.framework */,
 				FF21F0D419CB7A2100FE9D07 /* CFNetwork.framework */,
 				FF21F0D519CB7A2100FE9D07 /* CoreMedia.framework */,
 				FF21F0D619CB7A2100FE9D07 /* CoreText.framework */,
+				FF49D20419CBAB3F001B156F /* EventKit.framework */,
+				FF49D20A19CBAB78001B156F /* Foundation.framework */,
+				97E5874D1D4ADFDD00202E09 /* JavaScriptCore.framework */,
+				5E3B143A1C5807230078E075 /* libxml2.tbd */,
+				5E3B143C1C5807430078E075 /* libz.tbd */,
 				FF21F0D719CB7A2100FE9D07 /* MediaAccessibility.framework */,
 				FF21F0D819CB7A2100FE9D07 /* MediaPlayer.framework */,
+				FF49D20219CBAB28001B156F /* MessageUI.framework */,
 				FF21F0D919CB7A2100FE9D07 /* QuartzCore.framework */,
 				FF21F0DA19CB7A2100FE9D07 /* Security.framework */,
+				FF49D20E19CBAB91001B156F /* SystemConfiguration.framework */,
+				FF49D20C19CBAB84001B156F /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

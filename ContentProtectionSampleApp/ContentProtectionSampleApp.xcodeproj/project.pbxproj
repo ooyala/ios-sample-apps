@@ -222,20 +222,20 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39278CA32191DC4000F6F4E2 /* libc++.tbd */,
-				39278CA12191DC3A00F6F4E2 /* libxml2.tbd */,
-				97E587511D4AE02700202E09 /* JavaScriptCore.framework */,
-				0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */,
 				FF86C2831A9C0E3F00C328A9 /* AdSupport.framework */,
-				0B7AC4441A7A27090085BC97 /* UIKit.framework */,
-				0B7AC4421A7A26F70085BC97 /* Foundation.framework */,
-				0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */,
+				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */,
 				0B7AC43E1A7A26CA0085BC97 /* CFNetwork.framework */,
 				0B7AC43C1A7A26BA0085BC97 /* CoreGraphics.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */,
+				0B7AC4421A7A26F70085BC97 /* Foundation.framework */,
+				97E587511D4AE02700202E09 /* JavaScriptCore.framework */,
+				39278CA32191DC4000F6F4E2 /* libc++.tbd */,
+				39278CA12191DC3A00F6F4E2 /* libxml2.tbd */,
 				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
+				0B140F8C1A2E53B0001324EE /* Security.framework */,
+				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
+				0B7AC4441A7A27090085BC97 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
