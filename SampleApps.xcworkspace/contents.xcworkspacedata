@@ -5,10 +5,10 @@
       location = "group:AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ChromecastSampleApp/ChromecastSampleApp.xcodeproj">
+      location = "group:BasicPlaybackSampleApp/BasicPlaybackSampleApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BasicPlaybackSampleApp/BasicPlaybackSampleApp.xcodeproj">
+      location = "group:ChromecastSampleApp/ChromecastSampleApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:CompleteSampleApp/CompleteSampleApp.xcodeproj">
