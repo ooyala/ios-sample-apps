@@ -12,23 +12,25 @@
 #import "PlayerSelectionOption.h"
 
 @interface SampleAppPlayerViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *playerView;
-@property (weak, nonatomic) IBOutlet UIButton *button1;
-@property (weak, nonatomic) IBOutlet UIButton *button2;
-@property (weak, nonatomic) IBOutlet UILabel *switchLabel1;
-@property (weak, nonatomic) IBOutlet UILabel *switchLabel2;
-@property (weak, nonatomic) IBOutlet UISwitch *switch1;
-@property (weak, nonatomic) IBOutlet UISwitch *switch2;
-@property (weak, nonatomic) IBOutlet UITextField *text1;
-@property (weak, nonatomic) IBOutlet UITextField *text2;
-@property (weak, nonatomic) IBOutlet UIStackView *stackView1;
-@property (weak, nonatomic) IBOutlet UIView *playerView1;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (nonatomic, weak) IBOutlet UIView *playerView;
+@property (nonatomic, weak) IBOutlet UIButton *button1;
+@property (nonatomic, weak) IBOutlet UIButton *button2;
+@property (nonatomic, weak) IBOutlet UILabel *switchLabel1;
+@property (nonatomic, weak) IBOutlet UILabel *switchLabel2;
+@property (nonatomic, weak) IBOutlet UISwitch *switch1;
+@property (nonatomic, weak) IBOutlet UISwitch *switch2;
+@property (nonatomic, weak) IBOutlet UITextField *text1;
+@property (nonatomic, weak) IBOutlet UITextField *text2;
+@property (nonatomic, weak) IBOutlet UIStackView *stackView1;
+@property (nonatomic, weak) IBOutlet UIView *playerView1;
+@property (nonatomic, weak) IBOutlet UITextView *textView;
 
 @property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
 @property (nonatomic) BOOL qaModeEnabled;
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled;
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled;
 
 - (IBAction)onButtonClick:(id)sender;
 
