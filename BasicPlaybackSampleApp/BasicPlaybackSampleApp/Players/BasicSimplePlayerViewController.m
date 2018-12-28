@@ -38,6 +38,9 @@
     _pcode = self.playerSelectionOption.pcode;
     _playerDomain = self.playerSelectionOption.domain;
     self.title = self.playerSelectionOption.title;
+    if (playerSelectionOption.isAudioOnlyAsset) {
+      [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
+    }
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -62,10 +65,10 @@
   
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
   
   // In QA Mode , making textView visible
   if (self.qaModeEnabled) {
@@ -90,17 +93,16 @@
 
   // Add constraints
   [NSLayoutConstraint activateConstraints:@[
-                                            [playerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
-                                            [playerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
-                                            [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
-                                            [playerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
+    [playerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
+    [playerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
+    [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
+    [playerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
                                             ]];
 }
 
 #pragma mark - Actions
 
 - (void)notificationHandler:(NSNotification *)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -108,9 +110,8 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
-                       [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
-  
+                       [OOOoyalaPlayer playerStateToString:self.ooyalaPlayerViewController.player.state],
+                       self.ooyalaPlayerViewController.player.playheadTime, appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
