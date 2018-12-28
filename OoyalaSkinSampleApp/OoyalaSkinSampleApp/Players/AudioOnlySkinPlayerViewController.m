@@ -50,7 +50,7 @@ AppDelegate *appDel;
   [super viewDidLoad];
   
   self.title = self.playerSelectionOption.title;
-  
+  [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   OOOptions *options = [OOOptions new];
