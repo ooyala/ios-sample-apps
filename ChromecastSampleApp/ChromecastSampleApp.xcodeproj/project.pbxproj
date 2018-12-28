@@ -16,11 +16,8 @@
 		0B1AFBE61B0C09BB00347DFA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD81B0C09BB00347DFA /* Utils.m */; };
 		0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */; };
 		0BCC6E2A1D2F30B80040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E291D2F30B80040B0B2 /* AVKit.framework */; };
-		39AE421521772F7200F1C084 /* ooyala_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39AE420C21772F7200F1C084 /* ooyala_logo.png */; };
-		39AE421621772F7200F1C084 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 39AE420D21772F7200F1C084 /* pause.png */; };
-		39AE421721772F7200F1C084 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 39AE420E21772F7200F1C084 /* play.png */; };
-		39AE421821772F7200F1C084 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39AE420F21772F7200F1C084 /* LaunchScreen.xib */; };
-		39AE421921772F7200F1C084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421121772F7200F1C084 /* Main.storyboard */; };
+		39088CA121D60FAB00D860A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39088C9D21D60FAB00D860A9 /* LaunchScreen.xib */; };
+		39088CA221D60FAB00D860A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39088C9F21D60FAB00D860A9 /* Main.storyboard */; };
 		39AE421A21772F7200F1C084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421321772F7200F1C084 /* Images.xcassets */; };
 		5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143A1C5807230078E075 /* libxml2.tbd */; };
 		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
@@ -72,11 +69,8 @@
 		0B89E24E1B1FC85300306176 /* ChromecastPlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromecastPlayerSelectionOption.h; sourceTree = "<group>"; };
 		0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastPlayerSelectionOption.m; sourceTree = "<group>"; };
 		0BCC6E291D2F30B80040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		39AE420C21772F7200F1C084 /* ooyala_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ooyala_logo.png; sourceTree = "<group>"; };
-		39AE420D21772F7200F1C084 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
-		39AE420E21772F7200F1C084 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		39AE421021772F7200F1C084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		39AE421221772F7200F1C084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39088C9E21D60FAB00D860A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		39088CA021D60FAB00D860A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		39AE421321772F7200F1C084 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39AE421421772F7200F1C084 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSampleApp.entitlements; sourceTree = "<group>"; };
@@ -143,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */,
-				0B1AFBD01B0C09BB00347DFA /* main.m */,
 				0B1AFBC11B0C09BB00347DFA /* AppDelegate.h */,
 				0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */,
 				5EA5A7E71B6C07DC008C691C /* OOCastManagerFetcher.h */,
@@ -151,7 +144,8 @@
 				0B1AFBCD1B0C09BB00347DFA /* Lists */,
 				0B1AFBD11B0C09BB00347DFA /* Players */,
 				0B1AFBD41B0C09BB00347DFA /* Utils */,
-				39AE420A21772F7200F1C084 /* Resources */,
+				39088C9C21D60FAB00D860A9 /* Base.lproj */,
+				39AE420A21772F7200F1C084 /* Supporting Files */,
 			);
 			path = ChromecastSampleApp;
 			sourceTree = "<group>";
@@ -197,26 +191,23 @@
 			name = VendorLibraries;
 			sourceTree = "<group>";
 		};
-		39AE420A21772F7200F1C084 /* Resources */ = {
+		39088C9C21D60FAB00D860A9 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				39AE420B21772F7200F1C084 /* Images */,
-				39AE420F21772F7200F1C084 /* LaunchScreen.xib */,
-				39AE421121772F7200F1C084 /* Main.storyboard */,
+				39088C9D21D60FAB00D860A9 /* LaunchScreen.xib */,
+				39088C9F21D60FAB00D860A9 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		39AE420A21772F7200F1C084 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B1AFBD01B0C09BB00347DFA /* main.m */,
 				39AE421321772F7200F1C084 /* Images.xcassets */,
 				39AE421421772F7200F1C084 /* Info.plist */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		39AE420B21772F7200F1C084 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				39AE420C21772F7200F1C084 /* ooyala_logo.png */,
-				39AE420D21772F7200F1C084 /* pause.png */,
-				39AE420E21772F7200F1C084 /* play.png */,
-			);
-			path = Images;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FF21F06D19CB5ABC00FE9D07 = {
@@ -321,12 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39AE421821772F7200F1C084 /* LaunchScreen.xib in Resources */,
-				39AE421721772F7200F1C084 /* play.png in Resources */,
-				39AE421621772F7200F1C084 /* pause.png in Resources */,
-				39AE421921772F7200F1C084 /* Main.storyboard in Resources */,
+				39088CA221D60FAB00D860A9 /* Main.storyboard in Resources */,
+				39088CA121D60FAB00D860A9 /* LaunchScreen.xib in Resources */,
 				39AE421A21772F7200F1C084 /* Images.xcassets in Resources */,
-				39AE421521772F7200F1C084 /* ooyala_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,18 +339,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		39AE420F21772F7200F1C084 /* LaunchScreen.xib */ = {
+		39088C9D21D60FAB00D860A9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				39AE421021772F7200F1C084 /* Base */,
+				39088C9E21D60FAB00D860A9 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		39AE421121772F7200F1C084 /* Main.storyboard */ = {
+		39088C9F21D60FAB00D860A9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				39AE421221772F7200F1C084 /* Base */,
+				39088CA021D60FAB00D860A9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -487,7 +475,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/ChromecastSampleApp/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ChromecastSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -517,7 +505,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/ChromecastSampleApp/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ChromecastSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
