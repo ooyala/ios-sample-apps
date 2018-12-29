@@ -12,17 +12,14 @@
 
 @interface CastPlaybackView ()
 
-@property (nonatomic, weak) UIView *parentView;
 @property (nonatomic) UITextView *textView;
 
 @end
 
 @implementation CastPlaybackView
 
-- (instancetype)initWithParentView:(UIView *)parentView {
-  CGRect frame = CGRectMake(0, 0, parentView.frame.size.width, parentView.frame.size.height);
+- (instancetype)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
-    self.parentView = parentView;
   }
   return self;
 }
@@ -47,13 +44,13 @@
       self.layer.borderWidth = 5.0;
       self.contentMode = UIViewContentModeScaleAspectFit;
       
-      self.textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.parentView.frame.size.width, self.parentView.frame.size.height)];
+      self.textView = [[UITextView alloc] initWithFrame:self.frame];
       self.textView.userInteractionEnabled = NO;
       self.textView.font = [UIFont boldSystemFontOfSize:30];
       self.textView.textColor = UIColor.whiteColor;
       self.textView.backgroundColor = UIColor.clearColor;
       self.textView.textAlignment = NSTextAlignmentCenter;
-      self.textView.center = self.parentView.center;
+      self.textView.center = self.center;
       self.textView.translatesAutoresizingMaskIntoConstraints = NO;
       [self addSubview:self.textView];
 
