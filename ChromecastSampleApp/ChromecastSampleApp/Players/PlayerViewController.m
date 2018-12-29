@@ -79,7 +79,7 @@
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.videoView addSubview:self.ooyalaPlayerViewController.view];
   
-  self.castPlaybackView = [[CastPlaybackView alloc] initWithParentView:self.videoView];
+  self.castPlaybackView = [[CastPlaybackView alloc] initWithFrame:self.videoView.frame];
   [self.castManager setCastModeVideoView:self.castPlaybackView];
 
   [NSNotificationCenter.defaultCenter addObserver:self
