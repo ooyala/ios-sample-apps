@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <OoyalaSDK/OOCastManagerProtocol.h>
+#import <GoogleCast/GCKDevice.h>
+#import <OoyalaSDK/OOPlayerProtocol.h>
 
 @class OOCastPlayer;
 @class OOOoyalaPlayer;
-@class GCKDevice;
 @class OOCastManager;
+@protocol OOCastMiniControllerProtocol;
 
 @protocol OOCastManagerDelegate
 
@@ -51,6 +53,7 @@
 
 @property (nonatomic, readonly, nullable) GCKDevice *selectedDevice;
 @property (nonatomic, weak, nullable) id<OOCastManagerDelegate> delegate;
+@property (nonatomic, readonly) OOOoyalaPlayerState state;
 
 /**
  * Initiate and get a singleton OOCastManager with the given reveiverAppID and nameSpace
@@ -59,6 +62,8 @@
  */
 + (nonnull OOCastManager *)castManagerWithAppID:(nonnull NSString *)receiverAppID
                                       namespace:(nonnull NSString *)appNamespace;
+
+- (void)registerMiniController:(nullable id<OOCastMiniControllerProtocol>)miniController;
 
 /**
  * Disconnect the OOCastManager from ooyalaPlayer
