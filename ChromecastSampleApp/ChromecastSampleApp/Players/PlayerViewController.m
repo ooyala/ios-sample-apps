@@ -8,7 +8,6 @@
 
 #import "PlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaCastSDK/OOCastPlayer.h>
 #import "OOCastManagerFetcher.h"
 #import "CastPlaybackView.h"
 #import "ChromecastPlayerSelectionOption.h"
@@ -21,6 +20,7 @@
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
 @property (nonatomic) OOCastManager *castManager;
+@property (nonatomic) CastPlaybackView *castPlaybackView;
 
 @property NSString *embedCode;
 @property NSString *embedCode2;
@@ -32,7 +32,6 @@
 @property NSString *secret;
 @property NSString *accountId;
 
-@property CastPlaybackView *castPlaybackView;
 @property UITextView *textView;
 
 @end
@@ -55,19 +54,15 @@
   self.castManager.delegate = self;
   
   // Add custom parameters
-  
-  NSMutableDictionary<NSString *, NSString *> *customParams = [NSMutableDictionary new];
-  
-  customParams[@"userName"] = @"User";
-  customParams[@"initialVolume"] = @"1";
-  customParams[@"embedToken"] = @"some-uu-embed-token";
-  customParams[@"title"] = @"New title";
-  customParams[@"description"] = @"New description";
-  
+  NSDictionary *customParams = @{@"userName":      @"User",
+                                 @"initialVolume": @"1",
+                                 @"embedToken":    self.mediaInfo.embedCode,
+                                 @"title":         self.mediaInfo.title,
+                                 @"description":   @"New description"};
   self.castManager.additionalInitParams = customParams;
   
-  UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
-  self.navigationBar.rightBarButtonItem = leftbutton;
+  UIBarButtonItem *rightbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
+  self.navigationBar.rightBarButtonItem = rightbutton;
   
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
   self.pcode = self.mediaInfo.pcode;
@@ -80,14 +75,14 @@
                                         embedTokenGenerator:self];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:self.ooyalaPlayer];
   
-  [self.ooyalaPlayerViewController.view setFrame:self.videoView.bounds];
+  self.ooyalaPlayerViewController.view.frame = self.videoView.bounds;
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.videoView addSubview:self.ooyalaPlayerViewController.view];
   
   self.castPlaybackView = [[CastPlaybackView alloc] initWithParentView:self.videoView];
   [self.castManager setCastModeVideoView:self.castPlaybackView];
 
-  [NSNotificationCenter.defaultCenter addObserver: self
+  [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
                                              name:nil
                                            object:self.ooyalaPlayerViewController.player];
@@ -99,9 +94,7 @@
 
 - (void)play:(NSString *)embedCode {
   [self.ooyalaPlayer setEmbedCode:embedCode];
-  if (self.castManager.castPlayer.state != OOOoyalaPlayerStatePaused) {
-    [self.ooyalaPlayer play];
-  }
+  [self.ooyalaPlayer play];
 }
 
 - (void)notificationHandler:(NSNotification *)notification {
@@ -168,7 +161,7 @@
 - (NSString *)receiverDisplayStatus {
   NSString *status = @"Not connected";
   if (self.castManager.isInCastMode) {
-    switch (self.castManager.castPlayer.state) {
+    switch (self.castManager.state) {
       case OOOoyalaPlayerStatePlaying: {
         status = @"Playing";
         break;
