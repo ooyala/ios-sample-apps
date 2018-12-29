@@ -50,7 +50,6 @@ AppDelegate *appDel;
   [super viewDidLoad];
   
   self.title = self.playerSelectionOption.title;
-  [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   OOOptions *options = [OOOptions new];
@@ -73,7 +72,8 @@ AppDelegate *appDel;
                                                               parent:self.audioPlayerContainerView
                                                        launchOptions:nil];
   [self addChildViewController:self.skinController];
-  
+  [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
+
   self.skinController.view.frame = self.audioPlayerContainerView.bounds;
   
   [NSNotificationCenter.defaultCenter addObserver:self
@@ -90,6 +90,10 @@ AppDelegate *appDel;
   self.logTextView.hidden = !self.qaModeEnabled;
   
   [ooyalaPlayer setEmbedCode:self.embedCode];
+}
+
+- (void)dealloc {
+  [OOStreamPlayer setDefaultPlayerInfo:[OODefaultPlayerInfo new]];
 }
 
 #pragma mark - Private functions
