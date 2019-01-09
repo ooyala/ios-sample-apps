@@ -30,6 +30,7 @@
   BOOL haEnabled;
   OOAuthCode authCode;
   SsaiMetadata *ssaiMetadata;
+  NSString *contentType;
 }
 
 @property (readonly, nonatomic) NSString *embedCode;    /**< The OOContentItem's Embed Code */
@@ -51,7 +52,8 @@
 @property (readonly, nonatomic) BOOL needsMidStreamCheck;
 @property (readonly, nonatomic) int midStreamCheckInterval;
 @property (readonly, nonatomic) SsaiMetadata *ssaiMetadata;
-@property (readonly, nonatomic) NSMutableArray *externalAds; 
+@property (readonly, nonatomic) NSString *contentType;
+@property (readonly, nonatomic) NSMutableArray *externalAds;
 
 /**
  * Initialize a OOContentItem
@@ -60,7 +62,9 @@
  * @param[in] theDescription the description
  * @returns the initialized OOContentItem
  */
-- (id)initWithEmbedCode:(NSString *)theEmbedCode title:(NSString *)theTitle description:(NSString *)theDescription;
+- (instancetype)initWithEmbedCode:(NSString *)theEmbedCode
+                            title:(NSString *)theTitle
+                      description:(NSString *)theDescription;
 
 /** @internal
  * Initialize a OOContentItem using the specified data (subclasses should override this)
@@ -69,7 +73,9 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOContentItem
  * @returns the initialized OOContentItem
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCode:(NSString *)theEmbedCode api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                         embedCode:(NSString *)theEmbedCode
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OOContentItem using the specified data (subclasses should override and call this)
@@ -104,7 +110,8 @@
  * @param[in] currentItem the current OOVideo
  * @returns the video in this OOContentItem with the specified embed code
  */
-- (OOVideo *)videoFromEmbedCode:(NSString *)embedCode withCurrentItem:(OOVideo *)currentItem;
+- (OOVideo *)videoFromEmbedCode:(NSString *)embedCode
+                withCurrentItem:(OOVideo *)currentItem;
 
 /** @internal
  * Create a OOContentItem from the given data
@@ -113,7 +120,9 @@
  * @param[in] api the OOPlayerAPIClient that was used to fetch this OOContentItem
  * @returns the created OOContentItem (could be a Movie, OOChannel, or OOChannelSet)
  */
-+ (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data embedCode:(NSString *)embedCode api:(OOPlayerAPIClient *)api;
++ (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data
+                                   embedCode:(NSString *)embedCode
+                                         api:(OOPlayerAPIClient *)api;
 
 /** @internal
  * Create a OOContentItem from the given data
@@ -122,7 +131,9 @@
  * @param[in] api the OOPlayerAPIClient that was used to fetch this OOContentItem
  * @returns the created OOContentItem (could be a Movie, OOChannel, OODynamicChannel, or OOChannelSet)
  */
-+ (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data embedCodes:(NSArray *)embedCodes api:(OOPlayerAPIClient *)api;
++ (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data
+                                  embedCodes:(NSArray *)embedCodes
+                                         api:(OOPlayerAPIClient *)api;
 
 /**
  * The total duration (not including Ads) of this OOContentItem

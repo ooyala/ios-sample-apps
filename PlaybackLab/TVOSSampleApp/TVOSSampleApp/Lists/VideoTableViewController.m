@@ -15,110 +15,91 @@
 
 @interface VideoTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *options; // of Video.h
+@property (nonatomic) NSArray *options; // of Video.h
 
 @end
 
 @implementation VideoTableViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
-    
-  [self populateOptions];
+  _options = [NSArray arrayWithArray:self.playerSelectionOptions];
 }
 
-- (NSMutableArray *)options
-{
-  if (!_options) {
-    _options = [NSMutableArray array];
-  }
-  return _options;
-}
-
-- (void)populateOptions
-{
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Pulse Integration"
-                                                             embedCode:nil
-                                                                 pcode:nil
-                                                                domain:nil
-                                                             segueName:@"pulseSegue"]];
-
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fullscreen Player"
-                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"fullscreenSegue"]];
-
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"5.1 Audio, Single HLS Rendition"
-                                                             embedCode:@"04bnlxNzE6ZoNIUuEwvnso0Q5u2jOx_M"
-                                                                 pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"fullscreenSegue"]];
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"5.1 Audio E-AC3"
-                                                             embedCode:@"kyeHR5ODE6FDXOC9eZ5DTKuiJGVo0jnh"
-                                                                 pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"fullscreenSegue"]];
+- (NSArray *)playerSelectionOptions {
+  return @[
+           [[PlayerSelectionOption alloc] initWithTitle:@"Ooyala Pulse Integration"
+                                              embedCode:nil
+                                                  pcode:nil
+                                                 domain:nil
+                                              segueName:@"pulseSegue"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"Fullscreen Player"
+                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                 domain:@"http://www.ooyala.com"
+                                              segueName:@"fullscreenSegue"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"5.1 Audio, Single HLS Rendition"
+                                              embedCode:@"04bnlxNzE6ZoNIUuEwvnso0Q5u2jOx_M"
+                                                  pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
+                                                 domain:@"http://www.ooyala.com"
+                                              segueName:@"fullscreenSegue"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"5.1 Audio E-AC3"
+                                              embedCode:@"kyeHR5ODE6FDXOC9eZ5DTKuiJGVo0jnh"
+                                                  pcode:@"B3MDExOuTldXc1CiXbzAauYN7Iui"
+                                                 domain:@"http://www.ooyala.com"
+                                              segueName:@"fullscreenSegue"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"Player Token (Unconfigured)"
+                                              embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
+                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                 domain:@"http://www.ooyala.com"
+                                              segueName:@"playerTokenSegue"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Baseline Profile (Unconfigured)"
+                                              embedCode:@"V3NDdnMzE6tPCchL9wYTFZY8jAE8_Y21"
+                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                 domain:@"http://www.ooyala.com"
+                                              segueName:@"fairplaySegue"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Main Profile (Unconfigured)"
+                                              embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
+                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                 domain:@"http://www.ooyala.com"
+                                              segueName:@"fairplaySegue"],
+           [[PlayerSelectionOption alloc] initWithTitle:@"Fairplay High Profile (Unconfigured)"
+                                              embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"
+                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                                 domain:@"http://www.ooyala.com"
+                                              segueName:@"fairplaySegue"]];
   // Read the comments in ChildPlayerViewController.h to know what this example is for
-//  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
-//                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-//                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-//                                                                domain:@"http://www.ooyala.com"
-//                                                             segueName:@"childSegue"]];
-
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Player Token (Unconfigured)"
-                                                             embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
-                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"playerTokenSegue"]];
-
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Baseline Profile (Unconfigured)"
-                                                             embedCode:@"V3NDdnMzE6tPCchL9wYTFZY8jAE8_Y21"
-                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"fairplaySegue"]];
-  
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay Main Profile (Unconfigured)"
-                                                             embedCode:@"cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ"
-                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"fairplaySegue"]];
-  
-  [self.options addObject:[[PlayerSelectionOption alloc] initWithTitle:@"Fairplay High Profile (Unconfigured)"
-                                                             embedCode:@"d2dzhnMzE6h-LTaIavPD5k2eqLeCTMC5"
-                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                                domain:@"http://www.ooyala.com"
-                                                             segueName:@"fairplaySegue"]];
-  
-  [self.tableView reloadData];
+//           [[PlayerSelectionOption alloc] initWithTitle:@"Inline Player"
+//                                              embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+//                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+//                                                 domain:@"http://www.ooyala.com"
+//                                              segueName:@"childSegue"]
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.options.count;
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
+  return self.options.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell" forIndexPath:indexPath];
-  
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell"
+                                                          forIndexPath:indexPath];
   PlayerSelectionOption *option = self.options[indexPath.row];
   cell.textLabel.text = option.title;
-  
   return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   PlayerSelectionOption *option = self.options[indexPath.row];
-  [self performSegueWithIdentifier:option.segueName sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+  [self performSegueWithIdentifier:option.segueName
+                            sender:[self.tableView cellForRowAtIndexPath:indexPath]];
 }
-
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
   if ([segue.identifier isEqualToString:@"fullscreenSegue"]) {

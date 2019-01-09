@@ -13,14 +13,8 @@
 
 @interface OOIQAnalyticsPlugin : NSObject<OOAnalyticsPluginProtocol>
 
-- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player iqConfiguration:(OOIQConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
-
-/**
- Availability of the network using the network configuration for IQ
- @returns YES if the network is available
- */
-- (BOOL)isNetworkAvailable;
-
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
+               iqConfiguration:(OOIQConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
 /**
  Returns the actions for the specific file
  @param[in] embedCode of the file

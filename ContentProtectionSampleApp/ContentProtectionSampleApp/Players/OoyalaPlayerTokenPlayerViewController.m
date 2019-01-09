@@ -4,7 +4,7 @@
  * @details    This is a non-runnable sample ViewController that demonstrates how to respond to Device Management notifications
  *  such as when new devices are registered.
  * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ * @copyright  Copyright © 2014 Ooyala Inc, Inc. All rights reserved.
  */
 
 #import "OoyalaPlayerTokenPlayerViewController.h"
@@ -27,6 +27,7 @@
  * To play OPT-enabled videos, you must implement the OOEmbedTokenGenerator interface
  */
 @interface OoyalaPlayerTokenPlayerViewController () <OOEmbedTokenGenerator>
+
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
 @property NSString *embedCode;
@@ -39,13 +40,11 @@
 @property NSString *secret;
 @property NSString *accountId;
 
-@property(nonatomic, strong) UIAlertView *nicknameDialog;
-@property(nonatomic) NSString *publicDeviceId;
 @end
 
 @implementation OoyalaPlayerTokenPlayerViewController
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
 
@@ -68,14 +67,14 @@
   self.accountId = @"Fill me in";
   self.authorizeHost = @"http://player.ooyala.com";
   [OODebugMode setDebugMode:LogAndAbort];
-  ASSERT( [self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey." );
+  ASSERT([self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey.");
 
   return self;
 }
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
@@ -83,22 +82,21 @@
 
   // Create Ooyala ViewController, with self as the embed token generator
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                          domain:[[OOPlayerDomain alloc]initWithString:self.playerDomain]
+                                                          domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
                                              embedTokenGenerator:self];
 
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(notificationReceived:)
-                                               name:nil
-                                             object:self.ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver: self
+                                         selector:@selector(notificationReceived:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
 
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
-  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   
   // Add constraints
-  
   [NSLayoutConstraint activateConstraints:@[
                                             [self.ooyalaPlayerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
                                             [self.ooyalaPlayerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
@@ -110,8 +108,7 @@
   [self.ooyalaPlayerViewController.player play];
 }
 
-- (void) notificationReceived:(NSNotification*) notification {
-
+- (void)notificationReceived:(NSNotification*) notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -129,16 +126,15 @@
  * For debugging, you can use Ooyala's EmbeddedSecureURLGenerator to create local embed tokens
  */
 - (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
-  NSMutableDictionary* params = [NSMutableDictionary dictionary];
+  NSMutableDictionary *params = [NSMutableDictionary dictionary];
 
   params[@"account_id"] = self.accountId;
 //  params[@"override_syndication_group"] = @"override_all_synd_groups";
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
 
   OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
   NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
-  callback([embedTokenUrl absoluteString]);
+  callback(embedTokenUrl.absoluteString);
 }
-
 
 @end

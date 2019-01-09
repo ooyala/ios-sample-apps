@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  ContentProtectionSampleApp
 //
-//  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+//  Copyright © 2014 Ooyala Inc. All rights reserved.
 //
 
 #import "AppDelegate.h"

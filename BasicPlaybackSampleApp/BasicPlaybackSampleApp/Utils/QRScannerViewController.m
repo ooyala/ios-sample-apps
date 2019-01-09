@@ -8,24 +8,20 @@
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-
 #import "QRScannerViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface QRScannerViewController()<AVCaptureMetadataOutputObjectsDelegate>
+@interface QRScannerViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 
 @property (nonatomic) AVCaptureSession *captureSession;
 @property (nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 
 @end
 
-
 @implementation QRScannerViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
-
   // Initially make the captureSession object nil.
   _captureSession = nil;
 }
@@ -53,18 +49,18 @@
 
   if (!input) {
     // If any error occurs, simply log the description of it and don't continue any more.
-    NSLog(@"%@", [error localizedDescription]);
+    NSLog(@"%@", error.localizedDescription);
     return NO;
   }
 
   // Initialize the captureSession object.
-  _captureSession = [[AVCaptureSession alloc] init];
+  _captureSession = [AVCaptureSession new];
   // Set the input device on the capture session.
   [_captureSession addInput:input];
 
 
   // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
-  AVCaptureMetadataOutput *captureMetadataOutput = [[AVCaptureMetadataOutput alloc] init];
+  AVCaptureMetadataOutput *captureMetadataOutput = [AVCaptureMetadataOutput new];
   [_captureSession addOutput:captureMetadataOutput];
 
   // Create a new serial dispatch queue.
@@ -75,10 +71,9 @@
 
   // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
   _videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
-  [_videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-  [_videoPreviewLayer setFrame:self.view.layer.bounds];
+  _videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+  _videoPreviewLayer.frame = self.view.layer.bounds;
   [self.view.layer addSublayer:_videoPreviewLayer];
-
 
   // Start video capture.
   [_captureSession startRunning];
@@ -86,8 +81,7 @@
   return YES;
 }
 
-
--(void)stopReading{
+- (void)stopReading{
   if (self.captureSession) {
     [self.captureSession stopRunning];
     self.captureSession = nil;
@@ -119,17 +113,17 @@
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate method implementation
 
--(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
 
   // Check if the metadataObjects array is not nil and it contains at least one object.
-  if (metadataObjects != nil && [metadataObjects count] > 0) {
+  if (metadataObjects && metadataObjects.count > 0) {
     // Get the metadata object.
-    AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
-    if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
+    AVMetadataMachineReadableCodeObject *metadataObj = metadataObjects[0];
+    if ([metadataObj.type isEqualToString:AVMetadataObjectTypeQRCode]) {
       // If the found metadata is equal to the QR code metadata then update the status label's text,
       // stop reading and change the bar button item's title and the flag's value.
       // Everything is done on the main thread.
-      [self processScanResults:[metadataObj stringValue]];
+      [self processScanResults:metadataObj.stringValue];
       [self performSelectorOnMainThread:@selector(loadVideoView) withObject:nil waitUntilDone:NO];
     }
   }

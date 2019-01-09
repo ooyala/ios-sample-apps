@@ -2,7 +2,7 @@
 //  OoyalaTVSkinSDK.h
 //  OoyalaTVSkinSDK
 //
-//  Created by Zhihui Chen on 5/9/16.
+//  Created on 5/9/16.
 //  Copyright © 2016 ooyala. All rights reserved.
 //
 

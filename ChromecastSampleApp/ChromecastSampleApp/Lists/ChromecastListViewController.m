@@ -11,7 +11,6 @@
 #import "Utils.h"
 #import "ChromecastPlayerSelectionOption.h"
 #import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaCastSDK/OOCastPlayer.h>
 #import "OOCastManagerFetcher.h"
 
 @interface ChromecastListViewController ()
@@ -33,7 +32,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  //[Utils cleanupLocalFiles];
+
   _castManager = [OOCastManagerFetcher fetchCastManager];
   _castManager.delegate = self;
 
@@ -52,7 +51,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  self.castManager.delegate = self;
   if (self.castManager.isMiniControllerInteractionAvailable) {
     [self displayMiniController];
   }
@@ -61,7 +59,8 @@
 #pragma mark - PlayerViewController
 
 - (void)initPlayerViewControllerWithEmbedcode {
-  if (self.lastSelected && ![self.navigationController.topViewController isKindOfClass:PlayerViewController.class]) {
+  if (self.lastSelected &&
+      ![self.navigationController.topViewController isKindOfClass:PlayerViewController.class]) {
     [self dismissMiniController];
     [self performSegueWithIdentifier:@"play" sender:self];
   }
@@ -79,7 +78,7 @@
   _bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame
                                                                   castManager:self.castManager
                                                                      delegate:self];
-  [self.castManager.castPlayer registerMiniController:self.bottomMiniControllerView];
+  [self.castManager registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
   UIBarButtonItem *miniController = [[UIBarButtonItem alloc] initWithCustomView:self.bottomMiniControllerView];
@@ -111,6 +110,7 @@
 }
 
 - (void)castManagerDidExitCastMode:(OOCastManager *)manager {
+  [self dismissMiniController];
 }
 
 - (void)castManagerDidDisconnect:(OOCastManager *)manager {

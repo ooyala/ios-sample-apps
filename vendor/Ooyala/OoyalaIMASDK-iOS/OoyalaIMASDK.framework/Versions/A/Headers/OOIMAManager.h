@@ -3,8 +3,7 @@
  * @copyright  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #ifdef OoyalaVRSDK_h
   #import <OoyalaVRSDK/OoyalaVRSDK.h>

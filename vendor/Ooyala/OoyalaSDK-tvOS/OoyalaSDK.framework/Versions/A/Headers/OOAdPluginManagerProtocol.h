@@ -66,4 +66,5 @@ typedef NS_ENUM(NSInteger, OOAdMode) {
  * @return the ad plugin which currently is in Ad Mode, or nil if no plugin is in ad mode
  */
 - (id<OOAdPlugin>)activeAdPlugin;
+
 @end

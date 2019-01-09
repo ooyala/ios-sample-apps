@@ -13,7 +13,7 @@
 @class OOOoyalaPlayer;
 @class OOStateNotifier;
 @protocol OOCastMiniControllerProtocol;
-
+@protocol OOCastManagerInternalProtocol;
 
 @interface OOCastPlayer : GCKCastChannel <OOPlayerProtocol>
 
@@ -28,11 +28,11 @@
 - (nonnull instancetype)init __attribute__((unavailable("use initWithNamespace:deviceManager:castManager")));
 - (nonnull instancetype)initWithNamespace:(nonnull NSString *)appNamespace
                               castSession:(nullable GCKCastSession *)castSession
-                              castManager:(nullable OOCastManager *)castManager;
+                              castManager:(nullable id<OOCastManagerInternalProtocol>)castManager;
 
 - (void)initStateNotifier:(nullable OOStateNotifier *)stateNotifier;
 - (void)registerWithOoyalaPlayer:(nullable OOOoyalaPlayer *)ooyalaPlayer;
-- (void)updateMetadataFromOoyalaPlayer:(nullable NSString *)castItemPromoImg
+- (void)updateMetadataCastItemPromoImg:(nullable NSString *)castItemPromoImg
                          castItemTitle:(nullable NSString *)castItemTitle
                    castItemDescription:(nullable NSString *)castItemDescription;
 - (void)enterCastModeWithOptions:(nonnull OOCastModeOptions *)options

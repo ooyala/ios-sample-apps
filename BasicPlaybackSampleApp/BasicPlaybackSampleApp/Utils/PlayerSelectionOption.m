@@ -15,15 +15,30 @@
                     embedCode:(NSString *)embedCode
                         pcode:(NSString *)pcode
                        domain:(NSString *)domain
-               viewController:(Class)viewController
-                  isAudioOnly:(BOOL)audioOnly {
+               viewController:(Class)viewController {
   if (self = [super init]) {
     _title = title;
     _embedCode = embedCode;
     _pcode = pcode;
     _domain = domain;
     _viewController = viewController;
-    _isAudioOnly = audioOnly;
+    _isAudioOnlyAsset = NO;
+  }
+  return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController
+                  isAudioOnly:(BOOL)isAudioOnly {
+  if (self = [self initWithTitle:title
+                       embedCode:embedCode
+                           pcode:pcode
+                          domain:domain
+                  viewController:viewController]) {
+    _isAudioOnlyAsset = isAudioOnly;
   }
   return self;
 }

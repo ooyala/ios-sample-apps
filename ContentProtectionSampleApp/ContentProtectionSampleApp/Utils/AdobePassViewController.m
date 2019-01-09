@@ -3,7 +3,7 @@
 //  AdobePassDemoApp
 //
 //  Created on 5/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
 //
 
 #import "AdobePassViewController.h"
@@ -16,41 +16,52 @@
 
 //Object to hold info for callback
 @interface TokenRequest:NSObject
-@property (nonatomic, strong) NSString *embedCodes;
-@property (nonatomic, strong) OOEmbedTokenCallback callback;
-- (id)initWithEmbedCodes:(NSString *)_embedCodes callback:(OOEmbedTokenCallback)_callback;
-+ (id)tokenRequestWithEmbedCodes:(NSString *)_embedCodes callback:(OOEmbedTokenCallback)_callback;
+
+@property (nonatomic) NSString *embedCodes;
+@property (nonatomic) OOEmbedTokenCallback callback;
+
+- (instancetype)initWithEmbedCodes:(NSString *)theEmbedCodes
+                          callback:(OOEmbedTokenCallback)theCallback;
++ (instancetype)tokenRequestWithEmbedCodes:(NSString *)theEmbedCodes
+                                  callback:(OOEmbedTokenCallback)theCallback;
+
 @end
 
 @implementation TokenRequest
+
 @synthesize embedCodes, callback;
-- (id)initWithEmbedCodes:(NSString *)_embedCodes callback:(OOEmbedTokenCallback)_callback {
-  self = [super init];
-  if (self) {
-    embedCodes = _embedCodes;
-    callback = _callback;
+
+- (instancetype)initWithEmbedCodes:(NSString *)theEmbedCodes
+                          callback:(OOEmbedTokenCallback)theCallback {
+  if (self = [super init]) {
+    embedCodes = theEmbedCodes;
+    callback = theCallback;
   }
   return self;
 }
 
-+ (id)tokenRequestWithEmbedCodes:(NSString *)_embedCodes callback:(OOEmbedTokenCallback)_callback {
-  return [[TokenRequest alloc] initWithEmbedCodes:_embedCodes callback:_callback];
++ (instancetype)tokenRequestWithEmbedCodes:(NSString *)theEmbedCodes
+                                  callback:(OOEmbedTokenCallback)theCallback {
+  return [[TokenRequest alloc] initWithEmbedCodes:theEmbedCodes callback:theCallback];
 }
 @end
 
 @interface AdobePassViewController () <EntitlementDelegate, AdobePassUiDelegate>
-@property (nonatomic, strong) AccessEnabler *accessEnabler;
-@property (nonatomic, strong) UINavigationController *master;
-@property (nonatomic, strong) NSString *requestor;
-@property (nonatomic, strong) NSString *keystore;
-@property (nonatomic, strong) NSString *keypass;
-@property (nonatomic, strong) NSMutableDictionary *embedTokenRequests;
+
+@property (nonatomic) AccessEnabler *accessEnabler;
+@property (nonatomic) UINavigationController *master;
+@property (nonatomic) NSString *requestor;
+@property (nonatomic) NSString *keystore;
+@property (nonatomic) NSString *keypass;
+@property (nonatomic) NSMutableDictionary *embedTokenRequests;
 @property (nonatomic) BOOL getAuthenticationWasCalled;
 
 - (void)showErrorDialog:(NSString *)error;
+
 @end
 
 @implementation AdobePassViewController
+
 int const PASS_SUCCESS = 1;
 int const PASS_FAILURE = 0;
 
@@ -66,14 +77,14 @@ int const PASS_FAILURE = 0;
     keystore = _keystore;
     keypass = _keypass;
     delegate = _delegate;
-    accessEnabler = [[AccessEnabler alloc] init];
+    accessEnabler = [AccessEnabler new];
     accessEnabler.delegate = self;
-    embedTokenRequests = [[NSMutableDictionary alloc] init];
-    master = [[UINavigationController alloc] init];
+    embedTokenRequests = [NSMutableDictionary dictionary];
+    master = [UINavigationController new];
     NSString *signedReqeustorId = [Util signRequestorId:requestor keystore:keystore pass:keypass];
     
     [accessEnabler setRequestor:requestor
-           setSignedRequestorId:signedReqeustorId serviceProviders:[NSArray arrayWithObject:SP_AUTH_STAGING]];
+           setSignedRequestorId:signedReqeustorId serviceProviders:@[SP_AUTH_STAGING]];
 
   }
   return self;
@@ -106,36 +117,37 @@ int const PASS_FAILURE = 0;
 
 #pragma mark AccessEnabler Callbacks
 
-- (void) setRequestorComplete:(int)status {
+- (void)setRequestorComplete:(int)status {
   if (status == ACCESS_ENABLER_STATUS_ERROR) {
     [self showErrorDialog:@"Error setting requestor"];
   }
 }
 
-- (void) displayProviderDialog:(NSArray *)mvpds {
-  
+- (void)displayProviderDialog:(NSArray *)mvpds {
   MvpdTableViewController *mvpdTable = [[MvpdTableViewController alloc] initWithMvpds:mvpds delegate:self];
   [master pushViewController:mvpdTable animated:NO];
-  [self presentModalViewController:master animated:YES];
+  [self presentViewController:master animated:YES completion:nil];
 }
 
-- (void) navigateToUrl:(NSString *)url {
+- (void)navigateToUrl:(NSString *)url {
   UIViewController *webViewController = [[MvpdLoginViewController alloc] initWithString:url delegate:self];
   [master pushViewController:webViewController animated:YES];
 }
 
 - (void) setAuthenticationStatus:(int)status errorCode:(NSString *)code {
-  [self dismissModalViewControllerAnimated:YES];
-  if (status == ACCESS_ENABLER_STATUS_ERROR && ![code isEqual:USER_NOT_AUTHENTICATED_ERROR] && ![code isEqual:GENERIC_AUTHENTICATION_ERROR]) {
+  [self dismissViewControllerAnimated:YES completion:nil];
+  if (status == ACCESS_ENABLER_STATUS_ERROR &&
+      ![code isEqual:USER_NOT_AUTHENTICATED_ERROR] &&
+      ![code isEqual:GENERIC_AUTHENTICATION_ERROR]) {
     [self showErrorDialog:@"Could not authenticate"];
   }
   [delegate authChanged:status == ACCESS_ENABLER_STATUS_SUCCESS ? PASS_SUCCESS : PASS_FAILURE];
   self.getAuthenticationWasCalled = NO;
 }
 
-- (void) setToken:(NSString *)token forResource:(NSString *)resource {
-  TokenRequest *request = (TokenRequest *)[((NSMutableArray *)[embedTokenRequests objectForKey:resource]) lastObject];
-  [((NSMutableArray *)[embedTokenRequests objectForKey:resource]) removeLastObject];
+- (void)setToken:(NSString *)token forResource:(NSString *)resource {
+  TokenRequest *request = (TokenRequest *)[((NSMutableArray *)embedTokenRequests[resource]) lastObject];
+  [((NSMutableArray *)embedTokenRequests[resource]) removeLastObject];
   NSString *embedToken = [NSString stringWithFormat:@"/sas/embed_token/pcode/%@?auth_type=adobepass&requestor=%@&token=%@&resource=%@",
                           request.embedCodes,
                           [Util urlEncode:requestor],
@@ -144,27 +156,16 @@ int const PASS_FAILURE = 0;
   request.callback(embedToken);
 }
 
-- (void) tokenRequestFailed:(NSString *)resource errorCode:(NSString *)code errorDescription:(NSString *)description {
-  TokenRequest *request = (TokenRequest *)[((NSMutableArray *)[embedTokenRequests objectForKey:resource]) lastObject];
-  [((NSMutableArray *)[embedTokenRequests objectForKey:resource]) removeLastObject];
+- (void)tokenRequestFailed:(NSString *)resource errorCode:(NSString *)code errorDescription:(NSString *)description {
+  TokenRequest *request = (TokenRequest *)[((NSMutableArray *)embedTokenRequests[resource]) lastObject];
+  [((NSMutableArray *)embedTokenRequests[resource]) removeLastObject];
   request.callback(@"");
 }
 
-- (void) selectedProvider:(MVPD *)mvpd {
- //do nothing 
-}
-
-- (void) sendTrackingData:(NSArray *)data forEventType:(int)event {
-  //do nothing
-}
-
-- (void) setMetadataStatus:(NSString *)metadata forKey:(int)key andArguments:(NSDictionary *)arguments {
-  //do nothing
-}
-
-- (void) preauthorizedResources:(NSArray *)resources {
-  //do nothing
-}
+- (void)selectedProvider:(MVPD *)mvpd {}
+- (void)sendTrackingData:(NSArray *)data forEventType:(int)event {}
+- (void)setMetadataStatus:(NSString *)metadata forKey:(int)key andArguments:(NSDictionary *)arguments {}
+- (void)preauthorizedResources:(NSArray *)resources {}
 
 #pragma mark - Ooyala Integration
 
@@ -176,10 +177,10 @@ int const PASS_FAILURE = 0;
   TokenRequest *request = [TokenRequest tokenRequestWithEmbedCodes:[embedCodes componentsJoinedByString:@","]
                                                           callback:callback];
 
-  if ([embedTokenRequests objectForKey:resource] == nil) {
-    [embedTokenRequests setObject:[[NSMutableArray alloc] initWithObjects:request, nil] forKey:resource];
+  if (!embedTokenRequests[resource]) {
+    embedTokenRequests[resource] = [[NSMutableArray alloc] initWithArray:@[request]];
   } else {
-    [((NSMutableArray *)[embedTokenRequests objectForKey:resource]) insertObject:request atIndex:0];
+    [((NSMutableArray *)embedTokenRequests[resource]) insertObject:request atIndex:0];
   }
   [accessEnabler getAuthorization:resource];
 }
@@ -187,12 +188,17 @@ int const PASS_FAILURE = 0;
 #pragma mark - Utility
 
 - (void)showErrorDialog:(NSString *)error {
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                  message:error
-                                                 delegate:nil
-                                        cancelButtonTitle:@"OK"
-                                        otherButtonTitles:nil];
-  [alert show];
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                           message:error
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+
+  UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"Ok"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * _Nonnull action) {
+    [alertController dismissViewControllerAnimated:YES completion:NULL];
+                                                   }];
+  [alertController addAction:okButton];
+  [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

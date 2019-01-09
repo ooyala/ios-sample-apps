@@ -15,61 +15,78 @@
 @class OOOoyalaError;
 
 /**
- * The callback called when the current item is changed in an OOOoyalaPlayer
- * @param[in] currentItem the new current item
+ The callback called when the current item is changed in an OOOoyalaPlayer
+
+ @param currentItem the new current item
  */
 typedef void(^OOCurrentItemChangedCallback)(OOVideo *currentItem);
 
 /**
- * The callback used for OOOoyalaAPIClient.contentTree:callback: calls
- * @param[in] contentItem the root content item fetched in the contentTree call
- * @param[in] error the OOOoyalaError if one occurreds
+ The callback used for OOOoyalaAPIClient.contentTree:callback: calls
+
+ @param contentItem the root content item fetched in the contentTree call
+ @param error the OOOoyalaError if one occurreds
  */
 typedef void(^OOContentTreeCallback)(OOContentItem *contentItem, OOOoyalaError *error);
 
 /**
- * The callback used for OOOoyalaAPIClient.contentTreeNext:callback: calls
- * @param[in] range the NSRange denoting the new children added
- * @param[in] error the OOOoyalaError if one occurred
+ The callback used for OOOoyalaAPIClient.authorizeDownloadForEmbedCode:withPlayerInfo:callback calls
+
+ @param video OOVideo if authorized for offline use
+ @param error error if present
+ */
+typedef void(^OOVideoAuthCallback)(OOVideo *video, OOOoyalaError *error);
+
+/**
+ The callback used for OOOoyalaAPIClient.contentTreeNext:callback: calls
+
+ @param range the NSRange denoting the new children added
+ @param error the OOOoyalaError if one occurred
  */
 typedef void(^OOContentTreeNextCallback)(NSRange range, OOOoyalaError *error);
 
 /**
- * The callback used for OOOoyalaAPIClient.metadata:params:callback: calls
- * @param[in] error the OOOoyalaError if one occurred
+ The callback used for OOOoyalaAPIClient.metadata:params:callback: calls
+
+ @param error the OOOoyalaError if one occurred
  */
 typedef void(^OOMetadataDictionaryFromAPICallback)(OOOoyalaError *error);
 
 /**
- * The callback used for OOPaginatedParentItem.fetchMoreChildren: calls.
- * @param[in] range the NSRange denoting the start index of the new children and the number of new children fetched
- * @param[in] error an OOOoyalaError denoting what error occurred (nil if no error)
+ The callback used for OOPaginatedParentItem.fetchMoreChildren: calls.
+
+ @param range the NSRange denoting the start index of the new children and the number of new children fetched
+ @param error an OOOoyalaError denoting what error occurred (nil if no error)
  */
 typedef void(^OOFetchMoreChildrenCallback)(NSRange range, OOOoyalaError *error);
 
 /**
- * The callback used for OOOoyalaAPIClient.objectFromBacklotAPI:params:callback: calls
- * @param[in] object the NSArray or NSDictionary returned from the backlot API
+ The callback used for OOOoyalaAPIClient.objectFromBacklotAPI:params:callback: calls
+
+ @param object the NSArray or NSDictionary returned from the backlot API
  */
 typedef void(^OOObjectFromBacklotAPICallback)(NSObject *object);
 
 /**
- * The callback used for authorization requests
- * @param[in] error the OOOoyalaError if one occurred
+ The callback used for authorization requests
+
+ @param error the OOOoyalaError if one occurred
  */
 typedef void (^OOAuthorizeCallback)(OOOoyalaError *error);
 
 /**
- * The callback used for heartbeat requests
- * @param[in] error the OOOoyalaError if one occurred
+ The callback used for heartbeat requests
+
+ @param error the OOOoyalaError if one occurred
  */
 typedef void (^OOHeartbeatCallback)(OOOoyalaError *error);
 
 /**
- * The calback used for geoblocking check
- * @param[in] data the NSData returned by the server
- * @param[in] response the NSHTTPURLResponse object that provides response metadata, such as HTTP headers and status code
- * @param[in] error the NSError object that indicates why the request failed, or nil if the request was successful
+ The calback used for geoblocking check
+ 
+ @param data the NSData returned by the server
+ @param response the NSHTTPURLResponse object that provides response metadata, such as HTTP headers and status code
+ @param error the NSError object that indicates why the request failed, or nil if the request was successful
  */
 typedef void (^OOGeoblockingCallback)(NSData *data, NSHTTPURLResponse *response, NSError *error);
 

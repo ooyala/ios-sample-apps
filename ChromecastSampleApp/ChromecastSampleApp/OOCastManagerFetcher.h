@@ -6,8 +6,7 @@
 //  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 @class OOCastManager;
 
 @interface OOCastManagerFetcher : NSObject

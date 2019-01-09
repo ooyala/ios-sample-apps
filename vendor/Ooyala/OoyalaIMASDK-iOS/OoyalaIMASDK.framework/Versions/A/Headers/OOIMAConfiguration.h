@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /**
  * Use this to provide configurations to the Ooyala IMA Integration

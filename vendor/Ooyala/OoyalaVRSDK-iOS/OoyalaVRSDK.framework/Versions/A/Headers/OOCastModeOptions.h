@@ -2,7 +2,7 @@
 //  CastModeOptions.h
 //  OoyalaSDK
 //
-//  Created by Michael Len on 6/17/15.
+//  Created on 6/17/15.
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 

@@ -212,9 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				0B140F551A2E4709001324EE /* AdvancedPlaybackSampleApp */,
+				0B9457CF1AC32C5B000DD545 /* VendorLibraries */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B9457CF1AC32C5B000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,7 +230,6 @@
 		0B140F551A2E4709001324EE /* AdvancedPlaybackSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				39278CCF2192D16C00F6F4E2 /* Images.xcassets */,
 				0B140F5A1A2E4709001324EE /* AppDelegate.h */,
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
 				0B19FEE51A3AB4E6003E57DF /* Base.lproj */,
@@ -246,6 +245,7 @@
 		0B140F561A2E4709001324EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39278CCF2192D16C00F6F4E2 /* Images.xcassets */,
 				0B140F571A2E4709001324EE /* Info.plist */,
 				0B140F581A2E4709001324EE /* main.m */,
 			);

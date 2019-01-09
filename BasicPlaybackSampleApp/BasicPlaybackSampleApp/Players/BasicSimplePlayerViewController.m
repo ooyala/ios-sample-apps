@@ -9,7 +9,6 @@
 #import "BasicSimplePlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
-#import "AudioOnlyPlayerInfo.h"
 
 @interface BasicSimplePlayerViewController ()
 
@@ -22,7 +21,6 @@
 @property (nonatomic) NSString *playerDomain;
 
 @end
-
 
 @implementation BasicSimplePlayerViewController {
     AppDelegate *appDel;
@@ -40,8 +38,8 @@
     _pcode = self.playerSelectionOption.pcode;
     _playerDomain = self.playerSelectionOption.domain;
     self.title = self.playerSelectionOption.title;
-    if (self.playerSelectionOption.isAudioOnly) {
-      [OOStreamPlayer setDefaultPlayerInfo:[AudioOnlyPlayerInfo new]];
+    if (playerSelectionOption.isAudioOnlyAsset) {
+      [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
     }
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
@@ -67,10 +65,10 @@
   
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
   
   // In QA Mode , making textView visible
   if (self.qaModeEnabled) {
@@ -82,9 +80,7 @@
   
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [self.ooyalaPlayerViewController.player play];
-
-  
+  [self.ooyalaPlayerViewController.player play];  
 }
 
 #pragma mark - Private functions
@@ -97,17 +93,16 @@
 
   // Add constraints
   [NSLayoutConstraint activateConstraints:@[
-                                            [playerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
-                                            [playerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
-                                            [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
-                                            [playerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
+    [playerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
+    [playerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
+    [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
+    [playerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
                                             ]];
 }
 
 #pragma mark - Actions
 
 - (void)notificationHandler:(NSNotification *)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -124,7 +119,9 @@
   if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
   
   appDel.count++;

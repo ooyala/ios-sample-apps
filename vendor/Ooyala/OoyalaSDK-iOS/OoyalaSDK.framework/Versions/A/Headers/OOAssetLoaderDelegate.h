@@ -2,7 +2,7 @@
 //  OOAssetLoaderDelegate.h
 //  OoyalaSDK
 //
-//  Created by Zhihui Chen on 1/25/16.
+//  Created on 1/25/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 
 @interface OOAssetLoaderDelegate : NSObject<AVAssetResourceLoaderDelegate>
 
-- (instancetype)init;
+- (instancetype)init NS_UNAVAILABLE;
 
 - (instancetype)initWithAsset:(AVURLAsset *)asset
                         pcode:(NSString *)pcode

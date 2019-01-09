@@ -1,5 +1,4 @@
 #import <AVFoundation/AVFoundation.h>
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "OOSignatureGenerator.h"
 #import "OOSecureURLGenerator.h"
@@ -472,7 +471,7 @@ extern NSString *const OOOoyalaPlayerApplicationVolumeChangedNotification;
  * @returns YES means to try to use local/debug DRM modes,
  * NO means to use regular DRM config.
  */
-+(BOOL)useDebugDRMPlayback;
++ (BOOL)useDebugDRMPlayback;
 
 
 /**
@@ -508,23 +507,23 @@ extern NSString *const OOOoyalaPlayerApplicationVolumeChangedNotification;
 
 #pragma mark Properties
 
-@property(readonly, nonatomic, strong) OOVideo *currentItem; /**< The OOOoyalaPlayer's currently playing OOVideo */
-@property(readonly, nonatomic, strong) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
-@property(readonly, nonatomic, strong) NSDictionary *metadata; /**< The OOOoyalaPlayer's content metadata for currently loaded content */
-@property(readonly, nonatomic, strong) OOOoyalaError *error; /**< The OOOoyalaPlayer's current error if it exists */
-@property(readonly, nonatomic, strong) UIView *view; /**< the view associated with the player*/
-@property(nonatomic) OOOoyalaPlayerVideoGravity videoGravity;
-@property(readonly, nonatomic) BOOL supportsVideoGravityButton;
-@property(nonatomic) BOOL seekable; /**< Whether or not the Videos that OOOoyalaPlayer plays are seekable */
-@property(nonatomic) BOOL adsSeekable; /**< Whether or not the Ads that OOOoyalaPlayer plays are seekable */
-@property(readonly, nonatomic) OOSeekStyle seekStyle;
-@property(nonatomic, strong) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
+@property (readonly, nonatomic) OOVideo *currentItem; /**< The OOOoyalaPlayer's currently playing OOVideo */
+@property (readonly, nonatomic) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
+@property (readonly, nonatomic) NSDictionary *metadata; /**< The OOOoyalaPlayer's content metadata for currently loaded content */
+@property (readonly, nonatomic) OOOoyalaError *error; /**< The OOOoyalaPlayer's current error if it exists */
+@property (readonly, nonatomic) UIView *view; /**< the view associated with the player*/
+@property (nonatomic) OOOoyalaPlayerVideoGravity videoGravity;
+@property (readonly, nonatomic) BOOL supportsVideoGravityButton;
+@property (nonatomic) BOOL seekable; /**< Whether or not the Videos that OOOoyalaPlayer plays are seekable */
+@property (nonatomic) BOOL adsSeekable; /**< Whether or not the Ads that OOOoyalaPlayer plays are seekable */
+@property (readonly, nonatomic) OOSeekStyle seekStyle;
+@property (nonatomic) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
 /**
  * Get whether the player is playing the audio only stream in an m3u8
  */
-@property(readonly, nonatomic) BOOL isAudioOnlyStreamPlaying;
-@property(readonly, nonatomic, getter = isClosedCaptionsTrackAvailable) BOOL closedCaptionsTrackAvailable;
-@property(nonatomic, strong) OOCurrentItemChangedCallback currentItemChangedCallback; /**< A callback that will be called every time the current item is changed */
+@property (readonly, nonatomic) BOOL isAudioOnlyStreamPlaying;
+@property (readonly, nonatomic, getter = isClosedCaptionsTrackAvailable) BOOL closedCaptionsTrackAvailable;
+@property (nonatomic) OOCurrentItemChangedCallback currentItemChangedCallback; /**< A callback that will be called every time the current item is changed */
 
 @property (nonatomic) OOOoyalaPlayerActionAtEnd actionAtEnd; /**< the OOOoyalaPlayerActionAtEnd to perform when the current item finishes playing. */
 @property (readonly, nonatomic, getter = isExternalPlaybackActive) BOOL externalPlaybackActive;
@@ -743,10 +742,11 @@ extern NSString *const OOOoyalaPlayerApplicationVolumeChangedNotification;
 - (BOOL) changeUnbundledVideo:(OOVideo *)video;
 
 /**
- * Performs authorization on the current item, refreshing teh auth token if necessary
- * @returns an OOAsyncTask that can be cancelled if necessary
+ Performs authorization on the current item, refreshing teh auth token if necessary
+
+ @param callback a callback with error if present
  */
-- (id)reauthorizeCurrentItemWithCallback:(OOAuthorizeCallback)callback;
+- (void)reauthorizeCurrentItemWithCallback:(OOAuthorizeCallback)callback;
 
 #pragma mark During-playback status
 
@@ -872,7 +872,7 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
 /**
  * internal Ooyala use only.
  */
--(void) layoutSubviews;
+- (void)layoutSubviews;
 
 #pragma mark Playback Actions
 
@@ -889,13 +889,13 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  /**
   * Plays the current video with an initial time
   */
-- (void)playWithInitialTime:(Float64) time;
+- (void)playWithInitialTime:(Float64)time;
 
 /**
  * Sets the current playhead time of the player (same as setPlayheadTime).
  * @param[in] time the playhead time, in seconds
  */
-- (void)seek:(Float64) time;
+- (void)seek:(Float64)time;
 
 /**
  * Tries to set the current video to the next video in the OOChannel or ChannetSet
@@ -934,13 +934,13 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  * Called when an icon is clicked
  * @param index the index of the icon
  */
-- (void)onAdIconClicked: (NSInteger) index;
+- (void)onAdIconClicked:(NSInteger)index;
 
 /**
  * Called when an ad overlay is clicked
  * @param clickUrl the url of the overlay
  */
-- (void)onAdOverlayClicked: (NSString *)clickUrl;
+- (void)onAdOverlayClicked:(NSString *)clickUrl;
 
 /**
  * Insert VAST ads to the managed ad plugin
@@ -975,7 +975,9 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
 
 - (void)switchToCastMode;
 
-- (void)exitCastModeWithEmbedCode:(NSString *)embedCode playheadTime:(Float64)playheadTime isPlaying:(BOOL)isPlaying;
+- (void)exitCastModeWithEmbedCode:(NSString *)embedCode
+                     playheadTime:(Float64)playheadTime
+                        isPlaying:(BOOL)isPlaying;
 
 - (BOOL)isInCastMode;
 

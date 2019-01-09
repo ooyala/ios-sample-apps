@@ -23,14 +23,15 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
 
     self.view.addSubview(tableView)
     populateOptions()
-    
   }
+
   override func viewWillLayoutSubviews() {
     super.viewWillLayoutSubviews()
     tableView.frame = view.bounds
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView,
+                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
     let option = tableOptions[indexPath.row]
     cell.textLabel?.text = option.title
