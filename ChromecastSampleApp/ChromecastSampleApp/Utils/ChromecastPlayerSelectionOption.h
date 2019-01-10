@@ -7,7 +7,7 @@
  * @copyright  Copyright © 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 @interface ChromecastPlayerSelectionOption : NSObject
 

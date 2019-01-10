@@ -5,20 +5,20 @@
                When creating a new PlayerViewControler, use this as your superclass.
                When creating a new nib, use this class as your owner
  * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ * @copyright  Copyright © 2014 Ooyala Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
 #import "SampleAppPlayerViewController.h"
 
 @implementation SampleAppPlayerViewController
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super init];
-  if (self) {
-    self.playerSelectionOption = playerSelectionOption;
+
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  if (self = [super init]) {
+    _playerSelectionOption = playerSelectionOption;
   }
   return self;
 }
 
 - (IBAction)onButtonClick:(id)sender {}
+
 @end

@@ -25,7 +25,12 @@
  @param[in] otherParameters such as longitude, latitude, dma or cccode
  @returns the initialized nielsen plugin object
  */
-- (id)initWithPlayer:(OOOoyalaPlayer *)player appId:(NSString *)appId appVersion:(NSString *)appVersion appName:(NSString *)appName sfcode:(NSString *)sfcode parameters:(NSDictionary *)otherParameters;
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
+                         appId:(NSString *)appId
+                    appVersion:(NSString *)appVersion
+                       appName:(NSString *)appName
+                        sfcode:(NSString *)sfcode
+                    parameters:(NSDictionary *)otherParameters;
 
 /**
  Get the underlying nielsen app api

@@ -13,9 +13,9 @@
 
 @interface AbstractPlayerViewController : UIViewController
 
-@property (nonatomic, strong) OOOoyalaTVPlayerViewController *ooyalaPlayerViewController;
-@property (nonatomic, strong) PlayerSelectionOption *option;
-@property (nonatomic, strong) OOOoyalaPlayer *player;
+@property (nonatomic) OOOoyalaTVPlayerViewController *ooyalaPlayerViewController;
+@property (nonatomic) PlayerSelectionOption *option;
+@property (nonatomic) OOOoyalaPlayer *player;
 
 - (void)notificationHandler:(NSNotification *)notification;
 

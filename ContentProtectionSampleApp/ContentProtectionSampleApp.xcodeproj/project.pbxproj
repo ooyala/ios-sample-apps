@@ -66,20 +66,21 @@
 		0BCC6E2C1D2F33F20040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */; };
 		39278CA22191DC3A00F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CA12191DC3A00F6F4E2 /* libxml2.tbd */; };
 		39278CA42191DC4000F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CA32191DC4000F6F4E2 /* libc++.tbd */; };
+		39F5EBA821B9689800BC7E1A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7AC4441A7A27090085BC97 /* UIKit.framework */; };
+		39F5EBA921B968A200BC7E1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7AC4421A7A26F70085BC97 /* Foundation.framework */; };
+		39F5EBAF21B968D100BC7E1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F5EBAB21B968D100BC7E1A /* LaunchScreen.xib */; };
+		39F5EBB021B968D100BC7E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F5EBAD21B968D100BC7E1A /* Main.storyboard */; };
+		39F5EBB421B9690600BC7E1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5EBB221B9690600BC7E1A /* main.m */; };
+		39F5EBB721B9693700BC7E1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F5EBB621B9693700BC7E1A /* Images.xcassets */; };
 		97E587521D4AE02700202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E587511D4AE02700202E09 /* JavaScriptCore.framework */; };
 		FF86C1C21A9BF06700C328A9 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FF86C1881A9BF06700C328A9 /* AppDelegate.h */; };
 		FF86C1C31A9BF06700C328A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF86C1891A9BF06700C328A9 /* AppDelegate.m */; };
-		FF86C1C41A9BF06700C328A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18A1A9BF06700C328A9 /* LaunchScreen.xib */; };
-		FF86C1C51A9BF06700C328A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18C1A9BF06700C328A9 /* Main.storyboard */; };
-		FF86C1C61A9BF06700C328A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF86C18E1A9BF06700C328A9 /* Images.xcassets */; };
-		FF86C1CA1A9BF06700C328A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF86C1931A9BF06700C328A9 /* main.m */; };
 		FF86C1ED1A9BF06700C328A9 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BA1A9BF06700C328A9 /* PlayerDoubleButton.xib */; };
 		FF86C1EE1A9BF06700C328A9 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BB1A9BF06700C328A9 /* PlayerDoubleSwitch.xib */; };
 		FF86C1EF1A9BF06700C328A9 /* PlayerDoubleText.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BC1A9BF06700C328A9 /* PlayerDoubleText.xib */; };
 		FF86C1F01A9BF06700C328A9 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BD1A9BF06700C328A9 /* PlayerSimple.xib */; };
 		FF86C1F11A9BF06700C328A9 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BE1A9BF06700C328A9 /* PlayerSingleButton.xib */; };
 		FF86C1F21A9BF06700C328A9 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C1BF1A9BF06700C328A9 /* TableCell.xib */; };
-		FF86C2771A9C0D7700C328A9 /* ContentProtectionSampleApp-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = FF86C2571A9C0D7700C328A9 /* ContentProtectionSampleApp-Prefix.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -152,21 +153,20 @@
 		0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		39278CA12191DC3A00F6F4E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		39278CA32191DC4000F6F4E2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		39F5EBAC21B968D100BC7E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		39F5EBAE21B968D100BC7E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		39F5EBB221B9690600BC7E1A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39F5EBB321B9690600BC7E1A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F5EBB621B9693700BC7E1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97E587511D4AE02700202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FF86C1881A9BF06700C328A9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF86C1891A9BF06700C328A9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FF86C18B1A9BF06700C328A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FF86C18D1A9BF06700C328A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FF86C18E1A9BF06700C328A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FF86C18F1A9BF06700C328A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF86C1931A9BF06700C328A9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FF86C1BA1A9BF06700C328A9 /* PlayerDoubleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleButton.xib; sourceTree = "<group>"; };
 		FF86C1BB1A9BF06700C328A9 /* PlayerDoubleSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleSwitch.xib; sourceTree = "<group>"; };
 		FF86C1BC1A9BF06700C328A9 /* PlayerDoubleText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDoubleText.xib; sourceTree = "<group>"; };
 		FF86C1BD1A9BF06700C328A9 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		FF86C1BE1A9BF06700C328A9 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		FF86C1BF1A9BF06700C328A9 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		FF86C2571A9C0D7700C328A9 /* ContentProtectionSampleApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ContentProtectionSampleApp-Prefix.pch"; sourceTree = "<group>"; };
 		FF86C2831A9C0E3F00C328A9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -175,6 +175,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F5EBA921B968A200BC7E1A /* Foundation.framework in Frameworks */,
+				39F5EBA821B9689800BC7E1A /* UIKit.framework in Frameworks */,
 				39278CA42191DC4000F6F4E2 /* libc++.tbd in Frameworks */,
 				39278CA22191DC3A00F6F4E2 /* libxml2.tbd in Frameworks */,
 				97E587521D4AE02700202E09 /* JavaScriptCore.framework in Frameworks */,
@@ -202,9 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				FF86C1871A9BF06700C328A9 /* ContentProtectionSampleApp */,
+				0B9457D51AC32C76000DD545 /* VendorLibraries */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B9457D51AC32C76000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,20 +222,20 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39278CA32191DC4000F6F4E2 /* libc++.tbd */,
-				39278CA12191DC3A00F6F4E2 /* libxml2.tbd */,
-				97E587511D4AE02700202E09 /* JavaScriptCore.framework */,
-				0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */,
 				FF86C2831A9C0E3F00C328A9 /* AdSupport.framework */,
-				0B7AC4441A7A27090085BC97 /* UIKit.framework */,
-				0B7AC4421A7A26F70085BC97 /* Foundation.framework */,
-				0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */,
+				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0BCC6E2B1D2F33F20040B0B2 /* AVKit.framework */,
 				0B7AC43E1A7A26CA0085BC97 /* CFNetwork.framework */,
 				0B7AC43C1A7A26BA0085BC97 /* CoreGraphics.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */,
+				0B7AC4421A7A26F70085BC97 /* Foundation.framework */,
+				97E587511D4AE02700202E09 /* JavaScriptCore.framework */,
+				39278CA32191DC4000F6F4E2 /* libc++.tbd */,
+				39278CA12191DC3A00F6F4E2 /* libxml2.tbd */,
 				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
+				0B140F8C1A2E53B0001324EE /* Security.framework */,
+				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
+				0B7AC4441A7A27090085BC97 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -321,21 +323,36 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		39F5EBAA21B968D100BC7E1A /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				39F5EBAB21B968D100BC7E1A /* LaunchScreen.xib */,
+				39F5EBAD21B968D100BC7E1A /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		39F5EBB121B9690600BC7E1A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39F5EBB621B9693700BC7E1A /* Images.xcassets */,
+				39F5EBB221B9690600BC7E1A /* main.m */,
+				39F5EBB321B9690600BC7E1A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FF86C1871A9BF06700C328A9 /* ContentProtectionSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				FF86C2571A9C0D7700C328A9 /* ContentProtectionSampleApp-Prefix.pch */,
 				FF86C1881A9BF06700C328A9 /* AppDelegate.h */,
 				FF86C1891A9BF06700C328A9 /* AppDelegate.m */,
-				FF86C18A1A9BF06700C328A9 /* LaunchScreen.xib */,
-				FF86C18C1A9BF06700C328A9 /* Main.storyboard */,
-				FF86C18E1A9BF06700C328A9 /* Images.xcassets */,
-				FF86C18F1A9BF06700C328A9 /* Info.plist */,
 				FF86C1901A9BF06700C328A9 /* Lists */,
-				FF86C1931A9BF06700C328A9 /* main.m */,
 				FF86C1941A9BF06700C328A9 /* Players */,
 				FF86C19F1A9BF06700C328A9 /* Utils */,
 				FF86C1B91A9BF06700C328A9 /* Views */,
+				39F5EBAA21B968D100BC7E1A /* Base.lproj */,
+				39F5EBB121B9690600BC7E1A /* Supporting Files */,
 			);
 			path = ContentProtectionSampleApp;
 			sourceTree = "<group>";
@@ -416,7 +433,6 @@
 				0B24B8591AA6827200F131C3 /* MvpdTableViewController.h in Headers */,
 				0B89E1DC1B18033400306176 /* DeviceManagementPlayerViewController.h in Headers */,
 				0B9457F91AC32C76000DD545 /* NSUtils.h in Headers */,
-				FF86C2771A9C0D7700C328A9 /* ContentProtectionSampleApp-Prefix.pch in Headers */,
 				0B9457FB1AC32C76000DD545 /* AuthenticationToken.h in Headers */,
 				0B98DDDC1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h in Headers */,
 				0B24B86B1AA682DC00F131C3 /* ContentProtectionListViewController.h in Headers */,
@@ -529,13 +545,13 @@
 				FF86C1F11A9BF06700C328A9 /* PlayerSingleButton.xib in Resources */,
 				FF86C1F01A9BF06700C328A9 /* PlayerSimple.xib in Resources */,
 				FF86C1EE1A9BF06700C328A9 /* PlayerDoubleSwitch.xib in Resources */,
+				39F5EBB021B968D100BC7E1A /* Main.storyboard in Resources */,
 				FF86C1F21A9BF06700C328A9 /* TableCell.xib in Resources */,
 				FF86C1ED1A9BF06700C328A9 /* PlayerDoubleButton.xib in Resources */,
-				FF86C1C61A9BF06700C328A9 /* Images.xcassets in Resources */,
 				FF86C1EF1A9BF06700C328A9 /* PlayerDoubleText.xib in Resources */,
-				FF86C1C41A9BF06700C328A9 /* LaunchScreen.xib in Resources */,
+				39F5EBB721B9693700BC7E1A /* Images.xcassets in Resources */,
 				0B9457F11AC32C76000DD545 /* adobepass.p12 in Resources */,
-				FF86C1C51A9BF06700C328A9 /* Main.storyboard in Resources */,
+				39F5EBAF21B968D100BC7E1A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,11 +569,11 @@
 				0B89E1DD1B18033400306176 /* DeviceManagementPlayerViewController.m in Sources */,
 				0B24B8561AA6827200F131C3 /* AdobePassViewController.m in Sources */,
 				0B98DDDD1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m in Sources */,
-				FF86C1CA1A9BF06700C328A9 /* main.m in Sources */,
 				0B24B8581AA6827200F131C3 /* MvpdLoginViewController.m in Sources */,
 				0B24B85A1AA6827200F131C3 /* MvpdTableViewController.m in Sources */,
 				0B24B8721AA68ED100F131C3 /* AdobePassPlayerViewController.m in Sources */,
 				0B24B8621AA682B500F131C3 /* PlayerSelectionOption.m in Sources */,
+				39F5EBB421B9690600BC7E1A /* main.m in Sources */,
 				0B24B8641AA682B500F131C3 /* SampleAppPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,18 +597,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FF86C18A1A9BF06700C328A9 /* LaunchScreen.xib */ = {
+		39F5EBAB21B968D100BC7E1A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FF86C18B1A9BF06700C328A9 /* Base */,
+				39F5EBAC21B968D100BC7E1A /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		FF86C18C1A9BF06700C328A9 /* Main.storyboard */ = {
+		39F5EBAD21B968D100BC7E1A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FF86C18D1A9BF06700C328A9 /* Base */,
+				39F5EBAE21B968D100BC7E1A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -716,7 +732,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/ContentProtectionSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ContentProtectionSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -746,7 +762,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/ContentProtectionSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ContentProtectionSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

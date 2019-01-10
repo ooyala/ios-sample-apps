@@ -1,13 +1,12 @@
 /**
- * @class      OODefaultPlayerInfo OO.h "OOOoyalaAPIClient.h"
- * @brief      OOOoyalaAPIClient
- * @details    OOOoyalaAPIClient.h in OoyalaSDK
+ * @class      OODefaultPlayerInfo OO.h "OODefaultPlayerInfo.h"
+ * @brief      OODefaultPlayerInfo
+ * @details    OODefaultPlayerInfo.h in OoyalaSDK
  * @date       1/17/12
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-
-#include "OOPlayerInfo.h"
+#import "OOPlayerInfo.h"
 
 #define OO_HLS @"m3u8"
 #define OO_MP4 @"mp4"

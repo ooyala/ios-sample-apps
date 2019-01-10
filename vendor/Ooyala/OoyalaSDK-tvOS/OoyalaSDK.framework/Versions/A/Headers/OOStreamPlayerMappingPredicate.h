@@ -5,5 +5,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol OOStreamPlayerMappingPredicate <NSCopying>
--(BOOL) matchesStreams:(NSArray*)streams;
+- (BOOL)matchesStreams:(NSArray *)streams;
 @end

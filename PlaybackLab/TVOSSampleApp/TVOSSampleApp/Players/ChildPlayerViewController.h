@@ -12,7 +12,6 @@
 // This is not a verified use case by Ooyala and cause extrange behavior for the player,
 // but we provide the example in case you want to use it.
 
-#import <UIKit/UIKit.h>
 #import "AbstractPlayerViewController.h"
 
 @interface ChildPlayerViewController : AbstractPlayerViewController

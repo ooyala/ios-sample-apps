@@ -41,14 +41,14 @@
  * Initialize a OOVideo using the specified data (subclasses should override this)
  * @param[in] unbundledVideo defines the streams and ads to use initializing the OOVideo.
  */
-- (id)initWithUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
+- (instancetype)initWithUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
  * @param[in] theStreams NSArray containing OOStreams.
  * @param[in] theAds NSArray containing OOManagedAdSpots.
  */
-- (id)initWithUnbundledStreams:(NSArray*)theStreams ads:(NSArray*)theAds;
+- (instancetype)initWithUnbundledStreams:(NSArray*)theStreams ads:(NSArray*)theAds;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
@@ -57,7 +57,9 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
  * @returns the initialized OOVideo
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCode:(NSString *)theEmbedCode api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                         embedCode:(NSString *)theEmbedCode
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
@@ -67,7 +69,10 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
  * @returns the initialized OOVideo
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCode:(NSString *)theEmbedCode parent:(OOChannel *)theParent api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                         embedCode:(NSString *)theEmbedCode
+                            parent:(OOChannel *)theParent
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OOVideo using the specified data (subclasses should override and call this)
@@ -119,6 +124,7 @@
  * @internal
  */
 - (id)fetchPlaybackInfo:(void (^)(BOOL))callback;
+
 
 /**
  * Check if the OOVideo has ads
