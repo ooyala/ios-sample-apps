@@ -5,10 +5,13 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import "OOOoyalaPlayer.h"
+#ifndef OOOoyalaVRPlayer_h
+#define OOOoyalaVRPlayer_h
 
+#import "OOOoyalaPlayer.h"
 
 @interface OOOoyalaVRPlayer : OOOoyalaPlayer
 
-
 @end
+
+#endif /* OOOoyalaVRPlayer */

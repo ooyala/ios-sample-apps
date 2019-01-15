@@ -8,7 +8,6 @@
 
 #import <SceneKit/SceneKit.h>
 #import <UIKit/UIKit.h>
-#import "OOOoyalaPlayer.h"
 #import "OOEmbedTokenGenerator.h"
 
 
@@ -24,6 +23,7 @@ extern NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible;
 @protocol OOMotionManagement;
 @class OOCameraPanGestureRecognizer;
 @class OOOoyalaPlayerViewController;
+@class OOOoyalaPlayer;
 
 typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
   /** an inline player, expandable to fullscreen */
