@@ -13,7 +13,6 @@ class IMAVideoPlayerViewController: DefaultVideoPlayerViewController {
   private var adsManager: OOIMAManager!
 
   // MARK: - Life cycle
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -25,5 +24,4 @@ class IMAVideoPlayerViewController: DefaultVideoPlayerViewController {
     // Create ADS manager
     adsManager = OOIMAManager(ooyalaPlayer: skinController.player)
   }
-
 }

@@ -19,7 +19,7 @@
   self = [super init];
   if (self) {
     self.playerSelectionOption = playerSelectionOption;
-     self.qaModeEnabled = qaModeEnabled;
+    self.qaModeEnabled = qaModeEnabled;
   }
   return self;
 }
