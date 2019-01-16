@@ -8,8 +8,6 @@
 
 #import "PlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaCastSDK/OOCastPlayer.h>
-#import "Utils.h"
 #import "OOCastManagerFetcher.h"
 #import "CastPlaybackView.h"
 #import "ChromecastPlayerSelectionOption.h"
@@ -22,6 +20,7 @@
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
 @property (nonatomic) OOCastManager *castManager;
+@property (nonatomic) CastPlaybackView *castPlaybackView;
 
 @property NSString *embedCode;
 @property NSString *embedCode2;
@@ -33,7 +32,6 @@
 @property NSString *secret;
 @property NSString *accountId;
 
-@property CastPlaybackView *castPlaybackView;
 @property UITextView *textView;
 
 @end
@@ -42,7 +40,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
   /*
    * The API Key and Secret should not be saved inside your applciation (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
@@ -57,19 +54,15 @@
   self.castManager.delegate = self;
   
   // Add custom parameters
-  
-  NSMutableDictionary<NSString *, NSString *> *customParams = [NSMutableDictionary new];
-  
-  customParams[@"userName"] = @"User";
-  customParams[@"initialVolume"] = @"1";
-  customParams[@"embedToken"] = @"some-uu-embed-token";
-  customParams[@"title"] = @"New title";
-  customParams[@"description"] = @"New description";
-  
+  NSDictionary *customParams = @{@"userName":      @"User",
+                                 @"initialVolume": @"1",
+                                 @"embedToken":    self.mediaInfo.embedCode,
+                                 @"title":         self.mediaInfo.title,
+                                 @"description":   @"New description"};
   self.castManager.additionalInitParams = customParams;
   
-  UIBarButtonItem *leftbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
-  self.navigationBar.rightBarButtonItem = leftbutton;
+  UIBarButtonItem *rightbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
+  self.navigationBar.rightBarButtonItem = rightbutton;
   
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
   self.pcode = self.mediaInfo.pcode;
@@ -82,14 +75,14 @@
                                         embedTokenGenerator:self];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:self.ooyalaPlayer];
   
-  [self.ooyalaPlayerViewController.view setFrame:self.videoView.bounds];
+  self.ooyalaPlayerViewController.view.frame = self.videoView.bounds;
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.videoView addSubview:self.ooyalaPlayerViewController.view];
   
-  self.castPlaybackView = [[CastPlaybackView alloc] initWithParentView:self.videoView];
+  self.castPlaybackView = [[CastPlaybackView alloc] initWithFrame:self.videoView.frame];
   [self.castManager setCastModeVideoView:self.castPlaybackView];
 
-  [NSNotificationCenter.defaultCenter addObserver: self
+  [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
                                              name:nil
                                            object:self.ooyalaPlayerViewController.player];
@@ -101,28 +94,26 @@
 
 - (void)play:(NSString *)embedCode {
   [self.ooyalaPlayer setEmbedCode:embedCode];
-  if (self.castManager.castPlayer.state != OOOoyalaPlayerStatePaused) {
-    [self.ooyalaPlayer play];
-  }
+  [self.ooyalaPlayer play];
 }
 
 - (void)notificationHandler:(NSNotification *)notification {
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:[self getReceiverDisplayName]
-                                                  displayStatus:[self getReceiverDisplayStatus]];
+                                                    displayName:self.receiverDisplayName
+                                                  displayStatus:self.receiverDisplayStatus];
     // return here to avoid logging TimeChangedNotificiations for shorter logs
     return;
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
     [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:[self getReceiverDisplayName]
-                                                  displayStatus:[self getReceiverDisplayStatus]];
+                                                    displayName:self.receiverDisplayName
+                                                  displayStatus:self.receiverDisplayStatus];
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
     [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:[self getReceiverDisplayName]
-                                                  displayStatus:[self getReceiverDisplayStatus]];
+                                                    displayName:self.receiverDisplayName
+                                                  displayStatus:self.receiverDisplayStatus];
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification] && self.embedCode2) {
     [self play:self.embedCode2];
@@ -131,7 +122,7 @@
 
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
         [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+        [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime]);
 }
 
@@ -157,7 +148,7 @@
 
 # pragma mark -
 
-- (NSString *)getReceiverDisplayName {
+- (NSString *)receiverDisplayName {
   NSString *name = @"Unknown";
   if (self.castManager.selectedDevice.friendlyName) {
     name = self.castManager.selectedDevice.friendlyName;
@@ -167,10 +158,10 @@
   return name;
 }
 
-- (NSString *)getReceiverDisplayStatus {
+- (NSString *)receiverDisplayStatus {
   NSString *status = @"Not connected";
   if (self.castManager.isInCastMode) {
-    switch (self.castManager.castPlayer.state) {
+    switch (self.castManager.state) {
       case OOOoyalaPlayerStatePlaying: {
         status = @"Playing";
         break;
@@ -199,13 +190,13 @@
  */
 - (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
   NSDictionary* params = @{@"account_id": self.accountId};
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@",
+                   self.pcode, [embedCodes componentsJoinedByString:@","]];
 
   OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
                                                                                        secret:self.secret];
   NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
   callback(embedTokenUrl.absoluteString);
 }
-
 
 @end

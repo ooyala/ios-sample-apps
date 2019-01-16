@@ -12,6 +12,7 @@
 #import "OOPlayerDomain.h"
 #import "OOPlayerInfo.h"
 #import "OODefaultPlayerInfo.h"
+#import "OODefaultAudioOnlyPlayerInfo.h"
 
 // VAST ad classes
 #import "OOVASTConstants.h"

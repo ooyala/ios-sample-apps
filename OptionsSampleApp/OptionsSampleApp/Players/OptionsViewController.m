@@ -175,7 +175,7 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayer playerStateToString:[self.playerViewController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.playerViewController.player state]],
                        [self.playerViewController.player playheadTime], appDel.count];
   
   NSLog(@"%@",message);

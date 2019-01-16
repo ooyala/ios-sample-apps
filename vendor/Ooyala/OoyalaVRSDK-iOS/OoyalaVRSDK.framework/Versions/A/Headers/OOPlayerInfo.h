@@ -65,4 +65,9 @@
  */
 @property (nonatomic, readonly) NSDictionary *additionalParams;
 
+/**
+ Needs to be true if we're dealing with audio-only assets
+ */
+@property (nonatomic, readonly) BOOL isAudioOnly;
+
 @end

@@ -133,7 +133,7 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %ld",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[_skinController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[_skinController.player state]],
                        [_skinController.player playheadTime], (long)_appDelegate.count];
   
   if ([notification.name isEqualToString:OOOoyalaPlayerVideoHasVRContent]) {

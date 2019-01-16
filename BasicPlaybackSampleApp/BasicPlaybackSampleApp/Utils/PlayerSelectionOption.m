@@ -22,6 +22,23 @@
     _pcode = pcode;
     _domain = domain;
     _viewController = viewController;
+    _isAudioOnlyAsset = NO;
+  }
+  return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController
+                  isAudioOnly:(BOOL)isAudioOnly {
+  if (self = [self initWithTitle:title
+                       embedCode:embedCode
+                           pcode:pcode
+                          domain:domain
+                  viewController:viewController]) {
+    _isAudioOnlyAsset = isAudioOnly;
   }
   return self;
 }

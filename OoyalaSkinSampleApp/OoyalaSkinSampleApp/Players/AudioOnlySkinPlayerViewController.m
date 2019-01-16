@@ -50,7 +50,6 @@ AppDelegate *appDel;
   [super viewDidLoad];
   
   self.title = self.playerSelectionOption.title;
-  
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   OOOptions *options = [OOOptions new];
@@ -73,7 +72,8 @@ AppDelegate *appDel;
                                                               parent:self.audioPlayerContainerView
                                                        launchOptions:nil];
   [self addChildViewController:self.skinController];
-  
+  [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
+
   self.skinController.view.frame = self.audioPlayerContainerView.bounds;
   
   [NSNotificationCenter.defaultCenter addObserver:self
@@ -92,6 +92,10 @@ AppDelegate *appDel;
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
 
+- (void)dealloc {
+  [OOStreamPlayer setDefaultPlayerInfo:[OODefaultPlayerInfo new]];
+}
+
 #pragma mark - Private functions
 
 - (void)notificationHandler:(NSNotification*)notification {
@@ -103,7 +107,7 @@ AppDelegate *appDel;
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.skinController.player state]],
                        self.skinController.player.playheadTime, appDel.count];
   NSLog(@"%@", message);
   

@@ -23,16 +23,18 @@
 
 - (NSArray *)basicPlayerSelectionOptions {
   return @[
-           [[PlayerSelectionOption alloc] initWithTitle:@"audio delivery"
-                                              embedCode:@"A3aTBmZzE6bzQUkQlDOrUu4cjfOlCGPa"
+           [[PlayerSelectionOption alloc] initWithTitle:@"audio long"
+                                              embedCode:@"I4cDBmZzE6GRYVnZyNOBhmeVUEi_DluP"
                                                   pcode:@"Q1bW0yOsRxnrzAjzXI2wUlZp9h53"
                                                  domain:@"http://www.ooyala.com"
-                                         viewController:BasicSimplePlayerViewController.class],
+                                         viewController:BasicSimplePlayerViewController.class
+                                            isAudioOnly:YES],
            [[PlayerSelectionOption alloc] initWithTitle:@"audio_hls delivery"
                                               embedCode:@"NybzBmZzE6n6LYZgsxJNthUnAn1_xrcV"
                                                   pcode:@"Q1bW0yOsRxnrzAjzXI2wUlZp9h53"
                                                  domain:@"http://www.ooyala.com"
-                                         viewController:BasicSimplePlayerViewController.class],
+                                         viewController:BasicSimplePlayerViewController.class
+                                            isAudioOnly:YES],
            [[PlayerSelectionOption alloc] initWithTitle:@"HLS Video"
                                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                   pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"

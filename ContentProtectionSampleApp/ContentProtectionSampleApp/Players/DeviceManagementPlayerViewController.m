@@ -94,8 +94,8 @@
 - (void)notificationReceived:(NSNotification *)notification {
   CMTimeRange r = [self.ooyalaPlayerViewController.player seekableTimeRange];
   NSLog(@"Notification Received: %@ - state: %@ -- playhead: %f, duration: %f",
-        notification.name,
-        [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+        [notification name],
+        [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime],
         [self.ooyalaPlayerViewController.player duration]);
   CMTimeRangeShow(r);
