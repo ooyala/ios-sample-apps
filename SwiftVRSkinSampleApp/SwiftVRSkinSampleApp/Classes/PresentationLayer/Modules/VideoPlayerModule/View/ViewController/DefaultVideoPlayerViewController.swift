@@ -112,7 +112,7 @@ class DefaultVideoPlayerViewController: UIViewController {
       return
     }
 
-    let playerState = OOOoyalaVRPlayer.playerState(toString: skinController.player.state()) ?? "unknown"
+    let playerState = OOOoyalaPlayerStateConverter.playerState(toString: skinController.player.state()) ?? "unknown"
     let playhead = skinController.player.playheadTime()
     let notificationsCount = appDelegate?.count ?? 0
 
