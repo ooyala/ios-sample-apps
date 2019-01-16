@@ -11,7 +11,6 @@
 #import <OoyalaIMASDK/OOIMAManager.h>
 #import "AppDelegate.h"
 
-
 @interface IMAPlayerViewController ()
 
 #pragma mark - Private properties
@@ -32,16 +31,17 @@
 
 #pragma mark - Initialization
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerSimple";
   
   NSLog(@"value of qa mode in FreeWheelPlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _pcode = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -58,17 +58,17 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
 
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
 
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:_ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                            object:_ooyalaPlayerViewController.player];
   
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
@@ -76,7 +76,7 @@
   // Attach it to current view
   [self addChildViewController:_ooyalaPlayerViewController];
   [self.playerView addSubview:_ooyalaPlayerViewController.view];
-  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
 
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:player];
 
@@ -87,16 +87,16 @@
 #pragma mark - Private functions
 
 - (void)notificationHandler:(NSNotification*) notification {
-
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
 
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                                              [notification name],
-                                              [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
-                                              [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
+                       notification.name,
+                       [OOOoyalaPlayer playerStateToString:self.ooyalaPlayerViewController.player.state],
+                       self.ooyalaPlayerViewController.player.playheadTime,
+                       appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
@@ -110,6 +110,5 @@
   
   appDel.count++;
 }
-
 
 @end
