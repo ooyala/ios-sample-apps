@@ -6,8 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VideoItem.h"
-
+@class VideoItem;
 
 @interface VideoPlayerViewModel : NSObject
 

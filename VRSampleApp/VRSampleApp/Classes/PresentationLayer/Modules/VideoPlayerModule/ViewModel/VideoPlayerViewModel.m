@@ -6,9 +6,9 @@
 //
 
 #import "VideoPlayerViewModel.h"
+#import "VideoItem.h"
 
-
-@interface VideoPlayerViewModel()
+@interface VideoPlayerViewModel ()
 
 extern NSString *kLogFileName;
 
@@ -27,13 +27,11 @@ NSString *kLogFileName = @"ooyalaDebugLog.log";
                             pcode:(NSString *)pcode
                            domain:(NSString *)domain
                  andQAModeEnabled:(BOOL)QAModeEnabled {
-  self = [super init];
-  
-  if (self) {
-    self.videoItem = videoItem;
-    self.pcode = pcode;
-    self.domain = domain;
-    self.QAModeEnabled = QAModeEnabled;
+  if (self = [super init]) {
+    _videoItem = videoItem;
+    _pcode = pcode;
+    _domain = domain;
+    _QAModeEnabled = QAModeEnabled;
   }
   
   [self removeLogFileWithName:kLogFileName];
@@ -44,7 +42,6 @@ NSString *kLogFileName = @"ooyalaDebugLog.log";
 #pragma mark - Public functions
 
 - (void)debugPrint:(NSString *)debugString {
-  
   NSString *logFilePath = [self pathToLogFileWithName:kLogFileName];
   NSString *dump = @"";
   NSError *error;
@@ -54,9 +51,7 @@ NSString *kLogFileName = @"ooyalaDebugLog.log";
   }
   
   dump = [NSString stringWithFormat:@"%@ :::::::::: %@", dump, debugString];
-  
   // Write to the file
-  
   [dump writeToFile:logFilePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
   
   if (error) {
@@ -81,6 +76,5 @@ NSString *kLogFileName = @"ooyalaDebugLog.log";
     [fileManager removeItemAtPath:logFilePath error:NULL];
   }
 }
-
 
 @end
