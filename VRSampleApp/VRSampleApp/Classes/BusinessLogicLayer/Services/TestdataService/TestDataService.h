@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "TestDataServiceProtocol.h"
 
-
 @interface TestDataService : NSObject <TestDataServiceProtocol>
 
 @end

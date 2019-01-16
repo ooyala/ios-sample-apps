@@ -5,7 +5,6 @@
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
-
 @protocol Mappable <NSObject>
 
 + (id)createFromJSON:(id)json;
