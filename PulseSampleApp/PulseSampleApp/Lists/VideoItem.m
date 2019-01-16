@@ -10,18 +10,17 @@
 
 @implementation VideoItem
 
-+ (VideoItem *)videoItemWithDictionary:(NSDictionary *)dictionary
-{
++ (VideoItem *)videoItemWithDictionary:(NSDictionary *)dictionary {
   VideoItem *videoItem = [VideoItem new];
   
-  videoItem.identifier = dictionary[@"content-id"];
-  videoItem.title = dictionary[@"content-title"] ?: @"";
-  videoItem.tags = dictionary[@"tags"];
-  videoItem.category = dictionary[@"category"];
-  videoItem.duration = dictionary[@"content-duration"] ?
-    [dictionary[@"content-duration"] integerValue] : 0;
+  videoItem.identifier       = dictionary[@"content-id"];
+  videoItem.title            = dictionary[@"content-title"] ?: @"";
+  videoItem.tags             = dictionary[@"tags"];
+  videoItem.category         = dictionary[@"category"];
+  videoItem.duration         = dictionary[@"content-duration"] ?
+                               [dictionary[@"content-duration"] integerValue] : 0;
   videoItem.midrollPositions = dictionary[@"midroll-positions"];
-  videoItem.embedCode = dictionary[@"content-code"];
+  videoItem.embedCode        = dictionary[@"content-code"];
 
   return videoItem;
 }

@@ -5,7 +5,7 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-//#import "SampleAppPlayerViewController.h"
+@import UIKit;
 #import "VideoItem.h"
 #import <OoyalaPulseIntegration/OOPulseManager.h>
 
