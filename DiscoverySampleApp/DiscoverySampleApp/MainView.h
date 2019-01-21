@@ -7,20 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-//Json Deserializer
-#import "CJSONSerializer.h"
-#import "CJSONDeserializer.h"
-#import "DemoSettings.h"
-//Discovery API
-#import <OoyalaSDK/OODiscoveryManager.h>
-//Player
-#import "PlayerSelectionOption.h"
-#import "PlayerViewController.h"
-#import "TableViewEmbedCell.h"
 
+@class PlayerViewController;
+@class DemoSettings;
 
-@interface MainView : UIViewController <UITableViewDataSource, UITableViewDelegate>{
-}
+@interface MainView : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *videoTitle;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerViewHeight;
@@ -42,8 +34,8 @@
 @property int SimilarFeature;
 @property PlayerViewController *playerViewController;
 
-- (void) userRender;
-- (NSString*) decodeString: (NSString*)data;
+- (void)userRender;
+- (NSString *)decodeString:(NSString *)data;
 
 @end
 
