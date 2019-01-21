@@ -14,14 +14,14 @@
 @property (nonatomic) NSString *secretKey;
 @property (nonatomic) NSString *accountId;
 
-- (id)initWithTitle:(NSString *)title
-          embedCode:(NSString *)embedCode
-              pcode:(NSString *)pcode
-       playerDomain:(NSString *)playerDomain
-     viewController:(Class)viewController
-                nib:(NSString *)nib
-             apiKey:(NSString *)apiKey
-          secretKey:(NSString *)secretKey
-          accountId:(NSString *)accountId;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                 playerDomain:(NSString *)playerDomain
+               viewController:(Class)viewController
+                          nib:(NSString *)nib
+                       apiKey:(NSString *)apiKey
+                    secretKey:(NSString *)secretKey
+                    accountId:(NSString *)accountId;
 
 @end
