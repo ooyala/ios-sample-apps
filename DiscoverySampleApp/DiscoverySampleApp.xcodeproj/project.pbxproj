@@ -142,8 +142,8 @@
 		DB22A3A81EA803D500FA3E3C /* EmbedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmbedCell.xib; sourceTree = "<group>"; };
 		DB22A3B81EA963FC00FA3E3C /* JSONRepresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		DB22A3BD1EAFE15300FA3E3C /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
-		DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoSettings.h; path = Views/DemoSettings.h; sourceTree = "<group>"; };
-		DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoSettings.m; path = Views/DemoSettings.m; sourceTree = "<group>"; };
+		DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSettings.h; sourceTree = "<group>"; };
+		DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSettings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +202,6 @@
 				390891B321F5B26700D860A9 /* Resources */,
 				DB22A39D1EA0111F00FA3E3C /* MainView.h */,
 				DB22A39E1EA0111F00FA3E3C /* MainView.m */,
-				DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */,
-				DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */,
 				C1D0E9E11F5DEFF600B8B9DD /* BrowseView.h */,
 				C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */,
 			);
@@ -214,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				390891E121F5B29A00D860A9 /* JSON */,
+				DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */,
+				DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */,
 				DB22A3A51EA803B400FA3E3C /* TableViewEmbedCell.h */,
 				DB22A3A61EA803B400FA3E3C /* TableViewEmbedCell.m */,
 				0B7824481B2B834F00D718AB /* PlayerSelectionOption.h */,
