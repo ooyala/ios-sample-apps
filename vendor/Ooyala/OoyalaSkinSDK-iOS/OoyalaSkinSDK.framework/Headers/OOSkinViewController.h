@@ -9,7 +9,6 @@
 @class OOOoyalaPlayer;
 @class OOSkinOptions;
 @class OOClosedCaptionsStyle;
-@class OOReactBridge;
 
 /**
  * The primary class for the Skin UI
@@ -20,15 +19,21 @@
 // Notifications
 extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fires when player goes FullScreen  */
 
-@property(nonatomic, readonly) OOOoyalaPlayer *player;
-@property(nonatomic, readonly) OOSkinOptions *skinOptions;
-@property(nonatomic, readonly) NSString *version;
-@property(nonatomic, readonly) OOClosedCaptionsStyle *closedCaptionsDeviceStyle;
+@property (nonatomic, readonly) OOOoyalaPlayer *player;
+@property (nonatomic, readonly) OOSkinOptions *skinOptions;
+@property (nonatomic, readonly) NSString *version;
+@property (nonatomic, readonly) OOClosedCaptionsStyle *closedCaptionsDeviceStyle;
 
 /**
  Programatically change the fullscreen mode of the player.
  */
-@property(nonatomic, getter=isFullscreen) BOOL fullscreen;
+@property (nonatomic, getter=isFullscreen) BOOL fullscreen;
+
+/**
+ Auto enter/exit full screen mode when device orientation changed. Default NO.
+ @warning Doesn't work in VR mode.
+ */
+@property (nonatomic, getter=isAutoFullscreenWithRotatedEnabled) BOOL autoFullscreenWithRotatedEnabled __TVOS_PROHIBITED;
 
 - (instancetype)init __attribute__((unavailable("init not available")));
 - (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
@@ -37,6 +42,5 @@ extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fir
                  launchOptions:(NSDictionary *)options;
 
 - (void)ccStyleChanged:(NSNotification *)notification;
-- (void)sendBridgeEventWithName:(NSString *)eventName body:(id)body;
 
 @end

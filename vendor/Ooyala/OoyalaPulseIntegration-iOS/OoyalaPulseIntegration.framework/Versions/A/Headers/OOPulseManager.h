@@ -2,19 +2,23 @@
 //  OOPulseManager.h
 //  PulseOVPTestApp
 //
-//  Created by Jacques du Toit on 03/02/16.
+//  Created on 03/02/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
 #import <OoyalaSDK/OOAdSpotPlugin.h>
-#import <OoyalaSDK/OOOoyalaPlayer.h>
 #import "OOPulsePlayerOptions.h"
+
+#ifndef OOPulseManager_h
+#define OOPulseManager_h
 
 @class OOPulseManager;
 @protocol OOPulseVideoAd;
 @protocol OOPulseSession;
 @class OOContentMetadata;
 @class OORequestSettings;
+@class OOOoyalaPlayer;
+@class OOVideo;
 
 /**
  *  The OOPulseManagerDelegate protocol provides a way for the OOPulseManager
@@ -91,3 +95,5 @@
 @property (strong, nonatomic) OOPulsePlayerOptions *options;
 
 @end
+
+#endif /* OOPulseManager_h */

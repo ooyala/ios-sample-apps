@@ -60,9 +60,7 @@
 
 /**
  *  Called when there was an error playing the ad.
- *  Only resume playback when didRequestContentResumeForAdsManager: is called.
- *  Continue to listen for callbacks until didReceiveAdEvent: with
- *  kIMAAdEvent_ALL_ADS_COMPLETED is called.
+ *  Log the error and resume playing content.
  *
  *  @param adsManager the IMAAdsManager that errored
  *  @param error      the IMAAdError received
@@ -162,6 +160,9 @@
  */
 - (void)initializeWithAdsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
@@ -180,9 +181,16 @@
 - (void)resume;
 
 /**
- *  Skips the advertisement.
+ *  Skips the advertisement if the ad is skippable and the skip offset has been reached.
  */
 - (void)skip;
+
+/**
+ *  Performs a clickthrough on the advertisement if the UI was successfully disabled via
+ *  AdsRenderingSettings.disableUi.
+ *  :nodoc:
+ */
+- (void)clicked;
 
 /**
  *  Causes the ads manager to stop the ad and clean its internal state.

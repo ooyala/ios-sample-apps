@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "OOOoyalaPlayer.h"
 #import "OOOoyalaError.h"
 #import "OOPlayerProtocol.h"
 #import "OOLifeCycle.h"
-#import "OOAudioTrackProtocol.h"
+#import "OOAudioTrackSelectionProtocol.h"
+#import "OOPlaybackSpeedSelectionProtocol.h"
 
-@interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle, OOAudioTrackProtocol> { // really, an Abstract class.
+#ifndef OOPlayer_h
+#define OOPlayer_h
+
+@interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle, OOAudioTrackSelectionProtocol, OOPlaybackSpeedSelectionProtocol> { // really, an Abstract class.
 @protected
   OOOoyalaError *playerError;
   UIView *view;
@@ -25,18 +28,21 @@
 
 extern NSString *const PlayerErrorNotification;
 
-@property(nonatomic) Float64 playheadTime; /** KVO compatible playhead time */
-@property(readonly, nonatomic, strong) OOOoyalaError *playerError; /**< The OOPlayer's current error if it exists */
-@property(readonly, nonatomic, strong) UIView *view;
-@property(nonatomic) BOOL completed;
+@property (nonatomic) Float64 playheadTime; /** KVO compatible playhead time */
+@property (nonatomic, readonly) OOOoyalaError *playerError; /**< The OOPlayer's current error if it exists */
+@property (nonatomic, readonly) UIView *view;
+@property (nonatomic) BOOL completed;
 
 - (BOOL)isPlaying;
 
 - (BOOL)isAudioOnlyStreamPlaying;
 
-- (CMTimeRange) seekableTimeRange;
+- (CMTimeRange)seekableTimeRange;
 
--(CGRect)videoRect;
+- (CGRect)videoRect;
 
 - (void)setState:(OOOoyalaPlayerState)state;
+
 @end
+
+#endif /* OOPlayer_h */

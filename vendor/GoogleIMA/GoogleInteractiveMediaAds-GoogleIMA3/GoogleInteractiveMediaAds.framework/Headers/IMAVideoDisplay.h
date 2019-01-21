@@ -110,7 +110,7 @@
  *  @param metadata     the metadata dictionary received with the timed metadata event
  */
 - (void)videoDisplay:(id<IMAVideoDisplay>)videoDisplay
-    didReceiveTimedMetadata:(NSDictionary *)metadata;
+    didReceiveTimedMetadata:(NSDictionary<NSString *, NSString *> *)metadata;
 
 @optional
 

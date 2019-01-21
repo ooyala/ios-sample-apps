@@ -33,6 +33,9 @@
  */
 - (instancetype)initWithAVPlayer:(AVPlayer *)player;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

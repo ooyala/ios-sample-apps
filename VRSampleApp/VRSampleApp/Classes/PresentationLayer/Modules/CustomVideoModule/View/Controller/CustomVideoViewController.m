@@ -8,7 +8,6 @@
 #import "CustomVideoViewController.h"
 #import "CustomVideoTransitionManager.h"
 
-
 @interface CustomVideoViewController () <UITextFieldDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *pCodeTextField;
@@ -30,12 +29,6 @@ extern CGFloat kDefaultSpacing;
 CGFloat kContentViewCornerRadius = 8.0;
 CGFloat kDefaultSpacing = 8.0;
 
-#pragma mark - Init/deinit
-
-- (void)dealloc {
-  [NSNotificationCenter.defaultCenter removeObserver:self];
-}
-
 #pragma mark - Life cycle
 
 - (void)viewDidLoad {
@@ -48,9 +41,7 @@ CGFloat kDefaultSpacing = 8.0;
 #pragma mark - Private properties
 
 - (void)configureObjects {
-  
   // Add keyboard notifications
-
   [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(keyboardNotification:)
                                              name:UIKeyboardWillShowNotification
@@ -63,14 +54,11 @@ CGFloat kDefaultSpacing = 8.0;
 }
 
 - (void)configureUI {
-  
   // Transition
-
   self.transitionManager = [CustomVideoTransitionManager new];
   self.transitioningDelegate = self.transitionManager;
   
   // Container view
-
   self.containerView.layer.masksToBounds = YES;
   self.containerView.layer.cornerRadius = kContentViewCornerRadius;
 }
@@ -89,7 +77,8 @@ CGFloat kDefaultSpacing = 8.0;
 }
 
 - (void)updateContainerViewPostionWithPCodeTestFieldEditingWithKeyboardFrame:(CGRect)keyboardFrame {
-  CGRect convertedEmbedCodeTextFieldFrame = [self.embedCodeTextField convertRect:self.embedCodeTextField.bounds toView:self.view];
+  CGRect convertedEmbedCodeTextFieldFrame = [self.embedCodeTextField convertRect:self.embedCodeTextField.bounds
+                                                                          toView:self.view];
   CGFloat convertedEmbedCodeTextFieldMaxY = CGRectGetMaxY(convertedEmbedCodeTextFieldFrame);
   CGFloat delta = convertedEmbedCodeTextFieldMaxY + kDefaultSpacing - keyboardFrame.origin.y;
   

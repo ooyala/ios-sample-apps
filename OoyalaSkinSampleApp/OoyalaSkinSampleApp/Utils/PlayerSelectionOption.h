@@ -14,6 +14,7 @@
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *domain;
 @property (nonatomic) NSString *title;
+@property (nonatomic) NSString *adSetProvider;
 @property (nonatomic) NSString *playerDomain;
 @property (nonatomic) NSString *nib;
 @property Class viewController;
@@ -22,6 +23,14 @@
           embedCode:(NSString *)embedCode
               pcode:(NSString *)pcode
        playerDomain:(NSString *)playerDomain
+     viewController:(Class)viewController
+                nib:(NSString *)nib;
+
+- (id)initWithTitle:(NSString *)title
+          embedCode:(NSString *)embedCode
+              pcode:(NSString *)pcode
+       playerDomain:(NSString *)playerDomain
+      adSetProvider:(NSString *)adSetProvider
      viewController:(Class)viewController
                 nib:(NSString *)nib;
 @end

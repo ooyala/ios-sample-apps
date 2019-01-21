@@ -13,10 +13,13 @@
 @class OOPlayer;
 
 @interface OOFCCTVRatingVideoView : UIView
--(id) __unavailable initWithCoder:(NSCoder *)aDecoder;
--(void) setContentPlayerAndSubview:(OOPlayer*)player;
--(void) setAdPlayerAndSubview:(OOPlayer*)player;
+
 @property (nonatomic) OOFCCTVRating *tvRating;
 @property (nonatomic) OOFCCTVRatingConfiguration *tvRatingConfiguration;
 @property (nonatomic) OOOoyalaPlayerVideoGravity videoGravity;
+
+- (instancetype) __unavailable initWithCoder:(NSCoder *)aDecoder;
+- (void)setContentPlayerAndSubview:(OOPlayer*)player;
+- (void)setAdPlayerAndSubview:(OOPlayer*)player;
+
 @end

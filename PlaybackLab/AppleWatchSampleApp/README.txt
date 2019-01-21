@@ -1,1 +1,0 @@
-This app demos how to control the playback in Ooyala's GettingStartedSampleApp which embed OoyalaSDK-iOS.

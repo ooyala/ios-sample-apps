@@ -1,7 +1,10 @@
 #import <Foundation/Foundation.h>
 
-#import "OOPlayerProtocol.h"
-#import "OOLifeCycle.h"
+#ifndef OOAdPlugin_h
+#define OOAdPlugin_h
+
+@protocol OOPlayerProtocol;
+@protocol OOLifeCycle;
 
 /**
  * @brief An interface to implement an Ad Plugin, which can plug into the OoyalaPlayer
@@ -53,9 +56,6 @@
 
 /**
  * This is called when control is handed over to the plugin
- *
- * @param token
- *          passed from plugin in previous calls.
  */
 - (void)onAdModeEntered;
 
@@ -86,7 +86,7 @@
 /**
  * @return non-nil (possibly empty) array of cue point times for ads.
  */
-- (NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSeconds;
+- (NSSet *)getCuePointsAtSeconds; ///<NSNumber int seconds>
 
 /**
  * Called when an icon is clicked
@@ -95,3 +95,5 @@
 - (void)onAdIconClicked: (NSInteger) index;
 
 @end
+
+#endif /* OOAdPlugin_h */

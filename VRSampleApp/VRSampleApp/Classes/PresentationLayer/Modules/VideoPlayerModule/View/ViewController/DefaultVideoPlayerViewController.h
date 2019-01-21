@@ -5,12 +5,11 @@
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
-#import "VideoPlayerViewModel.h"
-#import <OoyalaVRSDK/OoyalaVRSDK.h>
-#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
+@import UIKit;
 
+@class OOSkinViewController;
+@class VideoPlayerViewModel;
+@class AppDelegate;
 
 @interface DefaultVideoPlayerViewController : UIViewController
 

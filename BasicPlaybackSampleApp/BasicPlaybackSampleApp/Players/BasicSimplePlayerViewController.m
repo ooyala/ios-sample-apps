@@ -10,12 +10,11 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
 
-
 @interface BasicSimplePlayerViewController ()
 
 #pragma mark - Private properties
 
-@property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
+@property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *nib;
 @property (nonatomic) NSString *pcode;
@@ -23,22 +22,25 @@
 
 @end
 
-
 @implementation BasicSimplePlayerViewController {
     AppDelegate *appDel;
 }
 
 #pragma mark - Initialization
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-  self.nib = @"PlayerSimple";
+  _nib = @"PlayerSimple";
   NSLog(@"value of qa mode in BasicSimplePlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _embedCode = self.playerSelectionOption.embedCode;
+    _pcode = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
     self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    if (playerSelectionOption.isAudioOnlyAsset) {
+      [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
+    }
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -50,7 +52,7 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
@@ -63,13 +65,13 @@
   
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
   
   // In QA Mode , making textView visible
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     self.textView.hidden = NO;
   }
   
@@ -78,7 +80,7 @@
   
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [self.ooyalaPlayerViewController.player play];
+  [self.ooyalaPlayerViewController.player play];  
 }
 
 #pragma mark - Private functions
@@ -90,36 +92,36 @@
   [self.playerView addSubview:playerViewController.view];
 
   // Add constraints
-  
   [NSLayoutConstraint activateConstraints:@[
-                                            [playerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
-                                            [playerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
-                                            [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
-                                            [playerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
+    [playerViewController.view.topAnchor constraintEqualToAnchor:self.playerView.topAnchor],
+    [playerViewController.view.leadingAnchor constraintEqualToAnchor:self.playerView.leadingAnchor],
+    [playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerView.bottomAnchor],
+    [playerViewController.view.trailingAnchor constraintEqualToAnchor:self.playerView.trailingAnchor]
                                             ]];
 }
 
 #pragma mark - Actions
 
-- (void) notificationHandler:(NSNotification*) notification {
-  
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                       notification.name,
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
                        [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
   
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
   
   appDel.count++;

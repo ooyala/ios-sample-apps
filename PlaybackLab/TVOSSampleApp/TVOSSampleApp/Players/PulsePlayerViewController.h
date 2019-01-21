@@ -5,7 +5,6 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
 
 @class PulseLibraryOption;

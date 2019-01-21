@@ -13,10 +13,10 @@
 
 @interface ChildPlayerViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView *playerView;
+@property (nonatomic, weak) IBOutlet UIView *playerView;
 
-@property (nonatomic, strong) NSString *pcode;
-@property (nonatomic, strong) NSString *playerDomain;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 
 @end
 
@@ -29,14 +29,15 @@
   self.playerDomain = self.option.domain;
   
   // Create Ooyala ViewController
-  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+  OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
+                                                          domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
   self.ooyalaPlayerViewController = [[OOOoyalaTVPlayerViewController alloc] initWithPlayer:player];
   self.ooyalaPlayerViewController.playbackControlsEnabled = NO;
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
   
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];

@@ -8,15 +8,14 @@
 #import "VideoItemSection+Mappable.h"
 #import "VideoItem+Mappable.h"
 
-
 @implementation VideoItemSection (Mappable)
 
 + (id)createFromJSON:(id)json {
   json = (NSDictionary *)json;
   
   if (json) {
-    NSArray *videos = [json objectForKey:@"videos"];
-    NSString *title = [json objectForKey:@"title"];
+    NSArray *videos = json[@"videos"];
+    NSString *title = json[@"title"];
     NSArray *videoItems = [VideoItem createCollectionFromArrayJSON:videos];
 
     if (!videos || !title || !videoItems) {
@@ -35,7 +34,7 @@
 
 + (id)createCollectionFromArrayJSON:(id)json {
   NSArray *jsonArray = json;
-  NSMutableArray *objectsArray = [[NSMutableArray alloc] init];
+  NSMutableArray *objectsArray = [NSMutableArray array];
   
   if (jsonArray) {
     for (id json in jsonArray) {

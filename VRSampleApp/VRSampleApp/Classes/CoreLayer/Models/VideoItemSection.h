@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface VideoItemSection : NSObject
 
 @property (nonatomic) NSArray *videoItems;

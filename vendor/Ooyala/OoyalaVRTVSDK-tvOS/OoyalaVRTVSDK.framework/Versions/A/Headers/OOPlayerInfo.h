@@ -18,7 +18,7 @@
  A string representing the playback device.
  ALWAYS SET THIS TO @"iphone-html5" until we release sas.ooyala.com
  */
-@property (nonatomic, readonly, strong) NSString *device;
+@property (nonatomic, readonly) NSString *device;
 
 /*
  An NSArray of NSStrings describing supported content types for playback
@@ -31,7 +31,7 @@
 
  return nil to not include this parameter
  */
-@property (nonatomic, readonly, strong) NSArray *supportedFormats;
+@property (nonatomic, readonly) NSArray *supportedFormats;
 
 /*
  Supported h264 profiles
@@ -41,7 +41,7 @@
 
  return nil to not support this parameter
  */
-@property (nonatomic, readonly, strong) NSArray *supportedProfiles;
+@property (nonatomic, readonly) NSArray *supportedProfiles;
 
 // the max supported video width
 // set to -1 to ignore
@@ -57,4 +57,17 @@
 
 // the user Agent of this particular player
 @property (nonatomic, readonly) NSString *userAgent;
+
+/*
+ Additional params send to the SAS request.
+ The dictionary should contain [NSString:NSString] key-value pairs.
+ The dictionary key will be the query param name and the value will be the value of that query param.
+ */
+@property (nonatomic, readonly) NSDictionary *additionalParams;
+
+/**
+ Needs to be true if we're dealing with audio-only assets
+ */
+@property (nonatomic, readonly) BOOL isAudioOnly;
+
 @end

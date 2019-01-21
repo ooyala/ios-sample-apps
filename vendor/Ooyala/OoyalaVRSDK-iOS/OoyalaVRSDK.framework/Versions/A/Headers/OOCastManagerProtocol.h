@@ -2,7 +2,7 @@
 //  OOCastManager
 //  OoyalaSDK
 //
-//  Created by Liusha Huang on 3/27/15.
+//  Created on 3/27/15.
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
@@ -32,7 +32,7 @@
 /**
  * Return YES if is in castMode
  */
-@property(nonatomic, readonly) BOOL isInCastMode;
+@property (nonatomic, readonly) BOOL isInCastMode;
 
 /**
  * Return YES if it is reasonable to show a minicontroller. NO means
@@ -40,12 +40,12 @@
  * the underlying Casting state cannot support it. Do not cache the
  * result of this call but poll it when needed.
  */
-@property(nonatomic, readonly) BOOL isMiniControllerInteractionAvailable;
+@property (nonatomic, readonly) BOOL isMiniControllerInteractionAvailable;
 
 /**
  * get and set device volume
  */
-@property(nonatomic) float deviceVolume;
+@property (nonatomic) float deviceVolume;
 
 /**
  * Enter cast mode with given OOCastModeOptions object
@@ -56,6 +56,6 @@
  * Force casting to forget the asset (i.e. embed code), so the next
  * play will re-init the receiver.
  */
--(void) forceAssetRejoin;
+- (void)forceAssetRejoin;
 
 @end

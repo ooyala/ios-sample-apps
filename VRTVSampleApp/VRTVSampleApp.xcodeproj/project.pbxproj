@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393A46BD21CCC9C0005860F3 /* OoyalaIMASDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */; };
+		393A46BE21CCC9C8005860F3 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */; };
 		75614B5F1F711F5A005F26B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B5E1F711F5A005F26B7 /* main.m */; };
 		75614B621F711F5A005F26B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B611F711F5A005F26B7 /* AppDelegate.m */; };
 		75614B651F711F5A005F26B7 /* TVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B641F711F5A005F26B7 /* TVViewController.m */; };
@@ -17,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		523027F51FD83412002696CA /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaIMASDK.framework; path = "../vendor/Ooyala/OoyalaIMASDK-iOS/OoyalaIMASDK.framework"; sourceTree = "<group>"; };
+		393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = file; path = OoyalaIMASDK.framework; sourceTree = "<group>"; };
 		75614B5A1F711F5A005F26B7 /* VRTVSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRTVSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75614B5E1F711F5A005F26B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75614B601F711F5A005F26B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			files = (
 				75E1C1721FA0A66200330550 /* OoyalaVRTVSDK.framework in Frameworks */,
 				75806A091F8BD3FB004248C6 /* OoyalaTVSkinSDK.framework in Frameworks */,
+				393A46BE21CCC9C8005860F3 /* OoyalaIMASDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				75614B5C1F711F5A005F26B7 /* VRTVSampleApp */,
-				75614B5B1F711F5A005F26B7 /* Products */,
 				75614B781F71214A005F26B7 /* VendorLibraries */,
 				75614C3C1F712488005F26B7 /* Frameworks */,
+				75614B5B1F711F5A005F26B7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +111,7 @@
 		75614B781F71214A005F26B7 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */,
 				75E1C1711FA0A66200330550 /* OoyalaVRTVSDK.framework */,
 				75806A051F8BD3EB004248C6 /* OoyalaTVSkinSDK.framework */,
 			);
@@ -117,7 +121,6 @@
 		75614C3C1F712488005F26B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				523027F51FD83412002696CA /* OoyalaIMASDK.framework */,
 				75C8A48E1F729555007CFDC7 /* MediaPlayer.framework */,
 				75C8A48C1F729545007CFDC7 /* MediaAccessibility.framework */,
 				75614C691F713996005F26B7 /* GLKit.framework */,
@@ -168,12 +171,11 @@
 		75614B521F711F5A005F26B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Mark Mizinov";
 				TargetAttributes = {
 					75614B591F711F5A005F26B7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 53APD5F9YQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -203,6 +205,7 @@
 			files = (
 				75614B681F711F5A005F26B7 /* Main.storyboard in Resources */,
 				75614B6A1F711F5A005F26B7 /* Assets.xcassets in Resources */,
+				393A46BD21CCC9C0005860F3 /* OoyalaIMASDK.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,15 +246,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -291,15 +302,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -328,9 +347,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53APD5F9YQ;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -340,7 +359,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epam.ooyala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -351,9 +369,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53APD5F9YQ;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -363,7 +381,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epam.ooyala;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};

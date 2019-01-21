@@ -6,8 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VideoItem.h"
-
+@class VideoItem;
 
 @interface VideoPlayerViewModel : NSObject
 
@@ -20,5 +19,7 @@
                             pcode:(NSString *)pcode
                            domain:(NSString *)domain
                  andQAModeEnabled:(BOOL)QAModeEnabled;
+
+- (void)debugPrint:(NSString *)debugString;
 
 @end

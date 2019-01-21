@@ -19,37 +19,9 @@
  *
  *  To use the proxy, create an instance of IMAPictureInPictureProxy with the
  *  Picture-in-Picture delegate as an argument, and then simply set the
- *  Picture-in-Picture controller's delegate to the proxy. For example with an
- *  AVPictureInPictureController instance:
- *
- *  \@interface ViewController : UIViewController <AVPictureInPictureControllerDelegate>
- *
- *  \@property(nonatomic, strong) AVPictureInPictureController *pictureInPictureController;
- *
- *  \@property(nonatomic, strong) AVPlayerLayer *playerLayer;
- *
- *  \@property(nonatomic, strong) IMAPictureInPictureProxy *pictureInPictureProxy;
- *
- *  \@end
- *
- *  \@implementation ViewController
- *
- *  - (void)loadView {
- *
- *    ...
- *
- *    self.pictureInPictureProxy =
- *        [[IMAPictureInPictureProxy alloc] initWithAVPictureInPictureControllerDelegate:self];
- *
- *    self.pictureInPictureController =
- *        [[AVPictureInPictureController alloc] initWithPlayerLayer:self.playerLayer];
- *
- *    self.pictureInPictureController.delegate = self.pictureInPictureProxy;
- *
- *    ...
- *  }
- *
- *  \@end
+ *  Picture-in-Picture controller's delegate to the proxy. See
+ *  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/ios/picture_in_picture">
+ *  Picture in Picture</a> for more details.
  */
 @interface IMAPictureInPictureProxy : NSProxy <AVPictureInPictureControllerDelegate,
                                                AVPlayerViewControllerDelegate>

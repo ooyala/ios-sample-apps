@@ -28,4 +28,12 @@
   }
   return self;
 }
+
+- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode playerDomain:(NSString *)playerDomain adSetProvider:(NSString *)adSetProvider viewController:(Class)viewController nib:(NSString *)nib{
+  self = [self initWithTitle:title embedCode:embedCode pcode:pcode playerDomain:playerDomain viewController:viewController nib:nib];
+  if (self) {
+    self.adSetProvider = adSetProvider;
+  }
+  return self;
+}
 @end

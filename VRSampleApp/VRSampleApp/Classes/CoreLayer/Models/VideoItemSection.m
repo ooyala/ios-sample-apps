@@ -7,17 +7,14 @@
 
 #import "VideoItemSection.h"
 
-
 @implementation VideoItemSection
 
 #pragma mark - Initialization
 
 - (instancetype)initWithVideoItems:(NSArray *)videoItems andTitle:(NSString *)title {
-  self = [super init];
-  
-  if (self) {
-    self.videoItems = videoItems;
-    self.title = title;
+  if (self = [super init]) {
+    _videoItems = videoItems;
+    _title = title;
   }
   
   return self;

@@ -2,8 +2,8 @@
 //  Util.m
 //  AdobePassDemoApp
 //
-//  Created by Chris Leonavicius on 5/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created on 5/16/12.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
 //
 
 #import "Util.h"
@@ -11,13 +11,15 @@
 
 @implementation Util
 
-+ (NSString *)signRequestorId:(NSString *)requestorId keystore:(NSString *)keyStoreName pass:(NSString *)keyStorePass {
++ (NSString *)signRequestorId:(NSString *)requestorId
+                     keystore:(NSString *)keyStoreName
+                         pass:(NSString *)keyStorePass {
   uint8_t *signedBytes = NULL;
   SecKeyRef privateKey = NULL;
   NSString *signedRequestorId = nil;
   OSStatus status;
 
-  NSString *thePath = [[NSBundle mainBundle] pathForResource:keyStoreName ofType:@"p12"];
+  NSString *thePath = [NSBundle.mainBundle pathForResource:keyStoreName ofType:@"p12"];
   NSData *PKCS12Data = [NSData dataWithContentsOfFile:thePath];
   CFDataRef inPKCS12Data = (__bridge CFDataRef)PKCS12Data;
   CFStringRef password =  (__bridge CFStringRef)keyStorePass;
@@ -92,7 +94,8 @@
 }
 
 + (NSString *)urlEncode:(NSString *)str {
-  return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)str, NULL, (__bridge CFStringRef)@"|!*'\"();:@&=+$/?%#[]% ", CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+  return [str stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+
 }
 
 @end

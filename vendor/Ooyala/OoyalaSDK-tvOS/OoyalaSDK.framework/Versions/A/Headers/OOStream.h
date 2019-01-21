@@ -33,18 +33,18 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
   BOOL isLiveStream;
 }
 
-@property(readonly, nonatomic, strong) NSString *deliveryType; /**< The OOStream's delivery type */
-@property(readonly, nonatomic, strong) NSString *videoCodec; /**< The OOStream's video codec */
-@property(readonly, nonatomic, strong) NSString *urlFormat; /**< The OOStream's url format */
-@property(readonly, nonatomic, strong) NSString *framerate; /**< The OOStream's framerate */
-@property(readonly, nonatomic) NSInteger videoBitrate; /**< The OOStream's video bitrate */
-@property(readonly, nonatomic) NSInteger audioBitrate; /**< The OOStream's audio bitrate */
-@property(readonly, nonatomic) NSInteger height; /**< The OOStream's height */
-@property(readonly, nonatomic) NSInteger width; /**< The OOStream's width */
-@property(readonly, nonatomic, strong) NSString *url; /**< The OOStream's URL in the format specified by OOStream.urlFormat */
-@property(readonly, nonatomic, strong) NSString *aspectRatio; /**< The OOStream's URL (Remote Asset only) */
-@property(readonly, nonatomic, assign) BOOL isLiveStream; /**< The OOStream's URL (Remote Asset only) */
-@property(readonly, nonatomic, strong) NSString *profile; /**< The OOStream's encoding profile */
+@property (readonly, nonatomic) NSString *deliveryType; /**< The OOStream's delivery type */
+@property (readonly, nonatomic) NSString *videoCodec; /**< The OOStream's video codec */
+@property (readonly, nonatomic) NSString *urlFormat; /**< The OOStream's url format */
+@property (readonly, nonatomic) NSString *framerate; /**< The OOStream's framerate */
+@property (readonly, nonatomic) NSInteger videoBitrate; /**< The OOStream's video bitrate */
+@property (readonly, nonatomic) NSInteger audioBitrate; /**< The OOStream's audio bitrate */
+@property (readonly, nonatomic) NSInteger height; /**< The OOStream's height */
+@property (readonly, nonatomic) NSInteger width; /**< The OOStream's width */
+@property (readonly, nonatomic) NSString *url; /**< The OOStream's URL in the format specified by OOStream.urlFormat */
+@property (readonly, nonatomic) NSString *aspectRatio; /**< The OOStream's URL (Remote Asset only) */
+@property (readonly, nonatomic, assign) BOOL isLiveStream; /**< The OOStream's URL (Remote Asset only) */
+@property (readonly, nonatomic) NSString *profile; /**< The OOStream's encoding profile */
 
 @property (readonly, nonatomic) NSString *drmType;        /**< If drm protected, The OOStream's drm type */
 @property (readonly, nonatomic) NSString *licenseUrl;     /**< If drm protected, The OOStream's license url */
@@ -61,21 +61,21 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
  * @param[in] theUrl an NSURL pointing to an asset for streaming.
  * @param[in] theType see OOConstants.h e.g. OO_DELIVERY_TYPE_HLS.
  */
-- (id)initWithUrl:(NSURL *)theUrl deliveryType:(NSString *)theType;
+- (instancetype)initWithUrl:(NSURL *)theUrl deliveryType:(NSString *)theType;
 
 /** @internal
  * Initialize a OOStream using the specified data (subclasses should override this)
  * @param[in] data the NSDictionary containing the data to use to initialize this OOStream
  * @returns the initialized OOStream
  */
-- (id)initWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithDictionary:(NSDictionary *)data;
 
 /** @internal
  * Initialize a OOStream using the specified asset data (subclasses should override this)
- * @param[in] asset data the NSDictionary containing the data to use to initialize this OOStream
+ * @param[in] data data the NSDictionary containing the data to use to initialize this OOStream
  * @returns the initialized OOStream
  */
-- (id)initWithAssetDictionary:(NSDictionary *)data;
+- (instancetype)initWithAssetDictionary:(NSDictionary *)data;
 
 /** @internal
  * Update the OOStream using the specified data (subclasses should override and call this)

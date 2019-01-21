@@ -7,16 +7,18 @@
 
 #import "OOOoyalaPlayerView.h"
 
+#ifndef OO360GVRPlayerView_h
+#define OO360GVRPlayerView_h
 
 @interface OO360GVRPlayerView : OOOoyalaPlayerView
 
 /**
  * An enum whose cases describe how a user can change the video type.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, OO360VideoType) {
   Mono,
   Stereo,
-} OO360VideoType;
+};
 
 @property (nonatomic, assign) OO360VideoType videoType;
 
@@ -36,3 +38,5 @@ typedef enum {
 - (void)setHidden:(BOOL)hidden;
 
 @end
+
+#endif /* OO360GVRPlayerView_h */

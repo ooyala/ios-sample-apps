@@ -12,6 +12,8 @@
 
 @class AVPlayer;
 @class AVPlayerItem;
+@class AVURLAsset;
+@class IMAAVPlayerVideoDisplay;
 
 /**
  *  The key for subtitle language.
@@ -27,6 +29,25 @@ extern NSString *const kIMASubtitleWebVTT;
  *  The key for the TTML sidecar subtitle URL.
  */
 extern NSString *const kIMASubtitleTTML;
+
+/**
+ *  A callback protocol for IMAAVPlayerVideoDisplayDelegate.
+ */
+@protocol IMAAVPlayerVideoDisplayDelegate<NSObject>
+
+@optional
+
+/**
+ *  Called when the IMAAVPlayerVideoDisplay will load a stream for playback. Allows the publisher to
+ *  register the AVURLAsset for Fairplay content protection before playback starts.
+ *
+ *  @param avPlayerVideoDisplay the IMAVPlayerVideoDisplay that will load the AVURLAsset.
+ *  @param avUrlAsset           the AVURLAsset representing the stream to be loaded.
+ */
+- (void)avPlayerVideoDisplay:(IMAAVPlayerVideoDisplay *)avPlayerVideoDisplay
+         willLoadStreamAsset:(AVURLAsset *)avUrlAsset;
+
+@end
 
 /**
  *  An implementation of the IMAVideoDisplay protocol. This object is intended
@@ -47,6 +68,11 @@ extern NSString *const kIMASubtitleTTML;
 @property(nonatomic, strong, readonly) AVPlayerItem *playerItem;
 
 /**
+ *  Allows the publisher to receive IMAAVPlayerVideoDisplay specific events.
+ */
+@property(nonatomic, weak) id<IMAAVPlayerVideoDisplayDelegate> avPlayerVideoDisplayDelegate;
+
+/**
  *  The subtitles for the current stream. Will be nil until the stream starts playing.
  */
 @property(nonatomic, strong, readonly) NSArray *subtitles;
@@ -61,6 +87,9 @@ extern NSString *const kIMASubtitleTTML;
  */
 - (instancetype)initWithAVPlayer:(AVPlayer *)player;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

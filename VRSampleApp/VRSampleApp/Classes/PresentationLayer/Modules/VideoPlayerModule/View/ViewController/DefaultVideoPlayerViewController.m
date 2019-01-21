@@ -6,23 +6,20 @@
 //
 
 #import "DefaultVideoPlayerViewController.h"
-
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
+#import <OoyalaVRSDK/OoyalaVRSDK.h>
+#import "VideoPlayerViewModel.h"
+#import "AppDelegate.h"
+#import "VideoItem.h"
 
 @interface DefaultVideoPlayerViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView *skinContainerView;
-@property (weak, nonatomic) IBOutlet UITextView *qaInfoTextView;
+@property (nonatomic, weak) IBOutlet UIView *skinContainerView;
+@property (nonatomic, weak) IBOutlet UITextView *qaInfoTextView;
 
 @end
 
-
 @implementation DefaultVideoPlayerViewController
-
-#pragma mark - Init/deinit
-
-- (void)dealloc {
-  [NSNotificationCenter.defaultCenter removeObserver:self];
-}
 
 #pragma mark - Life cycle
 
@@ -36,25 +33,22 @@
 #pragma mark - Private functions
 
 - (void)configureObjects {
-  
   // App delegate
-  
   self.appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   // VR player
-  
   NSURL *jsCodeLocation = [NSBundle.mainBundle URLForResource:@"main" withExtension:@"jsbundle"];
-  NSDictionary *overrideConfigs = @{@"upNextScreen" : @{@"timeToShow" : @"8"}};
+  NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
   OOOptions *options = [OOOptions new];
   
   options.showPromoImage = YES;
   options.bypassPCodeMatching = NO;
   
   OOPlayerDomain *domain = [OOPlayerDomain domainWithString:self.viewModel.domain];
-  OOOoyalaVRPlayer *ooyalaVRPlayer = [[OOOoyalaVRPlayer alloc] initWithPcode:self.viewModel.pcode domain:domain options:options];
-  
+  OOOoyalaVRPlayer *ooyalaVRPlayer = [[OOOoyalaVRPlayer alloc] initWithPcode:self.viewModel.pcode
+                                                                      domain:domain
+                                                                     options:options];
   // SKin
-  
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
                                                                             limit:10
                                                                           timeout:60];
@@ -70,35 +64,30 @@
                                                    launchOptions:nil];
   
   // Subscribe for notifications with QA mode enabled
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:_skinController.player];
   
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:_skinController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(switchFullScreenNotificationHandler:)
+                                             name:OOOoyalaPlayerSwitchSceneNotification
+                                           object:nil];
   
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(switchFullScreenNotificationHandler:)
-                                               name:OOOoyalaPlayerSwitchSceneNotification
-                                             object:nil];
-  
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(touchesNotificationHandler:)
-                                               name:OOOoyalaPlayerHandleTouchNotification
-                                             object:nil];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(touchesNotificationHandler:)
+                                             name:OOOoyalaPlayerHandleTouchNotification
+                                           object:nil];
   
   // Set video embed code
-  
   [ooyalaVRPlayer setEmbedCode:self.viewModel.videoItem.embedCode];
 }
 
 - (void)configureUI {
-  
   // Title
-  
   self.navigationItem.title = self.viewModel.videoItem.title;
   
   // Add skin controlle what childer view controller
-
   [self addChildViewController:self.skinController];
   
   // Update container view Y position
@@ -110,27 +99,20 @@
   }
   
   // Set hidden text view with QA mode enabled
-
   [self.qaInfoTextView setHidden:!self.viewModel.QAModeEnabled];
 }
 
-- (void)printLogInTextViewIfNeeded:(NSString *)logMessage {
-  
-  // In QA Mode , adding notifications to the TextView
-  
-  if (self.viewModel.QAModeEnabled) {
-    NSString *string = _qaInfoTextView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, logMessage];
-    dispatch_async(dispatch_get_main_queue(), ^ {
-      [_qaInfoTextView setText:appendString];
-    });
-  }
+- (void)printLogInTextView:(NSString *)logMessage {
+  NSString *string = _qaInfoTextView.text;
+  NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, logMessage];
+  dispatch_async(dispatch_get_main_queue(), ^ {
+    self.qaInfoTextView.text = appendString;
+  });
 }
 
 #pragma mark - Actions
 
 - (void)notificationHandler:(NSNotification*)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -138,42 +120,50 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %ld",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[_skinController.player state]],
-                       [_skinController.player playheadTime], (long)_appDelegate.count];
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.skinController.player.state],
+                       self.skinController.player.playheadTime,
+                       (long)self.appDelegate.count];
   
   if ([notification.name isEqualToString:OOOoyalaPlayerVideoHasVRContent]) {
     NSDictionary *vrContentUserInfo = notification.userInfo;
-    BOOL isVrContent = [[vrContentUserInfo objectForKey:@"vrContent"] boolValue];
+    BOOL isVrContent = [vrContentUserInfo[@"vrContent"] boolValue];
     
     message = [message stringByAppendingString:[NSString stringWithFormat:@" vrContentEvent: %@", isVrContent ? @"true" : @"false"]];
   }
   
   NSLog(@"%@",message);
   
-  [self printLogInTextViewIfNeeded:message];
+  // In QA Mode , adding notifications to the TextView and file
+  if (self.viewModel.QAModeEnabled) {
+    [self printLogInTextView:message];
+    [self.viewModel debugPrint:message];
+  }
   
   _appDelegate.count++;
 }
 
 - (void)switchFullScreenNotificationHandler:(NSNotification*)notification {
-  Float64 playhead = [_skinController.player playheadTime];
+  Float64 playhead = _skinController.player.playheadTime;
   long notificationsCount = (long)_appDelegate.count;
   
   NSString *message = [NSString stringWithFormat: @"Notification Received: %@. playhead: %f count: %ld",
                        @"vrModeChanged",
                        playhead,
                        notificationsCount];
-  
   NSLog(@"%@", message);
   
-  [self printLogInTextViewIfNeeded:message];
-  
+  // In QA Mode , adding notifications to the TextView and file
+  if (self.viewModel.QAModeEnabled) {
+    [self printLogInTextView:message];
+    [self.viewModel debugPrint:message];
+  }
+
   _appDelegate.count++;
 }
 
 - (void)touchesNotificationHandler:(NSNotification*)notification {
   NSDictionary *notificationObject = notification.object;
-  Float64 playhead = [_skinController.player playheadTime];
+  Float64 playhead = _skinController.player.playheadTime;
   long notificationsCount = (long)_appDelegate.count;
   
   NSString *message = [NSString stringWithFormat: @"Notification Received: %@. touchesEventName: %@. playhead: %f count: %ld",
@@ -184,10 +174,13 @@
   
   NSLog(@"%@", message);
   
-  [self printLogInTextViewIfNeeded:message];
-  
+  // In QA Mode , adding notifications to the TextView and file
+  if (self.viewModel.QAModeEnabled) {
+    [self printLogInTextView:message];
+    [self.viewModel debugPrint:message];
+  }
+
   _appDelegate.count++;
 }
-
 
 @end

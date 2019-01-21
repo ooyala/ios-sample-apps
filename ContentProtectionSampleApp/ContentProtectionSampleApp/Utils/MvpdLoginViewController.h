@@ -2,8 +2,8 @@
 //  MvpdLoginViewController.h
 //  AdobePassDemoApp
 //
-//  Created by Chris Leonavicius on 5/15/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created on 5/15/12.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,6 +11,8 @@
 #import "AdobePassUiDelegate.h"
 
 @interface MvpdLoginViewController : UIViewController <UIWebViewDelegate>
-- (id)initWithString:(NSString *)url delegate:(id<AdobePassUiDelegate>)delegate;
-- (id)initWithUrl:(NSURL *)url delegate:(id<AdobePassUiDelegate>)delegate;
+
+- (instancetype)initWithString:(NSString *)url delegate:(id<AdobePassUiDelegate>)theDelegate;
+- (instancetype)initWithUrl:(NSURL *)url delegate:(id<AdobePassUiDelegate>)theDelegate;
+
 @end

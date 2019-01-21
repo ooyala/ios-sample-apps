@@ -6,7 +6,8 @@
 //
 
 #import "ListOfVideosViewController.h"
-
+#import "VideoItemSection.h"
+#import "VideoItem.h"
 
 @interface ListOfVideosViewController () <UITableViewDataSource, UITableViewDelegate>
 

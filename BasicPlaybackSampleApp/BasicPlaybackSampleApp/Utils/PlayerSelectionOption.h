@@ -7,15 +7,29 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface PlayerSelectionOption : NSObject
+
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *domain;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *nib;
 @property Class viewController;
+@property BOOL isAudioOnlyAsset;
 
-- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain viewController:(Class)viewController;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController;
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController
+                  isAudioOnly:(BOOL)isAudioOnly;
+
 @end

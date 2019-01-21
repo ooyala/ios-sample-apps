@@ -2,15 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:VRTVSampleApp/VRTVSampleApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:VRSampleApp/VRSampleApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SwiftVRSkinSampleApp/SwiftVRSkinSampleApp.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:AdvancedPlaybackSampleApp/AdvancedPlaybackSampleApp.xcodeproj">
    </FileRef>
    <FileRef
@@ -38,6 +29,9 @@
       location = "group:OoyalaAPISampleApp/OoyalaAPISampleApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:OoyalaHeartbeatSampleApp/OoyalaHeartbeatSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:OoyalaSkinSampleApp/OoyalaSkinSampleApp.xcodeproj">
    </FileRef>
    <FileRef
@@ -48,6 +42,15 @@
    </FileRef>
    <FileRef
       location = "group:SecurePlayerSampleApp/SecurePlayerSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SwiftVRSkinSampleApp/SwiftVRSkinSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VRSampleApp/VRSampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VRTVSampleApp/VRTVSampleApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:README.md">

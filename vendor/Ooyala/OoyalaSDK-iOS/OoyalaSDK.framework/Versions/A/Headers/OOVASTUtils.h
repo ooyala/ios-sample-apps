@@ -6,10 +6,11 @@
  * \ingroup vast
  */
 @interface OOVASTUtils : NSObject
-+ (void)setAdvertisingId:(NSString*)adId;
-+ (NSString*)advertisingId;
+
++ (void)setAdvertisingId:(NSString *)adId;
++ (NSString *)advertisingId;
 + (NSURL *)urlFromAdUrlString:(NSString *)url;
-+ (void)logErrorCodes: (NSArray *)errorCodes;
++ (void)logErrorCodes:(NSArray *)errorCodes;
 
 + (BOOL)boolValueForAttribute:(NSString *)attribute
                       element:(OOTBXMLElement *)element

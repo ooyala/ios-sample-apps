@@ -25,9 +25,9 @@
 @end
 
 
-@implementation IMAPlayerViewController
-
-AppDelegate *appDel;
+@implementation IMAPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 
@@ -62,7 +62,7 @@ AppDelegate *appDel;
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
   //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
-  ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause; //This is reccomended to make sure the endscreen shows up as expected
+  ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause; //This is recommended to make sure the endscreen shows up as expected
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
@@ -103,17 +103,18 @@ AppDelegate *appDel;
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.skinController.player state]],
                        [self.skinController.player playheadTime], appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.textView setText:appendString];
-  }
-  
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
+  }  
   appDel.count++;
 }
 

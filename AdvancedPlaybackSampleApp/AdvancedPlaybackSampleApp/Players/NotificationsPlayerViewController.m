@@ -2,7 +2,7 @@
 //  NotificationsPlayerViewController.m
 //  AdvancedPlaybackSampleApp
 //
-//  Created by Michael Len on 11/16/16.
+//  Created on 11/16/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
@@ -209,9 +209,6 @@
     // Notification when the OoyalaPlayer has gotten Timed Metadata from within the media stream
   } else if ([notification.name isEqualToString:OOOoyalaPlayerJsonReceivedNotification]) {
     
-    // Notification when, while casting, the volume  changes on the device and the UI needs to be updated
-  } else if ([notification.name isEqualToString:OOOoyalaPlayerCastVolumeChangeNotification]) {
-    
     // Notification when the bitrate changes in media playback
   } else if ([notification.name isEqualToString:OOOoyalaPlayerBitrateChangedNotification]) {
     NSLog(@"Note: Bitrate changed notification received: %f", self.ooyalaPlayerViewController.player.bitrate);
@@ -219,16 +216,18 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
                        [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
   
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@" ,string, message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
   appDel.count++;
 }

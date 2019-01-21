@@ -3,20 +3,22 @@
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 /**
  An interface that gives OOCuePointsView the duration to use when rendering its cuepoints
  */
 @protocol OOCuePointViewDurationDataSource
-@property (nonatomic, readonly) float duration; /**< The duration of a video */
+
+@property (nonatomic, readonly) double duration; /**< The duration of a video */
+
 @end
 
 /**
  A view that renders the cue points of advertisements within a certain frame
  */
 @interface OOCuePointsView : UIView
+
 @property (nonatomic) NSSet *cuePointsAtSeconds; /**< The set of NSNumber cuepoints to render, in seconds */
 
 /**
@@ -32,5 +34,8 @@
  @param[in] diameter the diameter of the cue points to be rendered
  @returns an initialized OOCuePointsView, or nil
  */
-- (instancetype)initWithFrame:(CGRect)frame padding:(float)padding durationDataSource:(id <OOCuePointViewDurationDataSource>)durationDataSource diameter:(float)diameter;
+- (instancetype)initWithFrame:(CGRect)frame
+                      padding:(CGFloat)padding
+           durationDataSource:(id <OOCuePointViewDurationDataSource>)durationDataSource
+                     diameter:(CGFloat)diameter;
 @end

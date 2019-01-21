@@ -9,7 +9,6 @@
 #import "OOControlsDelegate.h"
 #import "OOTimeSliderDelegate.h"
 
-
 @interface OOInlineViewController : OOControlsViewController <OOControlsDelegate, OOTimeSliderDelegate>
 
 @end

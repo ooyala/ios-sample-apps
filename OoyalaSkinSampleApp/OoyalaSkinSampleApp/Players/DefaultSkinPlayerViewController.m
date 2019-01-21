@@ -20,14 +20,15 @@
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
+@property (nonatomic) UIImageView *screenshotView;
 
 @end
 
 
-@implementation DefaultSkinPlayerViewController
-
-AppDelegate *appDel;
-NSMutableArray *_sharePlugins;
+@implementation DefaultSkinPlayerViewController {
+  AppDelegate *appDel;
+  NSMutableArray *_sharePlugins;
+}
 
 #pragma mark - Initialization
 
@@ -65,8 +66,7 @@ NSMutableArray *_sharePlugins;
 //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
 
-  ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;  //This is reccomended to make sure the endscreen shows up as expected
-  
+  ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;  //This is recommended to make sure the endscreen shows up as expected
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
@@ -90,6 +90,36 @@ NSMutableArray *_sharePlugins;
   self.textView.hidden = !self.qaModeEnabled;
 
   [ooyalaPlayer setEmbedCode:self.embedCode];
+  
+  [self configureScreenshot];
+}
+
+#pragma mark - Screenshot
+
+- (void)configureScreenshot {
+  self.screenshotView = [[UIImageView alloc] initWithFrame:self.videoView.frame];
+  self.screenshotView.contentMode = UIViewContentModeScaleAspectFit;
+  self.screenshotView.hidden = YES;
+  self.screenshotView.layer.borderColor = UIColor.whiteColor.CGColor;
+  self.screenshotView.layer.borderWidth = 2.0;
+  
+  [self.videoView addSubview:self.screenshotView];
+  
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Screenshot"
+                                                                            style:UIBarButtonItemStylePlain
+                                                                           target:self
+                                                                           action:@selector(showScreenshot)];
+}
+
+- (void)showScreenshot {
+  self.screenshotView.image = self.skinController.player.screenshot;
+  self.screenshotView.hidden = NO;
+  self.screenshotView.alpha = 1.0f;
+  [UIView animateWithDuration:0.5 delay:2.0 options:0 animations:^{
+    self.screenshotView.alpha = 0.0f;
+  } completion:^(BOOL finished) {
+    self.screenshotView.hidden = YES;
+  }];
 }
 
 #pragma mark - Private functions
@@ -103,19 +133,19 @@ NSMutableArray *_sharePlugins;
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.skinController.player state]],
                        [self.skinController.player playheadTime], appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@",string,message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
-  
   appDel.count++;
 }
-
 
 @end

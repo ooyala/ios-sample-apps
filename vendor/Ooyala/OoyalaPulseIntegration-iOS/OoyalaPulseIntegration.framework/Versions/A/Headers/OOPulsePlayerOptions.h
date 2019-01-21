@@ -2,7 +2,7 @@
 //  OOPulsePlayerOptions.h
 //  OoyalaSDK
 //
-//  Created by Mehdi Dadash Pour on 09/11/16.
+//  Created on 09/11/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 

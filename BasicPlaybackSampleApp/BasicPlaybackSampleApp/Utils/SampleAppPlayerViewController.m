@@ -8,19 +8,21 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
 #import "SampleAppPlayerViewController.h"
 
 @implementation SampleAppPlayerViewController
 
--(id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled{
-  self = [super init];
-  if (self) {
-    self.playerSelectionOption = playerSelectionOption;
-    self.qaModeEnabled = qaModeEnabled;
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled{
+  if (self = [super init]) {
+    _playerSelectionOption = playerSelectionOption;
+    _qaModeEnabled = qaModeEnabled;
   }
   return self;
 }
 
-- (IBAction)onButtonClick:(id)sender {}
+- (IBAction)onButtonClick:(id)sender {
+
+}
+
 @end

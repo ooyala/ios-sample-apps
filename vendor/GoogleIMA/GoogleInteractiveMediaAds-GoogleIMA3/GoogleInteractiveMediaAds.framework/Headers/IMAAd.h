@@ -50,9 +50,17 @@
 @property(nonatomic, readonly) NSTimeInterval duration;
 
 /**
- *  The UI elements that will be displayed during ad playback.
+ *  The <a href="../Enums/IMAUiElementType.html">UI elements</a> that will be displayed during ad
+ *  playback.
  */
+
 @property(nonatomic, copy, readonly) NSArray *uiElements;
+
+/**
+ *  Whether or not the ad UI will be disabled for this ad.
+ *  :nodoc:
+ */
+@property(nonatomic, readonly, getter=isUiDisabled) BOOL uiDisabled;
 
 /**
  *  The width of the ad asset. For non-linear ads, this is the actual width
@@ -77,6 +85,12 @@
  *  Specifies whether the ad is skippable.
  */
 @property(nonatomic, readonly, getter=isSkippable) BOOL skippable;
+
+/**
+ *  The number of seconds of playback before the ad becomes skippable. -1 is returned for non
+ *  skippable ads or if this is unavailable.
+ */
+@property(nonatomic, readonly) NSTimeInterval skipTimeOffset;
 
 /**
  *  Set of ad podding properties.
@@ -128,6 +142,11 @@
 @property(nonatomic, copy, readonly) NSString *dealID;
 
 /**
+ *  The IDs of the ads, starting with the first wrapper ad.
+ */
+@property(nonatomic, copy, readonly) NSArray<NSString *> *wrapperAdIDs;
+
+/**
  *  The IDs of the ads' creatives, starting with the first wrapper ad.
  */
 @property(nonatomic, copy, readonly) NSArray<NSString *> *wrapperCreativeIDs;
@@ -138,7 +157,9 @@
  */
 @property(nonatomic, copy, readonly) NSArray<NSString *> *wrapperSystems;
 
-
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

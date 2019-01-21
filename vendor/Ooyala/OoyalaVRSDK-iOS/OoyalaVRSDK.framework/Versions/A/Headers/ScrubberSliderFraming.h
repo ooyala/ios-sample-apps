@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#ifndef ScrubberSliderFraming_h
+#define ScrubberSliderFraming_h
 
 /**
  * A class which helps measure the correct size for the scrubber, after all buttons have been measured
@@ -21,3 +23,5 @@
 + (CGRect)calculateScrubberSliderFrameWithButtons:(NSArray *)buttonArray
                                         baseWidth:(CGFloat)baseWidth;
 @end
+
+#endif /* ScrubberSliderFraming_h */

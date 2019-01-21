@@ -1,4 +1,5 @@
 {
+  "Connected to": "Connected to",
   "Learn More" : "Learn More",
   "CLOSED CAPTION PREVIEW": "CLOSED CAPTION PREVIEW",
   "Sample Text": "Sample Text",
@@ -19,7 +20,6 @@
   "Discover": "Discover",
   "Up next": "Up next",
   "Video Quality": "Video Quality",
-  "Invest In Social Change": "Invest In Social Change",
   "Share": "Share",
   "Start at": "Start at",
   "Embed": "Embed",
@@ -60,8 +60,10 @@
   "Device ID is too long": "Device ID is too long",
   "INVALID PLAYER TOKEN": "INVALID PLAYER TOKEN",
   "Invalid Ooyala Player token": "Invalid Ooyala Player token",
-  "DEVICE LIMIT REACHED": "DEVICE LIMIT REACHED",
-  "Device limit has been reached": "Device limit has been reached",
+  "AUTHORIZATION ERROR": "AUTHORIZATION ERROR",
+  "Unable to register this device to this account, as the maximum number of authorized devices has already been reached. Error Code 22": "Unable to register this device to this account, as the maximum number of authorized devices has already been reached. Error Code 22",
+  "Unable to access this content, as the maximum number of devices has already been authorized. Error Code 29": "Unable to access this content, as the maximum number of devices has already been authorized. Error Code 29",
+  "Please remove one of your authorized devices to enable this device.": "Please remove one of your authorized devices to enable this device.",
   "LICENSE ERROR": "LICENSE ERROR",
   "General error acquiring license": "General error acquiring license",
   "DRM SERVER ERROR": "DRM SERVER ERROR",
@@ -133,5 +135,11 @@
   "Closed Captions":"Closed Captions",
   "Full Screen": "Full Screen",
   "Exit Full Screen": "Exit Full Screen",
-  "More Options": "More Options"
+  "More Options": "More Options",
+  "Audio": "Audio",
+  "Subtitles": "Subtitles",
+  "Undefined language": "Undefined language",
+  "No linguistic content": "No linguistic content",
+  "Speed": "Speed",
+  "Normal": "Normal"
 }

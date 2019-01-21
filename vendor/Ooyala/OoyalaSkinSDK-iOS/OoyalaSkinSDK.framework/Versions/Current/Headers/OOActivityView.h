@@ -6,8 +6,8 @@
 //  Copyright © 2015 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "RCTBridgeModule.h"
+#import <React/RCTBridgeModule.h>
+
 
 @interface OOActivityView : NSObject <RCTBridgeModule>
 

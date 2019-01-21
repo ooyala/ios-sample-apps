@@ -14,6 +14,7 @@
 @class OOChannel;
 @class OOClosedCaptions;
 @class OOUnbundledVideo;
+@class SsaiMetadata;
 
 /**
  * this class implements video stream object
@@ -27,26 +28,27 @@
   BOOL live;
 }
 
-@property(readonly, nonatomic, strong) NSMutableArray *ads;            /**< @internal An NSMutableArray containing the ads */
-@property(readonly, nonatomic, strong) OOClosedCaptions *closedCaptions; /**< @internal An NSMutableArray containing the closedCaptions */
-@property(readonly, nonatomic, strong) OOChannel *parent;                /**< This OOVideo's parent OOChannel if it exists (could be a OODynamicChannel) */
-@property(readonly, nonatomic) Float64 duration;                       /**< The OOVideo's Total Duration (Length) */
-@property(readonly, nonatomic) BOOL live;                              /**< Whether or not the video is live */
-@property(readonly, nonatomic) NSURL *fairplayKeyURL;                  /**< If this is an offline Fairplay asset, this is where the Fairplay key is located */
-@property(nonatomic) int retryCount;                                   /**< Keeps track of the number of retries already done for a given error. Used by the HA plugin to try an reset the video with the player. */
+@property (readonly, nonatomic) NSMutableArray *ads;                    /**< @internal An NSMutableArray containing the ads */
+@property (readonly, nonatomic) OOClosedCaptions *closedCaptions;       /**< @internal An NSMutableArray containing the closedCaptions */
+@property (readonly, nonatomic) OOChannel *parent;                      /**< This OOVideo's parent OOChannel if it exists (could be a OODynamicChannel) */
+@property (readonly, nonatomic) Float64 duration;                       /**< The OOVideo's Total Duration (Length) */
+@property (readonly, nonatomic) BOOL live;                              /**< Whether or not the video is live */
+@property (readonly, nonatomic) NSURL *fairplayKeyURL;                  /**< If this is an offline Fairplay asset, this is where the Fairplay key is located */
+@property (nonatomic) int retryCount;                                   /**< Keeps track of the number of retries already done for a given error. Used by the HA plugin to try an reset the video with the player. */
+@property (readonly, nonatomic) NSString *defaultLanguageCode;          /**< The OOContentItem's Default language Code (eng, deu etc.) */
 
 /**
  * Initialize a OOVideo using the specified data (subclasses should override this)
  * @param[in] unbundledVideo defines the streams and ads to use initializing the OOVideo.
  */
-- (id)initWithUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
+- (instancetype)initWithUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
  * @param[in] theStreams NSArray containing OOStreams.
  * @param[in] theAds NSArray containing OOManagedAdSpots.
  */
-- (id)initWithUnbundledStreams:(NSArray*)theStreams ads:(NSArray*)theAds;
+- (instancetype)initWithUnbundledStreams:(NSArray*)theStreams ads:(NSArray*)theAds;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
@@ -55,7 +57,9 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
  * @returns the initialized OOVideo
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCode:(NSString *)theEmbedCode api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                         embedCode:(NSString *)theEmbedCode
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
@@ -65,7 +69,10 @@
  * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
  * @returns the initialized OOVideo
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCode:(NSString *)theEmbedCode parent:(OOChannel *)theParent api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                         embedCode:(NSString *)theEmbedCode
+                            parent:(OOChannel *)theParent
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OOVideo using the specified data (subclasses should override and call this)
@@ -118,6 +125,7 @@
  */
 - (id)fetchPlaybackInfo:(void (^)(BOOL))callback;
 
+
 /**
  * Check if the OOVideo has ads
  * @returns whether the OOVideo has ads or not
@@ -141,5 +149,7 @@
  * @param predicate block that returns TRUE for ads to keep, FALSE for ads to remove.
  */
 -(void)filterAds:(NSPredicate*)predicate;
+
+-(BOOL)isSsaiEnabled;
 
 @end

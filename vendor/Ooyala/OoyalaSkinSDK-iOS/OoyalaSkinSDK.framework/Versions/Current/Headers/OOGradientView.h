@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "RCTView.h"
+#import <React/RCTView.h>
+
 
 @interface OOGradientView : RCTView
 

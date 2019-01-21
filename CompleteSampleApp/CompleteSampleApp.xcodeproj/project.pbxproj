@@ -10,7 +10,6 @@
 		0B140F591A2E4709001324EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F581A2E4709001324EE /* main.m */; };
 		0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F5B1A2E4709001324EE /* AppDelegate.m */; };
 		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
-		0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B17A0E41A78203E009D1C50 /* libc++.dylib */; };
 		0B19FF6A1A3B8C75003E57DF /* CompleteSampleAppListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */; };
 		0B19FF6B1A3B8C75003E57DF /* CompleteSampleAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */; };
 		0B1AFB751B02C6C400347DFA /* libNPAWSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */; };
@@ -18,7 +17,6 @@
 		0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45BC1A6889440092F056 /* EventKit.framework */; };
 		0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C01A6889510092F056 /* MessageUI.framework */; };
 		0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C21A68895A0092F056 /* AdSupport.framework */; };
-		0B9457CB1AC2A5D8000DD545 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45BE1A68894B0092F056 /* libxml2.dylib */; };
 		0B9458E81AC33A1C000DD545 /* adobepass.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 0B9458BB1AC33A1C000DD545 /* adobepass.p12 */; };
 		0B9458E91AC33A1C000DD545 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458BE1AC33A1C000DD545 /* AccessEnabler.h */; };
 		0B9458EA1AC33A1C000DD545 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458BF1AC33A1C000DD545 /* AccessEnablerConstants.h */; };
@@ -61,7 +59,10 @@
 		0BC947EA1A817768004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947E41A817768004CB997 /* TableCell.xib */; };
 		0BDC4BE51A9FA47B00576639 /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BDC4BE41A9FA47B00576639 /* ChannelCell.xib */; };
 		0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA4C1A68730A0050A602 /* WebKit.framework */; };
-		0BF4FA4F1A6873120050A602 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA4E1A6873120050A602 /* libz.dylib */; };
+		39278CD42192D2FB00F6F4E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39278CD32192D2FB00F6F4E2 /* Images.xcassets */; };
+		39E0254221B7BE17000CC6A8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0254121B7BE17000CC6A8 /* libz.tbd */; };
+		39E0254421B7BE1E000CC6A8 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0254321B7BE1E000CC6A8 /* libxml2.tbd */; };
+		39E0254621B7BE25000CC6A8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0254521B7BE25000CC6A8 /* libc++.tbd */; };
 		752FC4201FD7F41100077911 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FC41F1FD7F40900077911 /* AVKit.framework */; };
 		97E587501D4AE00A00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -76,14 +77,12 @@
 		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0B17A0E41A78203E009D1C50 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteSampleAppListViewController.h; sourceTree = "<group>"; };
 		0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteSampleAppListViewController.m; sourceTree = "<group>"; };
 		0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNPAWSampleAppSource.a; path = ../NPAWSampleApp/build/Debug/libNPAWSampleAppSource.a; sourceTree = "<group>"; };
 		0B1AFB761B02C76400347DFA /* YouboraMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraMedia.framework; sourceTree = "<group>"; };
 		0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
 		0B1E45BC1A6889440092F056 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		0B1E45BE1A68894B0092F056 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0B1E45C01A6889510092F056 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0B1E45C21A68895A0092F056 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
@@ -136,7 +135,10 @@
 		0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOptionsSampleAppSource.a; path = "../OptionsSampleApp/build/Debug-iphoneos/libOptionsSampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMASampleAppSource.a; path = "../IMASampleApp/build/Debug-iphoneos/libIMASampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4FA4C1A68730A0050A602 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		0BF4FA4E1A6873120050A602 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		39278CD32192D2FB00F6F4E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		39E0254121B7BE17000CC6A8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		39E0254321B7BE1E000CC6A8 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		39E0254521B7BE25000CC6A8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		752FC41F1FD7F40900077911 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -146,6 +148,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E0254621B7BE25000CC6A8 /* libc++.tbd in Frameworks */,
+				39E0254421B7BE1E000CC6A8 /* libxml2.tbd in Frameworks */,
+				39E0254221B7BE17000CC6A8 /* libz.tbd in Frameworks */,
 				752FC4201FD7F41100077911 /* AVKit.framework in Frameworks */,
 				0B9797671DDA47300013F12C /* CoreLocation.framework in Frameworks */,
 				97E587501D4AE00A00202E09 /* JavaScriptCore.framework in Frameworks */,
@@ -162,8 +167,6 @@
 				0B94590D1AC33A1C000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
 				0B1AFB771B02C76400347DFA /* YouboraMedia.framework in Frameworks */,
-				0B9457CB1AC2A5D8000DD545 /* libxml2.dylib in Frameworks */,
-				0B17A0E51A78203E009D1C50 /* libc++.dylib in Frameworks */,
 				0B9458FB1AC33A1C000DD545 /* AdManager.framework in Frameworks */,
 				0B9458FA1AC33A1C000DD545 /* libAccessEnabler.a in Frameworks */,
 				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
@@ -171,7 +174,6 @@
 				0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */,
 				0BC8CF9D1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */,
-				0BF4FA4F1A6873120050A602 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,9 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				0B140F551A2E4709001324EE /* CompleteSampleApp */,
+				0B9458B91AC33A1C000DD545 /* VendorLibraries */,
 				0B140FAB1A2E6550001324EE /* Frameworks */,
 				0B140F541A2E4709001324EE /* Products */,
-				0B9458B91AC33A1C000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +201,7 @@
 		0B140F551A2E4709001324EE /* CompleteSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				39278CD32192D2FB00F6F4E2 /* Images.xcassets */,
 				0B140F5A1A2E4709001324EE /* AppDelegate.h */,
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
 				0B19FEE51A3AB4E6003E57DF /* Base.lproj */,
@@ -221,37 +224,37 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B1E45C21A68895A0092F056 /* AdSupport.framework */,
+				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
 				752FC41F1FD7F40900077911 /* AVKit.framework */,
 				0B9797661DDA47300013F12C /* CoreLocation.framework */,
+				0B1E45BC1A6889440092F056 /* EventKit.framework */,
 				97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */,
-				0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */,
 				0B94590F1AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a */,
-				0B9459101AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a */,
-				0B9459111AC33A40000DD545 /* libFreewheelSampleAppSource.a */,
-				0B9459121AC33A40000DD545 /* libIMASampleAppSource.a */,
-				0B9459131AC33A40000DD545 /* libOoyalaAPISampleAppSource.a */,
-				0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */,
-				0B24B9361AA6A09900F131C3 /* libContentProtectionSampleAppSource.a */,
-				0BDC4BE61A9FA56F00576639 /* libOoyalaAPISampleAppSource.a */,
-				0B17A0E41A78203E009D1C50 /* libc++.dylib */,
+				0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */,
 				0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */,
+				0B9459101AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a */,
 				0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */,
 				0B2459CE1A72CA3500CC399A /* libBasicPlaybackSampleAppSource.a */,
-				0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */,
-				0B1E45C21A68895A0092F056 /* AdSupport.framework */,
-				0B1E45C01A6889510092F056 /* MessageUI.framework */,
-				0B1E45BE1A68894B0092F056 /* libxml2.dylib */,
-				0B1E45BC1A6889440092F056 /* EventKit.framework */,
+				39E0254521B7BE25000CC6A8 /* libc++.tbd */,
+				0B24B9361AA6A09900F131C3 /* libContentProtectionSampleAppSource.a */,
 				0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */,
-				0BF4FA4E1A6873120050A602 /* libz.dylib */,
-				0BF4FA4C1A68730A0050A602 /* WebKit.framework */,
+				0B9459111AC33A40000DD545 /* libFreewheelSampleAppSource.a */,
+				0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */,
 				0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */,
+				0B9459121AC33A40000DD545 /* libIMASampleAppSource.a */,
+				0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */,
+				0B9459131AC33A40000DD545 /* libOoyalaAPISampleAppSource.a */,
+				0BDC4BE61A9FA56F00576639 /* libOoyalaAPISampleAppSource.a */,
 				0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */,
-				0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
+				0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */,
+				39E0254321B7BE1E000CC6A8 /* libxml2.tbd */,
+				39E0254121B7BE17000CC6A8 /* libz.tbd */,
 				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
+				0B1E45C01A6889510092F056 /* MessageUI.framework */,
+				0B140F8C1A2E53B0001324EE /* Security.framework */,
+				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
+				0BF4FA4C1A68730A0050A602 /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -431,13 +434,11 @@
 		0B140F4B1A2E4709001324EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 556Y9XWD3N;
-						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -468,6 +469,7 @@
 				0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */,
 				0BC947E91A817768004CB997 /* PlayerSingleButton.xib in Resources */,
 				0BDC4BE51A9FA47B00576639 /* ChannelCell.xib in Resources */,
+				39278CD42192D2FB00F6F4E2 /* Images.xcassets in Resources */,
 				0BC947E71A817768004CB997 /* PlayerDoubleText.xib in Resources */,
 				0BC947E61A817768004CB997 /* PlayerDoubleSwitch.xib in Resources */,
 				0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */,
@@ -520,13 +522,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -536,6 +548,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -548,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -564,13 +577,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -579,13 +602,14 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,14 +622,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				ENABLE_BITCODE = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = CompleteSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,17 +636,13 @@
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos",
 				);
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CompleteSampleApp;
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				USER_HEADER_SEARCH_PATHS = "../**";
-				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -632,14 +651,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				ENABLE_BITCODE = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = CompleteSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -647,17 +665,13 @@
 					"$(PROJECT_DIR)/VendorLibraries/AccessEnabler/lib",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos",
 				);
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CompleteSampleApp;
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
 				USER_HEADER_SEARCH_PATHS = "../**";
-				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

@@ -7,48 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CMTimeRange.h>
+#import "OOPlayerState.h"
 
-/**
- * Defines different gravity modes, which control how video is adjusted to available screen size
- */
-typedef enum
-{
-  /** Specifies that the video should be stretched to fill the layer’s bounds. */
-  OOOoyalaPlayerVideoGravityResize,
-  /** Specifies that the player should preserve the video’s aspect ratio and fit the video within the layer’s bounds */
-  OOOoyalaPlayerVideoGravityResizeAspect,
-  /** Specifies that the player should preserve the video’s aspect ratio and fill the layer’s bounds. */
-  OOOoyalaPlayerVideoGravityResizeAspectFill
-} OOOoyalaPlayerVideoGravity;
+#ifndef OOPlayerProtocol_h
+#define OOPlayerProtocol_h
 
-/**
- * Defines different possible player states
- */
-typedef enum
-{
-  /** Initial state, player is created but no content is loaded */
-  OOOoyalaPlayerStateInit,
-  /** Loading content */
-  OOOoyalaPlayerStateLoading,
-  /** Content is loaded and initialized, player is ready to begin playback */
-  OOOoyalaPlayerStateReady,
-  /** Player is playing a video */
-  OOOoyalaPlayerStatePlaying,
-  /** Player is paused, video is showing */
-  OOOoyalaPlayerStatePaused,
-  /** Player has finished playing content */
-  OOOoyalaPlayerStateCompleted,
-  /** Player has encountered an error, check OOOoyalaPlayer.error */
-  OOOoyalaPlayerStateError
-} OOOoyalaPlayerState;
-
-typedef enum
-{
-  /** user is playing a video */
-  OOOoyalaPlayerDesiredStatePlaying,
-  /** user is paused, video is showing */
-  OOOoyalaPlayerDesiredStatePaused,
-} OOOoyalaPlayerDesiredState;
+@class UIImage;
 
 @protocol OOPlayerProtocol<NSObject>
 
@@ -56,7 +20,7 @@ typedef enum
  * @returns YES if the player will put its own controls on-screen;
  * NO if the player wants the Ooyala controls to be used instead.
  */
-- (BOOL) hasCustomControls;
+- (BOOL)hasCustomControls;
 
 /**
  * This is called when pause is clicked
@@ -97,9 +61,16 @@ typedef enum
  */
 - (void)seekToTime:(Float64)time;
 
+/**
+ * @returns current frame of playing asset
+ */
+- (UIImage *)screenshot;
+
 - (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity;
 
 - (void)setClosedCaptionsLanguage:(NSString *)language;
+
+- (void)disablePlaylistClosedCaptions;
 
 /**
  * This returns the player state
@@ -110,6 +81,7 @@ typedef enum
 @property (nonatomic)           BOOL seekable;
 @property (nonatomic, readonly) CMTimeRange seekableTimeRange;
 @property (nonatomic)           BOOL allowsExternalPlayback;
+@property (nonatomic)           BOOL usesExternalPlaybackWhileExternalScreenIsActive;
 @property (nonatomic, readonly) BOOL externalPlaybackActive;
 @property (nonatomic)           float rate; // playback rate
 @property (nonatomic, readonly) double bitrate;
@@ -118,3 +90,5 @@ typedef enum
 @property (nonatomic) float volume; /** the player volume*/
 
 @end
+
+#endif // OOPlayerProtocol_h

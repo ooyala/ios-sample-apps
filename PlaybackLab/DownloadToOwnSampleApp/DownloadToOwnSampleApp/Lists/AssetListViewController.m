@@ -10,134 +10,198 @@
 #import "OptionTableViewCell.h"
 #import "OptionsDataSource.h"
 #import "PlayerSelectionOption.h"
-#import "AssetPersistenceManager.h"
 
 #import "PlayerViewController.h"
 
 #import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSDK/OODtoAsset.h>
 
-#define PLAYER_SEGUE @"videoSegue"
+@interface AssetListViewController ()
 
-@interface AssetListViewController () <OptionTableViewCellDelegate>
-
-@property (nonatomic) NSArray *options; //List of PlayerSelectionOption
+@property (nonatomic) NSMutableArray<OODtoAsset *> *dtoAssets;
+@property NSIndexPath *selectedIndexPath;
 
 @end
 
 @implementation AssetListViewController
 
+#pragma mark - Constants
+
+static NSString *const playerSegue = @"videoSegue";
+
+#pragma mark - Life cycle
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
-  self.tableView.rowHeight = UITableViewAutomaticDimension;
-  self.tableView.estimatedRowHeight = 75.0;
+
+  // Configure table view
+  self.tableView.tableFooterView = [UIView new];
+
+  // Create data for table view
+  self.dtoAssets = [NSMutableArray array];
+  NSArray *options = OptionsDataSource.options;
+  for (PlayerSelectionOption *oneOption in options) {
+    [self.dtoAssets addObject:[self buildDtoAssetForOption:oneOption]];
+  }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  if (self.selectedIndexPath) {
+    [self reloadSelectedCell];
+  }
+}
+
+#pragma mark - Private functions
 
 /**
- Initializes the options when it is first requested.
- 
- @return an Array of PlayerSelectionOption instances.
+ Builds an OODtoAsset with the given options.
+
+ @param option PlayerSelectionOption with the asset information.
+ @return new OODtoAsset instance.
  */
-- (NSArray *)options {
-  if (!_options) {
-    // OptionsDataSource contains the information of all the assets in the app.
-    _options = [OptionsDataSource options];
-  }
-  return _options;
+- (OODtoAsset *)buildDtoAssetForOption:(PlayerSelectionOption *)option {
+  OOAssetDownloadOptions *options = [OOAssetDownloadOptions new];
+  options.pcode = option.pcode;
+  options.embedCode = option.embedCode;
+  options.domain = [OOPlayerDomain domainWithString:option.domain];
+  options.embedTokenGenerator = option.embedTokenGenerator;
+  return [[OODtoAsset alloc] initWithOptions:options andName:option.title];
 }
 
-#pragma mark - OptionTableViewCellDelegate methods
+/**
+ Re-sets closures for the selected cell after coming back from PlayerViewController
+ */
+- (void)reloadSelectedCell {
+  OODtoAsset *dtoAsset = self.dtoAssets[self.selectedIndexPath.row];
 
-- (void)optionCell:(OptionTableViewCell *)cell downloadStateDidChange:(NSNumber *)state {
-  // the given cell is letting this delegate (table view) know that the download state of its asset changed. Refresh the UI for that given cell.
-  NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-  if (indexPath) {
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-  }
+  OptionTableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.selectedIndexPath];
+  cell.subtitleLabel.text = dtoAsset.stateText;
+  BOOL showProgress = dtoAsset.state == OODtoAssetStateDownloading || dtoAsset.state == OODtoAssetStatePaused;
+  cell.downloadProgressView.hidden = !showProgress;
+
+  [dtoAsset progressWithProgressClosure:^(double progress) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      cell.downloadProgressView.hidden = NO;
+      cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %@ %.02f%%",
+                                 dtoAsset.stateText, dtoAsset.currentDownload, progress * 100];
+      cell.downloadProgressView.progress = (float)progress;
+    });
+  }];
+  
+  [dtoAsset finishWithRelativePath:^(NSString * _Nonnull relativePath) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      NSIndexPath *path = self.selectedIndexPath.copy;
+      [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
+    });
+  }];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return self.options.count;
+  return self.dtoAssets.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   // OptionCellReusableIdentifier has to match the identifier set in the Storyboard for the cell.
-  OptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:OptionCellReusableIdentifier forIndexPath:indexPath];
-  
-  PlayerSelectionOption *option = self.options[indexPath.row];
-  cell.option = option;
-  // This class will be delegate of all of the created cells.
-  cell.delegate = self;
-  
+  OptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:OptionCellReusableIdentifier
+                                                              forIndexPath:indexPath];
+  OODtoAsset *dtoAsset = self.dtoAssets[indexPath.row];
+
+  cell.downloadProgressView.hidden = YES;
+  cell.titleLabel.text = dtoAsset.name;
+  cell.subtitleLabel.text = dtoAsset.stateText;
+
   return cell;
 }
+
+#pragma mark - UITableViewDelegate
 
 // Called when the accessoryButton in the cell is tapped.
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
   OptionTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-  PlayerSelectionOption *option = cell.option;
+  OODtoAsset *dtoAsset = self.dtoAssets[indexPath.row];
+  NSArray *alertActions;
   
-  AssetPersistenceState state = [[AssetPersistenceManager sharedManager] downloadStateForEmbedCode:option.embedCode];
-  NSArray *alertActions = nil;
-  
-  switch (state) {
-    case AssetNotDownloaded:
-    {
-      alertActions = [[NSArray alloc] initWithObjects:
-                      [UIAlertAction actionWithTitle:@"Download" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[AssetPersistenceManager sharedManager] startDownloadForOption:option];
-      }], nil];
+  switch (dtoAsset.state) {
+    case OODtoAssetStateNotDownloaded: {
+      alertActions = @[[UIAlertAction actionWithTitle:@"Download"
+                                               style:UIAlertActionStyleDefault
+                                             handler:^(UIAlertAction *action) {
+        cell.downloadProgressView.hidden = NO;
+        cell.downloadProgressView.progress = 0;
+        cell.subtitleLabel.text = @"Authorizing";
+        [dtoAsset downloadWithProgressClosure:^(double progress) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+            cell.subtitleLabel.text = [NSString stringWithFormat:@"%@ %@ %.02f%%",
+                                       dtoAsset.stateText, dtoAsset.currentDownload, progress * 100];
+            cell.downloadProgressView.progress = (float)progress;
+          });
+        }];
+        [dtoAsset finishWithRelativePath:^(NSString *relativePath) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationLeft];
+          });
+        }];
+        [dtoAsset onErrorWithErrorClosure:^(OOOoyalaError *error) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationRight];
+            NSLog(@"Error occured: %@", error.message);
+          });
+        }];
+                      }]];
       break;
     }
-    case AssetAuthorizing:
-    case AssetDownloading:
-    {
-      alertActions = [[NSArray alloc] initWithObjects:
-                      [UIAlertAction actionWithTitle:@"Pause"
-                                               style:UIAlertActionStyleDefault
-                                             handler:^(UIAlertAction * _Nonnull action) {
-                                               [[AssetPersistenceManager sharedManager] pauseDownloadForEmbedCode:option.embedCode];
+    case OODtoAssetStateAuthorizing:
+    case OODtoAssetStateDownloading: {
+      alertActions = @[[UIAlertAction actionWithTitle:@"Pause"
+                                                style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction *action) {
+        [dtoAsset pauseDownload];
+        dispatch_async(dispatch_get_main_queue(), ^{
+          cell.subtitleLabel.text = dtoAsset.stateText;
+        });
                                              }],
-                      [UIAlertAction actionWithTitle:@"Cancel"
-                                               style:UIAlertActionStyleDefault
-                                             handler:^(UIAlertAction * _Nonnull action) {
-                                               [[AssetPersistenceManager sharedManager] cancelDownloadForEmbedCode:option.embedCode];
-                                             }], nil];
+                       [UIAlertAction actionWithTitle:@"Cancel"
+                                                style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction *action) {
+        [dtoAsset cancelDownload];
+                     }]];
       break;
     }
-    case AssetPaused:
-    {
-      alertActions = [[NSArray alloc] initWithObjects:
-                      [UIAlertAction actionWithTitle:@"Resume"
+    case OODtoAssetStatePaused: {
+      alertActions = @[[UIAlertAction actionWithTitle:@"Resume"
                                                style:UIAlertActionStyleDefault
-                                             handler:^(UIAlertAction * _Nonnull action) {
-                                               [[AssetPersistenceManager sharedManager] resumeDownloadForEmbedCode:option.embedCode];
-                                             }], nil];
+                                             handler:^(UIAlertAction *action) {
+        [dtoAsset resumeDownload];
+                     }]];
       break;
     }
-    case AssetDownloaded:
-    {
-      alertActions = [[NSArray alloc] initWithObjects:
-                      [UIAlertAction actionWithTitle:@"Delete"
+    case OODtoAssetStateDownloaded: {
+      alertActions = @[[UIAlertAction actionWithTitle:@"Delete"
                                                style:UIAlertActionStyleDefault
-                                             handler:^(UIAlertAction * _Nonnull action) {
-                                               [[AssetPersistenceManager sharedManager] deleteDownloadedFileForEmbedCode:option.embedCode];
-                                             }], nil];
+                                             handler:^(UIAlertAction *action) {
+       [dtoAsset deleteAsset];
+       [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationLeft];
+                     }]];
       break;
     }
   }
   
   // Show an UIAlertController with different options, the alert might show Download, Cancel or Delete, depending on the download state of the asset.
-  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:option.title
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:dtoAsset.name
                                                                            message:@"Select an option"
                                                                     preferredStyle:UIAlertControllerStyleActionSheet];
   for (UIAlertAction *action in alertActions) {
     [alertController addAction:action];
   }
-  [alertController addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil]];
+  [alertController addAction:[UIAlertAction actionWithTitle:@"Dismiss"
+                                                      style:UIAlertActionStyleCancel
+                                                    handler:nil]];
   
   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
     alertController.popoverPresentationController.sourceView = cell;
@@ -147,16 +211,20 @@
   [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  OODtoAsset *dtoAsset = self.dtoAssets[indexPath.row];
+  self.selectedIndexPath = indexPath;
+  [self performSegueWithIdentifier:playerSegue sender:dtoAsset];
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  // When tapping on a cell, we'll transition to the PlayerViewController. If that's the case set the PlayerSelectionOption for the player.
-  if ([sender isKindOfClass:[OptionTableViewCell class]] && [segue.identifier isEqualToString:PLAYER_SEGUE]) {
+  if ([sender isKindOfClass:OODtoAsset.class] && [segue.identifier isEqualToString:playerSegue]) {
     PlayerViewController *playerViewController = segue.destinationViewController;
-    OptionTableViewCell *cell = sender;
-    playerViewController.option = cell.option;
+    OODtoAsset *dtoAsset = sender;
+    playerViewController.dtoAsset = dtoAsset;
   }
 }
 
 @end
-

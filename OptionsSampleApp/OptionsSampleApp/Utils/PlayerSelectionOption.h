@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PlayerSelectionOption : NSObject
+
 @property NSString *embedCode;
 @property NSString *pcode;
 @property NSString *domain;
@@ -17,7 +18,9 @@
 @property NSString *nib;
 @property Class viewController;
 
-
-
-- (id)initWithTitle:(NSString *)title embedCode:(NSString *)embedCode pcode:(NSString *)pcode  domain:(NSString *)domain viewController:(Class)viewController;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController;
 @end

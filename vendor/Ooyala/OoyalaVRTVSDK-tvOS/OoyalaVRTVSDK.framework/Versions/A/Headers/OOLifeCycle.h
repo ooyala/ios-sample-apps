@@ -1,4 +1,9 @@
 #import <Foundation/Foundation.h>
+#import "OOPlayerState.h"
+
+#ifndef OOLifeCycle_h
+#define OOLifeCycle_h
+
 /**
  * @brief Handle events around the lifecycle of the OOOoyalaPlayer
  */
@@ -24,7 +29,7 @@
  *
  * @param time
  *          the playhead time to set
- * @param stateToResume
+ * @param state
  *          the player state after resume
  */
 - (void)resume:(Float64)time stateToResume:(OOOoyalaPlayerState)state;
@@ -35,3 +40,5 @@
 - (void)destroy;
 
 @end
+
+#endif /* OOLifeCycle_h */

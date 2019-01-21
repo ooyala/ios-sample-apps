@@ -11,7 +11,6 @@
 		0B63FB041DF7980400879D7E /* PlaylistListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63FB031DF7980400879D7E /* PlaylistListViewController.m */; };
 		0B9458621AC32CC4000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */; };
 		0B9458AF1AC33830000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */; };
-		0B9458B01AC33843000DD545 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB21F1A9C0B43001EB8BF /* libc++.dylib */; };
 		0B9458B21AC338A7000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */; };
 		0B9459201AC33ACB000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9458611AC32CC4000DD545 /* OoyalaSDK.framework */; };
 		0BC8CF9E1BBC83A100F61C1A /* DiscoveryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */; };
@@ -20,6 +19,10 @@
 		0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
 		0BDC4BE01A9FA3D800576639 /* ChannelContentTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */; };
 		0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */; };
+		39278CB62191DD5A00F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CB52191DD5A00F6F4E2 /* libxml2.tbd */; };
+		39278CB82191DD5F00F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CB72191DD5F00F6F4E2 /* libc++.tbd */; };
+		39E0254921B7BFA9000CC6A8 /* PlaylistListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63FB031DF7980400879D7E /* PlaylistListViewController.m */; };
+		39E0254C21B7BFDA000CC6A8 /* ChannelContentTreePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B63FB001DF797F300879D7E /* ChannelContentTreePlayerViewController.m */; };
 		9751C7F41A956C5300C7364F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C7F31A956C5300C7364F /* main.m */; };
 		9751C7F71A956C5300C7364F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9751C7F61A956C5300C7364F /* AppDelegate.m */; };
 		9751C7FD1A956C5300C7364F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9751C7FB1A956C5300C7364F /* Main.storyboard */; };
@@ -32,7 +35,6 @@
 		979BB2121A9BE32D001EB8BF /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979BB2111A9BE32D001EB8BF /* ChannelCell.xib */; };
 		979BB2181A9BE6FB001EB8BF /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB2171A9BE6FB001EB8BF /* SampleAppPlayerViewController.m */; };
 		979BB21B1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */; };
-		979BB2221A9C0B54001EB8BF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 979BB2211A9C0B54001EB8BF /* libxml2.dylib */; };
 		97DFF0D21B4CB25300B1C9FC /* DiscoveryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */; };
 		97E5875B1D4AE0DF00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5875A1D4AE0DF00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		0BDC4BC31A9F9F7300576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOoyalaAPISampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BDC4BDE1A9FA3D800576639 /* ChannelContentTreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreeTableViewCell.h; sourceTree = "<group>"; };
 		0BDC4BDF1A9FA3D800576639 /* ChannelContentTreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreeTableViewCell.m; sourceTree = "<group>"; };
+		39278CB52191DD5A00F6F4E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		39278CB72191DD5F00F6F4E2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		9751C7EE1A956C5300C7364F /* OoyalaAPISampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OoyalaAPISampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9751C7F21A956C5300C7364F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9751C7F31A956C5300C7364F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,8 +83,6 @@
 		979BB2191A9BE737001EB8BF /* ChannelContentTreeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelContentTreeDetailViewController.h; sourceTree = "<group>"; };
 		979BB21A1A9BE737001EB8BF /* ChannelContentTreeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelContentTreeDetailViewController.m; sourceTree = "<group>"; };
 		979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		979BB21F1A9C0B43001EB8BF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		979BB2211A9C0B54001EB8BF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		97DFF0D01B4CB25300B1C9FC /* DiscoveryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveryListViewController.h; sourceTree = "<group>"; };
 		97DFF0D11B4CB25300B1C9FC /* DiscoveryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveryListViewController.m; sourceTree = "<group>"; };
@@ -100,13 +102,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39278CB82191DD5F00F6F4E2 /* libc++.tbd in Frameworks */,
+				39278CB62191DD5A00F6F4E2 /* libxml2.tbd in Frameworks */,
 				97E5875B1D4AE0DF00202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E341D2F3B3B0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458621AC32CC4000DD545 /* OoyalaSDK.framework in Frameworks */,
 				0B9458B21AC338A7000DD545 /* MediaPlayer.framework in Frameworks */,
 				0B9458AF1AC33830000DD545 /* SystemConfiguration.framework in Frameworks */,
-				0B9458B01AC33843000DD545 /* libc++.dylib in Frameworks */,
-				979BB2221A9C0B54001EB8BF /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,11 +126,11 @@
 		0BDC4BBE1A9F9F1600576639 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97E5875A1D4AE0DF00202E09 /* JavaScriptCore.framework */,
 				0BCC6E331D2F3B3B0040B0B2 /* AVKit.framework */,
+				97E5875A1D4AE0DF00202E09 /* JavaScriptCore.framework */,
+				39278CB72191DD5F00F6F4E2 /* libc++.tbd */,
+				39278CB52191DD5A00F6F4E2 /* libxml2.tbd */,
 				979BB2231A9C0B83001EB8BF /* MediaPlayer.framework */,
-				979BB2211A9C0B54001EB8BF /* libxml2.dylib */,
-				979BB21F1A9C0B43001EB8BF /* libc++.dylib */,
 				979BB21C1A9C03B6001EB8BF /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
@@ -138,9 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				9751C7F01A956C5300C7364F /* OoyalaAPISampleApp */,
+				0B9458601AC32CC4000DD545 /* VendorLibraries */,
 				0BDC4BBE1A9F9F1600576639 /* Frameworks */,
 				9751C7EF1A956C5300C7364F /* Products */,
-				0B9458601AC32CC4000DD545 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,7 +271,7 @@
 		9751C7E61A956C5300C7364F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = ooyala;
 				TargetAttributes = {
 					0BDC4BC21A9F9F7300576639 = {
@@ -277,8 +279,7 @@
 					};
 					9751C7ED1A956C5300C7364F = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 556Y9XWD3N;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -326,6 +327,8 @@
 				0BDC4BE11A9FA3EC00576639 /* ChannelContentTreeTableViewCell.m in Sources */,
 				0BDC4BDA1A9F9FFC00576639 /* OoyalaAPIListViewController.m in Sources */,
 				0BDC4BDC1A9F9FFC00576639 /* ChannelContentTreeDetailViewController.m in Sources */,
+				39E0254921B7BFA9000CC6A8 /* PlaylistListViewController.m in Sources */,
+				39E0254C21B7BFDA000CC6A8 /* ChannelContentTreePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,13 +409,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -422,6 +435,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -434,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -450,13 +464,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -465,13 +489,14 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,24 +508,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				ENABLE_BITCODE = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = OoyalaApiSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -508,24 +537,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				ENABLE_BITCODE = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = OoyalaApiSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OoyalaAPISampleApp;
-				PROVISIONING_PROFILE = "b7258f32-8232-43b4-b873-7d7ebb144cd8";
-				PROVISIONING_PROFILE_SPECIFIER = "All Apps Anywhere";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

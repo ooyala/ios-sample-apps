@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE1B86AC2020DF2000FCF6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86AB2020DF2000FCF6CA /* AppDelegate.swift */; };
+		AE1B86B12020DF2000FCF6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B86AF2020DF2000FCF6CA /* Main.storyboard */; };
+		AE1B86B32020DF2000FCF6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1B86B22020DF2000FCF6CA /* Assets.xcassets */; };
+		AE1B86B62020DF2000FCF6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B86B42020DF2000FCF6CA /* LaunchScreen.storyboard */; };
+		AE1B86C32020E3F000FCF6CA /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C22020E3F000FCF6CA /* OoyalaSDK.framework */; };
+		AE1B86D42020E48D00FCF6CA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C42020E48C00FCF6CA /* CFNetwork.framework */; };
+		AE1B86D52020E48D00FCF6CA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C52020E48C00FCF6CA /* Security.framework */; };
+		AE1B86D62020E48D00FCF6CA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C62020E48C00FCF6CA /* CoreMedia.framework */; };
+		AE1B86D72020E48D00FCF6CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C72020E48C00FCF6CA /* Foundation.framework */; };
+		AE1B86D82020E48D00FCF6CA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C82020E48C00FCF6CA /* MediaPlayer.framework */; };
+		AE1B86D92020E48D00FCF6CA /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C92020E48C00FCF6CA /* libxml2.tbd */; };
+		AE1B86DA2020E48D00FCF6CA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CA2020E48C00FCF6CA /* AVKit.framework */; };
+		AE1B86DB2020E48D00FCF6CA /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CB2020E48C00FCF6CA /* MediaAccessibility.framework */; };
+		AE1B86DC2020E48D00FCF6CA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CC2020E48C00FCF6CA /* SystemConfiguration.framework */; };
+		AE1B86DD2020E48D00FCF6CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CD2020E48C00FCF6CA /* UIKit.framework */; };
+		AE1B86DE2020E48D00FCF6CA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CE2020E48C00FCF6CA /* CoreText.framework */; };
+		AE1B86DF2020E48D00FCF6CA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CF2020E48C00FCF6CA /* AdSupport.framework */; };
+		AE1B86E02020E48D00FCF6CA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D02020E48D00FCF6CA /* AVFoundation.framework */; };
+		AE1B86E12020E48D00FCF6CA /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D12020E48D00FCF6CA /* JavaScriptCore.framework */; };
+		AE1B86E22020E48D00FCF6CA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D22020E48D00FCF6CA /* libc++.tbd */; };
+		AE1B86E32020E48D00FCF6CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D32020E48D00FCF6CA /* QuartzCore.framework */; };
+		AE1B86E52020E53100FCF6CA /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86E42020E53100FCF6CA /* PlayerSelectionOption.swift */; };
+		AE1B86E82020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86E72020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift */; };
+		AE1B86EA2020E76000FCF6CA /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86E92020E76000FCF6CA /* OptionDataSource.swift */; };
+		AE1B86EC20210BD500FCF6CA /* AssetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */; };
+		AE1B86EE2021141300FCF6CA /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86ED2021141300FCF6CA /* PlayerViewController.swift */; };
+		AE1B86F0202118B600FCF6CA /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86EF202118B600FCF6CA /* OptionTableViewCell.swift */; };
+		AE1B86F320224B6B00FCF6CA /* AssetPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86F220224B6B00FCF6CA /* AssetPersistenceManager.swift */; };
+		AE964DF9202F57F2002DF267 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE964DF8202F57F2002DF267 /* Queue.swift */; };
+		AEC5A2032028DE9D005F94FF /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A2022028DE9D005F94FF /* OoyalaSkinSDK.framework */; };
+		AEC5A2052028E006005F94FF /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2042028E005005F94FF /* main.jsbundle */; };
+		AEC5A2072028E424005F94FF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A2062028E423005F94FF /* libz.tbd */; };
+		AEC5A2092028E4DC005F94FF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A2082028E4DC005F94FF /* MessageUI.framework */; };
+		AEC5A20B2028E4E6005F94FF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A20A2028E4E6005F94FF /* Social.framework */; };
+		AEC5A2182028E790005F94FF /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A20E2028E78F005F94FF /* skin-schema.json */; };
+		AEC5A2192028E790005F94FF /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A20F2028E78F005F94FF /* skin.json */; };
+		AEC5A21D2028E790005F94FF /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2152028E790005F94FF /* en.json */; };
+		AEC5A21E2028E790005F94FF /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2162028E790005F94FF /* es.json */; };
+		AEC5A21F2028E790005F94FF /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2172028E790005F94FF /* zh.json */; };
+		AEC5A2282028E8B2005F94FF /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2222028E8B2005F94FF /* alice.ttf */; };
+		AEC5A2292028E8B2005F94FF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2232028E8B2005F94FF /* Roboto-Regular.ttf */; };
+		AEC5A22A2028E8B2005F94FF /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2242028E8B2005F94FF /* RobotoCondensed-Bold.ttf */; };
+		AEC5A22B2028E8B2005F94FF /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2252028E8B2005F94FF /* RobotoCondensed-Regular.ttf */; };
+		AEC5A22C2028E8B2005F94FF /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2262028E8B2005F94FF /* ooyala-slick-type.ttf */; };
+		AEC5A22D2028E8B2005F94FF /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC5A2272028E8B2005F94FF /* Roboto-Bold.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE1B86A82020DF2000FCF6CA /* SerializationDownloadsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerializationDownloadsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1B86AB2020DF2000FCF6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE1B86B02020DF2000FCF6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE1B86B22020DF2000FCF6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE1B86B52020DF2000FCF6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE1B86B72020DF2000FCF6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE1B86C22020E3F000FCF6CA /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
+		AE1B86C42020E48C00FCF6CA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AE1B86C52020E48C00FCF6CA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AE1B86C62020E48C00FCF6CA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AE1B86C72020E48C00FCF6CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AE1B86C82020E48C00FCF6CA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		AE1B86C92020E48C00FCF6CA /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		AE1B86CA2020E48C00FCF6CA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		AE1B86CB2020E48C00FCF6CA /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		AE1B86CC2020E48C00FCF6CA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AE1B86CD2020E48C00FCF6CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AE1B86CE2020E48C00FCF6CA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		AE1B86CF2020E48C00FCF6CA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		AE1B86D02020E48D00FCF6CA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AE1B86D12020E48D00FCF6CA /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		AE1B86D22020E48D00FCF6CA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AE1B86D32020E48D00FCF6CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AE1B86E42020E53100FCF6CA /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
+		AE1B86E62020E57800FCF6CA /* SerializationDownloadsSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SerializationDownloadsSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE1B86E72020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEmbedTokenGenerator.swift; sourceTree = "<group>"; };
+		AE1B86E92020E76000FCF6CA /* OptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
+		AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewController.swift; sourceTree = "<group>"; };
+		AE1B86ED2021141300FCF6CA /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		AE1B86EF202118B600FCF6CA /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		AE1B86F220224B6B00FCF6CA /* AssetPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPersistenceManager.swift; sourceTree = "<group>"; };
+		AE964DF8202F57F2002DF267 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		AEC5A2022028DE9D005F94FF /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
+		AEC5A2042028E005005F94FF /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		AEC5A2062028E423005F94FF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		AEC5A2082028E4DC005F94FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AEC5A20A2028E4E6005F94FF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AEC5A20E2028E78F005F94FF /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
+		AEC5A20F2028E78F005F94FF /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
+		AEC5A2152028E790005F94FF /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
+		AEC5A2162028E790005F94FF /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
+		AEC5A2172028E790005F94FF /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zh.json; sourceTree = "<group>"; };
+		AEC5A2222028E8B2005F94FF /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alice.ttf; path = Ooyala/alice.ttf; sourceTree = "<group>"; };
+		AEC5A2232028E8B2005F94FF /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Ooyala/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		AEC5A2242028E8B2005F94FF /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "Ooyala/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		AEC5A2252028E8B2005F94FF /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "Ooyala/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		AEC5A2262028E8B2005F94FF /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ooyala-slick-type.ttf"; path = "Ooyala/ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		AEC5A2272028E8B2005F94FF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Ooyala/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE1B86A52020DF2000FCF6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC5A20B2028E4E6005F94FF /* Social.framework in Frameworks */,
+				AE1B86C32020E3F000FCF6CA /* OoyalaSDK.framework in Frameworks */,
+				AEC5A2032028DE9D005F94FF /* OoyalaSkinSDK.framework in Frameworks */,
+				AE1B86D42020E48D00FCF6CA /* CFNetwork.framework in Frameworks */,
+				AE1B86D52020E48D00FCF6CA /* Security.framework in Frameworks */,
+				AE1B86D62020E48D00FCF6CA /* CoreMedia.framework in Frameworks */,
+				AE1B86D72020E48D00FCF6CA /* Foundation.framework in Frameworks */,
+				AE1B86DB2020E48D00FCF6CA /* MediaAccessibility.framework in Frameworks */,
+				AE1B86D82020E48D00FCF6CA /* MediaPlayer.framework in Frameworks */,
+				AEC5A2092028E4DC005F94FF /* MessageUI.framework in Frameworks */,
+				AE1B86D92020E48D00FCF6CA /* libxml2.tbd in Frameworks */,
+				AE1B86DA2020E48D00FCF6CA /* AVKit.framework in Frameworks */,
+				AE1B86DC2020E48D00FCF6CA /* SystemConfiguration.framework in Frameworks */,
+				AE1B86DD2020E48D00FCF6CA /* UIKit.framework in Frameworks */,
+				AE1B86DE2020E48D00FCF6CA /* CoreText.framework in Frameworks */,
+				AE1B86DF2020E48D00FCF6CA /* AdSupport.framework in Frameworks */,
+				AE1B86E02020E48D00FCF6CA /* AVFoundation.framework in Frameworks */,
+				AE1B86E12020E48D00FCF6CA /* JavaScriptCore.framework in Frameworks */,
+				AE1B86E22020E48D00FCF6CA /* libc++.tbd in Frameworks */,
+				AEC5A2072028E424005F94FF /* libz.tbd in Frameworks */,
+				AE1B86E32020E48D00FCF6CA /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE1B869F2020DF2000FCF6CA = {
+			isa = PBXGroup;
+			children = (
+				AE1B86AA2020DF2000FCF6CA /* SerializationDownloadsSampleApp */,
+				AE1B86A92020DF2000FCF6CA /* Products */,
+				AE1B86C12020E3F000FCF6CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE1B86A92020DF2000FCF6CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86A82020DF2000FCF6CA /* SerializationDownloadsSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE1B86AA2020DF2000FCF6CA /* SerializationDownloadsSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86F120224B5300FCF6CA /* Managers */,
+				AE1B86BD2020E1FE00FCF6CA /* Models */,
+				AEC5A2202028E803005F94FF /* Resources */,
+				AE1B86BE2020E20400FCF6CA /* Support Files */,
+				AE1B86BF2020E23C00FCF6CA /* Utils */,
+				AE1B86C02020E24400FCF6CA /* Views */,
+			);
+			path = SerializationDownloadsSampleApp;
+			sourceTree = "<group>";
+		};
+		AE1B86BD2020E1FE00FCF6CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86E42020E53100FCF6CA /* PlayerSelectionOption.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE1B86BE2020E20400FCF6CA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86B72020DF2000FCF6CA /* Info.plist */,
+				AE1B86AB2020DF2000FCF6CA /* AppDelegate.swift */,
+				AE1B86B42020DF2000FCF6CA /* LaunchScreen.storyboard */,
+				AE1B86AF2020DF2000FCF6CA /* Main.storyboard */,
+				AE1B86E62020E57800FCF6CA /* SerializationDownloadsSampleApp-Bridging-Header.h */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		AE1B86BF2020E23C00FCF6CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86E72020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift */,
+				AE1B86E92020E76000FCF6CA /* OptionDataSource.swift */,
+				AE964DF8202F57F2002DF267 /* Queue.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AE1B86C02020E24400FCF6CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */,
+				AE1B86EF202118B600FCF6CA /* OptionTableViewCell.swift */,
+				AE1B86ED2021141300FCF6CA /* PlayerViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE1B86C12020E3F000FCF6CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC5A20A2028E4E6005F94FF /* Social.framework */,
+				AEC5A2082028E4DC005F94FF /* MessageUI.framework */,
+				AEC5A2062028E423005F94FF /* libz.tbd */,
+				AE1B86C22020E3F000FCF6CA /* OoyalaSDK.framework */,
+				AEC5A2022028DE9D005F94FF /* OoyalaSkinSDK.framework */,
+				AE1B86CF2020E48C00FCF6CA /* AdSupport.framework */,
+				AE1B86D02020E48D00FCF6CA /* AVFoundation.framework */,
+				AE1B86CA2020E48C00FCF6CA /* AVKit.framework */,
+				AE1B86C42020E48C00FCF6CA /* CFNetwork.framework */,
+				AE1B86C62020E48C00FCF6CA /* CoreMedia.framework */,
+				AE1B86CE2020E48C00FCF6CA /* CoreText.framework */,
+				AE1B86C72020E48C00FCF6CA /* Foundation.framework */,
+				AE1B86D12020E48D00FCF6CA /* JavaScriptCore.framework */,
+				AE1B86D22020E48D00FCF6CA /* libc++.tbd */,
+				AE1B86C92020E48C00FCF6CA /* libxml2.tbd */,
+				AE1B86CB2020E48C00FCF6CA /* MediaAccessibility.framework */,
+				AE1B86C82020E48C00FCF6CA /* MediaPlayer.framework */,
+				AE1B86D32020E48D00FCF6CA /* QuartzCore.framework */,
+				AE1B86C52020E48C00FCF6CA /* Security.framework */,
+				AE1B86CC2020E48C00FCF6CA /* SystemConfiguration.framework */,
+				AE1B86CD2020E48C00FCF6CA /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE1B86F120224B5300FCF6CA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86F220224B6B00FCF6CA /* AssetPersistenceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AEC5A20C2028E643005F94FF /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				AEC5A20D2028E71D005F94FF /* skin-config */,
+				AEC5A2042028E005005F94FF /* main.jsbundle */,
+			);
+			path = Skin;
+			sourceTree = "<group>";
+		};
+		AEC5A20D2028E71D005F94FF /* skin-config */ = {
+			isa = PBXGroup;
+			children = (
+				AEC5A2142028E790005F94FF /* languageFiles */,
+				AEC5A20E2028E78F005F94FF /* skin-schema.json */,
+				AEC5A20F2028E78F005F94FF /* skin.json */,
+			);
+			path = "skin-config";
+			sourceTree = "<group>";
+		};
+		AEC5A2142028E790005F94FF /* languageFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AEC5A2152028E790005F94FF /* en.json */,
+				AEC5A2162028E790005F94FF /* es.json */,
+				AEC5A2172028E790005F94FF /* zh.json */,
+			);
+			path = languageFiles;
+			sourceTree = "<group>";
+		};
+		AEC5A2202028E803005F94FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86B22020DF2000FCF6CA /* Assets.xcassets */,
+				AEC5A2212028E816005F94FF /* Fonts */,
+				AEC5A20C2028E643005F94FF /* Skin */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AEC5A2212028E816005F94FF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AEC5A2222028E8B2005F94FF /* alice.ttf */,
+				AEC5A2262028E8B2005F94FF /* ooyala-slick-type.ttf */,
+				AEC5A2272028E8B2005F94FF /* Roboto-Bold.ttf */,
+				AEC5A2232028E8B2005F94FF /* Roboto-Regular.ttf */,
+				AEC5A2242028E8B2005F94FF /* RobotoCondensed-Bold.ttf */,
+				AEC5A2252028E8B2005F94FF /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE1B86A72020DF2000FCF6CA /* SerializationDownloadsSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE1B86BA2020DF2000FCF6CA /* Build configuration list for PBXNativeTarget "SerializationDownloadsSampleApp" */;
+			buildPhases = (
+				AE1B86A42020DF2000FCF6CA /* Sources */,
+				AE1B86A52020DF2000FCF6CA /* Frameworks */,
+				AE1B86A62020DF2000FCF6CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SerializationDownloadsSampleApp;
+			productName = SerializationDownloadsSampleApp;
+			productReference = AE1B86A82020DF2000FCF6CA /* SerializationDownloadsSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE1B86A02020DF2000FCF6CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Ooyala;
+				TargetAttributes = {
+					AE1B86A72020DF2000FCF6CA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = AE1B86A32020DF2000FCF6CA /* Build configuration list for PBXProject "SerializationDownloadsSampleApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE1B869F2020DF2000FCF6CA;
+			productRefGroup = AE1B86A92020DF2000FCF6CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE1B86A72020DF2000FCF6CA /* SerializationDownloadsSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE1B86A62020DF2000FCF6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC5A21D2028E790005F94FF /* en.json in Resources */,
+				AE1B86B62020DF2000FCF6CA /* LaunchScreen.storyboard in Resources */,
+				AE1B86B32020DF2000FCF6CA /* Assets.xcassets in Resources */,
+				AEC5A22A2028E8B2005F94FF /* RobotoCondensed-Bold.ttf in Resources */,
+				AEC5A2182028E790005F94FF /* skin-schema.json in Resources */,
+				AEC5A2282028E8B2005F94FF /* alice.ttf in Resources */,
+				AEC5A2292028E8B2005F94FF /* Roboto-Regular.ttf in Resources */,
+				AEC5A22C2028E8B2005F94FF /* ooyala-slick-type.ttf in Resources */,
+				AE1B86B12020DF2000FCF6CA /* Main.storyboard in Resources */,
+				AEC5A2192028E790005F94FF /* skin.json in Resources */,
+				AEC5A21F2028E790005F94FF /* zh.json in Resources */,
+				AEC5A22D2028E8B2005F94FF /* Roboto-Bold.ttf in Resources */,
+				AEC5A2052028E006005F94FF /* main.jsbundle in Resources */,
+				AEC5A22B2028E8B2005F94FF /* RobotoCondensed-Regular.ttf in Resources */,
+				AEC5A21E2028E790005F94FF /* es.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE1B86A42020DF2000FCF6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1B86F320224B6B00FCF6CA /* AssetPersistenceManager.swift in Sources */,
+				AE1B86E82020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift in Sources */,
+				AE1B86EC20210BD500FCF6CA /* AssetTableViewController.swift in Sources */,
+				AE1B86AC2020DF2000FCF6CA /* AppDelegate.swift in Sources */,
+				AE1B86EA2020E76000FCF6CA /* OptionDataSource.swift in Sources */,
+				AE1B86E52020E53100FCF6CA /* PlayerSelectionOption.swift in Sources */,
+				AE1B86EE2021141300FCF6CA /* PlayerViewController.swift in Sources */,
+				AE964DF9202F57F2002DF267 /* Queue.swift in Sources */,
+				AE1B86F0202118B600FCF6CA /* OptionTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE1B86AF2020DF2000FCF6CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE1B86B02020DF2000FCF6CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE1B86B42020DF2000FCF6CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE1B86B52020DF2000FCF6CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE1B86B82020DF2000FCF6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE1B86B92020DF2000FCF6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE1B86BB2020DF2000FCF6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				INFOPLIST_FILE = "SerializationDownloadsSampleApp/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SerializationDownloadsSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Support Files/SerializationDownloadsSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		AE1B86BC2020DF2000FCF6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				INFOPLIST_FILE = "SerializationDownloadsSampleApp/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SerializationDownloadsSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Support Files/SerializationDownloadsSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE1B86A32020DF2000FCF6CA /* Build configuration list for PBXProject "SerializationDownloadsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE1B86B82020DF2000FCF6CA /* Debug */,
+				AE1B86B92020DF2000FCF6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE1B86BA2020DF2000FCF6CA /* Build configuration list for PBXNativeTarget "SerializationDownloadsSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE1B86BB2020DF2000FCF6CA /* Debug */,
+				AE1B86BC2020DF2000FCF6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE1B86A02020DF2000FCF6CA /* Project object */;
+}

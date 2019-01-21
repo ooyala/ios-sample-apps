@@ -30,13 +30,13 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     // Create Ooyala ViewController
-    var player: OOOoyalaPlayer = OOOoyalaPlayer(pcode: PCODE, domain: OOPlayerDomain(string: PLAYERDOMAIN))
+    let player: OOOoyalaPlayer = OOOoyalaPlayer(pcode: PCODE, domain: OOPlayerDomain(string: PLAYERDOMAIN))
     ooyalaPlayerViewController = OOOoyalaPlayerViewController(player: player)
 
     // Attach it to current view
-    self.addChildViewController(ooyalaPlayerViewController)
+    self.addChild(ooyalaPlayerViewController)
     ooyalaPlayerViewController.view.frame = playerView.bounds
-    self.addChildViewController(ooyalaPlayerViewController)
+    self.addChild(ooyalaPlayerViewController)
     playerView.addSubview(ooyalaPlayerViewController.view)
     
     // Setup an UI_textView for dislaying message
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     textView.text = "LOG:"
     
     // Hide Keyboard by setting the size of keyboard to (0, 0)
-    var keyboardView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    let keyboardView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     textView.inputView = keyboardView
     
     // Setup time format
@@ -54,42 +54,22 @@ class ViewController: UIViewController {
     
     // Load the video
     ooyalaPlayerViewController.player.setEmbedCode(EMBED_CODE)
-    NotificationCenter.default.addObserver(self, selector: "notificationHandler:", name: nil, object: ooyalaPlayerViewController.player)
+    NotificationCenter.default.addObserver(self, selector: #selector(ViewController.notificationHandler(_:)), name: nil, object: ooyalaPlayerViewController.player)
   }
   
   func onPlayerError(_ notification: Notification){
     NSLog("Error: %@", ooyalaPlayerViewController.player.error)
   }
 
-  func notificationHandler(_ notification: Notification) {
-    var name = notification.name
+  @objc func notificationHandler(_ notification: Notification) {
+    let name = notification.name
     if name == NSNotification.Name.OOOoyalaPlayerTimeChanged {
       return
     }
 
     NSLog("Notification Received: %@", name.rawValue)
   }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-  }
-  
-  override func viewDidDisappear(_ animated: Bool) {
-    super.viewDidDisappear(animated)
-  }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-  
   func play() {
     ooyalaPlayerViewController.player.play()
   }

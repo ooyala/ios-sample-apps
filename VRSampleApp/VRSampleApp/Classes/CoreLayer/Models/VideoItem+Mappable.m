@@ -7,17 +7,16 @@
 
 #import "VideoItem+Mappable.h"
 
-
 @implementation VideoItem (Mappable)
 
 + (id)createFromJSON:(id)json {
   json = (NSDictionary *)json;
   
   if (json) {
-    NSString *embedCode = [json objectForKey:@"embed-code"];
-    NSString *title = [json objectForKey:@"title"];
-    NSString *pcode = [json objectForKey:@"provider-code"];
-    NSString *parsedAdTypeString = [json objectForKey:@"ad-type"];
+    NSString *embedCode = json[@"embed-code"];
+    NSString *title = json[@"title"];
+    NSString *pcode = json[@"provider-code"];
+    NSString *parsedAdTypeString = json[@"ad-type"];
     VideoAdType parsedAdType;
     VideoItem *newVideoItem;
     
@@ -59,7 +58,7 @@
 
 + (id)createCollectionFromArrayJSON:(id)json {
   NSArray *jsonArray = json;
-  NSMutableArray *objectsArray = [[NSMutableArray alloc] init];
+  NSMutableArray *objectsArray = [NSMutableArray array];
 
   if (jsonArray) {
     for (id json in jsonArray) {

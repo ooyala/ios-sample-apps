@@ -4,11 +4,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, DebugMode) {
   None,
   LogOnly,
   LogAndAbort
-} DebugMode;
+};
 
 /**
  * Enable or disable Ooyala debug logs
@@ -25,7 +25,6 @@ typedef enum {
 /**
  * sets the debug mode.
  * @param[in] mode the debug mode to be set
- * @returns YES if nil, NULL, or empty, NO if not
  */
 + (void)setDebugMode:(DebugMode)mode;
 
@@ -39,14 +38,14 @@ typedef enum {
 
 /**
  * helper function to assert a false condition
- * @param[in] tag
+ * @param[in] tag the tag
  * @param[in] format of the message
  */
 + (void)assertFalse:(NSString *)tag message:(NSString *)format, ...;
 
 /**
  * log if the debug mode is not none, ignore otherwise
- * @param[in] tag: the tag
+ * @param[in] tag the tag
  * @param[in] format of the message
  */
 + (void)log:(NSString *)tag message:(NSString *)format, ...;

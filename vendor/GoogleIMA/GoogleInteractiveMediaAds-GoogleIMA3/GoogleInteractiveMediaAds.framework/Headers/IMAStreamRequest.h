@@ -12,36 +12,6 @@
 @protocol IMAVideoDisplay;
 
 /**
- *  The inventory unit (iu).
- */
-extern NSString *const kIMAStreamParamIU;
-
-/**
- *  The description url (description_url).
- */
-extern NSString *const kIMAStreamParamDescriptionURL;
-
-/**
- *  The custom parameters (cust_params).
- */
-extern NSString *const kIMAStreamParamCustomParameters;
-
-/**
- *  Tag for child detection parameter (tfcd).
- */
-extern NSString *const kIMAStreamParamTFCD;
-
-/**
- *  The order variant parameter (dai-ov).
- */
-extern NSString *const kIMAStreamParamOrderVariant;
-
-/**
- *  The order type parameter (dai-ot).
- */
-extern NSString *const kIMAStreamParamOrderType;
-
-/**
  *  Data class describing the stream request.
  */
 @interface IMAStreamRequest : NSObject
@@ -68,19 +38,24 @@ extern NSString *const kIMAStreamParamOrderType;
  *  The stream request authorization token. This is used in place of the API key for stricter
  *  content authorization. The publisher can control individual content streams authorized based
  *  on this token.
+ *  :nodoc:
  */
 @property(nonatomic, copy) NSString *authToken;
 
 /**
- *  The stream request debug key. This is used to provide a convenient way to allow publishers to
- *  find a stream log in the stream activity monitor tool.
+ *  The ID to be used to debug the stream with the stream activity monitor. This is used to provide
+ *  a convenient way to allow publishers to find a stream log in the stream activity monitor tool.
  */
-@property(nonatomic, copy) NSString *debugKey;
+@property(nonatomic, copy) NSString *streamActivityMonitorID;
 
 /**
- *  The parameters that the SDK will attempt to add to ad tags. The following parameters are
- *  allowed: "cust_params", "dai-ot", "dai-ov", "sz", "description_url", "iu", "ppid" and "tfcd".
- *  All other parameters are ignored.
+ *  You can override a limited set of ad tag parameters on your stream request.
+ *  <a href="//support.google.com/dfp_premium/answer/7320899">
+ *  Supply targeting parameters to your stream</a> provides more information.
+ *
+ *  You can use the dai-ot and dai-ov parameters for stream variant preference.
+ *  See <a href="//support.google.com/dfp_premium/answer/7320898">
+ *  Override Stream Variant Parameters</a> for more information.
  */
 @property(nonatomic, copy) NSDictionary *adTagParameters;
 
@@ -92,6 +67,9 @@ extern NSString *const kIMAStreamParamOrderType;
  */
 @property(nonatomic, copy) NSString *manifestURLSuffix;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

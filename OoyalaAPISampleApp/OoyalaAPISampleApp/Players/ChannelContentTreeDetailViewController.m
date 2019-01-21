@@ -90,7 +90,7 @@
 
 - (void)configureQATextView {
   // In QA Mode , making textView visible
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     self.textView.hidden = NO;
     self.textViewHeightConstraint.constant = 200;
   } else {
@@ -99,7 +99,6 @@
   }
    
   // Configure text view constraints for iOS 11+ targets
-  
   if (@available(iOS 11.0, *)) {
     self.textViewLeadingConstraint.active = NO;
     self.textViewTrailingConstraint.active = NO;
@@ -145,29 +144,20 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self->ooyalaPlayerViewController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self->ooyalaPlayerViewController.player state]],
                        [self->ooyalaPlayerViewController.player playheadTime], appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
   
   appDel.count++;
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
 
 @end

@@ -2,45 +2,68 @@
 //  OOCastManager.h
 //  OoyalaSDK
 //
-//  Created by Liusha Huang on 8/29/14.
-//  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+//  Created on 8/29/14.
+//  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <GoogleCast/GoogleCast.h>
 #import <OoyalaSDK/OOCastManagerProtocol.h>
+#import <GoogleCast/GCKDevice.h>
+#import <OoyalaSDK/OOPlayerProtocol.h>
 
-@class OOCastPlayer, OOOoyalaPlayer;
+@class OOCastPlayer;
+@class OOOoyalaPlayer;
+@class OOCastManager;
+@protocol OOCastMiniControllerProtocol;
 
 @protocol OOCastManagerDelegate
-- (UIViewController *) currentTopUIViewController;
-@end
-
-extern NSString *const OOCastManagerDidDisconnectNotification; /**< Fires when a OOCastManager disconnects from chromecast device*/
-extern NSString *const OOCastEnterCastModeNotification; /**< Fires when enter cast mode*/
-extern NSString *const OOCastExitCastModeNotification; /**< Fires when exit cast mode*/
-extern NSString *const OOCastMiniControllerClickedNotification; /**< Fires when a mini controller is clicked*/
-extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors*/
-
-@interface OOCastManager : UIViewController<OOCastManagerProtocol, GCKDeviceScannerListener,GCKDeviceManagerDelegate,GCKMediaControlChannelDelegate, UIActionSheetDelegate>
-
-@property(nonatomic, strong) GCKDeviceScanner* deviceScanner;
 
 /**
- * When YES (the default), the OOCastManager will attempt to reconnect to the last selected device
- * when recovering from lost network connectivity. Set this to NO to disable such behaviour.
+ Fires when a OOCastManager disconnects from chromecast device
+
+ @param manager OOCastManager instance
  */
-@property(nonatomic) BOOL automaticallyReconnect;
+- (void)castManagerDidEnterCastMode:(nonnull OOCastManager *)manager;
+/**
+ Fires when enter cast mode
 
-@property(nonatomic, readonly) GCKDevice *selectedDevice;
+ @param manager OOCastManager instance
+ */
+- (void)castManagerDidExitCastMode:(nonnull OOCastManager *)manager;
+/**
+ Fires when exit cast mode
 
-@property(nonatomic, weak) id<OOCastManagerDelegate> delegate;
+ @param manager OOCastManager instance
+ */
+- (void)castManagerDidDisconnect:(nonnull OOCastManager *)manager;
+/**
+ Fires to report Cast errors
+
+ @param manager OOCastManager instance
+ @param error error occured
+ */
+- (void)castManager:(nonnull OOCastManager *)manager
+   didFailWithError:(nonnull NSError *)error
+          andExtras:(nullable NSDictionary *)extras;
+
+@end
+
+
+@interface OOCastManager : UIViewController <OOCastManagerProtocol>
+
+@property (nonatomic, readonly, nullable) GCKDevice *selectedDevice;
+@property (nonatomic, weak, nullable) id<OOCastManagerDelegate> delegate;
+@property (nonatomic, readonly) OOOoyalaPlayerState state;
 
 /**
  * Initiate and get a singleton OOCastManager with the given reveiverAppID and nameSpace
+ * @param receiverAppID identifier of receiever's application
+ * @param namespace application namespace
  */
-+ (OOCastManager *)getCastManagerWithAppID:(NSString *)receiverAppID namespace:(NSString *)appNamespace;
++ (nonnull OOCastManager *)castManagerWithAppID:(nonnull NSString *)receiverAppID
+                                      namespace:(nonnull NSString *)appNamespace;
+
+- (void)registerMiniController:(nullable id<OOCastMiniControllerProtocol>)miniController;
 
 /**
  * Disconnect the OOCastManager from ooyalaPlayer
@@ -50,16 +73,17 @@ extern NSString *const OOCastErrorNotification; /**< Fires to report Cast errors
 /**
  * Return the cast button
  */
-- (UIButton *)getCastButton;
+- (nonnull UIButton *)castButton;
 
 /**
  * Set the videoView to be displayed on ooyalaPlayer during casting
  */
-- (void)setCastModeVideoView:(UIView *)castView;
+- (void)setCastModeVideoView:(nonnull UIView *)castView;
 
 /**
  * Provide key-value pairs that will be passed to the Receiver upon Cast Playback. Anything
  * added to this will overwrite anything set by default in the init.
  */
-- (void)setAdditionalInitParams:(NSDictionary *)params;
+- (void)setAdditionalInitParams:(nullable NSDictionary *)params;
+
 @end

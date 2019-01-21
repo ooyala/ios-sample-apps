@@ -5,13 +5,14 @@
  *             When creating a new PlayerViewControler, use this as your superclass.
  *             When creating a new nib, use this class as your owner
  * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+ * @copyright  Copyright © 2014 Ooyala Inc. All rights reserved.
  */
 
 #import <UIKit/UIKit.h>
 #import "PlayerSelectionOption.h"
 
 @interface SampleAppPlayerViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
@@ -22,9 +23,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *text1;
 @property (weak, nonatomic) IBOutlet UITextField *text2;
 
-@property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
+@property (nonatomic) PlayerSelectionOption *playerSelectionOption;
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption;
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption;
 
 - (IBAction)onButtonClick:(id)sender;
 

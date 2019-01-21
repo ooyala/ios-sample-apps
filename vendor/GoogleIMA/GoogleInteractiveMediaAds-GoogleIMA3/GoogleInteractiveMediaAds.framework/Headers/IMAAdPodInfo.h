@@ -46,6 +46,9 @@
  */
 @property(nonatomic, readonly) NSTimeInterval maxDuration;
 
+/**
+ * :nodoc:
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

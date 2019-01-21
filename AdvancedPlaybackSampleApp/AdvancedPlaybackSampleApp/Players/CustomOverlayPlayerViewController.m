@@ -32,8 +32,9 @@
 @end
 
 
-@implementation CustomOverlayPlayerViewController
-AppDelegate *appDel;
+@implementation CustomOverlayPlayerViewController {
+  AppDelegate *appDel;
+}
 
 #pragma mark - Initialization
 
@@ -99,16 +100,18 @@ AppDelegate *appDel;
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        [notification name],
-                       [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
                        [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
   
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
-  if (self.qaModeEnabled == YES) {
+  if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
     NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@" ,string, message];
-    [self.textView setText:appendString];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.textView.text = appendString;
+    });
   }
   appDel.count++;
 }
