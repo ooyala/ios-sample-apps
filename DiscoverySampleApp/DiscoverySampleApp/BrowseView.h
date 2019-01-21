@@ -5,16 +5,11 @@
 //  Created by Ileana Padilla on 9/4/17.
 //  Copyright © 2017 Facebook. All rights reserved.
 //
-//Json Deserializer
-#import "CJSONSerializer.h"
-#import "CJSONDeserializer.h"
-#import "DemoSettings.h"
-//Discovery API
-#import <OoyalaSDK/OODiscoveryManager.h>
-//Player
-#import "PlayerSelectionOption.h"
-#import "PlayerViewController.h"
-#import "TableViewEmbedCell.h"
+
+@import UIKit;
+
+@class DemoSettings;
+@class PlayerViewController;
 
 @interface BrowseView : UIViewController //<UITableViewDataSource, UITableViewDelegate>
 
