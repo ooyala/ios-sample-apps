@@ -452,7 +452,6 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Supporting Files/Info.plist";
@@ -475,7 +474,6 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MultipleLayoutsTVSampleApp",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TVOSSampleApp/Supporting Files/Info.plist";
