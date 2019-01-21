@@ -14,10 +14,8 @@
 @property NSMutableArray *initasset;
 @property NSMutableArray *carousels;
 
-
 //- (instancetype)initReadJSONString:(NSString *)JSONString;
 - (instancetype) getLabels:(NSArray *) elements;
 - (instancetype)initReadJSONFile;
-
 
 @end
