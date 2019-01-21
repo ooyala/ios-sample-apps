@@ -7,9 +7,10 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface PlayerSelectionOption : NSObject
+
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *domain;
@@ -19,18 +20,18 @@
 @property (nonatomic) NSString *nib;
 @property Class viewController;
 
-- (id)initWithTitle:(NSString *)title
-          embedCode:(NSString *)embedCode
-              pcode:(NSString *)pcode
-       playerDomain:(NSString *)playerDomain
-     viewController:(Class)viewController
-                nib:(NSString *)nib;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                 playerDomain:(NSString *)playerDomain
+               viewController:(Class)viewController
+                          nib:(NSString *)nib;
 
-- (id)initWithTitle:(NSString *)title
-          embedCode:(NSString *)embedCode
-              pcode:(NSString *)pcode
-       playerDomain:(NSString *)playerDomain
-      adSetProvider:(NSString *)adSetProvider
-     viewController:(Class)viewController
-                nib:(NSString *)nib;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                 playerDomain:(NSString *)playerDomain
+                adSetProvider:(NSString *)adSetProvider
+               viewController:(Class)viewController
+                          nib:(NSString *)nib;
 @end
