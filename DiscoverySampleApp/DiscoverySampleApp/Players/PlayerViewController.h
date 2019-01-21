@@ -1,17 +1,16 @@
 //
-//  MasterViewController.h
+//  PlayerViewController.h
 //  OoyalaSkin
 //
-//  Created by Zhihui Chen on 6/3/15.
-//  Copyright (c) 2015 Facebook. All rights reserved.
+//  Created on 6/3/15.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
-#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
-#import <OoyalaSDK/OoyalaSDK.h>
-#import "DemoSettings.h"
-//#import "MainView.h"
+
+@class OOSkinViewController;
+@class OOOoyalaPlayer;
+@class DemoSettings;
 
 @interface PlayerViewController : SampleAppPlayerViewController
 
@@ -30,6 +29,5 @@
 @property NSString *pcode;
 @property NSString *playerDomain;
 @property DemoSettings *configuration;
-
 
 @end
