@@ -5,11 +5,8 @@
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.h>
 #import <OoyalaIMASDK/OOIMAManager.h>
 #import "SampleAppPlayerViewController.h"
-
 
 @interface IMAPlayerViewController : SampleAppPlayerViewController<OOIMAAdsManagerDelegate>
 

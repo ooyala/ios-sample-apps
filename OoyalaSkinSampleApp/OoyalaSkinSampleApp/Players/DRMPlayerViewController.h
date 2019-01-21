@@ -7,7 +7,6 @@
 
 #import "SampleAppPlayerViewController.h"
 
-
 @interface DRMPlayerViewController : SampleAppPlayerViewController
 
 @property (nonatomic, retain) IBOutlet UIView *videoView;

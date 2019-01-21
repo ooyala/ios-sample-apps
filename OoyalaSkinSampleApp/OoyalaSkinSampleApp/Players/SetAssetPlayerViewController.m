@@ -9,7 +9,6 @@
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
-
 @interface SetAssetPlayerViewController()
 
 @property (nonatomic, retain) OOSkinViewController *skinController;
@@ -36,9 +35,7 @@ NSString *kAssetJSONExtension = @"json";
 #pragma mark - Private functions
 
 - (NSDictionary *)loadJSONFromBundleWithName:(NSString *)name {
-  
   // Load asset from local storage
-  
   NSString *pathToTestDataJSON = [NSBundle.mainBundle pathForResource:name ofType:kAssetJSONExtension];
   
   if (!pathToTestDataJSON) {
@@ -63,7 +60,9 @@ NSString *kAssetJSONExtension = @"json";
                                                                            message:@"Error with load asset from local storage (main bundle)"
                                                                     preferredStyle:UIAlertControllerStyleAlert];
   
-  UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+  UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * _Nonnull action) {
     [alertController dismissViewControllerAnimated:YES completion:NULL];
   }];
   
@@ -84,20 +83,14 @@ NSString *kAssetJSONExtension = @"json";
 #pragma mark - Actions
 
 - (IBAction)setFirstAssetAction:(UIButton *)sender {
-  
   // Load first asset JSON
-  
   NSDictionary *asset = [self loadJSONFromBundleWithName:kFirstAssetName];
-  
   [self setPlayerAsset:asset];
 }
 
 - (IBAction)setSecondAssetAction:(UIButton *)sender {
-  
   // Load second asset JSON
-  
   NSDictionary *asset = [self loadJSONFromBundleWithName:kSecondAssetName];
-  
   [self setPlayerAsset:asset];
 }
 
