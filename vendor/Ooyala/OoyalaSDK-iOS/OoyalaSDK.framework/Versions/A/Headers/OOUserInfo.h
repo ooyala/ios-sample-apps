@@ -28,7 +28,8 @@
 @property (readonly, nonatomic) NSString *citycodeid; /** The city code id of origin for the authorization */
 @property (readonly, nonatomic) double latitude; /** The latitude of the Authorized user*/
 @property (readonly, nonatomic) double longitude; /** The longitude of the Authorized user*/
-@property (readonly, nonatomic) NSString *dma; /** The dma of the authorized user */
+@property (readonly, nonatomic) int dma; /** The dma of the authorized user */
+@property (readonly, nonatomic) NSString *state; /** The state of the authorized user */
 
 /**
  * @internal
