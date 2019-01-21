@@ -8,17 +8,17 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
 #import "SampleAppPlayerViewController.h"
 
 @interface SampleAppPlayerViewController (GestureDelegate) <UIGestureRecognizerDelegate>
+
 @end
 
 @implementation SampleAppPlayerViewController
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super init];
-  if (self) {
-    self.playerSelectionOption = playerSelectionOption;
+
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  if (self = [super init]) {
+    _playerSelectionOption = playerSelectionOption;
   }
   return self;
 }
@@ -26,8 +26,7 @@
 - (IBAction)onButtonClick:(NSString*)videoTitle {
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   
   if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
@@ -37,8 +36,7 @@
   }
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   
   if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
@@ -51,8 +49,7 @@
 
 @implementation SampleAppPlayerViewController (GestureDelegate)
 
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
-{
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
   return NO;
 }
 

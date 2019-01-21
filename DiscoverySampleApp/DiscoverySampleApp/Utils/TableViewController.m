@@ -2,8 +2,8 @@
 //  TableViewController.m
 //  Discovery
 //
-//  Created by Ileana Padilla on 9/1/17.
-//  Copyright © 2017 Facebook. All rights reserved.
+//  Created on 9/1/17.
+//  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,35 +11,37 @@
 
 @implementation TableViewController
 
-  NSArray *tableData;
+NSArray *tableData;
   
--(void)viewDidLoad {
-  
+- (void)viewDidLoad {
   [super viewDidLoad];
   
-  tableData = [NSArray arrayWithObjects:@"Articles", @"Browse", nil];
+  tableData = @[@"Articles", @"Browse"];
   
   [self.navigationController setNavigationBarHidden:NO animated:YES]; //Show navigation controller / logo /
-  [self.navigationController.navigationBar setBackgroundImage: [UIImage imageNamed:@"navbarima"]  forBarMetrics:UIBarMetricsDefault];
+  [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbarima"]
+                                                forBarMetrics:UIBarMetricsDefault];
   UIImage *img = [UIImage imageNamed:@"logoheader"];
   UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-  [imgView setImage:img];
-  [imgView setContentMode:UIViewContentModeScaleAspectFit];
+  imgView.image = img;
+  imgView.contentMode = UIViewContentModeScaleAspectFit;
   self.navigationItem.titleView = imgView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [tableData count];
+  return tableData.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
   
-  if (cell == nil){
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+  if (!cell){
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                  reuseIdentifier:@"Cell"];
   }
   
-  cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+  cell.textLabel.text = tableData[indexPath.row];
   cell.textLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:22.0 ];
   
   return cell;
@@ -50,7 +52,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  [ self performSegueWithIdentifier:[tableData objectAtIndex:indexPath.row] sender:self];
+  [self performSegueWithIdentifier:tableData[indexPath.row] sender:self];
 }
 
 @end
