@@ -58,7 +58,6 @@
   [super viewDidLoad];
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
 
-
   OOOptions *options = [OOOptions new];
   options.enablePictureInPictureSupport = YES;
   if (self.isAudioOnlyAsset) {
