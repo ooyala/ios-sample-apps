@@ -40,6 +40,8 @@
     self.title = self.playerSelectionOption.title;
     if (playerSelectionOption.isAudioOnlyAsset) {
       [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
+    } else {
+      [OOStreamPlayer setDefaultPlayerInfo:[OODefaultPlayerInfo new]];
     }
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
