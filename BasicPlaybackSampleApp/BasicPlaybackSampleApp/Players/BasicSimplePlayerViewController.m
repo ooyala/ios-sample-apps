@@ -58,10 +58,15 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
-  
+
+
+  OOOptions *options = [OOOptions new];
+  options.enablePictureInPictureSupport = YES;
+
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                          domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+                                                          domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
+                                                         options:options];
   
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
