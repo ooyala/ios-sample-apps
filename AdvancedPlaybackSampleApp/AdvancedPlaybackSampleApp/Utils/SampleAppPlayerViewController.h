@@ -9,9 +9,11 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "PlayerSelectionOption.h"
+
+@class PlayerSelectionOption;
 
 @interface SampleAppPlayerViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
@@ -21,14 +23,15 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switch2;
 @property (weak, nonatomic) IBOutlet UITextField *text1;
 @property (weak, nonatomic) IBOutlet UITextField *text2;
-@property (strong, nonatomic) IBOutlet UIStackView *stackView1;
+@property (nonatomic) IBOutlet UIStackView *stackView1;
 @property (weak, nonatomic) IBOutlet UIView *playerView1;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic) BOOL  qaModeEnabled;
 
-@property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
+@property (nonatomic) PlayerSelectionOption *playerSelectionOption;
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled;;
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled;;
 
 - (IBAction)onButtonClick:(id)sender;
 
