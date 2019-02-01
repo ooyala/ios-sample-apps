@@ -19,6 +19,7 @@
 @property (nonatomic) NSString *nib;
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *playerDomain;
+@property (nonatomic) BOOL isAudioOnlyAsset;
 
 @end
 
@@ -37,10 +38,8 @@
     _embedCode = self.playerSelectionOption.embedCode;
     _pcode = self.playerSelectionOption.pcode;
     _playerDomain = self.playerSelectionOption.domain;
+    _isAudioOnlyAsset = playerSelectionOption.isAudioOnlyAsset;
     self.title = self.playerSelectionOption.title;
-    if (playerSelectionOption.isAudioOnlyAsset) {
-      [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
-    }
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -58,10 +57,19 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
-  
+
+  OOOptions *options = [OOOptions new];
+  options.enablePictureInPictureSupport = YES;
+  if (self.isAudioOnlyAsset) {
+    options.playerInfo = [OODefaultAudioOnlyPlayerInfo new];
+  } else {
+    options.playerInfo = [OODefaultPlayerInfo new];
+  }
+
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                          domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
+                                                          domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
+                                                         options:options];
   
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
