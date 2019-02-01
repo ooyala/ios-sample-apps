@@ -62,17 +62,8 @@
 		0BC947CE1A817732004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C81A817732004CB997 /* PlayerSimple.xib */; };
 		0BC947CF1A817732004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C91A817732004CB997 /* PlayerSingleButton.xib */; };
 		0BC947D01A817732004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947CA1A817732004CB997 /* TableCell.xib */; };
-		0BC94BF21A84719D004CB997 /* CustomControlsPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */; };
-		0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */; };
-		0BCA69541A848E6400225119 /* CustomControlsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69441A848E6400225119 /* CustomControlsView.h */; };
-		0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69451A848E6400225119 /* CustomControlsView.m */; };
-		0BCA69561A848E6400225119 /* CustomControlsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCA69461A848E6400225119 /* CustomControlsViewController.h */; };
-		0BCA69571A848E6400225119 /* CustomControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69471A848E6400225119 /* CustomControlsViewController.m */; };
 		0BCA695E1A8495AF00225119 /* PluginPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC4211A79A93B0085BC97 /* PluginPlayerViewController.m */; };
-		0BCA695F1A8495B200225119 /* CustomControlsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */; };
 		0BCA69601A8495BF00225119 /* InsertAdPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC41F1A79A93B0085BC97 /* InsertAdPlayerViewController.m */; };
-		0BCA69651A8495D400225119 /* CustomControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69451A848E6400225119 /* CustomControlsView.m */; };
-		0BCA69661A8495D800225119 /* CustomControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA69471A848E6400225119 /* CustomControlsViewController.m */; };
 		0BCA69681A8495ED00225119 /* ChangeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AC41D1A79A93B0085BC97 /* ChangeVideoPlayerViewController.m */; };
 		0BCA696C1A84965F00225119 /* OOSampleAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */; };
 		0BCA696D1A84965F00225119 /* OOSampleAdSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7333A81A7AEEBD00F0EC32 /* OOSampleAdSpot.m */; };
@@ -162,12 +153,6 @@
 		0BC947C81A817732004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0BC947C91A817732004CB997 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BC947CA1A817732004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsPlayerViewController.h; sourceTree = "<group>"; };
-		0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsPlayerViewController.m; sourceTree = "<group>"; };
-		0BCA69441A848E6400225119 /* CustomControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsView.h; sourceTree = "<group>"; };
-		0BCA69451A848E6400225119 /* CustomControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsView.m; sourceTree = "<group>"; };
-		0BCA69461A848E6400225119 /* CustomControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlsViewController.h; sourceTree = "<group>"; };
-		0BCA69471A848E6400225119 /* CustomControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlsViewController.m; sourceTree = "<group>"; };
 		0BCC6E271D2F2EFF0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammaticVolumePlayerViewController.h; sourceTree = "<group>"; };
 		0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammaticVolumePlayerViewController.m; sourceTree = "<group>"; };
@@ -275,28 +260,26 @@
 		0B19FEDB1A3AB4B4003E57DF /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				0BC94BF01A84719D004CB997 /* CustomControlsPlayerViewController.h */,
-				0BC94BF11A84719D004CB997 /* CustomControlsPlayerViewController.m */,
-				0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */,
-				0B19FEDD1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.m */,
-				0B7AC41E1A79A93B0085BC97 /* InsertAdPlayerViewController.h */,
-				0B7AC41F1A79A93B0085BC97 /* InsertAdPlayerViewController.m */,
 				0B7AC41C1A79A93B0085BC97 /* ChangeVideoPlayerViewController.h */,
 				0B7AC41D1A79A93B0085BC97 /* ChangeVideoPlayerViewController.m */,
-				0B7AC4201A79A93B0085BC97 /* PluginPlayerViewController.h */,
-				0B7AC4211A79A93B0085BC97 /* PluginPlayerViewController.m */,
 				0B41114F1B604C0D00DF47AB /* CustomOverlayPlayerViewController.h */,
 				0B4111501B604C0D00DF47AB /* CustomOverlayPlayerViewController.m */,
-				5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */,
-				5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */,
-				5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */,
-				5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */,
+				0B7AC41E1A79A93B0085BC97 /* InsertAdPlayerViewController.h */,
+				0B7AC41F1A79A93B0085BC97 /* InsertAdPlayerViewController.m */,
 				CA6D61731DA5E05C009D43D8 /* LocalizationLanguagesViewController.h */,
 				CA6D61741DA5E05C009D43D8 /* LocalizationLanguagesViewController.m */,
 				0B50E1C81DDD18E900817DD8 /* NotificationsPlayerViewController.h */,
 				0B50E1C91DDD18E900817DD8 /* NotificationsPlayerViewController.m */,
+				5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */,
+				5E32B2CC1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m */,
+				0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */,
+				0B19FEDD1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.m */,
+				0B7AC4201A79A93B0085BC97 /* PluginPlayerViewController.h */,
+				0B7AC4211A79A93B0085BC97 /* PluginPlayerViewController.m */,
 				0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */,
 				0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */,
+				5E9847881C8E5F9900D31ED1 /* UnbundledPlayerViewController.h */,
+				5E9847891C8E5F9900D31ED1 /* UnbundledPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -322,11 +305,10 @@
 		0B19FEF51A3AB5A2003E57DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0BC94BF41A847534004CB997 /* Controls */,
-				0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */,
-				0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */,
 				0B7333A71A7AEEBD00F0EC32 /* OOSampleAdSpot.h */,
 				0B7333A81A7AEEBD00F0EC32 /* OOSampleAdSpot.m */,
+				0B7333A51A7AEEBD00F0EC32 /* OOSampleAdPlayer.h */,
+				0B7333A61A7AEEBD00F0EC32 /* OOSampleAdPlayer.m */,
 				0B7333A91A7AEEBD00F0EC32 /* OOSamplePlugin.h */,
 				0B7333AA1A7AEEBD00F0EC32 /* OOSamplePlugin.m */,
 				0B19FEF61A3AB608003E57DF /* PlayerSelectionOption.h */,
@@ -360,17 +342,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0BC94BF41A847534004CB997 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				0BCA69441A848E6400225119 /* CustomControlsView.h */,
-				0BCA69451A848E6400225119 /* CustomControlsView.m */,
-				0BCA69461A848E6400225119 /* CustomControlsViewController.h */,
-				0BCA69471A848E6400225119 /* CustomControlsViewController.m */,
-			);
-			path = Controls;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -379,8 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B50E1CA1DDD18E900817DD8 /* NotificationsPlayerViewController.h in Headers */,
-				0BC94BF21A84719D004CB997 /* CustomControlsPlayerViewController.h in Headers */,
-				0BCA69541A848E6400225119 /* CustomControlsView.h in Headers */,
 				CA6D61751DA5E05C009D43D8 /* LocalizationLanguagesViewController.h in Headers */,
 				5E98478A1C8E5F9900D31ED1 /* UnbundledPlayerViewController.h in Headers */,
 				0B7AC4261A79A93B0085BC97 /* PluginPlayerViewController.h in Headers */,
@@ -394,7 +363,6 @@
 				0B7333AB1A7AEEBD00F0EC32 /* OOSampleAdPlayer.h in Headers */,
 				0B7AC4241A79A93B0085BC97 /* InsertAdPlayerViewController.h in Headers */,
 				0B19FEDE1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h in Headers */,
-				0BCA69561A848E6400225119 /* CustomControlsViewController.h in Headers */,
 				0B19FED01A3A8E6C003E57DF /* SampleAppPlayerViewController.h in Headers */,
 				0B4111551B604C7800DF47AB /* CustomOverlayView.h in Headers */,
 				0B7333AD1A7AEEBD00F0EC32 /* OOSampleAdSpot.h in Headers */,
@@ -516,13 +484,10 @@
 			files = (
 				CA6D61761DA5E05C009D43D8 /* LocalizationLanguagesViewController.m in Sources */,
 				0B4111561B604C7800DF47AB /* CustomOverlayView.m in Sources */,
-				0BCA69551A848E6400225119 /* CustomControlsView.m in Sources */,
-				0BC94BF31A84719D004CB997 /* CustomControlsPlayerViewController.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				5E32B2CE1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m in Sources */,
 				0B7333AE1A7AEEBD00F0EC32 /* OOSampleAdSpot.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
-				0BCA69571A848E6400225119 /* CustomControlsViewController.m in Sources */,
 				0B19FEDF1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.m in Sources */,
 				0B7AC4271A79A93B0085BC97 /* PluginPlayerViewController.m in Sources */,
 				0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */,
@@ -553,7 +518,6 @@
 				0BCA696C1A84965F00225119 /* OOSampleAdPlayer.m in Sources */,
 				0BCA696D1A84965F00225119 /* OOSampleAdSpot.m in Sources */,
 				0BCA696E1A84965F00225119 /* OOSamplePlugin.m in Sources */,
-				0BCA695F1A8495B200225119 /* CustomControlsPlayerViewController.m in Sources */,
 				0BCA69681A8495ED00225119 /* ChangeVideoPlayerViewController.m in Sources */,
 				0B19FF161A3B755A003E57DF /* PlayerSelectionOption.m in Sources */,
 				0B19FF181A3B755A003E57DF /* SampleAppPlayerViewController.m in Sources */,
@@ -561,8 +525,6 @@
 				0B19FF1C1A3B755A003E57DF /* PlayWithInitialTimePlayerViewController.m in Sources */,
 				0BCA695E1A8495AF00225119 /* PluginPlayerViewController.m in Sources */,
 				0BCA69601A8495BF00225119 /* InsertAdPlayerViewController.m in Sources */,
-				0BCA69661A8495D800225119 /* CustomControlsViewController.m in Sources */,
-				0BCA69651A8495D400225119 /* CustomControlsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
