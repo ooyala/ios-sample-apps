@@ -29,7 +29,6 @@
 @class OOFCCTVRating;
 @class OOOptions;
 @class OOManagedAdsPlugin;
-@class OOUserInfo;
 @class OOPlayer;
 @class OOSsaiAdsMetadata;
 @class OOAudioSession;
@@ -383,11 +382,6 @@
  * Return an OoyalaAPIClient
  */
 - (OOOoyalaAPIClient *)api;
-
-/**
- * Return an OOUserInfo
- */
-- (OOUserInfo *)userInfo;
 
 /**
  Returns a string with all the actions made by offline analytics
