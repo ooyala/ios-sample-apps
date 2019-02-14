@@ -29,6 +29,8 @@
 		393A48D921CCF293005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A48C621CCF292005860F3 /* validate.js */; };
 		393A48DB21CCF2A1005860F3 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */; };
 		393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */; };
+		395EE293221442840048166D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395EE28F221442840048166D /* LaunchScreen.storyboard */; };
+		395EE294221442840048166D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395EE291221442840048166D /* Main.storyboard */; };
 		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
 		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
 		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
@@ -43,8 +45,6 @@
 		CA79AF7B1E00B2E80027754F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF7A1E00B2E80027754F /* libz.tbd */; };
 		CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FC1D5964E700EA0A57 /* main.m */; };
 		CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */; };
-		CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9041D5964E700EA0A57 /* Main.storyboard */; };
-		CA7ED90B1D5964E700EA0A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */; };
 		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
 		CAEAD3D21DDD385700E95E08 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */; };
 /* End PBXBuildFile section */
@@ -72,6 +72,8 @@
 		393A48C621CCF292005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
+		395EE290221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		395EE292221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -93,8 +95,6 @@
 		CA7ED8FC1D5964E700EA0A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA7ED9051D5964E700EA0A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CA7ED90A1D5964E700EA0A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA7ED90C1D5964E700EA0A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CAEAD3D01DDD385700E95E08 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = Players/PlayerViewController.h; sourceTree = "<group>"; };
@@ -198,6 +198,15 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
+		395EE28E221442840048166D /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				395EE28F221442840048166D /* LaunchScreen.storyboard */,
+				395EE291221442840048166D /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		CA38F13F1D6CF9E70039D633 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,8 +264,7 @@
 				CA561E541D78E04B00535DB3 /* Players */,
 				CA38F15A1D6D08600039D633 /* Utils */,
 				393A48AE21CCF292005860F3 /* Resources */,
-				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
-				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
+				395EE28E221442840048166D /* Base.lproj */,
 				CA7ED8FB1D5964E700EA0A57 /* Supporting Files */,
 			);
 			path = DownloadToOwnSampleApp;
@@ -358,12 +366,14 @@
 				393A48D321CCF293005860F3 /* es.json in Resources */,
 				393A48CF21CCF293005860F3 /* zh.json in Resources */,
 				393A48D621CCF293005860F3 /* package.json in Resources */,
+				395EE294221442840048166D /* Main.storyboard in Resources */,
 				393A48C721CCF293005860F3 /* main.jsbundle in Resources */,
 				393A48D721CCF293005860F3 /* tv-skin.json in Resources */,
 				393A48CB21CCF293005860F3 /* Roboto-Regular.ttf in Resources */,
 				393A48D121CCF293005860F3 /* en.json in Resources */,
 				393A48D921CCF293005860F3 /* validate.js in Resources */,
 				393A48D821CCF293005860F3 /* skin-schema.json in Resources */,
+				395EE293221442840048166D /* LaunchScreen.storyboard in Resources */,
 				393A48CE21CCF293005860F3 /* Roboto-Bold.ttf in Resources */,
 				393A48D421CCF293005860F3 /* skin.json in Resources */,
 				393A48D221CCF293005860F3 /* ko.json in Resources */,
@@ -371,12 +381,10 @@
 				393A48C921CCF293005860F3 /* RobotoCondensed-Bold.ttf in Resources */,
 				393A48D021CCF293005860F3 /* ja.json in Resources */,
 				393A48D521CCF293005860F3 /* README.md in Resources */,
-				CA7ED90B1D5964E700EA0A57 /* LaunchScreen.storyboard in Resources */,
 				393A48C821CCF293005860F3 /* README.txt in Resources */,
 				393A48CA21CCF293005860F3 /* ooyala-slick-type.ttf in Resources */,
 				393A48CC21CCF293005860F3 /* RobotoCondensed-Regular.ttf in Resources */,
 				393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */,
-				CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,20 +409,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CA7ED9041D5964E700EA0A57 /* Main.storyboard */ = {
+		395EE28F221442840048166D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CA7ED9051D5964E700EA0A57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA7ED90A1D5964E700EA0A57 /* Base */,
+				395EE290221442840048166D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		395EE291221442840048166D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				395EE292221442840048166D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
