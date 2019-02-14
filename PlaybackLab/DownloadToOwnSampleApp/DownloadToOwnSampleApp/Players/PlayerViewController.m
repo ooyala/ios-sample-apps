@@ -35,8 +35,6 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
 @property (nonatomic) NSString *apiKey;
 @property (nonatomic) NSString *apiSecret;
 
-// for refresh the data from analytics offline
-@property (nonatomic) NSTimer *refreshTimer;
 @property (nonatomic) DownloadMode currentMode;
 
 - (void)restartVideo;
@@ -122,21 +120,6 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
   }];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:REFRESH_RATE
-                                                       target:self
-                                                     selector:@selector(onTimer:)
-                                                     userInfo:nil
-                                                      repeats:YES];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
-  [self.refreshTimer invalidate];
-  self.refreshTimer = nil;
-}
-
 // action linked to the online video button
 - (IBAction)playOnline {
   if (self.currentMode == Online) {
@@ -164,14 +147,6 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
   [self.ooyalaPlayerViewController.player pause];
   [self.ooyalaPlayerViewController.player setPlayheadTime:0];
   [self.ooyalaPlayerViewController.player play];
-}
-
-#pragma mark - Timer
-
-- (void)onTimer:(NSTimer *)timer {
-  NSString *dataFromAnalytics = [self.ooyalaPlayerViewController.player
-                                 dataFromFile:self.dtoAsset.options.embedCode];
-  self.analyticsData.text = dataFromAnalytics;
 }
 
 @end
