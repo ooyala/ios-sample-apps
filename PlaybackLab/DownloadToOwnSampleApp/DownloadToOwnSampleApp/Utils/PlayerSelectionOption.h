@@ -7,36 +7,29 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
-#import <OoyalaSDK/OoyalaSDK.h>
+@import OoyalaSDK;
 
 @interface PlayerSelectionOption : NSObject
-
-
 /**
  An Ooyala embed code from the same account of the pcode.
  */
-@property (nonatomic, nonnull) NSString *embedCode;
-
+@property (nonatomic) NSString *embedCode;
 /**
  Ooyala's account pcode.
  */
-@property (nonatomic, nonnull) NSString *pcode;
-
+@property (nonatomic) NSString *pcode;
 /**
  Valid domain to play the content in (e.g. http://www.ooyala.com).
  */
-@property (nonatomic, nonnull) NSString *domain;
-
+@property (nonatomic) NSString *domain;
 /**
  Title of the asset.
  */
-@property (nonatomic, nonnull) NSString *title;
-
+@property (nonatomic) NSString *title;
 /**
  OOEmbedTokenGenerator used to generate an authToken to append to the Fairplay requests.
  */
-@property (nonatomic, nullable) id<OOEmbedTokenGenerator> embedTokenGenerator;
+@property (nonatomic) id<OOEmbedTokenGenerator> embedTokenGenerator;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithTitle:(NSString *)title
