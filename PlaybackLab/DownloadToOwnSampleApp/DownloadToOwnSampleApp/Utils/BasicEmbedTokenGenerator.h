@@ -6,10 +6,7 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <OoyalaSDK/OoyalaSDK.h>
-
-
+@import OoyalaSDK;
 /**
  Basic example of an OOEmbedTokenGenerator implementation.
  */
