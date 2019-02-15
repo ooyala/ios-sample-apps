@@ -9,8 +9,10 @@ import UIKit
 import AVFoundation
 import MediaPlayer
 
+//now inited from I.B.
 class PlayerViewController: OOOoyalaPlayerViewController {
   
+  // MARK: - Private properties
   // properties for the video
   public var option: PlayerSelectionOption!
   
@@ -21,10 +23,30 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   // remote control center
   private let remoteCommandCenter = MPRemoteCommandCenter.shared()
   
+  // MARK: - View controller lifecycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    self.title = option.title
+    setupOoyalaPlayerStuff()
+    addObservers()
+    setupCommandCenter()
+    setupPlayingInfoCenter()
+  }
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    self.title = option.title
+    //setupOoyalaPlayerStuff()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    player.play()
+  }
+  
+  // MARK: - Private methods
+  private func setupOoyalaPlayerStuff() {
     
     if option.embedTokenGenerator != nil {
       if let embedTokenGen = option.embedTokenGenerator as? BasicEmbedTokenGenerator {
@@ -41,29 +63,23 @@ class PlayerViewController: OOOoyalaPlayerViewController {
       // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
       // which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
       options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: apiSecret)!
-      player = OOOoyalaPlayer(pcode: option.pcode, domain: option.domain, embedTokenGenerator: option.embedTokenGenerator!, options: options)
+      player = OOOoyalaPlayer(pcode: option.pcode,
+                              domain: option.domain,
+                              embedTokenGenerator: option.embedTokenGenerator!,
+                              options: options)
     }
     else {
       player = OOOoyalaPlayer(pcode: option.pcode, domain: option.domain)
     }
     player.setEmbedCode(option.embedCode)
-    
-    addObservers()
-    setupCommandCenter()
-    setupPlayingInfoCenter()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    player.play()
-  }
-  
-  func addObservers() {
+  private func addObservers() {
     NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(playerStateChange(_:)), name: NSNotification.Name.OOOoyalaPlayerStateChanged, object: nil)
   }
   
-  func setupCommandCenter() {
+  private func setupCommandCenter() {
     remoteCommandCenter.playCommand.isEnabled = true
     remoteCommandCenter.playCommand.addTarget(self, action: #selector(playPauseCommand))
     
@@ -82,7 +98,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
     remoteCommandCenter.changePlaybackPositionCommand.addTarget(self, action: #selector(changePlaybackPositionCommand(_:)))
   }
   
-  func setupPlayingInfoCenter() {
+  private func setupPlayingInfoCenter() {
     // Set properties of the asset to be shown in the screen (no required).
     var nowPlayingInfo: [String : Any] = [MPMediaItemPropertyTitle: option.title,
                                           MPMediaItemPropertyArtist: "Ooyala",
@@ -100,7 +116,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
   }
   
   // Updates the time labels.
-  func updatePlayingInfoCenter() {
+  private func updatePlayingInfoCenter() {
     let playingInfoCenter = MPNowPlayingInfoCenter.default()
     if var displayInfo = playingInfoCenter.nowPlayingInfo {
       displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
@@ -110,6 +126,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
     }
   }
   
+  // MARK: - Custom selectors
   @objc func playPauseCommand(_ sender: MPRemoteCommandEvent) {
     if player != nil {
       if player.isPlaying() {
@@ -157,6 +174,7 @@ class PlayerViewController: OOOoyalaPlayerViewController {
     updatePlayingInfoCenter()
   }
   
+  // MARK: - Initialization
   deinit {
     // Remove observers, targets and destroy the player.
     NotificationCenter.default.removeObserver(self)
