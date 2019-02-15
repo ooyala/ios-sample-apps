@@ -100,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B03AD622170FC70051DC70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AEE93E5B1F97C5FC004ABE42 /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		AEE93E481F97C5FC004ABE42 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +129,8 @@
 		AEE93E531F97C5FC004ABE42 /* ControlsLockScreenSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				AEE93E541F97C5FC004ABE42 /* AppDelegate.swift */,
+				33B03AD622170FC70051DC70 /* Resources */,
 				AEE93E711F97CEEB004ABE42 /* Utils */,
 				AEE93E6E1F97CAAF004ABE42 /* Models */,
 				AEE93E6B1F97CA36004ABE42 /* Views */,
@@ -131,9 +142,7 @@
 		AEE93E661F97C605004ABE42 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AEE93E541F97C5FC004ABE42 /* AppDelegate.swift */,
 				AEE93E581F97C5FC004ABE42 /* Main.storyboard */,
-				AEE93E5B1F97C5FC004ABE42 /* Assets.xcassets */,
 				AEE93E5D1F97C5FC004ABE42 /* LaunchScreen.storyboard */,
 				AEE93E601F97C5FC004ABE42 /* Info.plist */,
 				AEE93E6A1F97C6B0004ABE42 /* ControlsLockScreenSampleApp-Bridging-Header.h */,
