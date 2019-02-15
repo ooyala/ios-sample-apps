@@ -205,7 +205,9 @@ class PlayerViewController: UIViewController {
   }
   
   @objc func notificationHandler(_ notification: Notification)  {
-    print("PlayerViewController received unnamed notification")
+    // Ignore TimeChangedNotificiations for shorter logs
+    if notification.name == NSNotification.Name.OOOoyalaPlayerTimeChanged { return }
+    print("PlayerVC Notification Received: \(notification.name). state: \(ooyalaPlayerVC.player.state). playhead: \(self.ooyalaPlayerVC.player.playheadTime)")
   }
   
   // MARK: - Initialization
