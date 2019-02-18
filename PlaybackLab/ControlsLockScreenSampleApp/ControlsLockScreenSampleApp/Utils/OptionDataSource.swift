@@ -16,6 +16,11 @@ class OptionDataSource: NSObject {
                             title: "HLS Clear",
                             thumbnailURL: URL(string: "https://pbs.twimg.com/profile_images/519213440733171712/-Hwz3vF3.png")!,
                             domain: OOPlayerDomain(string: "http://www.ooyala.com")),
+      
+      /*
+       * The API Key and Secret should not be saved inside your applciation (even in git!).
+       * However, for debugging you can use them to locally generate Ooyala Player Tokens.
+       */
       PlayerSelectionOption(pcode: "x0b2cyOupu0FFK5hCr4zXg8KKcrm",
                             embedCode: "cycDhnMzE66D5DPpy3oIOzli1HVMoYnJ",
                             title: "HLS Fairplay (unconfigured)",
