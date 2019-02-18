@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *text1;
 @property (weak, nonatomic) IBOutlet UITextField *text2;
 @property (nonatomic) IBOutlet UIStackView *stackView1;
+@property (weak, nonatomic) IBOutlet UIView *playerView1;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (nonatomic) PlayerSelectionOption *playerSelectionOption;
