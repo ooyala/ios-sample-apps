@@ -19,7 +19,7 @@ class PlayerViewController: UIViewController {
   // properties required for a Fairplay asset
   private var apiKey: String?
   private var apiSecret: String?
-  private var ooyalaPlayerVC: OOOoyalaPlayerViewController!
+  private var ooyalaPlayerVC: OOOoyalaPlayerViewController?
   
   // remote control center
   private let remoteCommandCenter = MPRemoteCommandCenter.shared()
@@ -32,7 +32,9 @@ class PlayerViewController: UIViewController {
     
     setupOoyalaPlayerStuff()
     
-    addPlayerViewController(vc:ooyalaPlayerVC)
+    if let playerVC = ooyalaPlayerVC {
+      addPlayerViewController(vc:playerVC)
+    }
     
     addObservers()
     setupCommandCenter()
@@ -43,25 +45,23 @@ class PlayerViewController: UIViewController {
     super.viewDidAppear(animated)
     
     // Load the video, step 2/2
-    ooyalaPlayerVC.player.play()
+    ooyalaPlayerVC?.player.play()
   }
   
   // MARK: - Private methods
   private func addPlayerViewController(vc: UIViewController) {
-    
     vc.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     self.addChild(vc)
     view.addSubview(vc.view)
   }
   
   private func setupOoyalaPlayerStuff() {
+    var player: OOOoyalaPlayer?
     
-    var player: OOOoyalaPlayer!
-    
-    if option.embedTokenGenerator != nil {
-      if let embedTokenGen = option.embedTokenGenerator as? BasicEmbedTokenGenerator {
-        apiKey = embedTokenGen.apiKey
-        apiSecret = embedTokenGen.apiSecret
+    if let embedTokenGenerator = option.embedTokenGenerator {
+      if let basicEmbedTokenGenerator = embedTokenGenerator as? BasicEmbedTokenGenerator {
+        apiKey = basicEmbedTokenGenerator.apiKey
+        apiSecret = basicEmbedTokenGenerator.apiSecret
       }
       else {
         apiKey = "API_KEY"
@@ -75,16 +75,18 @@ class PlayerViewController: UIViewController {
       options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: apiSecret)!
       player = OOOoyalaPlayer(pcode: option.pcode,
                               domain: option.domain,
-                              embedTokenGenerator: option.embedTokenGenerator!,
+                              embedTokenGenerator: embedTokenGenerator,
                               options: options)
     }
     else {
       player = OOOoyalaPlayer(pcode: option.pcode, domain: option.domain)
     }
 
-    ooyalaPlayerVC = OOOoyalaPlayerViewController(player: player)
+    guard let initializatedPlayer = player else { return }
+    
+    ooyalaPlayerVC = OOOoyalaPlayerViewController(player: initializatedPlayer)
     // Load the video, step 1/2
-    ooyalaPlayerVC.player.setEmbedCode(option.embedCode)
+    ooyalaPlayerVC?.player.setEmbedCode(option.embedCode)
   }
   
   private func addObservers() {
@@ -101,7 +103,7 @@ class PlayerViewController: UIViewController {
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(notificationHandler(_:)),
                                            name: nil,
-                                           object: ooyalaPlayerVC.player)
+                                           object: ooyalaPlayerVC?.player)
   }
   
   private func setupCommandCenter() {
@@ -143,58 +145,57 @@ class PlayerViewController: UIViewController {
   // Updates the time labels.
   private func updatePlayingInfoCenter() {
     let playingInfoCenter = MPNowPlayingInfoCenter.default()
-    if var displayInfo = playingInfoCenter.nowPlayingInfo, let player = ooyalaPlayerVC.player {
-      displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
-      displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
-      displayInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.playheadTime()
-      playingInfoCenter.nowPlayingInfo = displayInfo
+    guard var displayInfo = playingInfoCenter.nowPlayingInfo, let player = ooyalaPlayerVC?.player else {
+      return
     }
+    
+    displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
+    displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
+    displayInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.playheadTime()
+    playingInfoCenter.nowPlayingInfo = displayInfo
   }
   
   // MARK: - Custom selectors
   @objc func playPauseCommand(_ sender: MPRemoteCommandEvent) {
-    if let player = ooyalaPlayerVC.player {
-      if player.isPlaying() {
-        player.pause()
-      }
-      else {
-        player.play()
-      }
-      updatePlayingInfoCenter()
+    guard let player = ooyalaPlayerVC?.player else { return }
+    
+    if player.isPlaying() {
+      player.pause()
     }
+    else {
+      player.play()
+    }
+    updatePlayingInfoCenter()
   }
   
   @objc func skipBackwardCommand(_ sender: MPSkipIntervalCommandEvent) {
+    guard let player = ooyalaPlayerVC?.player else { return }
     
-    if let player = ooyalaPlayerVC.player {
-      player.seek(player.playheadTime() - sender.interval)
-      player.play()
-      updatePlayingInfoCenter()
-    }
+    player.seek(player.playheadTime() - sender.interval)
+    player.play()
+    updatePlayingInfoCenter()
   }
   
   @objc func skipForwardCommand(_ sender: MPSkipIntervalCommandEvent) {
-    if let player = ooyalaPlayerVC.player {
-      player.seek(player.playheadTime() + sender.interval)
-      player.play()
-      updatePlayingInfoCenter()
-    }
+    guard let player = ooyalaPlayerVC?.player else { return }
+    
+    player.seek(player.playheadTime() + sender.interval)
+    player.play()
+    updatePlayingInfoCenter()
   }
   
   @objc func changePlaybackPositionCommand(_ sender: MPChangePlaybackPositionCommandEvent) {
-    if let player = ooyalaPlayerVC.player {
-      player.seek(sender.positionTime)
-      player.play()
-      updatePlayingInfoCenter()
-    }
+    guard let player = ooyalaPlayerVC?.player else { return }
+    
+    player.seek(sender.positionTime)
+    player.play()
+    updatePlayingInfoCenter()
   }
   
   @objc func applicationDidEnterBackground(_ notification: Notification) {
     // The app detects that is running in background, we need to call the play method twice
     // to let the AudioSession works and play the audio.
-    guard let player = ooyalaPlayerVC.player  else {
-      return
-    }
+    guard let player = ooyalaPlayerVC?.player else { return }
     
     player.perform(#selector(player.play as () -> Void))
     player.perform(#selector(player.play as () -> Void), with: nil, afterDelay: 0.1)
@@ -207,7 +208,7 @@ class PlayerViewController: UIViewController {
   @objc func notificationHandler(_ notification: Notification)  {
     // Ignore TimeChangedNotificiations for shorter logs
     if notification.name == NSNotification.Name.OOOoyalaPlayerTimeChanged { return }
-    print("PlayerVC Notification Received: \(notification.name). state: \(ooyalaPlayerVC.player.state). playhead: \(self.ooyalaPlayerVC.player.playheadTime)")
+    print("PlayerVC Notification Received: \(notification.name). state: \(String(describing: ooyalaPlayerVC?.player.state)). playhead: \(self.ooyalaPlayerVC?.player.playheadTime)")
   }
   
   // MARK: - Initialization
@@ -219,7 +220,7 @@ class PlayerViewController: UIViewController {
     remoteCommandCenter.skipBackwardCommand.removeTarget(self)
     remoteCommandCenter.skipForwardCommand.removeTarget(self)
     remoteCommandCenter.changePlaybackPositionCommand.removeTarget(self)
-    ooyalaPlayerVC.player.destroy()
+    ooyalaPlayerVC?.player.destroy()
     print("PlayerViewController is destroyed")
   }
   
