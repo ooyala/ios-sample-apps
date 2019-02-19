@@ -77,7 +77,7 @@
 
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
         [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.skinController.player state]],
+        [OOOoyalaPlayerStateConverter playerStateToString:[self.skinController.player state]],
         [self.skinController.player playheadTime]);
 }
 
