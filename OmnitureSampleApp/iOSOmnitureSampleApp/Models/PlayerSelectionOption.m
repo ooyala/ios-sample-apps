@@ -9,7 +9,9 @@
 
 @implementation PlayerSelectionOption
 
-- (instancetype)initWithTitle:(NSString *)title pcode:(NSString *)pcode embedCode:(NSString *)embedCode {
+- (instancetype)initWithTitle:(NSString *)title
+                        pcode:(NSString *)pcode
+                    embedCode:(NSString *)embedCode {
   if (self = [super init]) {
     _title = title;
     _pcode = pcode;

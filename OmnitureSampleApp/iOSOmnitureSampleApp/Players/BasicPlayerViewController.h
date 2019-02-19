@@ -5,8 +5,7 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 @class PlayerSelectionOption;
 
 @interface BasicPlayerViewController : UIViewController

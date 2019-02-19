@@ -33,7 +33,7 @@
 		CA067BDA1CE535D700ACE353 /* AssetDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetDataSource.m; path = Models/AssetDataSource.m; sourceTree = "<group>"; };
 		CA067BDC1CE5362700ACE353 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerSelectionOption.h; path = Models/PlayerSelectionOption.h; sourceTree = "<group>"; };
 		CA067BDD1CE5362700ACE353 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerSelectionOption.m; path = Models/PlayerSelectionOption.m; sourceTree = "<group>"; };
-		CA15C2D41CDAB16A00B9EF25 /* iOSOmnitureSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSOmnitureSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA15C2D41CDAB16A00B9EF25 /* OmnitureSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmnitureSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA15C2D81CDAB16A00B9EF25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA15C2DA1CDAB16A00B9EF25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA15C2DB1CDAB16A00B9EF25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39B7036D221C39890036DE31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CA15C2E01CDAB16A00B9EF25 /* Main.storyboard */,
+				CA15C2E51CDAB16A00B9EF25 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		CA067BBE1CE5342800ACE353 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +113,7 @@
 		CA15C2D51CDAB16A00B9EF25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA15C2D41CDAB16A00B9EF25 /* iOSOmnitureSampleApp.app */,
+				CA15C2D41CDAB16A00B9EF25 /* OmnitureSampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,14 +121,12 @@
 		CA15C2D61CDAB16A00B9EF25 /* iOSOmnitureSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA15C2DA1CDAB16A00B9EF25 /* AppDelegate.h */,
+				CA15C2DB1CDAB16A00B9EF25 /* AppDelegate.m */,
 				CA067BD81CE5358B00ACE353 /* Models */,
 				CA067BBE1CE5342800ACE353 /* Lists */,
 				CA15C3251CDAB32A00B9EF25 /* Players */,
-				CA15C2DA1CDAB16A00B9EF25 /* AppDelegate.h */,
-				CA15C2DB1CDAB16A00B9EF25 /* AppDelegate.m */,
-				CA15C2E01CDAB16A00B9EF25 /* Main.storyboard */,
-				CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */,
-				CA15C2E51CDAB16A00B9EF25 /* LaunchScreen.storyboard */,
+				39B7036D221C39890036DE31 /* Storyboards */,
 				CA15C2D71CDAB16A00B9EF25 /* Supporting Files */,
 			);
 			path = iOSOmnitureSampleApp;
@@ -128,6 +135,7 @@
 		CA15C2D71CDAB16A00B9EF25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */,
 				CA8DAF101CF8BE4A0081EB9D /* ADBMobileConfig.json */,
 				CA15C2E81CDAB16A00B9EF25 /* Info.plist */,
 				CA15C2D81CDAB16A00B9EF25 /* main.m */,
@@ -168,9 +176,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CA15C2D31CDAB16A00B9EF25 /* iOSOmnitureSampleApp */ = {
+		CA15C2D31CDAB16A00B9EF25 /* OmnitureSampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA15C2EB1CDAB16A00B9EF25 /* Build configuration list for PBXNativeTarget "iOSOmnitureSampleApp" */;
+			buildConfigurationList = CA15C2EB1CDAB16A00B9EF25 /* Build configuration list for PBXNativeTarget "OmnitureSampleApp" */;
 			buildPhases = (
 				CA15C2D01CDAB16A00B9EF25 /* Sources */,
 				CA15C2D11CDAB16A00B9EF25 /* Frameworks */,
@@ -180,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = iOSOmnitureSampleApp;
+			name = OmnitureSampleApp;
 			productName = iOSOmnitureSampleApp;
-			productReference = CA15C2D41CDAB16A00B9EF25 /* iOSOmnitureSampleApp.app */;
+			productReference = CA15C2D41CDAB16A00B9EF25 /* OmnitureSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CA15C2CF1CDAB16A00B9EF25 /* Build configuration list for PBXProject "iOSOmnitureSampleApp" */;
+			buildConfigurationList = CA15C2CF1CDAB16A00B9EF25 /* Build configuration list for PBXProject "OmnitureSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -212,7 +220,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA15C2D31CDAB16A00B9EF25 /* iOSOmnitureSampleApp */,
+				CA15C2D31CDAB16A00B9EF25 /* OmnitureSampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -376,13 +384,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = iOSOmnitureSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.iOSOmnitureSampleApp;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.OmnitureSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -392,13 +402,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = iOSOmnitureSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.iOSOmnitureSampleApp;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.OmnitureSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -406,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CA15C2CF1CDAB16A00B9EF25 /* Build configuration list for PBXProject "iOSOmnitureSampleApp" */ = {
+		CA15C2CF1CDAB16A00B9EF25 /* Build configuration list for PBXProject "OmnitureSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA15C2E91CDAB16A00B9EF25 /* Debug */,
@@ -415,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA15C2EB1CDAB16A00B9EF25 /* Build configuration list for PBXNativeTarget "iOSOmnitureSampleApp" */ = {
+		CA15C2EB1CDAB16A00B9EF25 /* Build configuration list for PBXNativeTarget "OmnitureSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA15C2EC1CDAB16A00B9EF25 /* Debug */,

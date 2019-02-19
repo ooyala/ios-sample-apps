@@ -5,7 +5,7 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface PlayerSelectionOption : NSObject
 
@@ -13,6 +13,8 @@
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *embedCode;
 
-- (instancetype)initWithTitle:(NSString *)title pcode:(NSString *)pcode embedCode:(NSString *)embedCode;
+- (instancetype)initWithTitle:(NSString *)title
+                        pcode:(NSString *)pcode
+                    embedCode:(NSString *)embedCode;
 
 @end

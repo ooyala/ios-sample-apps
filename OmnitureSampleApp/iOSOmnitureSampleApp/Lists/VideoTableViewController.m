@@ -25,7 +25,7 @@
   return _assets;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return self.assets.count;
 }
 
@@ -38,7 +38,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  BasicPlayerViewController *destinationVC = (BasicPlayerViewController *) segue.destinationViewController;
+  BasicPlayerViewController *destinationVC = (BasicPlayerViewController *)segue.destinationViewController;
   NSIndexPath *selectedIndex = [self.tableView indexPathForSelectedRow];
   destinationVC.asset = self.assets[selectedIndex.row];
 }
