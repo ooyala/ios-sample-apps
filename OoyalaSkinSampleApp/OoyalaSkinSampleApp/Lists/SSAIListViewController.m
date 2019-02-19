@@ -15,9 +15,9 @@
 @implementation SSAIListViewController
 
 - (void)addTestCases {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / VOD / Ooyala Pulse"
-                                                            embedCode:@"l5bm11ZjE6VFJyNE2iE6EKpCBVSRroAF"
-                                                                pcode:@"ZsdGgyOnugo44o442aALkge_dVVK"
+  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"SSAI / VOD / Ooyala Pulse2"
+                                                            embedCode:@"lwd3hkZjE6o7hAYZlr-Wgn9MjnE_dtNT"
+                                                                pcode:@"ViM2wyOicnaFHWsz2iQQj25bnQ32"
                                                          playerDomain:@"http://www.ooyala.com"
                                                         adSetProvider:@"ooyala_pulse"
                                                        viewController:[SSAIPlayerViewController class] nib: @"SSAIPlayerViewController"]];
