@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		393A46BD21CCC9C0005860F3 /* OoyalaIMASDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */; };
-		393A46BE21CCC9C8005860F3 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */; };
 		75614B5F1F711F5A005F26B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B5E1F711F5A005F26B7 /* main.m */; };
 		75614B621F711F5A005F26B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B611F711F5A005F26B7 /* AppDelegate.m */; };
 		75614B651F711F5A005F26B7 /* TVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B641F711F5A005F26B7 /* TVViewController.m */; };
@@ -19,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = file; path = OoyalaIMASDK.framework; sourceTree = "<group>"; };
 		75614B5A1F711F5A005F26B7 /* VRTVSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRTVSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75614B5E1F711F5A005F26B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75614B601F711F5A005F26B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,13 +57,20 @@
 			files = (
 				75E1C1721FA0A66200330550 /* OoyalaVRTVSDK.framework in Frameworks */,
 				75806A091F8BD3FB004248C6 /* OoyalaTVSkinSDK.framework in Frameworks */,
-				393A46BE21CCC9C8005860F3 /* OoyalaIMASDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39B70300221C2ED50036DE31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				75614B661F711F5A005F26B7 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		75614B511F711F5A005F26B7 = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +96,7 @@
 				75614B611F711F5A005F26B7 /* AppDelegate.m */,
 				75614B631F711F5A005F26B7 /* TVViewController.h */,
 				75614B641F711F5A005F26B7 /* TVViewController.m */,
-				75614B661F711F5A005F26B7 /* Main.storyboard */,
-				75614B691F711F5A005F26B7 /* Assets.xcassets */,
-				75614B6B1F711F5A005F26B7 /* Info.plist */,
+				39B70300221C2ED50036DE31 /* Storyboards */,
 				75614B5D1F711F5A005F26B7 /* Supporting Files */,
 			);
 			path = VRTVSampleApp;
@@ -103,6 +105,8 @@
 		75614B5D1F711F5A005F26B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				75614B691F711F5A005F26B7 /* Assets.xcassets */,
+				75614B6B1F711F5A005F26B7 /* Info.plist */,
 				75614B5E1F711F5A005F26B7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -111,7 +115,6 @@
 		75614B781F71214A005F26B7 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				393A46BC21CCC9BC005860F3 /* OoyalaIMASDK.framework */,
 				75E1C1711FA0A66200330550 /* OoyalaVRTVSDK.framework */,
 				75806A051F8BD3EB004248C6 /* OoyalaTVSkinSDK.framework */,
 			);
@@ -176,6 +179,7 @@
 				TargetAttributes = {
 					75614B591F711F5A005F26B7 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 556Y9XWD3N;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -205,7 +209,6 @@
 			files = (
 				75614B681F711F5A005F26B7 /* Main.storyboard in Resources */,
 				75614B6A1F711F5A005F26B7 /* Assets.xcassets in Resources */,
-				393A46BD21CCC9C0005860F3 /* OoyalaIMASDK.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +352,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -357,7 +360,7 @@
 				INFOPLIST_FILE = VRTVSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.epam.ooyala;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRTVSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -371,7 +374,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -379,7 +382,7 @@
 				INFOPLIST_FILE = VRTVSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.epam.ooyala;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRTVSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TVOS_DEPLOYMENT_TARGET = 9.0;

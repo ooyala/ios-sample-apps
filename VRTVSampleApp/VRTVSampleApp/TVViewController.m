@@ -5,15 +5,15 @@
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
-#import "TVViewController.h"
-#import <OoyalaVRTVSDK/OoyalaVRTVSDK.h>
-#import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
+@import OoyalaVRTVSDK;
 
+#import "TVViewController.h"
+#import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
 
 @interface TVViewController ()
 
-@property(weak, nonatomic) IBOutlet UIView *skinContainerView;
-@property(nonatomic, retain) OOOoyalaTVPlayerViewController *skinController;
+@property (weak, nonatomic) IBOutlet UIView *skinContainerView;
+@property (nonatomic, retain) OOOoyalaTVPlayerViewController *skinController;
 
 @end
 
@@ -52,7 +52,7 @@ NSString *TV_EMBEDCODE_TEST5 = @"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"; // ---> IMA 
   
   [self addChildViewController:_skinController];
   
-  [ooyalaVRTVPlayer setEmbedCode:TV_EMBEDCODE_TEST5];
+  [ooyalaVRTVPlayer setEmbedCode:TV_EMBEDCODE_TEST4];
 }
 
 @end
