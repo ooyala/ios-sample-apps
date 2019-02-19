@@ -218,6 +218,15 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
+		39B703E4221C3F550036DE31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AE1B86B42020DF2000FCF6CA /* LaunchScreen.storyboard */,
+				AE1B86AF2020DF2000FCF6CA /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		AE1B869F2020DF2000FCF6CA = {
 			isa = PBXGroup;
 			children = (
@@ -241,10 +250,11 @@
 			children = (
 				AE1B86F120224B5300FCF6CA /* Managers */,
 				AE1B86BD2020E1FE00FCF6CA /* Models */,
-				AEC5A2202028E803005F94FF /* Resources */,
-				AE1B86BE2020E20400FCF6CA /* Support Files */,
 				AE1B86BF2020E23C00FCF6CA /* Utils */,
+				AEC5A2202028E803005F94FF /* Resources */,
+				39B703E4221C3F550036DE31 /* Storyboards */,
 				AE1B86C02020E24400FCF6CA /* Views */,
+				AE1B86BE2020E20400FCF6CA /* Support Files */,
 			);
 			path = SerializationDownloadsSampleApp;
 			sourceTree = "<group>";
@@ -262,8 +272,6 @@
 			children = (
 				AE1B86B72020DF2000FCF6CA /* Info.plist */,
 				AE1B86AB2020DF2000FCF6CA /* AppDelegate.swift */,
-				AE1B86B42020DF2000FCF6CA /* LaunchScreen.storyboard */,
-				AE1B86AF2020DF2000FCF6CA /* Main.storyboard */,
 				AE1B86E62020E57800FCF6CA /* SerializationDownloadsSampleApp-Bridging-Header.h */,
 			);
 			path = "Support Files";
