@@ -95,9 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				CA15C2D61CDAB16A00B9EF25 /* iOSOmnitureSampleApp */,
+				CA42632B1CF8BDA100A02F24 /* VendorLibraries */,
 				CA15C32D1CDAB75E00B9EF25 /* Frameworks */,
 				CA15C2D51CDAB16A00B9EF25 /* Products */,
-				CA42632B1CF8BDA100A02F24 /* VendorLibraries */,
 			);
 			sourceTree = "<group>";
 		};

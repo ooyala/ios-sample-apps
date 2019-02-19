@@ -66,7 +66,7 @@
   
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
         [notification name],
-        [OOOoyalaPlayer playerStateToString:[self.playerVC.player state]],
+        [OOOoyalaPlayerStateConverter playerStateToString:[self.playerVC.player state]],
         [self.playerVC.player playheadTime]);
 }
 
