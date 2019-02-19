@@ -43,8 +43,6 @@ class PlayerViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    
-    // Load the video, step 2/2
     ooyalaPlayerVC?.player.play()
   }
   
@@ -85,7 +83,6 @@ class PlayerViewController: UIViewController {
     guard let initializatedPlayer = player else { return }
     
     ooyalaPlayerVC = OOOoyalaPlayerViewController(player: initializatedPlayer)
-    // Load the video, step 1/2
     ooyalaPlayerVC?.player.setEmbedCode(option.embedCode)
   }
   
