@@ -37,9 +37,9 @@
   _pcode        = @"R2d3I6s06RyB712DN0_2GsQS-R-Y";
   _playerDomain = @"http://www.ooyala.com";
   if (self.playerSelectionOption) {
-    assetUrl     = self.playerSelectionOption.embedCode;
-    pcode        = self.playerSelectionOption.pcode;
-    playerDomain = self.playerSelectionOption.domain;
+    _assetUrl     = self.playerSelectionOption.embedCode;
+    _pcode        = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
     self.title   = self.playerSelectionOption.title;
   }
   return self;

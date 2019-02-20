@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import <OoyalaSDK/OOPlayerProtocol.h>
 #import <OoyalaSDK/OOLifeCycle.h>
 

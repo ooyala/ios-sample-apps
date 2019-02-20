@@ -96,8 +96,7 @@
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
        forCellReuseIdentifier:@"TableCell"];
 
-  _options = [NSArray array];
-  _options = self.allPlayerSelectionOptions;
+  _options = [NSArray arrayWithArray:self.allPlayerSelectionOptions];
 }
 
 - (void)changeSwitch:(id)sender{
