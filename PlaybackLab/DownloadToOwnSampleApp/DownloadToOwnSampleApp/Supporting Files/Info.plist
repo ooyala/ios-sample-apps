@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>DownloadToOwnSampleApp</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,6 +27,15 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ooyala-slick-type.ttf</string>
+		<string>alice.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>RobotoCondensed-Regular.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -45,15 +56,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>ooyala-slick-type.ttf</string>
-		<string>alice.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-Bold.ttf</string>
-		<string>RobotoCondensed-Regular.ttf</string>
-		<string>RobotoCondensed-Bold.ttf</string>
 	</array>
 	<key>VolumeThumbImage</key>
 	<string>VolumeThumb</string>

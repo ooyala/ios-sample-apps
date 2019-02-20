@@ -29,24 +29,24 @@
 		393A48D921CCF293005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A48C621CCF292005860F3 /* validate.js */; };
 		393A48DB21CCF2A1005860F3 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */; };
 		393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */; };
+		395EE293221442840048166D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395EE28F221442840048166D /* LaunchScreen.storyboard */; };
+		395EE294221442840048166D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395EE291221442840048166D /* Main.storyboard */; };
+		39D45FFA221D6E44008C9FC7 /* AssetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */; };
+		39D45FFE221D6E51008C9FC7 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */; };
+		39D46009221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */; };
+		39D4600A221D6E62008C9FC7 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46002221D6E62008C9FC7 /* OptionsDataSource.m */; };
+		39D4600B221D6E62008C9FC7 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */; };
+		39D4600C221D6E62008C9FC7 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */; };
+		39D46010221D6EA4008C9FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4600E221D6EA4008C9FC7 /* main.m */; };
 		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
 		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
 		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
-		CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F1581D6CFA1C0039D633 /* AssetListViewController.m */; };
-		CA38F15D1D6D086D0039D633 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */; };
-		CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */; };
-		CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */; };
-		CA561E6E1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */; };
 		CA79AF751E00B2CD0027754F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF741E00B2CD0027754F /* libxml2.tbd */; };
 		CA79AF771E00B2D30027754F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF761E00B2D30027754F /* libc++.tbd */; };
 		CA79AF791E00B2DF0027754F /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF781E00B2DF0027754F /* libc++abi.tbd */; };
 		CA79AF7B1E00B2E80027754F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF7A1E00B2E80027754F /* libz.tbd */; };
-		CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FC1D5964E700EA0A57 /* main.m */; };
 		CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */; };
-		CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9041D5964E700EA0A57 /* Main.storyboard */; };
-		CA7ED90B1D5964E700EA0A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */; };
 		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
-		CAEAD3D21DDD385700E95E08 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,33 +72,33 @@
 		393A48C621CCF292005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
+		395EE290221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		395EE292221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		39D45FF8221D6E44008C9FC7 /* AssetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetListViewController.h; sourceTree = "<group>"; };
+		39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetListViewController.m; sourceTree = "<group>"; };
+		39D45FFC221D6E51008C9FC7 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
+		39D46001221D6E62008C9FC7 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
+		39D46002221D6E62008C9FC7 /* OptionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsDataSource.m; sourceTree = "<group>"; };
+		39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		39D46004221D6E62008C9FC7 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
+		39D46006221D6E62008C9FC7 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
+		39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
+		39D46008221D6E62008C9FC7 /* OptionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsDataSource.h; sourceTree = "<group>"; };
+		39D4600E221D6EA4008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39D4600F221D6EA4008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		CA38F1571D6CFA1C0039D633 /* AssetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetListViewController.h; path = Lists/AssetListViewController.h; sourceTree = "<group>"; };
-		CA38F1581D6CFA1C0039D633 /* AssetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetListViewController.m; path = Lists/AssetListViewController.m; sourceTree = "<group>"; };
-		CA38F15B1D6D086D0039D633 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerSelectionOption.h; path = Utils/PlayerSelectionOption.h; sourceTree = "<group>"; };
-		CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerSelectionOption.m; path = Utils/PlayerSelectionOption.m; sourceTree = "<group>"; };
-		CA38F15E1D6D0AF40039D633 /* OptionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsDataSource.h; path = Utils/OptionsDataSource.h; sourceTree = "<group>"; };
-		CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsDataSource.m; path = Utils/OptionsDataSource.m; sourceTree = "<group>"; };
-		CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionTableViewCell.h; path = Utils/Views/OptionTableViewCell.h; sourceTree = "<group>"; };
-		CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionTableViewCell.m; path = Utils/Views/OptionTableViewCell.m; sourceTree = "<group>"; };
-		CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicEmbedTokenGenerator.h; path = Utils/BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
-		CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicEmbedTokenGenerator.m; path = Utils/BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
 		CA79AF741E00B2CD0027754F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		CA79AF761E00B2D30027754F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		CA79AF781E00B2DF0027754F /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		CA79AF7A1E00B2E80027754F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CA7ED8F81D5964E700EA0A57 /* DownloadToOwnSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadToOwnSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA7ED8FC1D5964E700EA0A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA7ED9051D5964E700EA0A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CA7ED90A1D5964E700EA0A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CA7ED90C1D5964E700EA0A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		CAEAD3D01DDD385700E95E08 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = Players/PlayerViewController.h; sourceTree = "<group>"; };
-		CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerViewController.m; path = Players/PlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,36 +198,63 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
-		CA38F13F1D6CF9E70039D633 /* Lists */ = {
+		395EE28E221442840048166D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				CA38F1571D6CFA1C0039D633 /* AssetListViewController.h */,
-				CA38F1581D6CFA1C0039D633 /* AssetListViewController.m */,
+				395EE28F221442840048166D /* LaunchScreen.storyboard */,
+				395EE291221442840048166D /* Main.storyboard */,
 			);
-			name = Lists;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		CA38F15A1D6D08600039D633 /* Utils */ = {
+		39D45FF7221D6E44008C9FC7 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				CAFA5BAF1DDD410000CAE010 /* Views */,
-				CA38F15B1D6D086D0039D633 /* PlayerSelectionOption.h */,
-				CA38F15C1D6D086D0039D633 /* PlayerSelectionOption.m */,
-				CA38F15E1D6D0AF40039D633 /* OptionsDataSource.h */,
-				CA38F15F1D6D0AF40039D633 /* OptionsDataSource.m */,
-				CA561E6C1D78FB7900535DB3 /* BasicEmbedTokenGenerator.h */,
-				CA561E6D1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m */,
+				39D45FF8221D6E44008C9FC7 /* AssetListViewController.h */,
+				39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */,
 			);
-			name = Utils;
+			path = Lists;
 			sourceTree = "<group>";
 		};
-		CA561E541D78E04B00535DB3 /* Players */ = {
+		39D45FFB221D6E51008C9FC7 /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				CAEAD3D01DDD385700E95E08 /* PlayerViewController.h */,
-				CAEAD3D11DDD385700E95E08 /* PlayerViewController.m */,
+				39D45FFC221D6E51008C9FC7 /* PlayerViewController.h */,
+				39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */,
 			);
-			name = Players;
+			path = Players;
+			sourceTree = "<group>";
+		};
+		39D45FFF221D6E62008C9FC7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */,
+				39D46001221D6E62008C9FC7 /* PlayerSelectionOption.h */,
+				39D46002221D6E62008C9FC7 /* OptionsDataSource.m */,
+				39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */,
+				39D46004221D6E62008C9FC7 /* BasicEmbedTokenGenerator.h */,
+				39D46005221D6E62008C9FC7 /* Views */,
+				39D46008221D6E62008C9FC7 /* OptionsDataSource.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		39D46005221D6E62008C9FC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39D46006221D6E62008C9FC7 /* OptionTableViewCell.h */,
+				39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39D4600D221D6EA4008C9FC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39D4600E221D6EA4008C9FC7 /* main.m */,
+				39D4600F221D6EA4008C9FC7 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CA7ED8EF1D5964E700EA0A57 = {
@@ -251,26 +278,16 @@
 		CA7ED8FA1D5964E700EA0A57 /* DownloadToOwnSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				CA38F13F1D6CF9E70039D633 /* Lists */,
-				CA561E541D78E04B00535DB3 /* Players */,
-				CA38F15A1D6D08600039D633 /* Utils */,
-				393A48AE21CCF292005860F3 /* Resources */,
-				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
-				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
-				CA7ED8FB1D5964E700EA0A57 /* Supporting Files */,
-			);
-			path = DownloadToOwnSampleApp;
-			sourceTree = "<group>";
-		};
-		CA7ED8FB1D5964E700EA0A57 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */,
 				CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */,
-				CA7ED90C1D5964E700EA0A57 /* Info.plist */,
-				CA7ED8FC1D5964E700EA0A57 /* main.m */,
+				39D45FF7221D6E44008C9FC7 /* Lists */,
+				39D45FFB221D6E51008C9FC7 /* Players */,
+				39D45FFF221D6E62008C9FC7 /* Utils */,
+				393A48AE21CCF292005860F3 /* Resources */,
+				395EE28E221442840048166D /* Storyboards */,
+				39D4600D221D6EA4008C9FC7 /* Supporting Files */,
 			);
-			name = "Supporting Files";
+			path = DownloadToOwnSampleApp;
 			sourceTree = "<group>";
 		};
 		CAC620481D63C9AB004902F3 /* Frameworks */ = {
@@ -286,15 +303,6 @@
 				CA79AF741E00B2CD0027754F /* libxml2.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CAFA5BAF1DDD410000CAE010 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CA38F1641D6D1C960039D633 /* OptionTableViewCell.h */,
-				CA38F1651D6D1C960039D633 /* OptionTableViewCell.m */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,12 +366,14 @@
 				393A48D321CCF293005860F3 /* es.json in Resources */,
 				393A48CF21CCF293005860F3 /* zh.json in Resources */,
 				393A48D621CCF293005860F3 /* package.json in Resources */,
+				395EE294221442840048166D /* Main.storyboard in Resources */,
 				393A48C721CCF293005860F3 /* main.jsbundle in Resources */,
 				393A48D721CCF293005860F3 /* tv-skin.json in Resources */,
 				393A48CB21CCF293005860F3 /* Roboto-Regular.ttf in Resources */,
 				393A48D121CCF293005860F3 /* en.json in Resources */,
 				393A48D921CCF293005860F3 /* validate.js in Resources */,
 				393A48D821CCF293005860F3 /* skin-schema.json in Resources */,
+				395EE293221442840048166D /* LaunchScreen.storyboard in Resources */,
 				393A48CE21CCF293005860F3 /* Roboto-Bold.ttf in Resources */,
 				393A48D421CCF293005860F3 /* skin.json in Resources */,
 				393A48D221CCF293005860F3 /* ko.json in Resources */,
@@ -371,12 +381,10 @@
 				393A48C921CCF293005860F3 /* RobotoCondensed-Bold.ttf in Resources */,
 				393A48D021CCF293005860F3 /* ja.json in Resources */,
 				393A48D521CCF293005860F3 /* README.md in Resources */,
-				CA7ED90B1D5964E700EA0A57 /* LaunchScreen.storyboard in Resources */,
 				393A48C821CCF293005860F3 /* README.txt in Resources */,
 				393A48CA21CCF293005860F3 /* ooyala-slick-type.ttf in Resources */,
 				393A48CC21CCF293005860F3 /* RobotoCondensed-Regular.ttf in Resources */,
 				393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */,
-				CA7ED9061D5964E700EA0A57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,34 +395,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D4600C221D6E62008C9FC7 /* OptionTableViewCell.m in Sources */,
 				CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */,
-				CA7ED8FD1D5964E700EA0A57 /* main.m in Sources */,
-				CA561E6E1D78FB7900535DB3 /* BasicEmbedTokenGenerator.m in Sources */,
-				CA38F15D1D6D086D0039D633 /* PlayerSelectionOption.m in Sources */,
-				CA38F1591D6CFA1C0039D633 /* AssetListViewController.m in Sources */,
-				CA38F1661D6D1C960039D633 /* OptionTableViewCell.m in Sources */,
-				CAEAD3D21DDD385700E95E08 /* PlayerViewController.m in Sources */,
-				CA38F1601D6D0AF40039D633 /* OptionsDataSource.m in Sources */,
+				39D4600B221D6E62008C9FC7 /* PlayerSelectionOption.m in Sources */,
+				39D46009221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m in Sources */,
+				39D4600A221D6E62008C9FC7 /* OptionsDataSource.m in Sources */,
+				39D45FFA221D6E44008C9FC7 /* AssetListViewController.m in Sources */,
+				39D46010221D6EA4008C9FC7 /* main.m in Sources */,
+				39D45FFE221D6E51008C9FC7 /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CA7ED9041D5964E700EA0A57 /* Main.storyboard */ = {
+		395EE28F221442840048166D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CA7ED9051D5964E700EA0A57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA7ED90A1D5964E700EA0A57 /* Base */,
+				395EE290221442840048166D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		395EE291221442840048166D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				395EE292221442840048166D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -535,10 +543,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaSkinSDK-iOS",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = DownloadToOwnSampleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleApp;
@@ -555,10 +562,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries/**",
-					"$(PROJECT_DIR)/VendorLibraries/OoyalaSkinSDK-iOS",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = DownloadToOwnSampleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleApp;

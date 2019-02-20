@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /**
  Manages the assets to be downloaded.
