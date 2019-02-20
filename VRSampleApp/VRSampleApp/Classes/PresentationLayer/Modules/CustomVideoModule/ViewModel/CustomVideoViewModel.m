@@ -20,11 +20,9 @@
 #pragma mark - Initialziation
 
 - (instancetype)init {
-  self = [super init];
-  
-  if (self) {
-    self.pCode = @"";
-    self.embedCode = @"";
+  if (self = [super init]) {
+    _pCode = @"";
+    _embedCode = @"";
   }
   
   return self;
@@ -45,7 +43,7 @@
 }
 
 - (void)openButtonDidTapped {
-  if (![self.embedCode isEqual: @""] && ![self.pCode  isEqual: @""]) {
+  if (![self.embedCode isEqual:@""] && ![self.pCode isEqual:@""]) {
     __weak typeof(self) weakSelf = self;
 
     [self.delegate dismisCurrentModule:^(BOOL finished) {
@@ -57,8 +55,7 @@
 #pragma mark - Private functions
 
 - (void)updateOpenButtonState {
-  [self.delegate openButtonEnabledChanged:![self.embedCode isEqual: @""] && ![self.pCode  isEqual: @""]];
+  [self.delegate openButtonEnabledChanged:![self.embedCode isEqual:@""] && ![self.pCode isEqual:@""]];
 }
-
 
 @end

@@ -10,12 +10,7 @@
 
 @implementation VideoItemCell
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
-- (void)setVideoItem:(VideoItem *)videoItem
-{
+- (void)setVideoItem:(VideoItem *)videoItem {
   self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
   
   self.titleLabel.text = videoItem.title ?: @"";

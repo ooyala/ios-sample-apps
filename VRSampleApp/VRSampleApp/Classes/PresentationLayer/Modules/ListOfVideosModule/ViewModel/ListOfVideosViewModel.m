@@ -9,7 +9,8 @@
 #import "ListOfVideosFactory.h"
 #import "TestDataServiceProtocol.h"
 #import "TestDataService.h"
-
+#import "VideoItemSection.h"
+#import "VideoItem.h"
 
 @interface ListOfVideosViewModel ()
 
@@ -37,17 +38,14 @@ NSString *kCustomVideoTitle = @"Custom video";
 #pragma mark - Initialization
 
 - (instancetype)init {
-  self = [super init];
-  
-  if (self) {
-    
+  if (self = [super init]) {
     // DI
-    self.testDataService = [TestDataService new];
-    self.listOfVideosFactory = [ListOfVideosFactory new];
+    _testDataService = [TestDataService new];
+    _listOfVideosFactory = [ListOfVideosFactory new];
     
     // Load items
-    self.testData = [NSArray new];
-    self.testData = [self.testDataService obtainTestData];
+    _testData = [NSArray array];
+    _testData = [self.testDataService obtainTestData];
   }
   
   return self;
@@ -60,7 +58,7 @@ NSString *kCustomVideoTitle = @"Custom video";
 }
 
 - (NSInteger)getCountRowsInSection:(NSInteger)section {
-  if (section <= self.testData.count - 1) {
+  if (section < self.testData.count) {
     VideoItemSection *videoItemSection = self.testData[section];
     return videoItemSection.videoItems.count;
   }
@@ -69,7 +67,7 @@ NSString *kCustomVideoTitle = @"Custom video";
 }
 
 - (VideoItemSection *)getVideoItemSectionAtSection:(NSInteger)section {
-  if (section <= self.testData.count - 1) {
+  if (section < self.testData.count) {
     return self.testData[section];
   }
   
@@ -77,9 +75,9 @@ NSString *kCustomVideoTitle = @"Custom video";
 }
 
 - (VideoItem *)getVideoItemAt:(NSIndexPath *)indexPath {
-  if (indexPath.section <= self.testData.count - 1) {
+  if (indexPath.section < self.testData.count) {
     VideoItemSection *videoItem = self.testData[indexPath.section];
-    if (indexPath.row <= videoItem.videoItems.count - 1) {
+    if (indexPath.row < videoItem.videoItems.count) {
       return videoItem.videoItems[indexPath.row];
     }
   }
@@ -97,9 +95,9 @@ NSString *kCustomVideoTitle = @"Custom video";
   }];
 }
 
-- (UIViewController *)configuredVideoViewControllerWithVideoItem:(VideoItem *)videoItem andQAModeEnabled:(BOOL)QAModeEnabled {
+- (UIViewController *)configuredVideoViewControllerWithVideoItem:(VideoItem *)videoItem
+                                                andQAModeEnabled:(BOOL)QAModeEnabled {
   NSString *pcode;
-  
   if (videoItem.pcode) {
     pcode = videoItem.pcode;
   } else {
@@ -111,6 +109,5 @@ NSString *kCustomVideoTitle = @"Custom video";
                                                         domain:kDefaultDomain
                                                  QAModeEnabled:QAModeEnabled];
 }
-
 
 @end

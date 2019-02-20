@@ -8,6 +8,8 @@
 #import <UIKit/UIKit.h>
 #import "OOImages.h"
 
+#ifndef OOScalableImageButton_h
+#define OOScalableImageButton_h
 
 @interface OOScalableImageButton : UIButton
 
@@ -21,3 +23,5 @@
 - (instancetype)initWithScale:(CGFloat)scale;
 
 @end
+
+#endif /* OOScalableImageButton_h */

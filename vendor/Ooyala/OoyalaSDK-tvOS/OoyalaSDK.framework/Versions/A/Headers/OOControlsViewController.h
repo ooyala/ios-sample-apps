@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "OOOoyalaPlayerViewController.h"
+#import "OOPlayerState.h"
+#import "OOEnums.h"
 
 @class OOOoyalaPlayer;
 

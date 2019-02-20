@@ -5,8 +5,7 @@
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 @protocol CustomVideoViewModelDelegate
   

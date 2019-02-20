@@ -13,6 +13,7 @@
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 #import <OoyalaSDK/OOOptions.h>
 #import "PlayerSelectionOption.h"
+#import <OOyalaSDK/OOEmbedTokenGenerator.h>
 
 @interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 
@@ -64,9 +65,7 @@
 }
 
 - (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
-  NSMutableDictionary *params = [NSMutableDictionary dictionary];
-  
-  params[@"account_id"] = self.accountId;
+  NSDictionary *params = @{@"account_id": self.accountId};
   NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
   
   OOEmbeddedSecureURLGenerator *urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey

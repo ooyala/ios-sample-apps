@@ -8,13 +8,11 @@
 #import "CustomVideoTransitionManager.h"
 #import "CustomVideoViewController.h"
 
-
 @interface CustomVideoTransitionManager ()
 
 @property (nonatomic) BOOL presenting;
 
 @end
-
 
 @implementation CustomVideoTransitionManager
 
@@ -87,17 +85,16 @@
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+- (nullable id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
   self.presenting = YES;
   
   return self;
 }
 
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+- (nullable id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
   self.presenting = NO;
   
   return self;
 }
-
 
 @end

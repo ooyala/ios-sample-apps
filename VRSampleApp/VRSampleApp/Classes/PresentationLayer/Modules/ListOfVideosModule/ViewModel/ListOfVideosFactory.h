@@ -6,8 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VideoItem.h"
-
+@class VideoItem;
 
 @interface ListOfVideosFactory : NSObject
 

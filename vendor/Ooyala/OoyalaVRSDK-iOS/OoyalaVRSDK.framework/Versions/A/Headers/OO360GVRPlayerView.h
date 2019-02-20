@@ -7,6 +7,8 @@
 
 #import "OOOoyalaPlayerView.h"
 
+#ifndef OO360GVRPlayerView_h
+#define OO360GVRPlayerView_h
 
 @interface OO360GVRPlayerView : OOOoyalaPlayerView
 
@@ -36,3 +38,5 @@ typedef NS_ENUM(NSInteger, OO360VideoType) {
 - (void)setHidden:(BOOL)hidden;
 
 @end
+
+#endif /* OO360GVRPlayerView_h */

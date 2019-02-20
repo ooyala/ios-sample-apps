@@ -40,7 +40,8 @@ class CustomVideoViewController: UIViewController {
   private func configureObjects() {
 
     // Add keyboard notifications
-    NotificationCenter.default.addObserver(self, selector: #selector(keyboardNotification(notification:)),
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardNotification(notification:)),
                                            name: UIResponder.keyboardWillShowNotification,
                                            object: nil)
 
