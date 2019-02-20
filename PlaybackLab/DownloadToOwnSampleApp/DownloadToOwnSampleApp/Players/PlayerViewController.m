@@ -6,11 +6,10 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-@import OoyalaSDK;
-@import OoyalaSkinSDK;
-
 #import "PlayerViewController.h"
 #import "BasicEmbedTokenGenerator.h"
+#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 
 typedef NS_ENUM(NSInteger, DownloadMode) {
   Offline,

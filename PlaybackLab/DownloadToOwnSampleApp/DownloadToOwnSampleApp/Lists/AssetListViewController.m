@@ -6,14 +6,12 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-@import OoyalaSDK;
-
 #import "AssetListViewController.h"
 #import "OptionTableViewCell.h"
 #import "OptionsDataSource.h"
 #import "PlayerSelectionOption.h"
-
 #import "PlayerViewController.h"
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @interface AssetListViewController ()
 
