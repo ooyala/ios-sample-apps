@@ -420,6 +420,7 @@
 				INFOPLIST_FILE = "ControlsLockScreenSampleApp/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";
@@ -436,6 +437,7 @@
 				INFOPLIST_FILE = "ControlsLockScreenSampleApp/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";

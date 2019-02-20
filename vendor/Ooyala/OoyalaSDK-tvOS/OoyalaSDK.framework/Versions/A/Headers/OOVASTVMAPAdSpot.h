@@ -7,32 +7,32 @@
  */
 @interface OOVASTVMAPAdSpot : OOVASTAdSpot
 
-@property (readonly, nonatomic, strong) OOVASTOffset *timeOffset;
-@property (readonly, nonatomic, strong) NSString *breakType;
-@property (readonly, nonatomic, strong) NSString *breakId;
-@property (readonly, nonatomic, strong) NSString *adSourceId;
+@property (readonly, nonatomic) OOVASTOffset *timeOffset;
+@property (readonly, nonatomic) NSString *breakType;
+@property (readonly, nonatomic) NSString *breakId;
+@property (readonly, nonatomic) NSString *adSourceId;
 @property (readonly, nonatomic) BOOL allowMultipleAds;
 @property (readonly, nonatomic) BOOL followRedirects;
 
-- (id)initWithOffset:(OOVASTOffset *)timeOffset
-            duration:(NSInteger)duration
-         repeatAfter:(Float64)repeatAfter
-           breakType:(NSString *)breakType
-             breakId:(NSString *)breakId
-            sourceId:(NSString *)sourceId
-    allowMultipleAds:(BOOL)allowMultipleAds
-     followRedirects:(BOOL)followRedirects
-             element:(OOTBXMLElement *)element;
+- (instancetype)initWithOffset:(OOVASTOffset *)timeOffset
+                      duration:(NSInteger)duration
+                   repeatAfter:(Float64)repeatAfter
+                     breakType:(NSString *)breakType
+                       breakId:(NSString *)breakId
+                      sourceId:(NSString *)sourceId
+              allowMultipleAds:(BOOL)allowMultipleAds
+               followRedirects:(BOOL)followRedirects
+                       element:(OOTBXMLElement *)element;
 
-- (id)initWithOffset:(OOVASTOffset *)timeOffset
-            duration:(NSInteger)duration
-         repeatAfter:(Float64)repeatAfter
-           breakType:(NSString *)breakType
-             breakId:(NSString *)breakId
-            sourceId:(NSString *)sourceId
-    allowMultipleAds:(BOOL)allowMultipleAds
-     followRedirects:(BOOL)followRedirects
-             vastUrl:(NSURL *)vastUrl;
+- (instancetype)initWithOffset:(OOVASTOffset *)timeOffset
+                      duration:(NSInteger)duration
+                   repeatAfter:(Float64)repeatAfter
+                     breakType:(NSString *)breakType
+                       breakId:(NSString *)breakId
+                      sourceId:(NSString *)sourceId
+              allowMultipleAds:(BOOL)allowMultipleAds
+               followRedirects:(BOOL)followRedirects
+                       vastUrl:(NSURL *)vastUrl;
 
 /**
  * return true if VMAP ad is repeatable, otherwise not

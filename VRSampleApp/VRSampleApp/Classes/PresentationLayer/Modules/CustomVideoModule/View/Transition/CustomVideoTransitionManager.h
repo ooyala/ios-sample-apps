@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface CustomVideoTransitionManager : NSObject <UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate>
 
 @end

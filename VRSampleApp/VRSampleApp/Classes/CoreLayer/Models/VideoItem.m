@@ -7,18 +7,15 @@
 
 #import "VideoItem.h"
 
-
 @implementation VideoItem
 
 #pragma mark - Initialization
 
 - (instancetype)initWithEmbedCode:(NSString *)embedCode andTitle:(NSString *)title; {
-  self = [super init];
-  
-  if (self) {
-    self.embedCode = embedCode;
-    self.title = title;
-    self.videoAdType = UNKNOWN;
+  if (self = [super init]) {
+    _embedCode = embedCode;
+    _title = title;
+    _videoAdType = UNKNOWN;
   }
   
   return self;

@@ -29,32 +29,24 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
-  [self.tableView registerNib:[UINib nibWithNibName:@"VideoItemCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VIDEO_CELL_REUSE_ID];
+  [self.tableView registerNib:[UINib nibWithNibName:@"VideoItemCell" bundle:[NSBundle mainBundle]]
+       forCellReuseIdentifier:VIDEO_CELL_REUSE_ID];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 // Start playing the video item at specified index
-- (void)playVideo:(NSInteger)index
-{
+- (void)playVideo:(NSInteger)index {
   VideoItem *videoItem = self.videos[index];
   UIViewController *vc = [[PulseManagerViewController alloc] initWithVideoItem:videoItem];
   
   [self.navigationController pushViewController:vc animated:YES];
-  
 }
 
 #pragma mark - Video libray
 
 // Load video library from library.json into a JSON array.
-- (NSArray *)JSONVideoObjects
-{
+- (NSArray *)JSONVideoObjects {
   NSError *jsonError;
-  NSString* path  = [[NSBundle mainBundle] pathForResource:@"library" ofType:@"json"];
+  NSString *path  = [[NSBundle mainBundle] pathForResource:@"library" ofType:@"json"];
   NSArray *jsonObjects = [NSJSONSerialization JSONObjectWithData:[[NSData alloc] initWithContentsOfFile:path]
                                                          options:0
                                                            error:&jsonError];
@@ -62,8 +54,7 @@
   return jsonObjects;
 }
 
-- (NSArray<VideoItem*> *)videos
-{
+- (NSArray<VideoItem*> *)videos {
   if (!_videos) {
     // Parse and add each video in the JSON array to our video library
     NSMutableArray *videos = [NSMutableArray array];
@@ -93,8 +84,7 @@
   return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   // The rows are slightly taller in the TVOS sample.
 #if TARGET_OS_TV
   return 88;
@@ -103,11 +93,8 @@
 #endif
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [self playVideo:indexPath.row];
 }
-
-
 
 @end

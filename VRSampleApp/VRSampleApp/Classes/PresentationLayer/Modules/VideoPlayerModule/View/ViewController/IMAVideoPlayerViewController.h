@@ -7,7 +7,6 @@
 
 #import "DefaultVideoPlayerViewController.h"
 
-
 @interface IMAVideoPlayerViewController : DefaultVideoPlayerViewController
 
 @end

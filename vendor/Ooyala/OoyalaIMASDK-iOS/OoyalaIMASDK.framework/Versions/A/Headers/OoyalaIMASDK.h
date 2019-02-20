@@ -3,4 +3,5 @@
 
 #import <OoyalaIMASDK/OOIMAManager.h>
 #import <OoyalaIMASDK/OOIMAConfiguration.h>
+
 #endif /* OoyalaIMASDK_h */

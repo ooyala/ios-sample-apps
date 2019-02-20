@@ -4,3 +4,4 @@ vendor/Ooyala/OoyalaVRTVSDK-tvOS/OoyalaVRTVSDK.framework/Versions/A/OoyalaVRTVSD
 vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework/OoyalaSkinSDK filter=lfs diff=lfs merge=lfs -text
 vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework/Versions/A/OoyalaSkinSDK filter=lfs diff=lfs merge=lfs -text
 vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework/Versions/Current/OoyalaSkinSDK filter=lfs diff=lfs merge=lfs -text
+vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework/Versions/A/OoyalaSDK filter=lfs diff=lfs merge=lfs -text

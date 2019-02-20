@@ -207,15 +207,11 @@
 			children = (
 				0BF4FA101A686CB40050A602 /* AppDelegate.h */,
 				0BF4FA111A686CB40050A602 /* AppDelegate.m */,
-				0BF4FA121A686CB40050A602 /* LaunchScreen.xib */,
-				0BF4FA141A686CB40050A602 /* Main.storyboard */,
-				0BF4FA161A686CB40050A602 /* Images.xcassets */,
-				0BF4FA171A686CB40050A602 /* Info.plist */,
 				0BF4FA181A686CB40050A602 /* Lists */,
-				0BF4FA1B1A686CB40050A602 /* main.m */,
 				0BF4FA1C1A686CB40050A602 /* Players */,
 				0BF4FA1F1A686CB40050A602 /* Utils */,
 				0BC947F81A81779B004CB997 /* Views */,
+				39088C1021D3B93C00D860A9 /* Supporting Files */,
 			);
 			path = IMASampleApp;
 			sourceTree = "<group>";
@@ -249,6 +245,18 @@
 				0BF4FA231A686CB40050A602 /* SampleAppPlayerViewController.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		39088C1021D3B93C00D860A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BF4FA121A686CB40050A602 /* LaunchScreen.xib */,
+				0BF4FA141A686CB40050A602 /* Main.storyboard */,
+				0BF4FA161A686CB40050A602 /* Images.xcassets */,
+				0BF4FA171A686CB40050A602 /* Info.plist */,
+				0BF4FA1B1A686CB40050A602 /* main.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,7 +542,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/IMASampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IMASampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -547,7 +555,7 @@
 					"-weak_framework",
 					AVFoundation,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.IMASampleApp1;
 				PRODUCT_NAME = IMASampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -565,7 +573,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/IMASampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IMASampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -578,7 +586,7 @@
 					"-weak_framework",
 					AVFoundation,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.IMASampleApp1;
 				PRODUCT_NAME = IMASampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

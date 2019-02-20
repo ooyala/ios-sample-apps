@@ -8,7 +8,6 @@
 #import "VideoItem.h"
 #import "Mappable.h"
 
-
 @interface VideoItem (Mappable) <Mappable>
 
 @end

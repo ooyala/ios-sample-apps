@@ -20,12 +20,12 @@
  *  A identifier for this content that used to identify this content in 
  *  the Pulse session request.
  */
-@property (strong, nonatomic) NSString *identifier;
+@property (nonatomic) NSString *identifier;
 
 /**
  *  The title of this content, for displaying in the content list.
  */
-@property (strong, nonatomic) NSString *title;
+@property (nonatomic) NSString *title;
 
 /**
  *  The duration of this content in seconds.
@@ -35,22 +35,22 @@
 /**
  *  An array of string tags used to target ad campaigns.
  */
-@property (strong, nonatomic) NSArray<NSString *> *tags;
+@property (nonatomic) NSArray<NSString *> *tags;
 
 /**
  *  A string category used to target ad campaigns.
  */
-@property (strong, nonatomic) NSString *category;
+@property (nonatomic) NSString *category;
 
 /**
  *  An array of numbers of positions (in seconds) where midroll ad breaks
  *  may occur.
  */
-@property (strong, nonatomic) NSArray<NSNumber *> *midrollPositions;
+@property (nonatomic) NSArray<NSNumber *> *midrollPositions;
 
 /**
  *  The URL to the video content.
  */
-@property (strong, nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *embedCode;
 
 @end

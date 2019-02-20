@@ -8,7 +8,13 @@
 #import <UIKit/UIKit.h>
 
 #import "OOPlayer.h"
-#import "OOPlayerInfo.h"
+#import "OOEnums.h"
+
+#ifndef OOStreamPlayer_h
+#define OOStreamPlayer_h
+
+@class OOOoyalaPlayer;
+@protocol OOPlayerInfo;
 
 @interface OOStreamPlayer : OOPlayer {
   @protected
@@ -41,3 +47,5 @@
 - (void)disablePlaylistClosedCaptions;
 
 @end
+
+#endif /* OOStreamPlayer_h */

@@ -1,7 +1,10 @@
 #import <Foundation/Foundation.h>
 
-#import "OOPlayerProtocol.h"
-#import "OOLifeCycle.h"
+#ifndef OOAdPlugin_h
+#define OOAdPlugin_h
+
+@protocol OOPlayerProtocol;
+@protocol OOLifeCycle;
 
 /**
  * @brief An interface to implement an Ad Plugin, which can plug into the OoyalaPlayer
@@ -91,4 +94,13 @@
  */
 - (void)onAdIconClicked: (NSInteger) index;
 
+/**
+ Called to check if we're not dealing with nil ads
+
+ @return YES if ads are present
+ */
+- (BOOL)hasNotNilAds;
+
 @end
+
+#endif /* OOAdPlugin_h */

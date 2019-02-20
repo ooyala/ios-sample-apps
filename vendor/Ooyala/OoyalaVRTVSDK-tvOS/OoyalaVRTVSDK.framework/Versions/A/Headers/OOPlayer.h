@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "OOOoyalaPlayer.h"
 #import "OOOoyalaError.h"
 #import "OOPlayerProtocol.h"
 #import "OOLifeCycle.h"
 #import "OOAudioTrackSelectionProtocol.h"
 #import "OOPlaybackSpeedSelectionProtocol.h"
 
+#ifndef OOPlayer_h
+#define OOPlayer_h
 
 @interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle, OOAudioTrackSelectionProtocol, OOPlaybackSpeedSelectionProtocol> { // really, an Abstract class.
 @protected
@@ -43,3 +44,5 @@ extern NSString *const PlayerErrorNotification;
 - (void)setState:(OOOoyalaPlayerState)state;
 
 @end
+
+#endif /* OOPlayer_h */

@@ -46,6 +46,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaErrorCode) {
   OOOoyalaErrorCodeUnknownError = 30, /**< Unknown error */
   OOOoyalaErrorCodeGeoBlockingError = 31, /**< Geo blocking error */
   OOOoyalaErrorCodeEmbedCodeMetadataError = 32, /**< Embed Code Metadata error */
+  OOOoyalaErrorCodeAdContentError = 33, /**< Ad mode content error */
 };
 
 

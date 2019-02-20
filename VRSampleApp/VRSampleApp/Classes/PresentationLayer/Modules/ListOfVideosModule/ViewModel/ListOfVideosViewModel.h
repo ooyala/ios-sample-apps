@@ -5,10 +5,9 @@
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "VideoItemSection.h"
-#import "VideoItem.h"
-
+@import UIKit;
+@class VideoItemSection;
+@class VideoItem;
 
 @interface ListOfVideosViewModel : NSObject
 

@@ -7,7 +7,7 @@
 
 #import "IMAVideoPlayerViewController.h"
 #import <OoyalaIMASDK/OOIMAManager.h>
-
+#import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 
 @interface IMAVideoPlayerViewController ()
 
@@ -29,11 +29,8 @@
 #pragma mark - Private functions
 
 - (void)configureIMAObjects {
-
   // Create ADS manager
-
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:self.skinController.player];
 }
-
 
 @end

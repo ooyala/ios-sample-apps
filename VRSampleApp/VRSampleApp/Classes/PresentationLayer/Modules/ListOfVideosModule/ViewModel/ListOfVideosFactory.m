@@ -11,7 +11,7 @@
 #import "VideoPlayerViewModel.h"
 #import "CustomVideoViewController.h"
 #import "CustomVideoViewModel.h"
-
+#import "VideoItem.h"
 
 @implementation ListOfVideosFactory
 
@@ -44,7 +44,7 @@
 
 - (UIViewController *)configuredCustomVideoViewControllerWithCompletion:(void (^)(NSString *pCode, NSString *embedCode))completion {
   CustomVideoViewModel *videoPlayerViewModel = [CustomVideoViewModel new];
-  CustomVideoViewController *customVideoViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"CustomVideoViewController"];
+  CustomVideoViewController *customVideoViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CustomVideoViewController"];
   
   customVideoViewController.viewModel = videoPlayerViewModel;
   videoPlayerViewModel.delegate = customVideoViewController;
@@ -64,9 +64,8 @@
                                                                                          pcode:pcode
                                                                                         domain:domain
                                                                               andQAModeEnabled:QAModeEnabled];
-  
-  
-  DefaultVideoPlayerViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"DefaultVideoPlayerViewController"];
+
+  DefaultVideoPlayerViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DefaultVideoPlayerViewController"];
   
   viewController.viewModel = videoPlayerViewModel;
 
@@ -82,14 +81,12 @@
                                                                                          pcode:pcode
                                                                                         domain:domain
                                                                               andQAModeEnabled:QAModeEnabled];
-  
-  
-  IMAVideoPlayerViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"IMAVideoPlayerViewController"];
+
+  IMAVideoPlayerViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"IMAVideoPlayerViewController"];
   
   viewController.viewModel = videoPlayerViewModel;
   
   return viewController;
 }
-
 
 @end

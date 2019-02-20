@@ -19,11 +19,11 @@
 
 #pragma mark - Private properties
 
-@property (strong, nonatomic) OOOoyalaPlayer *player;
-@property (strong, nonatomic) UIViewController *playerViewController;
-@property (strong, nonatomic) OOPulseManager *manager;
+@property (nonatomic) OOOoyalaPlayer *player;
+@property (nonatomic) UIViewController *playerViewController;
+@property (nonatomic) OOPulseManager *manager;
 
-@property (strong, nonatomic) VideoItem *videoItem;
+@property (nonatomic) VideoItem *videoItem;
 @property (weak, nonatomic) id<OOPulseManagerDelegate> delegate;
 
 @end
@@ -34,10 +34,8 @@
 #pragma mark - Initialization
 
 - (id)initWithVideoItem:(VideoItem *)video {
-  self = [super init];
-  if (self) {
+  if (self = [super init]) {
     _videoItem = video;
-    self.title = video.title;
   }
   return self;
 }
@@ -51,22 +49,24 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
+
+  self.title = self.videoItem.title;
+
   // Create Ooyala ViewController
   self.player = [[OOOoyalaPlayer alloc] initWithPcode:PCODE
                                                domain:[[OOPlayerDomain alloc] initWithString:PLAYER_DOMAIN]];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.player];
 
   [self prepareSkinned];
 
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.playerViewController];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.playerViewController];
   //[self prepareUnskinned];
   
   // Create the Pulse manager object, and associate it with the Ooyala player
@@ -98,7 +98,7 @@
                                                              launchOptions:nil];
   // Attach it to current view
   [self addChildViewController:self.playerViewController];
-  [self.playerViewController.view setFrame:self.playerView.bounds];
+  self.playerViewController.view.frame = self.playerView.bounds;
 }
 
 - (void)prepareUnskinned {
@@ -111,7 +111,6 @@
 }
 
 - (void)notificationHandler:(NSNotification*)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -120,15 +119,15 @@
   // Check for FullScreenChanged notification
   if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]){
     NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
-                         [notification name],
-                         [[notification.userInfo objectForKey:@"fullscreen"] boolValue] ? @"YES" : @"NO"];
+                         notification.name,
+                         [notification.userInfo[@"fullscreen"] boolValue] ? @"YES" : @"NO"];
     NSLog(@"%@", message);
   }
   
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
-        [OOOoyalaPlayerStateConverter playerStateToString:[self.player state]],
-        [self.player playheadTime]);
+        notification.name,
+        [OOOoyalaPlayerStateConverter playerStateToString:self.player.state],
+        self.player.playheadTime);
 }
 
 #pragma mark - OOPulseManagerDelegate
