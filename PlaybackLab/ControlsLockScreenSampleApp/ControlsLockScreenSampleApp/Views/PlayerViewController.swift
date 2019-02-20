@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import MediaPlayer
 
-//now inited from I.B.
+//now ViewController initializated from I.B.
 class PlayerViewController: UIViewController {
   
   // MARK: - Private properties
@@ -60,8 +60,7 @@ class PlayerViewController: UIViewController {
       if let basicEmbedTokenGenerator = embedTokenGenerator as? BasicEmbedTokenGenerator {
         apiKey = basicEmbedTokenGenerator.apiKey
         apiSecret = basicEmbedTokenGenerator.apiSecret
-      }
-      else {
+      } else {
         apiKey = "API_KEY"
         apiSecret = "API_SECRET"
       }
@@ -75,8 +74,7 @@ class PlayerViewController: UIViewController {
                               domain: option.domain,
                               embedTokenGenerator: embedTokenGenerator,
                               options: options)
-    }
-    else {
+    } else {
       player = OOOoyalaPlayer(pcode: option.pcode, domain: option.domain)
     }
 
@@ -142,9 +140,8 @@ class PlayerViewController: UIViewController {
   // Updates the time labels.
   private func updatePlayingInfoCenter() {
     let playingInfoCenter = MPNowPlayingInfoCenter.default()
-    guard var displayInfo = playingInfoCenter.nowPlayingInfo, let player = ooyalaPlayerVC?.player else {
-      return
-    }
+    guard var displayInfo = playingInfoCenter.nowPlayingInfo,
+      let player = ooyalaPlayerVC?.player else { return }
     
     displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
     displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
@@ -158,8 +155,7 @@ class PlayerViewController: UIViewController {
     
     if player.isPlaying() {
       player.pause()
-    }
-    else {
+    } else {
       player.play()
     }
     updatePlayingInfoCenter()
@@ -205,7 +201,7 @@ class PlayerViewController: UIViewController {
   @objc func notificationHandler(_ notification: Notification)  {
     // Ignore TimeChangedNotificiations for shorter logs
     if notification.name == NSNotification.Name.OOOoyalaPlayerTimeChanged { return }
-    print("PlayerVC Notification Received: \(notification.name). state: \(String(describing: ooyalaPlayerVC?.player.state)). playhead: \(self.ooyalaPlayerVC?.player.playheadTime)")
+    print("PlayerVC Notification Received: \(notification.name). state: \(String(describing: ooyalaPlayerVC?.player.state)). playhead: \(String(describing: self.ooyalaPlayerVC?.player.playheadTime))")
   }
   
   // MARK: - Initialization
