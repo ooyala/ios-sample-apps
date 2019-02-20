@@ -2,13 +2,14 @@
 //  ViewController.swift
 //  SwiftSampleApp
 //
-//  Created by Yi Gu on 3/23/15.
+//  Created on 3/23/15.
 //  Copyright (c) 2015 Ooyala Inc. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
+  
   required init(coder aDecoder: NSCoder) {
     formatter = DateFormatter()
     ooyalaPlayerViewController = OOOoyalaPlayerViewController()
@@ -30,7 +31,8 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     // Create Ooyala ViewController
-    let player: OOOoyalaPlayer = OOOoyalaPlayer(pcode: PCODE, domain: OOPlayerDomain(string: PLAYERDOMAIN))
+    let player: OOOoyalaPlayer = OOOoyalaPlayer(pcode: PCODE,
+                                                domain: OOPlayerDomain(string: PLAYERDOMAIN))
     ooyalaPlayerViewController = OOOoyalaPlayerViewController(player: player)
 
     // Attach it to current view
