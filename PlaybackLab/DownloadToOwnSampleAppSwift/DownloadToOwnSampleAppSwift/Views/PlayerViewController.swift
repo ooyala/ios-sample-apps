@@ -79,6 +79,7 @@ class PlayerViewController: UIViewController {
 
     titleLabel.text = dtoAsset.name
     stateLabel.text = dtoAsset.stateText
+    playOfflineButton.isEnabled = dtoAsset.state == .downloaded
 
     // We're setting progress and finish closures for the given OODtoAsset in order to represent state
     dtoAsset.progress { [weak self] progress in

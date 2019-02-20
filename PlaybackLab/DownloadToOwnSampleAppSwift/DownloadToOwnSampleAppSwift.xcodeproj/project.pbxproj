@@ -81,7 +81,7 @@
 		39B703CE221C3EBA0036DE31 /* tv-skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tv-skin.json"; sourceTree = "<group>"; };
 		39B703CF221C3EBA0036DE31 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		39B703D0221C3EBA0036DE31 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
-		AE1B86A82020DF2000FCF6CA /* SerializationDownloadsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerializationDownloadsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1B86A82020DF2000FCF6CA /* DownloadToOwnSampleAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadToOwnSampleAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1B86AB2020DF2000FCF6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE1B86B02020DF2000FCF6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE1B86B22020DF2000FCF6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 		AE1B869F2020DF2000FCF6CA = {
 			isa = PBXGroup;
 			children = (
-				AE1B86AA2020DF2000FCF6CA /* SerializationDownloadsSampleApp */,
+				AE1B86AA2020DF2000FCF6CA /* DownloadToOwnSampleAppSwift */,
 				39B703B4221C3E9B0036DE31 /* VendorLibraries */,
 				AE1B86A92020DF2000FCF6CA /* Products */,
 				AE1B86C12020E3F000FCF6CA /* Frameworks */,
@@ -236,12 +236,12 @@
 		AE1B86A92020DF2000FCF6CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE1B86A82020DF2000FCF6CA /* SerializationDownloadsSampleApp.app */,
+				AE1B86A82020DF2000FCF6CA /* DownloadToOwnSampleAppSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE1B86AA2020DF2000FCF6CA /* SerializationDownloadsSampleApp */ = {
+		AE1B86AA2020DF2000FCF6CA /* DownloadToOwnSampleAppSwift */ = {
 			isa = PBXGroup;
 			children = (
 				AE1B86BD2020E1FE00FCF6CA /* Models */,
@@ -251,7 +251,7 @@
 				39B703E4221C3F550036DE31 /* Storyboards */,
 				AE1B86BE2020E20400FCF6CA /* Supporting Files */,
 			);
-			path = SerializationDownloadsSampleApp;
+			path = DownloadToOwnSampleAppSwift;
 			sourceTree = "<group>";
 		};
 		AE1B86BD2020E1FE00FCF6CA /* Models */ = {
@@ -329,9 +329,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE1B86A72020DF2000FCF6CA /* SerializationDownloadsSampleApp */ = {
+		AE1B86A72020DF2000FCF6CA /* DownloadToOwnSampleAppSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE1B86BA2020DF2000FCF6CA /* Build configuration list for PBXNativeTarget "SerializationDownloadsSampleApp" */;
+			buildConfigurationList = AE1B86BA2020DF2000FCF6CA /* Build configuration list for PBXNativeTarget "DownloadToOwnSampleAppSwift" */;
 			buildPhases = (
 				AE1B86A42020DF2000FCF6CA /* Sources */,
 				AE1B86A52020DF2000FCF6CA /* Frameworks */,
@@ -341,9 +341,9 @@
 			);
 			dependencies = (
 			);
-			name = SerializationDownloadsSampleApp;
+			name = DownloadToOwnSampleAppSwift;
 			productName = SerializationDownloadsSampleApp;
-			productReference = AE1B86A82020DF2000FCF6CA /* SerializationDownloadsSampleApp.app */;
+			productReference = AE1B86A82020DF2000FCF6CA /* DownloadToOwnSampleAppSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -363,7 +363,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AE1B86A32020DF2000FCF6CA /* Build configuration list for PBXProject "SerializationDownloadsSampleApp" */;
+			buildConfigurationList = AE1B86A32020DF2000FCF6CA /* Build configuration list for PBXProject "DownloadToOwnSampleAppSwift" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -376,7 +376,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE1B86A72020DF2000FCF6CA /* SerializationDownloadsSampleApp */,
+				AE1B86A72020DF2000FCF6CA /* DownloadToOwnSampleAppSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -568,7 +568,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -577,7 +577,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SerializationDownloadsSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleAppSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Supporting Files/SerializationDownloadsSampleApp-Bridging-Header.h";
@@ -592,7 +592,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 556Y9XWD3N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -601,7 +601,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SerializationDownloadsSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleAppSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Supporting Files/SerializationDownloadsSampleApp-Bridging-Header.h";
@@ -612,7 +612,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE1B86A32020DF2000FCF6CA /* Build configuration list for PBXProject "SerializationDownloadsSampleApp" */ = {
+		AE1B86A32020DF2000FCF6CA /* Build configuration list for PBXProject "DownloadToOwnSampleAppSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE1B86B82020DF2000FCF6CA /* Debug */,
@@ -621,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE1B86BA2020DF2000FCF6CA /* Build configuration list for PBXNativeTarget "SerializationDownloadsSampleApp" */ = {
+		AE1B86BA2020DF2000FCF6CA /* Build configuration list for PBXNativeTarget "DownloadToOwnSampleAppSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE1B86BB2020DF2000FCF6CA /* Debug */,

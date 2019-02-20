@@ -20,6 +20,11 @@ class AssetTableViewController: UITableViewController {
 
     reloadSelectedCell()
   }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    reloadSelectedCell()
+  }
   
   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
