@@ -5,7 +5,6 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
 @class OOOoyalaPlayer;

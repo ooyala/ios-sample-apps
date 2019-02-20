@@ -94,6 +94,13 @@
  */
 - (void)onAdIconClicked: (NSInteger) index;
 
+/**
+ Called to check if we're not dealing with nil ads
+
+ @return YES if ads are present
+ */
+- (BOOL)hasNotNilAds;
+
 @end
 
 #endif /* OOAdPlugin_h */

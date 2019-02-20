@@ -43,7 +43,9 @@ class FairplayPlayerViewController: OOOoyalaTVPlayerViewController, OOEmbedToken
       return
     }
     
-    NSLog("Notification Received: %@. state: %@. playhead: %f", name.rawValue, OOOoyalaPlayer.playerState(toString: player.state()), player.playheadTime())
+    NSLog("Notification Received: %@. state: %@. playhead: %f", name.rawValue,
+          OOOoyalaPlayerStateConverter.playerState(toString: player.state()),
+          player.playheadTime())
   }
   
   func token(forEmbedCodes embedCodes: [Any]!, callback: OOEmbedTokenCallback!) {
