@@ -7,7 +7,6 @@
 
 #import "DRMPlayerSelectionOptions.h"
 
-
 @implementation DRMPlayerSelectionOptions
 
 - (instancetype)initWithTitle:(NSString *)title

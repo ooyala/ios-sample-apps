@@ -10,7 +10,6 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
 
-
 @interface DefaultSkinPlayerViewController ()
 
 #pragma mark - Private properties

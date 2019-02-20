@@ -7,7 +7,6 @@
 
 #import "PlayerSelectionOption.h"
 
-
 @interface DRMPlayerSelectionOptions : PlayerSelectionOption
 
 @property (nonatomic) NSString *apiKey;

@@ -10,7 +10,6 @@
 		0B4731331C5199A300F1E7FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B47312F1C5199A300F1E7FD /* LaunchScreen.xib */; };
 		0B4731341C5199A300F1E7FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4731311C5199A300F1E7FD /* Main.storyboard */; };
 		0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824241B2B7EB600D718AB /* AppDelegate.m */; };
-		0B7824351B2B7EB600D718AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78242C1B2B7EB600D718AB /* main.m */; };
 		0B7824461B2B82C000D718AB /* OoyalaSkinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824451B2B82C000D718AB /* OoyalaSkinListViewController.m */; };
 		0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7824491B2B834F00D718AB /* PlayerSelectionOption.m */; };
 		0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78244B1B2B834F00D718AB /* SampleAppPlayerViewController.m */; };
@@ -18,7 +17,6 @@
 		0B78245B1B2B855500D718AB /* DefaultSkinPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78245A1B2B855500D718AB /* DefaultSkinPlayerViewController.m */; };
 		0B7824671B2FA0BD00D718AB /* DefaultSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7824661B2FA0BD00D718AB /* DefaultSkinPlayerView.xib */; };
 		0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B78246A1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib */; };
-		0BB8E7A51BE0438300003E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8E7A41BE0438300003E2D /* README.md */; };
 		0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AB1BE0449000003E2D /* Social.framework */; };
 		0BB8E7AE1BE0449500003E2D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AD1BE0449500003E2D /* MessageUI.framework */; };
 		0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */; };
@@ -49,14 +47,16 @@
 		393A46EC21CCCDDF005860F3 /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A46D721CCCDDF005860F3 /* skin-schema.json */; };
 		393A46ED21CCCDDF005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A46D821CCCDDF005860F3 /* validate.js */; };
 		393A46F021CCCE43005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A46EF21CCCE43005860F3 /* OoyalaSkinSDK.xcassets */; };
-		393A46FF21CCCF8D005860F3 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F721CCCF6D005860F3 /* AdManager.framework */; };
-		393A470021CCCF8D005860F3 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F221CCCF6D005860F3 /* GoogleInteractiveMediaAds.framework */; };
-		393A470121CCCF8D005860F3 /* OoyalaFreewheelSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F121CCCF6D005860F3 /* OoyalaFreewheelSDK.framework */; };
-		393A470221CCCF8D005860F3 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F521CCCF6D005860F3 /* OoyalaIMASDK.framework */; };
-		393A470321CCCF8D005860F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F321CCCF6D005860F3 /* OoyalaSDK.framework */; };
-		393A470421CCCF8D005860F3 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F621CCCF6D005860F3 /* OoyalaSkinSDK.framework */; };
-		393A470821CCD13B005860F3 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 393A46F221CCCF6D005860F3 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		393A48AD21CCF187005860F3 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48AC21CCF187005860F3 /* OoyalaSSAISDK.framework */; };
+		39D45FE2221D59C6008C9FC7 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDB221D59C6008C9FC7 /* OoyalaSkinSDK.framework */; };
+		39D45FE3221D59C6008C9FC7 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDC221D59C6008C9FC7 /* OoyalaSSAISDK.framework */; };
+		39D45FE4221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */; };
+		39D45FE5221D59C6008C9FC7 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDE221D59C6008C9FC7 /* AdManager.framework */; };
+		39D45FE6221D59C6008C9FC7 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDF221D59C6008C9FC7 /* OoyalaIMASDK.framework */; };
+		39D45FE7221D59C6008C9FC7 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FE0221D59C6008C9FC7 /* OoyalaSDK.framework */; };
+		39D45FE8221D59C6008C9FC7 /* OoyalaFreewheelSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FE1221D59C6008C9FC7 /* OoyalaFreewheelSDK.framework */; };
+		39D45FE9221D59CF008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */; };
+		39D45FEA221D59CF008C9FC7 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39D45FEE221D5A67008C9FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D45FEC221D5A67008C9FC7 /* main.m */; };
 		52B59C3C201FD88C004F165F /* GeoblockingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */; };
 		52B59C3F201FD914004F165F /* GeoblockingSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3E201FD914004F165F /* GeoblockingSkinViewController.m */; };
 		52B59C43201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C42201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m */; };
@@ -97,7 +97,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				393A470821CCD13B005860F3 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */,
+				39D45FEA221D59CF008C9FC7 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,8 +109,6 @@
 		0B4731321C5199A300F1E7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B7824231B2B7EB600D718AB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B7824241B2B7EB600D718AB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B78242A1B2B7EB600D718AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B78242C1B2B7EB600D718AB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B7824441B2B82C000D718AB /* OoyalaSkinListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaSkinListViewController.h; sourceTree = "<group>"; };
 		0B7824451B2B82C000D718AB /* OoyalaSkinListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaSkinListViewController.m; sourceTree = "<group>"; };
 		0B7824481B2B834F00D718AB /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
@@ -154,13 +152,15 @@
 		393A46D721CCCDDF005860F3 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		393A46D821CCCDDF005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		393A46EF21CCCE43005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
-		393A46F121CCCF6D005860F3 /* OoyalaFreewheelSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaFreewheelSDK.framework; path = VendorLibraries/OoyalaFreewheelSDK.framework; sourceTree = "<group>"; };
-		393A46F221CCCF6D005860F3 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInteractiveMediaAds.framework; path = VendorLibraries/GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
-		393A46F321CCCF6D005860F3 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = VendorLibraries/OoyalaSDK.framework; sourceTree = "<group>"; };
-		393A46F521CCCF6D005860F3 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaIMASDK.framework; path = VendorLibraries/OoyalaIMASDK.framework; sourceTree = "<group>"; };
-		393A46F621CCCF6D005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = VendorLibraries/OoyalaSkinSDK.framework; sourceTree = "<group>"; };
-		393A46F721CCCF6D005860F3 /* AdManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdManager.framework; path = VendorLibraries/AdManager.framework; sourceTree = "<group>"; };
-		393A48AC21CCF187005860F3 /* OoyalaSSAISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSSAISDK.framework; path = "../vendor/Ooyala/OoyalaSSAISDK-iOS/OoyalaSSAISDK.framework"; sourceTree = "<group>"; };
+		39D45FDB221D59C6008C9FC7 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		39D45FDC221D59C6008C9FC7 /* OoyalaSSAISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSSAISDK.framework; sourceTree = "<group>"; };
+		39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
+		39D45FDE221D59C6008C9FC7 /* AdManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdManager.framework; sourceTree = "<group>"; };
+		39D45FDF221D59C6008C9FC7 /* OoyalaIMASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaIMASDK.framework; sourceTree = "<group>"; };
+		39D45FE0221D59C6008C9FC7 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		39D45FE1221D59C6008C9FC7 /* OoyalaFreewheelSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaFreewheelSDK.framework; sourceTree = "<group>"; };
+		39D45FEC221D5A67008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39D45FED221D5A67008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B59C3A201FD88C004F165F /* GeoblockingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingTableViewController.h; sourceTree = "<group>"; };
 		52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoblockingTableViewController.m; sourceTree = "<group>"; };
 		52B59C3D201FD914004F165F /* GeoblockingSkinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingSkinViewController.h; sourceTree = "<group>"; };
@@ -218,23 +218,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				393A46FF21CCCF8D005860F3 /* AdManager.framework in Frameworks */,
-				393A470021CCCF8D005860F3 /* GoogleInteractiveMediaAds.framework in Frameworks */,
-				393A470121CCCF8D005860F3 /* OoyalaFreewheelSDK.framework in Frameworks */,
-				393A470221CCCF8D005860F3 /* OoyalaIMASDK.framework in Frameworks */,
-				393A470321CCCF8D005860F3 /* OoyalaSDK.framework in Frameworks */,
-				393A470421CCCF8D005860F3 /* OoyalaSkinSDK.framework in Frameworks */,
+				39D45FE6221D59C6008C9FC7 /* OoyalaIMASDK.framework in Frameworks */,
 				39278CC02191DDF300F6F4E2 /* libc++abi.tbd in Frameworks */,
 				39278CBE2191DDED00F6F4E2 /* libc++.tbd in Frameworks */,
-				393A48AD21CCF187005860F3 /* OoyalaSSAISDK.framework in Frameworks */,
 				39278CBC2191DDE800F6F4E2 /* libz.tbd in Frameworks */,
+				39D45FE9221D59CF008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				39278CBA2191DDE200F6F4E2 /* libxml2.tbd in Frameworks */,
+				39D45FE4221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */,
 				97B22E4E1BD05D1900D89589 /* AdSupport.framework in Frameworks */,
 				97930E271B699595009B3512 /* EventKit.framework in Frameworks */,
+				39D45FE2221D59C6008C9FC7 /* OoyalaSkinSDK.framework in Frameworks */,
+				39D45FE8221D59C6008C9FC7 /* OoyalaFreewheelSDK.framework in Frameworks */,
 				CA9B81471EA56B750040B5BB /* MediaPlayer.framework in Frameworks */,
+				39D45FE7221D59C6008C9FC7 /* OoyalaSDK.framework in Frameworks */,
 				CA9B81491EA56B940040B5BB /* AVKit.framework in Frameworks */,
 				97930E291B6995CB009B3512 /* WebKit.framework in Frameworks */,
+				39D45FE5221D59C6008C9FC7 /* AdManager.framework in Frameworks */,
+				39D45FE3221D59C6008C9FC7 /* OoyalaSSAISDK.framework in Frameworks */,
 				0BB8E7AE1BE0449500003E2D /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,22 +243,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B47312D1C51997500F1E7FD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0B78242A1B2B7EB600D718AB /* Info.plist */,
-				0B78242C1B2B7EB600D718AB /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0B47312E1C5199A300F1E7FD /* Base.lproj */ = {
+		0B47312E1C5199A300F1E7FD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				0B47312F1C5199A300F1E7FD /* LaunchScreen.xib */,
 				0B4731311C5199A300F1E7FD /* Main.storyboard */,
 			);
-			path = Base.lproj;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		0B7824221B2B7EB600D718AB /* OoyalaSkinSampleApp */ = {
@@ -265,10 +257,10 @@
 			children = (
 				0B7824231B2B7EB600D718AB /* AppDelegate.h */,
 				0B7824241B2B7EB600D718AB /* AppDelegate.m */,
-				0B47312E1C5199A300F1E7FD /* Base.lproj */,
+				0B47312E1C5199A300F1E7FD /* Storyboards */,
 				0B7824431B2B82C000D718AB /* Lists */,
 				0B7824581B2B855500D718AB /* Players */,
-				0B47312D1C51997500F1E7FD /* Supporting Files */,
+				39D45FEB221D5A67008C9FC7 /* Supporting Files */,
 				0B7824471B2B834F00D718AB /* Utils */,
 				0B7824551B2B841800D718AB /* Views */,
 				752F36B220064F01007BF377 /* Resources */,
@@ -359,20 +351,6 @@
 			path = Players;
 			sourceTree = "<group>";
 		};
-		0BB8E7A81BE043FB00003E2D /* VendorLibraries */ = {
-			isa = PBXGroup;
-			children = (
-				393A46F721CCCF6D005860F3 /* AdManager.framework */,
-				393A46F221CCCF6D005860F3 /* GoogleInteractiveMediaAds.framework */,
-				393A46F121CCCF6D005860F3 /* OoyalaFreewheelSDK.framework */,
-				393A46F521CCCF6D005860F3 /* OoyalaIMASDK.framework */,
-				393A46F321CCCF6D005860F3 /* OoyalaSDK.framework */,
-				393A46F621CCCF6D005860F3 /* OoyalaSkinSDK.framework */,
-				393A48AC21CCF187005860F3 /* OoyalaSSAISDK.framework */,
-			);
-			name = VendorLibraries;
-			sourceTree = "<group>";
-		};
 		393A46BF21CCCDDF005860F3 /* SkinConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +410,29 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
+		39D45FDA221D59C6008C9FC7 /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				39D45FDB221D59C6008C9FC7 /* OoyalaSkinSDK.framework */,
+				39D45FDC221D59C6008C9FC7 /* OoyalaSSAISDK.framework */,
+				39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */,
+				39D45FDE221D59C6008C9FC7 /* AdManager.framework */,
+				39D45FDF221D59C6008C9FC7 /* OoyalaIMASDK.framework */,
+				39D45FE0221D59C6008C9FC7 /* OoyalaSDK.framework */,
+				39D45FE1221D59C6008C9FC7 /* OoyalaFreewheelSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
+		39D45FEB221D5A67008C9FC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39D45FEC221D5A67008C9FC7 /* main.m */,
+				39D45FED221D5A67008C9FC7 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		752F36B220064F01007BF377 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,7 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				0B7824221B2B7EB600D718AB /* OoyalaSkinSampleApp */,
-				0BB8E7A81BE043FB00003E2D /* VendorLibraries */,
+				39D45FDA221D59C6008C9FC7 /* VendorLibraries */,
 				972ED7581AE1827B005043DC /* Frameworks */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				0BB8E7A41BE0438300003E2D /* README.md */,
@@ -593,7 +594,6 @@
 				97930C161B670D70009B3512 /* IMATestsListViewController.m in Sources */,
 				0B7824461B2B82C000D718AB /* OoyalaSkinListViewController.m in Sources */,
 				97930C131B670D49009B3512 /* LayoutListViewController.m in Sources */,
-				0B7824351B2B7EB600D718AB /* main.m in Sources */,
 				0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */,
 				97930C1C1B670E77009B3512 /* BasicTestsListViewController.m in Sources */,
 				97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */,
@@ -604,8 +604,8 @@
 				75905FEE20ECF2590089AF4D /* DRMPlayerSelectionOptions.m in Sources */,
 				7539E080205ABFE200964F9C /* MultiAudioListViewController.m in Sources */,
 				97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */,
+				39D45FEE221D5A67008C9FC7 /* main.m in Sources */,
 				52B59C3C201FD88C004F165F /* GeoblockingTableViewController.m in Sources */,
-				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
 				97930C191B670D9F009B3512 /* FreewheelTestsListViewController.m in Sources */,
 				B8FA3A64210F8BFD004C6D7F /* SSAIPlayerViewController.m in Sources */,
 				52B59C43201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m in Sources */,
@@ -652,7 +652,7 @@
 					"$(PROJECT_DIR)/../vendor/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -676,7 +676,7 @@
 					"$(PROJECT_DIR)/../vendor/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OoyalaSkinSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
