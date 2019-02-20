@@ -7,9 +7,9 @@
 
 import Foundation
 
-class OptionDataSource: NSObject {
+class OptionDataSource {
   
-  class func options() -> [PlayerSelectionOption] {
+  static var options: [PlayerSelectionOption] {
     return [
       PlayerSelectionOption(pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
                             embedCode: "JiOTdrdzqAujYa5qvnOxszbrTEuU5HMt",
@@ -43,5 +43,23 @@ class OptionDataSource: NSObject {
       // if required, add more test cases here
     ]
   }
-  
+
+  static var dtoAssets: [OODtoAsset] {
+    var assets: [OODtoAsset] = []
+    for option in self.options {
+      assets.append(buildDtoAsset(for: option))
+    }
+    return assets
+  }
+
+  private static func buildDtoAsset(for option: PlayerSelectionOption) -> OODtoAsset {
+    let options                  = OOAssetDownloadOptions()
+    options.pcode                = option.pcode
+    options.embedCode            = option.embedCode
+    options.domain               = option.domain
+    options.embedTokenGenerator  = option.embedTokenGenerator
+    options.allowsCellularAccess = false
+    options.minimumBitrate       = 0
+    return OODtoAsset(options: options, andName: option.title)
+  }
 }

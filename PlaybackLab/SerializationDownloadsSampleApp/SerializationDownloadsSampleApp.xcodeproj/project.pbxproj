@@ -54,8 +54,6 @@
 		AE1B86EC20210BD500FCF6CA /* AssetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */; };
 		AE1B86EE2021141300FCF6CA /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86ED2021141300FCF6CA /* PlayerViewController.swift */; };
 		AE1B86F0202118B600FCF6CA /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86EF202118B600FCF6CA /* OptionTableViewCell.swift */; };
-		AE1B86F320224B6B00FCF6CA /* AssetPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86F220224B6B00FCF6CA /* AssetPersistenceManager.swift */; };
-		AE964DF9202F57F2002DF267 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE964DF8202F57F2002DF267 /* Queue.swift */; };
 		AEC5A2072028E424005F94FF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A2062028E423005F94FF /* libz.tbd */; };
 		AEC5A2092028E4DC005F94FF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A2082028E4DC005F94FF /* MessageUI.framework */; };
 		AEC5A20B2028E4E6005F94FF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A20A2028E4E6005F94FF /* Social.framework */; };
@@ -112,8 +110,6 @@
 		AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewController.swift; sourceTree = "<group>"; };
 		AE1B86ED2021141300FCF6CA /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		AE1B86EF202118B600FCF6CA /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
-		AE1B86F220224B6B00FCF6CA /* AssetPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPersistenceManager.swift; sourceTree = "<group>"; };
-		AE964DF8202F57F2002DF267 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		AEC5A2062028E423005F94FF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AEC5A2082028E4DC005F94FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AEC5A20A2028E4E6005F94FF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -248,13 +244,12 @@
 		AE1B86AA2020DF2000FCF6CA /* SerializationDownloadsSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				AE1B86F120224B5300FCF6CA /* Managers */,
 				AE1B86BD2020E1FE00FCF6CA /* Models */,
 				AE1B86BF2020E23C00FCF6CA /* Utils */,
+				AE1B86C02020E24400FCF6CA /* Views */,
 				AEC5A2202028E803005F94FF /* Resources */,
 				39B703E4221C3F550036DE31 /* Storyboards */,
-				AE1B86C02020E24400FCF6CA /* Views */,
-				AE1B86BE2020E20400FCF6CA /* Support Files */,
+				AE1B86BE2020E20400FCF6CA /* Supporting Files */,
 			);
 			path = SerializationDownloadsSampleApp;
 			sourceTree = "<group>";
@@ -267,14 +262,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AE1B86BE2020E20400FCF6CA /* Support Files */ = {
+		AE1B86BE2020E20400FCF6CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				AE1B86B72020DF2000FCF6CA /* Info.plist */,
 				AE1B86AB2020DF2000FCF6CA /* AppDelegate.swift */,
 				AE1B86E62020E57800FCF6CA /* SerializationDownloadsSampleApp-Bridging-Header.h */,
 			);
-			path = "Support Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		AE1B86BF2020E23C00FCF6CA /* Utils */ = {
@@ -282,7 +277,6 @@
 			children = (
 				AE1B86E72020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift */,
 				AE1B86E92020E76000FCF6CA /* OptionDataSource.swift */,
-				AE964DF8202F57F2002DF267 /* Queue.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -321,14 +315,6 @@
 				AE1B86CD2020E48C00FCF6CA /* UIKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE1B86F120224B5300FCF6CA /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				AE1B86F220224B6B00FCF6CA /* AssetPersistenceManager.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		AEC5A2202028E803005F94FF /* Resources */ = {
@@ -372,6 +358,7 @@
 				TargetAttributes = {
 					AE1B86A72020DF2000FCF6CA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -431,14 +418,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE1B86F320224B6B00FCF6CA /* AssetPersistenceManager.swift in Sources */,
 				AE1B86E82020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift in Sources */,
 				AE1B86EC20210BD500FCF6CA /* AssetTableViewController.swift in Sources */,
 				AE1B86AC2020DF2000FCF6CA /* AppDelegate.swift in Sources */,
 				AE1B86EA2020E76000FCF6CA /* OptionDataSource.swift in Sources */,
 				AE1B86E52020E53100FCF6CA /* PlayerSelectionOption.swift in Sources */,
 				AE1B86EE2021141300FCF6CA /* PlayerViewController.swift in Sources */,
-				AE964DF9202F57F2002DF267 /* Queue.swift in Sources */,
 				AE1B86F0202118B600FCF6CA /* OptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,15 +573,15 @@
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "SerializationDownloadsSampleApp/Support Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SerializationDownloadsSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SerializationDownloadsSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Support Files/SerializationDownloadsSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Supporting Files/SerializationDownloadsSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -612,15 +597,15 @@
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "SerializationDownloadsSampleApp/Support Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SerializationDownloadsSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SerializationDownloadsSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Support Files/SerializationDownloadsSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Supporting Files/SerializationDownloadsSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

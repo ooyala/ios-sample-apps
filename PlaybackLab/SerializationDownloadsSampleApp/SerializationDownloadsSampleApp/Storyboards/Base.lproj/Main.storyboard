@@ -19,40 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="OptionCellReuseIdentifier" rowHeight="75" id="11L-Mg-zyr" customClass="OptionTableViewCell" customModule="SerializationDownloadsSampleApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="OptionCellReuseIdentifier" rowHeight="80" id="11L-Mg-zyr" customClass="OptionTableViewCell" customModule="SerializationDownloadsSampleApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11L-Mg-zyr" id="Vrl-Vv-4VO">
-                                    <rect key="frame" x="0.0" y="0.0" width="327" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmF-N1-erV">
-                                            <rect key="frame" x="15" y="5" width="297" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5o-sf-YVs">
-                                            <rect key="frame" x="15" y="31" width="297" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-g9-GOE">
-                                            <rect key="frame" x="16" y="56.5" width="301" height="2.5"/>
-                                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </progressView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r9J-lt-ZA5">
+                                            <rect key="frame" x="16" y="11" width="311" height="58"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmF-N1-erV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5o-sf-YVs">
+                                                    <rect key="frame" x="0.0" y="27.5" width="311" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-g9-GOE">
+                                                    <rect key="frame" x="0.0" y="50" width="311" height="9"/>
+                                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                </progressView>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="f5o-sf-YVs" secondAttribute="trailing" constant="15" id="AOa-B0-cJ3"/>
-                                        <constraint firstItem="TmF-N1-erV" firstAttribute="leading" secondItem="Vrl-Vv-4VO" secondAttribute="leading" constant="15" id="EER-bY-dGB"/>
-                                        <constraint firstAttribute="trailing" secondItem="TmF-N1-erV" secondAttribute="trailing" constant="15" id="TIU-nR-imz"/>
-                                        <constraint firstItem="TmF-N1-erV" firstAttribute="top" secondItem="Vrl-Vv-4VO" secondAttribute="top" constant="5" id="gCI-j5-w7M"/>
-                                        <constraint firstItem="tp6-g9-GOE" firstAttribute="top" secondItem="TmF-N1-erV" secondAttribute="bottom" constant="30" id="inG-bp-M8f"/>
-                                        <constraint firstItem="tp6-g9-GOE" firstAttribute="leading" secondItem="Vrl-Vv-4VO" secondAttribute="leadingMargin" id="j1L-Y1-XZl"/>
-                                        <constraint firstItem="f5o-sf-YVs" firstAttribute="top" secondItem="Vrl-Vv-4VO" secondAttribute="top" constant="31" id="lb3-pD-X5Q"/>
-                                        <constraint firstItem="f5o-sf-YVs" firstAttribute="leading" secondItem="Vrl-Vv-4VO" secondAttribute="leading" constant="15" id="pQR-Uo-R2a"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="tp6-g9-GOE" secondAttribute="trailing" id="u2E-hx-o3X"/>
+                                        <constraint firstItem="r9J-lt-ZA5" firstAttribute="leading" secondItem="Vrl-Vv-4VO" secondAttribute="leadingMargin" id="JPl-05-EUC"/>
+                                        <constraint firstAttribute="trailing" secondItem="r9J-lt-ZA5" secondAttribute="trailingMargin" id="kMv-aB-9hj"/>
+                                        <constraint firstItem="r9J-lt-ZA5" firstAttribute="top" secondItem="Vrl-Vv-4VO" secondAttribute="topMargin" id="n0Y-EG-fNe"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="r9J-lt-ZA5" secondAttribute="bottom" id="tui-Xs-Glv"/>
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
                                 </tableViewCellContentView>
@@ -60,7 +61,6 @@
                                     <outlet property="downloadProgressView" destination="tp6-g9-GOE" id="97o-wH-Mi4"/>
                                     <outlet property="subtitleLabel" destination="f5o-sf-YVs" id="6tw-Dt-z3i"/>
                                     <outlet property="titleLabel" destination="TmF-N1-erV" id="i5D-Yc-u0k"/>
-                                    <segue destination="ZLj-rp-M29" kind="show" identifier="PlayerViewControllerSegue" id="JAZ-0F-xiS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,6 +71,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Serialization Downloads Sample App" id="FEn-yA-5MZ"/>
+                    <connections>
+                        <segue destination="ZLj-rp-M29" kind="show" identifier="PlayerViewControllerSegue" id="C56-vl-QLq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C64-MP-w7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

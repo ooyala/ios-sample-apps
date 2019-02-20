@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PlayerSelectionOption: NSObject {
+class PlayerSelectionOption {
   
   public private(set) var domain: OOPlayerDomain
   
@@ -24,12 +24,14 @@ class PlayerSelectionOption: NSObject {
     self.pcode = pcode
     self.embedCode = embedCode
     self.title = title
-    super.init()
   }
   
-  convenience init(pcode: String, embedCode: String, title: String, domain: OOPlayerDomain, embedTokenGenerator: OOEmbedTokenGenerator) {
+  convenience init(pcode: String,
+                   embedCode: String,
+                   title: String,
+                   domain: OOPlayerDomain,
+                   embedTokenGenerator: OOEmbedTokenGenerator) {
     self.init(pcode: pcode, embedCode: embedCode, title: title, domain: domain)
     self.embedTokenGenerator = embedTokenGenerator
   }
-  
 }
