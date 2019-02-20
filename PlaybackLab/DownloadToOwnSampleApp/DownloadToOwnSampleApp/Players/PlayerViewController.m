@@ -75,13 +75,13 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
                                                                                secret:self.apiSecret];
     
     player = [[OOOoyalaPlayer alloc] initWithPcode:self.dtoAsset.options.pcode
-                                            domain:[OOPlayerDomain domainWithString:self.dtoAsset.options.domain.asString]
+                                            domain:self.dtoAsset.options.domain
                                embedTokenGenerator:self.dtoAsset.options.embedTokenGenerator
                                            options:options];
     
   } else { // This is a regular HLS asset with non DRM protection
     player = [[OOOoyalaPlayer alloc] initWithPcode:self.dtoAsset.options.pcode
-                                            domain:[OOPlayerDomain domainWithString:self.dtoAsset.options.domain.asString]];
+                                            domain:self.dtoAsset.options.domain];
   }
   
   NSURL *jsCodeLocation = [NSBundle.mainBundle URLForResource:@"main" withExtension:@"jsbundle"];
@@ -90,10 +90,10 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
                                                                overrideConfigs:nil];
-  self.ooyalaPlayerViewController = [[OOSkinViewController alloc] initWithPlayer:player
-                                                                     skinOptions:skinOptions
-                                                                          parent:self.playerView
-                                                                   launchOptions:nil];
+  _ooyalaPlayerViewController = [[OOSkinViewController alloc] initWithPlayer:player
+                                                                 skinOptions:skinOptions
+                                                                      parent:self.playerView
+                                                               launchOptions:nil];
   
   [self.ooyalaPlayerViewController willMoveToParentViewController:self];
   [self addChildViewController:self.ooyalaPlayerViewController];

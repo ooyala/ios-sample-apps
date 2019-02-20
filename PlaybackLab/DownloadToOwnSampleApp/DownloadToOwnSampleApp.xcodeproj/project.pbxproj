@@ -198,6 +198,15 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
+		39D45F9C221D3BB1008C9FC7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
+				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		CA38F13F1D6CF9E70039D633 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,8 +264,7 @@
 				CA561E541D78E04B00535DB3 /* Players */,
 				CA38F15A1D6D08600039D633 /* Utils */,
 				393A48AE21CCF292005860F3 /* Resources */,
-				CA7ED9041D5964E700EA0A57 /* Main.storyboard */,
-				CA7ED9091D5964E700EA0A57 /* LaunchScreen.storyboard */,
+				39D45F9C221D3BB1008C9FC7 /* Storyboards */,
 				CA7ED8FB1D5964E700EA0A57 /* Supporting Files */,
 			);
 			path = DownloadToOwnSampleApp;
