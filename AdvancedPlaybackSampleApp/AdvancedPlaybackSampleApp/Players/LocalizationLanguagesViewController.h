@@ -6,9 +6,7 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
-
 
 @interface LocalizationLanguagesViewController : SampleAppPlayerViewController
 

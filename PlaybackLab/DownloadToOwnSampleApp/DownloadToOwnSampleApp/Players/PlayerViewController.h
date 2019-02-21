@@ -6,8 +6,7 @@
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 @class OODtoAsset;
 
 @interface PlayerViewController : UIViewController

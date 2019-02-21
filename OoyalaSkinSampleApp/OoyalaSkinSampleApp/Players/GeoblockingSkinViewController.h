@@ -5,7 +5,6 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "SampleAppPlayerViewController.h"
 

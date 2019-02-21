@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
 @interface OOSampleAdSpot : OOAdSpot

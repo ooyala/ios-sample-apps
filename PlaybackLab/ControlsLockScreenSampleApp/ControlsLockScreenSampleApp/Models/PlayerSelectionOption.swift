@@ -19,7 +19,7 @@ class PlayerSelectionOption: NSObject {
   
   public private(set) var thumbnailURL: URL
   
-  public private(set) weak var embedTokenGenerator: OOEmbedTokenGenerator?
+  public private(set) var embedTokenGenerator: OOEmbedTokenGenerator?
   
   init(pcode: String, embedCode: String, title: String, thumbnailURL: URL, domain: OOPlayerDomain) {
     self.domain = domain

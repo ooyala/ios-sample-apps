@@ -16,7 +16,6 @@
 #import "SSAIListViewController.h"
 #import "AudioOnlyListViewController.h"
 
-
 @interface MasterListViewControllerTableViewController ()
 
 @property (nonatomic) NSArray *playlists;
@@ -28,9 +27,10 @@
 #pragma mark - UIViewController override
 
 - (void)viewDidLoad {
-  
   [super viewDidLoad];
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
+
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
+       forCellReuseIdentifier:@"TableCell"];
   self.playlists = @[@"Layouts",
                      @"Basic Playback",
                      @"Freewheel",
@@ -53,7 +53,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell"
+                                                          forIndexPath:indexPath];
   cell.textLabel.text = self.playlists[indexPath.row];
   return cell;
 }
@@ -96,6 +97,5 @@
   }
   [self.navigationController pushViewController:controller animated:YES];
 }
-
 
 @end

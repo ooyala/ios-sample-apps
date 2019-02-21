@@ -7,7 +7,6 @@
 
 #import "DefaultSkinPlayerViewController.h"
 
-
 @interface SetAssetPlayerViewController : DefaultSkinPlayerViewController
 
 @end

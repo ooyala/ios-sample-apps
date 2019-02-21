@@ -5,9 +5,7 @@
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "SampleAppPlayerViewController.h"
-
 
 @interface DefaultSkinPlayerViewController : SampleAppPlayerViewController
 

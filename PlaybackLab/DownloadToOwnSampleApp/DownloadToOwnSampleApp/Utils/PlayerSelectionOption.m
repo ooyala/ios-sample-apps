@@ -16,10 +16,10 @@
                         pcode:(NSString *)pcode
                        domain:(NSString *)domain {
   if (self = [super init]) {
-    self.title = title;
-    self.embedCode = embedCode;
-    self.pcode = pcode;
-    self.domain = domain;
+    _title = title;
+    _embedCode = embedCode;
+    _pcode = pcode;
+    _domain = domain;
   }
   return self;
 }
@@ -29,7 +29,10 @@
                         pcode:(NSString *)pcode
                        domain:(NSString *)domain
           embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator {
-  if (self = [self initWithTitle:title embedCode:embedCode pcode:pcode domain:domain]) {
+  if (self = [self initWithTitle:title
+                       embedCode:embedCode
+                           pcode:pcode
+                          domain:domain]) {
     _embedTokenGenerator = embedTokenGenerator;
   }
   return self;

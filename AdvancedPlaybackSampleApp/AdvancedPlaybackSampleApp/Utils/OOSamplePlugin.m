@@ -30,7 +30,10 @@
   if (self = [super init]) {
     _ooplayer = player;
     _notifier = [player createStateNotifier];
-    [_notifier addObserver:self forKeyPath:@"state" options:(NSKeyValueObservingOptionNew) context:nil];
+    [_notifier addObserver:self
+                forKeyPath:@"state"
+                   options:(NSKeyValueObservingOptionNew)
+                   context:nil];
   }
   return self;
 }
@@ -65,7 +68,7 @@
 }
 
 - (BOOL)onPlayheadUpdate:(Float64)playhead {
-  if (playhead > [self.midroll.time floatValue] && !self.midroll.played) {
+  if (playhead > self.midroll.time.floatValue && !self.midroll.played) {
     self.adToPlay = self.midroll;
     return YES;
   }
@@ -81,7 +84,6 @@
     self.adToPlay = self.postroll;
     return YES;
   }
-
   return NO;
 }
 
@@ -95,12 +97,10 @@
   self.postroll.played = NO;
 }
 
-- (void)skipAd {
+- (void)skipAd {}
 
-}
-
-- (NSSet*/*<NSNumber int seconds>*/)getCuePointsAtSeconds {
-  NSMutableSet *set = [NSMutableSet new];
+- (NSSet *)getCuePointsAtSeconds { /*<NSNumber int seconds>*/
+  NSMutableSet *set = [NSMutableSet set];
   if (self.midroll && !self.midroll.played) {
     [set addObject:self.midroll.time];
   }
@@ -114,19 +114,22 @@
 - (void)playAd:(OOSampleAdSpot *)ad {
   CGRect rect = self.ooplayer.view.frame;
   self.adPlayer = [[OOSampleAdPlayer alloc] initWithFrame:rect notifier:self.notifier];
-  [self.adPlayer setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+  self.adPlayer.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   [self.ooplayer.view addSubview:self.adPlayer];
   [self.notifier notifyAdStarted];
   [self.adPlayer loadAd:ad];
   [self.adPlayer play];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
   if (![keyPath isEqualToString:@"state"] || !self.adPlayer) {
     return;
   }
 
-  switch ((OOOoyalaPlayerState)[[change objectForKey:NSKeyValueChangeNewKey] intValue]) {
+  switch ((OOOoyalaPlayerState)[change[NSKeyValueChangeNewKey] intValue]) {
     case OOOoyalaPlayerStateCompleted:
       [self.notifier notifyAdCompleted];
       [self.adPlayer removeFromSuperview];
@@ -145,27 +148,19 @@
   [self.adPlayer destroy];
   
   // remove observer to make notifier consistent when dealloc
-  @try{
-    [_notifier removeObserver:self forKeyPath:@"state" context: nil];
-  }@catch(id anException){
+  @try {
+    [self.notifier removeObserver:self forKeyPath:@"state" context: nil];
+  } @catch (id anException) {
     // Double removed, avoid crashing
   }
 }
 
-- (void)reset {
+- (void)reset {}
 
-}
+- (void)suspend {}
 
-- (void)suspend {
+- (void)resume {}
 
-}
-
-- (void)resume {
-
-}
-
-- (void)resume:(Float64)time stateToResume:(OOOoyalaPlayerState)state {
-  
-}
+- (void)resume:(Float64)time stateToResume:(OOOoyalaPlayerState)state {}
 
 @end
