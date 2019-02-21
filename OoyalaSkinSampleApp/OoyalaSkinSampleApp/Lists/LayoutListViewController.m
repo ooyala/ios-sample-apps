@@ -15,31 +15,41 @@
 @implementation LayoutListViewController
 
 - (void)addTestCases {
-  [self addCommonWithTitle:@"Original Alice Test Asset" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Small Player View (BigBuck+Ads)"
-                                                            embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                         playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"SmallSkinPlayerView"]];
+  self.options = [NSArray array];
+  self.options = @[
+                   [self optionWithTitle:@"Original Alice Test Asset"
+                               embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
+                                     nib:@"DefaultSkinPlayerView"],
 
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Small Player View (HLS)"
-                                                            embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                         playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"SmallSkinPlayerView"]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Tall Player View"
-                                                            embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                         playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"TallPlayerView"]];
+                   [self optionWithTitle:@"Small Player View (BigBuck+Ads)"
+                               embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
+                                     nib:@"SmallSkinPlayerView"],
 
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Wide Player View"
-                                                            embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
-                                                                pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                         playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"WidePlayerView"]];
+                   [self optionWithTitle:@"Small Player View (HLS)"
+                               embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
+                                     nib:@"SmallSkinPlayerView"],
 
+                   [self optionWithTitle:@"Tall Player View"
+                               embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
+                                     nib:@"TallPlayerView"],
 
+                   [self optionWithTitle:@"Wide Player View"
+                               embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
+                                     nib:@"WidePlayerView"]
+                   ];
+}
+
+- (PlayerSelectionOption *)optionWithTitle:(NSString *)title
+                                 embedCode:(NSString *)embedCode
+                                       nib:(NSString *)nib {
+  NSString *pcode = @"c0cTkxOqALQviQIGAHWY5hP0q9gU-H";
+  NSString *playerDomain = @"http://www.ooyala.com";
+  return [[PlayerSelectionOption alloc] initWithTitle:title
+                                            embedCode:embedCode
+                                                pcode:pcode
+                                         playerDomain:playerDomain
+                                       viewController:DefaultSkinPlayerViewController.class
+                                                  nib:nib];
 }
 
 @end

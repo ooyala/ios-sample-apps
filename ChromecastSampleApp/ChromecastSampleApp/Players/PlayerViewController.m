@@ -189,13 +189,13 @@
  * For debugging, you can use Ooyala's EmbeddedSecureURLGenerator to create local embed tokens
  */
 - (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
-  NSDictionary* params = @{@"account_id": self.accountId};
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@",
+  NSDictionary *params = @{@"account_id": self.accountId};
+  NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@",
                    self.pcode, [embedCodes componentsJoinedByString:@","]];
 
-  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
+  OOEmbeddedSecureURLGenerator *urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
                                                                                        secret:self.secret];
-  NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
+  NSURL *embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
   callback(embedTokenUrl.absoluteString);
 }
 

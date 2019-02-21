@@ -30,11 +30,13 @@ AppDelegate *appDel;
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
                                 qaModeEnabled:(BOOL)qaModeEnabled {
-  if (self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:qaModeEnabled]) {
-    _nib = playerSelectionOption.nib;
-    _embedCode = playerSelectionOption.embedCode;
+  if (self = [super initWithPlayerSelectionOption:playerSelectionOption
+                                    qaModeEnabled:qaModeEnabled]) {
+    _nib          = playerSelectionOption.nib;
+    _embedCode    = playerSelectionOption.embedCode;
     _playerDomain = playerSelectionOption.playerDomain;
-    _pcode = playerSelectionOption.pcode;
+    _pcode        = playerSelectionOption.pcode;
+    self.title    = playerSelectionOption.title;
   }
   return self;
 }
@@ -54,7 +56,8 @@ AppDelegate *appDel;
   
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
+                                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
+                                                               options:options];
   
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
                                                                             limit:10
@@ -67,14 +70,14 @@ AppDelegate *appDel;
                                                                 configFileName:@"skin"
                                                                overrideConfigs:nil];
   
-  self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
-                                                         skinOptions:skinOptions
-                                                              parent:self.audioPlayerContainerView
-                                                       launchOptions:nil];
+  _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
+                                                     skinOptions:skinOptions
+                                                          parent:self.audioPlayerContainerView
+                                                   launchOptions:nil];
   [self addChildViewController:self.skinController];
   [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
 
-  self.skinController.view.frame = self.audioPlayerContainerView.bounds;
+  _skinController.view.frame = self.audioPlayerContainerView.bounds;
   
   [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
@@ -99,7 +102,6 @@ AppDelegate *appDel;
 #pragma mark - Private functions
 
 - (void)notificationHandler:(NSNotification*)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -107,8 +109,9 @@ AppDelegate *appDel;
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.skinController.player state]],
-                       self.skinController.player.playheadTime, appDel.count];
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.skinController.player.state],
+                       self.skinController.player.playheadTime,
+                       appDel.count];
   NSLog(@"%@", message);
   
   // In QA Mode , adding notifications to the TextView
@@ -122,6 +125,5 @@ AppDelegate *appDel;
   
   appDel.count++;
 }
-
 
 @end
