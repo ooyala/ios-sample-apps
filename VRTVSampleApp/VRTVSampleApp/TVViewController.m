@@ -5,10 +5,9 @@
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
-@import OoyalaVRTVSDK;
-
 #import "TVViewController.h"
 #import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
+#import <OoyalaVRTVSDK/OoyalaVRTVSDK.h>
 
 @interface TVViewController ()
 
