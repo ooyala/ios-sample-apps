@@ -11,7 +11,7 @@
 @implementation OOSampleAdSpot
 
 + (OOSampleAdSpot *)spotWithTime:(Float64)time text:(NSString *)text {
-  OOSampleAdSpot *adSpot = [[OOSampleAdSpot alloc] initWithTime:[NSNumber numberWithFloat:time]];
+  OOSampleAdSpot *adSpot = [[OOSampleAdSpot alloc] initWithTime:@(time)];
   adSpot.text = text;
   return adSpot;
 }

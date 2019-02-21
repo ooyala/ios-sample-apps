@@ -14,12 +14,11 @@
  */
 @implementation CustomOverlayView
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
   frame.size.height = 50;
-  self = [super initWithFrame:frame];
-  if (self) {
+  if (self = [super initWithFrame:frame]) {
     self.text = @"This is an overlay";
-    self.backgroundColor = [UIColor redColor];
+    self.backgroundColor = UIColor.redColor;
     self.editable = NO;
     self.selectable = NO;
   }
