@@ -104,7 +104,7 @@
 		AE1B86D22020E48D00FCF6CA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AE1B86D32020E48D00FCF6CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AE1B86E42020E53100FCF6CA /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
-		AE1B86E62020E57800FCF6CA /* SerializationDownloadsSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SerializationDownloadsSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE1B86E62020E57800FCF6CA /* DownloadToOwnSampleAppSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadToOwnSampleAppSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE1B86E72020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEmbedTokenGenerator.swift; sourceTree = "<group>"; };
 		AE1B86E92020E76000FCF6CA /* OptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
 		AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewController.swift; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 			children = (
 				AE1B86B72020DF2000FCF6CA /* Info.plist */,
 				AE1B86AB2020DF2000FCF6CA /* AppDelegate.swift */,
-				AE1B86E62020E57800FCF6CA /* SerializationDownloadsSampleApp-Bridging-Header.h */,
+				AE1B86E62020E57800FCF6CA /* DownloadToOwnSampleAppSwift-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -569,18 +569,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/SerializationDownloadsSampleApp/Supporting Files/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/VendorLibraries";
+				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleAppSwift/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleAppSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Supporting Files/SerializationDownloadsSampleApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DownloadToOwnSampleAppSwift/Supporting Files/DownloadToOwnSampleAppSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -593,18 +590,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556Y9XWD3N;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/SerializationDownloadsSampleApp/Supporting Files/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/VendorLibraries";
+				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleAppSwift/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleAppSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SerializationDownloadsSampleApp/Supporting Files/SerializationDownloadsSampleApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DownloadToOwnSampleAppSwift/Supporting Files/DownloadToOwnSampleAppSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

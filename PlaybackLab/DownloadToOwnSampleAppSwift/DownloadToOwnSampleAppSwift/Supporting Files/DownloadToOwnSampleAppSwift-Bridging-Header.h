@@ -1,6 +1,6 @@
 //
-//  SerializationDownloadsSampleApp-Bridging-Header.h
-//  SerializationDownloadsSampleApp
+//  DownloadToOwnSampleAppSwift-Bridging-Header.h
+//  DownloadToOwnSampleAppSwift
 //
 //  Copyright © 2018 Ooyala. All rights reserved.
 //
