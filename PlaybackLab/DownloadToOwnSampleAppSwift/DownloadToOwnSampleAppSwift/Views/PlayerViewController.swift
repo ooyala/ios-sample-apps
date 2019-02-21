@@ -1,6 +1,6 @@
 //
 //  PlayerViewController.swift
-//  SerializationDownloadsSampleApp
+//  DownloadToOwnSampleAppSwift
 //
 //  Copyright © 2018 Ooyala. All rights reserved.
 //

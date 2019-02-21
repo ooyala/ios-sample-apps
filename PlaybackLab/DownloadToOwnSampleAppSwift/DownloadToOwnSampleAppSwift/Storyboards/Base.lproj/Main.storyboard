@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Serialization Downloads Sample App-->
+        <!--DTO Sample App Swift-->
         <scene sceneID="fhI-LY-PPF">
             <objects>
-                <tableViewController id="oJQ-8t-6yv" customClass="AssetTableViewController" customModule="SerializationDownloadsSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oJQ-8t-6yv" customClass="AssetTableViewController" customModule="DownloadToOwnSampleAppSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="V73-0v-nkM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="OptionCellReuseIdentifier" rowHeight="80" id="11L-Mg-zyr" customClass="OptionTableViewCell" customModule="SerializationDownloadsSampleApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="OptionCellReuseIdentifier" rowHeight="80" id="11L-Mg-zyr" customClass="OptionTableViewCell" customModule="DownloadToOwnSampleAppSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="11L-Mg-zyr" id="Vrl-Vv-4VO">
@@ -70,7 +70,7 @@
                             <outlet property="delegate" destination="oJQ-8t-6yv" id="AsZ-O9-xyZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Serialization Downloads Sample App" id="FEn-yA-5MZ"/>
+                    <navigationItem key="navigationItem" title="DTO Sample App Swift" id="FEn-yA-5MZ"/>
                     <connections>
                         <segue destination="ZLj-rp-M29" kind="show" identifier="PlayerViewControllerSegue" id="C56-vl-QLq"/>
                     </connections>
@@ -82,7 +82,7 @@
         <!--Player View Controller-->
         <scene sceneID="Hey-eI-UCj">
             <objects>
-                <viewController id="ZLj-rp-M29" customClass="PlayerViewController" customModule="SerializationDownloadsSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZLj-rp-M29" customClass="PlayerViewController" customModule="DownloadToOwnSampleAppSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gly-4E-NRD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
