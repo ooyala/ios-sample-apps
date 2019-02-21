@@ -140,15 +140,12 @@
 			children = (
 				0BA65EBF1BD01534000D389F /* AppDelegate.h */,
 				0BA65EC01BD01534000D389F /* AppDelegate.m */,
-				0BA65EC11BD01534000D389F /* LaunchScreen.xib */,
-				0BA65EC31BD01534000D389F /* Main.storyboard */,
-				0BA65EC51BD01534000D389F /* Images.xcassets */,
-				0BA65EC61BD01534000D389F /* Info.plist */,
 				0BA65EC71BD01534000D389F /* Lists */,
-				0BA65ECA1BD01534000D389F /* main.m */,
 				0BA65ECB1BD01534000D389F /* Players */,
 				0BA65ECE1BD01534000D389F /* Utils */,
 				0BA65ED31BD01534000D389F /* Views */,
+				39D4609E221EA49A008C9FC7 /* Storyboards */,
+				39D4609F221EA4A6008C9FC7 /* Supporting Files */,
 			);
 			path = CocoaPodsSampleApp;
 			sourceTree = "<group>";
@@ -193,6 +190,25 @@
 				0BA65ED91BD01534000D389F /* TableCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		39D4609E221EA49A008C9FC7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0BA65EC11BD01534000D389F /* LaunchScreen.xib */,
+				0BA65EC31BD01534000D389F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		39D4609F221EA4A6008C9FC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BA65EC51BD01534000D389F /* Images.xcassets */,
+				0BA65EC61BD01534000D389F /* Info.plist */,
+				0BA65ECA1BD01534000D389F /* main.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8CD6F018DE2F590812EFF9BC /* Pods */ = {
@@ -278,8 +294,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 556Y9XWD3N;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					0B19FEFD1A3B7532003E57DF = {
 						CreatedOnToolsVersion = 6.1;
@@ -505,11 +520,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/CocoaPodsSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CocoaPodsSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -522,6 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CocoaPodsSampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -530,10 +549,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
+				INFOPLIST_FILE = "$(SRCROOT)/CocoaPodsSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -546,6 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CocoaPodsSampleApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
