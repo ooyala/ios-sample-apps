@@ -29,15 +29,16 @@
 		393A48D921CCF293005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A48C621CCF292005860F3 /* validate.js */; };
 		393A48DB21CCF2A1005860F3 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */; };
 		393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */; };
-		395EE293221442840048166D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395EE28F221442840048166D /* LaunchScreen.storyboard */; };
-		395EE294221442840048166D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395EE291221442840048166D /* Main.storyboard */; };
-		39D45FFA221D6E44008C9FC7 /* AssetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */; };
-		39D45FFE221D6E51008C9FC7 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */; };
-		39D46009221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */; };
-		39D4600A221D6E62008C9FC7 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46002221D6E62008C9FC7 /* OptionsDataSource.m */; };
-		39D4600B221D6E62008C9FC7 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */; };
-		39D4600C221D6E62008C9FC7 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */; };
-		39D46010221D6EA4008C9FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4600E221D6EA4008C9FC7 /* main.m */; };
+		39D4607C221E94D8008C9FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4607A221E94D8008C9FC7 /* main.m */; };
+		39D46081221E94E3008C9FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D4607F221E94E3008C9FC7 /* LaunchScreen.storyboard */; };
+		39D46082221E94E3008C9FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D46080221E94E3008C9FC7 /* Main.storyboard */; };
+		39D46086221E94E8008C9FC7 /* AssetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46085221E94E8008C9FC7 /* AssetListViewController.m */; };
+		39D46094221E94EF008C9FC7 /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46088221E94EF008C9FC7 /* BasicEmbedTokenGenerator.m */; };
+		39D46095221E94EF008C9FC7 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4608A221E94EF008C9FC7 /* OptionsDataSource.m */; };
+		39D46096221E94EF008C9FC7 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4608B221E94EF008C9FC7 /* PlayerSelectionOption.m */; };
+		39D46097221E94EF008C9FC7 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4608F221E94EF008C9FC7 /* OptionTableViewCell.m */; };
+		39D46098221E94EF008C9FC7 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46093221E94EF008C9FC7 /* PlayerViewController.m */; };
+		39D4609B221E9574008C9FC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4609A221E9574008C9FC7 /* AppDelegate.m */; };
 		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
 		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
 		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
@@ -45,7 +46,6 @@
 		CA79AF771E00B2D30027754F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF761E00B2D30027754F /* libc++.tbd */; };
 		CA79AF791E00B2DF0027754F /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF781E00B2DF0027754F /* libc++abi.tbd */; };
 		CA79AF7B1E00B2E80027754F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF7A1E00B2E80027754F /* libz.tbd */; };
-		CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */; };
 		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,20 +74,31 @@
 		393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		395EE290221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		395EE292221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		39D45FF8221D6E44008C9FC7 /* AssetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetListViewController.h; sourceTree = "<group>"; };
 		39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetListViewController.m; sourceTree = "<group>"; };
-		39D45FFC221D6E51008C9FC7 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
-		39D46001221D6E62008C9FC7 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		39D46002221D6E62008C9FC7 /* OptionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsDataSource.m; sourceTree = "<group>"; };
 		39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
-		39D46004221D6E62008C9FC7 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
-		39D46006221D6E62008C9FC7 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
 		39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
-		39D46008221D6E62008C9FC7 /* OptionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsDataSource.h; sourceTree = "<group>"; };
 		39D4600E221D6EA4008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		39D4600F221D6EA4008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D4607A221E94D8008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39D4607B221E94D8008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D4607F221E94E3008C9FC7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		39D46080221E94E3008C9FC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		39D46084221E94E8008C9FC7 /* AssetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetListViewController.h; sourceTree = "<group>"; };
+		39D46085221E94E8008C9FC7 /* AssetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetListViewController.m; sourceTree = "<group>"; };
+		39D46088221E94EF008C9FC7 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
+		39D46089221E94EF008C9FC7 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
+		39D4608A221E94EF008C9FC7 /* OptionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsDataSource.m; sourceTree = "<group>"; };
+		39D4608B221E94EF008C9FC7 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
+		39D4608C221E94EF008C9FC7 /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
+		39D4608E221E94EF008C9FC7 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
+		39D4608F221E94EF008C9FC7 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
+		39D46090221E94EF008C9FC7 /* OptionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsDataSource.h; sourceTree = "<group>"; };
+		39D46092221E94EF008C9FC7 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		39D46093221E94EF008C9FC7 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		39D46099221E9574008C9FC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		39D4609A221E9574008C9FC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -96,8 +107,6 @@
 		CA79AF781E00B2DF0027754F /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		CA79AF7A1E00B2E80027754F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CA7ED8F81D5964E700EA0A57 /* DownloadToOwnSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadToOwnSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -198,63 +207,79 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
-		395EE28E221442840048166D /* Storyboards */ = {
+		39D46078221E94AF008C9FC7 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				395EE28F221442840048166D /* LaunchScreen.storyboard */,
+				39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */,
+				39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */,
+				39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */,
+				39D46002221D6E62008C9FC7 /* OptionsDataSource.m */,
+				39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */,
+				39D4600E221D6EA4008C9FC7 /* main.m */,
+				39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */,
 				395EE291221442840048166D /* Main.storyboard */,
+				395EE28F221442840048166D /* LaunchScreen.storyboard */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		39D46079221E94D8008C9FC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39D4607A221E94D8008C9FC7 /* main.m */,
+				39D4607B221E94D8008C9FC7 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39D4607E221E94E3008C9FC7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				39D4607F221E94E3008C9FC7 /* LaunchScreen.storyboard */,
+				39D46080221E94E3008C9FC7 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		39D45FF7221D6E44008C9FC7 /* Lists */ = {
+		39D46083221E94E8008C9FC7 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				39D45FF8221D6E44008C9FC7 /* AssetListViewController.h */,
-				39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */,
+				39D46084221E94E8008C9FC7 /* AssetListViewController.h */,
+				39D46085221E94E8008C9FC7 /* AssetListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
 		};
-		39D45FFB221D6E51008C9FC7 /* Players */ = {
+		39D46087221E94EF008C9FC7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				39D45FFC221D6E51008C9FC7 /* PlayerViewController.h */,
-				39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */,
-			);
-			path = Players;
-			sourceTree = "<group>";
-		};
-		39D45FFF221D6E62008C9FC7 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */,
-				39D46001221D6E62008C9FC7 /* PlayerSelectionOption.h */,
-				39D46002221D6E62008C9FC7 /* OptionsDataSource.m */,
-				39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */,
-				39D46004221D6E62008C9FC7 /* BasicEmbedTokenGenerator.h */,
-				39D46005221D6E62008C9FC7 /* Views */,
-				39D46008221D6E62008C9FC7 /* OptionsDataSource.h */,
+				39D4608D221E94EF008C9FC7 /* Views */,
+				39D4608C221E94EF008C9FC7 /* BasicEmbedTokenGenerator.h */,
+				39D46088221E94EF008C9FC7 /* BasicEmbedTokenGenerator.m */,
+				39D46089221E94EF008C9FC7 /* PlayerSelectionOption.h */,
+				39D4608B221E94EF008C9FC7 /* PlayerSelectionOption.m */,
+				39D46090221E94EF008C9FC7 /* OptionsDataSource.h */,
+				39D4608A221E94EF008C9FC7 /* OptionsDataSource.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		39D46005221D6E62008C9FC7 /* Views */ = {
+		39D4608D221E94EF008C9FC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				39D46006221D6E62008C9FC7 /* OptionTableViewCell.h */,
-				39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */,
+				39D4608E221E94EF008C9FC7 /* OptionTableViewCell.h */,
+				39D4608F221E94EF008C9FC7 /* OptionTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		39D4600D221D6EA4008C9FC7 /* Supporting Files */ = {
+		39D46091221E94EF008C9FC7 /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				39D4600E221D6EA4008C9FC7 /* main.m */,
-				39D4600F221D6EA4008C9FC7 /* Info.plist */,
+				39D46092221E94EF008C9FC7 /* PlayerViewController.h */,
+				39D46093221E94EF008C9FC7 /* PlayerViewController.m */,
 			);
-			path = "Supporting Files";
+			path = Players;
 			sourceTree = "<group>";
 		};
 		CA7ED8EF1D5964E700EA0A57 = {
@@ -264,6 +289,7 @@
 				393A486C21CCE49E005860F3 /* VendorLibraries */,
 				CAC620481D63C9AB004902F3 /* Frameworks */,
 				CA7ED8F91D5964E700EA0A57 /* Products */,
+				39D46078221E94AF008C9FC7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,14 +304,14 @@
 		CA7ED8FA1D5964E700EA0A57 /* DownloadToOwnSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				CA7ED8FE1D5964E700EA0A57 /* AppDelegate.h */,
-				CA7ED8FF1D5964E700EA0A57 /* AppDelegate.m */,
-				39D45FF7221D6E44008C9FC7 /* Lists */,
-				39D45FFB221D6E51008C9FC7 /* Players */,
-				39D45FFF221D6E62008C9FC7 /* Utils */,
+				39D46099221E9574008C9FC7 /* AppDelegate.h */,
+				39D4609A221E9574008C9FC7 /* AppDelegate.m */,
+				39D46083221E94E8008C9FC7 /* Lists */,
+				39D46091221E94EF008C9FC7 /* Players */,
+				39D46087221E94EF008C9FC7 /* Utils */,
+				39D4607E221E94E3008C9FC7 /* Storyboards */,
+				39D46079221E94D8008C9FC7 /* Supporting Files */,
 				393A48AE21CCF292005860F3 /* Resources */,
-				395EE28E221442840048166D /* Storyboards */,
-				39D4600D221D6EA4008C9FC7 /* Supporting Files */,
 			);
 			path = DownloadToOwnSampleApp;
 			sourceTree = "<group>";
@@ -364,16 +390,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				393A48D321CCF293005860F3 /* es.json in Resources */,
+				39D46082221E94E3008C9FC7 /* Main.storyboard in Resources */,
 				393A48CF21CCF293005860F3 /* zh.json in Resources */,
 				393A48D621CCF293005860F3 /* package.json in Resources */,
-				395EE294221442840048166D /* Main.storyboard in Resources */,
 				393A48C721CCF293005860F3 /* main.jsbundle in Resources */,
 				393A48D721CCF293005860F3 /* tv-skin.json in Resources */,
 				393A48CB21CCF293005860F3 /* Roboto-Regular.ttf in Resources */,
 				393A48D121CCF293005860F3 /* en.json in Resources */,
 				393A48D921CCF293005860F3 /* validate.js in Resources */,
+				39D46081221E94E3008C9FC7 /* LaunchScreen.storyboard in Resources */,
 				393A48D821CCF293005860F3 /* skin-schema.json in Resources */,
-				395EE293221442840048166D /* LaunchScreen.storyboard in Resources */,
 				393A48CE21CCF293005860F3 /* Roboto-Bold.ttf in Resources */,
 				393A48D421CCF293005860F3 /* skin.json in Resources */,
 				393A48D221CCF293005860F3 /* ko.json in Resources */,
@@ -395,14 +421,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D4600C221D6E62008C9FC7 /* OptionTableViewCell.m in Sources */,
-				CA7ED9001D5964E700EA0A57 /* AppDelegate.m in Sources */,
-				39D4600B221D6E62008C9FC7 /* PlayerSelectionOption.m in Sources */,
-				39D46009221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m in Sources */,
-				39D4600A221D6E62008C9FC7 /* OptionsDataSource.m in Sources */,
-				39D45FFA221D6E44008C9FC7 /* AssetListViewController.m in Sources */,
-				39D46010221D6EA4008C9FC7 /* main.m in Sources */,
-				39D45FFE221D6E51008C9FC7 /* PlayerViewController.m in Sources */,
+				39D46097221E94EF008C9FC7 /* OptionTableViewCell.m in Sources */,
+				39D46095221E94EF008C9FC7 /* OptionsDataSource.m in Sources */,
+				39D46094221E94EF008C9FC7 /* BasicEmbedTokenGenerator.m in Sources */,
+				39D46096221E94EF008C9FC7 /* PlayerSelectionOption.m in Sources */,
+				39D4609B221E9574008C9FC7 /* AppDelegate.m in Sources */,
+				39D46098221E94EF008C9FC7 /* PlayerViewController.m in Sources */,
+				39D46086221E94E8008C9FC7 /* AssetListViewController.m in Sources */,
+				39D4607C221E94D8008C9FC7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

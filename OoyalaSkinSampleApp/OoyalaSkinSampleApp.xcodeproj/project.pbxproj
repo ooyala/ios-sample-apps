@@ -49,7 +49,6 @@
 		393A46F021CCCE43005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A46EF21CCCE43005860F3 /* OoyalaSkinSDK.xcassets */; };
 		39D45FE2221D59C6008C9FC7 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDB221D59C6008C9FC7 /* OoyalaSkinSDK.framework */; };
 		39D45FE3221D59C6008C9FC7 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDC221D59C6008C9FC7 /* OoyalaSSAISDK.framework */; };
-		39D45FE4221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */; };
 		39D45FE5221D59C6008C9FC7 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDE221D59C6008C9FC7 /* AdManager.framework */; };
 		39D45FE6221D59C6008C9FC7 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDF221D59C6008C9FC7 /* OoyalaIMASDK.framework */; };
 		39D45FE7221D59C6008C9FC7 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FE0221D59C6008C9FC7 /* OoyalaSDK.framework */; };
@@ -224,7 +223,6 @@
 				39278CBC2191DDE800F6F4E2 /* libz.tbd in Frameworks */,
 				39D45FE9221D59CF008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				39278CBA2191DDE200F6F4E2 /* libxml2.tbd in Frameworks */,
-				39D45FE4221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */,
 				97B22E4E1BD05D1900D89589 /* AdSupport.framework in Frameworks */,
 				97930E271B699595009B3512 /* EventKit.framework in Frameworks */,

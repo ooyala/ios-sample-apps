@@ -11,45 +11,50 @@
 #import "PlayerSelectionOption.h"
 
 @interface NielsenPlaybackListViewcontroller ()
-@property NSMutableArray *options;
+
+@property NSArray *options;
+
 @end
 
 @implementation NielsenPlaybackListViewcontroller
 
-- (id)init {
-  self = [super init];
-  self.title = @"IMA Playback";
-  return self;
-}
-- (void)addAllPlayerSelectionOptions {
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Demo" embedCode:@"84aDVmcTqN3FrdLXClZgJq-GfFEDhS1a" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Live" embedCode:@"p4ZXNwdDrfdg2vz04LdpbRg94XXb7d_c" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Demo" embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48" pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-WithAds" embedCode:@"x3YjJzczqREV-5RDiemsrdqki1FYu2NT" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-14min" embedCode:@"JyanIxdDoj9MhKbVEmTJEG8O4QF5xExb" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
-  [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Live" embedCode:@"RuZXNwdDpcWdrXskPkw73Mosq6sw6Fux" pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc" viewController: [NielsenPlayerViewController class]]];
-
+- (NSArray *)allPlayerSelectionOptions {
+  return @[
+           [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Demo"
+                                              embedCode:@"84aDVmcTqN3FrdLXClZgJq-GfFEDhS1a"
+                                                  pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                         viewController:NielsenPlayerViewController.class],
+           [[PlayerSelectionOption alloc] initWithTitle:@"ID3-Live"
+                                              embedCode:@"p4ZXNwdDrfdg2vz04LdpbRg94XXb7d_c"
+                                                  pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                         viewController:NielsenPlayerViewController.class],
+           [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Demo"
+                                              embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
+                                                  pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
+                                         viewController:NielsenPlayerViewController.class],
+           [[PlayerSelectionOption alloc] initWithTitle:@"CMS-WithAds"
+                                              embedCode:@"x3YjJzczqREV-5RDiemsrdqki1FYu2NT"
+                                                  pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                         viewController:NielsenPlayerViewController.class],
+           [[PlayerSelectionOption alloc] initWithTitle:@"CMS-14min"
+                                              embedCode:@"JyanIxdDoj9MhKbVEmTJEG8O4QF5xExb"
+                                                  pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                         viewController:NielsenPlayerViewController.class],
+           [[PlayerSelectionOption alloc] initWithTitle:@"CMS-Live"
+                                              embedCode:@"RuZXNwdDpcWdrXskPkw73Mosq6sw6Fux"
+                                                  pcode:@"BidTQxOqebpNk1rVsjs2sUJSTOZc"
+                                         viewController:NielsenPlayerViewController.class]
+           ];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  self.title = @"IMA Playback";
   self.navigationController.navigationBar.translucent = NO;
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil] forCellReuseIdentifier:@"TableCell"];
 
-  [self addAllPlayerSelectionOptions];
-}
-
-- (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
-  if (!self.options) {
-      self.options = [[NSMutableArray alloc] init];
-  }
-  [self.options insertObject:selectionObject atIndex:0];
-  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-  [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
+  _options = [NSArray arrayWithArray:self.allPlayerSelectionOptions];
 }
 
 #pragma mark - Table View
@@ -63,7 +68,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell"
+                                                          forIndexPath:indexPath];
 
   PlayerSelectionOption *selection = self.options[indexPath.row];
   cell.textLabel.text = [selection title];
@@ -74,8 +80,7 @@
   return NO;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
   SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];

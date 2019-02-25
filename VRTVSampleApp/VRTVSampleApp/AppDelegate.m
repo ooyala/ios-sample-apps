@@ -6,12 +6,10 @@
 //
 
 #import "AppDelegate.h"
-#import <OoyalaVRTVSDK/OoyalaVRTVSDK.h>
 
 @interface AppDelegate ()
 
 @end
-
 
 @implementation AppDelegate
 

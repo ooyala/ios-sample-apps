@@ -84,10 +84,10 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
                                                                overrideConfigs:nil];
-  self.ooyalaPlayerViewController = [[OOSkinViewController alloc] initWithPlayer:player
-                                                                     skinOptions:skinOptions
-                                                                          parent:self.playerView
-                                                                   launchOptions:nil];
+  _ooyalaPlayerViewController = [[OOSkinViewController alloc] initWithPlayer:player
+                                                                 skinOptions:skinOptions
+                                                                      parent:self.playerView
+                                                               launchOptions:nil];
   
   [self.ooyalaPlayerViewController willMoveToParentViewController:self];
   [self addChildViewController:self.ooyalaPlayerViewController];
