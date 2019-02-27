@@ -26,11 +26,9 @@
 @property (weak, nonatomic) IBOutlet UIView *playerView1;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
-@property (nonatomic) PlayerSelectionOption *playerSelectionOption;
-@property (nonatomic) BOOL qaModeEnabled;
+@property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
 
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
-                                qaModeEnabled:(BOOL)qaModeEnabled;
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption;
 
 - (IBAction)onButtonClick:(id)sender;
 

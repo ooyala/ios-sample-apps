@@ -20,6 +20,7 @@
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *playerDomain;
 @property (nonatomic) BOOL isAudioOnlyAsset;
+@property (nonatomic) BOOL qaModeEnabled;
 
 @end
 
@@ -31,9 +32,10 @@
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
                                 qaModeEnabled:(BOOL)qaModeEnabled {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
+  self = [super initWithPlayerSelectionOption: playerSelectionOption];
   _nib = @"PlayerSimple";
-  NSLog(@"value of qa mode in BasicSimplePlayerviewController %@", self.qaModeEnabled ? @"YES" : @"NO");
+  _qaModeEnabled = NO;
+  NSLog(@"value of qa mode in BasicSimplePlayerviewController %@", @"undefined");
   if (self.playerSelectionOption) {
     _embedCode = self.playerSelectionOption.embedCode;
     _pcode = self.playerSelectionOption.pcode;

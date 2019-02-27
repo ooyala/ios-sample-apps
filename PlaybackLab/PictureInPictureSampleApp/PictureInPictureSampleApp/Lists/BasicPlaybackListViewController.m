@@ -172,9 +172,9 @@
   PlayerSelectionOption *selection = self.options[indexPath.row];
   SampleAppPlayerViewController *controller;
   if (selection.embedCode.length > 0) {
-    controller = [(BasicSimplePlayerViewController *)[selection.viewController alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
+    controller = [(BasicSimplePlayerViewController *)[selection.viewController alloc] initWithPlayerSelectionOption:selection];
   } else {
-    controller = [[QRScannerViewController alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
+    controller = [[QRScannerViewController alloc] initWithPlayerSelectionOption:selection];
   }
   [self.navigationController pushViewController:controller animated:YES];
 }

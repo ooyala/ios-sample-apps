@@ -27,7 +27,7 @@
 NSMutableArray *_sharePlugins;
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:self.qaModeEnabled];
+  self = [super initWithPlayerSelectionOption:playerSelectionOption];
 
   _sharePlugins = [[NSMutableArray alloc] init];
 

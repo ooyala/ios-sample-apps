@@ -27,7 +27,7 @@
 @implementation FreewheelPlayerViewController
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:self.qaModeEnabled];
+  self = [super initWithPlayerSelectionOption:playerSelectionOption];
 
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
