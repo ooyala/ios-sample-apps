@@ -15,6 +15,7 @@
 
 @implementation SampleAppPlayerViewController
 
+#pragma mark - Initialization
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   if (self = [super init]) {
     _playerSelectionOption = playerSelectionOption;
@@ -22,6 +23,7 @@
   return self;
 }
 
+#pragma mark - View Controller Lifecycle
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   
@@ -40,7 +42,7 @@
   }
 }
 
-
+#pragma mark - Actions
 - (IBAction)onButtonClick:(id)sender {}
 
 @end

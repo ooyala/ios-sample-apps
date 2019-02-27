@@ -20,23 +20,27 @@
 @property NSString *nib;
 @property NSString *pcode;
 @property NSString *playerDomain;
+@property (nonatomic) BOOL isAudioOnlyAsset;
+
 @end
 
-@implementation DefaultSkinPlayerViewController
+@implementation DefaultSkinPlayerViewController  {
+  NSMutableArray *_sharePlugins;
+}
 
-NSMutableArray *_sharePlugins;
-
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+#pragma mark - Initialization
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+  
   self = [super initWithPlayerSelectionOption:playerSelectionOption];
 
   _sharePlugins = [[NSMutableArray alloc] init];
 
   if (self.playerSelectionOption) {
-    self.nib = self.playerSelectionOption.nib;
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _nib = self.playerSelectionOption.nib;
+    _embedCode = self.playerSelectionOption.embedCode;
+    _playerDomain = playerSelectionOption.playerDomain;
+    _pcode = playerSelectionOption.pcode;
     self.title = self.playerSelectionOption.title;
-    self.playerDomain = playerSelectionOption.playerDomain;
-    self.pcode = playerSelectionOption.pcode;
   }
   return self;
 }
@@ -46,11 +50,10 @@ NSMutableArray *_sharePlugins;
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
 }
 
-- (void) buttonAction {
-  [self.skinController.player togglePictureInPictureMode];
-}
+#pragma mark - View Controller Lifecycle
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
@@ -65,7 +68,7 @@ NSMutableArray *_sharePlugins;
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions jsCodeLocation:jsCodeLocation configFileName:@"skin" overrideConfigs:overrideConfigs];
   self.skinController = [[OOSkinViewController alloc] initWithPlayer:appDelegate.player skinOptions:skinOptions parent:self.playerView launchOptions:nil];
   [self addChildViewController:_skinController];
-  [_skinController.view setFrame:self.playerView.bounds];
+  [self.skinController.view setFrame:self.playerView.bounds];
   [appDelegate.player setEmbedCode:self.embedCode];
 }
 
@@ -74,14 +77,9 @@ NSMutableArray *_sharePlugins;
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Custom Selectors
+- (void)buttonAction {
+  [self.skinController.player togglePictureInPictureMode];
 }
-*/
 
 @end
