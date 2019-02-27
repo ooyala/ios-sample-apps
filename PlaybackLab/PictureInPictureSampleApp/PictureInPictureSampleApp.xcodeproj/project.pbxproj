@@ -25,6 +25,9 @@
 		0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */; };
 		0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */; };
 		0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */; };
+		336DAEFC2226C900003074BD /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */; };
+		336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */; };
+		336DAF022226CC44003074BD /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAF012226CC44003074BD /* QRScannerViewController.m */; };
 		39B7036F221C3C080036DE31 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B7036E221C3C080036DE31 /* libxml2.tbd */; };
 		39B70372221C3C130036DE31 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70370221C3C130036DE31 /* libc++abi.tbd */; };
 		39B70373221C3C130036DE31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70371221C3C130036DE31 /* libc++.tbd */; };
@@ -109,6 +112,12 @@
 		0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallSkinPlayerView.xib; sourceTree = "<group>"; };
 		0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidePlayerView.xib; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PictureInPictureSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureInPictureSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		336DAEFA2226C900003074BD /* BasicPlaybackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicPlaybackListViewController.h; sourceTree = "<group>"; };
+		336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicPlaybackListViewController.m; sourceTree = "<group>"; };
+		336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSimplePlayerViewController.m; sourceTree = "<group>"; };
+		336DAEFE2226C966003074BD /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
+		336DAF002226CC44003074BD /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
+		336DAF012226CC44003074BD /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		39B7036E221C3C080036DE31 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		39B70370221C3C130036DE31 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		39B70371221C3C130036DE31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -222,6 +231,8 @@
 		0B7824431B2B82C000D718AB /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				336DAEFA2226C900003074BD /* BasicPlaybackListViewController.h */,
+				336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */,
 				97930C0E1B6709A9009B3512 /* MasterListViewControllerTableViewController.h */,
 				97930C0F1B6709A9009B3512 /* MasterListViewControllerTableViewController.m */,
 				97930C111B670D49009B3512 /* LayoutListViewController.h */,
@@ -239,6 +250,8 @@
 		0B7824471B2B834F00D718AB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				336DAF002226CC44003074BD /* QRScannerViewController.h */,
+				336DAF012226CC44003074BD /* QRScannerViewController.m */,
 				0B7824441B2B82C000D718AB /* OoyalaSkinListViewController.h */,
 				0B7824451B2B82C000D718AB /* OoyalaSkinListViewController.m */,
 				0B7824481B2B834F00D718AB /* PlayerSelectionOption.h */,
@@ -266,6 +279,8 @@
 		0B7824581B2B855500D718AB /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				336DAEFE2226C966003074BD /* BasicSimplePlayerViewController.h */,
+				336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */,
 				0B7824591B2B855500D718AB /* DefaultSkinPlayerViewController.h */,
 				0B78245A1B2B855500D718AB /* DefaultSkinPlayerViewController.m */,
 				97930C0B1B670971009B3512 /* FreewheelPlayerViewController.h */,
@@ -487,6 +502,7 @@
 			files = (
 				97930C161B670D70009B3512 /* IMATestsListViewController.m in Sources */,
 				0B7824461B2B82C000D718AB /* OoyalaSkinListViewController.m in Sources */,
+				336DAEFC2226C900003074BD /* BasicPlaybackListViewController.m in Sources */,
 				97930C131B670D49009B3512 /* LayoutListViewController.m in Sources */,
 				0B7824351B2B7EB600D718AB /* main.m in Sources */,
 				0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */,
@@ -496,8 +512,10 @@
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
 				97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */,
+				336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */,
 				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
 				97930C191B670D9F009B3512 /* FreewheelTestsListViewController.m in Sources */,
+				336DAF022226CC44003074BD /* QRScannerViewController.m in Sources */,
 				0B78245B1B2B855500D718AB /* DefaultSkinPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

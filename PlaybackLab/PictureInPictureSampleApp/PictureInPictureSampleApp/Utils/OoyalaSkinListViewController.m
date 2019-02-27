@@ -15,6 +15,7 @@
 @property NSMutableArray *options;
 @property NSMutableArray *optionList;
 @property NSMutableArray *optionEmbedCodes;
+@property BOOL qaLogEnabled;
 @end
 
 @implementation OoyalaSkinListViewController
@@ -83,7 +84,7 @@
 {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection];
+  SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
   [self.navigationController pushViewController:controller animated:YES];
 }
 @end

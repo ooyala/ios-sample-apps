@@ -16,6 +16,7 @@
 @property NSString *playerDomain;
 @property NSString *pcode;
 @property Class viewController;
+@property BOOL isAudioOnlyAsset;
 
 - (id)initWithTitle:(NSString *)title
           embedCode:(NSString *)embedCode
@@ -23,4 +24,18 @@
        playerDomain:(NSString *)playerDomain
      viewController:(Class)viewController
                 nib:(NSString *)nib;
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController;
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController
+                  isAudioOnly:(BOOL)isAudioOnly;
+
 @end

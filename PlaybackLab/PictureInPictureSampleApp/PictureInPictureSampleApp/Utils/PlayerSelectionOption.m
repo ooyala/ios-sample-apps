@@ -17,15 +17,48 @@
        playerDomain:(NSString *)playerDomain
      viewController:(Class)viewController
                 nib:(NSString *)nib {
-  self = [super init];
-  if (self) {
-    self.title = title;
-    self.embedCode = embedCode;
-    self.viewController = viewController;
-    self.pcode = pcode;
-    self.playerDomain = playerDomain;
-    self.nib = nib;
+  if (self = [super init]) {
+    _title = title;
+    _embedCode = embedCode;
+    _viewController = viewController;
+    _pcode = pcode;
+    _playerDomain = playerDomain;
+    _nib = nib;
   }
   return self;
 }
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController {
+  if (self = [super init]) {
+    _title = title;
+    _embedCode = embedCode;
+    _pcode = pcode;
+    _playerDomain = domain;
+    _viewController = viewController;
+    _isAudioOnlyAsset = NO;
+  }
+  return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                       domain:(NSString *)domain
+               viewController:(Class)viewController
+                  isAudioOnly:(BOOL)isAudioOnly {
+  if (self = [self initWithTitle:title
+                       embedCode:embedCode
+                           pcode:pcode
+                          domain:domain
+                  viewController:viewController]) {
+    _isAudioOnlyAsset = isAudioOnly;
+  }
+  return self;
+}
+
+
 @end

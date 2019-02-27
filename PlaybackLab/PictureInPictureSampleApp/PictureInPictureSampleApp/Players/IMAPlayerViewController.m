@@ -17,13 +17,14 @@
 @property NSString *embedCode;
 @property NSString *nib;
 @property NSString *pcode;
+@property BOOL qaLogEnabled;
 @property NSString *playerDomain;
 @end
 
 @implementation IMAPlayerViewController
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption: playerSelectionOption];
+  self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:self.qaLogEnabled];
 
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;
