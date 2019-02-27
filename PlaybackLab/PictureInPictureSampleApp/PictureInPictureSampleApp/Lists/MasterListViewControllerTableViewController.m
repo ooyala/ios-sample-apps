@@ -8,6 +8,7 @@
 #import "MasterListViewControllerTableViewController.h"
 #import "LayoutListViewController.h"
 #import "BasicTestsListViewController.h"
+#import "BasicPlaybackListViewController.h"
 #import "FreewheelTestsListViewController.h"
 #import "IMATestsListViewController.h"
 
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-  self.playlists = [NSArray arrayWithObjects:/*@"Layouts",*/ @"Basic Playback"/*, @"Freewheel", @"Google IMA"*/, nil];
+  self.playlists = [NSArray arrayWithObjects:/*@"Layouts",*/ @"Basic Skin Playback", @"Basic Playback"/*, @"Freewheel", @"Google IMA"*/, nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,10 +58,10 @@
   OoyalaSkinListViewController *controller;
   switch (indexPath.row) {
     case 0:
-//      controller = [LayoutListViewController new];
-//      break;
-//    case 1:
       controller = [BasicTestsListViewController new];
+      break;
+    case 1:
+      controller = [BasicPlaybackListViewController new];
       break;
 //    case 2:
 //      controller = [FreewheelTestsListViewController new];

@@ -30,8 +30,7 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
-                                qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   _nib = @"PlayerSimple";
   _qaModeEnabled = NO;

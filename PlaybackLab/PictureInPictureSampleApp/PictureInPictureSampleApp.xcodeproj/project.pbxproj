@@ -28,6 +28,7 @@
 		336DAEFC2226C900003074BD /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */; };
 		336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */; };
 		336DAF022226CC44003074BD /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAF012226CC44003074BD /* QRScannerViewController.m */; };
+		336DAF6A2226EDF7003074BD /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336DAF692226EDF7003074BD /* PlayerSimple.xib */; };
 		39B7036F221C3C080036DE31 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B7036E221C3C080036DE31 /* libxml2.tbd */; };
 		39B70372221C3C130036DE31 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70370221C3C130036DE31 /* libc++abi.tbd */; };
 		39B70373221C3C130036DE31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70371221C3C130036DE31 /* libc++.tbd */; };
@@ -118,6 +119,7 @@
 		336DAEFE2226C966003074BD /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
 		336DAF002226CC44003074BD /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		336DAF012226CC44003074BD /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
+		336DAF692226EDF7003074BD /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		39B7036E221C3C080036DE31 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		39B70370221C3C130036DE31 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		39B70371221C3C130036DE31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */,
+				336DAF692226EDF7003074BD /* PlayerSimple.xib */,
 				0B3549851D8C9476003E76BE /* PlayerSingleButton.xib */,
 				0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */,
 				0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */,
@@ -487,6 +490,7 @@
 				0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */,
 				39B703AA221C3C510036DE31 /* README.md in Resources */,
 				39B703A3221C3C510036DE31 /* Roboto-Bold.ttf in Resources */,
+				336DAF6A2226EDF7003074BD /* PlayerSimple.xib in Resources */,
 				39B703AC221C3C510036DE31 /* tv-skin.json in Resources */,
 				39B703A9221C3C510036DE31 /* skin.json in Resources */,
 				0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */,
