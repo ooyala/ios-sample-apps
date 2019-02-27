@@ -15,7 +15,6 @@
 @property NSMutableArray *options;
 @property NSMutableArray *optionList;
 @property NSMutableArray *optionEmbedCodes;
-@property BOOL qaLogEnabled;
 @end
 
 @implementation OoyalaSkinListViewController

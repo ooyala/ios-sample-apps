@@ -10,6 +10,9 @@
 
 #import "SampleAppPlayerViewController.h"
 
+@interface SampleAppPlayerViewController (GestureDelegate) <UIGestureRecognizerDelegate>
+@end
+
 @implementation SampleAppPlayerViewController
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
@@ -19,8 +22,35 @@
   return self;
 }
 
-- (IBAction)onButtonClick:(id)sender {
-
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+  if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+  }
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  
+  if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+  }
+}
+
+
+- (IBAction)onButtonClick:(id)sender {}
+
+@end
+
+
+@implementation SampleAppPlayerViewController (GestureDelegate)
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+  return NO;
+}
+
 
 @end
