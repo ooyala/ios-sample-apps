@@ -231,18 +231,10 @@
 		0B7824431B2B82C000D718AB /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				336DAEFA2226C900003074BD /* BasicPlaybackListViewController.h */,
-				336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */,
 				97930C0E1B6709A9009B3512 /* MasterListViewControllerTableViewController.h */,
 				97930C0F1B6709A9009B3512 /* MasterListViewControllerTableViewController.m */,
-				97930C111B670D49009B3512 /* LayoutListViewController.h */,
-				97930C121B670D49009B3512 /* LayoutListViewController.m */,
-				97930C141B670D70009B3512 /* IMATestsListViewController.h */,
-				97930C151B670D70009B3512 /* IMATestsListViewController.m */,
-				97930C171B670D9F009B3512 /* FreewheelTestsListViewController.h */,
-				97930C181B670D9F009B3512 /* FreewheelTestsListViewController.m */,
-				97930C1A1B670E77009B3512 /* BasicTestsListViewController.h */,
-				97930C1B1B670E77009B3512 /* BasicTestsListViewController.m */,
+				336DAF672226E530003074BD /* Skin */,
+				336DAF662226E527003074BD /* Native */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -289,6 +281,30 @@
 				97930C2A1B6952D0009B3512 /* IMAPlayerViewController.m */,
 			);
 			path = Players;
+			sourceTree = "<group>";
+		};
+		336DAF662226E527003074BD /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				336DAEFA2226C900003074BD /* BasicPlaybackListViewController.h */,
+				336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */,
+			);
+			path = Native;
+			sourceTree = "<group>";
+		};
+		336DAF672226E530003074BD /* Skin */ = {
+			isa = PBXGroup;
+			children = (
+				97930C111B670D49009B3512 /* LayoutListViewController.h */,
+				97930C121B670D49009B3512 /* LayoutListViewController.m */,
+				97930C141B670D70009B3512 /* IMATestsListViewController.h */,
+				97930C151B670D70009B3512 /* IMATestsListViewController.m */,
+				97930C171B670D9F009B3512 /* FreewheelTestsListViewController.h */,
+				97930C181B670D9F009B3512 /* FreewheelTestsListViewController.m */,
+				97930C1A1B670E77009B3512 /* BasicTestsListViewController.h */,
+				97930C1B1B670E77009B3512 /* BasicTestsListViewController.m */,
+			);
+			path = Skin;
 			sourceTree = "<group>";
 		};
 		39B70376221C3C440036DE31 /* VendorLibraries */ = {
