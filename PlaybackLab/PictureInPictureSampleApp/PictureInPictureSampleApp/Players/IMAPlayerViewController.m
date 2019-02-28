@@ -23,7 +23,7 @@
 @implementation IMAPlayerViewController
 
 - (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
-  self = [super initWithPlayerSelectionOption:playerSelectionOption];
+  self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:self.qaModeEnabled];
 
   if (self.playerSelectionOption) {
     self.nib = self.playerSelectionOption.nib;

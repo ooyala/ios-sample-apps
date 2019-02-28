@@ -16,9 +16,10 @@
 @implementation SampleAppPlayerViewController
 
 #pragma mark - Initialization
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   if (self = [super init]) {
     _playerSelectionOption = playerSelectionOption;
+    _qaModeEnabled = qaModeEnabled;
   }
   return self;
 }

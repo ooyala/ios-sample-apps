@@ -29,9 +29,9 @@
 }
 
 #pragma mark - Initialization
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
   
-  self = [super initWithPlayerSelectionOption:playerSelectionOption];
+  self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:self.qaModeEnabled];
 
   _sharePlugins = [[NSMutableArray alloc] init];
 
