@@ -8,7 +8,6 @@
 #import "BasicPlaybackListViewController.h"
 #import "BasicSimplePlayerViewController.h"
 #import "SampleAppPlayerViewController.h"
-#import "QRScannerViewController.h"
 
 #import "PlayerSelectionOption.h"
 
@@ -168,15 +167,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
-  SampleAppPlayerViewController *controller;
   if (selection.embedCode.length > 0) {
-    controller = [(BasicSimplePlayerViewController *)[selection.viewController alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
-  } else {
-    controller = [[QRScannerViewController alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
+    SampleAppPlayerViewController *controller = [(BasicSimplePlayerViewController *)[selection.viewController alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];
+    [self.navigationController pushViewController:controller animated:YES];
   }
-  [self.navigationController pushViewController:controller animated:YES];
+  
 }
 
 @end
