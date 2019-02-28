@@ -112,12 +112,13 @@
            ];
 }
 
+#pragma mark - View Controller Lifecycle
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationController.navigationBar.translucent = NO;
   self.title = @"Basic Playback";
 
-  _options = self.basicPlayerSelectionOptions;
+  self.options = self.basicPlayerSelectionOptions;
 
   UISwitch *swtLog = [UISwitch new];
   [swtLog addTarget:self
@@ -133,6 +134,7 @@
        forCellReuseIdentifier:@"TableCell"];
 }
 
+#pragma mark - Custom Selectors
 - (void)changeSwitch:(id)sender{
   if ([sender isOn]){
     NSLog(@"Switch is ON");
@@ -143,7 +145,7 @@
   }
 }
 
-#pragma mark - Table View
+#pragma mark - UITableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1;

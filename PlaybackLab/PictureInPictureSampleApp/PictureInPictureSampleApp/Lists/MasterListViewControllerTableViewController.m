@@ -20,8 +20,10 @@
 
 @implementation MasterListViewControllerTableViewController
 
+#pragma mark - View Controller Lifecycle
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
   self.playlists = [NSArray arrayWithObjects:/*@"Layouts",*/ @"Basic Skin Playback", @"Basic Playback"/*, @"Freewheel", @"Google IMA"*/, nil];
 }
@@ -34,28 +36,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
     return self.playlists.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
-
   cell.textLabel.text = [self.playlists objectAtIndex:indexPath.row];
   return cell;
-
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   // When a row is selected, load its desired PlayerViewController
-  OoyalaSkinListViewController *controller;
+  UIViewController *controller;
   switch (indexPath.row) {
     case 0:
       controller = [BasicTestsListViewController new];

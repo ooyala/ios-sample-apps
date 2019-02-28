@@ -55,6 +55,7 @@
 
 - (void)loadView {
   [super loadView];
+  ASSERT(self.nib.length > 0, @"expected not nil nib name");
   [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 

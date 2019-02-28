@@ -6,20 +6,22 @@
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
+@import AVKit.AVPictureInPictureController;
 #import "DefaultSkinPlayerViewController.h"
 #import "AppDelegate.h"
 #import <OoyalaSkinSDK/OOSkinViewController.h>
 #import <OoyalaSkinSDK/OOSkinOptions.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
+
 @interface DefaultSkinPlayerViewController ()
 
 @property (nonatomic, retain) OOSkinViewController *skinController;
 
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 @property (nonatomic) BOOL isAudioOnlyAsset;
 
 @end
