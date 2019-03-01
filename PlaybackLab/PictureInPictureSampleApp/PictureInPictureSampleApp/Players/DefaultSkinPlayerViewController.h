@@ -6,9 +6,10 @@
 //
 
 @import UIKit;
+@import AVKit.AVPictureInPictureController;
 #import "SampleAppPlayerViewController.h"
 
-@interface DefaultSkinPlayerViewController : SampleAppPlayerViewController
+@interface DefaultSkinPlayerViewController : SampleAppPlayerViewController <AVPictureInPictureControllerDelegate>
 
 @property (nonatomic, retain) IBOutlet UIView *videoView;
 @property (nonatomic, retain) IBOutlet UILabel *textLabel;

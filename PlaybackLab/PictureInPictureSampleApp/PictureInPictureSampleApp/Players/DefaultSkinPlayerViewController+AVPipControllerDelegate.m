@@ -9,8 +9,14 @@
 
 @implementation DefaultSkinPlayerViewController (AVPipControllerDelegate)
 
+#pragma mark - AVPictureInPictureControllerDelegate
+
+- (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
+  NSLog(@"✅ pictureInPictureController DidStart PictureInPicture");
+}
+
 - (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
-  NSLog(@"✅ pictureInPictureControllerWillStopPictureInPicture");
+  NSLog(@"✅ pictureInPictureController WillStop PictureInPicture");
 }
 
 @end

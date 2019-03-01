@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DefaultSkinPlayerViewController (AVPipControllerDelegate) <AVPictureInPictureControllerDelegate>
+@interface DefaultSkinPlayerViewController (AVPipControllerDelegate)
 
 @end
 

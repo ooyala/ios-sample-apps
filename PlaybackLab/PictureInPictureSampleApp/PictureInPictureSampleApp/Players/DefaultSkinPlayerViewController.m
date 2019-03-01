@@ -59,7 +59,11 @@
   
   OOOptions *options = [OOOptions new];
   options.enablePictureInPictureSupport = YES;
-
+  BOOL canUsePip = options.enablePictureInPictureSupport && AVPictureInPictureController.isPictureInPictureSupported && !self.isAudioOnlyAsset;
+  if (canUsePip) {
+    options.pipDelegate = self;
+  }
+  
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                                 domain:[[OOPlayerDomain alloc]
                                                         initWithString:self.playerDomain]
@@ -70,8 +74,16 @@
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
 
   //Configure the button
-  [self.button1 addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
-  [self.button1 setTitle:@"Picture In Picture" forState:UIControlStateNormal];
+  //[self.button1 setHidden:!isShowing];
+  if (canUsePip) {
+    [self.button1 addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.button1 setTitle:@"" forState:UIControlStateNormal];
+    
+    [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStartImageCompatibleWithTraitCollection:nil]
+                  forState:UIControlStateNormal];
+  } else {
+    [self.button1 setTitle:@"PictureInPicture is not supported" forState:UIControlStateNormal];
+  }
 
   //Use the AppDelegate Player
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
@@ -83,6 +95,10 @@
   //Start playback
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+  BOOL previousStateFlag = self.skinController.player.isPiPActivated;
+  [self updatePipButtonForState:previousStateFlag];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,6 +109,20 @@
 #pragma mark - Custom Selectors
 - (void)buttonAction {
   [self.skinController.player togglePictureInPictureMode];
+  
+  BOOL previousStateFlag = !self.skinController.player.isPiPActivated;
+  [self updatePipButtonForState:previousStateFlag];
+}
+
+#pragma mark - Private methods
+- (void)updatePipButtonForState:(BOOL)isActivated {
+  if (isActivated) {
+    [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStopImageCompatibleWithTraitCollection:nil]
+                  forState:UIControlStateNormal];
+  } else {
+    [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStartImageCompatibleWithTraitCollection:nil]
+                  forState:UIControlStateNormal];
+  }
 }
 
 @end
