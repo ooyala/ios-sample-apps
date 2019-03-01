@@ -8,7 +8,7 @@ The important parts are:
 
 # Maintaining a global OoyalaPlayer
 
-The PIP layer only exists for the life of the OoyalaPlayer.  Most of our samples create an OoyalaPlayer in the PlayerActivity. In this app, we create the Player in the AppDelegate, and reference it in our PlayerActivities.
+The PIP layer only exists for the life of the OoyalaPlayer.  Most of our samples create an OoyalaPlayer in the PlayerVC. In this app, we create the Player in the AppDelegate, and reference it in our PlayerVC.
 
 # Calling togglePictureInPictureMode
 

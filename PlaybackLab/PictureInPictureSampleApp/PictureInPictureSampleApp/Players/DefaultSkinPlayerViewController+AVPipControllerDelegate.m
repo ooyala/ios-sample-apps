@@ -13,10 +13,12 @@
 
 - (void)pictureInPictureControllerDidStartPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
   NSLog(@"✅ pictureInPictureController DidStart PictureInPicture");
+  [self updatePipButtonForStateIsActivated:true];
 }
 
 - (void)pictureInPictureControllerWillStopPictureInPicture:(AVPictureInPictureController *)pictureInPictureController {
   NSLog(@"✅ pictureInPictureController WillStop PictureInPicture");
+  [self updatePipButtonForStateIsActivated:false];
 }
 
 @end

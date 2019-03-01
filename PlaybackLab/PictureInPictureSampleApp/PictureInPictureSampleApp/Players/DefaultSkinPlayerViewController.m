@@ -79,9 +79,7 @@
   [self.button1 setTitle:@"" forState:UIControlStateNormal];
   if (canUsePip) {
     [self.button1 addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
-    
   } else {
-    //[self.button1 setTitle:@"PictureInPicture is not supported" forState:UIControlStateNormal];
     [self.button1 setEnabled:false];
   }
 
@@ -96,26 +94,18 @@
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  BOOL previousStateFlag = self.skinController.player.isPiPActivated;
-  [self updatePipButtonForState:previousStateFlag];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Custom Selectors
 - (void)buttonAction {
   [self.skinController.player togglePictureInPictureMode];
-  
-  BOOL previousStateFlag = !self.skinController.player.isPiPActivated;
-  [self updatePipButtonForState:previousStateFlag];
+  //[self updatePipButtonForStateIsActivated:!self.skinController.player.isPiPActivated];
 }
 
 #pragma mark - Private methods
-- (void)updatePipButtonForState:(BOOL)isActivated {
+- (void)updatePipButtonForStateIsActivated:(BOOL)isActivated {
   if (isActivated) {
     [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStopImageCompatibleWithTraitCollection:nil]
                   forState:UIControlStateNormal];
