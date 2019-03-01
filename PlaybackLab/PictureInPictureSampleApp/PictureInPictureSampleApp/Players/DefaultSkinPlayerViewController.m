@@ -42,19 +42,28 @@
     _embedCode = self.playerSelectionOption.embedCode;
     _playerDomain = playerSelectionOption.playerDomain;
     _pcode = playerSelectionOption.pcode;
+    _isAudioOnlyAsset = playerSelectionOption.isAudioOnlyAsset;
     self.title = self.playerSelectionOption.title;
   }
   return self;
 }
 
+#pragma mark - View Controller Lifecycle
 - (void) loadView {
   [super loadView];
   [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
 }
 
-#pragma mark - View Controller Lifecycle
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  OOOptions *options = [OOOptions new];
+  options.enablePictureInPictureSupport = YES;
+
+  OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
+                                                                domain:[[OOPlayerDomain alloc]
+                                                        initWithString:self.playerDomain]
+                                                               options:options];
   
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
@@ -65,13 +74,15 @@
   [self.button1 setTitle:@"Picture In Picture" forState:UIControlStateNormal];
 
   //Use the AppDelegate Player
-  AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-  appDelegate.player.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
+  ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions jsCodeLocation:jsCodeLocation configFileName:@"skin" overrideConfigs:overrideConfigs];
-  self.skinController = [[OOSkinViewController alloc] initWithPlayer:appDelegate.player skinOptions:skinOptions parent:self.playerView launchOptions:nil];
-  [self addChildViewController:_skinController];
+  self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer skinOptions:skinOptions parent:self.playerView launchOptions:nil];
+  [self addChildViewController:self.skinController];
   [self.skinController.view setFrame:self.playerView.bounds];
-  [appDelegate.player setEmbedCode:self.embedCode];
+  
+  //Start playback
+  [ooyalaPlayer setEmbedCode:self.embedCode];
+}
 }
 
 - (void)didReceiveMemoryWarning {
