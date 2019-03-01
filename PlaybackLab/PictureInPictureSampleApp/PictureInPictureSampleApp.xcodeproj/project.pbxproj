@@ -28,6 +28,7 @@
 		336DAEFC2226C900003074BD /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */; };
 		336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */; };
 		336DAF6A2226EDF7003074BD /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336DAF692226EDF7003074BD /* PlayerSimple.xib */; };
+		33CA803C22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */; };
 		39B7036F221C3C080036DE31 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B7036E221C3C080036DE31 /* libxml2.tbd */; };
 		39B70372221C3C130036DE31 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70370221C3C130036DE31 /* libc++abi.tbd */; };
 		39B70373221C3C130036DE31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70371221C3C130036DE31 /* libc++.tbd */; };
@@ -117,6 +118,8 @@
 		336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSimplePlayerViewController.m; sourceTree = "<group>"; };
 		336DAEFE2226C966003074BD /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
 		336DAF692226EDF7003074BD /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
+		33CA803A22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DefaultSkinPlayerViewController+AVPipControllerDelegate.h"; sourceTree = "<group>"; };
+		33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DefaultSkinPlayerViewController+AVPipControllerDelegate.m"; sourceTree = "<group>"; };
 		39B7036E221C3C080036DE31 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		39B70370221C3C130036DE31 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		39B70371221C3C130036DE31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -273,6 +276,8 @@
 				336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */,
 				0B7824591B2B855500D718AB /* DefaultSkinPlayerViewController.h */,
 				0B78245A1B2B855500D718AB /* DefaultSkinPlayerViewController.m */,
+				33CA803A22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.h */,
+				33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */,
 				97930C0B1B670971009B3512 /* FreewheelPlayerViewController.h */,
 				97930C0C1B670971009B3512 /* FreewheelPlayerViewController.m */,
 				97930C291B6952D0009B3512 /* IMAPlayerViewController.h */,
@@ -450,7 +455,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Facebook;
+				ORGANIZATIONNAME = "Ooyala, Inc.";
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PictureInPictureSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -523,6 +528,7 @@
 				0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */,
 				97930C1C1B670E77009B3512 /* BasicTestsListViewController.m in Sources */,
 				97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */,
+				33CA803C22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m in Sources */,
 				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
