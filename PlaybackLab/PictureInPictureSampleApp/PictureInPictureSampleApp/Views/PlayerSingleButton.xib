@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-DS-i8m">
-                    <rect key="frame" x="0.0" y="1052" width="250" height="60"/>
+                    <rect key="frame" x="0.0" y="1052" width="75" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="6fw-Hz-3pe"/>
-                        <constraint firstAttribute="width" constant="250" id="LTy-cP-7bU"/>
+                        <constraint firstAttribute="width" constant="75" id="LTy-cP-7bU"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" priority="1" constant="120" id="Zno-nh-ird"/>
                     </constraints>
                     <state key="normal" title="Button">

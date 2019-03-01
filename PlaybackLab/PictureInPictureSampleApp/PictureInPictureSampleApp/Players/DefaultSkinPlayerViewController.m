@@ -74,15 +74,15 @@
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
 
   //Configure the button
-  //[self.button1 setHidden:!isShowing];
+  [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStartImageCompatibleWithTraitCollection:nil]
+                forState:UIControlStateNormal];
+  [self.button1 setTitle:@"" forState:UIControlStateNormal];
   if (canUsePip) {
     [self.button1 addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.button1 setTitle:@"" forState:UIControlStateNormal];
     
-    [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStartImageCompatibleWithTraitCollection:nil]
-                  forState:UIControlStateNormal];
   } else {
-    [self.button1 setTitle:@"PictureInPicture is not supported" forState:UIControlStateNormal];
+    //[self.button1 setTitle:@"PictureInPicture is not supported" forState:UIControlStateNormal];
+    [self.button1 setEnabled:false];
   }
 
   //Use the AppDelegate Player
