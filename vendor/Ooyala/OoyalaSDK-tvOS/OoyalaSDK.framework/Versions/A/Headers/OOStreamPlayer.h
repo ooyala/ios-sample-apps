@@ -22,6 +22,7 @@
 }
 
 @property (nonatomic, readonly) OOSeekStyle seekStyle;
+@property (readonly, nonatomic, getter=isPiPActivated) BOOL pipActivated;
 
 + (id<OOPlayerInfo>)defaultPlayerInfo;
 + (void)setDefaultPlayerInfo:(id<OOPlayerInfo>)playerInfo;
