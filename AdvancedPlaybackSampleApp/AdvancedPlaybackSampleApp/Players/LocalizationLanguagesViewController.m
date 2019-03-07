@@ -97,7 +97,7 @@
   
   NSMutableDictionary *english = [mutableLanguages[@"en"] mutableCopy];
   english[@"Done"] = @"Done";
-  english[@"Languages"] = @"Words";
+  english[@"Languages"] = @"Languages";
   english[@"Subtitles"] = @"Closed captions";
   mutableLanguages[@"en"] = english;
   
