@@ -66,7 +66,7 @@
                                                                 pcode:pcode
                                                          playerDomain:@"http://www.ooyala.com"
                                                        viewController: [DefaultSkinPlayerViewController class]
-                                                                  nib:@"PlayerSingleButton"]];
+                                                                  nib:@"PlayerSimple"]];
 }
 
 #pragma mark - Custom Selectors

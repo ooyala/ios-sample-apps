@@ -75,14 +75,11 @@
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
 
   //Configure the button
-  [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStartImageCompatibleWithTraitCollection:nil]
-                forState:UIControlStateNormal];
-  [self.button1 setTitle:@"" forState:UIControlStateNormal];
-  if (canUsePip) {
-    [self.button1 addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
-  } else {
-    [self.button1 setEnabled:false];
-  }
+  // TODO: OS: remove interaction with UIButton when can notify JS about apropriate event. and activate notifying JS
+  BOOL isStateActivated = true;
+  BOOL isButtonVisible = canUsePip ? true : false;
+  //id params = @{isPipActivatedKey:@(isStateActivated), isPipButtonVisibleKey:@(isButtonVisible)};
+  //[self.skinController.player.bridge.skinEventsEmitter sendDeviceEventWithName:pipEventKey body:params];
 
   //Use the AppDelegate Player
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
@@ -99,21 +96,11 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Custom Selectors
-- (void)buttonAction {
-  [self.skinController.player togglePictureInPictureMode];
-  //[self updatePipButtonForStateIsActivated:!self.skinController.player.isPiPActivated];
-}
-
 #pragma mark - Private methods
+// TODO: OS: remove interaction with UIButton when can notify JS about apropriate event. and activate notifying JS
 - (void)updatePipButtonForStateIsActivated:(BOOL)isActivated {
-  if (isActivated) {
-    [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStopImageCompatibleWithTraitCollection:nil]
-                  forState:UIControlStateNormal];
-  } else {
-    [self.button1 setImage:[AVPictureInPictureController pictureInPictureButtonStartImageCompatibleWithTraitCollection:nil]
-                  forState:UIControlStateNormal];
-  }
+  //id params = @{isPipActivatedKey:@(isActivated), isPipButtonVisibleKey:@(true)};
+  //[self.skinController.player.bridge.skinEventsEmitter sendDeviceEventWithName:pipEventKey body:params];
 }
 
 @end
