@@ -51,6 +51,30 @@ class PlayerViewController: UIViewController {
     vc.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     self.addChild(vc)
     view.addSubview(vc.view)
+    
+    vc.view.translatesAutoresizingMaskIntoConstraints = false
+    
+    let marginsGuide = vc.view?.layoutMarginsGuide
+    guard let margins = marginsGuide else { return }
+    NSLayoutConstraint.activate([
+      view.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+      view.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+      ])
+    guard let view = vc.view else { return }
+    if #available(iOS 11, *) {
+      let guide = self.view.safeAreaLayoutGuide
+      NSLayoutConstraint.activate([
+        view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
+        guide.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: 1.0)
+        ])
+      
+    } else {
+      let standardSpacing: CGFloat = 8.0
+      NSLayoutConstraint.activate([
+        view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing),
+        bottomLayoutGuide.topAnchor.constraint(equalTo: view.bottomAnchor, constant: standardSpacing)
+        ])
+    }
   }
   
   private func setupOoyalaPlayerStuff() {
