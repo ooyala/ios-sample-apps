@@ -54,6 +54,7 @@ class PlayerViewController: UIViewController {
     
     vc.view.translatesAutoresizingMaskIntoConstraints = false
     
+    // Add constraints
     let marginsGuide = vc.view?.layoutMarginsGuide
     guard let margins = marginsGuide else { return }
     NSLayoutConstraint.activate([
@@ -68,10 +69,9 @@ class PlayerViewController: UIViewController {
         guide.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     } else {
-      let standardSpacing: CGFloat = 8.0
       NSLayoutConstraint.activate([
-        view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing),
-        bottomLayoutGuide.topAnchor.constraint(equalTo: view.bottomAnchor, constant: standardSpacing)
+        view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
+        bottomLayoutGuide.topAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
   }
