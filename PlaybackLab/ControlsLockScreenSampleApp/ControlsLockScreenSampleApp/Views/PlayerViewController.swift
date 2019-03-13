@@ -64,10 +64,9 @@ class PlayerViewController: UIViewController {
     if #available(iOS 11, *) {
       let guide = self.view.safeAreaLayoutGuide
       NSLayoutConstraint.activate([
-        view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
-        guide.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: 1.0)
+        view.topAnchor.constraint(equalTo: guide.topAnchor),
+        guide.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-      
     } else {
       let standardSpacing: CGFloat = 8.0
       NSLayoutConstraint.activate([
