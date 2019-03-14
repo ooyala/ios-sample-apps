@@ -74,17 +74,13 @@
   #if DEBUG
   #elif
   #endif
-  NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-  //NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+  //NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
 
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
 
   //Configure the button
-  // TODO: OS: remove interaction with UIButton when can notify JS about apropriate event. and activate notifying JS
-  BOOL isStateActivated = true;
-  BOOL isButtonVisible = canUsePip ? true : false;
-  //id params = @{isPipActivatedKey:@(isStateActivated), isPipButtonVisibleKey:@(isButtonVisible)};
-  //[self.skinController.player.bridge.skinEventsEmitter sendDeviceEventWithName:pipEventKey body:params];
+  // OS: Now configured in OOSkinPlayerObserver when OOOoyalaPlayerPlayStartedNotification is handled
 
   //Use the AppDelegate Player
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
