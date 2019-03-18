@@ -1,18 +1,10 @@
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
+// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 
 #import "AppDelegate.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  OOOptions *options = [OOOptions new];
-  self.player = [[OOOoyalaPlayer alloc] initWithPcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU" domain:[[OOPlayerDomain alloc] initWithString:@"http://player.ooyala.com"] options:options];
   return YES;
 }
 
