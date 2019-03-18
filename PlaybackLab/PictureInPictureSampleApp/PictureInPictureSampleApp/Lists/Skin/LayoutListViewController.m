@@ -1,6 +1,6 @@
 //
 //  LayoutListViewController.m
-//  OoyalaSkinSampleApp
+//  PictureInPictureSampleApp
 //
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
@@ -20,24 +20,28 @@
                                                             embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"SmallSkinPlayerView"]];
+                                                       viewController:DefaultSkinPlayerViewController.class
+                                                                  nib:@"SmallSkinPlayerView"]];
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Small Player View (HLS)"
                                                             embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"SmallSkinPlayerView"]];
+                                                       viewController:DefaultSkinPlayerViewController.class
+                                                                  nib:@"SmallSkinPlayerView"]];
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Tall Player View"
                                                             embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"TallPlayerView"]];
+                                                       viewController:DefaultSkinPlayerViewController.class
+                                                                  nib:@"TallPlayerView"]];
 
   [self insertNewObject: [[PlayerSelectionOption alloc] initWithTitle:@"Wide Player View"
                                                             embedCode:@"ZhMmkycjr4jlHIjvpIIimQSf_CjaQs48"
                                                                 pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
                                                          playerDomain:@"http://www.ooyala.com"
-                                                       viewController:[DefaultSkinPlayerViewController class] nib: @"WidePlayerView"]];
+                                                       viewController:DefaultSkinPlayerViewController.class
+                                                                  nib:@"WidePlayerView"]];
 
 
 }

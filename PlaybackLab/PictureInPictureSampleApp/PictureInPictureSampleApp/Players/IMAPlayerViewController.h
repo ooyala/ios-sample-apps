@@ -1,11 +1,10 @@
 //
 //  IMAPlayerViewController.h
-//  OoyalaSkinSampleApp
+//  PictureInPictureSampleApp
 //
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "SampleAppPlayerViewController.h"
 
 @interface IMAPlayerViewController : SampleAppPlayerViewController

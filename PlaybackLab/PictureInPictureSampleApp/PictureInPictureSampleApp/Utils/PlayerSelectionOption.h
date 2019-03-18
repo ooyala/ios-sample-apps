@@ -7,7 +7,7 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 @interface PlayerSelectionOption : NSObject
 @property NSString *embedCode;
@@ -18,12 +18,12 @@
 @property Class viewController;
 @property BOOL isAudioOnlyAsset;
 
-- (id)initWithTitle:(NSString *)title
-          embedCode:(NSString *)embedCode
-              pcode:(NSString *)pcode
-       playerDomain:(NSString *)playerDomain
-     viewController:(Class)viewController
-                nib:(NSString *)nib;
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                 playerDomain:(NSString *)playerDomain
+               viewController:(Class)viewController
+                          nib:(NSString *)nib;
 
 - (instancetype)initWithTitle:(NSString *)title
                     embedCode:(NSString *)embedCode

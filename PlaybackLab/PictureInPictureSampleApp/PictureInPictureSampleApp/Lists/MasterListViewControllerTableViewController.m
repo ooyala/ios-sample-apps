@@ -1,6 +1,6 @@
 //
 //  MasterListViewControllerTableViewController.m
-//  OoyalaSkinSampleApp
+//  PictureInPictureSampleApp
 //
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
@@ -24,13 +24,9 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
-  self.playlists = [NSArray arrayWithObjects:/*@"Layouts",*/ @"Basic Skin Playback", @"Basic Playback"/*, @"Freewheel", @"Google IMA"*/, nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
+       forCellReuseIdentifier:@"TableCell"];
+  self.playlists = @[/*@"Layouts",*/ @"Basic Skin Playback", @"Basic Playback"/*, @"Freewheel", @"Google IMA"*/];
 }
 
 #pragma mark - Table view data source
@@ -45,9 +41,8 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
-  cell.textLabel.text = [self.playlists objectAtIndex:indexPath.row];
+  cell.textLabel.text = self.playlists[indexPath.row];
   return cell;
 }
 

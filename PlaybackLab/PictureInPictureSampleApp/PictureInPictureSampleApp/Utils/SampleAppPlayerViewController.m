@@ -16,7 +16,8 @@
 @implementation SampleAppPlayerViewController
 
 #pragma mark - Initialization
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   if (self = [super init]) {
     _playerSelectionOption = playerSelectionOption;
     _qaModeEnabled = qaModeEnabled;
@@ -54,6 +55,5 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
   return NO;
 }
-
 
 @end

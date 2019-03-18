@@ -29,7 +29,8 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:qaModeEnabled];
   _nib = @"PlayerSimple";
   NSLog(@"value of qa mode in BasicSimplePlayerviewController %@", @"undefined");
@@ -40,9 +41,9 @@
     _isAudioOnlyAsset = playerSelectionOption.isAudioOnlyAsset;
     self.title = self.playerSelectionOption.title;
     if (playerSelectionOption.isAudioOnlyAsset) {
-      [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
+      OOStreamPlayer.defaultPlayerInfo = [OODefaultAudioOnlyPlayerInfo new];
     } else {
-      [OOStreamPlayer setDefaultPlayerInfo:[OODefaultPlayerInfo new]];
+      OOStreamPlayer.defaultPlayerInfo = [OODefaultPlayerInfo new];
     }
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
@@ -124,7 +125,7 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.ooyalaPlayerViewController.player.state],
                        [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
   
   NSLog(@"%@",message);

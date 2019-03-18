@@ -13,7 +13,6 @@
 #import <OoyalaSkinSDK/OOSkinOptions.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 
-
 @interface DefaultSkinPlayerViewController ()
 
 @property (nonatomic, retain) OOSkinViewController *skinController;
@@ -35,7 +34,7 @@
   
   self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:self.qaModeEnabled];
 
-  _sharePlugins = [[NSMutableArray alloc] init];
+  _sharePlugins = [NSMutableArray array];
 
   if (self.playerSelectionOption) {
     _nib = self.playerSelectionOption.nib;
@@ -51,7 +50,7 @@
 #pragma mark - View Controller Lifecycle
 - (void) loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
@@ -59,7 +58,9 @@
   
   OOOptions *options = [OOOptions new];
   options.enablePictureInPictureSupport = YES;
-  BOOL canUsePip = options.enablePictureInPictureSupport && AVPictureInPictureController.isPictureInPictureSupported && !self.isAudioOnlyAsset;
+  BOOL canUsePip = options.enablePictureInPictureSupport &&
+                   AVPictureInPictureController.isPictureInPictureSupported &&
+                   !self.isAudioOnlyAsset;
   if (canUsePip) {
     options.pipDelegate = self;
   }
@@ -69,7 +70,9 @@
                                                         initWithString:self.playerDomain]
                                                                options:options];
   
-  OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
+  OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
+                                                                            limit:10
+                                                                          timeout:60];
   // TODO: Resolve switching between URLs via build macroses if this can't affect QA-team
   #if DEBUG
   #elif
@@ -84,17 +87,19 @@
 
   //Use the AppDelegate Player
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;
-  OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions jsCodeLocation:jsCodeLocation configFileName:@"skin" overrideConfigs:overrideConfigs];
-  self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer skinOptions:skinOptions parent:self.playerView launchOptions:nil];
+  OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions
+                                                                jsCodeLocation:jsCodeLocation
+                                                                configFileName:@"skin"
+                                                               overrideConfigs:overrideConfigs];
+  self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
+                                                         skinOptions:skinOptions
+                                                              parent:self.playerView
+                                                       launchOptions:nil];
   [self addChildViewController:self.skinController];
-  [self.skinController.view setFrame:self.playerView.bounds];
+  self.skinController.view.frame = self.playerView.bounds;
   
   //Start playback
   [ooyalaPlayer setEmbedCode:self.embedCode];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Private methods

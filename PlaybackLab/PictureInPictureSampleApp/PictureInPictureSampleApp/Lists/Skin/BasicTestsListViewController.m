@@ -1,6 +1,6 @@
 //
 //  BasicListViewController.m
-//  OoyalaSkinSampleApp
+//  PictureInPictureSampleApp
 //
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //

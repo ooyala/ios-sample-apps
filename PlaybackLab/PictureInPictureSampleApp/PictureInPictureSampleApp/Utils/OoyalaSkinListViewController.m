@@ -21,16 +21,11 @@
 
 @implementation OoyalaSkinListViewController
 
-#pragma mark - Initialization
-- (id)init {
-  self = [super init];
-  self.title = @"Ooyala Skin Sample App";
-  return self;
-}
-
 #pragma mark - View Controller Lifecycle
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  self.title = @"Ooyala Skin Sample App";
   self.navigationController.navigationBar.translucent = NO;
   
   UISwitch *swtLog = [UISwitch new];
@@ -44,18 +39,15 @@
   UIBarButtonItem * lbl = [[UIBarButtonItem alloc] initWithCustomView:lblLog];
   self.navigationItem.rightBarButtonItems = @[btn, lbl] ;
   
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]forCellReuseIdentifier:@"TableCell"];
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
+       forCellReuseIdentifier:@"TableCell"];
 
   [self addTestCases];
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-}
-
 - (void)insertNewObject:(PlayerSelectionOption *)selectionObject {
   if (!self.options) {
-    self.options = [[NSMutableArray alloc] init];
+    self.options = [NSMutableArray array];
   }
   [self.options addObject:selectionObject];
 }
@@ -65,7 +57,7 @@
                                                             embedCode:embedCode
                                                                 pcode:pcode
                                                          playerDomain:@"http://www.ooyala.com"
-                                                       viewController: [DefaultSkinPlayerViewController class]
+                                                       viewController:DefaultSkinPlayerViewController.class
                                                                   nib:@"PlayerSimple"]];
 }
 
@@ -106,8 +98,7 @@
   return NO;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   // When a row is selected, load its desired PlayerViewController
   PlayerSelectionOption *selection = self.options[indexPath.row];
   SampleAppPlayerViewController *controller = [(SampleAppPlayerViewController *)[[selection viewController] alloc] initWithPlayerSelectionOption:selection qaModeEnabled:self.qaLogEnabled];

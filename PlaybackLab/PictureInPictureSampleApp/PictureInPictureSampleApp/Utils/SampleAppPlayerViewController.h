@@ -8,7 +8,7 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "PlayerSelectionOption.h"
 
 @interface SampleAppPlayerViewController : UIViewController
@@ -29,7 +29,8 @@
 @property (strong, nonatomic) PlayerSelectionOption *playerSelectionOption;
 @property (nonatomic) BOOL qaModeEnabled;
 
-- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled;
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled;
 
 - (IBAction)onButtonClick:(id)sender;
 
