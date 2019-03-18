@@ -10,7 +10,6 @@
 #import <UIKit/UIKit.h>
 #import "OOEmbedTokenGenerator.h"
 
-
 extern NSString *const OOOoyalaPlayerViewControllerFullscreenEnter;
 extern NSString *const OOOoyalaPlayerViewControllerFullscreenExit;
 extern NSString *const OOOoyalaPlayerViewControllerInlineViewVisible;
