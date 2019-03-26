@@ -244,7 +244,7 @@
 				TargetAttributes = {
 					AEE93E501F97C5FC004ABE42 = {
 						CreatedOnToolsVersion = 9.0.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -446,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -466,7 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
