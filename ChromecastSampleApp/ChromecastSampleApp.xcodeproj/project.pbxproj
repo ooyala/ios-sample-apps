@@ -291,7 +291,7 @@
 			};
 			buildConfigurationList = FF21F07119CB5ABC00FE9D07 /* Build configuration list for PBXProject "ChromecastSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
