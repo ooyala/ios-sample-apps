@@ -285,7 +285,7 @@
 			};
 			buildConfigurationList = 9751C7E91A956C5300C7364F /* Build configuration list for PBXProject "OoyalaAPISampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

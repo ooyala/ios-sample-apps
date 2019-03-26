@@ -249,7 +249,7 @@
 			};
 			buildConfigurationList = 970B98021A1AD5D90091AD38 /* Build configuration list for PBXProject "NielsenSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

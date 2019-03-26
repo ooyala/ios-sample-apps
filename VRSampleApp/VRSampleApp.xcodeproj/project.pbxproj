@@ -607,7 +607,7 @@
 			};
 			buildConfigurationList = 523E45111F559C7500C29D8D /* Build configuration list for PBXProject "VRSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

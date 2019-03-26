@@ -186,7 +186,7 @@
 			};
 			buildConfigurationList = 75614B551F711F5A005F26B7 /* Build configuration list for PBXProject "VRTVSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

@@ -520,7 +520,7 @@
 			};
 			buildConfigurationList = 0B140F4E1A2E4709001324EE /* Build configuration list for PBXProject "ContentProtectionSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

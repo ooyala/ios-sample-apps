@@ -209,7 +209,7 @@
 			};
 			buildConfigurationList = CA15C2CF1CDAB16A00B9EF25 /* Build configuration list for PBXProject "OmnitureSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
