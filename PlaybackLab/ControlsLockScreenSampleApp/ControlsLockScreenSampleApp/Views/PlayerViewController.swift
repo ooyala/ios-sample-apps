@@ -61,6 +61,7 @@ class PlayerViewController: UIViewController {
       view.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
       view.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
       ])
+
     guard let view = vc.view else { return }
     if #available(iOS 11, *) {
       let guide = self.view.safeAreaLayoutGuide
@@ -152,8 +153,10 @@ class PlayerViewController: UIViewController {
     
     // Set albumArt to show in the screen if image is available
     // The albumArt needs to be an UIImage, the image can be added in the assets of the project or retrieve the image using an URL
-    if let imageData = NSData(contentsOf: option.thumbnailURL), let image = UIImage(data: imageData as Data) {
-      let albumArt = MPMediaItemArtwork(boundsSize: image.size, requestHandler: { (size) -> UIImage in return image })
+    if let imageData = NSData(contentsOf: option.thumbnailURL),
+       let image = UIImage(data: imageData as Data) {
+      let albumArt = MPMediaItemArtwork(boundsSize: image.size,
+                                        requestHandler: { (size) -> UIImage in return image })
       nowPlayingInfo[MPMediaItemPropertyArtwork] = albumArt
     }
     
@@ -164,7 +167,7 @@ class PlayerViewController: UIViewController {
   private func updatePlayingInfoCenter() {
     let playingInfoCenter = MPNowPlayingInfoCenter.default()
     guard var displayInfo = playingInfoCenter.nowPlayingInfo,
-      let player = ooyalaPlayerVC?.player else { return }
+          let player = ooyalaPlayerVC?.player else { return }
     
     displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
     displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
@@ -224,7 +227,10 @@ class PlayerViewController: UIViewController {
   @objc func notificationHandler(_ notification: Notification)  {
     // Ignore TimeChangedNotificiations for shorter logs
     if notification.name == NSNotification.Name.OOOoyalaPlayerTimeChanged { return }
-    print("PlayerVC Notification Received: \(notification.name). state: \(String(describing: ooyalaPlayerVC?.player.state)). playhead: \(String(describing: self.ooyalaPlayerVC?.player.playheadTime))")
+    let stateString = OOOoyalaPlayerStateConverter.playerState(toString: ooyalaPlayerVC?.player.state() ?? .error)
+    print("PlayerVC Notification Received: \(notification.name). "
+          + "state: \(stateString ?? ""). "
+          + "playhead: \(String(describing: ooyalaPlayerVC?.player.playheadTime() ?? 0.0))")
   }
   
   // MARK: - Initialization
