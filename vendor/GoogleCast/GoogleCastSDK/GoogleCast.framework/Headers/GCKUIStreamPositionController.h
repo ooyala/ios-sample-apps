@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A class that can be used to implement a custom stream position and/or seek UI, in situations
@@ -34,9 +34,9 @@ GCK_EXPORT
  * be updated once per second. The GCKUIMediaController observes the property (unless it is
  * in the process of writing it) and if it changes, it issues the appropriate media command with
  * the GCKRemoteMediaPlayer to seek to the new stream position. Note that updating this value on
- * a non-seekable stream will have no effect.
+ * an unseekable stream will have no effect.
  */
-@property(nonatomic, assign, readwrite) NSTimeInterval streamPosition;
+@property(nonatomic, assign) NSTimeInterval streamPosition;
 
 /**
  * The current stream duration from the GCKRemoteMediaClient. The GCKUIMediaController writes this
@@ -44,17 +44,17 @@ GCK_EXPORT
  * (because it is a live stream, for example), then the value written will be @ref
  * kGCKInvalidTimeInterval. It is not meaningful for the application to change this value.
  */
-@property(nonatomic, assign, readwrite) NSTimeInterval streamDuration;
+@property(nonatomic, assign) NSTimeInterval streamDuration;
 
 /**
  * The GCKUIMediaController writes this property to enable or disable the UI control(s) managed by
  * this controller. Media-related UI controls are temporarily disabled while a media command is
  * in-flight.
  */
-@property(nonatomic, assign, readwrite) BOOL inputEnabled;
+@property(nonatomic, assign) BOOL inputEnabled;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

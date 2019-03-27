@@ -15,7 +15,7 @@
  * GCKMediaPlayerState and GCKMediaPlayerIdleReason enums.
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A flag (bitmask) indicating that a media item can be paused.
@@ -62,7 +62,6 @@ GCK_EXTERN const NSInteger kGCKMediaCommandSkipBackward;
 /**
  * A flag (bitmask) indicating that a media item supports moving to the next item in the queue.
  *
- * @deprecated This flag is currently not implemented.
  * @memberof GCKMediaStatus
  */
 GCK_EXTERN const NSInteger kGCKMediaCommandQueueNext;
@@ -71,7 +70,6 @@ GCK_EXTERN const NSInteger kGCKMediaCommandQueueNext;
  * A flag (bitmask) indicating that a media item supports moving to the previous item in the
  * queue.
  *
- * @deprecated This flag is currently not implemented.
  * @memberof GCKMediaStatus
  */
 GCK_EXTERN const NSInteger kGCKMediaCommandQueuePrevious;
@@ -161,7 +159,7 @@ GCK_EXPORT
 /**
  * The GCKMediaInformation for this item.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKMediaInformation *mediaInformation;
+@property(nonatomic, strong, readonly, nullable) GCKMediaInformation *mediaInformation;
 
 /**
  * The current stream position, as an NSTimeInterval from the start of the stream.
@@ -196,17 +194,17 @@ GCK_EXPORT
 /**
  * The current queue item, if any.
  */
-@property(nonatomic, assign, readonly, GCK_NULLABLE) GCKMediaQueueItem *currentQueueItem;
+@property(nonatomic, assign, readonly, nullable) GCKMediaQueueItem *currentQueueItem;
 
 /**
  * Checks if there is an item after the currently playing item in the queue.
  */
-- (BOOL)queueHasNextItem;
+@property(nonatomic, assign, readonly) BOOL queueHasNextItem;
 
 /**
  * The next queue item, if any.
  */
-@property(nonatomic, assign, readonly, GCK_NULLABLE) GCKMediaQueueItem *nextQueueItem;
+@property(nonatomic, assign, readonly, nullable) GCKMediaQueueItem *nextQueueItem;
 
 /**
  * Whether there is an item before the currently playing item in the queue.
@@ -231,26 +229,26 @@ GCK_EXPORT
 /**
  * The list of active track IDs.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) NSArray<NSNumber *> *activeTrackIDs;
+@property(nonatomic, strong, readonly, nullable) NSArray<NSNumber *> *activeTrackIDs;
 
 /**
  * The video information, if any.
  *
  * @since 3.3
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKVideoInfo *videoInfo;
+@property(nonatomic, strong, readonly, nullable) GCKVideoInfo *videoInfo;
 
 /**
  * Any custom data that is associated with the media status.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) id customData;
+@property(nonatomic, strong, readonly, nullable) id customData;
 
 /**
  * The current ad playback status.
  *
  * @since 3.3
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKAdBreakStatus *adBreakStatus;
+@property(nonatomic, strong, readonly, nullable) GCKAdBreakStatus *adBreakStatus;
 
 /**
  * Designated initializer.
@@ -259,7 +257,7 @@ GCK_EXPORT
  * @param mediaInformation The media information.
  */
 - (instancetype)initWithSessionID:(NSInteger)mediaSessionID
-                 mediaInformation:(GCKMediaInformation *GCK_NULLABLE_TYPE)mediaInformation;
+                 mediaInformation:(nullable GCKMediaInformation *)mediaInformation;
 
 /**
  * Checks if the stream supports a given control command.
@@ -269,17 +267,17 @@ GCK_EXPORT
 /**
  * Returns the number of items in the playback queue.
  */
-- (NSUInteger)queueItemCount;
+@property(nonatomic, assign, readonly) NSUInteger queueItemCount;
 
 /**
  * Returns the item at the specified index in the playback queue.
  */
-- (GCKMediaQueueItem *GCK_NULLABLE_TYPE)queueItemAtIndex:(NSUInteger)index;
+- (nullable GCKMediaQueueItem *)queueItemAtIndex:(NSUInteger)index;
 
 /**
  * Returns the item with the given item ID in the playback queue.
  */
-- (GCKMediaQueueItem *GCK_NULLABLE_TYPE)queueItemWithItemID:(NSUInteger)itemID;
+- (nullable GCKMediaQueueItem *)queueItemWithItemID:(NSUInteger)itemID;
 
 /**
  * Returns the index of the item with the given item ID in the playback queue, or -1 if there is
@@ -289,4 +287,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

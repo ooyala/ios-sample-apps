@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A class for filtering log messages that are produced using GCKLogger.
@@ -22,14 +22,14 @@ GCK_EXPORT
  *
  * @deprecated No longer implemented; value is ignored.
  */
-@property(nonatomic, assign, readwrite) BOOL exclusive GCK_DEPRECATED("Not supported");
+@property(nonatomic, assign) BOOL exclusive GCK_DEPRECATED("Not supported");
 
 /**
  * The minimum logging level that will be logged from this filter.
  *
  * @since 3.2
  */
-@property(nonatomic, assign, readwrite) GCKLoggerLevel minimumLevel;
+@property(nonatomic, assign) GCKLoggerLevel minimumLevel;
 
 /**
  * Constructs a new GCKLoggerFilter with empty criteria.
@@ -137,4 +137,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

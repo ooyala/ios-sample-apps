@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * An abstract base class for performing device discovery and session construction. Support for
@@ -32,7 +32,7 @@ GCK_EXPORT
  * do a passive scan when the user is not actively selecting a Cast target. Not all implementations
  * will honor this property.
  */
-@property(nonatomic, assign, readwrite) BOOL passiveScan;
+@property(nonatomic, assign) BOOL passiveScan;
 
 /** The array of discovered devices. */
 @property(nonatomic, copy, readonly) NSArray<GCKDevice *> *devices;
@@ -43,7 +43,7 @@ GCK_EXPORT
  * @param deviceCategory A string that uniquely identifies the type of device that is managed by
  * by this provider.
  */
-- (instancetype)initWithDeviceCategory:(NSString *)deviceCategory;
+- (instancetype)initWithDeviceCategory:(NSString *)deviceCategory NS_DESIGNATED_INITIALIZER;
 
 /**
  * Starts a new discovery scan. This is (commonly) an asynchronous operation. If any of the
@@ -73,8 +73,8 @@ GCK_EXPORT
  * @since 4.0
  */
 - (GCKSession *)createSessionForDevice:(GCKDevice *)device
-                             sessionID:(NSString *GCK_NULLABLE_TYPE)sessionID
-                        sessionOptions:(GCKSessionOptions *GCK_NULLABLE_TYPE)sessionOptions;
+                             sessionID:(nullable NSString *)sessionID
+                        sessionOptions:(nullable GCKSessionOptions *)sessionOptions;
 
 /**
  * Constructs a new session for the given device and optionally an existing session ID.
@@ -85,9 +85,9 @@ GCK_EXPORT
  * @deprecated Subclasses should call createSessionForDevice:sessionID:sessionOptions instead.
  */
 - (GCKSession *)createSessionForDevice:(GCKDevice *)device
-                             sessionID:(NSString *GCK_NULLABLE_TYPE)sessionID
+                             sessionID:(nullable NSString *)sessionID
     GCK_DEPRECATED("Use createSessionForDevice:sessionID:sessionOptions:");
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

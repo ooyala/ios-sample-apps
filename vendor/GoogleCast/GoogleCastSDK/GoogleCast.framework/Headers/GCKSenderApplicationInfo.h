@@ -8,7 +8,7 @@
  * @file GCKSenderApplicationInfo.h
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKSenderApplicationInfoPlatform
@@ -35,11 +35,11 @@ GCK_EXPORT
 @property(nonatomic, assign, readonly) GCKSenderApplicationInfoPlatform platform;
 
 /** The sender application's unique identifier (app ID). */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *appIdentifier;
+@property(nonatomic, copy, readonly, nullable) NSString *appIdentifier;
 
 /** The sender application's launch URL (URL scheme). */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) NSURL *launchURL;
+@property(nonatomic, strong, readonly, nullable) NSURL *launchURL;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

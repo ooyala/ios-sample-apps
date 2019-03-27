@@ -1,6 +1,6 @@
 // GoogleCast Framework
-// Build generated on Wed Sep  5 02:00:18 PDT 2018.
-// Copyright 2013-2018 Google Inc.
+// Build generated on Mon Feb  4 15:25:22 PST 2019.
+// Copyright 2013-2019 Google Inc.
 
 
 #import <GoogleCast/GCKAdBreakClipInfo.h>
@@ -19,6 +19,7 @@
 #import <GoogleCast/GCKDeviceProvider.h>
 #import <GoogleCast/GCKDiscoveryCriteria.h>
 #import <GoogleCast/GCKDiscoveryManager.h>
+#import <GoogleCast/GCKDynamicDevice.h>
 #import <GoogleCast/GCKError.h>
 #import <GoogleCast/GCKGenericChannel.h>
 #import <GoogleCast/GCKImage.h>
@@ -31,6 +32,7 @@
 #import <GoogleCast/GCKMediaInformation.h>
 #import <GoogleCast/GCKMediaLoadOptions.h>
 #import <GoogleCast/GCKMediaMetadata.h>
+#import <GoogleCast/GCKMediaQueue.h>
 #import <GoogleCast/GCKMediaQueueItem.h>
 #import <GoogleCast/GCKMediaQueueLoadOptions.h>
 #import <GoogleCast/GCKMediaRequestItem.h>
@@ -51,6 +53,7 @@
 #import <GoogleCast/GCKSessionManager.h>
 #import <GoogleCast/GCKSessionOptions.h>
 #import <GoogleCast/GCKSessionTraits.h>
+#import <GoogleCast/GCKVastAdsRequest.h>
 #import <GoogleCast/GCKVideoInfo.h>
 #import <GoogleCast/NSDictionary+GCKAdditions.h>
 #import <GoogleCast/NSMutableDictionary+GCKAdditions.h>

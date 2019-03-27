@@ -4,7 +4,7 @@
 
 #import <GoogleCast/GCKDefines.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The receiver application ID for the Default Media Receiver.
@@ -22,13 +22,13 @@ GCK_EXPORT
 @interface GCKDiscoveryCriteria : NSObject<NSCopying, NSSecureCoding>
 
 /** A list of supported receiver application IDs to test for. */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) NSOrderedSet<NSString *> *applicationIDs;
+@property(nonatomic, strong, readonly, nullable) NSOrderedSet<NSString *> *applicationIDs;
 
 /** Whether the discovery criteria includes any application IDs. */
 @property(nonatomic, assign, readonly) BOOL hasApplicationIDs;
 
 /** A list of supported namespaces to test for. */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) NSSet<NSString *> *namespaces;
+@property(nonatomic, strong, readonly, nullable) NSSet<NSString *> *namespaces;
 
 /** Whether the discovery criteria includes any namespaces. */
 @property(nonatomic, assign, readonly) BOOL hasNamespaces;
@@ -52,4 +52,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

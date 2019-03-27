@@ -6,7 +6,7 @@
 
 @class GCKDevice;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 GCK_EXTERN NSString *const kGCKKeyHasDiscoveredDevices;
 
@@ -55,7 +55,7 @@ GCK_EXPORT
  * A flag indicating whether discovery should employ a "passive" scan. Passive scans are less
  * resource-intensive but do not provide results that are as fresh as active scans.
  */
-@property(nonatomic, assign, readwrite) BOOL passiveScan;
+@property(nonatomic, assign) BOOL passiveScan;
 
 /**
  * A flag indicating whether discovery is active or not.
@@ -114,7 +114,7 @@ GCK_EXPORT
  * @param uniqueID The device's unique ID.
  * @return The matching GCKDevice object, or <code>nil</code> if a matching device was not found.
  */
-- (GCKDevice *GCK_NULLABLE_TYPE)deviceWithUniqueID:(NSString *)uniqueID;
+- (nullable GCKDevice *)deviceWithUniqueID:(NSString *)uniqueID;
 
 /**
  * Waits for a device with the given unique ID to be discovered, and invokes a completion block. If
@@ -216,4 +216,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

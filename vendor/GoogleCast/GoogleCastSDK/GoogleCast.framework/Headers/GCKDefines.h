@@ -4,7 +4,7 @@
 
 #define GCK_VERSION_MAJOR 4
 #define GCK_VERSION_MINOR 3
-#define GCK_VERSION_FIX 2
+#define GCK_VERSION_FIX 5
 
 #define GCK_VERSION_IS_LESS_THAN(__major, __minor, __fix)               \
   ((__major > GCK_VERSION_MAJOR)                                        \
@@ -29,6 +29,7 @@
 #define GCK_EXTERN extern GCK_EXPORT
 #endif
 
+// The macros below are all deprecated, but are left for backwards compatibility reasons.
 #if __has_feature(nullability)
   #define GCK_NULLABLE_TYPE _Nullable
   #define GCK_NONNULL_TYPE _Nonnull
