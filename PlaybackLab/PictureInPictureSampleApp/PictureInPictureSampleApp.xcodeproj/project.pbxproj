@@ -29,6 +29,7 @@
 		336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */; };
 		336DAF6A2226EDF7003074BD /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336DAF692226EDF7003074BD /* PlayerSimple.xib */; };
 		3394BB63224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3394BB62224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m */; };
+		3394BB7C224BDCAF004CCA1F /* ContentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3394BB7B224BDCAF004CCA1F /* ContentTests.m */; };
 		33CA803C22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */; };
 		39B7036F221C3C080036DE31 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B7036E221C3C080036DE31 /* libxml2.tbd */; };
 		39B70372221C3C130036DE31 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70370221C3C130036DE31 /* libc++abi.tbd */; };
@@ -132,6 +133,7 @@
 		3394BB60224BDA3D004CCA1F /* PictureInPictureSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureInPictureSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3394BB62224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInPictureSampleAppTests.m; sourceTree = "<group>"; };
 		3394BB64224BDA3D004CCA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3394BB7B224BDCAF004CCA1F /* ContentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentTests.m; sourceTree = "<group>"; };
 		33CA803A22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DefaultSkinPlayerViewController+AVPipControllerDelegate.h"; sourceTree = "<group>"; };
 		33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DefaultSkinPlayerViewController+AVPipControllerDelegate.m"; sourceTree = "<group>"; };
 		39B7036E221C3C080036DE31 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -334,6 +336,7 @@
 		3394BB61224BDA3D004CCA1F /* PictureInPictureSampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3394BB7B224BDCAF004CCA1F /* ContentTests.m */,
 				3394BB62224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m */,
 				3394BB64224BDA3D004CCA1F /* Info.plist */,
 			);
@@ -611,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3394BB63224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m in Sources */,
+				3394BB7C224BDCAF004CCA1F /* ContentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
