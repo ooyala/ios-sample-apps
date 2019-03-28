@@ -73,7 +73,7 @@
                                                   options:0
                                                     error:&jsonParsingError];
   
-  if (jsonParsingError != nil || ![object isKindOfClass:NSDictionary.class]) {
+  if (jsonParsingError || ![object isKindOfClass:NSDictionary.class]) {
     return nil;
   }
   
