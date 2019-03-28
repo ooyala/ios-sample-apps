@@ -66,18 +66,18 @@
 + (NSDictionary *)getTestDictionary:(NSString *)file {
   NSError *jsonParsingError = nil;
   
-  NSString *filePath = [[NSBundle mainBundle] pathForResource:file ofType:nil];
+  NSString *filePath = [NSBundle.mainBundle pathForResource:file ofType:nil];
   NSData *data = [NSData dataWithContentsOfFile:filePath];
   
-  NSObject *obj = [NSJSONSerialization JSONObjectWithData:data
+  NSObject *object = [NSJSONSerialization JSONObjectWithData:data
                                                   options:0
                                                     error:&jsonParsingError];
   
-  if (jsonParsingError != nil || ![obj isKindOfClass:NSDictionary.class]) {
+  if (jsonParsingError != nil || ![object isKindOfClass:NSDictionary.class]) {
     return nil;
   }
   
-  return (NSDictionary *)obj;
+  return (NSDictionary *)object;
 }
 
 @end

@@ -74,7 +74,7 @@
                                                                             limit:10
                                                                           timeout:60];
   // TODO: Don't forget about switching between URLs
-  NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  NSURL *jsCodeLocation = [NSBundle.mainBundle URLForResource:@"main" withExtension:@"jsbundle"];
   //NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
 
   NSDictionary *overrideConfigs = @{@"upNextScreen": @{@"timeToShow": @"8"}};
