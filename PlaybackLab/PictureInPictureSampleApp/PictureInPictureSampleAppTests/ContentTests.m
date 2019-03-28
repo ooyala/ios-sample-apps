@@ -42,12 +42,12 @@
   // 2-1 Check if button for pip defined and configured
   NSDictionary *buttonsDict = self.skinConfig[@"buttons"];
   NSArray<NSDictionary *> *buttonsMobile = buttonsDict[@"mobileContent"];
-  BOOL foundFlag = false;
+  BOOL foundFlag = NO;
   for (NSDictionary *nextDict in buttonsMobile) {
+    
     NSString *buttonName = nextDict[@"name"];
-
     if ([buttonName isEqualToString:@"pipButton"]) {
-      foundFlag = true;
+      foundFlag = YES;
       break;
     }
   }
