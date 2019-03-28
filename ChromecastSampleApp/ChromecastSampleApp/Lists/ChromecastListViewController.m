@@ -53,6 +53,8 @@
   [super viewWillAppear:animated];
   if (self.castManager.isMiniControllerInteractionAvailable) {
     [self displayMiniController];
+  } else {
+    [self dismissMiniController];
   }
 }
 
@@ -75,9 +77,12 @@
   [tap setNumberOfTapsRequired:1];
   [self.navigationController.toolbar addGestureRecognizer:tap];
 
-  _bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame
-                                                                  castManager:self.castManager
-                                                                     delegate:self];
+  if (!self.bottomMiniControllerView) {
+    _bottomMiniControllerView = [[OOCastMiniControllerView alloc] initWithFrame:self.navigationController.toolbar.frame
+                                                                    castManager:self.castManager
+                                                                       delegate:self];
+  }
+  
   [self.castManager registerMiniController:self.bottomMiniControllerView];
   self.bottomMiniControllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
