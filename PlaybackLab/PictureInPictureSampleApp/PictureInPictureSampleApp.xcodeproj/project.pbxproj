@@ -28,6 +28,8 @@
 		336DAEFC2226C900003074BD /* BasicPlaybackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFB2226C900003074BD /* BasicPlaybackListViewController.m */; };
 		336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */; };
 		336DAF6A2226EDF7003074BD /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336DAF692226EDF7003074BD /* PlayerSimple.xib */; };
+		3394BB63224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3394BB62224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m */; };
+		3394BB7C224BDCAF004CCA1F /* ContentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3394BB7B224BDCAF004CCA1F /* ContentTests.m */; };
 		33CA803C22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */; };
 		39B7036F221C3C080036DE31 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B7036E221C3C080036DE31 /* libxml2.tbd */; };
 		39B70372221C3C130036DE31 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70370221C3C130036DE31 /* libc++abi.tbd */; };
@@ -72,6 +74,16 @@
 		97930E291B6995CB009B3512 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97930E281B6995CB009B3512 /* WebKit.framework */; };
 		97B22E4E1BD05D1900D89589 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B22E4D1BD05D1900D89589 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3394BB65224BDA3D004CCA1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = PictureInPictureSampleApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		39B703B3221C3D2D0036DE31 /* Embed Frameworks */ = {
@@ -118,6 +130,10 @@
 		336DAEFD2226C966003074BD /* BasicSimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSimplePlayerViewController.m; sourceTree = "<group>"; };
 		336DAEFE2226C966003074BD /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
 		336DAF692226EDF7003074BD /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
+		3394BB60224BDA3D004CCA1F /* PictureInPictureSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureInPictureSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3394BB62224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInPictureSampleAppTests.m; sourceTree = "<group>"; };
+		3394BB64224BDA3D004CCA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3394BB7B224BDCAF004CCA1F /* ContentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentTests.m; sourceTree = "<group>"; };
 		33CA803A22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DefaultSkinPlayerViewController+AVPipControllerDelegate.h"; sourceTree = "<group>"; };
 		33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DefaultSkinPlayerViewController+AVPipControllerDelegate.m"; sourceTree = "<group>"; };
 		39B7036E221C3C080036DE31 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -190,6 +206,13 @@
 				97930E291B6995CB009B3512 /* WebKit.framework in Frameworks */,
 				39B7037E221C3C440036DE31 /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				97930E271B699595009B3512 /* EventKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3394BB5D224BDA3D004CCA1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +333,16 @@
 			path = Skin;
 			sourceTree = "<group>";
 		};
+		3394BB61224BDA3D004CCA1F /* PictureInPictureSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3394BB7B224BDCAF004CCA1F /* ContentTests.m */,
+				3394BB62224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m */,
+				3394BB64224BDA3D004CCA1F /* Info.plist */,
+			);
+			path = PictureInPictureSampleAppTests;
+			sourceTree = "<group>";
+		};
 		39B70376221C3C440036DE31 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +428,7 @@
 			children = (
 				0B7824221B2B7EB600D718AB /* PictureInPictureSampleApp */,
 				39B70376221C3C440036DE31 /* VendorLibraries */,
+				3394BB61224BDA3D004CCA1F /* PictureInPictureSampleAppTests */,
 				972ED7581AE1827B005043DC /* Frameworks */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				0BB8E7A41BE0438300003E2D /* README.md */,
@@ -407,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* PictureInPictureSampleApp.app */,
+				3394BB60224BDA3D004CCA1F /* PictureInPictureSampleAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -448,6 +483,24 @@
 			productReference = 13B07F961A680F5B00A75B9A /* PictureInPictureSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3394BB5F224BDA3D004CCA1F /* PictureInPictureSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3394BB69224BDA3D004CCA1F /* Build configuration list for PBXNativeTarget "PictureInPictureSampleAppTests" */;
+			buildPhases = (
+				3394BB5C224BDA3D004CCA1F /* Sources */,
+				3394BB5D224BDA3D004CCA1F /* Frameworks */,
+				3394BB5E224BDA3D004CCA1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3394BB66224BDA3D004CCA1F /* PBXTargetDependency */,
+			);
+			name = PictureInPictureSampleAppTests;
+			productName = PictureInPictureSampleAppTests;
+			productReference = 3394BB60224BDA3D004CCA1F /* PictureInPictureSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -456,6 +509,13 @@
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ooyala, Inc.";
+				TargetAttributes = {
+					3394BB5F224BDA3D004CCA1F = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PictureInPictureSampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -471,6 +531,7 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* PictureInPictureSampleApp */,
+				3394BB5F224BDA3D004CCA1F /* PictureInPictureSampleAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -513,6 +574,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3394BB5E224BDA3D004CCA1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -540,7 +608,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3394BB5C224BDA3D004CCA1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3394BB63224BDA3D004CCA1F /* PictureInPictureSampleAppTests.m in Sources */,
+				3394BB7C224BDCAF004CCA1F /* ContentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3394BB66224BDA3D004CCA1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* PictureInPictureSampleApp */;
+			targetProxy = 3394BB65224BDA3D004CCA1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0B47312F1C5199A300F1E7FD /* LaunchScreen.xib */ = {
@@ -605,6 +690,60 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PictureInPictureSampleApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3394BB67224BDA3D004CCA1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PictureInPictureSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.PictureInPictureSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureInPictureSampleApp.app/PictureInPictureSampleApp";
+			};
+			name = Debug;
+		};
+		3394BB68224BDA3D004CCA1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PictureInPictureSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.PictureInPictureSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureInPictureSampleApp.app/PictureInPictureSampleApp";
 			};
 			name = Release;
 		};
@@ -725,6 +864,15 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3394BB69224BDA3D004CCA1F /* Build configuration list for PBXNativeTarget "PictureInPictureSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3394BB67224BDA3D004CCA1F /* Debug */,
+				3394BB68224BDA3D004CCA1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
