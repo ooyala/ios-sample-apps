@@ -10,13 +10,16 @@
 
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaCastSDK/OOCastManager.h>
 
 #import "ChromecastPlayerSelectionOption.h"
+#import "OOCastManagerFetcher.h"
 
 @interface SkinPlayerViewController ()
 
 @property (nonatomic) IBOutlet UIView *videoView;
 @property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic) OOCastManager *castManager;
 
 @end
 
@@ -65,11 +68,10 @@
                                            object:ooyalaPlayer];
   [ooyalaPlayer setEmbedCode:self.mediaInfo.embedCode];
 
-//  _castManager = [OOCastManager castManagerWithAppID:@"4172C76F"
-//                                           namespace:@"urn:x-cast:ooyala"];
-//  [ooyalaPlayer initCastManager:self.castManager];
-//  self.castManager.notifyDelegate = self.skinController.castNotifyHandler;
-//  [self.skinController setCastManageableHandler:self.castManager];
+  _castManager = [OOCastManagerFetcher fetchCastManager];
+  [ooyalaPlayer initCastManager:self.castManager];
+  self.castManager.notifyDelegate = self.skinController.castNotifyHandler;
+  [self.skinController setCastManageableHandler:self.castManager];
 }
 
 #pragma mark - Private functions
