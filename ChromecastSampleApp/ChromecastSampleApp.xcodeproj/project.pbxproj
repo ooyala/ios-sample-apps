@@ -10,7 +10,7 @@
 		0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */; };
 		0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */; };
 		0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */; };
-		0B1AFBE21B0C09BB00347DFA /* ChromecastListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBCF1B0C09BB00347DFA /* ChromecastListViewController.m */; };
+		0B1AFBE21B0C09BB00347DFA /* CoreSDKOnlyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBCF1B0C09BB00347DFA /* CoreSDKOnlyListViewController.m */; };
 		0B1AFBE31B0C09BB00347DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD01B0C09BB00347DFA /* main.m */; };
 		0B1AFBE41B0C09BB00347DFA /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD31B0C09BB00347DFA /* PlayerViewController.m */; };
 		0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */; };
@@ -39,6 +39,11 @@
 		39315E48225360B000A7A8C7 /* tv-skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 39315E34225360B000A7A8C7 /* tv-skin.json */; };
 		39315E49225360B000A7A8C7 /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 39315E35225360B000A7A8C7 /* skin-schema.json */; };
 		39315E4A225360B000A7A8C7 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 39315E36225360B000A7A8C7 /* validate.js */; };
+		39315E4D2253620700A7A8C7 /* MasterListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E4C2253620700A7A8C7 /* MasterListTableViewController.m */; };
+		39315E50225367B200A7A8C7 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E4F225367B200A7A8C7 /* OptionsDataSource.m */; };
+		39315E5322537C6B00A7A8C7 /* SkinSDKListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */; };
+		39315E5622537FDF00A7A8C7 /* SkinPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E5522537FDF00A7A8C7 /* SkinPlayerViewController.m */; };
+		39315E582253807100A7A8C7 /* DefaultSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39315E572253807100A7A8C7 /* DefaultSkinPlayerView.xib */; };
 		39AE421A21772F7200F1C084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421321772F7200F1C084 /* Images.xcassets */; };
 		5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143A1C5807230078E075 /* libxml2.tbd */; };
 		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
@@ -80,8 +85,8 @@
 /* Begin PBXFileReference section */
 		0B1AFBC11B0C09BB00347DFA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B1AFBCE1B0C09BB00347DFA /* ChromecastListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromecastListViewController.h; sourceTree = "<group>"; };
-		0B1AFBCF1B0C09BB00347DFA /* ChromecastListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastListViewController.m; sourceTree = "<group>"; };
+		0B1AFBCE1B0C09BB00347DFA /* CoreSDKOnlyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSDKOnlyListViewController.h; sourceTree = "<group>"; };
+		0B1AFBCF1B0C09BB00347DFA /* CoreSDKOnlyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSDKOnlyListViewController.m; sourceTree = "<group>"; };
 		0B1AFBD01B0C09BB00347DFA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B1AFBD21B0C09BB00347DFA /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		0B1AFBD31B0C09BB00347DFA /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
@@ -113,6 +118,15 @@
 		39315E34225360B000A7A8C7 /* tv-skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tv-skin.json"; sourceTree = "<group>"; };
 		39315E35225360B000A7A8C7 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		39315E36225360B000A7A8C7 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
+		39315E4B225361D600A7A8C7 /* MasterListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterListTableViewController.h; sourceTree = "<group>"; };
+		39315E4C2253620700A7A8C7 /* MasterListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterListTableViewController.m; sourceTree = "<group>"; };
+		39315E4E2253662600A7A8C7 /* OptionsDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionsDataSource.h; sourceTree = "<group>"; };
+		39315E4F225367B200A7A8C7 /* OptionsDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OptionsDataSource.m; sourceTree = "<group>"; };
+		39315E5122537C3400A7A8C7 /* SkinSDKListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinSDKListViewController.h; sourceTree = "<group>"; };
+		39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinSDKListViewController.m; sourceTree = "<group>"; };
+		39315E5422537FD300A7A8C7 /* SkinPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinPlayerViewController.h; sourceTree = "<group>"; };
+		39315E5522537FDF00A7A8C7 /* SkinPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinPlayerViewController.m; sourceTree = "<group>"; };
+		39315E572253807100A7A8C7 /* DefaultSkinPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultSkinPlayerView.xib; sourceTree = "<group>"; };
 		39AE421321772F7200F1C084 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39AE421421772F7200F1C084 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSampleApp.entitlements; sourceTree = "<group>"; };
@@ -187,7 +201,7 @@
 				0B1AFBCD1B0C09BB00347DFA /* Lists */,
 				0B1AFBD11B0C09BB00347DFA /* Players */,
 				0B1AFBD41B0C09BB00347DFA /* Utils */,
-				39088C9C21D60FAB00D860A9 /* Base.lproj */,
+				39088C9C21D60FAB00D860A9 /* Storyboards */,
 				39315E1D225360B000A7A8C7 /* Resources */,
 				39AE420A21772F7200F1C084 /* Supporting Files */,
 			);
@@ -197,8 +211,12 @@
 		0B1AFBCD1B0C09BB00347DFA /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				0B1AFBCE1B0C09BB00347DFA /* ChromecastListViewController.h */,
-				0B1AFBCF1B0C09BB00347DFA /* ChromecastListViewController.m */,
+				39315E4B225361D600A7A8C7 /* MasterListTableViewController.h */,
+				39315E4C2253620700A7A8C7 /* MasterListTableViewController.m */,
+				0B1AFBCE1B0C09BB00347DFA /* CoreSDKOnlyListViewController.h */,
+				0B1AFBCF1B0C09BB00347DFA /* CoreSDKOnlyListViewController.m */,
+				39315E5122537C3400A7A8C7 /* SkinSDKListViewController.h */,
+				39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -210,6 +228,8 @@
 				0B1AFBD31B0C09BB00347DFA /* PlayerViewController.m */,
 				5E5B755A1C472C4200371A9E /* CastPlaybackView.h */,
 				5E5B755B1C472C4200371A9E /* CastPlaybackView.m */,
+				39315E5422537FD300A7A8C7 /* SkinPlayerViewController.h */,
+				39315E5522537FDF00A7A8C7 /* SkinPlayerViewController.m */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -219,6 +239,8 @@
 			children = (
 				0B89E24E1B1FC85300306176 /* ChromecastPlayerSelectionOption.h */,
 				0B89E24F1B1FC85300306176 /* ChromecastPlayerSelectionOption.m */,
+				39315E4E2253662600A7A8C7 /* OptionsDataSource.h */,
+				39315E4F225367B200A7A8C7 /* OptionsDataSource.m */,
 				39088CA421D61BCB00D860A9 /* Utils.h */,
 				39088CA321D61BCB00D860A9 /* Utils.m */,
 			);
@@ -236,13 +258,14 @@
 			name = VendorLibraries;
 			sourceTree = "<group>";
 		};
-		39088C9C21D60FAB00D860A9 /* Base.lproj */ = {
+		39088C9C21D60FAB00D860A9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				39315E572253807100A7A8C7 /* DefaultSkinPlayerView.xib */,
 				39088C9D21D60FAB00D860A9 /* LaunchScreen.xib */,
 				39088C9F21D60FAB00D860A9 /* Main.storyboard */,
 			);
-			path = Base.lproj;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		39315E1D225360B000A7A8C7 /* Resources */ = {
@@ -436,6 +459,7 @@
 				39315E38225360B000A7A8C7 /* main.jsbundle in Resources */,
 				39315E40225360B000A7A8C7 /* zh.json in Resources */,
 				39315E43225360B000A7A8C7 /* ko.json in Resources */,
+				39315E582253807100A7A8C7 /* DefaultSkinPlayerView.xib in Resources */,
 				39315E45225360B000A7A8C7 /* skin.json in Resources */,
 				39088CA121D60FAB00D860A9 /* LaunchScreen.xib in Resources */,
 				39315E3A225360B000A7A8C7 /* RobotoCondensed-Bold.ttf in Resources */,
@@ -457,11 +481,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B1AFBE21B0C09BB00347DFA /* ChromecastListViewController.m in Sources */,
+				0B1AFBE21B0C09BB00347DFA /* CoreSDKOnlyListViewController.m in Sources */,
+				39315E4D2253620700A7A8C7 /* MasterListTableViewController.m in Sources */,
 				0B1AFBE41B0C09BB00347DFA /* PlayerViewController.m in Sources */,
+				39315E50225367B200A7A8C7 /* OptionsDataSource.m in Sources */,
 				0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */,
 				39088CA521D61BCB00D860A9 /* Utils.m in Sources */,
+				39315E5622537FDF00A7A8C7 /* SkinPlayerViewController.m in Sources */,
 				0B1AFBE31B0C09BB00347DFA /* main.m in Sources */,
+				39315E5322537C6B00A7A8C7 /* SkinSDKListViewController.m in Sources */,
 				0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */,
 				5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */,
 				5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */,

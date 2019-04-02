@@ -1,22 +1,22 @@
                                                                                                         //
-//  ViewController.m
+//  CoreSDKOnlyListViewController.m
 //  ChromecastSampleApp
 //
 //  Created on 9/18/14.
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import "ChromecastListViewController.h"
+#import "CoreSDKOnlyListViewController.h"
+#import <OoyalaSDK/OoyalaSDK.h>
 #import "PlayerViewController.h"
 #import "Utils.h"
 #import "ChromecastPlayerSelectionOption.h"
-#import <OoyalaSDK/OoyalaSDK.h>
 #import "OOCastManagerFetcher.h"
+#import "OptionsDataSource.h"
 
-@interface ChromecastListViewController ()
+@interface CoreSDKOnlyListViewController ()
 
 @property (nonatomic) IBOutlet UINavigationItem *navigationBar;
-@property (nonatomic) NSArray *mediaList;
 @property (nonatomic) OOCastManager *castManager;
 
 @property (nonatomic) UIBarButtonItem *castButton;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation ChromecastListViewController
+@implementation CoreSDKOnlyListViewController
 
 #pragma mark - Life cycle
 
@@ -35,8 +35,6 @@
 
   _castManager = [OOCastManagerFetcher fetchCastManager];
   _castManager.delegate = self;
-
-  _mediaList = [self mediaArray];
 
   UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
   self.navigationBar.rightBarButtonItem = rightButton;
@@ -134,11 +132,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return self.mediaList.count;
+  return OptionsDataSource.options.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  ChromecastPlayerSelectionOption *mediaInfo = self.mediaList[indexPath.row];
+  ChromecastPlayerSelectionOption *mediaInfo = OptionsDataSource.options[indexPath.row];
 
   UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
   cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -158,57 +156,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  [segue.destinationViewController setMediaInfo:self.mediaList[self.lastSelected.row]];
-}
-
-- (NSArray *)mediaArray {
-  return @[
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"HLS Asset"
-                                                        embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                            pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class],
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"VOD with CC Asset"
-                                                        embedCode:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
-                                                            pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class],
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"MP4 Video"
-                                                        embedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx"
-                                                            pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class],
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"DASH Live Channel"
-                                                        embedCode:@"92Zm51ZjE6WiUvDqQ7JcqJ_yJK9e0cX4"
-                                                            pcode:@"t5MGs6osydJR0KO0RRrDqi_PXSRM"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class],
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Encrypted HLS Asset"
-                                                        embedCode:@"ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-"
-                                                            pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class],
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Playready Smooth with Clear HLS Backup"
-                                                        embedCode:@"pkMm1rdTqIAxx9DQ4-8Hyp9P_AHRe4pt"
-                                                            pcode:@"FoeG863GnBL4IhhlFC1Q2jqbkH9m"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class],
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"2 Assets autoplayed"
-                                                        embedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"
-                                                        embedCode2:@"92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww"
-                                                            pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class],
-           //This asset will not be configured correctly. To test your OPT-enabled assets, you need:
-           // 1. an OPT-enabled embed code (set here)
-           // 2. the correlating PCode (set here)
-           // 3. an API Key and Secret for the provider to locally-sign the authorization (set in the PlayerViewController)
-           [[ChromecastPlayerSelectionOption alloc] initWithTitle:@"Ooyala Player Token Asset (unconfigured)"
-                                                        embedCode:@"0yMjJ2ZDosUnthiqqIM3c8Eb8Ilx5r52"
-                                                            pcode:@"c0cTkxOqALQviQIGAHWY5hP0q9gU"
-                                                           domain:@"http://www.ooyala.com"
-                                                   viewController:PlayerViewController.class]
-           ];
+  [segue.destinationViewController setMediaInfo:OptionsDataSource.options[self.lastSelected.row]];
 }
 
 @end
