@@ -202,10 +202,45 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Skin SDK assets" id="rhI-cr-Lsh"/>
+                    <connections>
+                        <segue destination="8ty-kh-uhx" kind="show" identifier="play" id="RAy-8h-bo7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7h-9y-59a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1130" y="1031"/>
+        </scene>
+        <!--Skin Player View Controller-->
+        <scene sceneID="n41-YP-won">
+            <objects>
+                <viewController id="8ty-kh-uhx" customClass="SkinPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vl2-K6-9X8"/>
+                        <viewControllerLayoutGuide type="bottom" id="0p5-mS-NMQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CYO-k5-5jM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-Hm-cWI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vWm-Hm-cWI" firstAttribute="leading" secondItem="CYO-k5-5jM" secondAttribute="leading" id="8KT-co-zHk"/>
+                            <constraint firstAttribute="trailing" secondItem="vWm-Hm-cWI" secondAttribute="trailing" id="H57-2F-eHb"/>
+                            <constraint firstItem="0p5-mS-NMQ" firstAttribute="top" secondItem="vWm-Hm-cWI" secondAttribute="bottom" id="dVp-E6-khj"/>
+                            <constraint firstItem="vWm-Hm-cWI" firstAttribute="top" secondItem="vl2-K6-9X8" secondAttribute="bottom" id="qaN-Ze-bd3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="vWm-Hm-cWI" id="fMZ-U7-v1P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tBK-14-DO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.5999999999999" y="1029.5352323838081"/>
         </scene>
     </scenes>
 </document>
