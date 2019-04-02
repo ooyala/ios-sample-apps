@@ -172,7 +172,7 @@
                             <outlet property="delegate" destination="1iY-Tt-yg0" id="Qif-0s-5lH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="SjC-uK-b5C"/>
+                    <navigationItem key="navigationItem" title="Choose cast examples" id="SjC-uK-b5C"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3H-60-GMY" sceneMemberID="firstResponder"/>
             </objects>

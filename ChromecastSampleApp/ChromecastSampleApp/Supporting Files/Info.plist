@@ -61,6 +61,14 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ooyala-slick-type.ttf</string>
+		<string>alice.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>RobotoCondensed-Regular.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
