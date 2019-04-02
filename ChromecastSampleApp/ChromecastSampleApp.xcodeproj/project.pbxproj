@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -393,7 +393,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "Liusha Huang";
+				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					FF21F07519CB5ABC00FE9D07 = {
 						CreatedOnToolsVersion = 6.0;
@@ -402,7 +402,7 @@
 				};
 			};
 			buildConfigurationList = FF21F07119CB5ABC00FE9D07 /* Build configuration list for PBXProject "ChromecastSampleApp" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
