@@ -112,7 +112,7 @@
 
 #pragma mark - Actions
 
-- (void)notificationHandler:(NSNotification*)notification {
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -142,7 +142,7 @@
   _appDelegate.count++;
 }
 
-- (void)switchFullScreenNotificationHandler:(NSNotification*)notification {
+- (void)switchFullScreenNotificationHandler:(NSNotification *)notification {
   Float64 playhead = _skinController.player.playheadTime;
   long notificationsCount = (long)_appDelegate.count;
   
@@ -161,7 +161,7 @@
   _appDelegate.count++;
 }
 
-- (void)touchesNotificationHandler:(NSNotification*)notification {
+- (void)touchesNotificationHandler:(NSNotification *)notification {
   NSDictionary *notificationObject = notification.object;
   Float64 playhead = _skinController.player.playheadTime;
   long notificationsCount = (long)_appDelegate.count;
