@@ -386,6 +386,7 @@
     "chromecast-connected": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u003B", "fontStyleClass": "oo-icon"},
     "chromecast-disconnected": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u003A", "fontStyleClass": "oo-icon"},
     "airPlay": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u007B", "fontStyleClass": "oo-icon"},
-    "pipButton": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u007B", "fontStyleClass": "oo-icon"}
+    "pipInButton": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u002B", "fontStyleClass": "oo-icon"},
+    "pipOutButton": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u002C", "fontStyleClass": "oo-icon"}
   }
 }
