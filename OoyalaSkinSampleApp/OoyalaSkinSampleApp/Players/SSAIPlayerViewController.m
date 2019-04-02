@@ -15,9 +15,9 @@
 
 #pragma mark - Private properties
 
-@property (nonatomic, retain) OOSsaiPlugin *ssaiPlugin;
-@property (nonatomic, retain) OOSkinViewController *skinController;
-@property (nonatomic, retain) OOOoyalaPlayer *ooyalaPlayer;
+@property (nonatomic) OOSsaiPlugin *ssaiPlugin;
+@property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
 @property NSString *embedCode;
 @property NSString *nib;
 @property NSString *pcode;

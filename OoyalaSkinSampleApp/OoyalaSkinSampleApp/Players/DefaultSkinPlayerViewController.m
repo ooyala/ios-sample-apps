@@ -14,7 +14,7 @@
 
 #pragma mark - Private properties
 
-@property (nonatomic, retain) OOSkinViewController *skinController;
+@property (nonatomic) OOSkinViewController *skinController;
 @property NSString *embedCode;
 @property NSString *nib;
 @property NSString *pcode;
@@ -49,7 +49,7 @@
 
 #pragma mark - Life cycle
 
-- (void) loadView {
+- (void)loadView {
   [super loadView];
   [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }

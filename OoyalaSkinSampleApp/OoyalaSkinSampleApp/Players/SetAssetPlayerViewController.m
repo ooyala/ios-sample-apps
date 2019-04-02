@@ -11,7 +11,7 @@
 
 @interface SetAssetPlayerViewController()
 
-@property (nonatomic, retain) OOSkinViewController *skinController;
+@property (nonatomic) OOSkinViewController *skinController;
 
 extern NSString *kFirstAssetName;
 extern NSString *kSecondAssetName;

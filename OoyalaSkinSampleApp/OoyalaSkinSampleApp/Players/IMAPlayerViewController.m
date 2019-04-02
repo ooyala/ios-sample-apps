@@ -15,8 +15,8 @@
 
 #pragma mark - Private properties
 
-@property (nonatomic, retain) OOIMAManager *adsManager;
-@property (nonatomic, retain) OOSkinViewController *skinController;
+@property (nonatomic) OOIMAManager *adsManager;
+@property (nonatomic) OOSkinViewController *skinController;
 @property NSString *embedCode;
 @property NSString *nib;
 @property NSString *pcode;
