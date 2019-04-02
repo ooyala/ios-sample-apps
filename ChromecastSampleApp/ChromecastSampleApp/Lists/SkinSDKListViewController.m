@@ -46,9 +46,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   // Display the media details view.
   self.lastSelected = indexPath;
-  ChromecastPlayerSelectionOption *selection = OptionsDataSource.options[indexPath.row];
-  SkinPlayerViewController *controller = [[SkinPlayerViewController alloc] initWithPlayerSelectionOption:selection];
-  [self.navigationController pushViewController:controller animated:YES];
+  [self performSegueWithIdentifier:@"play" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  SkinPlayerViewController *controller = segue.destinationViewController;
+  ChromecastPlayerSelectionOption *selection = OptionsDataSource.options[self.lastSelected.row];
+  controller.mediaInfo = selection;
 }
 
 @end

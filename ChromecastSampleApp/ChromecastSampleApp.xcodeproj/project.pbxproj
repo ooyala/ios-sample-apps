@@ -43,7 +43,6 @@
 		39315E50225367B200A7A8C7 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E4F225367B200A7A8C7 /* OptionsDataSource.m */; };
 		39315E5322537C6B00A7A8C7 /* SkinSDKListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */; };
 		39315E5622537FDF00A7A8C7 /* SkinPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E5522537FDF00A7A8C7 /* SkinPlayerViewController.m */; };
-		39315E582253807100A7A8C7 /* DefaultSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39315E572253807100A7A8C7 /* DefaultSkinPlayerView.xib */; };
 		39AE421A21772F7200F1C084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421321772F7200F1C084 /* Images.xcassets */; };
 		5E3B143B1C5807230078E075 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143A1C5807230078E075 /* libxml2.tbd */; };
 		5E3B143D1C5807430078E075 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3B143C1C5807430078E075 /* libz.tbd */; };
@@ -126,7 +125,6 @@
 		39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinSDKListViewController.m; sourceTree = "<group>"; };
 		39315E5422537FD300A7A8C7 /* SkinPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinPlayerViewController.h; sourceTree = "<group>"; };
 		39315E5522537FDF00A7A8C7 /* SkinPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinPlayerViewController.m; sourceTree = "<group>"; };
-		39315E572253807100A7A8C7 /* DefaultSkinPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultSkinPlayerView.xib; sourceTree = "<group>"; };
 		39AE421321772F7200F1C084 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39AE421421772F7200F1C084 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSampleApp.entitlements; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 		39088C9C21D60FAB00D860A9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				39315E572253807100A7A8C7 /* DefaultSkinPlayerView.xib */,
 				39088C9D21D60FAB00D860A9 /* LaunchScreen.xib */,
 				39088C9F21D60FAB00D860A9 /* Main.storyboard */,
 			);
@@ -459,7 +456,6 @@
 				39315E38225360B000A7A8C7 /* main.jsbundle in Resources */,
 				39315E40225360B000A7A8C7 /* zh.json in Resources */,
 				39315E43225360B000A7A8C7 /* ko.json in Resources */,
-				39315E582253807100A7A8C7 /* DefaultSkinPlayerView.xib in Resources */,
 				39315E45225360B000A7A8C7 /* skin.json in Resources */,
 				39088CA121D60FAB00D860A9 /* LaunchScreen.xib in Resources */,
 				39315E3A225360B000A7A8C7 /* RobotoCondensed-Bold.ttf in Resources */,

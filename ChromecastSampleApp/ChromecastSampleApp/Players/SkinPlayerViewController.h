@@ -14,7 +14,7 @@
 
 @interface SkinPlayerViewController : UIViewController
 
-- (instancetype)initWithPlayerSelectionOption:(ChromecastPlayerSelectionOption *)playerSelectionOption;
+@property (nonatomic) ChromecastPlayerSelectionOption *mediaInfo;
 
 @end
 
