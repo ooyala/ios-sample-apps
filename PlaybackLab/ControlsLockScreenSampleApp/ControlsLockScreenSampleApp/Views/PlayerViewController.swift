@@ -19,7 +19,7 @@ class PlayerViewController: UIViewController {
   // properties required for a Fairplay asset
   private var apiKey: String?
   private var apiSecret: String?
-  private var ooyalaPlayerVC: OOOoyalaPlayerViewController?
+  public var ooyalaPlayerVC: OOOoyalaPlayerViewController?
   
   // remote control center
   private let remoteCommandCenter = MPRemoteCommandCenter.shared()
@@ -86,11 +86,6 @@ class PlayerViewController: UIViewController {
   
   private func addObservers() {
     NotificationCenter.default.addObserver(self,
-                                           selector: #selector(applicationDidEnterBackground(_:)),
-                                           name: UIApplication.didEnterBackgroundNotification,
-                                           object: nil)
-    
-    NotificationCenter.default.addObserver(self,
                                            selector: #selector(playerStateChange(_:)),
                                            name: NSNotification.Name.OOOoyalaPlayerStateChanged,
                                            object: nil)
@@ -138,11 +133,10 @@ class PlayerViewController: UIViewController {
   }
   
   // Updates the time labels.
-  private func updatePlayingInfoCenter() {
+  public func updatePlayingInfoCenter() {
     let playingInfoCenter = MPNowPlayingInfoCenter.default()
     guard var displayInfo = playingInfoCenter.nowPlayingInfo,
       let player = ooyalaPlayerVC?.player else { return }
-    
     displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
     displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
     displayInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.playheadTime()
@@ -152,7 +146,6 @@ class PlayerViewController: UIViewController {
   // MARK: - Custom selectors
   @objc func playPauseCommand(_ sender: MPRemoteCommandEvent) {
     guard let player = ooyalaPlayerVC?.player else { return }
-    
     if player.isPlaying() {
       player.pause()
     } else {
@@ -183,15 +176,6 @@ class PlayerViewController: UIViewController {
     player.seek(sender.positionTime)
     player.play()
     updatePlayingInfoCenter()
-  }
-  
-  @objc func applicationDidEnterBackground(_ notification: Notification) {
-    // The app detects that is running in background, we need to call the play method twice
-    // to let the AudioSession works and play the audio.
-    guard let player = ooyalaPlayerVC?.player else { return }
-    
-    player.perform(#selector(player.play as () -> Void))
-    player.perform(#selector(player.play as () -> Void), with: nil, afterDelay: 0.1)
   }
   
   @objc func playerStateChange(_ notification: Notification) {
