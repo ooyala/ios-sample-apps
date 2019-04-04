@@ -120,9 +120,17 @@
   [self dismissMiniController];
 }
 
-- (void)castManager:(OOCastManager *)manager
-   didFailWithError:(NSError *)error
-          andExtras:(NSDictionary *)extras {
+- (void)castManager:(nonnull OOCastManager *)manager
+didFailToStartSessionWithError:(nonnull NSError *)error {
+}
+
+- (void)castManager:(nonnull OOCastManager *)manager
+didEndSessionWithError:(nonnull NSError *)error {
+}
+
+- (void)castManager:(nonnull OOCastManager *)manager
+ castRequestWithtId:(NSInteger)requestId
+   didFailWithError:(nonnull GCKError *)error {
 }
 
 #pragma mark - Table View
