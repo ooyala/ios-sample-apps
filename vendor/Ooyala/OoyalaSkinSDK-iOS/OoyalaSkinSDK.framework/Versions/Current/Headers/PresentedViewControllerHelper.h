@@ -5,8 +5,7 @@
 // Copyright (c) 2018 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 
 @interface PresentedViewControllerHelper : NSObject
 

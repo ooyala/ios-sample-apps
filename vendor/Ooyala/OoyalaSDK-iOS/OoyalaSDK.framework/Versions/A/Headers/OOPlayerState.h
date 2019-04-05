@@ -5,7 +5,7 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #ifndef OOPlayerState_h
 #define OOPlayerState_h

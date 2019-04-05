@@ -2,11 +2,11 @@
 //  UIColor+Utils.h
 //  OoyalaSkinSDK
 //
-//  Created by Maksim Kupetskii on 9/24/18.
+//  Created on 9/24/18.
 //  Copyright © 2018 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 

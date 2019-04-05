@@ -52,7 +52,7 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /**
  * Get the combined (video+audio) bitrate of this OOStream
- * @returns an NSNumber containing the combined bitrate
+ * @returns an NSInteger containing the combined bitrate
  */
 - (NSInteger)combinedBitrate;
 
@@ -126,7 +126,7 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 /** @internal
  * Fetch the best OOStream to play from the given array of streams
  * @param[in] streams the array of streams to select from
- * @returns The hls stream if it exists, otherwise the lowest bitrate mp4 stream
+ * @returns The hls stream if it exists, otherwise the highest bitrate mp4 stream
  */
 + (OOStream *)bestStreamFromArray:(NSArray *)streams;
 
