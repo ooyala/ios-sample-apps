@@ -10,7 +10,7 @@
 @class GCKMediaMetadata;
 @class GCKUIImageHints;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * An object used for selecting an image for a given purpose from a GCKMediaMetadata object.
@@ -31,11 +31,11 @@ GCK_EXPORT
  * @return The selected image, or <code>nil</code> if there is no appropriate image for the
  * requested type.
  */
-- (GCKImage * GCK_NULLABLE_TYPE)getImageWithHints:(GCKUIImageHints *)imageHints
-                                     fromMetadata:(const GCKMediaMetadata *)metadata;
+- (nullable GCKImage *)getImageWithHints:(GCKUIImageHints *)imageHints
+                            fromMetadata:(const GCKMediaMetadata *)metadata;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

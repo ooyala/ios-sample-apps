@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Media control button types.
@@ -110,7 +110,7 @@ typedef NS_ENUM(NSInteger, GCKUIMediaButtonType) {
  * @param index The position in which the button should be presented. 0 is the left-most position.
  * Indices should be smaller than the value returned by @ref buttonCount.
  */
-- (void)setCustomButton:(UIButton *GCK_NULLABLE_TYPE)customButton atIndex:(NSUInteger)index;
+- (void)setCustomButton:(nullable UIButton *)customButton atIndex:(NSUInteger)index;
 
 /**
  * Returns a reference to the custom button at a given position.
@@ -119,10 +119,10 @@ typedef NS_ENUM(NSInteger, GCKUIMediaButtonType) {
  * @return A reference to the button at the selected position, or <code>nil</code> if there is no
  * custom button at that position, or the position is invalid.
  */
-- (UIButton *GCK_NULLABLE_TYPE)customButtonAtIndex:(NSUInteger)index;
+- (nullable UIButton *)customButtonAtIndex:(NSUInteger)index;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /* @endcond */

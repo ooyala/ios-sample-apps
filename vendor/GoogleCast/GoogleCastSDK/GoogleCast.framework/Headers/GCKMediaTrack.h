@@ -9,7 +9,7 @@
  * GCKMediaTrackType and GCKMediaTextTrackSubtype enums.
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKMediaTrackType
@@ -55,19 +55,19 @@ GCK_EXPORT
  * Designated initializer. Constructs a new GCKMediaTrack with the given property values.
  */
 - (instancetype)initWithIdentifier:(NSInteger)identifier
-                 contentIdentifier:(NSString *GCK_NULLABLE_TYPE)contentIdentifier
+                 contentIdentifier:(nullable NSString *)contentIdentifier
                        contentType:(NSString *)contentType
                               type:(GCKMediaTrackType)type
                        textSubtype:(GCKMediaTextTrackSubtype)textSubtype
-                              name:(NSString *GCK_NULLABLE_TYPE)name
-                      languageCode:(NSString *GCK_NULLABLE_TYPE)languageCode
-                        customData:(id GCK_NULLABLE_TYPE)customData;
+                              name:(nullable NSString *)name
+                      languageCode:(nullable NSString *)languageCode
+                        customData:(nullable id)customData;
 
 /** The track's unique numeric identifier. */
 @property(nonatomic, assign, readonly) NSInteger identifier;
 
 /** The track's content identifier, which may be <code>nil</code>. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *contentIdentifier;
+@property(nonatomic, copy, readonly, nullable) NSString *contentIdentifier;
 
 /** The track's content (MIME) type. */
 @property(nonatomic, copy, readonly) NSString *contentType;
@@ -79,17 +79,17 @@ GCK_EXPORT
 @property(nonatomic, assign, readonly) GCKMediaTextTrackSubtype textSubtype;
 
 /** The track's name, which may be <code>nil</code>. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *name;
+@property(nonatomic, copy, readonly, nullable) NSString *name;
 
 /** The track's RFC 1766 language code, which may be <code>nil</code>. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *languageCode;
+@property(nonatomic, copy, readonly, nullable) NSString *languageCode;
 
 /**
  * The custom data, if any. Must either be an object that can be serialized to JSON using
  * <a href="https://goo.gl/0vd4Q2"><b>NSJSONSerialization</b></a>, or <code>nil</code>.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) id customData;
+@property(nonatomic, strong, readonly, nullable) id customData;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

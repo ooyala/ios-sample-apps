@@ -10,9 +10,10 @@
 @class GCKDevice;
 @class GCKOpenURLOptions;
 @class GCKSession;
+@class GCKMultizoneDevice;
 @protocol GCKSessionManagerListener;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 GCK_EXTERN NSString *const kGCKKeyConnectionState;
 
@@ -45,10 +46,10 @@ GCK_EXPORT
 @interface GCKSessionManager : NSObject
 
 /** The current session, if any. */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKSession *currentSession;
+@property(nonatomic, strong, readonly, nullable) GCKSession *currentSession;
 
 /** The current Cast session, if any. */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKCastSession *currentCastSession;
+@property(nonatomic, strong, readonly, nullable) GCKCastSession *currentCastSession;
 
 /** The current session connection state. */
 @property(nonatomic, assign, readonly) GCKConnectionState connectionState;
@@ -79,7 +80,7 @@ GCK_EXPORT
  * @since 4.0
  */
 - (BOOL)startSessionWithDevice:(GCKDevice *)device
-                sessionOptions:(GCKSessionOptions * GCK_NULLABLE_TYPE)options;
+                sessionOptions:(nullable GCKSessionOptions *)options;
 
 /**
  * Attempts to join or start a session with options that were supplied to the
@@ -95,7 +96,7 @@ GCK_EXPORT
  * @since 4.0
  */
 - (BOOL)startSessionWithOpenURLOptions:(GCKOpenURLOptions *)openURLOptions
-                        sessionOptions:(GCKSessionOptions * GCK_NULLABLE_TYPE)sessionOptions;
+                        sessionOptions:(nullable GCKSessionOptions *)sessionOptions;
 
 /**
  * Suspends the current session. This is an asynchronous operation.
@@ -150,18 +151,17 @@ GCK_EXPORT
  *
  * @since 4.0
  */
-- (void)setDefaultSessionOptions:(GCKSessionOptions * GCK_NULLABLE_TYPE)sessionOptions
+- (void)setDefaultSessionOptions:(nullable GCKSessionOptions *)sessionOptions
                forDeviceCategory:(NSString *)category;
 
 /**
- * Gets the dfault session options for a given device category.
+ * Gets the default session options for a given device category.
  * @param category The device category.
  * @return The default session options, or <code>nil</code> if none.
  *
  * @since 4.0
  */
-- (GCKSessionOptions * GCK_NULLABLE_TYPE)
-    defaultSessionOptionsForDeviceCategory:(NSString *)category;
+- (nullable GCKSessionOptions *)defaultSessionOptionsForDeviceCategory:(NSString *)category;
 
 /**
  * Adds a listener for receiving notifications.
@@ -177,7 +177,7 @@ GCK_EXPORT
  */
 - (void)removeListener:(id<GCKSessionManagerListener>)listener;
 
-@end
+@end  // GCKSessionManager
 
 /**
  * The GCKSessionManager listener protocol. The protocol's methods are all optional. All of the
@@ -251,7 +251,7 @@ GCK_EXPORT
  */
 - (void)sessionManager:(GCKSessionManager *)sessionManager
          didEndSession:(GCKSession *)session
-             withError:(NSError *GCK_NULLABLE_TYPE)error;
+             withError:(nullable NSError *)error;
 
 /**
  * Called when a Cast session is about to be ended, either by request or due to an error.
@@ -271,7 +271,7 @@ GCK_EXPORT
  */
 - (void)sessionManager:(GCKSessionManager *)sessionManager
      didEndCastSession:(GCKCastSession *)session
-             withError:(NSError *GCK_NULLABLE_TYPE)error;
+             withError:(nullable NSError *)error;
 
 /**
  * Called when a session has failed to start.
@@ -399,7 +399,7 @@ GCK_EXPORT
  */
 - (void)sessionManager:(GCKSessionManager *)sessionManager
                    session:(GCKSession *)session
-    didReceiveDeviceStatus:(NSString *GCK_NULLABLE_TYPE)statusText;
+    didReceiveDeviceStatus:(nullable NSString *)statusText;
 
 /**
  * Called when updated device status for a Cast session has been received.
@@ -410,7 +410,7 @@ GCK_EXPORT
  */
 - (void)sessionManager:(GCKSessionManager *)sessionManager
                castSession:(GCKCastSession *)session
-    didReceiveDeviceStatus:(NSString *GCK_NULLABLE_TYPE)statusText;
+    didReceiveDeviceStatus:(nullable NSString *)statusText;
 
 /**
  * Called when the default session options have been changed for a given device category.
@@ -423,6 +423,6 @@ GCK_EXPORT
 - (void)sessionManager:(GCKSessionManager *)sessionManager
     didUpdateDefaultSessionOptionsForDeviceCategory:(NSString *)category;
 
-@end
+@end  // GCKSessionManagerListener
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -358,7 +358,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "Eric Vargas";
+				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					CA7ED8F71D5964E700EA0A57 = {
 						CreatedOnToolsVersion = 8.0;
@@ -367,12 +367,14 @@
 				};
 			};
 			buildConfigurationList = CA7ED8F31D5964E700EA0A57 /* Build configuration list for PBXProject "DownloadToOwnSampleApp" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
+				global,
 			);
 			mainGroup = CA7ED8EF1D5964E700EA0A57;
 			productRefGroup = CA7ED8F91D5964E700EA0A57 /* Products */;

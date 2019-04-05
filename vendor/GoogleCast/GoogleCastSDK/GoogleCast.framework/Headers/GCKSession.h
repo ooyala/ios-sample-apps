@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * An abstract base class representing a session with a receiver device. Subclasses must implement
@@ -33,14 +33,14 @@ GCK_EXPORT
 @property(nonatomic, strong, readonly) GCKDevice *device;
 
 /** The current session ID, if any. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *sessionID;
+@property(nonatomic, copy, readonly, nullable) NSString *sessionID;
 
 /**
  * The session options, if any.
  *
  * @since 4.0
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKSessionOptions *sessionOptions;
+@property(nonatomic, strong, readonly, nullable) GCKSessionOptions *sessionOptions;
 
 /** The current session connection state. */
 @property(nonatomic, assign, readonly) GCKConnectionState connectionState;
@@ -57,10 +57,10 @@ GCK_EXPORT
 ;
 
 /** The current device status text. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *deviceStatusText;
+@property(nonatomic, copy, readonly, nullable) NSString *deviceStatusText;
 
 /** The session traits. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) GCKSessionTraits *traits;
+@property(nonatomic, copy, readonly, nullable) GCKSessionTraits *traits;
 
 /** The current device volume, in the range [0.0, 1.0]. */
 @property(nonatomic, assign, readonly) float currentDeviceVolume;
@@ -74,13 +74,13 @@ GCK_EXPORT
  * GCKRemoteMediaClient API. Subclasses which provide a GCKRemoteMediaClient interface must override
  * the getter method.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKRemoteMediaClient *remoteMediaClient;
+@property(nonatomic, strong, readonly, nullable) GCKRemoteMediaClient *remoteMediaClient;
 
 /**
  * The current media metadata, if any. Will be <code>nil</code> if the session does not support the
  * media namespace or if no media is currently loaded on the receiver.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKMediaMetadata *mediaMetadata;
+@property(nonatomic, strong, readonly, nullable) GCKMediaMetadata *mediaMetadata;
 
 /**
  * Initializes a new session object for the given device, with default options.
@@ -91,8 +91,8 @@ GCK_EXPORT
  * session; otherwise <code>nil</code> if it will be used to start a new session.
  */
 - (instancetype)initWithDevice:(GCKDevice *)device
-                        traits:(GCKSessionTraits *GCK_NULLABLE_TYPE)traits
-                     sessionID:(NSString *GCK_NULLABLE_TYPE)sessionID;
+                        traits:(nullable GCKSessionTraits *)traits
+                     sessionID:(nullable NSString *)sessionID;
 
 /**
  * Initializes a new session object for the given device.
@@ -106,9 +106,9 @@ GCK_EXPORT
  * @since 4.0
  */
 - (instancetype)initWithDevice:(GCKDevice *)device
-                        traits:(GCKSessionTraits *GCK_NULLABLE_TYPE)traits
-                     sessionID:(NSString *GCK_NULLABLE_TYPE)sessionID
-                sessionOptions:(GCKSessionOptions *GCK_NULLABLE_TYPE)sessionOptions;
+                        traits:(nullable GCKSessionTraits *)traits
+                     sessionID:(nullable NSString *)sessionID
+                sessionOptions:(nullable GCKSessionOptions *)sessionOptions;
 
 /**
  * Sets the device's volume. This is an asynchronous operation. The default implementation is a
@@ -132,4 +132,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

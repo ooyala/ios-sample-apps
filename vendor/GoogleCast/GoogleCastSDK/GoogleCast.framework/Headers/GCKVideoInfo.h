@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, GCKVideoInfoHDRType) {
   GCKVideoInfoHDRTypeHDR = 2
 };
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A class representing video format details.
@@ -40,4 +40,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

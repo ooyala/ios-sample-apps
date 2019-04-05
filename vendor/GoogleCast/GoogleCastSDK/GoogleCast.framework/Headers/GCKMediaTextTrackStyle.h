@@ -7,7 +7,7 @@
 
 @class GCKColor;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKMediaTextTrackStyleEdgeType
@@ -103,44 +103,44 @@ GCK_EXPORT
 + (instancetype)createDefault;
 
 /** The font scaling factor for the text. */
-@property(nonatomic, assign, readwrite) CGFloat fontScale;
+@property(nonatomic, assign) CGFloat fontScale;
 
 /** The foreground color. */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) GCKColor *foregroundColor;
+@property(nonatomic, copy, nullable) GCKColor *foregroundColor;
 
 /** The background color. */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) GCKColor *backgroundColor;
+@property(nonatomic, copy, nullable) GCKColor *backgroundColor;
 
 /** The edge type. */
-@property(nonatomic, assign, readwrite) GCKMediaTextTrackStyleEdgeType edgeType;
+@property(nonatomic, assign) GCKMediaTextTrackStyleEdgeType edgeType;
 
 /** The edge color. */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) GCKColor *edgeColor;
+@property(nonatomic, copy, nullable) GCKColor *edgeColor;
 
 /** The window type. <i>Some receiver devices may not support this attribute.</i> */
-@property(nonatomic, assign, readwrite) GCKMediaTextTrackStyleWindowType windowType;
+@property(nonatomic, assign) GCKMediaTextTrackStyleWindowType windowType;
 
 /** The window color. <i>Some receiver devices may not support this attribute.</i> */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) GCKColor *windowColor;
+@property(nonatomic, copy, nullable) GCKColor *windowColor;
 
 /**
  * Rounded corner radius absolute value in pixels.
  * <i>Some receiver devices may not support this attribute.</i>
  */
-@property(nonatomic, assign, readwrite) CGFloat windowRoundedCornerRadius;
+@property(nonatomic, assign) CGFloat windowRoundedCornerRadius;
 
 /** The font family; if the font is not available, the generic font family will be used. **/
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *fontFamily;
+@property(nonatomic, copy, nullable) NSString *fontFamily;
 
 /** The generic font family. */
-@property(nonatomic, assign, readwrite) GCKMediaTextTrackStyleFontGenericFamily fontGenericFamily;
+@property(nonatomic, assign) GCKMediaTextTrackStyleFontGenericFamily fontGenericFamily;
 
 /** The font style. */
-@property(nonatomic, assign, readwrite) GCKMediaTextTrackStyleFontStyle fontStyle;
+@property(nonatomic, assign) GCKMediaTextTrackStyleFontStyle fontStyle;
 
 /** The custom data, if any. */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) id customData;
+@property(nonatomic, strong, nullable) id customData;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

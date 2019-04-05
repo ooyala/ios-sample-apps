@@ -8,7 +8,7 @@
  * Framework errors.
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKErrorCode
@@ -160,6 +160,16 @@ typedef NS_ENUM(NSInteger, GCKErrorCode) {
   GCKErrorCodeSocketInvalidParameter = 26,
 
   /**
+   * Error indicating that the response received was invalid.
+   */
+  GCKErrorCodeInvalidResponse = 27,
+
+  /**
+   * Error indicating that the session update went through, but all devices could not be moved.
+   */
+  GCKErrorCodeFailedSessionUpdate = 28,
+
+  /**
    * Error code indicating that a media load failed on the receiver side.
    */
   GCKErrorCodeMediaLoadFailed = 30,
@@ -173,6 +183,11 @@ typedef NS_ENUM(NSInteger, GCKErrorCode) {
    * Error indicating that no media session is currently available.
    */
   GCKErrorCodeNoMediaSession = 32,
+
+  /**
+   * Error code indicating that the current session is not a cast session.
+   */
+  GCKErrorCodeNotCastSession = 33,
 
   /**
    * Error code indicating that device authentication failed due to error received.
@@ -369,11 +384,11 @@ GCK_EXPORT
 + (GCKError *)errorWithCode:(GCKErrorCode)code;
 
 /** Constructs a GCKError with the given error code and optional custom data. */
-+ (GCKError *)errorWithCode:(GCKErrorCode)code customData:(id GCK_NULLABLE_TYPE)customData;
++ (GCKError *)errorWithCode:(GCKErrorCode)code customData:(nullable id)customData;
 
 /** Returns the human-readable description for a given error code. */
 + (NSString *)enumDescriptionForCode:(GCKErrorCode)code;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

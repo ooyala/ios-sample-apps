@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Methods to be called by GCKRemoteMediaClient subclasses only.
@@ -94,4 +94,4 @@ GCK_ASSUME_NONNULL_BEGIN
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

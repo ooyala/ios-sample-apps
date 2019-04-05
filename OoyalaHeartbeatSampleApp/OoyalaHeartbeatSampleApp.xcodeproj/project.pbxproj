@@ -92,7 +92,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Ooyala;
+				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					3F3BEC1B204479AB00A0E355 = {
 						CreatedOnToolsVersion = 9.2;

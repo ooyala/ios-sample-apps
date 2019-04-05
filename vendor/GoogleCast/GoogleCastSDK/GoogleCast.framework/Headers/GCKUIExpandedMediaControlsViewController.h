@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A view controller which implements the expanded controls fullscreen view.
@@ -25,10 +25,10 @@ GCK_EXPORT
  *
  * @since 4.0
  */
-@property(nonatomic, assign, readwrite) BOOL hideStreamPositionControlsForLiveContent;
+@property(nonatomic, assign) BOOL hideStreamPositionControlsForLiveContent;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

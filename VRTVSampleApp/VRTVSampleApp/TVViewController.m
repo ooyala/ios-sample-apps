@@ -11,8 +11,8 @@
 
 @interface TVViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView *skinContainerView;
-@property (nonatomic, retain) OOOoyalaTVPlayerViewController *skinController;
+@property (nonatomic, weak) IBOutlet UIView *skinContainerView;
+@property (nonatomic) OOOoyalaTVPlayerViewController *skinController;
 
 @end
 

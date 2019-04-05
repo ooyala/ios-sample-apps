@@ -11,7 +11,7 @@
  * GCKSessionEndAction and GCKSessionState enums.
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKSessionEndAction
@@ -69,8 +69,7 @@ typedef NS_ENUM(NSInteger, GCKSessionEndAction) {
  * session was ended intentionally.
  * @param willTryToResume Whether the session will try to resume itself automatically.
  */
-- (void)notifyDidEndWithError:(NSError *GCK_NULLABLE_TYPE)error
-              willTryToResume:(BOOL)willTryToResume;
+- (void)notifyDidEndWithError:(nullable NSError *)error willTryToResume:(BOOL)willTryToResume;
 
 /**
  * Called by subclasses to notify the framework that updated device volume and mute state has been
@@ -87,7 +86,7 @@ typedef NS_ENUM(NSInteger, GCKSessionEndAction) {
  *
  * @param statusText The new status.
  */
-- (void)notifyDidReceiveDeviceStatus:(NSString *GCK_NULLABLE_TYPE)statusText;
+- (void)notifyDidReceiveDeviceStatus:(nullable NSString *)statusText;
 
 /**
  * Deprecated, do not use - implemented as a no-op.
@@ -105,4 +104,4 @@ typedef NS_ENUM(NSInteger, GCKSessionEndAction) {
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

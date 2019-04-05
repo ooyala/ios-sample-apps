@@ -16,7 +16,7 @@
  * @file GCKCastContext.h
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The <code>userInfo</code> key for the new Cast state in a Cast state change notification.
@@ -75,7 +75,7 @@ GCK_EXPORT
  * @since 4.0
  */
 + (BOOL)setSharedInstanceWithOptions:(GCKCastOptions *)options
-                               error:(GCKError *GCK_NULLABLE_TYPE *GCK_NULLABLE_TYPE)error;
+                               error:(GCKError *_Nullable *_Nullable)error;
 
 /**
  * Returns the singleton instance. If a shared instance has not yet been initialized, an exception
@@ -106,4 +106,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

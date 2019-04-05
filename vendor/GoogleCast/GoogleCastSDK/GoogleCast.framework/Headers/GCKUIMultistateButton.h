@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A subclass of <a href="https://goo.gl/VK61wU"><b>UIButton</b></a> that supports multiple states.
@@ -21,7 +21,7 @@ GCK_EXPORT
 /**
  * The button's application state.
  */
-@property(nonatomic, assign, readwrite) NSUInteger buttonState;
+@property(nonatomic, assign) NSUInteger buttonState;
 
 /**
  * Sets the image to display for a given button state.
@@ -33,6 +33,6 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A subclass of <a href="https://goo.gl/VK61wU"><b>UIButton</b></a> that implements a "Cast"
@@ -25,7 +25,7 @@ GCK_EXPORT
  * <code>YES</code>. If an application wishes to handle touch events itself, it should set the
  * property to <code>NO</code> and register an appropriate target and action for the touch event.
  */
-@property(nonatomic, assign, readwrite) BOOL triggersDefaultCastDialog;
+@property(nonatomic, assign) BOOL triggersDefaultCastDialog;
 
 /**
  * Constructs a new GCKUICastButton using the given decoder.
@@ -57,6 +57,6 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

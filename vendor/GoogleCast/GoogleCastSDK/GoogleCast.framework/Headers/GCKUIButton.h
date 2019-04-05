@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A subclass of <a href="https://goo.gl/VK61wU"><b>UIButton</b></a> that supports custom
@@ -31,10 +31,10 @@ GCK_EXPORT GCK_DEPRECATED("Use GCKUIMultistateButton")
 /**
  * The button's application state. This state is ORed onto the button's existing state.
  */
-@property(nonatomic, assign, readwrite) UIControlState applicationState;
+@property(nonatomic, assign) UIControlState applicationState;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

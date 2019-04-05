@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Options for loading media queue items with GCKRemoteMediaClient.
@@ -23,7 +23,7 @@ GCK_EXPORT
 /**
  * The index of the item in the queue items array that should be played first.
  */
-@property(nonatomic, assign, readwrite) NSUInteger startIndex;
+@property(nonatomic, assign) NSUInteger startIndex;
 
 /**
  * The initial playback position for the first item in the queue items array when it is first
@@ -31,20 +31,20 @@ GCK_EXPORT
  * played again, for example when the queue repeats, or the item is later jumped to. In those
  * cases the item's startTime is used.
  */
-@property(nonatomic, assign, readwrite) NSTimeInterval playPosition;
+@property(nonatomic, assign) NSTimeInterval playPosition;
 
 /**
  * The repeat mode for playing the queue.
  */
-@property(nonatomic, assign, readwrite) GCKMediaRepeatMode repeatMode;
+@property(nonatomic, assign) GCKMediaRepeatMode repeatMode;
 
 /**
  * Custom application-specific data to pass along with the request. Must either be
  * an object that can be serialized to JSON using
  * <a href="https://goo.gl/0vd4Q2"><b>NSJSONSerialization</b></a>, or <code>nil</code>.
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) id customData;
+@property(nonatomic, strong, nullable) id customData;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
