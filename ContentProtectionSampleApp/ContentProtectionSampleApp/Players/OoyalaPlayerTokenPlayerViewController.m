@@ -108,7 +108,7 @@
   [self.ooyalaPlayerViewController.player play];
 }
 
-- (void)notificationReceived:(NSNotification *) notification {
+- (void)notificationReceived:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
