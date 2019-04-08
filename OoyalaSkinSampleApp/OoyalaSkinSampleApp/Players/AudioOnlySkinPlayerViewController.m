@@ -72,8 +72,7 @@ AppDelegate *appDel;
   
   _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
                                                      skinOptions:skinOptions
-                                                          parent:self.audioPlayerContainerView
-                                                   launchOptions:nil];
+                                                          parent:self.audioPlayerContainerView];
   [self addChildViewController:self.skinController];
   [OOStreamPlayer setDefaultPlayerInfo:[OODefaultAudioOnlyPlayerInfo new]];
 
