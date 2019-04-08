@@ -62,15 +62,15 @@ class PlayerViewController: UIViewController {
     let jsCodeLocation = Bundle.main.url(forResource: "main",
                                          withExtension: "jsbundle")
     
-    let skinOptions = OOSkinOptions(discoveryOptions: nil,
-                                    jsCodeLocation: jsCodeLocation,
-                                    configFileName: "skin",
-                                    overrideConfigs: nil)
+    guard let skinOptions = OOSkinOptions(discoveryOptions: nil,
+                                          jsCodeLocation: jsCodeLocation,
+                                          configFileName: "skin",
+                                          overrideConfigs: nil) else { return }
     
     ooyalaPlayerViewController = OOSkinViewController(player: player,
                                                       skinOptions: skinOptions,
                                                       parent: playerView,
-                                                      launchOptions: nil)!
+                                                      launchOptions: nil)
     
     ooyalaPlayerViewController.willMove(toParent: self)
     addChild(ooyalaPlayerViewController)
