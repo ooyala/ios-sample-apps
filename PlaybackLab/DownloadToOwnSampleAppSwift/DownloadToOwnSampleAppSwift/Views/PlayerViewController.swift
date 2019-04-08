@@ -59,13 +59,12 @@ class PlayerViewController: UIViewController {
                               domain: self.dtoAsset.options.domain)
     }
     
-    let jsCodeLocation = Bundle.main.url(forResource: "main",
-                                         withExtension: "jsbundle")
+    guard let jsCodeLocation = Bundle.main.url(forResource: "main",
+                                               withExtension: "jsbundle") else { return }
     
-    guard let skinOptions = OOSkinOptions(discoveryOptions: nil,
-                                          jsCodeLocation: jsCodeLocation,
-                                          configFileName: "skin",
-                                          overrideConfigs: nil) else { return }
+    let skinOptions = OOSkinOptions(discoveryOptions: nil,
+                                    jsCodeLocation: jsCodeLocation,
+                                    configFileName: "skin")
     
     ooyalaPlayerViewController = OOSkinViewController(player: player,
                                                       skinOptions: skinOptions,

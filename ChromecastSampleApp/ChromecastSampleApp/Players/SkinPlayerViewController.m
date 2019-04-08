@@ -52,8 +52,7 @@
 
   _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
                                                      skinOptions:skinOptions
-                                                          parent:self.videoView
-                                                   launchOptions:nil];
+                                                          parent:self.videoView];
   [self addChildViewController:_skinController];
   _skinController.view.frame = self.videoView.bounds;
 

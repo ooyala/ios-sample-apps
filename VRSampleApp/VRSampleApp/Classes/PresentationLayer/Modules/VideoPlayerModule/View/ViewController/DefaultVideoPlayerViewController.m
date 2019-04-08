@@ -60,8 +60,7 @@
   
   self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaVRPlayer
                                                      skinOptions:skinOptions
-                                                          parent:_skinContainerView
-                                                   launchOptions:nil];
+                                                          parent:_skinContainerView];
   
   // Subscribe for notifications with QA mode enabled
   [NSNotificationCenter.defaultCenter addObserver:self

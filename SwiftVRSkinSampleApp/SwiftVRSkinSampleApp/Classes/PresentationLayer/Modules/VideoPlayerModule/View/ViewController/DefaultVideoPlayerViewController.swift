@@ -34,7 +34,8 @@ class DefaultVideoPlayerViewController: UIViewController {
     }
 
     // VR player
-    let jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle")
+    guard let jsCodeLocation = Bundle.main.url(forResource: "main",
+                                               withExtension: "jsbundle") else { return }
     let overrideConfigs = ["upNextScreen": ["timeToShow": "8"]]
     let options = OOOptions()
 
@@ -49,17 +50,14 @@ class DefaultVideoPlayerViewController: UIViewController {
 
     // Skin
     let discoveryOptions = OODiscoveryOptions(type: .popular, limit: 10, timeout: 60)
-    guard let skinOptions = OOSkinOptions(discoveryOptions: discoveryOptions,
-                                          jsCodeLocation: jsCodeLocation,
-                                          configFileName: "skin",
-                                          overrideConfigs: overrideConfigs) else {
-                                            return
-    }
+    let skinOptions = OOSkinOptions(discoveryOptions: discoveryOptions,
+                                    jsCodeLocation: jsCodeLocation,
+                                    configFileName: "skin",
+                                    overrideConfigs: overrideConfigs)
 
     skinController = OOSkinViewController(player: ooyalaVRPlayer,
                                           skinOptions: skinOptions,
-                                          parent: skinContainerView,
-                                          launchOptions: nil)
+                                          parent: skinContainerView)
 
     // Subscribe for notifications with QA mode enabled
     NotificationCenter.default.addObserver(self,
