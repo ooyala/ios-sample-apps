@@ -64,12 +64,12 @@ class PlayerViewController: UIViewController {
     
     let skinOptions = OOSkinOptions(discoveryOptions: nil,
                                     jsCodeLocation: jsCodeLocation,
-                                    configFileName: "skin")
+                                    configFileName: "skin",
+                                    overrideConfigs: nil)
     
     ooyalaPlayerViewController = OOSkinViewController(player: player,
                                                       skinOptions: skinOptions,
-                                                      parent: playerView,
-                                                      launchOptions: nil)
+                                                      parent: playerView)
     
     ooyalaPlayerViewController.willMove(toParent: self)
     addChild(ooyalaPlayerViewController)

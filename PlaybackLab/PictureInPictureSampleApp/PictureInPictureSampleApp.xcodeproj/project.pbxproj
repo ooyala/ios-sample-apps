@@ -19,7 +19,6 @@
 		0B78245B1B2B855500D718AB /* DefaultSkinPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B78245A1B2B855500D718AB /* DefaultSkinPlayerViewController.m */; };
 		0B7824671B2FA0BD00D718AB /* DefaultSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7824661B2FA0BD00D718AB /* DefaultSkinPlayerView.xib */; };
 		0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B78246A1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib */; };
-		0BB8E7A51BE0438300003E2D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8E7A41BE0438300003E2D /* README.md */; };
 		0BB8E7AC1BE0449000003E2D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AB1BE0449000003E2D /* Social.framework */; };
 		0BB8E7AE1BE0449500003E2D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AD1BE0449500003E2D /* MessageUI.framework */; };
 		0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */; };
@@ -36,7 +35,6 @@
 		39B70373221C3C130036DE31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70371221C3C130036DE31 /* libc++.tbd */; };
 		39B70375221C3C1B0036DE31 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70374221C3C1B0036DE31 /* libz.tbd */; };
 		39B7037D221C3C440036DE31 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70377221C3C440036DE31 /* OoyalaSkinSDK.framework */; };
-		39B7037E221C3C440036DE31 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70378221C3C440036DE31 /* GoogleInteractiveMediaAds.framework */; };
 		39B7037F221C3C440036DE31 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70379221C3C440036DE31 /* AdManager.framework */; };
 		39B70380221C3C440036DE31 /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B7037A221C3C440036DE31 /* OoyalaIMASDK.framework */; };
 		39B70381221C3C440036DE31 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B7037B221C3C440036DE31 /* OoyalaSDK.framework */; };
@@ -204,7 +202,6 @@
 				39B7037D221C3C440036DE31 /* OoyalaSkinSDK.framework in Frameworks */,
 				39B70381221C3C440036DE31 /* OoyalaSDK.framework in Frameworks */,
 				97930E291B6995CB009B3512 /* WebKit.framework in Frameworks */,
-				39B7037E221C3C440036DE31 /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				97930E271B699595009B3512 /* EventKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +504,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ooyala, Inc.";
 				TargetAttributes = {
 					3394BB5F224BDA3D004CCA1F = {
@@ -519,10 +516,9 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PictureInPictureSampleApp" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -603,7 +599,6 @@
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
 				97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */,
 				336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */,
-				0BB8E7A51BE0438300003E2D /* README.md in Sources */,
 				97930C191B670D9F009B3512 /* FreewheelTestsListViewController.m in Sources */,
 				0B78245B1B2B855500D718AB /* DefaultSkinPlayerViewController.m in Sources */,
 			);
@@ -752,6 +747,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -810,6 +806,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
