@@ -40,8 +40,7 @@ extern NSString *const _Nonnull OOSkinViewControllerFullscreenChangedNotificatio
 - (nonnull instancetype)init __attribute__((unavailable("init not available")));
 - (nonnull instancetype)initWithPlayer:(nonnull OOOoyalaPlayer *)player
                            skinOptions:(nonnull OOSkinOptions *)jsCodeLocation
-                                parent:(nonnull UIView *)parentView
-                         launchOptions:(nullable NSDictionary *)options;
+                                parent:(nonnull UIView *)parentView;
 
 - (void)ccStyleChanged:(nonnull NSNotification *)notification;
 - (void)setCastManageableHandler:(nonnull id<OOCastManageable>)castManageableHandler;
