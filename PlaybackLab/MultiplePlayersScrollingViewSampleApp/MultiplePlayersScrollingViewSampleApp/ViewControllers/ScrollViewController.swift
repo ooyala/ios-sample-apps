@@ -46,15 +46,9 @@ class ScrollViewController: UIViewController {
                                        repeats: false)
   }
   
-  @objc
-  func fullscreentest(_ notification: Notification) {
-    print("")
-  }
-  
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
-  
 }
 
 extension ScrollViewController: UIScrollViewDelegate {
@@ -74,7 +68,6 @@ extension ScrollViewController: UIScrollViewDelegate {
                                        selector: #selector(runTimedCode),
                                        userInfo: nil,
                                        repeats: false)
-    
   }
   
   @objc
