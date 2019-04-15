@@ -27,6 +27,5 @@
 @property (nonatomic) DemoSettings *configuration;
 
 - (void)setCustomSkin;
-- (void)replayCurrentVideo;
 
 @end

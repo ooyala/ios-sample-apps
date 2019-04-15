@@ -55,8 +55,6 @@
 		C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */; };
 		C1D0E9EA1F61B26900B8B9DD /* BrowseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D0E9E91F61B26900B8B9DD /* BrowseButton.m */; };
 		DB22A39F1EA0111F00FA3E3C /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A39E1EA0111F00FA3E3C /* MainView.m */; };
-		DB22A3A71EA803B400FA3E3C /* TableViewEmbedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A3A61EA803B400FA3E3C /* TableViewEmbedCell.m */; };
-		DB22A3A91EA803D500FA3E3C /* EmbedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB22A3A81EA803D500FA3E3C /* EmbedCell.xib */; };
 		DB22A3C11EAFE1DE00FA3E3C /* DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */; };
 /* End PBXBuildFile section */
 
@@ -137,9 +135,6 @@
 		C1D0E9EB1F61B27600B8B9DD /* BrowseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseButton.h; sourceTree = "<group>"; };
 		DB22A39D1EA0111F00FA3E3C /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		DB22A39E1EA0111F00FA3E3C /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
-		DB22A3A51EA803B400FA3E3C /* TableViewEmbedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewEmbedCell.h; sourceTree = "<group>"; };
-		DB22A3A61EA803B400FA3E3C /* TableViewEmbedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewEmbedCell.m; sourceTree = "<group>"; };
-		DB22A3A81EA803D500FA3E3C /* EmbedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmbedCell.xib; sourceTree = "<group>"; };
 		DB22A3B81EA963FC00FA3E3C /* JSONRepresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		DB22A3BD1EAFE15300FA3E3C /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSettings.h; sourceTree = "<group>"; };
@@ -214,8 +209,6 @@
 				390891E121F5B29A00D860A9 /* JSON */,
 				DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */,
 				DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */,
-				DB22A3A51EA803B400FA3E3C /* TableViewEmbedCell.h */,
-				DB22A3A61EA803B400FA3E3C /* TableViewEmbedCell.m */,
 				0B7824481B2B834F00D718AB /* PlayerSelectionOption.h */,
 				0B7824491B2B834F00D718AB /* PlayerSelectionOption.m */,
 				0B78244A1B2B834F00D718AB /* SampleAppPlayerViewController.h */,
@@ -231,7 +224,6 @@
 		0B7824551B2B841800D718AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DB22A3A81EA803D500FA3E3C /* EmbedCell.xib */,
 				0B7824661B2FA0BD00D718AB /* OOplayer.xib */,
 			);
 			path = Views;
@@ -450,7 +442,6 @@
 				390891D121F5B26800D860A9 /* ooyala-slick-type.ttf in Resources */,
 				390891D221F5B26800D860A9 /* Roboto-Regular.ttf in Resources */,
 				390891D421F5B26800D860A9 /* alice.ttf in Resources */,
-				DB22A3A91EA803D500FA3E3C /* EmbedCell.xib in Resources */,
 				390891D021F5B26800D860A9 /* RobotoCondensed-Bold.ttf in Resources */,
 				390891DA21F5B26800D860A9 /* es.json in Resources */,
 				0B345ADC1B5626ED006CD3B0 /* Discovery.xcassets in Resources */,
@@ -471,7 +462,6 @@
 				C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */,
 				390891E721F5B29A00D860A9 /* CJSONSerializer.m in Sources */,
 				C1D0E9EA1F61B26900B8B9DD /* BrowseButton.m in Sources */,
-				DB22A3A71EA803B400FA3E3C /* TableViewEmbedCell.m in Sources */,
 				0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */,
 				DB22A3C11EAFE1DE00FA3E3C /* DemoSettings.m in Sources */,
 				DB22A39F1EA0111F00FA3E3C /* MainView.m in Sources */,

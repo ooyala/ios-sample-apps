@@ -11,7 +11,6 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSDK/OODiscoveryManager.h>
 #import "PlayerSelectionOption.h"
-#import "TableViewEmbedCell.h"
 #import "DemoSettings.h"
 #import "PlayerViewController.h"
 #import "CJSONSerializer.h"

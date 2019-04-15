@@ -31,7 +31,6 @@
   OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
                                                                             limit:10
                                                                           timeout:60];
-  
   // Modifying PlayerViewController to use Ooyala Skin
   NSURL *jsCodeLocation = [NSBundle.mainBundle URLForResource:@"main" withExtension:@"jsbundle"];
 //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
@@ -85,22 +84,12 @@
                                          selector:@selector(notificationHandler:)
                                              name:nil
                                            object:self.ooyalaPlayer];
-  /*
-  if (self.ooyalaPlayer == nil){
-    OOOptions *options = [OOOptions new];
-    self.ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
-  }*/
+
   [self.ooyalaPlayer setEmbedCode:self.embedCode]; //Update Embedcode
   [self.ooyalaPlayer play]; //Autoplay
   
   return self;
 }
-
-- (void)replayCurrentVideo {
-  [self.ooyalaPlayer setPlayheadTime:0];
-  [self.ooyalaPlayer play];
-}
-
 
 - (void)notificationHandler:(NSNotification *)notification {
 //  NSLog(@"::::%@", notification.name);
