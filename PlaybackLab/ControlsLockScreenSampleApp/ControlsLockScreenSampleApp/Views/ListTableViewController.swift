@@ -10,10 +10,10 @@ import UIKit
 class ListTableViewController: UITableViewController {
   
   // MARK: - Constants
-  private let PLAYER_SEGUE: String = "PlayerViewControllerSegue"
+  private let PLAYER_SEGUE = "PlayerViewControllerSegue"
   
   // MARK: - Private properties
-  private let options: [PlayerSelectionOption] = OptionDataSource.options()
+  private let options: [PlayerSelectionOption] = OptionDataSource.options
   
   // MARK: - View controller lifecycle
   override func viewDidLoad() {
@@ -23,13 +23,16 @@ class ListTableViewController: UITableViewController {
   }
   
   // MARK: - Table view data source
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView,
+                          numberOfRowsInSection section: Int) -> Int {
     return options.count
   }
   
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  override func tableView(_ tableView: UITableView,
+                          cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let option = options[indexPath.item]
-    let cell = tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath) as! OptionTableViewCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER,
+                                                   for: indexPath) as? OptionTableViewCell else { return UITableViewCell() }
     cell.option = option
     cell.textLabel?.text = option.title
     return cell
