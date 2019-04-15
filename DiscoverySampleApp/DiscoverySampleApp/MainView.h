@@ -22,17 +22,18 @@
 @property (nonatomic) IBOutlet NSLayoutConstraint *playerViewTop;
 @property (nonatomic) IBOutlet UIView *playerview;
 //@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
-//@property UILabel *videotitle; //title on portrait mode
-@property UILabel *playedVideoName;
-@property DemoSettings *configuration; //read config.json
-@property NSArray *labels; //user labels
-@property NSMutableArray *carousels; //user carousels
-@property NSMutableArray *similartableview;
-@property NSArray *discoveryResults; //results of middleware/discoveryapi
-@property NSString *actualembed; //embed
-@property NSString *actualVideoTitle;
+//@property (nonatomic) UILabel *videotitle; //title on portrait mode
+@property (nonatomic) UILabel *playedVideoName;
+
+@property (nonatomic) DemoSettings *configuration; //read config.json
+@property (nonatomic) NSArray *labels; //user labels
+@property (nonatomic) NSMutableArray *carousels; //user carousels
+@property (nonatomic) NSMutableArray *similartableview;
+@property (nonatomic) NSArray *discoveryResults; //results of middleware/discoveryapi
+@property (nonatomic) NSString *actualembed; //embed
+@property (nonatomic) NSString *actualVideoTitle;
 @property int SimilarFeature;
-@property PlayerViewController *playerViewController;
+@property (nonatomic) PlayerViewController *playerViewController;
 
 - (void)userRender;
 - (NSString *)decodeString:(NSString *)data;

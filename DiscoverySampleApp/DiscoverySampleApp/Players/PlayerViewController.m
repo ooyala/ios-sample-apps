@@ -14,16 +14,15 @@
 
 @implementation PlayerViewController
 
-
 - (void)loadView {
   [super loadView];
   
   self.nib = @"OOplayer";
-  self.configuration = [[DemoSettings alloc] initReadJSONFile];
-  self.pcode         = [(NSDictionary *)self.configuration.playerParameters objectForKey:@"pcode"];
-  self.playerDomain  = [(NSDictionary *)self.configuration.playerParameters objectForKey:@"domain"];
-  self.embedCode     = [(NSDictionary *)self.configuration.initasset objectForKey:@"embedCode"];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  self.configuration = [DemoSettings new];
+  self.pcode         = self.configuration.playerParameters[@"pcode"];
+  self.playerDomain  = self.configuration.playerParameters[@"domain"];
+  self.embedCode     = self.configuration.initasset[@"embedCode"];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)setCustomSkin {

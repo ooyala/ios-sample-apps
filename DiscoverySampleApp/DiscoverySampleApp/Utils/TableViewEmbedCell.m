@@ -13,7 +13,7 @@
   [super awakeFromNib];
   // Initialization code
   NSLog(@"nib awake");
-  self.titleLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:14.0 ];
+  self.titleLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:14.0];
   self.titleLabel.textColor = UIColor.whiteColor;
   self.titleLabel.numberOfLines = 2;
   self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;

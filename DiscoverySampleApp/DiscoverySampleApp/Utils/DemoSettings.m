@@ -10,32 +10,37 @@
 
 @implementation DemoSettings
 
-- (instancetype)getLabels:(NSArray *)Carousels {
-  NSMutableArray *labels = [NSMutableArray array];
-  for (NSDictionary *lbl in Carousels){
-    NSLog(@"%@", lbl[@"title"]);
-    NSString *tmp = lbl[@"title"];
-    
-    [labels addObject:tmp];
-  }
-  return (NSArray *)labels;
-}
-
-- (instancetype)initReadJSONFile {
+- (instancetype)init {
   if (self = [super init]) {
-    NSString *path = [NSBundle.mainBundle pathForResource:@"config" ofType:@"json"];
-    NSString *configjson = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    NSString *path = [NSBundle.mainBundle pathForResource:@"config"
+                                                   ofType:@"json"];
+    NSString *configjson = [[NSString alloc] initWithContentsOfFile:path
+                                                           encoding:NSUTF8StringEncoding
+                                                              error:NULL];
     NSError *error = nil;
     NSData *JSONData = [configjson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *JSONDictonary = [NSJSONSerialization JSONObjectWithData:JSONData options:0 error:&error];
+    NSDictionary *JSONDictonary = [NSJSONSerialization JSONObjectWithData:JSONData
+                                                                  options:0
+                                                                    error:&error];
     
     if (!error && JSONDictonary) {
-      for (NSString *key in JSONDictonary) {
-        [self setValue:[JSONDictonary valueForKey:key] forKey:key];
-      }
+      _playerParameters = JSONDictonary[@"playerParameters"];
+      _initasset        = JSONDictonary[@"initasset"];
+      _carousels        = JSONDictonary[@"carousels"];
     }
   }
   return self;
+}
+
+- (NSArray *)labels {
+  NSMutableArray *labels = [NSMutableArray array];
+  for (NSDictionary *lbl in self.carousels) {
+    NSLog(@"%@", lbl[@"title"]);
+    NSString *tmp = lbl[@"title"];
+
+    [labels addObject:tmp];
+  }
+  return labels;
 }
 
 @end

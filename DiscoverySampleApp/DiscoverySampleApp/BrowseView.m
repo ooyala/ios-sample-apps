@@ -32,11 +32,11 @@
                                            object:self.playerViewController.ooyalaPlayer];
   
   // Init custom class
-  self.configuration = [[DemoSettings alloc] initReadJSONFile]; //config object (config.json)
+  self.configuration = [DemoSettings new]; //config object (config.json)
   self.SimilarFeature = -1;
   [self getSimilarFeature];
   
-  self.labels = (NSArray *)[self.configuration getLabels:self.configuration.carousels];
+  self.labels = self.configuration.labels;
   self.playerViewController = [PlayerViewController alloc];
   
   [self UserRender];

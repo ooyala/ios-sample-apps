@@ -6,16 +6,16 @@
 //  Copyright © 2017 Ooyala Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 @interface DemoSettings : NSObject
 
-@property NSMutableArray *playerParameters;
-@property NSMutableArray *initasset;
-@property NSMutableArray *carousels;
+@property (nonatomic) NSDictionary *playerParameters;
+@property (nonatomic) NSDictionary *initasset;
+@property (nonatomic) NSArray *carousels;
 
-//- (instancetype)initReadJSONString:(NSString *)JSONString;
-- (instancetype) getLabels:(NSArray *) elements;
-- (instancetype)initReadJSONFile;
+- (instancetype)init;
+
+- (NSArray *)labels;
 
 @end
