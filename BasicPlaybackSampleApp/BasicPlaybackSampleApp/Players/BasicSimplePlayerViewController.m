@@ -8,6 +8,7 @@
 
 #import "BasicSimplePlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSDK/OOEnums.h>
 #import "AppDelegate.h"
 
 @interface BasicSimplePlayerViewController ()
@@ -61,10 +62,12 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
 
   OOOptions *options = [OOOptions new];
   options.enablePictureInPictureSupport = YES;
+  options.backgroundMode = OOBackgroundPlaybackModeDenied; // OOBackgroundPlaybackModeAllowed
   if (self.isAudioOnlyAsset) {
     options.playerInfo = [OODefaultAudioOnlyPlayerInfo new];
   } else {
