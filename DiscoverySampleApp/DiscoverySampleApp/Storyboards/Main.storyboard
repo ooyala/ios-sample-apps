@@ -108,17 +108,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4X-Ya-Cbl">
-                                <rect key="frame" x="8" y="356" width="359" height="145"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4X-Ya-Cbl">
+                                <rect key="frame" x="0.0" y="327" width="375" height="400"/>
                             </scrollView>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-z6-nzA">
-                                <rect key="frame" x="8" y="123" width="351" height="227"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-z6-nzA">
+                                <rect key="frame" x="0.0" y="114" width="375" height="213"/>
                                 <connections>
                                     <segue destination="e9Y-Zt-sqc" kind="embed" id="2C3-nQ-GEl"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqR-Pw-Xit">
-                                <rect key="frame" x="5" y="72" width="357" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqR-Pw-Xit">
+                                <rect key="frame" x="19" y="72" width="337.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -168,7 +168,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4xT-KX-R1J"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gJT-9o-Cj9">
-                        <rect key="frame" x="0.0" y="0.0" width="351" height="227"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
