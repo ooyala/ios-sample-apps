@@ -6,22 +6,23 @@
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "OOCastMiniControllerProtocol.h"
 
 @class OOCastManager;
 
 @protocol OOCastMiniControllerDelegate <NSObject>
-
 /**
  Fires when a mini controller is clicked
 
- @param miniControllerView An instance of view conformed to OOCastMiniControllerProtocol
+ @param miniControllerView an instance of view conformed to OOCastMiniControllerProtocol
+ @param embedCode an embedCode of an asset currently playing
  */
 - (void)miniControllerDidClickOn:(nullable id<OOCastMiniControllerProtocol>)miniControllerView
                    withEmbedCode:(nonnull NSString *)embedCode;
 /**
- Fires when a mini controleer is dismissed
+ Fires when a mini controller is dismissed
 
  @param miniControllerView An instance of view conformed to OOCastMiniControllerProtocol
  */
@@ -30,12 +31,26 @@
 @end
 
 
+/**
+ A basic implementation of a @c OOCastMiniControllerView
+ */
 @interface OOCastMiniControllerView : UIView <OOCastMiniControllerProtocol>
 
+/**
+ @c UITableViewCell used to display mini controller
+ */
 @property (nonnull, nonatomic) UITableViewCell *cell;
 
+/**
+ Designated initializer for @c OOCastMiniControllerView
+
+ @param frame a frame to use for init
+ @param castManager an instance of @c OOCastManager to use with
+ @param delegate an instance conforming to @c OOCastMiniControllerDelegate
+ @return an initialized @c OOCastMiniControllerView
+ */
 - (nonnull instancetype)initWithFrame:(CGRect)frame
-                          castManager:(nullable OOCastManager *)castManager
+                          castManager:(nonnull OOCastManager *)castManager
                              delegate:(nullable id<OOCastMiniControllerDelegate>)delegate;
 
 @end

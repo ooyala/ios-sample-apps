@@ -11,7 +11,7 @@
  * GCKDeviceStatus enum.
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKDeviceStatus
@@ -27,10 +27,10 @@ typedef NS_ENUM(NSInteger, GCKDeviceStatus) {
 };
 
 /**
- * @enum GCKDeviceCapability
+ * @enum GCKDeviceCapabilities
  * Enum defining the capabilities of a receiver device.
  */
-typedef NS_ENUM(NSInteger, GCKDeviceCapability) {
+typedef NS_OPTIONS(NSInteger, GCKDeviceCapabilities) {
   /** The device has video-out capability. */
   GCKDeviceCapabilityVideoOut = 1 << 0,
   /** The device has video-in capability. */
@@ -39,13 +39,22 @@ typedef NS_ENUM(NSInteger, GCKDeviceCapability) {
   GCKDeviceCapabilityAudioOut = 1 << 2,
   /** The device has audio-in capability. */
   GCKDeviceCapabilityAudioIn = 1 << 3,
-  /** The device has multizone group capability. */
+  /** The device is a multizone group. */
   GCKDeviceCapabilityMultizoneGroup = 1 << 5,
+  /** The device is a dynamic group. */
+  GCKDeviceCapabilityDynamicGroup = 1 << 6,
   /** The device has master or fixed volume mode capability. */
   GCKDeviceCapabilityMasterOrFixedVolume = 1 << 11,
   /** The device has attenuation or fixed volume mode capability. */
   GCKDeviceCapabilityAttenuationOrFixedVolume = 1 << 12,
+  /** The device can be part of a dynamic group. */
+  GCKDeviceCapabilityDynamicGroupingSupported = 1 << 16,
 };
+
+/**
+ * This is left for backwards compatibility reasons.
+ */
+typedef GCKDeviceCapabilities GCKDeviceCapability;
 
 /**
  * @enum GCKDeviceType
@@ -98,38 +107,38 @@ GCK_EXPORT
 @property(nonatomic, copy, readonly) GCKNetworkAddress *networkAddress;
 
 /** The device's service port. */
-@property(nonatomic, assign, readonly) uint16_t servicePort;
+@property(nonatomic, readonly) uint16_t servicePort;
 
 /** A unique identifier for the device. */
 @property(nonatomic, copy, readonly) NSString *deviceID;
 
 /** The device's friendly name. This is a user-assignable name such as "Living Room". */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *friendlyName;
+@property(nonatomic, copy, nullable) NSString *friendlyName;
 
 /** The device's model name. */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *modelName;
+@property(nonatomic, copy, nullable) NSString *modelName;
 
 /** An array of GCKImage objects containing icons for the device. */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSArray<GCKImage *> *icons;
+@property(nonatomic, copy, nullable) NSArray<GCKImage *> *icons;
 
 /** The device's status at the time that it was most recently scanned. */
-@property(nonatomic, assign, readwrite) GCKDeviceStatus status;
+@property(nonatomic) GCKDeviceStatus status;
 
 /** The status text reported by the currently running receiver application, if any. */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *statusText;
+@property(nonatomic, copy, nullable) NSString *statusText;
 
 /** The device's protocol version. */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *deviceVersion;
+@property(nonatomic, copy, nullable) NSString *deviceVersion;
 
 /** YES if this device is on the local network. */
-@property(nonatomic, assign, readonly) BOOL isOnLocalNetwork;
+@property(nonatomic, readonly) BOOL isOnLocalNetwork;
 
 /**
  * The device type.
  *
  * @since 3.3
  */
-@property(nonatomic, assign, readonly) GCKDeviceType type;
+@property(nonatomic, readonly) GCKDeviceType type;
 
 /**
  * The device category, a string that uniquely identifies the type of device. Cast devices have
@@ -151,11 +160,12 @@ GCK_EXPORT
 - (BOOL)isSameDeviceAs:(const GCKDevice *)other;
 
 /**
- * Returns <code>YES</code> if the device supports the given capabilities.
+ * Returns <code>YES</code> if the device supports all of the given capabilities.
  *
- * @param deviceCapabilities A bitwise-OR of one or more of the @ref GCKDeviceCapability constants.
+ * @param deviceCapabilities A bitwise-OR of one or more of the @ref GCKDeviceCapabilities
+ * constants.
  */
-- (BOOL)hasCapabilities:(NSInteger)deviceCapabilities;
+- (BOOL)hasCapabilities:(GCKDeviceCapabilities)deviceCapabilities;
 
 /**
  * Sets an arbitrary attribute in the object. May be used by custom device providers to store
@@ -175,7 +185,7 @@ GCK_EXPORT
  * <code>nil</code>.
  * @return The value of the attribute, or <code>nil</code> if no such attribute exists.
  */
-- (NSObject<NSSecureCoding> * GCK_NULLABLE_TYPE)attributeForKey:(NSString *)key;
+- (nullable NSObject<NSSecureCoding> *)attributeForKey:(NSString *)key;
 
 /**
  * Removes an attribute from the object.
@@ -197,4 +207,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

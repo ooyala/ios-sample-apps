@@ -77,7 +77,7 @@ NSString *const SFCODE = @"sfcode";
   [self.ooyalaPlayerViewController.player play];
 }
 
-- (void)onPlayerError:(NSNotification*)notification {
+- (void)onPlayerError:(NSNotification *)notification {
   NSLog(@"Error: %@", self.ooyalaPlayerViewController.player.error);
 }
 

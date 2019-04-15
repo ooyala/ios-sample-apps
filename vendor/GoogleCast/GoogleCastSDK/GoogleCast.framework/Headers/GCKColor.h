@@ -9,7 +9,7 @@
 
 #import <GoogleCast/GCKDefines.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A class that represents an RGBA color.
@@ -99,4 +99,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

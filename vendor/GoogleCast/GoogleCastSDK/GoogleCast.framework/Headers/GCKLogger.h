@@ -9,7 +9,7 @@
 @protocol GCKLoggerDelegate;
 @class GCKLoggerFilter;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A singleton object used for logging by the framework. If a delegate is assigned, the formatted
@@ -22,21 +22,21 @@ GCK_EXPORT
 @interface GCKLogger : NSObject
 
 /** The delegate to pass log messages to. */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) id<GCKLoggerDelegate> delegate;
+@property(nonatomic, weak, nullable) id<GCKLoggerDelegate> delegate;
 
 /**
  * The filter to apply to log messages.
  *
  * @since 3.0
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) GCKLoggerFilter *filter;
+@property(nonatomic, strong, nullable) GCKLoggerFilter *filter;
 
 /**
  * Flag for enabling or disabling logging. On by default.
  *
  * @since 3.0
  */
-@property(nonatomic, assign, readwrite) BOOL loggingEnabled;
+@property(nonatomic, assign) BOOL loggingEnabled;
 
 /**
  * Flag for enabling or disabling file logging. Off by default. If enabled, log messages are
@@ -45,14 +45,14 @@ GCK_EXPORT
  *
  * @since 3.1
  */
-@property(nonatomic, assign, readwrite) BOOL fileLoggingEnabled;
+@property(nonatomic, assign) BOOL fileLoggingEnabled;
 
 /**
  * Flag for enabling or disabling logging directly to the console (via NSLog). Off by default.
  *
  * @since 4.1
  */
-@property(nonatomic, assign, readwrite) BOOL consoleLoggingEnabled;
+@property(nonatomic, assign) BOOL consoleLoggingEnabled;
 
 /**
  * The maximum size of a log file, in bytes. The minimum is 32 KiB. If the value is 0, the default
@@ -60,14 +60,14 @@ GCK_EXPORT
  *
  * @since 3.1
  */
-@property(nonatomic, assign, readwrite) NSUInteger maxLogFileSize;
+@property(nonatomic, assign) NSUInteger maxLogFileSize;
 
 /**
  * The maximum number of log files. The minimum is 2.
  *
  * @since 3.1
  */
-@property(nonatomic, assign, readwrite) NSUInteger maxLogFileCount;
+@property(nonatomic, assign) NSUInteger maxLogFileCount;
 
 /**
  * The minimum logging level that will be logged.
@@ -75,7 +75,7 @@ GCK_EXPORT
  * @since 3.0
  * @deprecated Specify minimum logging level in GCKLoggerFilter.
  */
-@property(nonatomic, assign, readwrite) GCKLoggerLevel minimumLevel DEPRECATED_ATTRIBUTE;
+@property(nonatomic, assign) GCKLoggerLevel minimumLevel DEPRECATED_ATTRIBUTE;
 
 /**
  * Returns the GCKLogger singleton instance.
@@ -120,7 +120,7 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /**
  * @macro GCKLog

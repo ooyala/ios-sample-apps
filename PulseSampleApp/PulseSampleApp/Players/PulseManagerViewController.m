@@ -94,8 +94,7 @@
   
   self.playerViewController = [[OOSkinViewController alloc] initWithPlayer:self.player
                                                                skinOptions:skinOptions
-                                                                    parent:self.playerView
-                                                             launchOptions:nil];
+                                                                    parent:self.playerView];
   // Attach it to current view
   [self addChildViewController:self.playerViewController];
   self.playerViewController.view.frame = self.playerView.bounds;
@@ -110,7 +109,7 @@
   [self.playerViewController.view setFrame:self.playerView.bounds];
 }
 
-- (void)notificationHandler:(NSNotification*)notification {
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;

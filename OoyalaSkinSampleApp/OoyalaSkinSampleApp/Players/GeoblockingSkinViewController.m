@@ -14,7 +14,7 @@
 
 #pragma mark - Private properties
 
-@property (nonatomic, retain) OOSkinViewController *skinController;
+@property (nonatomic) OOSkinViewController *skinController;
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *nib;
 @property (nonatomic) NSString *pcode;
@@ -81,8 +81,7 @@
   
   _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
                                                      skinOptions:skinOptions
-                                                          parent:_videoView
-                                                   launchOptions:nil];
+                                                          parent:_videoView];
   [self addChildViewController:_skinController];
   _skinController.view.frame = self.videoView.bounds;
   [ooyalaPlayer setEmbedCode:self.embedCode];
@@ -121,7 +120,7 @@
 
 #pragma mark - Private functions
 
-- (void)notificationHandler:(NSNotification*)notification {
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;

@@ -6,8 +6,7 @@
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface OOUIUtils : NSObject
 
@@ -22,9 +21,9 @@
 + (BOOL)is1xDensity;
 
 /**
- * If called on the main thread, the block will be invoked immediately.
- * Otherwise it will be dispatched to run on the main thread.
- * @param block of code to run on the main thread.
+ If called on the main thread, the block will be invoked immediately.
+ Otherwise it will be dispatched to run on the main thread.
+ @param block of code to run on the main thread.
  */
 + (void)runOnMainThread:(void (^)(void))block;
 

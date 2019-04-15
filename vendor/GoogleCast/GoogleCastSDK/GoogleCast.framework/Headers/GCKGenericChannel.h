@@ -7,7 +7,7 @@
 
 @protocol GCKGenericChannelDelegate;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A generic GCKCastChannel implementation, suitable for use when subclassing is not desired.
@@ -22,7 +22,7 @@ GCK_EXPORT
 /**
  * The delegate for receiving notifications about changes in the channel's state.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) id<GCKGenericChannelDelegate> delegate;
+@property(nonatomic, weak, nullable) id<GCKGenericChannelDelegate> delegate;
 
 /**
  * Designated initializer.
@@ -76,4 +76,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

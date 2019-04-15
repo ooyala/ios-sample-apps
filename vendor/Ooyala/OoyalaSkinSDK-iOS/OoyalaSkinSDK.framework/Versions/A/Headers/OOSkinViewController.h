@@ -2,13 +2,14 @@
 //  OOSkinViewController.h
 //  OoyalaSkin
 //
-//
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @class OOOoyalaPlayer;
 @class OOSkinOptions;
 @class OOClosedCaptionsStyle;
+@protocol OOCastNotifiable;
+@protocol OOCastManageable;
 
 /**
  * The primary class for the Skin UI
@@ -17,12 +18,13 @@
 @interface OOSkinViewController : UIViewController
 
 // Notifications
-extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fires when player goes FullScreen  */
+extern NSString *const _Nonnull OOSkinViewControllerFullscreenChangedNotification; /* Fires when player goes FullScreen  */
 
-@property (nonatomic, readonly) OOOoyalaPlayer *player;
-@property (nonatomic, readonly) OOSkinOptions *skinOptions;
-@property (nonatomic, readonly) NSString *version;
-@property (nonatomic, readonly) OOClosedCaptionsStyle *closedCaptionsDeviceStyle;
+@property (nonatomic, nonnull, readonly) OOOoyalaPlayer *player;
+@property (nonatomic, nonnull, readonly) OOSkinOptions *skinOptions;
+@property (nonatomic, nonnull, readonly) NSString *version;
+@property (nonatomic, nullable, readonly) OOClosedCaptionsStyle *closedCaptionsDeviceStyle;
+@property (nonatomic, nonnull, readonly) id<OOCastNotifiable> castNotifyHandler;
 
 /**
  Programatically change the fullscreen mode of the player.
@@ -35,12 +37,12 @@ extern NSString *const OOSkinViewControllerFullscreenChangedNotification; /* Fir
  */
 @property (nonatomic, getter=isAutoFullscreenWithRotatedEnabled) BOOL autoFullscreenWithRotatedEnabled __TVOS_PROHIBITED;
 
-- (instancetype)init __attribute__((unavailable("init not available")));
-- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
-                   skinOptions:(OOSkinOptions *)jsCodeLocation
-                        parent:(UIView *)parentView
-                 launchOptions:(NSDictionary *)options;
+- (nonnull instancetype)init __attribute__((unavailable("init not available")));
+- (nonnull instancetype)initWithPlayer:(nonnull OOOoyalaPlayer *)player
+                           skinOptions:(nonnull OOSkinOptions *)jsCodeLocation
+                                parent:(nonnull UIView *)parentView;
 
-- (void)ccStyleChanged:(NSNotification *)notification;
+- (void)ccStyleChanged:(nonnull NSNotification *)notification;
+- (void)setCastManageableHandler:(nonnull id<OOCastManageable>)castManageableHandler;
 
 @end

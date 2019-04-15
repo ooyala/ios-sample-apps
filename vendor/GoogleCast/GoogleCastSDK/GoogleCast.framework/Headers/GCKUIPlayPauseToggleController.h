@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, GCKUIPlayPauseState) {
   GCKUIPlayPauseStatePause = 2
 };
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A class that can be used to implement a custom play/pause toggle UI, in situations where a
@@ -46,18 +46,18 @@ GCK_EXPORT
  * in the process of writing it) and if it changes, it issues the appropriate media command with
  * the GCKRemoteMediaClient to change the receiver's player state accordingly.
  */
-@property(nonatomic, assign, readwrite) GCKUIPlayPauseState playPauseState;
+@property(nonatomic, assign) GCKUIPlayPauseState playPauseState;
 
 /**
  * The GCKUIMediaController writes this property to enable or disable the UI control(s) managed by
  * this controller. Media-related UI controls are temporarily disabled while a media command is
  * in-flight.
  */
-@property(nonatomic, assign, readwrite) BOOL inputEnabled;
+@property(nonatomic, assign) BOOL inputEnabled;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */
 

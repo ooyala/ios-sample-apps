@@ -3,6 +3,8 @@
 //  OoyalaSkinSDK
 //
 
+@import UIKit;
+
 @protocol OOSkinViewControllerDelegate <NSObject>
 
 @property (nonatomic, getter=isReactViewInteractionEnabled) BOOL reactViewInteractionEnabled;

@@ -2,7 +2,7 @@
 //  main.m
 //  AnalyticsPluginSampleApp
 //
-//  Created by Zhihui Chen on 11/17/14.
+//  Created on 11/17/14.
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 

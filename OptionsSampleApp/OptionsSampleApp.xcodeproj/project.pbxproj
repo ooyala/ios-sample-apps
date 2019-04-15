@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -310,7 +310,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = ooyala;
+				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0BF4F9E01A6850CE0050A602 = {
 						CreatedOnToolsVersion = 6.1;
@@ -322,8 +322,8 @@
 				};
 			};
 			buildConfigurationList = 9772BF7B1A43B61500B255C0 /* Build configuration list for PBXProject "OptionsSampleApp" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

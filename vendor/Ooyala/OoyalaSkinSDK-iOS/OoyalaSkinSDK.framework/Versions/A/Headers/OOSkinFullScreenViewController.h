@@ -5,8 +5,7 @@
 //  Copyright © 2017 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 
 @interface OOSkinFullScreenViewController : UIViewController
 

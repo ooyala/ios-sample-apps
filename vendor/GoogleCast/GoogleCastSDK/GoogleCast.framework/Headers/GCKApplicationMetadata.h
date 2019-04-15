@@ -7,7 +7,7 @@
 @class GCKImage;
 @class GCKSenderApplicationInfo;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Information about a receiver application.
@@ -22,29 +22,37 @@ GCK_EXPORT
 @property(nonatomic, copy, readonly) NSString *applicationName;
 
 /** Any icon images for the application, as an array of GCKImage objects. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSArray<GCKImage *> *images;
+@property(nonatomic, copy, readonly, nullable)
+    NSArray<GCKImage *> *images GCK_DEPRECATED("Use iconURL.");
+
+/**
+ * The icon URL for the application.
+ *
+ * @since 4.3.5
+ */
+@property(nonatomic, copy, readonly, nullable) NSURL *iconURL;
 
 /** The set of protocol namespaces supported by this application. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSArray<NSString *> *namespaces;
+@property(nonatomic, copy, readonly, nullable) NSArray<NSString *> *namespaces;
 
 /**
  * Information about the sender application that is the counterpart to the receiver application,
  * if any.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) GCKSenderApplicationInfo *senderApplicationInfo;
+@property(nonatomic, copy, readonly, nullable) GCKSenderApplicationInfo *senderApplicationInfo;
 
 /**
  * The identifier (app ID) of the sender application that is the counterpart to the receiver
  * application, if any.
  */
-- (NSString * GCK_NULLABLE_TYPE)senderAppIdentifier;
+- (nullable NSString *)senderAppIdentifier;
 
 /**
  * The launch URL (URL scheme) for the sender application that is the counterpart to the receiver
  * application, if any.
  */
-- (NSURL * GCK_NULLABLE_TYPE)senderAppLaunchURL;
+- (nullable NSURL *)senderAppLaunchURL;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

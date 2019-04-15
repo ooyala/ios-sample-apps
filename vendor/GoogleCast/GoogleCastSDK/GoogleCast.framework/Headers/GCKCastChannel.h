@@ -6,7 +6,7 @@
 
 @class GCKError;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A virtual communication channel for exchanging messages between a Cast sender and a Cast
@@ -65,7 +65,7 @@ GCK_EXPORT
  * @return <code>YES</code> on success or <code>NO</code> if the message could not be sent.
  */
 - (BOOL)sendTextMessage:(NSString *)message
-                  error:(GCKError *GCK_NULLABLE_TYPE *GCK_NULLABLE_TYPE)error;
+                  error:(GCKError *_Nullable *_Nullable)error;
 
 /**
  * Generates a request ID for a new message.
@@ -80,7 +80,7 @@ GCK_EXPORT
  *
  * @return The generated ID, or <code>nil</code> if the channel is not currently connected.
  */
-- (NSNumber * GCK_NULLABLE_TYPE)generateRequestNumber;
+- (nullable NSNumber *)generateRequestNumber;
 
 /**
  * Called when this channel has been connected, indicating that messages can now be exchanged with
@@ -106,4 +106,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

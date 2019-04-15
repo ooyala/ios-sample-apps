@@ -2,7 +2,7 @@
 //  CountdownViewManager.h
 //  ReactNativeCountdownTimer
 //
-//  Created by Eric Vargas on 11/30/15.
+//  Created on 11/30/15.
 //  Copyright © 2015 Ooyala. All rights reserved.
 //
 

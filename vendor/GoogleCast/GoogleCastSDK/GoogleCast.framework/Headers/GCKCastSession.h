@@ -9,12 +9,14 @@
 @class GCKCastChannel;
 @class GCKCastOptions;
 @class GCKDevice;
+@class GCKDynamicDevice;
 @class GCKMultizoneDevice;
 @class GCKMultizoneStatus;
 @class GCKRequest;
+@class GCKSessionEndpoint;
 @protocol GCKCastDeviceStatusListener;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A class that manages a Cast session with a receiver device.
@@ -41,7 +43,7 @@ GCK_EXPORT
  * The metadata for the receiver application that is currently running on the receiver device, if
  * any; otherwise <code>nil</code>.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) GCKApplicationMetadata *applicationMetadata;
+@property(nonatomic, copy, readonly, nullable) GCKApplicationMetadata *applicationMetadata;
 
 /**
  * Constructs a new Cast session with the given Cast options.
@@ -54,8 +56,8 @@ GCK_EXPORT
  * @since 4.0
  */
 - (instancetype)initWithDevice:(GCKDevice *)device
-                     sessionID:(NSString *GCK_NULLABLE_TYPE)sessionID
-                sessionOptions:(GCKSessionOptions *GCK_NULLABLE_TYPE)sessionOptions
+                     sessionID:(nullable NSString *)sessionID
+                sessionOptions:(nullable GCKSessionOptions *)sessionOptions
                    castOptions:(GCKCastOptions *)castOptions;
 
 /**
@@ -118,7 +120,7 @@ GCK_EXPORT
  */
 - (GCKRequest *)requestMultizoneStatus;
 
-@end
+@end  // GCKCastSession
 
 /**
  * A listener protocol for receiving Cast device status change notifications.
@@ -183,6 +185,6 @@ GCK_EXPORT
 - (void)castSession:(GCKCastSession *)castSession
     didRemoveMultizoneDeviceWithID:(NSString *)deviceID;
 
-@end
+@end  // GCKCastDeviceStatusListener
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

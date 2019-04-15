@@ -2,11 +2,11 @@
 //  NSDictionary+Utils.h
 //  OoyalaSkinSDK
 //
-//  Created by Eric Vargas on 11/6/15.
+//  Created on 11/6/15.
 //  Copyright © 2015 ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSDictionary (Utils)
 

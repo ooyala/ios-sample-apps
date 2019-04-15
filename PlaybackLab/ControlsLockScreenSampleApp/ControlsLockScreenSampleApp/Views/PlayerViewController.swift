@@ -19,7 +19,7 @@ class PlayerViewController: UIViewController {
   // properties required for a Fairplay asset
   private var apiKey: String?
   private var apiSecret: String?
-  private var ooyalaPlayerVC: OOOoyalaPlayerViewController?
+  public var ooyalaPlayerVC: OOOoyalaPlayerViewController?
   
   // remote control center
   private let remoteCommandCenter = MPRemoteCommandCenter.shared()
@@ -61,7 +61,6 @@ class PlayerViewController: UIViewController {
       view.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
       view.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
       ])
-
     guard let view = vc.view else { return }
     if #available(iOS 11, *) {
       let guide = self.view.safeAreaLayoutGuide
@@ -110,11 +109,6 @@ class PlayerViewController: UIViewController {
   
   private func addObservers() {
     NotificationCenter.default.addObserver(self,
-                                           selector: #selector(applicationDidEnterBackground(_:)),
-                                           name: UIApplication.didEnterBackgroundNotification,
-                                           object: nil)
-    
-    NotificationCenter.default.addObserver(self,
                                            selector: #selector(playerStateChange(_:)),
                                            name: NSNotification.Name.OOOoyalaPlayerStateChanged,
                                            object: nil)
@@ -153,10 +147,8 @@ class PlayerViewController: UIViewController {
     
     // Set albumArt to show in the screen if image is available
     // The albumArt needs to be an UIImage, the image can be added in the assets of the project or retrieve the image using an URL
-    if let imageData = NSData(contentsOf: option.thumbnailURL),
-       let image = UIImage(data: imageData as Data) {
-      let albumArt = MPMediaItemArtwork(boundsSize: image.size,
-                                        requestHandler: { (size) -> UIImage in return image })
+    if let imageData = NSData(contentsOf: option.thumbnailURL), let image = UIImage(data: imageData as Data) {
+      let albumArt = MPMediaItemArtwork(boundsSize: image.size, requestHandler: { (size) -> UIImage in return image })
       nowPlayingInfo[MPMediaItemPropertyArtwork] = albumArt
     }
     
@@ -164,11 +156,10 @@ class PlayerViewController: UIViewController {
   }
   
   // Updates the time labels.
-  private func updatePlayingInfoCenter() {
+  public func updatePlayingInfoCenter() {
     let playingInfoCenter = MPNowPlayingInfoCenter.default()
     guard var displayInfo = playingInfoCenter.nowPlayingInfo,
-          let player = ooyalaPlayerVC?.player else { return }
-    
+      let player = ooyalaPlayerVC?.player else { return }
     displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
     displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
     displayInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.playheadTime()
@@ -178,7 +169,6 @@ class PlayerViewController: UIViewController {
   // MARK: - Custom selectors
   @objc func playPauseCommand(_ sender: MPRemoteCommandEvent) {
     guard let player = ooyalaPlayerVC?.player else { return }
-    
     if player.isPlaying() {
       player.pause()
     } else {
@@ -211,15 +201,6 @@ class PlayerViewController: UIViewController {
     updatePlayingInfoCenter()
   }
   
-  @objc func applicationDidEnterBackground(_ notification: Notification) {
-    // The app detects that is running in background, we need to call the play method twice
-    // to let the AudioSession works and play the audio.
-    guard let player = ooyalaPlayerVC?.player else { return }
-    
-    player.perform(#selector(player.play as () -> Void))
-    player.perform(#selector(player.play as () -> Void), with: nil, afterDelay: 0.1)
-  }
-  
   @objc func playerStateChange(_ notification: Notification) {
     updatePlayingInfoCenter()
   }
@@ -227,10 +208,7 @@ class PlayerViewController: UIViewController {
   @objc func notificationHandler(_ notification: Notification)  {
     // Ignore TimeChangedNotificiations for shorter logs
     if notification.name == NSNotification.Name.OOOoyalaPlayerTimeChanged { return }
-    let stateString = OOOoyalaPlayerStateConverter.playerState(toString: ooyalaPlayerVC?.player.state() ?? .error)
-    print("PlayerVC Notification Received: \(notification.name). "
-          + "state: \(stateString ?? ""). "
-          + "playhead: \(String(describing: ooyalaPlayerVC?.player.playheadTime() ?? 0.0))")
+    print("PlayerVC Notification Received: \(notification.name). state: \(String(describing: ooyalaPlayerVC?.player.state)). playhead: \(String(describing: self.ooyalaPlayerVC?.player.playheadTime))")
   }
   
   // MARK: - Initialization

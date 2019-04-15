@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Utility methods for working with JSON data.
@@ -21,7 +21,7 @@ GCK_EXPORT
  * <a href="https://goo.gl/0kFoNp"><b>NSDictionary</b></a>), or <code>nil</code> if the parsing
  * failed.
  */
-+ (id GCK_NULLABLE_TYPE)parseJSON:(NSString *)json;
++ (nullable id)parseJSON:(NSString *)json;
 
 /**
  * Parses a JSON string into an object.
@@ -34,7 +34,7 @@ GCK_EXPORT
  * <a href="https://goo.gl/0kFoNp"><b>NSDictionary</b></a>), or <code>nil</code> if the parsing
  * failed.
  */
-+ (id GCK_NULLABLE_TYPE)parseJSON:(NSString *)json error:(NSError **)error;
++ (nullable id)parseJSON:(NSString *)json error:(NSError **)error;
 
 /**
  * Writes an object hierarchy of data to a JSON string.
@@ -65,4 +65,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

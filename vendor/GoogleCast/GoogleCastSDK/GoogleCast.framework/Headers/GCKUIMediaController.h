@@ -16,7 +16,7 @@
  * @file GCKUIMediaController.h
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @var GCKUIControlStateRepeatOff
@@ -151,7 +151,7 @@ GCK_EXTERN const NSUInteger GCKUIButtonStatePlayLive;
  *
  * @since 3.0
  */
-typedef NSString *GCK_NONNULL_TYPE (^GCKUIValueFormatter)(const id value);
+typedef NSString *_Nonnull (^GCKUIValueFormatter)(const id value);
 
 @protocol GCKUIMediaControllerDelegate;
 @class GCKUIPlaybackRateController;
@@ -178,12 +178,12 @@ GCK_EXPORT
 /**
  * The delegate for receiving notificatiosn from the GCKUIMediaController.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) id<GCKUIMediaControllerDelegate> delegate;
+@property(nonatomic, weak, nullable) id<GCKUIMediaControllerDelegate> delegate;
 
 /**
  * The session that is associated with this controller.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKSession *session;
+@property(nonatomic, strong, readonly, nullable) GCKSession *session;
 
 /**
  * Whether there is media currently loaded (or loading) on the receiver. If no Cast session is
@@ -220,7 +220,7 @@ GCK_EXPORT
  * resumed on the receiver. The button will be disabled if playback is already in progress, or if
  * there is no media currently loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *playButton;
+@property(nonatomic, weak, nullable) UIButton *playButton;
 
 /**
  * A "pause" button. When the button is tapped, playback of the currently loaded media is paused on
@@ -228,7 +228,7 @@ GCK_EXPORT
  * or if playback is not currently in progress, or if there is no media currently loaded, or if
  * there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *pauseButton;
+@property(nonatomic, weak, nullable) UIButton *pauseButton;
 
 /**
  * A "play/pause" toggle button. The caller should set appropriate icons for the button's
@@ -240,7 +240,7 @@ GCK_EXPORT
  * does not support pausing, or if playback is not currently in progress or paused, or if there is
  * no media currently loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) GCKUIMultistateButton *playPauseToggleButton;
+@property(nonatomic, weak, nullable) GCKUIMultistateButton *playPauseToggleButton;
 
 /**
  * A "play/pause" toggle controller. Used as a stand-in for a custom, application-supplied
@@ -248,7 +248,7 @@ GCK_EXPORT
  *
  * @since 3.4
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE)
+@property(nonatomic, strong, nullable)
     GCKUIPlayPauseToggleController *playPauseToggleController;
 
 /**
@@ -256,39 +256,39 @@ GCK_EXPORT
  * the receiver. The button will be disabled if there is no media currently loaded, or if there is
  * no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *stopButton;
+@property(nonatomic, weak, nullable) UIButton *stopButton;
 
 /**
  * A button for seeking 30 seconds forward in the currently playing media item. The button will be
  * disabled if there is no media
  * currently loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *forward30SecondsButton;
+@property(nonatomic, weak, nullable) UIButton *forward30SecondsButton;
 
 /**
  * A button for seeking 30 seconds back in the currently playing media item. The button will be
  * disabled if there is no media currently loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *rewind30SecondsButton;
+@property(nonatomic, weak, nullable) UIButton *rewind30SecondsButton;
 
 /**
  * A button for pausing queue playback once the current item finishes playing.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *pauseQueueButton;
+@property(nonatomic, weak, nullable) UIButton *pauseQueueButton;
 
 /**
  * A "next" button. When the button is tapped, playback moves to the next media item in the queue.
  * The button will be disabled if the operation is not supported, or if there is no media currently
  * loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *nextButton;
+@property(nonatomic, weak, nullable) UIButton *nextButton;
 
 /**
  * A "previous" button. When the button is tapped, playback moves to the previous media item in the
  * queue. The button will be disabled if the operation is not supported, or if there is no media
  * currently loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *previousButton;
+@property(nonatomic, weak, nullable) UIButton *previousButton;
 
 /**
  * A button for cycling through the available queue repeat modes. (See @ref GCKMediaRepeatMode.) The
@@ -303,7 +303,7 @@ GCK_EXPORT
  *
  * The button will be disabled if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) GCKUIMultistateButton *repeatModeButton;
+@property(nonatomic, weak, nullable) GCKUIMultistateButton *repeatModeButton;
 
 /**
  * A slider for displaying and changing the current stream position. When the slider's value is
@@ -313,7 +313,7 @@ GCK_EXPORT
  * loaded media does not support seeking, or if there is no media currently loaded, or if there is
  * no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UISlider *streamPositionSlider;
+@property(nonatomic, weak, nullable) UISlider *streamPositionSlider;
 
 /**
  * A view for displaying the current stream progress. While playback of media is in progress on the
@@ -321,14 +321,14 @@ GCK_EXPORT
  * view will be disabled if the currently loaded media is a live stream, or if there is no media
  * currently loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIProgressView *streamProgressView;
+@property(nonatomic, weak, nullable) UIProgressView *streamProgressView;
 
 /**
  * A label for displaying the current stream position, in minutes and seconds. If there is no media
  * currently loaded, or if there is no Cast session currently active, the label displays a localized
  * form of "--:--".
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UILabel *streamPositionLabel;
+@property(nonatomic, weak, nullable) UILabel *streamPositionLabel;
 
 /**
  * A label for displaying the current stream duration, in minutes and seconds. If the currently
@@ -336,7 +336,7 @@ GCK_EXPORT
  * media currently loaded, or if there is no Cast session currently active, the label displays a
  * localized form of "--:--".
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UILabel *streamDurationLabel;
+@property(nonatomic, weak, nullable) UILabel *streamDurationLabel;
 
 /**
  * A label for displaying the remaining stream time (the duration minus the position), in minutes
@@ -344,7 +344,7 @@ GCK_EXPORT
  * stream), or if there is no media currently loaded, or if there is no Cast session currently
  * active, the label displays a localized form of "--:--".
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UILabel *streamTimeRemainingLabel;
+@property(nonatomic, weak, nullable) UILabel *streamTimeRemainingLabel;
 
 /**
  * A stream posdition controller. Used as a stand-in for a custom, application-supplied
@@ -352,7 +352,7 @@ GCK_EXPORT
  *
  * @since 3.4
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE)
+@property(nonatomic, strong, nullable)
     GCKUIStreamPositionController *streamPositionController;
 
 /**
@@ -360,14 +360,14 @@ GCK_EXPORT
  *
  * @since 4.0
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE)
+@property(nonatomic, strong, nullable)
     GCKUIPlaybackRateController *playbackRateController;
 
 /**
  * Whether remaining stream time will be displayed as a negative value, for example, "-1:23:45". By
  * default this property is set to <code>YES</code>.
  */
-@property(nonatomic, assign, readwrite) BOOL displayTimeRemainingAsNegativeValue;
+@property(nonatomic, assign) BOOL displayTimeRemainingAsNegativeValue;
 
 /**
  * Whether stream position controls (including the stream position slider, the stream position
@@ -376,7 +376,7 @@ GCK_EXPORT
  *
  * @since 4.0
  */
-@property(nonatomic, assign, readwrite) BOOL hideStreamPositionControlsForLiveContent;
+@property(nonatomic, assign) BOOL hideStreamPositionControlsForLiveContent;
 
 /**
  * A button for selecting audio tracks and/or closed captions or subtitles. When the button is
@@ -384,33 +384,33 @@ GCK_EXPORT
  * the currently loaded media does not have any selectable media tracks, or if there is no media
  * currently loaded, or if there is no Cast session currently active.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *tracksButton;
+@property(nonatomic, weak, nullable) UIButton *tracksButton;
 
 /**
  * A label for displaying a subtitle for the currently loaded media. If there is no subtitle field
  * explicitly set in the metadata, the label will display the most appropriate metadata field based
  * on the media type, for example the studio name for a movie or the artist name for a music track.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UILabel *smartSubtitleLabel;
+@property(nonatomic, weak, nullable) UILabel *smartSubtitleLabel;
 
 /**
  * An activity indicator view for indicating that the media is in a loading state.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIActivityIndicatorView *mediaLoadingIndicator;
+@property(nonatomic, weak, nullable) UIActivityIndicatorView *mediaLoadingIndicator;
 
 /**
  * A label for displaying the amount of time left until the ad can be skipped.
  *
  * @since 4.3
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UILabel *skipAdLabel;
+@property(nonatomic, weak, nullable) UILabel *skipAdLabel;
 
 /**
  * A button for skipping the current ad.
  *
  * @since 4.3
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *skipAdButton;
+@property(nonatomic, weak, nullable) UIButton *skipAdButton;
 
 /**
  * Initializes an instance.
@@ -558,6 +558,6 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

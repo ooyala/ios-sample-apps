@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, GCKNetworkAddressType) {
   GCKNetworkAddressTypeIPC = 3,
 };
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * An object that represents a network IP address. This object is immutable.
@@ -36,13 +36,13 @@ GCK_EXPORT
 /** The address type. */
 @property(nonatomic, assign, readonly) GCKNetworkAddressType type;
 /** The IP address. */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *ipAddress;
+@property(nonatomic, copy, readonly, nullable) NSString *ipAddress;
 /**
  * The network address as an NSData containing the appropriate address structure
  * (e.g., struct in_addr or struct in6_addr). For the address type IPC, this field is a UTF8
  * encoding.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSData *addressData;
+@property(nonatomic, copy, readonly, nullable) NSData *addressData;
 
 /** Using the default initializer is not allowed. */
 - (instancetype)init NS_UNAVAILABLE;
@@ -54,8 +54,7 @@ GCK_EXPORT
  * @param ipAddress The IP address, in textual form. May be <code>nil</code> to indicate the
  *     wildcard ("any") address.
  */
-- (instancetype)initWithType:(GCKNetworkAddressType)type
-                   ipAddress:(NSString *GCK_NULLABLE_TYPE)ipAddress;
+- (instancetype)initWithType:(GCKNetworkAddressType)type ipAddress:(nullable NSString *)ipAddress;
 
 /**
  * Constructs a GCKNetworkAddress with the given address type and raw address.
@@ -65,8 +64,7 @@ GCK_EXPORT
  *     struct in_addr or struct in6_addr). For the GCKNNetworkAddressTypeIPC, the data is expected
  * to be a UTF8 encoding.
  */
-- (instancetype)initWithType:(GCKNetworkAddressType)type
-                 addressData:(NSData *GCK_NULLABLE_TYPE)addressData;
+- (instancetype)initWithType:(GCKNetworkAddressType)type addressData:(nullable NSData *)addressData;
 
 /**
  * Constructs a wildcard address of the given type.
@@ -100,4 +98,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
