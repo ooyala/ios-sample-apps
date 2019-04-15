@@ -28,10 +28,6 @@
 @property (nonatomic) NSString *actualVideoTitle;
 @property (nonatomic) PlayerViewController *playerViewController;
 
-@property (nonatomic) int playerViewHeightCalculated;
-@property (nonatomic) float padding_margin_Y;
-@property (nonatomic) BOOL ignore_init_padding; //only used on portrait view/ padding bw /player - scrollview/
-
 @end
 
 @implementation MainView
@@ -57,10 +53,6 @@ static float const leftPadding         = 10;
 
   // Init custom class
   self.configuration = [DemoSettings new]; //config object (config.json)
-
-  self.playerViewHeightCalculated = 0;
-  self.padding_margin_Y = 0;
-  self.ignore_init_padding = NO;
 
   self.playerViewController = [PlayerViewController alloc];
   [self renderPortrait];
@@ -112,10 +104,9 @@ static float const leftPadding         = 10;
   self.videoTitle.hidden = NO;
 
   float playerTop = 150;
-
-  self.playerViewHeightCalculated = self.view.frame.size.height * portscapePercentage; //assignt to a variable to know where the player ends
+  int playerViewHeightCalculated = self.view.frame.size.height * portscapePercentage; //assignt to a variable to know where the player ends
   self.playerview.frame = CGRectMake(leftPadding, playerTop,
-                                     self.view.frame.size.width * 0.95, self.playerViewHeightCalculated);
+                                     self.view.frame.size.width * 0.95, playerViewHeightCalculated);
 
   self.descriptionLabel.font= [UIFont fontWithName:@"Roboto-Regular" size:20.0];
   //self.descriptionLabel.numberOfLines = 2;
@@ -123,43 +114,24 @@ static float const leftPadding         = 10;
   [self.view addSubview:self.descriptionLabel];
   self.descriptionLabel.hidden = NO;
 
-  if (self.view.frame.size.height < 1000) { //pb exists an elegant way
-    self.padding_margin_Y = self.view.frame.size.height * .15; //iphone`
-  } else {
-    self.padding_margin_Y = self.view.frame.size.height * .10; //ipad portraid
-  }
-
   self.playerViewTop.constant = 80.0;
   self.playerViewHeight.active = YES;
   self.playerViewFullHeight.active = NO;
-
-  if (!self.ignore_init_padding) {
-    self.playerViewHeightCalculated += self.padding_margin_Y;
-  }
 }
 
 - (void)renderLandscape {
   NSLog(@"User render orientation: landscape");
 
-  self.ignore_init_padding = YES;
   [self.navigationController setNavigationBarHidden:YES animated:YES]; //Hide navigationbar
   self.videoTitle.hidden = YES;   //remove title uilabel
   self.descriptionLabel.hidden = YES; //remove description label
-  self.playerViewHeightCalculated = self.view.frame.size.height * landscapePercentage; //assignt to a variable to know where the player ends
-  self.playerview.frame = CGRectMake(1, 1 , self.view.frame.size.width, self.playerViewHeightCalculated);
-  if (self.view.frame.size.height < 768) {
-    self.padding_margin_Y = self.view.frame.size.height*.20; //iphone
-  } else {
-    self.padding_margin_Y = self.view.frame.size.height*.10; //ipad portraid
-  }
+
+  int playerViewHeightCalculated = self.view.frame.size.height * landscapePercentage; //assignt to a variable to know where the player ends
+  self.playerview.frame = CGRectMake(1, 1 , self.view.frame.size.width, playerViewHeightCalculated);
 
   self.playerViewTop.constant = 0.0;
   self.playerViewHeight.active = NO;
   self.playerViewFullHeight.active = YES;
-
-  if (!self.ignore_init_padding) {
-    self.playerViewHeightCalculated += self.padding_margin_Y;
-  }
 }
 
 - (void)updatetitleDiscovery:(NSNotification *)notification {
