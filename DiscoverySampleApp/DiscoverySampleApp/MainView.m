@@ -2,8 +2,8 @@
 //  MainView.m
 //  OoyalaSkinSampleApp
 //
-//  Created by Alan Garcia on 4/13/17.
-//  Copyright © 2017 Facebook. All rights reserved.
+//  Created on 4/13/17.
+//  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
 #import "MainView.h"
