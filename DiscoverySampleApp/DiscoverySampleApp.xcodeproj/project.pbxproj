@@ -180,13 +180,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0B47312E1C5199A300F1E7FD /* Base.lproj */ = {
+		0B47312E1C5199A300F1E7FD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				0B47312F1C5199A300F1E7FD /* LaunchScreen.xib */,
 				0B4731311C5199A300F1E7FD /* Main.storyboard */,
 			);
-			path = Base.lproj;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		0B7824221B2B7EB600D718AB /* DiscoverySampleApp */ = {
@@ -194,7 +194,7 @@
 			children = (
 				0B7824231B2B7EB600D718AB /* AppDelegate.h */,
 				0B7824241B2B7EB600D718AB /* AppDelegate.m */,
-				0B47312E1C5199A300F1E7FD /* Base.lproj */,
+				0B47312E1C5199A300F1E7FD /* Storyboards */,
 				0B7824581B2B855500D718AB /* Players */,
 				0B47312D1C51997500F1E7FD /* Supporting Files */,
 				0B7824471B2B834F00D718AB /* Utils */,
