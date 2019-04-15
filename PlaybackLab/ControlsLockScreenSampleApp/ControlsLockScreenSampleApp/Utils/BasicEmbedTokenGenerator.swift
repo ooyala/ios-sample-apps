@@ -30,8 +30,12 @@ class BasicEmbedTokenGenerator: NSObject, OOEmbedTokenGenerator {
   
   func token(forEmbedCodes embedCodes: [Any]!, callback: OOEmbedTokenCallback!) {
     let params = ["account_id": accountId]
-    
-    let uri = "/sas/embed_token/\(pcode)/\((embedCodes as! [String]).joined(separator: ","))"
+
+    guard let embedCodesArray = embedCodes as? [String] else {
+      return callback(nil)
+    }
+
+    let uri = "/sas/embed_token/\(pcode)/\(embedCodesArray.joined(separator: ","))"
     // You should not be using OOEmbeddedSecureURLGenerator in your own app.
     // We recommend generating this URL in a remote server you own, as we discourage storing apiKey and apiSecret information within the app because of security concerns.
     
