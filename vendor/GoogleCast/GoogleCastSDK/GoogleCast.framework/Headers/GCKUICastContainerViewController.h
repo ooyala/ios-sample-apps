@@ -10,7 +10,7 @@
 @class GCKUIMiniMediaControlsViewController;
 @class GCKUINextUpViewController;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A view controller which wraps another View Controller and adds a media playback notification
@@ -25,10 +25,10 @@ GCK_EXPORT
 @interface GCKUICastContainerViewController : UIViewController
 
 /** The view controller to be embedded as the content area of this view controller. */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) UIViewController *contentViewController;
+@property(nonatomic, strong, readonly, nullable) UIViewController *contentViewController;
 
 /** The "now playing" view controller. */
-@property(nonatomic, strong, readonly, GCK_NULLABLE)
+@property(nonatomic, strong, readonly, nullable)
     GCKUIMiniMediaControlsViewController *miniMediaControlsViewController;
 
 /**
@@ -36,10 +36,10 @@ GCK_EXPORT
  * be displayed automatically whenever there is media content loaded or playing on the receiver.
  * The default value is <code>NO</code>.
  */
-@property(nonatomic, assign, readwrite) BOOL miniMediaControlsItemEnabled;
+@property(nonatomic, assign) BOOL miniMediaControlsItemEnabled;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

@@ -11,12 +11,11 @@
  * GCKMediaStreamType enum.
  */
 
-@class GCKMediaInformationBuilder;
 @class GCKMediaMetadata;
 @class GCKMediaTextTrackStyle;
 @class GCKMediaTrack;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKMediaStreamType
@@ -42,12 +41,19 @@ GCK_EXPORT
 /**
  * The content ID for this stream.
  */
-@property(nonatomic, copy, readonly) NSString *contentID;
+@property(nonatomic, copy, readonly, nullable) NSString *contentID;
+
+/**
+ * The URL of the content to be played.
+ *
+ * @since 4.3.4
+ */
+@property(nonatomic, copy, readonly, nullable) NSURL *contentURL;
 
 /**
  * The stream type.
  */
-@property(nonatomic, assign, readonly) GCKMediaStreamType streamType;
+@property(nonatomic, readonly) GCKMediaStreamType streamType;
 
 /**
  * The content (MIME) type.
@@ -57,49 +63,59 @@ GCK_EXPORT
 /**
  * The media item metadata.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) GCKMediaMetadata *metadata;
+@property(nonatomic, readonly, nullable) GCKMediaMetadata *metadata;
 
 /**
  * The list of ad breaks in this content.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSArray<GCKAdBreakInfo *> *adBreaks;
+@property(nonatomic, copy, readonly, nullable) NSArray<GCKAdBreakInfo *> *adBreaks;
 
 /**
  * The list of ad break clips in this content.
  *
  * @since 3.3
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSArray<GCKAdBreakClipInfo *> *adBreakClips;
+@property(nonatomic, copy, readonly, nullable) NSArray<GCKAdBreakClipInfo *> *adBreakClips;
 
 /**
  * The length of the stream, in seconds, or <code>INFINITY</code> if it is a live stream.
  */
-@property(nonatomic, assign, readonly) NSTimeInterval streamDuration;
+@property(nonatomic, readonly) NSTimeInterval streamDuration;
 
 /**
  * The media tracks for this stream.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSArray<GCKMediaTrack *> *mediaTracks;
+@property(nonatomic, copy, readonly, nullable) NSArray<GCKMediaTrack *> *mediaTracks;
 
 /**
  * The text track style for this stream.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) GCKMediaTextTrackStyle *textTrackStyle;
+@property(nonatomic, copy, readonly, nullable) GCKMediaTextTrackStyle *textTrackStyle;
 
 /**
  * The deep link for the media as used by Google Assistant, if any.
  *
  * @since 4.0
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSString *entity;
+@property(nonatomic, copy, readonly, nullable) NSString *entity;
+
+/**
+ * The VMAP request configuration if any. See more here:
+ * <a href="https://www.iab.com/guidelines/digital-video-ad-serving-template-vast-4-0/">
+ * Digital Video Ad Serving Template 4.0</a>.
+ * If this is non-nil, all other ads related fields will be ignored.
+ *
+ * @since 4.3.4
+ */
+@property(nonatomic, readonly, nullable) GCKVASTAdsRequest *VMAP;
 
 /**
  * The custom data, if any.
  */
-@property(nonatomic, strong, readonly, GCK_NULLABLE) id customData;
+@property(nonatomic, readonly, nullable) id customData;
 
 /**
- * Designated initializer.
+ * Deprecated. Use GCKMediaInformationBuilder to initialize GCKMediaInformation objects.
  *
  * @param contentID The content ID.
  * @param streamType The stream type.
@@ -119,18 +135,17 @@ GCK_EXPORT
 - (instancetype)initWithContentID:(NSString *)contentID
                        streamType:(GCKMediaStreamType)streamType
                       contentType:(NSString *)contentType
-                         metadata:(GCKMediaMetadata *GCK_NULLABLE_TYPE)metadata
-                         adBreaks:(NSArray<GCKAdBreakInfo *> *GCK_NULLABLE_TYPE)adBreaks
-                     adBreakClips:(NSArray<GCKAdBreakClipInfo *> *GCK_NULLABLE_TYPE)adBreakClips
+                         metadata:(nullable GCKMediaMetadata *)metadata
+                         adBreaks:(nullable NSArray<GCKAdBreakInfo *> *)adBreaks
+                     adBreakClips:(nullable NSArray<GCKAdBreakClipInfo *> *)adBreakClips
                    streamDuration:(NSTimeInterval)streamDuration
-                      mediaTracks:(NSArray<GCKMediaTrack *> *GCK_NULLABLE_TYPE)mediaTracks
-                   textTrackStyle:(GCKMediaTextTrackStyle *GCK_NULLABLE_TYPE)textTrackStyle
-                       customData:(id GCK_NULLABLE_TYPE)customData;
+                      mediaTracks:(nullable NSArray<GCKMediaTrack *> *)mediaTracks
+                   textTrackStyle:(nullable GCKMediaTextTrackStyle *)textTrackStyle
+                       customData:(nullable id)customData
+    GCK_DEPRECATED("Use GCKMediaInformationBuilder to initialize GCKMediaInformation objects.");
 
 /**
- * Deprecated. Use initWithContentID:streamType:contentType:metadata:adBreaks:
- * adBreakClips:streamDuration:mediaTracks:textTrackStyle:entity:customData:
- * for ads and entity support.
+ * Deprecated. Use GCKMediaInformationBuilder to initialize GCKMediaInformation objects.
  *
  * @param contentID The content ID.
  * @param streamType The stream type.
@@ -146,15 +161,12 @@ GCK_EXPORT
 - (instancetype)initWithContentID:(NSString *)contentID
                        streamType:(GCKMediaStreamType)streamType
                       contentType:(NSString *)contentType
-                         metadata:(GCKMediaMetadata *GCK_NULLABLE_TYPE)metadata
+                         metadata:(nullable GCKMediaMetadata *)metadata
                    streamDuration:(NSTimeInterval)streamDuration
-                      mediaTracks:(NSArray<GCKMediaTrack *> *GCK_NULLABLE_TYPE)mediaTracks
-                   textTrackStyle:(GCKMediaTextTrackStyle *GCK_NULLABLE_TYPE)textTrackStyle
-                       customData:(id GCK_NULLABLE_TYPE)customData
-    GCK_DEPRECATED(
-        "Use "
-        "initWithContentID:streamType:contentType:metadata:adBreaks:adBreakClips:streamDuration:"
-        "mediaTracks:textTrackStyle:entity:customData: for ads and entity support.");
+                      mediaTracks:(nullable NSArray<GCKMediaTrack *> *)mediaTracks
+                   textTrackStyle:(nullable GCKMediaTextTrackStyle *)textTrackStyle
+                       customData:(nullable id)customData
+    GCK_DEPRECATED("Use GCKMediaInformationBuilder to initialize GCKMediaInformation objects.");
 
 /**
  * Searches for a media track with the given track ID.
@@ -163,7 +175,7 @@ GCK_EXPORT
  * @return The matching GCKMediaTrack object, or <code>nil</code> if there is no media track
  * with the given ID.
  */
-- (GCKMediaTrack *GCK_NULLABLE_TYPE)mediaTrackWithID:(NSInteger)trackID;
+- (nullable GCKMediaTrack *)mediaTrackWithID:(NSInteger)trackID;
 
 @end
 
@@ -183,7 +195,7 @@ GCK_EXPORT
  *
  * @code
  * GCKMediaInformationBuilder *builder =
- *     [[GCKMediaInformationBuilder alloc] initWithContentID:...];
+ *     [[GCKMediaInformationBuilder alloc] initWithContentURL:...];
  * builder.contentType = ...;
  * builder.streamType = ...;
  * builder.metadata = ...;
@@ -198,72 +210,86 @@ GCK_EXPORT
 
 /**
  * The content ID for this stream.
+ * @deprecated Use contentURL and entity instead.
  */
-@property(nonatomic, copy, readwrite) NSString *contentID;
+@property(nonatomic, copy, nullable) NSString *contentID;
+
+/**
+ * The URL of the content to be played.
+ *
+ * @since 4.3.4
+ */
+@property(nonatomic, copy, nullable) NSURL *contentURL;
 
 /**
  * The stream type. Defaults to GCKMediaStreamTypeBuffered.
  */
-@property(nonatomic, assign, readwrite) GCKMediaStreamType streamType;
+@property(nonatomic, assign) GCKMediaStreamType streamType;
 
 /**
  * The content (MIME) type.
  */
-@property(nonatomic, copy, readwrite) NSString *contentType;
+@property(nonatomic, copy, nullable) NSString *contentType;
 
 /**
  * The media item metadata.
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) GCKMediaMetadata *metadata;
+@property(nonatomic, nullable) GCKMediaMetadata *metadata;
 
 /**
  * The list of ad breaks in this content.
  */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSArray<GCKAdBreakInfo *> *adBreaks;
+@property(nonatomic, copy, nullable) NSArray<GCKAdBreakInfo *> *adBreaks;
 
 /**
  * The list of ad break clips in this content.
  */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSArray<GCKAdBreakClipInfo *> *adBreakClips;
+@property(nonatomic, copy, nullable) NSArray<GCKAdBreakClipInfo *> *adBreakClips;
 
 /**
  * The length of the stream, in seconds, or <code>INFINITY</code> if it is a live stream. Defaults
  * to 0.
  */
-@property(nonatomic, assign, readwrite) NSTimeInterval streamDuration;
+@property(nonatomic, assign) NSTimeInterval streamDuration;
 
 /**
  * The media tracks for this stream.
  */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSArray<GCKMediaTrack *> *mediaTracks;
+@property(nonatomic, copy, nullable) NSArray<GCKMediaTrack *> *mediaTracks;
 
 /**
  * The text track style for this stream.
  */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) GCKMediaTextTrackStyle *textTrackStyle;
+@property(nonatomic, copy, nullable) GCKMediaTextTrackStyle *textTrackStyle;
 
 /**
  * The deep link for the media as used by Google Assistant, if any.
  */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSString *entity;
+@property(nonatomic, copy, nullable) NSString *entity;
+
+/**
+ * The VMAP request configuration if any. See more here:
+ * <a href="https://www.iab.com/guidelines/digital-video-ad-serving-template-vast-4-0/">
+ * Digital Video Ad Serving Template 4.0</a>.
+ * If this is non-nil, all other ads related fields will be ignored.
+ *
+ * @since 4.3.4
+ */
+@property(nonatomic, nullable) GCKVASTAdsRequest *VMAP;
 
 /**
  * The custom data, if any.
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) id customData;
+@property(nonatomic, nullable) id customData;
 
 /**
  * Constructs a new GCKMediaInformationBuilder with the given required attributes, and all other
  * attributes initialized to default values.
+ * @param contentURL The URL of the content to be played.
+ *
+ * @since 4.3.4
  */
-- (instancetype)initWithContentID:(NSString *)contentID;
-
-/**
- * Constructs a new GCKMediaInformationBuilder with the given required attributes, and all other
- * attributes initialized to default values.
- */
-- (instancetype)initWithContentID:(NSString *)contentID
-                           entity:(NSString *)entity;
+- (instancetype)initWithContentURL:(NSURL *)contentURL;
 
 /**
  * Constructs a new GCKMediaInformationBuilder with the given required attributes, and all other
@@ -280,6 +306,23 @@ GCK_EXPORT
 - (instancetype)initWithMediaInformation:(GCKMediaInformation *)mediaInfo;
 
 /**
+ * Constructs a new GCKMediaInformationBuilder with the given required attributes, and all other
+ * attributes initialized to default values.
+ * @deprecated Use initWithContentURL: or initWithEntity: instead.
+ */
+- (instancetype)initWithContentID:(NSString *)contentID
+    GCK_DEPRECATED("Use initWithContentURL: or initWithEntity:");
+
+/**
+ * Constructs a new GCKMediaInformationBuilder with the given required attributes, and all other
+ * attributes initialized to default values.
+ * @deprecated Use initWithContentURL: or initWithEntity: instead.
+ */
+- (instancetype)initWithContentID:(NSString *)contentID
+                           entity:(NSString *)entity
+    GCK_DEPRECATED("Use initWithContentURL: or initWithEntity:");
+
+/**
  * Builds a GCKMediaInformation using the builder's current attributes.
  *
  * @return The new GCKMediaInformation instance.
@@ -288,4 +331,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

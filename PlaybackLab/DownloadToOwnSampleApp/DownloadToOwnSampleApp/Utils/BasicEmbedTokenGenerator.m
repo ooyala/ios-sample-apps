@@ -27,10 +27,8 @@
 
 - (void)tokenForEmbedCodes:(NSArray *)embedCodes
                   callback:(OOEmbedTokenCallback)callback {
-  NSMutableDictionary* params = [NSMutableDictionary dictionary];
-  
-  params[@"account_id"] = self.accountId;
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@",
+  NSDictionary *params = @{@"account_id": self.accountId};
+  NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@",
                    self.pcode, [embedCodes componentsJoinedByString:@","]];
   
   // You should not be using OOEmbeddedSecureURLGenerator in your own app.

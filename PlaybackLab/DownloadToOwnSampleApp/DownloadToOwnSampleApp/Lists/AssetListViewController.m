@@ -10,11 +10,8 @@
 #import "OptionTableViewCell.h"
 #import "OptionsDataSource.h"
 #import "PlayerSelectionOption.h"
-
 #import "PlayerViewController.h"
-
 #import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaSDK/OODtoAsset.h>
 
 @interface AssetListViewController ()
 

@@ -13,7 +13,7 @@
 
 @class GCKUIMultistateButton;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @var GCKUIControlStateMuteOff
@@ -71,14 +71,14 @@ GCK_EXPORT
  * volume increment. The button will be disabled if there is no session currently active or if the
  * current session does not support volume adjustment.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *volumeUpButton;
+@property(nonatomic, weak, nullable) UIButton *volumeUpButton;
 
 /**
  * A "volume down" button. When the button is tapped, the receiver's volume is decreased by the
  * volume increment. The button will be disabled if there is no session currently active or if the
  * current session does not support volume adjustment.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UIButton *volumeDownButton;
+@property(nonatomic, weak, nullable) UIButton *volumeDownButton;
 
 /**
  * A slider for displaying and changing the current receiver volume. When the slider's value is
@@ -87,7 +87,7 @@ GCK_EXPORT
  * slider will be disabled if there is no session currently active or if the current session does
  * not support volume adjustment.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UISlider *volumeSlider;
+@property(nonatomic, weak, nullable) UISlider *volumeSlider;
 
 /**
  * A switch for toggling the receiver's mute state. When the switch is toggled, the mute state is
@@ -95,7 +95,7 @@ GCK_EXPORT
  * receiver's mute state, the switch is updated accordingly. The switch will be disabled if there is
  * no session currently active  or if the current session does not support muting.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) UISwitch *muteSwitch;
+@property(nonatomic, weak, nullable) UISwitch *muteSwitch;
 
 /**
  * A toggle button for muting/unmuting the receiver. The caller should set appropriate "muted" and
@@ -105,7 +105,7 @@ GCK_EXPORT
  * button will be disabled if there is no session currently active or if the current session does
  * not support volume muting.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) GCKUIMultistateButton *muteToggleButton;
+@property(nonatomic, weak, nullable) GCKUIMultistateButton *muteToggleButton;
 
 /**
  * Designated initializer.
@@ -148,6 +148,6 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

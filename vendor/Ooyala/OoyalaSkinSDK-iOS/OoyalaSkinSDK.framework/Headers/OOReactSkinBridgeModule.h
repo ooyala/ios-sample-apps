@@ -2,7 +2,7 @@
 //  OOReactSkinBridgeModule.h
 //  OoyalaSkinSDK
 //
-//  Created by Maksim Kupetskii on 8/14/18.
+//  Created on 8/14/18.
 //  Copyright © 2018 ooyala. All rights reserved.
 //
 

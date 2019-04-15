@@ -11,9 +11,9 @@
 
 #pragma mark - Public properties
 
-@property (nonatomic, retain) IBOutlet UIView *videoView;
-@property (nonatomic, retain) IBOutlet UIView *qaView;
-@property (nonatomic, retain) IBOutlet UITextView *playerParams;
-@property (nonatomic, retain) IBOutlet UITextView *qaLogTextView;
+@property (nonatomic) IBOutlet UIView *videoView;
+@property (nonatomic) IBOutlet UIView *qaView;
+@property (nonatomic) IBOutlet UITextView *playerParams;
+@property (nonatomic) IBOutlet UITextView *qaLogTextView;
 
 @end

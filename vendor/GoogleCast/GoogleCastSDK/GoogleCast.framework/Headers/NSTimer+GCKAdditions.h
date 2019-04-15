@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A category on <a href="https://goo.gl/0wgZmj"><b>NSTimer</b></a> that adds some useful
@@ -20,9 +20,9 @@ GCK_ASSUME_NONNULL_BEGIN
 + (NSTimer *)gck_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
                                      weakTarget:(id)target
                                        selector:(SEL)selector
-                                       userInfo:(id GCK_NULLABLE_TYPE)userInfo
+                                       userInfo:(nullable id)userInfo
                                         repeats:(BOOL)repeats;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

@@ -17,7 +17,7 @@
 /**
 * @return non-nil (possibly empty) NSNumber (int in seconds) set of cue point times for ads.
 */
-- (NSSet*)getCuePointsAtSeconds;
+- (NSSet *)getCuePointsAtSeconds;
 
 /**
  * Mark all adspots as unplayed

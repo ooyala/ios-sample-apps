@@ -6,6 +6,8 @@
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
+@import UIKit;
+
 #import <OoyalaCastSDK/OOcastManager.h>
 #import <OoyalaSDK/OOEmbedTokenGenerator.h>
 

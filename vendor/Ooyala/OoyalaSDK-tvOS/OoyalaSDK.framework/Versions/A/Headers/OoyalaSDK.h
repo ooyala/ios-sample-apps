@@ -155,7 +155,6 @@
 #import "OOCallbacks.h"
 #import "OOModule.h"
 #import "OOReturnState.h"
-#import "OOUserInfo.h"
 #import "OOStreamPlayerMappingCreator.h"
 #import "OOStreamPlayerMappingPredicate.h"
 #import "OOLifeCycle.h"

@@ -5,10 +5,8 @@
 //  Created on 8/23/16.
 //  Copyright © 2016 Ooyala. All rights reserved.
 //
-//  The OptionTableViewCell will render each asset in a UITableView.
-//  It is linked to an UITableView in the Storyboard.
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /**
  This is how we named the cell in the Storyboard, if you change then identifier in the storyboard you'll have to change the value of this NSString too.

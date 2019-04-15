@@ -6,14 +6,18 @@
 //  Copyright (c) 2014 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+#import <OoyalaSDK/OOPlayerProtocol.h>
+#import <OoyalaSDK/OOLifeCycle.h>
 
-#import <OoyalaSDK/OoyalaSDK.h>
-#import "OOSampleAdSpot.h"
+@class OOSampleAdSpot;
+@class OOStateNotifier;
 
-@interface OOSampleAdPlayer : UILabel <OOLifeCycle, OOPlayerProtocol>
+@interface OOSampleAdPlayer : UILabel<OOLifeCycle, OOPlayerProtocol>
 
-- (instancetype)initWithFrame:(CGRect)frame notifier:(OOStateNotifier *)notifier;
+- (instancetype)initWithFrame:(CGRect)frame
+                     notifier:(OOStateNotifier *)notifier;
+
 - (void)loadAd:(OOSampleAdSpot *)ad;
 
 @end

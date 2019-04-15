@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A protocol that defines a means of retrieving and caching images. A default implementation is
@@ -30,10 +30,10 @@ GCK_EXPORT
  * instead. The block should only be invoked on the main thread.
  */
 - (void)fetchImageForURL:(NSURL *)imageURL
-              completion:(void (^)(UIImage *GCK_NULLABLE_TYPE))completion;
+              completion:(void (^)(UIImage *_Nullable))completion;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

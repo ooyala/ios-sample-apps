@@ -17,4 +17,6 @@
 
 @property (nonatomic) BOOL isGravityFilled;
 
+@property (nonatomic, readonly) BOOL prefersHomeIndicatorAutoHidden; // Hide Home Screen button for iPhone X, iPhone XR and iPhone XS
+
 @end

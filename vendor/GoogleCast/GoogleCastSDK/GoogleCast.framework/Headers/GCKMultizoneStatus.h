@@ -6,7 +6,7 @@
 
 @class GCKMultizoneDevice;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The status of a multizone group.
@@ -17,14 +17,18 @@ GCK_EXPORT
 @interface GCKMultizoneStatus : NSObject <NSCopying, NSSecureCoding>
 
 /** The member devices of the multizone group. */
-@property(nonatomic, copy, readwrite) NSArray<GCKMultizoneDevice *> *devices;
+@property(nonatomic, copy, readonly) NSArray<GCKMultizoneDevice *> *devices;
 
 /** Initializes the object with the given JSON data. */
-- (instancetype)initWithJSONObject:(id)JSONObject;
+- (instancetype)initWithJSONObject:(id)JSONObject
+    GCK_DEPRECATED("GCKMultizoneStatus should only be initialized internally.");
 
 /** Initializes the object with the given list of member devices. */
-- (instancetype)initWithDevices:(NSArray<GCKMultizoneDevice *> *)devices;
+- (instancetype)initWithDevices:(NSArray<GCKMultizoneDevice *> *)devices
+    GCK_DEPRECATED("GCKMultizoneStatus should only be initialized internally.");
 
-@end
+- (instancetype)init NS_UNAVAILABLE;
 
-GCK_ASSUME_NONNULL_END
+@end  // GCKMultizoneStatus
+
+NS_ASSUME_NONNULL_END

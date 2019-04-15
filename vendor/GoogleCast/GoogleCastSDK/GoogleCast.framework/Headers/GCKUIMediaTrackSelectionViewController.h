@@ -10,7 +10,7 @@
 @class GCKMediaInformation;
 @protocol GCKUIMediaTrackSelectionViewControllerDelegate;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A view controller that displays a list of the available text and audio tracks for a given media
@@ -26,18 +26,18 @@ GCK_EXPORT
 /**
  * The delegate that receives selection notifications from the controller.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE)
+@property(nonatomic, weak, nullable)
     id<GCKUIMediaTrackSelectionViewControllerDelegate> selectionDelegate;
 
 /**
  * The media information from which the list of available media tracks will be obtained.
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) GCKMediaInformation *mediaInfo;
+@property(nonatomic, strong, nullable) GCKMediaInformation *mediaInfo;
 
 /**
  * The list of currently selected media track IDs.
  */
-@property(nonatomic, copy, readwrite, GCK_NULLABLE) NSArray<NSNumber *> *selectedTrackIDs;
+@property(nonatomic, copy, nullable) NSArray<NSNumber *> *selectedTrackIDs;
 
 @end
 
@@ -58,6 +58,6 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

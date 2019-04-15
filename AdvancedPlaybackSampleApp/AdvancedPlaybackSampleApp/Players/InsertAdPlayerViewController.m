@@ -6,11 +6,10 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-
 #import "InsertAdPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
-
+#import "PlayerSelectionOption.h"
 
 @interface InsertAdPlayerViewController ()
 
@@ -25,21 +24,22 @@
 
 @end
 
-
 @implementation InsertAdPlayerViewController {
   AppDelegate *appDel;
 }
 
 #pragma mark - Initialization
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled{
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-  self.nib = @"PlayerDoubleButton";
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled{
+  self = [super initWithPlayerSelectionOption:playerSelectionOption
+                                qaModeEnabled:qaModeEnabled];
+  _nib = @"PlayerDoubleButton";
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _embedCode    = self.playerSelectionOption.embedCode;
+    _pcode        = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
+    self.title    = self.playerSelectionOption.title;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -51,13 +51,13 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
 
   [self.button1 setTitle:@"INSERT VAST AD" forState:UIControlStateNormal];
   [self.button2 setTitle:@"INSERT OOYALA AD" forState:UIControlStateNormal];
@@ -74,25 +74,25 @@
   // Create Ooyala Ads Plugin
   self.plugin = [self.ooyalaPlayerViewController.player managedAdsPlugin];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:_ooyalaPlayerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:_ooyalaPlayerViewController.player];
   
   // Attach it to current view
-  [self addChildViewController:_ooyalaPlayerViewController];
-  [self.playerView addSubview:_ooyalaPlayerViewController.view];
-  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  [self addChildViewController:self.ooyalaPlayerViewController];
+  [self.playerView addSubview:self.ooyalaPlayerViewController.view];
+  self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   
   // Load the video
-  [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [_ooyalaPlayerViewController.player play];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
+  [self.ooyalaPlayerViewController.player play];
 }
 
 #pragma mark - Actions
 
 - (IBAction)onLeftBtnClick:(UIButton *)sender {
-  NSNumber *playheadTime = [NSNumber numberWithFloat:[self.ooyalaPlayerViewController.player playheadTime]];
+  NSNumber *playheadTime = @(self.ooyalaPlayerViewController.player.playheadTime);
   NSURL *vastURL = [NSURL URLWithString:@"http://player.ooyala.com/static/v4/testAssets/vast2/VastAd_Preroll.xml"];
   
   OOVASTAdSpot *vastAd = [[OOVASTAdSpot alloc] initWithTime:playheadTime
@@ -104,7 +104,7 @@
 }
 
 - (IBAction)onRightBtnClick:(UIButton *)sender {
-  NSNumber *playheadTime = [NSNumber numberWithFloat:[self.ooyalaPlayerViewController.player playheadTime]];
+  NSNumber *playheadTime = @(self.ooyalaPlayerViewController.player.playheadTime);
 
   OOOoyalaAdSpot *ooyalaAd = [[OOOoyalaAdSpot alloc] initWithTime:playheadTime
                                                          clickURL:nil
@@ -114,30 +114,28 @@
   [self.plugin insertAd:ooyalaAd];
 }
 
-- (void) notificationHandler:(NSNotification*) notification {
-  
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
-                       [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
-  
+                       notification.name,
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.ooyalaPlayerViewController.player.state],
+                       self.ooyalaPlayerViewController.player.playheadTime,
+                       appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
   if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@" ,string, message];
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
     dispatch_async(dispatch_get_main_queue(), ^{
       self.textView.text = appendString;
     });
   }
   appDel.count++;
 }
-
 
 @end

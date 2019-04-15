@@ -13,6 +13,9 @@
 
 @interface OOOoyalaPlayer (Playback)
 
+@property (readonly, nonatomic, getter=isPiPActivated) BOOL pipActivated;
+@property (readonly, nonatomic, getter=isAudioOnly) BOOL audioOnly;
+
 /**
  * Gets the duration of the asset.
  * @returns the duration of the currently playing asset, in seconds

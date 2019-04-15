@@ -2,11 +2,11 @@
 //  OOLocaleHelper.h
 //  OoyalaSkinSDK
 //
-//  Created by Zhihui Chen on 7/9/15.
+//  Created on 7/9/15.
 //  Copyright (c) 2015 ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 FOUNDATION_EXPORT NSString *const kLocalizableStrings;
 FOUNDATION_EXPORT NSString *const kLocale;

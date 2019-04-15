@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Convenience methods for constructing GCKDevice objects and sending discovery notifications to the
@@ -75,4 +75,4 @@ GCK_ASSUME_NONNULL_BEGIN
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

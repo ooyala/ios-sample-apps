@@ -5,13 +5,12 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "OOControls.h"
 #import "OOTimeSliderProtocol.h"
 #import "OOVolumeSliderProtocol.h"
 #import "OOControlsDelegate.h"
 #import "OOTimeSliderDelegate.h"
-#import "OOVolumeSliderDelegate.h"
 
 
 @interface OOInlineControlsView : UIView <OOControls, OOTimeSliderProtocol, OOVolumeSliderProtocol>
@@ -22,5 +21,6 @@
 @property (nonatomic, weak) id<OOTimeSliderDelegate> timeSliderDelegate;
 
 @property (nonatomic) CGRect bottomBarFrame;
+@property (nonatomic) BOOL isPiPActive;
 
 @end

@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A class that can be used to implement a custom stream playback rate UI.
@@ -30,17 +30,17 @@ GCK_EXPORT
  * (unless it is in the process of writing it) and if it changes, it issues the appropriate media
  * command with the GCKRemoteMediaClient to change the playback rate.
  */
-@property(nonatomic, assign, readwrite) float playbackRate;
+@property(nonatomic, assign) float playbackRate;
 
 /**
  * The GCKUIMediaController writes this property to enable or disable the UI control(s) managed by
  * this controller. Media-related UI controls are temporarily disabled while a media command is
  * in-flight.
  */
-@property(nonatomic, assign, readwrite) BOOL inputEnabled;
+@property(nonatomic, assign) BOOL inputEnabled;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

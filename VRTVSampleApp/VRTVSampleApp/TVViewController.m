@@ -6,14 +6,13 @@
 //
 
 #import "TVViewController.h"
-#import <OoyalaVRTVSDK/OoyalaVRTVSDK.h>
 #import <OoyalaTVSkinSDK/OOOoyalaTVPlayerViewController.h>
-
+#import <OoyalaVRTVSDK/OoyalaVRTVSDK.h>
 
 @interface TVViewController ()
 
-@property(weak, nonatomic) IBOutlet UIView *skinContainerView;
-@property(nonatomic, retain) OOOoyalaTVPlayerViewController *skinController;
+@property (nonatomic, weak) IBOutlet UIView *skinContainerView;
+@property (nonatomic) OOOoyalaTVPlayerViewController *skinController;
 
 @end
 
@@ -52,7 +51,7 @@ NSString *TV_EMBEDCODE_TEST5 = @"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"; // ---> IMA 
   
   [self addChildViewController:_skinController];
   
-  [ooyalaVRTVPlayer setEmbedCode:TV_EMBEDCODE_TEST5];
+  [ooyalaVRTVPlayer setEmbedCode:TV_EMBEDCODE_TEST4];
 }
 
 @end

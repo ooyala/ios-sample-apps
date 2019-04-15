@@ -34,7 +34,8 @@ class DefaultVideoPlayerViewController: UIViewController {
     }
 
     // VR player
-    let jsCodeLocation = Bundle.main.url(forResource: "main", withExtension: "jsbundle")
+    guard let jsCodeLocation = Bundle.main.url(forResource: "main",
+                                               withExtension: "jsbundle") else { return }
     let overrideConfigs = ["upNextScreen": ["timeToShow": "8"]]
     let options = OOOptions()
 
@@ -42,7 +43,10 @@ class DefaultVideoPlayerViewController: UIViewController {
     options?.bypassPCodeMatching = false
 
     let domain = OOPlayerDomain(string: viewModel.domain)
-    let ooyalaVRPlayer = OOOoyalaVRPlayer(pcode: viewModel.pcode, domain: domain, options: options)
+    guard let ooyalaVRPlayer = OOOoyalaVRPlayer(pcode: viewModel.pcode,
+                                                domain: domain, options: options) else {
+                                                  return
+    }
 
     // Skin
     let discoveryOptions = OODiscoveryOptions(type: .popular, limit: 10, timeout: 60)
@@ -53,8 +57,7 @@ class DefaultVideoPlayerViewController: UIViewController {
 
     skinController = OOSkinViewController(player: ooyalaVRPlayer,
                                           skinOptions: skinOptions,
-                                          parent: skinContainerView,
-                                          launchOptions: nil)
+                                          parent: skinContainerView)
 
     // Subscribe for notifications with QA mode enabled
     NotificationCenter.default.addObserver(self,
@@ -73,7 +76,7 @@ class DefaultVideoPlayerViewController: UIViewController {
                                            object: nil)
 
     // Set video embed code
-    ooyalaVRPlayer?.setEmbedCode(viewModel.videoItem.embedCode)
+    ooyalaVRPlayer.setEmbedCode(viewModel.videoItem.embedCode)
   }
 
   private func configureUI() {

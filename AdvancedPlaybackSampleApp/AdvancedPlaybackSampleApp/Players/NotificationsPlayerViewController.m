@@ -9,7 +9,7 @@
 #import "NotificationsPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
-
+#import "PlayerSelectionOption.h"
 
 @interface NotificationsPlayerViewController ()
 
@@ -23,21 +23,22 @@
 
 @end
 
-
 @implementation NotificationsPlayerViewController{
   AppDelegate *appDel;
 }
 
 #pragma mark - Initialization
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled{
-  self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled];
-  self.nib = @"PlayerSimple";
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled{
+  self = [super initWithPlayerSelectionOption:playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled];
+  _nib = @"PlayerSimple";
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _embedCode    = self.playerSelectionOption.embedCode;
+    _pcode        = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
+    self.title    = self.playerSelectionOption.title;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -49,32 +50,31 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   // Create Ooyala ViewController
   OOOoyalaPlayer *player = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]];
-  self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
+  _ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
   // Add self as an observer for the OoyalaPlayer
-  [[NSNotificationCenter defaultCenter] addObserver: self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.ooyalaPlayerViewController.player];
-  
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.ooyalaPlayerViewController.player];
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
 
   // Attach it to current view
   [self addChildViewController:self.ooyalaPlayerViewController];
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
-  [self.ooyalaPlayerViewController.view setFrame:self.playerView.bounds];
+  self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   
   // Load the video
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
@@ -86,33 +86,28 @@
  *  Filter on "Notification Received:" in xcode logs to see all notifications in the notification workflow
  */
 /** NOTE: there could also be UI-related notifications from your OoyalaPlayerViewController or OOSkinViewController that are not represented here **/
-- (void)notificationHandler:(NSNotification*) notification {
-  
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChanged Notifications for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
-  
     // Notifications for when Ooyala API requests are completed
-  
   } else if ([notification.name isEqualToString:OOOoyalaPlayerEmbedCodeSetNotification]) {
     NSLog(@"Note: The Embed Code has been set, effectively restarting the OoyalaPlayer");
   } else if ([notification.name isEqualToString:OOOoyalaPlayerContentTreeReadyNotification]) {
   } else if ([notification.name isEqualToString:OOOoyalaPlayerAuthorizationReadyNotification]) {
   } else if ([notification.name isEqualToString:OOOoyalaPlayerMetadataReadyNotification]) {
-    
     // Notification when the playback starts or completes
   } else if ([notification.name isEqualToString:OOOoyalaPlayerPlayStartedNotification]) {
     NSLog(@"Note: The player has started playback of this asset for the first time");
   } else if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification]) {
     NSLog(@"Note: The player has reached the end of the current asset");
-  
     // Notification when player has all information from Ooyala APIs
   } else if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
     OOVideo *video = self.ooyalaPlayerViewController.player.currentItem;
     NSArray *streams = [video getStreams];
     OOStream *stream;
     if (streams.count > 0) {
-      stream = [streams objectAtIndex:0];
+      stream = streams.firstObject;
     }
   
     NSLog(@"Current Item Changed.  Content ID: %@, Stream URL %@, Stream Type %@", video.embedCode, stream.decodedURL, stream.deliveryType);
@@ -166,7 +161,6 @@
     
       // Notification when the user changes the desired state of playback
   } else if ([notification.name isEqualToString:OOOoyalaPlayerDesiredStateChangedNotification]) {
-  
     // Desired state represents what the video player SHOULD be doing.  If the user presses play (or app calls [player play]), this is set to "Playing"
     // If there is no initial [player play], if user clicks pause, or if [player pause] is called, this will be set to "Paused"
     switch (self.ooyalaPlayerViewController.player.desiredState) {
@@ -189,48 +183,45 @@
   } else if ([notification.name isEqualToString:OOOoyalaPlayerAdSkippedNotification]) {
   } else if ([notification.name isEqualToString:OOOoyalaPlayerAdTappedNotification]) {
   } else if ([notification.name isEqualToString:OOOoyalaPlayerContentResumedAfterAdNotification]) {
-    
     // Notifications around errors
   } else if ([notification.name isEqualToString:OOOoyalaPlayerErrorNotification]) {
     // Error codes names can be found in OOOoyalaError
-    NSLog(@"Note: Playback Error: Code: %d, Description: %@", [self.ooyalaPlayerViewController.player.error code], [self.ooyalaPlayerViewController.player.error description]);
+    NSLog(@"Note: Playback Error: Code: %ld, Description: %@",
+          (long)self.ooyalaPlayerViewController.player.error.code,
+          self.ooyalaPlayerViewController.player.error.description);
   } else if ([notification.name isEqualToString:OOOoyalaPlayerAdErrorNotification]) {
     NSLog(@"Note: Ad Playback Error");
     // Notification when setClosedCaptionsLanguage is called on OoyalaPlayer
   } else if ([notification.name isEqualToString:OOOoyalaPlayerLanguageChangedNotification]) {
-    
     // Notifications around Seeking
     // TODO: Seek notifications also fire after midrolls and on video replay.
   } else if ([notification.name isEqualToString:OOOoyalaPlayerSeekStartedNotification]) {
     NSLog(@"Note: Seek Started");
   } else if ([notification.name isEqualToString:OOOoyalaPlayerSeekCompletedNotification]) {
     NSLog(@"Note: Seek Complete");
-    
     // Notification when the OoyalaPlayer has gotten Timed Metadata from within the media stream
   } else if ([notification.name isEqualToString:OOOoyalaPlayerJsonReceivedNotification]) {
-    
     // Notification when the bitrate changes in media playback
   } else if ([notification.name isEqualToString:OOOoyalaPlayerBitrateChangedNotification]) {
     NSLog(@"Note: Bitrate changed notification received: %f", self.ooyalaPlayerViewController.player.bitrate);
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
-                       [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
-  
+                       notification.name,
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.ooyalaPlayerViewController.player.state],
+                       self.ooyalaPlayerViewController.player.playheadTime,
+                       appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
   if (self.qaModeEnabled) {
     NSString *string = self.textView.text;
-    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@" ,string, message];
+    NSString *appendString = [NSString stringWithFormat:@"%@ :::::::::: %@", string, message];
     dispatch_async(dispatch_get_main_queue(), ^{
       self.textView.text = appendString;
     });
   }
   appDel.count++;
 }
-
 
 @end

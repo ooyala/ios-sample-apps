@@ -6,15 +6,18 @@
  * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+#import <OoyalaSDK/OOCastModeOptions.h>
 
 @class OOReactSkinModel;
 @class OOOoyalaPlayer;
 
-@interface OOSkinPlayerObserver : NSObject
+@interface OOSkinPlayerObserver : NSObject <OOCastNotifiable>
 
 - (instancetype)init __attribute__((unavailable("init not available")));
-- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player ooReactSkinModel:(OOReactSkinModel *)ooReactSkinModel;
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
+              ooReactSkinModel:(OOReactSkinModel *)ooReactSkinModel;
 
 - (void)bridgeCurrentItemChangedNotification:(NSNotification *)notification;
 - (void)bridgeErrorNotification:(NSNotification *)notification;

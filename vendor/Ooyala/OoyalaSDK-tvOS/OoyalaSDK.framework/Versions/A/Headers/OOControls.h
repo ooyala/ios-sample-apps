@@ -14,5 +14,7 @@
 - (void)setVideoGravityButtonShowing:(BOOL)showing;
 - (void)setGravityState:(BOOL)isZoomed;
 - (void)setHiddenControls:(BOOL)hidden;
+- (void)setPiPButtonShowing:(BOOL)showing;
+- (void)showReplayButton;
 
 @end

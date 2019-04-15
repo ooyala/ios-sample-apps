@@ -9,7 +9,7 @@
 
 typedef NSInteger GCKRequestID;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKRequestAbortReason
@@ -37,7 +37,7 @@ GCK_EXPORT
 /**
  * The delegate for receiving notifications about the status of the request.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE) id<GCKRequestDelegate> delegate;
+@property(nonatomic, weak, nullable) id<GCKRequestDelegate> delegate;
 
 /**
  * The unique ID assigned to this request.
@@ -47,7 +47,7 @@ GCK_EXPORT
 /**
  * The error that caused the request to fail, if any, otherwise <code>nil</code>.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) GCKError *error;
+@property(nonatomic, copy, readonly, nullable) GCKError *error;
 
 /**
  * A flag indicating whether the request is currently in progress.
@@ -149,4 +149,4 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

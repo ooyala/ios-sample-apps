@@ -2,11 +2,11 @@
 //  NSString+Utils.h
 //  OoyalaSkinSDK
 //
-//  Created by Eric Vargas on 10/29/15.
+//  Created on 10/29/15.
 //  Copyright © 2015 ooyala. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface NSString (Utils)
 

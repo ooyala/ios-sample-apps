@@ -15,5 +15,6 @@
 - (void)gravityFillButtonDidSelected:(id)sender;
 - (void)closedCaptionsButtonDidSelected:(id)sender;
 - (void)doneButtonDidSelect:(id)sender;
+- (void)pipButtonDidSelect:(id)sender;
 
 @end

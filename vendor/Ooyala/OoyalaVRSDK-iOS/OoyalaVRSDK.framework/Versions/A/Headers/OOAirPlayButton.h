@@ -5,9 +5,8 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <OoyalaSDK/OoyalaSDK.h>
+@import UIKit.UIButton;
 
-
-@interface OOAirPlayButton : OOScalableImageButton
+@interface OOAirPlayButton : UIButton
 
 @end

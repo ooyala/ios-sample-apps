@@ -13,7 +13,7 @@
 
 @protocol GCKUIMiniMediaControlsViewControllerDelegate;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A view controller which implements the "now playing" control bar. In its default configuration,
@@ -31,14 +31,14 @@ GCK_EXPORT
  * The view controller's delgate, typically a full-screen view controller in charge of presenting
  * and hiding this control bar when appropriate.
  */
-@property(nonatomic, weak, readwrite, GCK_NULLABLE)
+@property(nonatomic, weak, nullable)
     id<GCKUIMiniMediaControlsViewControllerDelegate> delegate;
 
 /**
  * Whether the thumbnail image should be displayed or not. By default this property is set to
  * <code>YES</code>.
  */
-@property(nonatomic, assign, readwrite) BOOL thumbnailEnabled;
+@property(nonatomic, assign) BOOL thumbnailEnabled;
 
 /**
  * Indicates the display state of the control bar. When <code>YES</code>, there is media being
@@ -73,6 +73,6 @@ GCK_EXPORT
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

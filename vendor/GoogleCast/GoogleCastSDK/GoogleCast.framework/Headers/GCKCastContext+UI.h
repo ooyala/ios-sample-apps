@@ -18,7 +18,7 @@
 @protocol GCKUIImageCache;
 @protocol GCKUIImagePicker;
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The name of the notification that will be published when the expanded media controls should be
@@ -56,14 +56,14 @@ GCK_EXTERN NSString *const kGCKUICastDialogDidHideNotification;
  * referenced in media metadata. A default implementation will be used if one is not provided by the
  * application. May be set to <code>nil</code> to reinstate the default image cache.
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) id<GCKUIImageCache> imageCache;
+@property(nonatomic, strong, nullable) id<GCKUIImageCache> imageCache;
 
 /**
  * The image picker implementation that will be used to select an image for a specific purpose.
  * A default implementation will be used if one is not provided by the application. May be set to
  * <code>nil</code> to reinstate the default image picker.
  */
-@property(nonatomic, strong, readwrite, GCK_NULLABLE) id<GCKUIImagePicker> imagePicker;
+@property(nonatomic, strong, nullable) id<GCKUIImagePicker> imagePicker;
 
 /**
  * Displays the Cast dialog.
@@ -124,7 +124,7 @@ GCK_EXTERN NSString *const kGCKUICastDialogDidHideNotification;
  * default expaned controls view. If <code>NO</code>, the framework will just trigger a
  * @ref GCKCastContext::kGCKExpandedMediaControlsTriggeredNotification.
  */
-@property(nonatomic, assign, readwrite) BOOL useDefaultExpandedMediaControls;
+@property(nonatomic, assign) BOOL useDefaultExpandedMediaControls;
 
 /**
  * The instance of the default Cast expanded media controls view controller.
@@ -134,6 +134,6 @@ GCK_EXTERN NSString *const kGCKUICastDialogDidHideNotification;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

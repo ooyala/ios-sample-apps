@@ -11,12 +11,11 @@
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
 
-
 @interface FreewheelPlayerViewController ()
 
 #pragma mark - Private properties
 
-@property (nonatomic, retain) OOSkinViewController *skinController;
+@property (nonatomic) OOSkinViewController *skinController;
 @property (nonatomic) OOFreewheelManager *adsManager;
 @property NSString *embedCode;
 @property NSString *nib;
@@ -25,21 +24,21 @@
 
 @end
 
-
 @implementation FreewheelPlayerViewController {
   AppDelegate *appDel;
 }
 
 #pragma mark - Initializaiton
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   if (self.playerSelectionOption) {
-    self.nib = self.playerSelectionOption.nib;
-    self.embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.playerDomain;
-    self.pcode = playerSelectionOption.pcode;
+    _nib          = self.playerSelectionOption.nib;
+    _embedCode    = self.playerSelectionOption.embedCode;
+    _playerDomain = self.playerSelectionOption.playerDomain;
+    _pcode        = playerSelectionOption.pcode;
+    self.title    = self.playerSelectionOption.title;
   }
   return self;
 }
@@ -48,20 +47,23 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
-  OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
-  NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+                                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
+                                                               options:options];
+  OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
+                                                                            limit:10
+                                                                          timeout:60];
+  NSURL *jsCodeLocation = [NSBundle.mainBundle URLForResource:@"main" withExtension:@"jsbundle"];
   //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause; //This is recommended to make sure the endscreen shows up as expected
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions
@@ -69,34 +71,37 @@
                                                                 configFileName:@"skin"
                                                                overrideConfigs:nil];
   
-  self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer skinOptions:skinOptions parent:_videoView launchOptions:nil];
+  _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
+                                                     skinOptions:skinOptions
+                                                          parent:_videoView];
   [self addChildViewController:_skinController];
-  [_skinController.view setFrame:self.videoView.bounds];
+  _skinController.view.frame = self.videoView.bounds;
   [ooyalaPlayer setEmbedCode:self.embedCode];
+
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:ooyalaPlayer];
   
-  
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:ooyalaPlayer];
-  
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.skinController];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.skinController];
   
   self.adsManager = [[OOFreewheelManager alloc] initWithOoyalaPlayer:ooyalaPlayer];
   
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
   
-  NSMutableDictionary *fwParameters = [[NSMutableDictionary alloc] init];
-  //[fwParameters setObject:@"90750" forKey:@"fw_ios_mrm_network_id"];
-  [fwParameters setObject:@"https://g1.v.fwmrm.net/" forKey:@"fw_ios_ad_server"];
-  [fwParameters setObject:@"90750:ooyala_ios" forKey:@"fw_ios_player_profile"];
-  [fwParameters setObject:@"channel=TEST;subchannel=TEST;section=TEST;mode=online;player=ooyala;beta=n" forKey:@"FRMSegment"];
-  //[fwParameters setObject:@"ooyala_test_site_section" forKey:@"fw_ios_site_section_id"];
-  //[fwParameters setObject:@"ooyala_test_video_with_bvi_cuepoints" forKey:@"fw_ios_video_asset_id"];
+  NSMutableDictionary *fwParameters = [NSMutableDictionary dictionaryWithDictionary:
+                                       @{
+                                         @"fw_ios_ad_server": @"https://g1.v.fwmrm.net/",
+                                         @"fw_ios_player_profile": @"90750:ooyala_ios",
+                                         @"FRMSegment": @"channel=TEST;subchannel=TEST;section=TEST;mode=online;player=ooyala;beta=n"
+//                                         @"fw_ios_mrm_network_id": @"90750",
+//                                         @"fw_ios_site_section_id": @"ooyala_test_site_section",
+//                                         @"fw_ios_video_asset_id": @"ooyala_test_video_with_bvi_cuepoints"
+                                         }];
   [self.adsManager overrideFreewheelParameters:fwParameters];
   
   // Load the video
@@ -105,8 +110,7 @@
 
 #pragma mark - Private functions
 
-- (void)notificationHandler:(NSNotification*)notification {
-  
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -115,16 +119,16 @@
   // Check for FullScreenChanged notification
   if ([notification.name isEqualToString:OOSkinViewControllerFullscreenChangedNotification]) {
     NSString *message = [NSString stringWithFormat:@"Notification Received: %@. isfullscreen: %@. ",
-                         [notification name],
-                         [[notification.userInfo objectForKey:@"fullscreen"] boolValue] ? @"YES" : @"NO"];
+                         notification.name,
+                         [notification.userInfo[@"fullscreen"] boolValue] ? @"YES" : @"NO"];
     NSLog(@"%@", message);
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.skinController.player state]],
-                       [self.skinController.player playheadTime], appDel.count];
-  
+                       notification.name,
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.skinController.player.state],
+                       self.skinController.player.playheadTime,
+                       appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView

@@ -9,10 +9,13 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
   
+  // MARK: - Constants
   private let PLAYER_SEGUE: String = "PlayerViewControllerSegue"
-    
+  
+  // MARK: - Private properties
   private let options: [PlayerSelectionOption] = OptionDataSource.options()
   
+  // MARK: - View controller lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.tableFooterView = UIView()

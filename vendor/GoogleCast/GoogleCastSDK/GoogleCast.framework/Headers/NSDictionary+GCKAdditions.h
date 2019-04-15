@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * A category that adds some convenience methods to
@@ -24,8 +24,8 @@ GCK_ASSUME_NONNULL_BEGIN
  * @return The value of the key, if it was found and was an
  * <a href="https://goo.gl/5dXzU6"><b>NSString</b></a>; otherwise the default value.
  */
-- (NSString *GCK_NULLABLE_TYPE)gck_stringForKey:(NSString *)key
-                               withDefaultValue:(NSString *GCK_NULLABLE_TYPE)defaultValue;
+- (nullable NSString *)gck_stringForKey:(NSString *)key
+                       withDefaultValue:(nullable NSString *)defaultValue;
 
 /**
  * Looks up an <a href="https://goo.gl/5dXzU6"><b>NSString</b></a> value for a key, with a fallback
@@ -35,7 +35,7 @@ GCK_ASSUME_NONNULL_BEGIN
  * @return The value of the key, if found it was found and was an
  * <a href="https://goo.gl/5dXzU6"><b>NSString</b></a>; otherwise <code>nil</code>.
  */
-- (NSString *GCK_NULLABLE_TYPE)gck_stringForKey:(NSString *)key;
+- (nullable NSString *)gck_stringForKey:(NSString *)key;
 
 /**
  * Looks up an <a href="https://goo.gl/hQFeav"><b>NSInteger</b></a> value for a key, with a given
@@ -129,7 +129,7 @@ GCK_ASSUME_NONNULL_BEGIN
  * @return The value of the key, if it was found and was an
  * <a href="https://goo.gl/0kFoNp"><b>NSDictionary</b></a>; otherwise <code>nil</code>.
  */
-- (NSDictionary *GCK_NULLABLE_TYPE)gck_dictionaryForKey:(NSString *)key;
+- (nullable NSDictionary *)gck_dictionaryForKey:(NSString *)key;
 
 /**
  * Looks up an <a href="https://goo.gl/q3tY5n"><b>NSArray</b></a> value for a key, with a fallback
@@ -139,7 +139,7 @@ GCK_ASSUME_NONNULL_BEGIN
  * @return The value of the key, if it was found and was an
  * <a href="https://goo.gl/q3tY5n"><b>NSArray</b></a>; otherwise <code>nil</code>.
  */
-- (NSArray *GCK_NULLABLE_TYPE)gck_arrayForKey:(NSString *)key;
+- (nullable NSArray *)gck_arrayForKey:(NSString *)key;
 
 /**
  * Looks up an <a href="https://goo.gl/CGrMHD"><b>NSURL</b></a> value for a key, with a fallback
@@ -149,11 +149,11 @@ GCK_ASSUME_NONNULL_BEGIN
  * @return The value of the key as an <a href="https://goo.gl/CGrMHD"><b>NSURL</b></a>, if it was
  * found and was an <a href="https://goo.gl/5dXzU6"><b>NSString</b></a>; otherwise <code>nil</code>.
  */
-- (NSURL *GCK_NULLABLE_TYPE)gck_urlForKey:(NSString *)key;
+- (nullable NSURL *)gck_urlForKey:(NSString *)key;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 // For backwards compatibility:
 #ifndef GCKTypedValueLookup

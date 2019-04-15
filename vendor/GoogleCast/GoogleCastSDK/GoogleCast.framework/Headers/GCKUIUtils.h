@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * User interface utility methods.
@@ -21,13 +21,20 @@ GCK_EXPORT
  * Returns the currently active view controller, by navigating through the view controller
  * hierarchy beginning with the root view controller.
  */
-+ (UIViewController *GCK_NULLABLE_TYPE)currentViewController;
++ (nullable UIViewController *)currentViewController;
 
 /** Formats a time interval in MM:SS or H:MM:SS format. */
 + (NSString *)timeIntervalAsString:(NSTimeInterval)timeInterval;
 
+/**
+ * Formats a local time based on the current locale.
+ *
+ * @since 4.3.4
+ */
++ (NSString *)localTimeAsString:(NSTimeInterval)localTime;
+
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

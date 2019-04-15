@@ -11,7 +11,7 @@
  * GCKMediaMetadataType enum.
  */
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKMediaMetadataType
@@ -28,6 +28,8 @@ typedef NS_ENUM(NSInteger, GCKMediaMetadataType) {
   GCKMediaMetadataTypeMusicTrack = 3,
   /** A media type representing a photo. */
   GCKMediaMetadataTypePhoto = 4,
+  /** A media type representing an audio book. */
+  GCKMediaMetadataTypeAudioBookChapter = 5,
   /** The smallest media type value that can be assigned for application-defined media types. */
   GCKMediaMetadataTypeUser = 100,
 };
@@ -237,6 +239,39 @@ GCK_EXTERN NSString *const kGCKMetadataKeyLocationLatitude;
 GCK_EXTERN NSString *const kGCKMetadataKeyLocationLongitude;
 
 /**
+ * String key: Book title.
+ *
+ * The title of an audio book.
+ *
+ * @memberof GCKMediaMetadata
+ *
+ * @since 4.3.5
+ */
+GCK_EXTERN NSString *const kGCKMetadataKeyBookTitle;
+
+/**
+ * Integer key: Chapter number.
+ *
+ * The number of a chapter in an audio book.
+ *
+ * @memberof GCKMediaMetadata
+ *
+ * @since 4.3.5
+ */
+GCK_EXTERN NSString *const kGCKMetadataKeyChapterNumber;
+
+/**
+ * String key: Chapter title
+ *
+ * The title of a chapter in a audio book.
+ *
+ * @memberof GCKMediaMetadata
+ *
+ * @since 4.3.5
+ */
+GCK_EXTERN NSString *const kGCKMetadataKeyChapterTitle;
+
+/**
  * A container for media metadata. Metadata has a media type, an optional list of images, and a
  * collection of metadata fields. Keys for common metadata fields are predefined as constants, but
  * the application is free to define and use additional fields of its own.
@@ -428,7 +463,7 @@ GCK_EXPORT
  * @param key The key for the field.
  * @return The value of the field, or <code>nil</code> if the field has not been set.
  */
-- (id GCK_NULLABLE_TYPE)objectForKey:(NSString *)key;
+- (nullable id)objectForKey:(NSString *)key;
 
 /**
  * Stores a value in a string field.
@@ -448,7 +483,7 @@ GCK_EXPORT
  * @throw NSInvalidArgumentException if the key refers to a predefined field which is not a string
  * field.
  */
-- (NSString *GCK_NULLABLE_TYPE)stringForKey:(NSString *)key;
+- (nullable NSString *)stringForKey:(NSString *)key;
 
 /**
  * Stores a value in an integer field.
@@ -530,7 +565,7 @@ GCK_EXPORT
  * @throw NSInvalidArgumentException if the key refers to a predefined field which is not a date
  * field.
  */
-- (NSDate *GCK_NULLABLE_TYPE)dateForKey:(NSString *)key;
+- (nullable NSDate *)dateForKey:(NSString *)key;
 
 /**
  * Reads the value of a date field, as a string.
@@ -541,8 +576,8 @@ GCK_EXPORT
  * @throw NSInvalidArgumentException if the key refers to a predefined field which is not a date
  * field.
  */
-- (NSString *GCK_NULLABLE_TYPE)dateAsStringForKey:(NSString *)key;
+- (nullable NSString *)dateAsStringForKey:(NSString *)key;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

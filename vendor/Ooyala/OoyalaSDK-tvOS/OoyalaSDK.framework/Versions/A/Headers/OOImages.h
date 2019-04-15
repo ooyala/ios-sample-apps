@@ -31,4 +31,5 @@
 + (UIImage *) castOn1Image;
 + (UIImage *) castOn2Image;
 + (UIImage *) volumeImage;
++ (UIImage *) replayImage;
 @end

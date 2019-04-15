@@ -5,13 +5,12 @@
  * @copyright  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
 #import "PlayerSelectionOption.h"
 
 @interface OoyalaSkinListViewController : UITableViewController <UITableViewDelegate>
 
+@property (nonatomic) NSArray *options;
+
 - (void)addTestCases;
-- (void)insertNewObject:(PlayerSelectionOption *)selectionObject;
-- (void)addCommonWithTitle:(NSString*)title embedCode:(NSString*)embedCode pcode:(NSString *)pcode;
 
 @end

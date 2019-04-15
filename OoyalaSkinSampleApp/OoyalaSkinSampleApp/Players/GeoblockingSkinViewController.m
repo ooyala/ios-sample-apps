@@ -10,12 +10,11 @@
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import "AppDelegate.h"
 
-
 @interface GeoblockingSkinViewController ()
 
 #pragma mark - Private properties
 
-@property (nonatomic, retain) OOSkinViewController *skinController;
+@property (nonatomic) OOSkinViewController *skinController;
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *nib;
 @property (nonatomic) NSString *pcode;
@@ -23,7 +22,6 @@
 @property (nonatomic) NSString *apiKey;
 @property (nonatomic) NSString *secretKey;
 @property (nonatomic) NSString *accountId;
-
 
 @end
 
@@ -33,17 +31,18 @@
 }
 #pragma mark - Initializaiton
 
-- (id)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption qaModeEnabled:(BOOL)qaModeEnabled {
+- (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
+                                qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
-  if (self.playerSelectionOption && [self.playerSelectionOption isKindOfClass:[GeoblockingPlayerSelectionOptions class]]) {
-    self.nib = self.playerSelectionOption.nib;
-    self.embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-    self.playerDomain = self.playerSelectionOption.playerDomain;
-    self.pcode = playerSelectionOption.pcode;
-    self.apiKey = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).apiKey;
-    self.secretKey = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).secretKey;
-    self.accountId = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).accountId;
+  if (self.playerSelectionOption && [self.playerSelectionOption isKindOfClass:GeoblockingPlayerSelectionOptions.class]) {
+    _nib          = self.playerSelectionOption.nib;
+    _embedCode    = self.playerSelectionOption.embedCode;
+    _playerDomain = self.playerSelectionOption.playerDomain;
+    _pcode        = playerSelectionOption.pcode;
+    _apiKey       = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).apiKey;
+    _secretKey    = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).secretKey;
+    _accountId    = ((GeoblockingPlayerSelectionOptions *)self.playerSelectionOption).accountId;
+    self.title    = self.playerSelectionOption.title;
   }
   return self;
 }
@@ -52,24 +51,27 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
   
-  appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   // Create Ooyala ViewController
   OOOptions *options = [OOOptions new];
   // Currently needed for Fairplay
-  options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secretKey];
+  options.secureURLGenerator = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
+                                                                             secret:self.secretKey];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] embedTokenGenerator:self
                                                                options:options];
-  OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular limit:10 timeout:60];
-  NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  OODiscoveryOptions *discoveryOptions = [[OODiscoveryOptions alloc] initWithType:OODiscoveryTypePopular
+                                                                            limit:10
+                                                                          timeout:60];
+  NSURL *jsCodeLocation = [NSBundle.mainBundle URLForResource:@"main" withExtension:@"jsbundle"];
   //  NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
   ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause; //This is recommended to make sure the endscreen shows up as expected
   OOSkinOptions *skinOptions = [[OOSkinOptions alloc] initWithDiscoveryOptions:discoveryOptions
@@ -77,22 +79,22 @@
                                                                 configFileName:@"skin"
                                                                overrideConfigs:nil];
   
-  self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer skinOptions:skinOptions parent:_videoView launchOptions:nil];
+  _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
+                                                     skinOptions:skinOptions
+                                                          parent:_videoView];
   [self addChildViewController:_skinController];
-  [_skinController.view setFrame:self.videoView.bounds];
+  _skinController.view.frame = self.videoView.bounds;
   [ooyalaPlayer setEmbedCode:self.embedCode];
+
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:ooyalaPlayer];
   
-  
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:ooyalaPlayer];
-  
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.skinController];
-  
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.skinController];
   
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
@@ -108,17 +110,17 @@
 #pragma mark - EmbedTokenGenerator protocol
 
 - (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
-  NSMutableDictionary* params = [NSMutableDictionary dictionary];
-  params[@"account_id"] = self.accountId;  //Only used for concurrent streams
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
-  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secretKey];
-  NSURL* embedTokenUrl = [urlGen secureURL:@"http://player.ooyala.com" uri:uri params:params];
-  callback([embedTokenUrl absoluteString]);
+  NSDictionary *params = @{@"account_id": self.accountId};  // Only used for concurrent streams
+  NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  OOEmbeddedSecureURLGenerator *urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
+                                                                                       secret:self.secretKey];
+  NSURL *embedTokenUrl = [urlGen secureURL:@"http://player.ooyala.com" uri:uri params:params];
+  callback(embedTokenUrl.absoluteString);
 }
 
 #pragma mark - Private functions
 
-- (void)notificationHandler:(NSNotification*)notification {
+- (void)notificationHandler:(NSNotification *)notification {
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -133,9 +135,10 @@
   }
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
-                       [notification name],
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.skinController.player state]],
-                       [self.skinController.player playheadTime], appDel.count];
+                       notification.name,
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.skinController.player.state],
+                       self.skinController.player.playheadTime,
+                       appDel.count];
   
   NSLog(@"%@",message);
   

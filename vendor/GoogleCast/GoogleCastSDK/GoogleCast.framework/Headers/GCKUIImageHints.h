@@ -12,7 +12,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 
-GCK_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum GCKMediaMetadataImageType
@@ -54,7 +54,7 @@ GCK_EXPORT
  * Optional custom data that can be used to identify the image. It must be key-value coding
  * compliant.
  */
-@property(nonatomic, copy, readonly, GCK_NULLABLE) NSObject<NSSecureCoding> *customData;
+@property(nonatomic, copy, readonly, nullable) NSObject<NSSecureCoding> *customData;
 
 /**
  * Convenience initializer. Sets the custom data to <code>nil</code>.
@@ -74,10 +74,10 @@ GCK_EXPORT
  */
 - (instancetype)initWithImageType:(GCKMediaMetadataImageType)imageType
                         imageSize:(CGSize)imageSize
-                       customData:(NSObject<NSSecureCoding> *GCK_NULLABLE_TYPE)customData;
+                       customData:(nullable NSObject<NSSecureCoding> *)customData;
 
 @end
 
-GCK_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
 
 /** @endcond */

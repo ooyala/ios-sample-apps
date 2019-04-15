@@ -104,7 +104,7 @@
 
 }
 
-- (void) notificationHandler:(NSNotification*) notification {
+- (void)notificationHandler:(NSNotification *)notification {
 
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
@@ -123,13 +123,13 @@
  * For debugging, you can use Ooyala's EmbeddedSecureURLGenerator to create local embed tokens
  */
 - (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
-  NSMutableDictionary* params = [NSMutableDictionary dictionary];
+  NSMutableDictionary *params = [NSMutableDictionary dictionary];
 
   params[@"account_id"] = self.accountId;
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
 
-  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
-  NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
+  OOEmbeddedSecureURLGenerator *urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
+  NSURL *embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
   callback([embedTokenUrl absoluteString]);
 }
 

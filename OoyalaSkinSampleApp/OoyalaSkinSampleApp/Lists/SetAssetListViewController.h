@@ -7,7 +7,6 @@
 
 #import "OoyalaSkinListViewController.h"
 
-
 @interface SetAssetListViewController : OoyalaSkinListViewController
 
 @end

@@ -20,21 +20,17 @@ To run this app, we assume you have an Apple developer account because you need 
 ## App Architecture
 
 The app uses the following classes provided by the _OoyalaSDK_:
-* **OOAssetDownloadManager**: Downloads a single video asset. Needs an `OOAssetDownloadOptions` to initialize.
-* **OOAssetDownloadOptions**: Provides information to `OOAssetDownloadManager` so it knows which asset to download.
-* **OOEmbedTokenGenerator**: An instance of this protocol is used to enable our Ooyala Player Token (OPT) protection feature. This is necessary for assets using entitlements and Fairplay DRM protected assets. When downloading a Fairplay asset, you must provide an `OOEmbedTokenGenerator` instance to `OOAssetDownloadOptions` before creating an `OOAssetDownloadManager`.
-* **OOAssetDownloadManagerDelegate**: Build a class implementing this protocol to know about the progress of a download. Remember setting the class as a delegate of `OOAssetDownloadManager`.
+* **OODtoAsset**: Downloads a single video asset. Needs an `PlayerSelectionOption` to initialize. Use appropriate methods with closures `-downloadWithProgressClosure: -progressWithProgressClosure: -finishWithRelativePath: -onErrorWithErrorClosure:` to start downloading and to know about the progress of a download.
+* **OOAssetDownloadOptions**: Provides information to `OODtoAsset` so it knows which asset to download.
+* **OOEmbedTokenGenerator**: An instance of this protocol is used to enable our Ooyala Player Token (OPT) protection feature. This is necessary for assets using entitlements and Fairplay DRM protected assets. When downloading a Fairplay asset, you must provide instance of `OOEmbedTokenGenerator` to `OOAssetDownloadOptions` before pass it to `OODtoAsset`.
 * **OOOoyalaPlayer**: The player we always provide to playback video.
 * **OOOoyalaPlayerViewController**: Used to manage the `view` of the player.
 
 On top of these classes, we built the provided sample app that you can find here. It uses all the functionality described in the objects above. Here are the important classes you want to check out:
-
-* **AssetPersistenceManager**: This is a singleton object which manages multiple `OOAssetDownloadManager` objects. It means you can check this example to manage multiple downloads at the same time. This class is the `OOAssetDownloadManagerDelegate` for all the `OOAssetDownloadManager` objects, so you'll get notified here on the progress of a download. `AssetPersistenceManager` broadcasts notifications in the app so anyone interested can add itself as an observer of these notifications and act accordingly as the downloads progress.
-* **AssetListViewController**: Manages the `UITableView` showing the assets of the app. Depending on the download state of each asset, it will show different options when tapping the accessory button of each cell. Options can be _Download_, _Cancel_, or _Delete_.
-* **OptionTableViewCell**: An instance of each cell rendered in the `UITableView`. Each cell is an observer of the download notifications sent by `AssetPersistenceManager`, so the cell refreshes the UI when there's a new download state.
+* **AssetListViewController**: Manages the `UITableView` showing the assets of the app. Depending on the download state of each asset, it will show different options when tapping the accessory button of each cell. Options can be _Download_, _Cancel_, or _Delete_. When downloading from specific asset is started `AssetListViewController` refreshes UI of appropriate cell by info from dtoAsset
 * **OptionsDataSource**: Defines the video assets in the app. This is the data that each cell in the `UITableView` will show, and the configuration the download and player objects will use.
 * **PlayerSelectionOption**: Is the object containing all the information of a particular asset.
 * **BasicEmbedTokenGenerator**: An example implementation of `OOEmbedTokenGenerator`. Some specifics should not be performed this way in a production app, because it is using an Ooyala's account API_KEY and API_SECRET that we discourage using this way. Everything done here using API_KEY and API_SECRET information should be performed securely in your own server and your app should be calling that server instead.
-* **PlayerViewController**: Uses an `OOOoyalaPlayerViewController` to show a player view and playback the video. Here's where online or offline playback can happen. This object is an observer of the `AssetPersistenceManager` notifications, so it knows when an asset has been downloaded and can be played offline.
+* **PlayerViewController**: Uses an `OOOoyalaPlayerViewController` to show a player view and playback the video. Here's where online or offline playback can happen. ViewController gets callbacks from it's property of  `OODtoAsset` type to be notified when download state changes and know when an asset has been downloaded and can be played offline.
 
 Make sure to check the documentation in code for each file. We explain in more detail what happens in each object.
