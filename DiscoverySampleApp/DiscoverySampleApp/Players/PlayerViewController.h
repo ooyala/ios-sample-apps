@@ -14,20 +14,20 @@
 
 @interface PlayerViewController : SampleAppPlayerViewController
 
-@property (nonatomic, retain) IBOutlet UIView *videoView;
+@property (nonatomic) IBOutlet UIView *videoView;
 
-@property (nonatomic, retain) IBOutlet UILabel *textLabel;
+@property (nonatomic) IBOutlet UILabel *textLabel;
 
-@property (nonatomic, retain) OOSkinViewController *skinController;
-@property (nonatomic, retain) OOOoyalaPlayer *ooyalaPlayer;
+@property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
 
 - (void)setCustomSkin;
 - (void)replayCurrentVideo;
 
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
-@property DemoSettings *configuration;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
+@property (nonatomic) DemoSettings *configuration;
 
 @end

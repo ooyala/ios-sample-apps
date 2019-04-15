@@ -14,8 +14,6 @@
 
 @implementation PlayerViewController
 
-NSMutableArray *_sharePlugins;
-OOOoyalaPlayer *ooyalaPlayer;
 
 - (void)loadView {
   [super loadView];
@@ -46,7 +44,7 @@ OOOoyalaPlayer *ooyalaPlayer;
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
                                                                overrideConfigs:overrideConfigs];
-  self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
+  self.skinController = [[OOSkinViewController alloc] initWithPlayer:self.ooyalaPlayer
                                                          skinOptions:skinOptions
                                                               parent:_videoView];
   [self addChildViewController:_skinController];
@@ -57,26 +55,25 @@ OOOoyalaPlayer *ooyalaPlayer;
   [super viewDidLoad];
   
   OOOptions *options = [OOOptions new];
-  ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
-                                                domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
-                                               options:options];
+  self.ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
+                                                     domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
+                                                    options:options];
   
-  ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;  //This is reccomended to make sure the endscreen shows up as expected
+  self.ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;  //This is reccomended to make sure the endscreen shows up as expected
   
   [self setCustomSkin];
 
   [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
                                              name:nil
-                                           object:ooyalaPlayer];
+                                           object:self.ooyalaPlayer];
 
-  [ooyalaPlayer setEmbedCode:self.embedCode];
-  [ooyalaPlayer play];  //Autoplay
+  [self.ooyalaPlayer setEmbedCode:self.embedCode];
+  [self.ooyalaPlayer play];  //Autoplay
 }
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   if (self = [super initWithPlayerSelectionOption:playerSelectionOption]) {
-    _sharePlugins = [NSMutableArray array];
     _nib          = self.playerSelectionOption.nib;
     _embedCode    = self.playerSelectionOption.embedCode;
     _playerDomain = playerSelectionOption.playerDomain;
@@ -87,21 +84,21 @@ OOOoyalaPlayer *ooyalaPlayer;
   [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
                                              name:nil
-                                           object:ooyalaPlayer];
+                                           object:self.ooyalaPlayer];
   /*
   if (self.ooyalaPlayer == nil){
     OOOptions *options = [OOOptions new];
     self.ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   }*/
-  [ooyalaPlayer setEmbedCode:self.embedCode]; //Update Embedcode
-  [ooyalaPlayer play]; //Autoplay
+  [self.ooyalaPlayer setEmbedCode:self.embedCode]; //Update Embedcode
+  [self.ooyalaPlayer play]; //Autoplay
   
   return self;
 }
 
 - (void)replayCurrentVideo {
-  [ooyalaPlayer setPlayheadTime:0];
-  [ooyalaPlayer play];
+  [self.ooyalaPlayer setPlayheadTime:0];
+  [self.ooyalaPlayer play];
 }
 
 
@@ -113,7 +110,7 @@ OOOoyalaPlayer *ooyalaPlayer;
   }
   
   if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
-    NSDictionary *dict = @{@"title": ooyalaPlayer.currentItem.title};
+    NSDictionary *dict = @{@"title": self.ooyalaPlayer.currentItem.title};
     [NSNotificationCenter.defaultCenter postNotificationName:@"NotificationMessageEvent"
                                                       object:nil
                                                     userInfo:dict];
