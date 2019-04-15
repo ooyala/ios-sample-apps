@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDW-G6-QcC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PDW-G6-QcC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UWr-jb-vSa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zxW-MB-BcS">
-                        <rect key="frame" x="0.0" y="0.0" width="346" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -39,22 +39,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUe-r7-Qy6">
-                                <rect key="frame" x="0.0" y="137" width="346" height="250"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUe-r7-Qy6">
+                                <rect key="frame" x="0.0" y="137" width="375" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <connections>
                                     <segue destination="RHF-YD-sBG" kind="embed" id="CSM-EB-mJb"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-jm-Jaw">
-                                <rect key="frame" x="9" y="72" width="357" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-jm-Jaw">
+                                <rect key="frame" x="19" y="72" width="337.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-Wg-SbA">
-                                <rect key="frame" x="9" y="387" width="357" height="243"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-Wg-SbA">
+                                <rect key="frame" x="19" y="387" width="337.5" height="223.5"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -71,10 +71,10 @@
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="width" secondItem="cOD-61-oVm" secondAttribute="width" id="QaU-Ts-EUa"/>
                             <constraint firstItem="mZR-Wg-SbA" firstAttribute="width" secondItem="cOD-61-oVm" secondAttribute="width" multiplier="0.9" id="S86-tH-VKT"/>
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="Vj9-jm-Jaw" secondAttribute="bottom" constant="44" id="YtZ-OL-ZW7"/>
-                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="gdv-aa-oEZ" secondAttribute="bottom" constant="200" id="cKK-Yu-zCX"/>
+                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="gdv-aa-oEZ" secondAttribute="bottom" constant="73" id="cKK-Yu-zCX"/>
                             <constraint firstItem="mZR-Wg-SbA" firstAttribute="centerX" secondItem="cOD-61-oVm" secondAttribute="centerX" id="ndv-Hi-XO4"/>
-                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="height" secondItem="cOD-61-oVm" secondAttribute="height" multiplier="0.319" id="oMA-Xh-dez"/>
-                            <constraint firstItem="mZR-Wg-SbA" firstAttribute="top" secondItem="CUe-r7-Qy6" secondAttribute="bottom" constant="10" id="vnF-pj-tsD"/>
+                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="height" secondItem="cOD-61-oVm" secondAttribute="height" multiplier="0.319" constant="37.227000000000004" id="oMA-Xh-dez"/>
+                            <constraint firstItem="mZR-Wg-SbA" firstAttribute="top" secondItem="CUe-r7-Qy6" secondAttribute="bottom" id="vnF-pj-tsD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
