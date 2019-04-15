@@ -11,6 +11,7 @@
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "DemoSettings.h"
+#import "PlayerSelectionOption.h"
 
 @implementation PlayerViewController
 

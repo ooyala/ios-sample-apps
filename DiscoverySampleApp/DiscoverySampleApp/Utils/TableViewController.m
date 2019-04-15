@@ -6,17 +6,20 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "TableViewController.h"
+
+@interface TableViewController ()
+
+@property (nonatomic) NSArray *tableData;
+
+@end
 
 @implementation TableViewController
 
-NSArray *tableData;
-  
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  tableData = @[@"Articles", @"Browse"];
+  self.tableData = @[@"Articles", @"Browse"];
   
   [self.navigationController setNavigationBarHidden:NO animated:YES]; //Show navigation controller / logo /
   [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbarima"]
@@ -29,7 +32,7 @@ NSArray *tableData;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return tableData.count;
+  return self.tableData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -41,8 +44,8 @@ NSArray *tableData;
                                   reuseIdentifier:@"Cell"];
   }
   
-  cell.textLabel.text = tableData[indexPath.row];
-  cell.textLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:22.0 ];
+  cell.textLabel.text = self.tableData[indexPath.row];
+  cell.textLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:22.0];
   
   return cell;
 }
@@ -52,7 +55,7 @@ NSArray *tableData;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  [self performSegueWithIdentifier:tableData[indexPath.row] sender:self];
+  [self performSegueWithIdentifier:self.tableData[indexPath.row] sender:self];
 }
 
 @end

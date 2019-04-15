@@ -6,7 +6,7 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface TableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 

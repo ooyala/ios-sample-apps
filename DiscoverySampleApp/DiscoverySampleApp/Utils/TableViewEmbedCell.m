@@ -1,9 +1,10 @@
-/**
- * @class      TableViewEmbedCell TableViewEmbedCell.m "TableViewEmbedCell.m"
- * @brief      A view that displays information about a video in a channel
- * @date       12/12/14
- * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
- */
+//
+//  TableViewEmbedCell.m
+//  DiscoverySampleApp
+//
+//  Created on 15/04/19.
+//  Copyright © 2019 Ooyala, Inc. All rights reserved.
+//
 
 #import "TableViewEmbedCell.h"
 

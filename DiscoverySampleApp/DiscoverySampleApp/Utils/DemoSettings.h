@@ -10,9 +10,9 @@
 
 @interface DemoSettings : NSObject
 
-@property (nonatomic) NSDictionary *playerParameters;
-@property (nonatomic) NSDictionary *initasset;
-@property (nonatomic) NSArray *carousels;
+@property (nonatomic, readonly) NSDictionary *playerParameters;
+@property (nonatomic, readonly) NSDictionary *initasset;
+@property (nonatomic, readonly) NSArray *carousels;
 
 - (instancetype)init;
 
