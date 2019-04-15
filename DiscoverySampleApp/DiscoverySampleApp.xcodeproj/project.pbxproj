@@ -196,10 +196,10 @@
 				0B7824241B2B7EB600D718AB /* AppDelegate.m */,
 				0B47312E1C5199A300F1E7FD /* Storyboards */,
 				0B7824581B2B855500D718AB /* Players */,
-				0B47312D1C51997500F1E7FD /* Supporting Files */,
 				0B7824471B2B834F00D718AB /* Utils */,
 				0B7824551B2B841800D718AB /* Views */,
 				390891B321F5B26700D860A9 /* Resources */,
+				0B47312D1C51997500F1E7FD /* Supporting Files */,
 				DB22A39D1EA0111F00FA3E3C /* MainView.h */,
 				DB22A39E1EA0111F00FA3E3C /* MainView.m */,
 				C1D0E9E11F5DEFF600B8B9DD /* BrowseView.h */,
@@ -627,7 +627,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/node_modules/react-native/React/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -679,7 +679,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/node_modules/react-native/React/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

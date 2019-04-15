@@ -293,8 +293,8 @@ Boolean discoveryScreenDisplayed;
   return [self.discoveryResults[0] count];
 }
 
-- (UITableViewCell *) tableView:(UITableView *)tableView
-          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   TableViewEmbedCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EmbedCell"];  //Create table view with cellidentifier "xib" embedCell
   NSLog(@"discoveryR! %lu", (unsigned long)[self.discoveryResults count]);
   

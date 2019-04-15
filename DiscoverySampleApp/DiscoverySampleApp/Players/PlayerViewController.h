@@ -20,14 +20,13 @@
 
 @property (nonatomic) OOSkinViewController *skinController;
 @property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
-
-- (void)setCustomSkin;
-- (void)replayCurrentVideo;
-
 @property (nonatomic) NSString *embedCode;
 @property (nonatomic) NSString *nib;
 @property (nonatomic) NSString *pcode;
 @property (nonatomic) NSString *playerDomain;
 @property (nonatomic) DemoSettings *configuration;
+
+- (void)setCustomSkin;
+- (void)replayCurrentVideo;
 
 @end
