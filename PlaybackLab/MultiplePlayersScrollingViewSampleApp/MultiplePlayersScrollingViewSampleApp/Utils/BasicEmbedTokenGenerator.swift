@@ -20,10 +20,10 @@ class BasicEmbedTokenGenerator: NSObject, OOEmbedTokenGenerator {
   public private(set) var authorizeHost: String
   
   init(pcode: String, apiKey: String, apiSecret: String, accountId: String, authorizeHost: String) {
-    self.pcode = pcode
-    self.apiKey = apiKey
-    self.apiSecret = apiSecret
-    self.accountId = accountId
+    self.pcode         = pcode
+    self.apiKey        = apiKey
+    self.apiSecret     = apiSecret
+    self.accountId     = accountId
     self.authorizeHost = authorizeHost
     super.init()
   }

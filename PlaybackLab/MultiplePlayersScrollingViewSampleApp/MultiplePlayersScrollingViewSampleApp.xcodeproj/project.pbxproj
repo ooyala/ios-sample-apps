@@ -7,29 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B85422392264F37A00958215 /* MultiplePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85422382264F37A00958215 /* MultiplePlayerViewController.swift */; };
 		B8603265225FDE280049F604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603264225FDE280049F604 /* AppDelegate.swift */; };
 		B860326A225FDE280049F604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8603268225FDE280049F604 /* Main.storyboard */; };
 		B860326C225FDE2C0049F604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B860326B225FDE2C0049F604 /* Assets.xcassets */; };
 		B860326F225FDE2C0049F604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B860326D225FDE2C0049F604 /* LaunchScreen.storyboard */; };
-		B860327A225FDFAF0049F604 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8603279225FDFAF0049F604 /* OoyalaSDK.framework */; };
 		B8603285225FE08E0049F604 /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603284225FE08D0049F604 /* PlayerSelectionOption.swift */; };
 		B8603289225FE0CC0049F604 /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603287225FE0CC0049F604 /* OptionDataSource.swift */; };
 		B860328A225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603288225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift */; };
-		B860328E225FE0EC0049F604 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B860328C225FE0EB0049F604 /* PlayerView.swift */; };
-		B860328F225FE0EC0049F604 /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B860328D225FE0EB0049F604 /* PlayerView.xib */; };
-		B8603292225FE1200049F604 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603291225FE1200049F604 /* ScrollViewController.swift */; };
-		B86032A9225FE2420049F604 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B86032A3225FE2420049F604 /* RobotoCondensed-Regular.ttf */; };
-		B86032AA225FE2420049F604 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B86032A4225FE2420049F604 /* Roboto-Bold.ttf */; };
-		B86032AB225FE2420049F604 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B86032A5225FE2420049F604 /* ooyala-slick-type.ttf */; };
-		B86032AC225FE2420049F604 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B86032A6225FE2420049F604 /* RobotoCondensed-Bold.ttf */; };
-		B86032AD225FE2420049F604 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B86032A7225FE2420049F604 /* alice.ttf */; };
-		B86032AE225FE2420049F604 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B86032A8225FE2420049F604 /* Roboto-Regular.ttf */; };
-		B86032B2225FE27C0049F604 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = B86032B1225FE27C0049F604 /* main.jsbundle */; };
-		B86032B8225FE2890049F604 /* ko.json in Resources */ = {isa = PBXBuildFile; fileRef = B86032B3225FE2880049F604 /* ko.json */; };
-		B86032B9225FE2890049F604 /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = B86032B4225FE2880049F604 /* zh.json */; };
-		B86032BA225FE2890049F604 /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = B86032B5225FE2880049F604 /* es.json */; };
-		B86032BB225FE2890049F604 /* ja.json in Resources */ = {isa = PBXBuildFile; fileRef = B86032B6225FE2880049F604 /* ja.json */; };
-		B86032BC225FE2890049F604 /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = B86032B7225FE2890049F604 /* en.json */; };
 		B86032BF225FE2DB0049F604 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032BE225FE2DB0049F604 /* libz.tbd */; };
 		B86032C1225FE3460049F604 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032C0225FE3460049F604 /* libc++abi.tbd */; };
 		B86032C3225FE3500049F604 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032C2225FE3500049F604 /* libc++.tbd */; };
@@ -37,11 +22,27 @@
 		B86032C8225FE4C80049F604 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032C6225FE3670049F604 /* MessageUI.framework */; };
 		B86032CC225FE4EA0049F604 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032CB225FE4EA0049F604 /* EventKit.framework */; };
 		B86032CE225FE5040049F604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032CD225FE5040049F604 /* MediaPlayer.framework */; };
-		B860333B22601F290049F604 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = B860333A22601F290049F604 /* skin.json */; };
-		B8AD6B4B226068F200EB71E8 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD6B4A226068F200EB71E8 /* OoyalaSkinSDK.framework */; };
+		B8AD6B532260EB1D00EB71E8 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD6B512260EB1C00EB71E8 /* OoyalaSkinSDK.framework */; };
+		B8AD6B542260EB1D00EB71E8 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD6B522260EB1C00EB71E8 /* OoyalaSDK.framework */; };
+		B8AD6B612260ED4100EB71E8 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B5B2260ED4100EB71E8 /* Roboto-Regular.ttf */; };
+		B8AD6B622260ED4100EB71E8 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B5C2260ED4100EB71E8 /* ooyala-slick-type.ttf */; };
+		B8AD6B632260ED4100EB71E8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B5D2260ED4100EB71E8 /* Roboto-Bold.ttf */; };
+		B8AD6B642260ED4100EB71E8 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B5E2260ED4100EB71E8 /* RobotoCondensed-Regular.ttf */; };
+		B8AD6B652260ED4100EB71E8 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B5F2260ED4100EB71E8 /* RobotoCondensed-Bold.ttf */; };
+		B8AD6B662260ED4100EB71E8 /* alice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B602260ED4100EB71E8 /* alice.ttf */; };
+		B8AD6B692260ED5F00EB71E8 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B672260ED5F00EB71E8 /* main.jsbundle */; };
+		B8AD6B732260EDED00EB71E8 /* ja.json in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B6E2260EDED00EB71E8 /* ja.json */; };
+		B8AD6B742260EDED00EB71E8 /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B6F2260EDED00EB71E8 /* en.json */; };
+		B8AD6B752260EDED00EB71E8 /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B702260EDED00EB71E8 /* es.json */; };
+		B8AD6B762260EDED00EB71E8 /* ko.json in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B712260EDED00EB71E8 /* ko.json */; };
+		B8AD6B772260EDED00EB71E8 /* zh.json in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B722260EDED00EB71E8 /* zh.json */; };
+		B8AD6B7A2260EE2F00EB71E8 /* skin.json in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B792260EE2F00EB71E8 /* skin.json */; };
+		B8AD6B7C2261207700EB71E8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AD6B7B2261207700EB71E8 /* UIView.swift */; };
+		B8F22AAC22650F580055FCB2 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F22AAB22650F580055FCB2 /* PlayerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B85422382264F37A00958215 /* MultiplePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePlayerViewController.swift; sourceTree = "<group>"; };
 		B8603261225FDE280049F604 /* MultiplePlayersScrollingViewSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplePlayersScrollingViewSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8603264225FDE280049F604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8603269225FDE280049F604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,25 +50,9 @@
 		B860326E225FDE2C0049F604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8603270225FDE2C0049F604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8603277225FDEE00049F604 /* MultiplePlayersScrollingViewSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiplePlayersScrollingViewSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		B8603279225FDFAF0049F604 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 		B8603284225FE08D0049F604 /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
 		B8603287225FE0CC0049F604 /* OptionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
 		B8603288225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicEmbedTokenGenerator.swift; sourceTree = "<group>"; };
-		B860328C225FE0EB0049F604 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		B860328D225FE0EB0049F604 /* PlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
-		B8603291225FE1200049F604 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
-		B86032A3225FE2420049F604 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		B86032A4225FE2420049F604 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		B86032A5225FE2420049F604 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ooyala-slick-type.ttf"; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/ooyala-slick-type.ttf"; sourceTree = "<group>"; };
-		B86032A6225FE2420049F604 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
-		B86032A7225FE2420049F604 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alice.ttf; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/alice.ttf"; sourceTree = "<group>"; };
-		B86032A8225FE2420049F604 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		B86032B1225FE27C0049F604 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
-		B86032B3225FE2880049F604 /* ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ko.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/ko.json"; sourceTree = "<group>"; };
-		B86032B4225FE2880049F604 /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = zh.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/zh.json"; sourceTree = "<group>"; };
-		B86032B5225FE2880049F604 /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = es.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/es.json"; sourceTree = "<group>"; };
-		B86032B6225FE2880049F604 /* ja.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ja.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/ja.json"; sourceTree = "<group>"; };
-		B86032B7225FE2890049F604 /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = en.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/en.json"; sourceTree = "<group>"; };
 		B86032BE225FE2DB0049F604 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B86032C0225FE3460049F604 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		B86032C2225FE3500049F604 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -75,8 +60,23 @@
 		B86032C6225FE3670049F604 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B86032CB225FE4EA0049F604 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		B86032CD225FE5040049F604 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		B860333A22601F290049F604 /* skin.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = skin.json; sourceTree = "<group>"; };
-		B8AD6B4A226068F200EB71E8 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
+		B8AD6B512260EB1C00EB71E8 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
+		B8AD6B522260EB1C00EB71E8 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
+		B8AD6B5B2260ED4100EB71E8 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		B8AD6B5C2260ED4100EB71E8 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ooyala-slick-type.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/ooyala-slick-type.ttf"; sourceTree = "<group>"; };
+		B8AD6B5D2260ED4100EB71E8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B8AD6B5E2260ED4100EB71E8 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		B8AD6B5F2260ED4100EB71E8 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		B8AD6B602260ED4100EB71E8 /* alice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alice.ttf; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/alice.ttf"; sourceTree = "<group>"; };
+		B8AD6B672260ED5F00EB71E8 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/main.jsbundle"; sourceTree = "<group>"; };
+		B8AD6B6E2260EDED00EB71E8 /* ja.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ja.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/ja.json"; sourceTree = "<group>"; };
+		B8AD6B6F2260EDED00EB71E8 /* en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = en.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/en.json"; sourceTree = "<group>"; };
+		B8AD6B702260EDED00EB71E8 /* es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = es.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/es.json"; sourceTree = "<group>"; };
+		B8AD6B712260EDED00EB71E8 /* ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ko.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/ko.json"; sourceTree = "<group>"; };
+		B8AD6B722260EDED00EB71E8 /* zh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = zh.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/languageFiles/zh.json"; sourceTree = "<group>"; };
+		B8AD6B792260EE2F00EB71E8 /* skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = skin.json; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/skin-config/skin.json"; sourceTree = "<group>"; };
+		B8AD6B7B2261207700EB71E8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B8F22AAB22650F580055FCB2 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,15 +84,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8AD6B4B226068F200EB71E8 /* OoyalaSkinSDK.framework in Frameworks */,
+				B8AD6B542260EB1D00EB71E8 /* OoyalaSDK.framework in Frameworks */,
+				B8AD6B532260EB1D00EB71E8 /* OoyalaSkinSDK.framework in Frameworks */,
 				B86032CC225FE4EA0049F604 /* EventKit.framework in Frameworks */,
+				B86032CE225FE5040049F604 /* MediaPlayer.framework in Frameworks */,
+				B86032C8225FE4C80049F604 /* MessageUI.framework in Frameworks */,
 				B86032C5225FE3580049F604 /* libxml2.tbd in Frameworks */,
 				B86032C3225FE3500049F604 /* libc++.tbd in Frameworks */,
 				B86032C1225FE3460049F604 /* libc++abi.tbd in Frameworks */,
 				B86032BF225FE2DB0049F604 /* libz.tbd in Frameworks */,
-				B86032CE225FE5040049F604 /* MediaPlayer.framework in Frameworks */,
-				B86032C8225FE4C80049F604 /* MessageUI.framework in Frameworks */,
-				B860327A225FDFAF0049F604 /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,14 +119,12 @@
 		B8603263225FDE280049F604 /* MultiplePlayersScrollingViewSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				B8603264225FDE280049F604 /* AppDelegate.swift */,
-				B860326B225FDE2C0049F604 /* Assets.xcassets */,
-				B860326D225FDE2C0049F604 /* LaunchScreen.storyboard */,
-				B8603268225FDE280049F604 /* Main.storyboard */,
 				B8603283225FE06C0049F604 /* Models */,
-				B86032A1225FE2290049F604 /* Resources */,
+				B8AD6B562260EB8700EB71E8 /* Resources */,
+				B8AD6B4C2260E69500EB71E8 /* Storyboards */,
 				B8603276225FDED40049F604 /* SupportFiles */,
 				B8603286225FE0B30049F604 /* Utils */,
+				B8AD6B502260EB0100EB71E8 /* VendorLibraries */,
 				B8603290225FE1070049F604 /* ViewControllers */,
 				B860328B225FE0DC0049F604 /* Views */,
 			);
@@ -136,6 +134,7 @@
 		B8603276225FDED40049F604 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B8603264225FDE280049F604 /* AppDelegate.swift */,
 				B8603270225FDE2C0049F604 /* Info.plist */,
 				B8603277225FDEE00049F604 /* MultiplePlayersScrollingViewSampleApp-Bridging-Header.h */,
 			);
@@ -146,14 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				B86032CB225FE4EA0049F604 /* EventKit.framework */,
+				B86032CD225FE5040049F604 /* MediaPlayer.framework */,
+				B86032C6225FE3670049F604 /* MessageUI.framework */,
 				B86032C2225FE3500049F604 /* libc++.tbd */,
 				B86032C0225FE3460049F604 /* libc++abi.tbd */,
 				B86032C4225FE3580049F604 /* libxml2.tbd */,
 				B86032BE225FE2DB0049F604 /* libz.tbd */,
-				B86032CD225FE5040049F604 /* MediaPlayer.framework */,
-				B86032C6225FE3670049F604 /* MessageUI.framework */,
-				B8603279225FDFAF0049F604 /* OoyalaSDK.framework */,
-				B8AD6B4A226068F200EB71E8 /* OoyalaSkinSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +166,7 @@
 		B8603286225FE0B30049F604 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B8AD6B7D226120A400EB71E8 /* Extensions */,
 				B8603288225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift */,
 				B8603287225FE0CC0049F604 /* OptionDataSource.swift */,
 			);
@@ -178,8 +176,7 @@
 		B860328B225FE0DC0049F604 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B860328C225FE0EB0049F604 /* PlayerView.swift */,
-				B860328D225FE0EB0049F604 /* PlayerView.xib */,
+				B8F22AAB22650F580055FCB2 /* PlayerCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,53 +184,89 @@
 		B8603290225FE1070049F604 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B8603291225FE1200049F604 /* ScrollViewController.swift */,
+				B85422382264F37A00958215 /* MultiplePlayerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		B86032A1225FE2290049F604 /* Resources */ = {
+		B8AD6B4C2260E69500EB71E8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				B86032AF225FE25C0049F604 /* Skin */,
-				B86032A2225FE2350049F604 /* Fonts */,
+				B860326D225FDE2C0049F604 /* LaunchScreen.storyboard */,
+				B8603268225FDE280049F604 /* Main.storyboard */,
 			);
-			name = Resources;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		B86032A2225FE2350049F604 /* Fonts */ = {
+		B8AD6B502260EB0100EB71E8 /* VendorLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				B86032A7225FE2420049F604 /* alice.ttf */,
-				B86032A5225FE2420049F604 /* ooyala-slick-type.ttf */,
-				B86032A4225FE2420049F604 /* Roboto-Bold.ttf */,
-				B86032A8225FE2420049F604 /* Roboto-Regular.ttf */,
-				B86032A6225FE2420049F604 /* RobotoCondensed-Bold.ttf */,
-				B86032A3225FE2420049F604 /* RobotoCondensed-Regular.ttf */,
+				B8AD6B522260EB1C00EB71E8 /* OoyalaSDK.framework */,
+				B8AD6B512260EB1C00EB71E8 /* OoyalaSkinSDK.framework */,
 			);
-			path = Fonts;
+			name = VendorLibraries;
 			sourceTree = "<group>";
 		};
-		B86032AF225FE25C0049F604 /* Skin */ = {
+		B8AD6B562260EB8700EB71E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B86032B0225FE2620049F604 /* languageFiles */,
-				B86032B1225FE27C0049F604 /* main.jsbundle */,
-				B860333A22601F290049F604 /* skin.json */,
+				B8AD6B572260EB8E00EB71E8 /* SkinConfig */,
+				B860326B225FDE2C0049F604 /* Assets.xcassets */,
 			);
-			name = Skin;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		B86032B0225FE2620049F604 /* languageFiles */ = {
+		B8AD6B572260EB8E00EB71E8 /* SkinConfig */ = {
 			isa = PBXGroup;
 			children = (
-				B86032B7225FE2890049F604 /* en.json */,
-				B86032B5225FE2880049F604 /* es.json */,
-				B86032B6225FE2880049F604 /* ja.json */,
-				B86032B3225FE2880049F604 /* ko.json */,
-				B86032B4225FE2880049F604 /* zh.json */,
+				B8AD6B5A2260ED3800EB71E8 /* Fonts */,
+				B8AD6B6C2260EDBC00EB71E8 /* skin-config */,
+				B8AD6B672260ED5F00EB71E8 /* main.jsbundle */,
 			);
-			path = languageFiles;
+			path = SkinConfig;
+			sourceTree = "<group>";
+		};
+		B8AD6B5A2260ED3800EB71E8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD6B602260ED4100EB71E8 /* alice.ttf */,
+				B8AD6B5C2260ED4100EB71E8 /* ooyala-slick-type.ttf */,
+				B8AD6B5D2260ED4100EB71E8 /* Roboto-Bold.ttf */,
+				B8AD6B5B2260ED4100EB71E8 /* Roboto-Regular.ttf */,
+				B8AD6B5F2260ED4100EB71E8 /* RobotoCondensed-Bold.ttf */,
+				B8AD6B5E2260ED4100EB71E8 /* RobotoCondensed-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		B8AD6B6C2260EDBC00EB71E8 /* skin-config */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD6B6D2260EDDB00EB71E8 /* languageFiles */,
+				B8AD6B792260EE2F00EB71E8 /* skin.json */,
+			);
+			name = "skin-config";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B8AD6B6D2260EDDB00EB71E8 /* languageFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD6B6F2260EDED00EB71E8 /* en.json */,
+				B8AD6B702260EDED00EB71E8 /* es.json */,
+				B8AD6B6E2260EDED00EB71E8 /* ja.json */,
+				B8AD6B712260EDED00EB71E8 /* ko.json */,
+				B8AD6B722260EDED00EB71E8 /* zh.json */,
+			);
+			name = languageFiles;
+			sourceTree = "<group>";
+		};
+		B8AD6B7D226120A400EB71E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8AD6B7B2261207700EB71E8 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,23 +327,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8AD6B752260EDED00EB71E8 /* es.json in Resources */,
+				B8AD6B632260ED4100EB71E8 /* Roboto-Bold.ttf in Resources */,
+				B8AD6B662260ED4100EB71E8 /* alice.ttf in Resources */,
 				B860326F225FDE2C0049F604 /* LaunchScreen.storyboard in Resources */,
 				B860326C225FDE2C0049F604 /* Assets.xcassets in Resources */,
-				B86032BC225FE2890049F604 /* en.json in Resources */,
-				B86032AE225FE2420049F604 /* Roboto-Regular.ttf in Resources */,
-				B86032AD225FE2420049F604 /* alice.ttf in Resources */,
-				B86032AC225FE2420049F604 /* RobotoCondensed-Bold.ttf in Resources */,
-				B86032AB225FE2420049F604 /* ooyala-slick-type.ttf in Resources */,
-				B86032BB225FE2890049F604 /* ja.json in Resources */,
-				B86032B9225FE2890049F604 /* zh.json in Resources */,
-				B86032AA225FE2420049F604 /* Roboto-Bold.ttf in Resources */,
+				B8AD6B652260ED4100EB71E8 /* RobotoCondensed-Bold.ttf in Resources */,
+				B8AD6B772260EDED00EB71E8 /* zh.json in Resources */,
+				B8AD6B612260ED4100EB71E8 /* Roboto-Regular.ttf in Resources */,
+				B8AD6B742260EDED00EB71E8 /* en.json in Resources */,
 				B860326A225FDE280049F604 /* Main.storyboard in Resources */,
-				B86032BA225FE2890049F604 /* es.json in Resources */,
-				B86032B2225FE27C0049F604 /* main.jsbundle in Resources */,
-				B860333B22601F290049F604 /* skin.json in Resources */,
-				B86032B8225FE2890049F604 /* ko.json in Resources */,
-				B86032A9225FE2420049F604 /* RobotoCondensed-Regular.ttf in Resources */,
-				B860328F225FE0EC0049F604 /* PlayerView.xib in Resources */,
+				B8AD6B762260EDED00EB71E8 /* ko.json in Resources */,
+				B8AD6B622260ED4100EB71E8 /* ooyala-slick-type.ttf in Resources */,
+				B8AD6B692260ED5F00EB71E8 /* main.jsbundle in Resources */,
+				B8AD6B7A2260EE2F00EB71E8 /* skin.json in Resources */,
+				B8AD6B642260ED4100EB71E8 /* RobotoCondensed-Regular.ttf in Resources */,
+				B8AD6B732260EDED00EB71E8 /* ja.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,10 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B860328A225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift in Sources */,
-				B8603292225FE1200049F604 /* ScrollViewController.swift in Sources */,
 				B8603285225FE08E0049F604 /* PlayerSelectionOption.swift in Sources */,
+				B8F22AAC22650F580055FCB2 /* PlayerCell.swift in Sources */,
+				B85422392264F37A00958215 /* MultiplePlayerViewController.swift in Sources */,
 				B8603265225FDE280049F604 /* AppDelegate.swift in Sources */,
-				B860328E225FE0EC0049F604 /* PlayerView.swift in Sources */,
+				B8AD6B7C2261207700EB71E8 /* UIView.swift in Sources */,
 				B8603289225FE0CC0049F604 /* OptionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
