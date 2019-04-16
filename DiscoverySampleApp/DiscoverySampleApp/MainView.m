@@ -12,7 +12,7 @@
 #import "PlayerViewController.h"
 #import "DemoSettings.h"
 
-@interface MainView ()
+@interface MainView () <PlayerViewControllerDelegate>
 
 @property (nonatomic) IBOutlet UILabel *videoTitle;
 @property (nonatomic) IBOutlet UILabel *descriptionLabel;
@@ -41,7 +41,6 @@ static float const playerTop           = 150;
   [super viewDidLoad];
 
   self.configuration = [DemoSettings new]; //config object (config.json)
-  self.playerViewController = [PlayerViewController alloc];
   [self setupUI];
 }
 
@@ -57,7 +56,6 @@ static float const playerTop           = 150;
   // Title label
   NSString *actualVideoTitle = self.configuration.initasset[@"title"];
   self.videoTitle.text      = [@"Article 123: " stringByAppendingString:actualVideoTitle];
-  self.videoTitle.font      = [UIFont fontWithName:@"Roboto-Bold" size:22.0];
   self.videoTitle.textColor = [UIColor colorWithRed:0.29 green:0.31 blue:0.33 alpha:1.0];
 
   self.descriptionLabel.font          = [UIFont fontWithName:@"Roboto-Regular" size:20.0];
@@ -113,5 +111,22 @@ static float const playerTop           = 150;
   self.playerViewHeight.active = NO;
   self.playerViewFullHeight.active = YES;
 }
+
+#pragma mark - PlayerViewControllerDelegate
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"embed"]) {
+    self.playerViewController = segue.destinationViewController;
+    self.playerViewController.delegate = self;
+  }
+}
+
+- (void)didUpdateAssetTitle:(NSString *)title {
+  dispatch_async(dispatch_get_main_queue(), ^{
+    self.videoTitle.text = title;
+  });
+}
+
+- (void)didStartPlaying {}
 
 @end

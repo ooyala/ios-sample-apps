@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Player View Controller-->
         <scene sceneID="hi8-rP-Opj">
@@ -44,12 +49,12 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <connections>
-                                    <segue destination="RHF-YD-sBG" kind="embed" id="CSM-EB-mJb"/>
+                                    <segue destination="RHF-YD-sBG" kind="embed" identifier="embed" id="CSM-EB-mJb"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-jm-Jaw">
-                                <rect key="frame" x="19" y="72" width="337.5" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-jm-Jaw">
+                                <rect key="frame" x="19" y="72" width="337.5" height="57"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -70,7 +75,7 @@
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="height" secondItem="cOD-61-oVm" secondAttribute="height" id="QZ6-UQ-NVT"/>
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="width" secondItem="cOD-61-oVm" secondAttribute="width" id="QaU-Ts-EUa"/>
                             <constraint firstItem="mZR-Wg-SbA" firstAttribute="width" secondItem="cOD-61-oVm" secondAttribute="width" multiplier="0.9" id="S86-tH-VKT"/>
-                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="Vj9-jm-Jaw" secondAttribute="bottom" constant="20" id="YtZ-OL-ZW7"/>
+                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="Vj9-jm-Jaw" secondAttribute="bottom" constant="8" id="YtZ-OL-ZW7"/>
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="gdv-aa-oEZ" secondAttribute="bottom" constant="73" id="cKK-Yu-zCX"/>
                             <constraint firstItem="mZR-Wg-SbA" firstAttribute="centerX" secondItem="cOD-61-oVm" secondAttribute="centerX" id="ndv-Hi-XO4"/>
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="height" secondItem="cOD-61-oVm" secondAttribute="height" multiplier="0.319" constant="37.227000000000004" id="oMA-Xh-dez"/>
@@ -108,27 +113,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4X-Ya-Cbl">
-                                <rect key="frame" x="0.0" y="327" width="375" height="400"/>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqR-Pw-Xit">
+                                <rect key="frame" x="19" y="72" width="337.5" height="45"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-z6-nzA">
-                                <rect key="frame" x="0.0" y="114" width="375" height="213"/>
+                                <rect key="frame" x="0.0" y="124" width="375" height="213"/>
                                 <connections>
                                     <segue destination="e9Y-Zt-sqc" kind="embed" id="2C3-nQ-GEl"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqR-Pw-Xit">
-                                <rect key="frame" x="19" y="72" width="337.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4X-Ya-Cbl">
+                                <rect key="frame" x="0.0" y="337" width="375" height="400"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="E4X-Ya-Cbl" firstAttribute="top" secondItem="Qia-z6-nzA" secondAttribute="bottom" id="1WP-62-0vR"/>
                             <constraint firstItem="E4X-Ya-Cbl" firstAttribute="height" secondItem="Fhw-5K-9yq" secondAttribute="height" multiplier="0.6" id="2xZ-QG-0zJ"/>
-                            <constraint firstItem="Qia-z6-nzA" firstAttribute="top" secondItem="RdN-NC-gdm" secondAttribute="bottom" constant="50" id="9QQ-kK-JLl"/>
+                            <constraint firstItem="Qia-z6-nzA" firstAttribute="top" secondItem="OqR-Pw-Xit" secondAttribute="bottom" constant="7" id="5Xe-hr-p4x"/>
+                            <constraint firstItem="Qia-z6-nzA" firstAttribute="top" secondItem="RdN-NC-gdm" secondAttribute="bottom" constant="60" id="9QQ-kK-JLl"/>
                             <constraint firstItem="Qia-z6-nzA" firstAttribute="width" secondItem="Fhw-5K-9yq" secondAttribute="width" id="PdU-EZ-BjF"/>
                             <constraint firstItem="OqR-Pw-Xit" firstAttribute="centerX" secondItem="Fhw-5K-9yq" secondAttribute="centerX" id="QZI-N6-CoT"/>
                             <constraint firstItem="E4X-Ya-Cbl" firstAttribute="width" secondItem="Fhw-5K-9yq" secondAttribute="width" id="RBx-jP-Ywu"/>

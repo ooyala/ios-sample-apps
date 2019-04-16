@@ -13,6 +13,21 @@
 #import "DemoSettings.h"
 #import "PlayerSelectionOption.h"
 
+@interface PlayerViewController ()
+
+@property (nonatomic) IBOutlet UIView *videoView;
+@property (nonatomic) IBOutlet UILabel *textLabel;
+
+@property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
+@property (nonatomic) DemoSettings *configuration;
+
+@end
+
 @implementation PlayerViewController
 
 - (void)loadView {
@@ -43,9 +58,9 @@
                                                                 jsCodeLocation:jsCodeLocation
                                                                 configFileName:@"skin"
                                                                overrideConfigs:overrideConfigs];
-  self.skinController = [[OOSkinViewController alloc] initWithPlayer:self.ooyalaPlayer
-                                                         skinOptions:skinOptions
-                                                              parent:_videoView];
+  _skinController = [[OOSkinViewController alloc] initWithPlayer:self.ooyalaPlayer
+                                                     skinOptions:skinOptions
+                                                          parent:self.videoView];
   [self addChildViewController:_skinController];
   _skinController.view.frame = self.videoView.bounds;
 }
@@ -99,10 +114,7 @@
   }
   
   if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
-    NSDictionary *dict = @{@"title": self.ooyalaPlayer.currentItem.title};
-    [NSNotificationCenter.defaultCenter postNotificationName:@"NotificationMessageEvent"
-                                                      object:nil
-                                                    userInfo:dict];
+    [self.delegate didUpdateAssetTitle:self.ooyalaPlayer.currentItem.title];
   }
 
   // Check for FullScreenChanged notification
@@ -118,6 +130,7 @@
   }
   
   if ([notification.name isEqualToString:OOOoyalaPlayerPlayStartedNotification]) {
+    [self.delegate didStartPlaying];
     NSLog(@"%@", @"Playback started");
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerEmbedCodeSetNotification]) {
