@@ -54,12 +54,8 @@ static float const playerTop           = 150;
   self.navigationItem.titleView = imgView;
 
   // Title label
-  NSString *actualVideoTitle = self.configuration.initasset[@"title"];
-  self.videoTitle.text      = [@"Article 123: " stringByAppendingString:actualVideoTitle];
+  self.videoTitle.text      = self.configuration.initasset[@"title"];
   self.videoTitle.textColor = [UIColor colorWithRed:0.29 green:0.31 blue:0.33 alpha:1.0];
-
-  self.descriptionLabel.font          = [UIFont fontWithName:@"Roboto-Regular" size:20.0];
-  self.descriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size
