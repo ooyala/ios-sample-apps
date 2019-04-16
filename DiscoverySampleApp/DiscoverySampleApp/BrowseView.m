@@ -125,10 +125,7 @@
   
   self.scrollview.contentSize = CGSizeMake(self.view.frame.size.width, (self.labels.count * (self.view.frame.size.height*scrollp))); //# label * scrollp
   self.scrollview.frame = CGRectMake(1, height, self.view.frame.size.width, 512);  ////TODO: 512
-  
-  int carousel_UI_width = MAX (self.view.frame.size.height,self.view.frame.size.width);
-  
-  UILabel *labelsection;
+
   height = 0; //reset height in all devices start on pixel 20
 
   for (int i = 0; i < self.labels.count; i++) {
@@ -213,8 +210,8 @@
   self.videoTitle.text = sender.title;
   PlayerSelectionOption *value = [[PlayerSelectionOption alloc] initWithTitle:self.videoTitle.text
                                                                     embedCode:self.actualembed
-                                                                        pcode:[(NSDictionary *)self.configuration.playerParameters objectForKey:@"pcode"]
-                                                                 playerDomain:[(NSDictionary *)self.configuration.playerParameters objectForKey:@"domain"]
+                                                                        pcode:self.configuration.playerParameters[@"pcode"]
+                                                                 playerDomain:self.configuration.playerParameters[@"domain"]
                                                                viewController:PlayerViewController.class
                                                                           nib:@"OOplayer"];
   self.playerViewController = [self.playerViewController initWithPlayerSelectionOption:value];
@@ -231,7 +228,7 @@
    carouselConfiguration:carouselConfig {
   //[actual_carousel registerNib:[UINib nibWithNibName:@"EmbedCell" bundle:nil] forCellReuseIdentifier:@"EmbedCell"];
   if (!self.actualembed) {
-    self.actualembed = [(NSDictionary *)self.configuration.initasset objectForKey:@"embedCode"];
+    self.actualembed = self.configuration.initasset[@"embedCode"];
   }
 
   if ([handler isEqual:@"middleware"]) {
@@ -283,7 +280,7 @@
     for (NSUInteger index = 0; index < discoveryOptions.count; ++index) {
       [OODiscoveryManager getResults:discoveryOptions[index]
                            embedCode:self.actualembed
-                               pcode:[(NSDictionary *)self.configuration.playerParameters objectForKey:@"pcode"]
+                               pcode:self.configuration.playerParameters[@"pcode"]
                           parameters:nil
                             callback:^(NSArray *results, OOOoyalaError *error) {
         if (error) {

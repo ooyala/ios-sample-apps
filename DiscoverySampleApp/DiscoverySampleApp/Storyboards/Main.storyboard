@@ -47,8 +47,8 @@
                                     <segue destination="RHF-YD-sBG" kind="embed" id="CSM-EB-mJb"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-jm-Jaw">
-                                <rect key="frame" x="19" y="72" width="337.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-jm-Jaw">
+                                <rect key="frame" x="19" y="72" width="337.5" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="height" secondItem="cOD-61-oVm" secondAttribute="height" id="QZ6-UQ-NVT"/>
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="width" secondItem="cOD-61-oVm" secondAttribute="width" id="QaU-Ts-EUa"/>
                             <constraint firstItem="mZR-Wg-SbA" firstAttribute="width" secondItem="cOD-61-oVm" secondAttribute="width" multiplier="0.9" id="S86-tH-VKT"/>
-                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="Vj9-jm-Jaw" secondAttribute="bottom" constant="44" id="YtZ-OL-ZW7"/>
+                            <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="Vj9-jm-Jaw" secondAttribute="bottom" constant="20" id="YtZ-OL-ZW7"/>
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="top" secondItem="gdv-aa-oEZ" secondAttribute="bottom" constant="73" id="cKK-Yu-zCX"/>
                             <constraint firstItem="mZR-Wg-SbA" firstAttribute="centerX" secondItem="cOD-61-oVm" secondAttribute="centerX" id="ndv-Hi-XO4"/>
                             <constraint firstItem="CUe-r7-Qy6" firstAttribute="height" secondItem="cOD-61-oVm" secondAttribute="height" multiplier="0.319" constant="37.227000000000004" id="oMA-Xh-dez"/>
