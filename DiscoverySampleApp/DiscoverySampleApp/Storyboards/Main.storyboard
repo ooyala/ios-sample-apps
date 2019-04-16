@@ -125,7 +125,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-z6-nzA">
                                 <rect key="frame" x="0.0" y="144" width="375" height="213"/>
                                 <connections>
-                                    <segue destination="e9Y-Zt-sqc" kind="embed" id="2C3-nQ-GEl"/>
+                                    <segue destination="e9Y-Zt-sqc" kind="embed" identifier="embed" id="2C3-nQ-GEl"/>
                                 </connections>
                             </containerView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4X-Ya-Cbl">
