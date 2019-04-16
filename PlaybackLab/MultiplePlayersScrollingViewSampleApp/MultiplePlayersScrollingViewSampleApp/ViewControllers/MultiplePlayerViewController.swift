@@ -160,26 +160,24 @@ class MultiplePlayerViewController: UIViewController {
 
     collectionView.scrollToItem(at: indexPath, at: .bottom, animated: false)
     
-    guard let cell = collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
+    let playerSelection = self.options[indexPath.row]
     
-    let playerSelection = options[indexPath.row]
-    
-    if let currentItem = sharedPlayer.player.currentItem,
+    if let currentItem = self.sharedPlayer.player.currentItem,
       !currentItem.embedCode.isEmpty && currentItem.embedCode == playerSelection.embedCode {
       return
     }
     
-    DispatchQueue.global().async {
+    DispatchQueue.main.async {
+      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
+   
       if self.sharedPlayer.player.setEmbedCode(cell.playerSelectionOption?.embedCode) {
-        DispatchQueue.main.async {
-          cell.videoView.addSubview(self.sharedPlayer.view)
-          NSLayoutConstraint.activate([
-            self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
-            self.sharedPlayer.view.bottomAnchor.constraint(equalTo: cell.videoView.bottomAnchor),
-            self.sharedPlayer.view.trailingAnchor.constraint(equalTo: cell.videoView.trailingAnchor),
-            self.sharedPlayer.view.leadingAnchor.constraint(equalTo: cell.videoView.leadingAnchor),
-            ])
-        }
+        cell.videoView.addSubview(self.sharedPlayer.view)
+        NSLayoutConstraint.activate([
+          self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
+          self.sharedPlayer.view.bottomAnchor.constraint(equalTo: cell.videoView.bottomAnchor),
+          self.sharedPlayer.view.trailingAnchor.constraint(equalTo: cell.videoView.trailingAnchor),
+          self.sharedPlayer.view.leadingAnchor.constraint(equalTo: cell.videoView.leadingAnchor),
+          ])
       }
     }
     
@@ -221,12 +219,10 @@ extension MultiplePlayerViewController: UICollectionViewDelegate {
     
     let indexPath = IndexPath(item: index, section: 0)
     
-    guard let cell = collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
-    
-    sharedPlayer.player.pause()
-    cell.playheadTime = sharedPlayer.player.playheadTime()
-    
     DispatchQueue.main.async {
+      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
+      self.sharedPlayer.player.pause()
+      cell.playheadTime = self.sharedPlayer.player.playheadTime()
       if cell.videoView.subviews.count > 0 {
         cell.videoView.subviews.forEach({ $0.removeFromSuperview() })
       }
