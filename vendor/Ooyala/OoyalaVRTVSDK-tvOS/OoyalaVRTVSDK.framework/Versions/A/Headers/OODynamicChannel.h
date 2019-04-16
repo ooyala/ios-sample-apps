@@ -3,7 +3,7 @@
  * @brief      OODynamicChannel
  * @details    OODynamicChannel.h in OoyalaSDK
  * @date       11/30/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOChannel.h"
@@ -23,39 +23,39 @@
 
 /** @internal
  * Initialize a OODynamicChannel using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to initialize this OODynamicChannel
- * @param[in] theEmbedCodes the embed codes to fetch from the dictionary (ordered)
- * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
- * @returns the initialized OODynamicChannel
+ * @param data the NSDictionary containing the data to use to initialize this OODynamicChannel
+ * @param theEmbedCodes the embed codes to fetch from the dictionary (ordered)
+ * @param theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
+ * @return the initialized OODynamicChannel
  */
 - (id)initWithDictionary:(NSDictionary *)data embedCodes:(NSArray *)theEmbedCodes api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Initialize a OODynamicChannel using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to initialize this OODynamicChannel
- * @param[in] theEmbedCodes the embed codes to fetch from the dictionary (ordered)
- * @param[in] theParent the parent OOChannelSet of this OODynamicChannel
- * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
- * @returns the initialized OODynamicChannel
+ * @param data the NSDictionary containing the data to use to initialize this OODynamicChannel
+ * @param theEmbedCodes the embed codes to fetch from the dictionary (ordered)
+ * @param theParent the parent OOChannelSet of this OODynamicChannel
+ * @param theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
+ * @return the initialized OODynamicChannel
  */
 - (id)initWithDictionary:(NSDictionary *)data embedCodes:(NSArray *)theEmbedCodes parent:(OOChannelSet *)theParent api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OODynamicChannel using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to update this OODynamicChannel
- * @returns a OOReturnState based on if the data matched or not (or parsing failed)
+ * @param data the NSDictionary containing the data to use to update this OODynamicChannel
+ * @return a OOReturnState based on if the data matched or not (or parsing failed)
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 
 /** @internal
  * The embed codes to authorize
- * @returns the embed codes to authorize as an NSArray
+ * @return the embed codes to authorize as an NSArray
  */
 - (NSArray *)embedCodesToAuthorize;
 
 /**
  * The total duration (not including Ads) of this OODynamicChannel
- * @returns an Float64 with the total duration in seconds
+ * @return an Float64 with the total duration in seconds
  */
 - (Float64)duration;
 

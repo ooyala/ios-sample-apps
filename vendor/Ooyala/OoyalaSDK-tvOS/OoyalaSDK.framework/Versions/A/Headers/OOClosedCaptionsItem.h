@@ -3,7 +3,7 @@
  * @brief      OOClosedCaptionsItem
  * @details    OOClosedCaptionsItem.h in OoyalaSDK
  * @date       09/02/15
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 #import <Foundation/Foundation.h>
 

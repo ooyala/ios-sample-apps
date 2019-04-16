@@ -43,29 +43,29 @@ typedef NS_ENUM(NSInteger, OOAuthCode) {
 
 /** @internal
  * Update the OOContentItem using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to update this OOContentItem
- * @returns a OOReturnState based on if the data matched or not (or parsing failed)
+ * @param data the NSDictionary containing the data to use to update this OOContentItem
+ * @return a OOReturnState based on if the data matched or not (or parsing failed)
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 
 /** @internal
  * The embed code for the OOAuthorizableItem
- * @returns the embed codes to authorize as an NSArray
+ * @return the embed codes to authorize as an NSArray
  */
 - (NSArray *)embedCodesToAuthorize;
 
 /**
  * Whether or not this OOAuthorizableItem is authorized
- * @returns YES if authorized, NO if not
+ * @return YES if authorized, NO if not
  */
 - (BOOL)authorized;
 
 /**
  * The OOAuthCode from the authorization request
- * @returns an OOAuthCode with the status of the authorization request
+ * @return an OOAuthCode with the status of the authorization request
  */
 - (OOAuthCode)authCode;
 
-@property (nonatomic, assign) BOOL heartbeatRequired;
+@property (nonatomic) BOOL heartbeatRequired;
 
 @end

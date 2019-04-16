@@ -3,7 +3,7 @@
  * @brief      OOReturnState
  * @details    OOReturnState.h in OoyalaSDK
  * @date       2/2/12
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #ifndef OoyalaSDK_ReturnState_h

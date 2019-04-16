@@ -3,7 +3,7 @@
 * @brief      OONielsenPlugin
 * @details    OONielsenPlugin.h in OoyalaNielsenSDK
 * @date       11/13/14
-* @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
+* @copyright  Copyright © 2014 Ooyala, Inc. All rights reserved.
 */
 
 #import <Foundation/Foundation.h>
@@ -17,13 +17,13 @@
 
 /**
  Initializes the ID3Meter metering framework.
- @param[in] player the ooyala player the plugin associate with
- @param[in] appId appId provided by Nielsen
- @param[in] appVersion the app version
- @param[in] appName the app name
- @param[in] sfcode the sfcode
- @param[in] otherParameters such as longitude, latitude, dma or cccode
- @returns the initialized nielsen plugin object
+ @param player the ooyala player the plugin associate with
+ @param appId appId provided by Nielsen
+ @param appVersion the app version
+ @param appName the app name
+ @param sfcode the sfcode
+ @param otherParameters such as longitude, latitude, dma or cccode
+ @return the initialized nielsen plugin object
  */
 - (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
                          appId:(NSString *)appId
@@ -34,7 +34,7 @@
 
 /**
  Get the underlying nielsen app api
- @returns the nielsenAppApi instance
+ @return the nielsenAppApi instance
  */
 - (NielsenAppApi *)getNielsenAppApi;
 

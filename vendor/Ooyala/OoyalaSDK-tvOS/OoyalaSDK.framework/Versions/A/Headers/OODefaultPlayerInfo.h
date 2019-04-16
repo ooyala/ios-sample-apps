@@ -3,7 +3,7 @@
  * @brief      OODefaultPlayerInfo
  * @details    OODefaultPlayerInfo.h in OoyalaSDK
  * @date       1/17/12
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOPlayerInfo.h"

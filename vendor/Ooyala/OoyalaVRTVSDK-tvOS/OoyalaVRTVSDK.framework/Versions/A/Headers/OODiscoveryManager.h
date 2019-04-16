@@ -4,7 +4,7 @@
  * @brief      OODiscoveryManager
  * @details    OODiscoveryManager.h in OoyalaSDK
  * @date       05/15/15
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -14,8 +14,8 @@
 
 /**
  * The callback used for OODiscoveryManager to notify the discovery results
- * @param[in] results the discovery results.
- * @param[in] error an OOOoyalaError denoting what error occurred (nil if no error)
+ * @param results the discovery results.
+ * @param error an OOOoyalaError denoting what error occurred (nil if no error)
  */
 typedef void(^OODiscoveryResultsCallback)(NSArray *results, OOOoyalaError *error);
 
@@ -23,13 +23,13 @@ typedef void(^OODiscoveryResultsCallback)(NSArray *results, OOOoyalaError *error
 
 /**
  * get the discovery results
- * @param[in] options the discovery option;
- * @param[in] embedCode the embed code for discovery type similar assets, ignored for other discovery types
- * @param[in] pcode the pcode
- * @param[in] parameters the parameters as key value pair
+ * @param options the discovery option;
+ * @param embedCode the embed code for discovery type similar assets, ignored for other discovery types
+ * @param pcode the pcode
+ * @param parameters the parameters as key value pair
  *  for a detailed list and examples of valid parameters, please refer to
  *  http://support.ooyala.com/developers/documentation/concepts/content_discovery_summary_of_routes.html
- * @param[in] callback the callback function that handles discovery results.the callback might not be called on the main thread.
+ * @param callback the callback function that handles discovery results.the callback might not be called on the main thread.
  */
 + (void)getResults:(OODiscoveryOptions *)options
          embedCode:(NSString *)embedCode
@@ -39,8 +39,8 @@ typedef void(^OODiscoveryResultsCallback)(NSArray *results, OOOoyalaError *error
 
 /**
  * send discovery feedback impression when discovery is shown to user
- * @param[in] options the discovery options
- * @param[in] bucketInfo the bucket info id
+ * @param options the discovery options
+ * @param bucketInfo the bucket info id
  */
 + (void)sendImpression:(OODiscoveryOptions *)options
             bucketInfo:(NSString *)bucketInfo
@@ -49,8 +49,8 @@ typedef void(^OODiscoveryResultsCallback)(NSArray *results, OOOoyalaError *error
 
 /**
  * send discovery feedback click when user clicks to play an item
- * @param[in] bucketInfo the bucket info id
- * @param[in] options the discovery options
+ * @param bucketInfo the bucket info id
+ * @param options the discovery options
  */
 + (void)sendClick:(OODiscoveryOptions *)options
        bucketInfo:(NSString *)bucketInfo

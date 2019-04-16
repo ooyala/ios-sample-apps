@@ -122,6 +122,7 @@
 #import "OOFCCTVRating.h"
 #import "OOMultiAudioProtocol.h"
 #import "OOAudioTrackProtocol.h"
+#import "OOMarker.h"
 
 // Offline
 #if !TARGET_OS_TV // Check is tvOS

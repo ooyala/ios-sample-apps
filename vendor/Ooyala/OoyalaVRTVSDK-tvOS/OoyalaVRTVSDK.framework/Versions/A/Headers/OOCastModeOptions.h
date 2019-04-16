@@ -3,7 +3,7 @@
 //  OoyalaSDK
 //
 //  Created on 6/17/15.
-//  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
 @import Foundation;
