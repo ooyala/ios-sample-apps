@@ -160,9 +160,9 @@ class MultiplePlayerViewController: UIViewController {
 
     collectionView.scrollToItem(at: indexPath, at: .bottom, animated: false)
     
-    let playerSelection = self.options[indexPath.row]
+    let playerSelection = options[indexPath.row]
     
-    if let currentItem = self.sharedPlayer.player.currentItem,
+    if let currentItem = sharedPlayer.player.currentItem,
       !currentItem.embedCode.isEmpty && currentItem.embedCode == playerSelection.embedCode {
       return
     }
@@ -195,7 +195,6 @@ class MultiplePlayerViewController: UIViewController {
         cell.titleLabel.text = self.sharedPlayer.player.currentItem.title
       }
       self.sharedPlayer.player.play(withInitialTime: cell.playheadTime)
-      
     }
   }
   
