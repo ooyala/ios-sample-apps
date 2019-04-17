@@ -2,7 +2,7 @@
 //  SwiftSampleAppTests.swift
 //  SwiftSampleAppTests
 //
-//  Created by Yi Gu on 3/23/15.
+//  Created on 3/23/15.
 //  Copyright (c) 2015 Ooyala Inc. All rights reserved.
 //
 
