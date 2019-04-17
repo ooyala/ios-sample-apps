@@ -7,8 +7,9 @@
  */
 
 #import "BasicSimplePlayerViewController.h"
-#import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaSDK/OOEnums.h>
+
+@import OoyalaSDK;
+
 #import "AppDelegate.h"
 
 @interface BasicSimplePlayerViewController ()
