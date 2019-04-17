@@ -46,8 +46,6 @@
 		390891DE21F5B26800D860A9 /* tv-skin.json in Resources */ = {isa = PBXBuildFile; fileRef = 390891CA21F5B26700D860A9 /* tv-skin.json */; };
 		390891DF21F5B26800D860A9 /* skin-schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 390891CB21F5B26700D860A9 /* skin-schema.json */; };
 		390891E021F5B26800D860A9 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 390891CC21F5B26700D860A9 /* validate.js */; };
-		390891E621F5B29A00D860A9 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 390891E221F5B29A00D860A9 /* CJSONDeserializer.m */; };
-		390891E721F5B29A00D860A9 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 390891E521F5B29A00D860A9 /* CJSONSerializer.m */; };
 		390891E821F5B35700D860A9 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390891AE21F5B1D400D860A9 /* GoogleInteractiveMediaAds.framework */; };
 		390891E921F5B35700D860A9 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 390891AE21F5B1D400D860A9 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C12263881F5A221C009EDD2E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12263871F5A221C009EDD2E /* TableViewController.m */; };
@@ -123,10 +121,6 @@
 		390891CA21F5B26700D860A9 /* tv-skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tv-skin.json"; sourceTree = "<group>"; };
 		390891CB21F5B26700D860A9 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		390891CC21F5B26700D860A9 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
-		390891E221F5B29A00D860A9 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		390891E321F5B29A00D860A9 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		390891E421F5B29A00D860A9 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		390891E521F5B29A00D860A9 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		C12263871F5A221C009EDD2E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		C122638B1F5A2229009EDD2E /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseView.m; sourceTree = "<group>"; };
@@ -135,7 +129,6 @@
 		C1D0E9EB1F61B27600B8B9DD /* BrowseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseButton.h; sourceTree = "<group>"; };
 		DB22A39D1EA0111F00FA3E3C /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		DB22A39E1EA0111F00FA3E3C /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
-		DB22A3B81EA963FC00FA3E3C /* JSONRepresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		DB22A3BD1EAFE15300FA3E3C /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSettings.h; sourceTree = "<group>"; };
 		DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSettings.m; sourceTree = "<group>"; };
@@ -206,7 +199,6 @@
 		0B7824471B2B834F00D718AB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				390891E121F5B29A00D860A9 /* JSON */,
 				DB22A3BF1EAFE1DE00FA3E3C /* DemoSettings.h */,
 				DB22A3C01EAFE1DE00FA3E3C /* DemoSettings.m */,
 				0B7824481B2B834F00D718AB /* PlayerSelectionOption.h */,
@@ -317,18 +309,6 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
-		390891E121F5B29A00D860A9 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				DB22A3B81EA963FC00FA3E3C /* JSONRepresentation.h */,
-				390891E321F5B29A00D860A9 /* CJSONSerializer.h */,
-				390891E221F5B29A00D860A9 /* CJSONDeserializer.m */,
-				390891E421F5B29A00D860A9 /* CJSONDeserializer.h */,
-				390891E521F5B29A00D860A9 /* CJSONSerializer.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
@@ -396,7 +376,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = Facebook;
+				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						ProvisioningStyle = Automatic;
@@ -461,13 +441,11 @@
 			files = (
 				0B7824351B2B7EB600D718AB /* main.m in Sources */,
 				C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */,
-				390891E721F5B29A00D860A9 /* CJSONSerializer.m in Sources */,
 				C1D0E9EA1F61B26900B8B9DD /* BrowseButton.m in Sources */,
 				0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */,
 				DB22A3C11EAFE1DE00FA3E3C /* DemoSettings.m in Sources */,
 				DB22A39F1EA0111F00FA3E3C /* MainView.m in Sources */,
 				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
-				390891E621F5B29A00D860A9 /* CJSONDeserializer.m in Sources */,
 				C12263881F5A221C009EDD2E /* TableViewController.m in Sources */,
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
 				0B78245B1B2B855500D718AB /* PlayerViewController.m in Sources */,
