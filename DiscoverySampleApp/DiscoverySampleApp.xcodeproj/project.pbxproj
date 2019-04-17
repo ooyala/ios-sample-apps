@@ -48,6 +48,7 @@
 		390891E021F5B26800D860A9 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 390891CC21F5B26700D860A9 /* validate.js */; };
 		390891E821F5B35700D860A9 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390891AE21F5B1D400D860A9 /* GoogleInteractiveMediaAds.framework */; };
 		390891E921F5B35700D860A9 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 390891AE21F5B1D400D860A9 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		392966092267130200051EFE /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 392966082267130200051EFE /* NetworkManager.m */; };
 		C12263881F5A221C009EDD2E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12263871F5A221C009EDD2E /* TableViewController.m */; };
 		C18E9F741F44D5D40022CEA8 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = DB22A3BD1EAFE15300FA3E3C /* config.json */; };
 		C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */; };
@@ -121,6 +122,8 @@
 		390891CA21F5B26700D860A9 /* tv-skin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tv-skin.json"; sourceTree = "<group>"; };
 		390891CB21F5B26700D860A9 /* skin-schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "skin-schema.json"; sourceTree = "<group>"; };
 		390891CC21F5B26700D860A9 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
+		392966072267125200051EFE /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		392966082267130200051EFE /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		C12263871F5A221C009EDD2E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		C122638B1F5A2229009EDD2E /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseView.m; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				C12263871F5A221C009EDD2E /* TableViewController.m */,
 				C1D0E9EB1F61B27600B8B9DD /* BrowseButton.h */,
 				C1D0E9E91F61B26900B8B9DD /* BrowseButton.m */,
+				392966072267125200051EFE /* NetworkManager.h */,
+				392966082267130200051EFE /* NetworkManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 			files = (
 				0B7824351B2B7EB600D718AB /* main.m in Sources */,
 				C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */,
+				392966092267130200051EFE /* NetworkManager.m in Sources */,
 				C1D0E9EA1F61B26900B8B9DD /* BrowseButton.m in Sources */,
 				0B78242F1B2B7EB600D718AB /* AppDelegate.m in Sources */,
 				DB22A3C11EAFE1DE00FA3E3C /* DemoSettings.m in Sources */,
