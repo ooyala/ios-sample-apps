@@ -1,6 +1,6 @@
 /**
  * @class OOCuePointsView OOCuePointsView.h "OOCuePointsView.h"
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <UIKit/UIKit.h>
@@ -28,11 +28,11 @@
 
 /**
  Initialize an OOCuePointsView
- @param[in] frame the frame to render cue points in
- @param[in] padding size of padding to be used on the left and right of the cue points
- @param[in] durationDataSource a class which can be queried for duration of the playing asset
- @param[in] diameter the diameter of the cue points to be rendered
- @returns an initialized OOCuePointsView, or nil
+ @param frame the frame to render cue points in
+ @param padding size of padding to be used on the left and right of the cue points
+ @param durationDataSource a class which can be queried for duration of the playing asset
+ @param diameter the diameter of the cue points to be rendered
+ @return an initialized OOCuePointsView, or nil
  */
 - (instancetype)initWithFrame:(CGRect)frame
                       padding:(CGFloat)padding
