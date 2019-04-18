@@ -61,8 +61,8 @@
   _skinController = [[OOSkinViewController alloc] initWithPlayer:self.ooyalaPlayer
                                                      skinOptions:skinOptions
                                                           parent:self.videoView];
-  [self addChildViewController:_skinController];
-  _skinController.view.frame = self.videoView.bounds;
+  [self addChildViewController:self.skinController];
+  self.skinController.view.frame = self.videoView.bounds;
 }
 
 - (void)viewDidLoad {
@@ -74,7 +74,6 @@
                                                     options:options];
   
   self.ooyalaPlayer.actionAtEnd = OOOoyalaPlayerActionAtEndPause;  //This is reccomended to make sure the endscreen shows up as expected
-  
   [self setCustomSkin];
 
   [NSNotificationCenter.defaultCenter addObserver:self

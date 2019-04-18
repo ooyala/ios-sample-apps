@@ -19,6 +19,4 @@
 
 @property (nonatomic, weak) id<PlayerViewControllerDelegate> delegate;
 
-- (void)setCustomSkin;
-
 @end
