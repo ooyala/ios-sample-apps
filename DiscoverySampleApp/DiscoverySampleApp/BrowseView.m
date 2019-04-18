@@ -38,6 +38,8 @@
 @implementation BrowseView
 
 static float const percentage = .5f; //% cover player
+static int const buttonHeight = 110;
+static int const buttonMargin = 10;
 
 #pragma mark - Init
 
@@ -168,10 +170,11 @@ static float const percentage = .5f; //% cover player
       int yValue = 0;
 
       for (NSDictionary *discoverуResult in self.discoveryResults) {
-        BrowseButton *button = [[BrowseButton alloc] initWithFrame:CGRectMake(horizontalMargin + xValue,
-                                                                              120 * yValue,
-                                                                              videoWidth,
-                                                                              110)];
+        CGRect buttonRect = CGRectMake(horizontalMargin + xValue,
+                                       buttonMargin + (buttonHeight + buttonMargin) * yValue,
+                                       videoWidth,
+                                       buttonHeight);
+        BrowseButton *button = [[BrowseButton alloc] initWithFrame:buttonRect];
         NSString *name = discoverуResult[@"name"];
         NSString *imageUrl = discoverуResult[@"preview_image_url"];
         if (imageUrl && imageUrl.length > 0) {
@@ -186,9 +189,11 @@ static float const percentage = .5f; //% cover player
         }
 
         button.embedCode = discoverуResult[@"embed_code"];
-        button.titleLabel.text = name;
         button.title = name;
-        
+        [button setTitle:name forState:UIControlStateNormal];
+        button.titleEdgeInsets = UIEdgeInsetsMake(70, 5, 5, 5);
+        button.titleLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:14.0];
+
         if (name) {
           [self.scrollview addSubview:button];
           [button addTarget:self
@@ -203,9 +208,8 @@ static float const percentage = .5f; //% cover player
       }
 
       dispatch_async(dispatch_get_main_queue(), ^{
-        float scrollp = self.view.frame.size.height < 1000 ? .4 : .2;
         self.scrollview.contentSize = CGSizeMake(self.view.frame.size.width,
-                                                 (resultsCount / 2 + 1) * (110 + scrollp));
+                                                 (resultsCount / 2 + 1) * (buttonHeight + buttonMargin));
 
       });
     }
