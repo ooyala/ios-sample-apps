@@ -10,21 +10,15 @@
 
 @implementation BrowseButton
 
-@synthesize titleLabel;
-
 - (instancetype)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
     self.backgroundColor = UIColor.blackColor;
 
-    _transparentView = [[UIView alloc] initWithFrame:frame];
-    _transparentView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    //[self addSubview:self.transparentView];
-    
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 160, 50)];
-    self.titleLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:12.0];
-    self.titleLabel.textColor = [UIColor whiteColor];
-
-    [self addSubview:self.titleLabel];
+//    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 160, 50)];
+//    self.titleLabel.font = [UIFont fontWithName:@"Roboto-Bold" size:12.0];
+//    self.titleLabel.textColor = UIColor.whiteColor;
+//
+//    [self addSubview:self.titleLabel];
   }
   return self;
 }
