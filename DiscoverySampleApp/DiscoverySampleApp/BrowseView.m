@@ -28,9 +28,8 @@
 
 @property (nonatomic) DemoSettings *configuration; //read config.json
 @property (nonatomic) NSArray *labels; //user labels
-@property (nonatomic) NSArray *discoveryResults; //results of middleware/discoveryapi
+@property (nonatomic) NSMutableArray *discoveryResults; //results of middleware/discoveryapi
 @property (nonatomic) NSString *actualembed; //embed
-@property (nonatomic) int SimilarFeature;
 @property (nonatomic) PlayerViewController *playerViewController;
 @property (nonatomic) NetworkManager *networkManger;
 
@@ -45,18 +44,16 @@ static float const percentage = .5f; //% cover player
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+  _discoveryResults = [NSMutableArray array];
   _networkManger = [NetworkManager new];
 
   // Init custom class
   self.configuration = [DemoSettings new]; //config object (config.json)
-  self.SimilarFeature = -1;
-  [self getSimilarFeature];
-  
+
   self.labels = self.configuration.labels;
   [self getDiscoveryForCarouselConfiguration:self.configuration.carousels[0]];
 
   [self setupUI];
-  [self renderPortrait];
 }
 
 - (void)setupUI {
@@ -103,50 +100,32 @@ static float const percentage = .5f; //% cover player
 
 - (void)renderPortrait {
   NSLog(@"User render orientation: portrait");
-//  [self clearScrollView];
-
-  //layout init configuration
-  float scrollp = self.view.frame.size.height < 1000 ? .4 : .2;
-  int height = self.view.frame.size.height * percentage; //assignt to a variable to know where the player ends
-  float padding_margin_Y = self.view.frame.size.height *
-                          (self.view.frame.size.height < 1000 ? .15 : .1);
 
   [self.navigationController setNavigationBarHidden:NO animated:YES]; //Show navigation controller / logo /
   self.videoTitle.hidden = NO;
+  self.scrollview.hidden = NO;
 
+  int height = self.view.frame.size.height * percentage; //assignt to a variable to know where the player ends
   self.playerview.frame = CGRectMake(1, 87, self.view.frame.size.width, height);
   self.playerViewTop.constant = 80.0;
   self.playerViewHeight.active = YES;
   self.playerViewFullHeight.active = NO;
   self.scrollViewTop.active = YES;
-
-  height += padding_margin_Y;
-
-  self.scrollview.contentSize = CGSizeMake(self.view.frame.size.width,
-                                           (self.labels.count * (self.view.frame.size.height * scrollp))); //# label * scrollp
-  self.scrollview.frame = CGRectMake(1, height, self.view.frame.size.width, 512);  ////TODO: 512
 }
 
 - (void)renderLandscape {
   NSLog(@"User render orientation: landscape");
-//  [self clearScrollView];
-
-  //layout init configuration
-  float scrollp = self.view.frame.size.height < 768 ? .7 : .25;// iphone : ipad
-  int height    = self.view.frame.size.height * percentage;//assignt to a variable to know where the player ends
 
   [self.navigationController setNavigationBarHidden:YES animated:YES]; //Hide navigationbar
   self.videoTitle.hidden = YES;   //remove title uilabel
+  self.scrollview.hidden = YES;
 
+  int height = self.view.frame.size.height * percentage;//assignt to a variable to know where the player ends
   self.playerview.frame = CGRectMake(1, 1, self.view.frame.size.width, height);
   self.playerViewTop.constant = 0.0;
   self.playerViewHeight.active = NO;
   self.playerViewFullHeight.active = YES;
   self.scrollViewTop.active = NO;
-
-  self.scrollview.contentSize = CGSizeMake(self.view.frame.size.width,
-                                           self.labels.count * (self.view.frame.size.height * scrollp)); //# label * scrollp
-  self.scrollview.frame = CGRectMake(1, height, self.view.frame.size.width, 512);  ////TODO: 512
 }
 
 #pragma mark - PlayerViewDelegate
@@ -170,20 +149,8 @@ static float const percentage = .5f; //% cover player
 
 #pragma mark - discovery
 
-- (void)getSimilarFeature {
-  // Boolean *result = false;
-  for (int i = 0; i < self.labels.count; i++) {
-    if (self.configuration.carousels[i][@"realoadOnEmbedcodeChange"]) {
-      self.SimilarFeature = i;
-    }
-  }
-}
-
-- (void)getDiscovery {
-  for (NSDictionary *carouselConfig in self.configuration.carousels) {
-    //Create and fill carousel
-    [self getDiscoveryForCarouselConfiguration:carouselConfig];
-  }
+- (int)similarFeature {
+  return arc4random_uniform((uint32_t)self.configuration.carousels.count);
 }
 
 - (void)updateScrollViewWithDiscovery {
@@ -192,7 +159,7 @@ static float const percentage = .5f; //% cover player
       [subview removeFromSuperview];
     }
   
-    NSInteger resultsCount = [self.discoveryResults[0] count];
+    NSInteger resultsCount = self.discoveryResults.count;
     float videoWidth       = self.view.frame.size.width * 0.45;
     float horizontalMargin = (self.view.frame.size.width * 0.1) / 3;
 
@@ -200,7 +167,7 @@ static float const percentage = .5f; //% cover player
       int xValue = 0;
       int yValue = 0;
 
-      for (NSDictionary *discoverуResult in self.discoveryResults[0]) {
+      for (NSDictionary *discoverуResult in self.discoveryResults) {
         BrowseButton *button = [[BrowseButton alloc] initWithFrame:CGRectMake(horizontalMargin + xValue,
                                                                               120 * yValue,
                                                                               videoWidth,
@@ -209,9 +176,13 @@ static float const percentage = .5f; //% cover player
         NSString *imageUrl = discoverуResult[@"preview_image_url"];
         if (imageUrl && imageUrl.length > 0) {
           NSURL *url = [NSURL URLWithString:imageUrl];
-          NSData *data = [NSData dataWithContentsOfURL:url];
-          UIImage *image = [UIImage imageWithData:data];
-          [button setBackgroundImage:image forState:UIControlStateNormal];
+          dispatch_async(dispatch_get_global_queue(0,0), ^{
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            UIImage *image = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+              [button setBackgroundImage:image forState:UIControlStateNormal];
+            });
+          });
         }
 
         button.embedCode = discoverуResult[@"embed_code"];
@@ -230,6 +201,13 @@ static float const percentage = .5f; //% cover player
           }
         }
       }
+
+      dispatch_async(dispatch_get_main_queue(), ^{
+        float scrollp = self.view.frame.size.height < 1000 ? .4 : .2;
+        self.scrollview.contentSize = CGSizeMake(self.view.frame.size.width,
+                                                 (resultsCount / 2 + 1) * (110 + scrollp));
+
+      });
     }
   });
 }
@@ -248,9 +226,7 @@ static float const percentage = .5f; //% cover player
   self.playerViewController = [self.playerViewController initWithPlayerSelectionOption:value];
   self.playerViewController.delegate = self;
   
-  if (self.SimilarFeature >= 0) {
-    [self getDiscoveryForCarouselConfiguration:self.configuration.carousels[self.SimilarFeature]];
-  }
+  [self getDiscoveryForCarouselConfiguration:self.configuration.carousels[self.similarFeature]];
 }
 
 - (void)getDiscoveryForCarouselConfiguration:(NSDictionary *)carouselConfig {
@@ -260,13 +236,11 @@ static float const percentage = .5f; //% cover player
 
   NSString *handler = carouselConfig[@"handler"];
   if ([handler isEqual:@"middleware"]) {
-    NSMutableArray *middlewareResults = [NSMutableArray array];
-    self.discoveryResults = @[middlewareResults];
     return [self.networkManger getMiddlewareDataForEmbedCode:self.actualembed
                                            andCarouselConfig:carouselConfig
                                               withCompletion:^(NSArray *assets) {
        if (assets) {
-         [self insertDiscoveryResults:assets toArray:self.discoveryResults[0]];
+         [self insertDiscoveryResults:assets toArray:self.discoveryResults];
          [self updateScrollViewWithDiscovery];
        }
     }];
@@ -296,7 +270,7 @@ static float const percentage = .5f; //% cover player
       if (error) {
         NSLog(@"discovery request failed, error is %@", error.description);
       } else {
-        [self insertDiscoveryResults:results toArray:self.discoveryResults[0]];
+        [self insertDiscoveryResults:results toArray:self.discoveryResults];
         dispatch_async(dispatch_get_main_queue(), ^{
           [self updateScrollViewWithDiscovery];
         });
