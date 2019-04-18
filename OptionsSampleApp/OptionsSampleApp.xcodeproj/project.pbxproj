@@ -18,7 +18,6 @@
 		0BC9480F1A8177E2004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC948091A8177E2004CB997 /* PlayerSimple.xib */; };
 		0BC948101A8177E2004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9480A1A8177E2004CB997 /* PlayerSingleButton.xib */; };
 		0BC948111A8177E2004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9480B1A8177E2004CB997 /* TableCell.xib */; };
-		0BCC6E381D2F58080040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E371D2F58080040B0B2 /* AVKit.framework */; };
 		0BDC4C1A1AA5037D00576639 /* OptionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDC4C181AA5037D00576639 /* OptionsViewController.h */; };
 		0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC4C191AA5037D00576639 /* OptionsViewController.m */; };
 		0BF0B0E61A671E4300026FDC /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0B0E31A671E4300026FDC /* PlayerSelectionOption.m */; };
@@ -30,8 +29,6 @@
 		0BF4FA011A6852290050A602 /* OptionsListTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */; };
 		0BF4FA091A685F9E0050A602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA051A685F9E0050A602 /* LaunchScreen.xib */; };
 		0BF4FA0A1A685F9E0050A602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA071A685F9E0050A602 /* Main.storyboard */; };
-		39278CC22191DE1500F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC12191DE1500F6F4E2 /* libc++.tbd */; };
-		39278CC42191DE1B00F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC32191DE1B00F6F4E2 /* libxml2.tbd */; };
 		39E0254A21B7BFC7000CC6A8 /* IQConfigurationPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B50E24E1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h */; };
 		39E0254B21B7BFCB000CC6A8 /* IQConfigurationPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E24F1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m */; };
 		9772BF861A43B61500B255C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF851A43B61500B255C0 /* main.m */; };
@@ -39,9 +36,6 @@
 		9772BF911A43B61500B255C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9772BF901A43B61500B255C0 /* Images.xcassets */; };
 		9772BFB01A43C11C00B255C0 /* TVRatingsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFAF1A43C11C00B255C0 /* TVRatingsPlayerViewController.m */; };
 		9772BFB31A43C15E00B255C0 /* OptionsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */; };
-		9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFF51A48EF8800B255C0 /* MediaPlayer.framework */; };
-		9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */; };
-		97E5875D1D4AE10A00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5875C1D4AE10A00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,7 +62,6 @@
 		0BC948091A8177E2004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0BC9480A1A8177E2004CB997 /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BC9480B1A8177E2004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		0BCC6E371D2F58080040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BDC4C181AA5037D00576639 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		0BDC4C191AA5037D00576639 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		0BF0B0E21A671E4300026FDC /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
@@ -78,8 +71,6 @@
 		0BF4F9E11A6850CE0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOptionsSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF4FA061A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BF4FA081A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		39278CC12191DE1500F6F4E2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		39278CC32191DE1B00F6F4E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		9772BF801A43B61500B255C0 /* OptionsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9772BF841A43B61500B255C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9772BF851A43B61500B255C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,10 +81,6 @@
 		9772BFAF1A43C11C00B255C0 /* TVRatingsPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVRatingsPlayerViewController.m; sourceTree = "<group>"; };
 		9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsListTableViewController.h; sourceTree = "<group>"; };
 		9772BFB21A43C15E00B255C0 /* OptionsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsListTableViewController.m; sourceTree = "<group>"; };
-		9772BFF51A48EF8800B255C0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9772BFF91A48FE4E00B255C0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		97E5875C1D4AE10A00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39278CC42191DE1B00F6F4E2 /* libxml2.tbd in Frameworks */,
-				39278CC22191DE1500F6F4E2 /* libc++.tbd in Frameworks */,
-				97E5875D1D4AE10A00202E09 /* JavaScriptCore.framework in Frameworks */,
-				0BCC6E381D2F58080040B0B2 /* AVKit.framework in Frameworks */,
 				0B9458A91AC32CDB000DD545 /* OoyalaSDK.framework in Frameworks */,
-				9772BFF61A48EF8800B255C0 /* MediaPlayer.framework in Frameworks */,
-				9772BFF81A48EFD800B255C0 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,13 +138,6 @@
 		0BF4FA021A685F2F0050A602 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39278CC32191DE1B00F6F4E2 /* libxml2.tbd */,
-				39278CC12191DE1500F6F4E2 /* libc++.tbd */,
-				97E5875C1D4AE10A00202E09 /* JavaScriptCore.framework */,
-				0BCC6E371D2F58080040B0B2 /* AVKit.framework */,
-				9772BFF71A48EFD800B255C0 /* SystemConfiguration.framework */,
-				9772BFF51A48EF8800B255C0 /* MediaPlayer.framework */,
-				9772BFF91A48FE4E00B255C0 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

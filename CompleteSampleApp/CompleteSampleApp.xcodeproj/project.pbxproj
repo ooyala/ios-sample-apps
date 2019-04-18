@@ -9,14 +9,10 @@
 /* Begin PBXBuildFile section */
 		0B140F591A2E4709001324EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F581A2E4709001324EE /* main.m */; };
 		0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F5B1A2E4709001324EE /* AppDelegate.m */; };
-		0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B19FF6A1A3B8C75003E57DF /* CompleteSampleAppListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */; };
 		0B19FF6B1A3B8C75003E57DF /* CompleteSampleAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */; };
 		0B1AFB751B02C6C400347DFA /* libNPAWSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */; };
 		0B1AFB771B02C76400347DFA /* YouboraMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB761B02C76400347DFA /* YouboraMedia.framework */; };
-		0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45BC1A6889440092F056 /* EventKit.framework */; };
-		0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C01A6889510092F056 /* MessageUI.framework */; };
-		0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E45C21A68895A0092F056 /* AdSupport.framework */; };
 		0B9458E81AC33A1C000DD545 /* adobepass.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 0B9458BB1AC33A1C000DD545 /* adobepass.p12 */; };
 		0B9458E91AC33A1C000DD545 /* AccessEnabler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458BE1AC33A1C000DD545 /* AccessEnabler.h */; };
 		0B9458EA1AC33A1C000DD545 /* AccessEnablerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9458BF1AC33A1C000DD545 /* AccessEnablerConstants.h */; };
@@ -47,7 +43,6 @@
 		0B9459181AC33A40000DD545 /* libIMASampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9459121AC33A40000DD545 /* libIMASampleAppSource.a */; };
 		0B9459191AC33A40000DD545 /* libOoyalaAPISampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9459131AC33A40000DD545 /* libOoyalaAPISampleAppSource.a */; };
 		0B94591A1AC33A40000DD545 /* libOptionsSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */; };
-		0B9797671DDA47300013F12C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9797661DDA47300013F12C /* CoreLocation.framework */; };
 		0B9800E41A40DF7000E7DE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E21A40DF7000E7DE88 /* Main.storyboard */; };
 		0B9801131A40E02000E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9801111A40E02000E7DE88 /* LaunchScreen.xib */; };
 		0BC8CF9D1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9C1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework */; };
@@ -58,13 +53,10 @@
 		0BC947E91A817768004CB997 /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947E31A817768004CB997 /* PlayerSingleButton.xib */; };
 		0BC947EA1A817768004CB997 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947E41A817768004CB997 /* TableCell.xib */; };
 		0BDC4BE51A9FA47B00576639 /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BDC4BE41A9FA47B00576639 /* ChannelCell.xib */; };
-		0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF4FA4C1A68730A0050A602 /* WebKit.framework */; };
 		39278CD42192D2FB00F6F4E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39278CD32192D2FB00F6F4E2 /* Images.xcassets */; };
-		39E0254221B7BE17000CC6A8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0254121B7BE17000CC6A8 /* libz.tbd */; };
-		39E0254421B7BE1E000CC6A8 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0254321B7BE1E000CC6A8 /* libxml2.tbd */; };
-		39E0254621B7BE25000CC6A8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0254521B7BE25000CC6A8 /* libc++.tbd */; };
-		752FC4201FD7F41100077911 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752FC41F1FD7F40900077911 /* AVKit.framework */; };
-		97E587501D4AE00A00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */; };
+		39296621226746C500051EFE /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296620226746C500051EFE /* EventKit.framework */; };
+		39296623226747E700051EFE /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296622226747E700051EFE /* libxml2.tbd */; };
+		39296625226747FD00051EFE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296624226747FD00051EFE /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,18 +65,11 @@
 		0B140F581A2E4709001324EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B140F5A1A2E4709001324EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B140F5B1A2E4709001324EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B140F881A2E5374001324EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B19FF681A3B8C75003E57DF /* CompleteSampleAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteSampleAppListViewController.h; sourceTree = "<group>"; };
 		0B19FF691A3B8C75003E57DF /* CompleteSampleAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteSampleAppListViewController.m; sourceTree = "<group>"; };
 		0B1AFB741B02C6C400347DFA /* libNPAWSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNPAWSampleAppSource.a; path = ../NPAWSampleApp/build/Debug/libNPAWSampleAppSource.a; sourceTree = "<group>"; };
 		0B1AFB761B02C76400347DFA /* YouboraMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraMedia.framework; sourceTree = "<group>"; };
 		0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
-		0B1E45BC1A6889440092F056 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		0B1E45C01A6889510092F056 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		0B1E45C21A68895A0092F056 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		0B1E45C71A6889D50092F056 /* libFreewheelSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreewheelSampleAppSource.a; path = "../FreewheelSampleApp/build/Debug-iphoneos/libFreewheelSampleAppSource.a"; sourceTree = "<group>"; };
 		0B2459CE1A72CA3500CC399A /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp copy/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
 		0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBasicPlaybackSampleAppSource.a; path = "../BasicPlaybackSampleApp copy/build/Debug-iphoneos/libBasicPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
@@ -119,7 +104,6 @@
 		0B9459121AC33A40000DD545 /* libIMASampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMASampleAppSource.a; path = "../../../Library/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos/libIMASampleAppSource.a"; sourceTree = "<group>"; };
 		0B9459131AC33A40000DD545 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaAPISampleAppSource.a; path = "../../../Library/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos/libOoyalaAPISampleAppSource.a"; sourceTree = "<group>"; };
 		0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOptionsSampleAppSource.a; path = "../../../Library/Developer/Xcode/DerivedData/SampleApps-dmcxkkgxgbmgtpfkvvbkkpdqmhtl/Build/Products/Debug-iphoneos/libOptionsSampleAppSource.a"; sourceTree = "<group>"; };
-		0B9797661DDA47300013F12C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0B9800E31A40DF7000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B9801121A40E02000E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdvancedPlaybackSampleAppSource.a; path = "../AdvancedPlaybackSampleApp/build/Debug-iphoneos/libAdvancedPlaybackSampleAppSource.a"; sourceTree = "<group>"; };
@@ -134,13 +118,10 @@
 		0BDC4BE61A9FA56F00576639 /* libOoyalaAPISampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOoyalaAPISampleAppSource.a; path = "../OoyalaAPISampleApp/build/Debug-iphoneos/libOoyalaAPISampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOptionsSampleAppSource.a; path = "../OptionsSampleApp/build/Debug-iphoneos/libOptionsSampleAppSource.a"; sourceTree = "<group>"; };
 		0BF4FA401A6871C00050A602 /* libIMASampleAppSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMASampleAppSource.a; path = "../IMASampleApp/build/Debug-iphoneos/libIMASampleAppSource.a"; sourceTree = "<group>"; };
-		0BF4FA4C1A68730A0050A602 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		39278CD32192D2FB00F6F4E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		39E0254121B7BE17000CC6A8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		39E0254321B7BE1E000CC6A8 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		39E0254521B7BE25000CC6A8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		752FC41F1FD7F40900077911 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		39296620226746C500051EFE /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		39296622226747E700051EFE /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		39296624226747FD00051EFE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,12 +129,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39E0254621B7BE25000CC6A8 /* libc++.tbd in Frameworks */,
-				39E0254421B7BE1E000CC6A8 /* libxml2.tbd in Frameworks */,
-				39E0254221B7BE17000CC6A8 /* libz.tbd in Frameworks */,
-				752FC4201FD7F41100077911 /* AVKit.framework in Frameworks */,
-				0B9797671DDA47300013F12C /* CoreLocation.framework in Frameworks */,
-				97E587501D4AE00A00202E09 /* JavaScriptCore.framework in Frameworks */,
+				0B94590B1AC33A1C000DD545 /* OoyalaFreewheelSDK.framework in Frameworks */,
+				0B94590C1AC33A1C000DD545 /* OoyalaIMASDK.framework in Frameworks */,
+				0B94590D1AC33A1C000DD545 /* OoyalaSDK.framework in Frameworks */,
+				0B1AFB771B02C76400347DFA /* YouboraMedia.framework in Frameworks */,
+				0B9458FB1AC33A1C000DD545 /* AdManager.framework in Frameworks */,
+				0BC8CF9D1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */,
+				39296623226747E700051EFE /* libxml2.tbd in Frameworks */,
 				0B1AFB751B02C6C400347DFA /* libNPAWSampleAppSource.a in Frameworks */,
 				0B9459151AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a in Frameworks */,
 				0B9459161AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a in Frameworks */,
@@ -162,18 +144,9 @@
 				0B9459191AC33A40000DD545 /* libOoyalaAPISampleAppSource.a in Frameworks */,
 				0B94591A1AC33A40000DD545 /* libOptionsSampleAppSource.a in Frameworks */,
 				0B94590E1AC33A40000DD545 /* libContentProtectionSampleAppSource.a in Frameworks */,
-				0B94590B1AC33A1C000DD545 /* OoyalaFreewheelSDK.framework in Frameworks */,
-				0B94590C1AC33A1C000DD545 /* OoyalaIMASDK.framework in Frameworks */,
-				0B94590D1AC33A1C000DD545 /* OoyalaSDK.framework in Frameworks */,
-				0B140F8F1A2E53BE001324EE /* SystemConfiguration.framework in Frameworks */,
-				0B1AFB771B02C76400347DFA /* YouboraMedia.framework in Frameworks */,
-				0B9458FB1AC33A1C000DD545 /* AdManager.framework in Frameworks */,
 				0B9458FA1AC33A1C000DD545 /* libAccessEnabler.a in Frameworks */,
-				0B1E45C31A68895A0092F056 /* AdSupport.framework in Frameworks */,
-				0B1E45C11A6889510092F056 /* MessageUI.framework in Frameworks */,
-				0B1E45BD1A6889440092F056 /* EventKit.framework in Frameworks */,
-				0BC8CF9D1BBC837200F61C1A /* GoogleInteractiveMediaAds.framework in Frameworks */,
-				0BF4FA4D1A68730A0050A602 /* WebKit.framework in Frameworks */,
+				39296621226746C500051EFE /* EventKit.framework in Frameworks */,
+				39296625226747FD00051EFE /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,19 +197,13 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B1E45C21A68895A0092F056 /* AdSupport.framework */,
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
-				752FC41F1FD7F40900077911 /* AVKit.framework */,
-				0B9797661DDA47300013F12C /* CoreLocation.framework */,
-				0B1E45BC1A6889440092F056 /* EventKit.framework */,
-				97E5874F1D4AE00A00202E09 /* JavaScriptCore.framework */,
+				39296620226746C500051EFE /* EventKit.framework */,
 				0B94590F1AC33A40000DD545 /* libAdvancedPlaybackSampleAppSource.a */,
 				0BA5476B1A3F6566005A6374 /* libAdvancedPlaybackSampleAppSource.a */,
 				0B2459D21A72CD0700CC399A /* libAdvancedPlaybackSampleAppSource.a */,
 				0B9459101AC33A40000DD545 /* libBasicPlaybackSampleAppSource.a */,
 				0B2459D01A72CB4300CC399A /* libBasicPlaybackSampleAppSource.a */,
 				0B2459CE1A72CA3500CC399A /* libBasicPlaybackSampleAppSource.a */,
-				39E0254521B7BE25000CC6A8 /* libc++.tbd */,
 				0B24B9361AA6A09900F131C3 /* libContentProtectionSampleAppSource.a */,
 				0B1E45BA1A68893C0092F056 /* libFreewheelSampleAppSource.a */,
 				0B9459111AC33A40000DD545 /* libFreewheelSampleAppSource.a */,
@@ -248,13 +215,8 @@
 				0BDC4BE61A9FA56F00576639 /* libOoyalaAPISampleAppSource.a */,
 				0BF4F9FC1A68514F0050A602 /* libOptionsSampleAppSource.a */,
 				0B9459141AC33A40000DD545 /* libOptionsSampleAppSource.a */,
-				39E0254321B7BE1E000CC6A8 /* libxml2.tbd */,
-				39E0254121B7BE17000CC6A8 /* libz.tbd */,
-				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
-				0B1E45C01A6889510092F056 /* MessageUI.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0BF4FA4C1A68730A0050A602 /* WebKit.framework */,
+				39296622226747E700051EFE /* libxml2.tbd */,
+				39296624226747FD00051EFE /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -623,6 +585,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
@@ -652,6 +615,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",

@@ -3,7 +3,7 @@
  * @brief      OOStream
  * @details    OOStream.h in OoyalaSDK
  * @date       11/24/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -14,8 +14,8 @@
 
 /**
  * The block used to select the correct OOStream to play.
- * @param[in] streams the array of streams to select from
- * @returns the OOStream to play
+ * @param streams the array of streams to select from
+ * @return the OOStream to play
  */
 typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
@@ -52,72 +52,72 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /**
  * Get the combined (video+audio) bitrate of this OOStream
- * @returns an NSInteger containing the combined bitrate
+ * @return an NSNumber containing the combined bitrate
  */
 - (NSInteger)combinedBitrate;
 
 /**
  * Create a stream for the given URL.
- * @param[in] theUrl an NSURL pointing to an asset for streaming.
- * @param[in] theType see OOConstants.h e.g. OO_DELIVERY_TYPE_HLS.
+ * @param theUrl an NSURL pointing to an asset for streaming.
+ * @param theType see OOConstants.h e.g. OO_DELIVERY_TYPE_HLS.
  */
 - (instancetype)initWithUrl:(NSURL *)theUrl deliveryType:(NSString *)theType;
 
 /** @internal
  * Initialize a OOStream using the specified data (subclasses should override this)
- * @param[in] data the NSDictionary containing the data to use to initialize this OOStream
- * @returns the initialized OOStream
+ * @param data the NSDictionary containing the data to use to initialize this OOStream
+ * @return the initialized OOStream
  */
 - (instancetype)initWithDictionary:(NSDictionary *)data;
 
 /** @internal
  * Initialize a OOStream using the specified asset data (subclasses should override this)
- * @param[in] data data the NSDictionary containing the data to use to initialize this OOStream
- * @returns the initialized OOStream
+ * @param data data the NSDictionary containing the data to use to initialize this OOStream
+ * @return the initialized OOStream
  */
 - (instancetype)initWithAssetDictionary:(NSDictionary *)data;
 
 /** @internal
  * Update the OOStream using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to update this OOStream
- * @returns OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful
+ * @param data the NSDictionary containing the data to use to update this OOStream
+ * @return OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 
 /** @internal
  * Get an NSURL from the url + urlFormat
- * @returns an NSURL object created by decoding the url according to urlFromat
+ * @return an NSURL object created by decoding the url according to urlFromat
  */
 - (NSURL *)decodedURL;
 
 /** @internal
  * Check if the OOStream is better than the other
- * @returns YES if it is, NO if not
+ * @return YES if it is, NO if not
  */
 + (BOOL)is:(OOStream *)stream betterThan:(OOStream *)better;
 
 /** @internal
  * Check if the OOStream is playable
- * @returns YES if it is, NO if not
+ * @return YES if it is, NO if not
  */
 + (BOOL)isPlayable:(OOStream *)stream;
 
 /** @internal
  * Check if the OOStream's size, bitrate, and profile are playable
- * @returns YES if the size, bitrate, and profile are playable, NO if not
+ * @return YES if the size, bitrate, and profile are playable, NO if not
  */
 + (BOOL)areSizeBitrateAndProfilePlayable:(OOStream *)stream;
 
 /** @internal
  * Check if the OOStream's delivery type is playable
- * @returns YES if the delivery type is playable, NO if not
+ * @return YES if the delivery type is playable, NO if not
  */
 + (BOOL)isDeliveryTypePlayable:(OOStream *)stream;
 
 /** @internal
  * Create a OOStream from the given data
- * @param[in] data the data to create the OOStream with
- * @returns the created OOStream
+ * @param data the data to create the OOStream with
+ * @return the created OOStream
  */
 + (OOStream *)streamFromDictionary:(NSDictionary *)data;
 
@@ -125,8 +125,8 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /** @internal
  * Fetch the best OOStream to play from the given array of streams
- * @param[in] streams the array of streams to select from
- * @returns The hls stream if it exists, otherwise the highest bitrate mp4 stream
+ * @param streams the array of streams to select from
+ * @return The hls stream if it exists, otherwise the lowest bitrate mp4 stream
  */
 + (OOStream *)bestStreamFromArray:(NSArray *)streams;
 
@@ -136,7 +136,7 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /**
  * Set the OOStreamSelector used to select the best stream from an array
- * @param[in] selector the OOStreamSelector to use
+ * @param selector the OOStreamSelector to use
  */
 + (void)setStreamSelector:(OOStreamSelector)selector;
 

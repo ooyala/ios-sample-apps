@@ -21,20 +21,20 @@
 
 /** @internal
  * Initialize a OOVASTLinearAd using the specified xml (subclasses should override this)
- * @param[in] xml the OOTBXMLElement containing the xml to use to initialize this OOVASTLinearAd
- * @returns the initialized OOVASTLinearAd
+ * @param xml the OOTBXMLElement containing the xml to use to initialize this OOVASTLinearAd
+ * @return the initialized OOVASTLinearAd
  */
 - (id)initWithXML:(OOTBXMLElement *)xml;
 
 /** @internal
  * Update the tracking events of the inline linear ad by adding the new tracking events of the wrapper ad
- * @param[in] newTrackingEvents the NSMutableDictionary of the wrapper's tracking events
+ * @param newTrackingEvents the NSMutableDictionary of the wrapper's tracking events
  */
 - (void)updateTrackingEvents:(NSMutableDictionary*)newTrackingEvents;
 
 /** @internal
  * Update the click tracking URLs of the inline linear ad by adding the new click tracking URLs of the wrapper ad
- * @param[in] newClickTrackingURLs the NSMutableArray of the wrapper's click tracking URLs
+ * @param newClickTrackingURLs the NSMutableArray of the wrapper's click tracking URLs
  */
 - (void)updateClickTrackingURLs:(NSMutableArray*)newClickTrackingURLs;
 

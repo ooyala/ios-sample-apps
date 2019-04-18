@@ -2,7 +2,7 @@
  * @class      OOAdPodInfo OOAdPodInfo.h "OOAdPodInfo.h"
  * @brief      OOAdPodInfo
  * @details    OOAdPodInfo.h in OoyalaSDK
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 @import Foundation;
@@ -21,7 +21,7 @@
 
 /**
  * Initialize an OOOptions object with the given parameters
- * @returns the initialized OOOptions
+ * @return the initialized OOOptions
  */
 - (instancetype)initWithTitle:(NSString *)title
                      clickUrl:(NSString *)clickUrl

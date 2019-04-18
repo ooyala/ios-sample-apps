@@ -23,8 +23,8 @@
 /**
  * Designated initializer that expects an OoyalaPlayer. It will prepare Adobe Analytics with this
  * player.
- * @param[in] player The player that will be used to retrieve info from.
- * @param[in] config Configuration used to initialize analytics.
+ * @param player The player that will be used to retrieve info from.
+ * @param config Configuration used to initialize analytics.
  */
 - (nullable instancetype)initWithPlayer:(nonnull OOOoyalaPlayer *)player
                         config:(nonnull OOAdobeHeartbeatConfiguration *)config NS_DESIGNATED_INITIALIZER;

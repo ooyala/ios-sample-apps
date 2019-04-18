@@ -4,7 +4,7 @@
  * @details    OOAdSpot.h in OoyalaSDK
  * @warning    This is an abstract class. It is not meant to be instantiated.
  * @date       11/29/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOAdSpot.h"

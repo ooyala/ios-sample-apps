@@ -17,8 +17,8 @@
 
 /**
  Initialize an OOPlayPauseButton
- @param[in] scale a multiplier to resize the button
- @returns an initialized OOPlayPauseButton, or nil
+ @param scale a multiplier to resize the button
+ @return an initialized OOPlayPauseButton, or nil
  */
 - (instancetype)initWithScale:(CGFloat)scale;
 

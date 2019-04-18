@@ -4,7 +4,7 @@
  * @brief      OODiscoveryOptions
  * @details    OODiscoveryOptions.h in OoyalaSDK
  * @date       05/15/15
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -27,13 +27,13 @@ typedef NS_ENUM(NSUInteger, OODiscoveryType) {
 
 /**
  * Initialize an OODiscoveryOptions object with the all properties with default values
- * @returns the initialized OOOptions
+ * @return the initialized OOOptions
  */
 - (instancetype) init;
 
 /**
  * Initialize an OODiscoveryOptions object with the given parameters
- * @returns the initialized OOOptions
+ * @return the initialized OOOptions
  */
 - (instancetype) initWithType:(OODiscoveryType)type
                         limit:(int)limit

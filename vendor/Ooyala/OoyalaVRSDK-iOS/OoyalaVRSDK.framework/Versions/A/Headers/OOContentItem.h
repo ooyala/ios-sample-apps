@@ -3,10 +3,11 @@
  * @brief      OOContentItem
  * @details    OOContentItem.h in OoyalaSDK
  * @date       11/21/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
+
+@import Foundation;
 #import "OOAuthorizableItem.h"
 
 @class OOPlayerAPIClient;
@@ -39,12 +40,14 @@
 @property (readonly, nonatomic) NSString *itemDescription;  /**< The OOContentItem's Description */
 @property (readonly, nonatomic) NSString *promoImageURL;  /**< The OOContentItem's Promo Image URL */
 @property (readonly, nonatomic) NSString *hostedAtURL;    /**< The OOContentItem's Hosted At URL */
+@property (readonly, nonatomic) NSString *markersURL;     /**< The OOContentItem's Chapter Markers URL */
+@property (readonly, nonatomic) NSArray *markerList;     /**< The OOContentItem's Chapter Markers */
 @property (readonly, nonatomic) OOPlayerAPIClient *api;   /**< @internal The API that was used to fetch the OOContentItem */
 @property (readonly, nonatomic) BOOL authorized;                /**< Whether or not this OOContentItem is authorized */
 @property (readonly, nonatomic) OOAuthCode authCode;              /**< The response code from the authorize call */
 @property (readonly, nonatomic) NSDictionary *metadata;
 @property (readonly, nonatomic) NSDictionary *moduleData;
-@property (nonatomic, assign) BOOL heartbeatRequired;
+@property (nonatomic) BOOL heartbeatRequired;
 @property (readonly, nonatomic) OOFCCTVRating *tvRating;
 @property (readonly, nonatomic) NSString *assetPcode;  /**< The OOContentItem's Promo Image URL */
 @property (readonly, nonatomic) NSDictionary *movieAttributes;
@@ -57,10 +60,10 @@
 
 /**
  * Initialize a OOContentItem
- * @param[in] theEmbedCode the embed code
- * @param[in] theTitle the title
- * @param[in] theDescription the description
- * @returns the initialized OOContentItem
+ * @param theEmbedCode the embed code
+ * @param theTitle the title
+ * @param theDescription the description
+ * @return the initialized OOContentItem
  */
 - (instancetype)initWithEmbedCode:(NSString *)theEmbedCode
                             title:(NSString *)theTitle
@@ -68,10 +71,10 @@
 
 /** @internal
  * Initialize a OOContentItem using the specified data (subclasses should override this)
- * @param[in] data the NSDictionary containing the data to use to initialize this OOContentItem
- * @param[in] theEmbedCode the embed code to fetch from the dictionary
- * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOContentItem
- * @returns the initialized OOContentItem
+ * @param data the NSDictionary containing the data to use to initialize this OOContentItem
+ * @param theEmbedCode the embed code to fetch from the dictionary
+ * @param theAPI the OOPlayerAPIClient that was used to fetch this OOContentItem
+ * @return the initialized OOContentItem
  */
 - (instancetype)initWithDictionary:(NSDictionary *)data
                          embedCode:(NSString *)theEmbedCode
@@ -79,46 +82,46 @@
 
 /** @internal
  * Update the OOContentItem using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to update this OOContentItem
- * @returns a OOReturnState based on if the data matched or not (or parsing failed)
+ * @param data the NSDictionary containing the data to use to update this OOContentItem
+ * @return a OOReturnState based on if the data matched or not (or parsing failed)
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 
 /**
  * Get the promo image URL for this content item that will be at least the specified dimensions
- * @param[in] width the minimum width
- * @param[in] height the minimum height
- * @returns a string containing the promo image URL
+ * @param width the minimum width
+ * @param height the minimum height
+ * @return a string containing the promo image URL
  */
 - (NSString *)getPromoImageURLForWidth:(NSInteger)width height:(NSInteger)height;
 
 /** @internal
  * The embed codes to authorize
- * @returns the embed codes to authorize as an NSArray
+ * @return the embed codes to authorize as an NSArray
  */
 - (NSArray *)embedCodesToAuthorize;
 
 /**
  * Get the first OOVideo for this OOContentItem
- * @returns the first OOVideo this OOContentItem represents
+ * @return the first OOVideo this OOContentItem represents
  */
 - (OOVideo *)firstVideo;
 
 /** @internal
  * Get the OOVideo in this OOContentItem with the specified embed code
- * @param[in] embedCode the embed code to look up
- * @param[in] currentItem the current OOVideo
- * @returns the video in this OOContentItem with the specified embed code
+ * @param embedCode the embed code to look up
+ * @param currentItem the current OOVideo
+ * @return the video in this OOContentItem with the specified embed code
  */
 - (OOVideo *)videoFromEmbedCode:(NSString *)embedCode
                 withCurrentItem:(OOVideo *)currentItem;
 
 /** @internal
  * Create a OOContentItem from the given data
- * @param[in] data the data to create the OOContentItem with
- * @param[in] embedCode the embed code to fetch from the dictionary
- * @param[in] api the OOPlayerAPIClient that was used to fetch this OOContentItem
- * @returns the created OOContentItem (could be a Movie, OOChannel, or OOChannelSet)
+ * @param data the data to create the OOContentItem with
+ * @param embedCode the embed code to fetch from the dictionary
+ * @param api the OOPlayerAPIClient that was used to fetch this OOContentItem
+ * @return the created OOContentItem (could be a Movie, OOChannel, or OOChannelSet)
  */
 + (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data
                                    embedCode:(NSString *)embedCode
@@ -126,10 +129,10 @@
 
 /** @internal
  * Create a OOContentItem from the given data
- * @param[in] data the data to create the OOContentItem with
- * @param[in] embedCodes the embed codes to fetch from the dictionary
- * @param[in] api the OOPlayerAPIClient that was used to fetch this OOContentItem
- * @returns the created OOContentItem (could be a Movie, OOChannel, OODynamicChannel, or OOChannelSet)
+ * @param data the data to create the OOContentItem with
+ * @param embedCodes the embed codes to fetch from the dictionary
+ * @param api the OOPlayerAPIClient that was used to fetch this OOContentItem
+ * @return the created OOContentItem (could be a Movie, OOChannel, OODynamicChannel, or OOChannelSet)
  */
 + (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data
                                   embedCodes:(NSArray *)embedCodes
@@ -137,8 +140,14 @@
 
 /**
  * The total duration (not including Ads) of this OOContentItem
- * @returns an Float64 with the total duration in seconds
+ * @return an Float64 with the total duration in seconds
  */
 - (Float64)duration;
+
+/**
+ * Creates an JSON array of OOMarkers
+ * @returns the array of OOMarkers
+ */
+- (NSArray *)markersJSONArray;
 
 @end

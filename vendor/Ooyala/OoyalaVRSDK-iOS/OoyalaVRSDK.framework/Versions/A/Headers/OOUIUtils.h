@@ -3,7 +3,7 @@
  * @brief      OOUIUtils
  * @details    OOUIUtils.h in OoyalaSDK
  * @date       1/20/12
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 @import UIKit;
