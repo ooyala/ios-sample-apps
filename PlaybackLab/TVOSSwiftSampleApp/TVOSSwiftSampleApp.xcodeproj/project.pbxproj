@@ -232,9 +232,11 @@
 				TargetAttributes = {
 					C1A4D13E216FCF64008D505D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					C1A4D14F216FCF67008D505D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = C1A4D13E216FCF64008D505D;
 					};
 				};
@@ -449,10 +451,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp/Utils",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = TVOSSwiftSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -463,12 +461,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				USER_HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)",
-				);
 			};
 			name = Debug;
 		};
@@ -481,10 +475,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp/Utils",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = TVOSSwiftSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,12 +485,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				USER_HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)",
-				);
 			};
 			name = Release;
 		};
@@ -519,7 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVOSSwiftSampleApp.app/TVOSSwiftSampleApp";
 			};
@@ -540,7 +526,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVOSSwiftSampleApp.app/TVOSSwiftSampleApp";
 			};
