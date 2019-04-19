@@ -36,11 +36,12 @@ class DefaultVideoPlayerViewController: UIViewController {
     // VR player
     guard let jsCodeLocation = Bundle.main.url(forResource: "main",
                                                withExtension: "jsbundle") else { return }
+//    guard let jsCodeLocation = URL(string: "http://localhost:8081/index.ios.bundle?platform=ios") else { return }
     let overrideConfigs = ["upNextScreen": ["timeToShow": "8"]]
     let options = OOOptions()
 
-    options?.showPromoImage = true
-    options?.bypassPCodeMatching = false
+    options.showPromoImage = true
+    options.bypassPCodeMatching = false
 
     let domain = OOPlayerDomain(string: viewModel.domain)
     guard let ooyalaVRPlayer = OOOoyalaVRPlayer(pcode: viewModel.pcode,
