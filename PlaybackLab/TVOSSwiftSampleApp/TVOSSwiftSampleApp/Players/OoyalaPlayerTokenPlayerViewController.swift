@@ -22,12 +22,15 @@ class OoyalaPlayerTokenPlayerViewController: OOOoyalaTVPlayerViewController, OOE
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    player = OOOoyalaPlayer(pcode: option.pcode, domain: OOPlayerDomain(string: option.domain), embedTokenGenerator: self)
+    player = OOOoyalaPlayer(pcode: option.pcode,
+                            domain: OOPlayerDomain(string: option.domain),
+                            embedTokenGenerator: self)
     player.setEmbedCode(option.embedCode)
     player.play()
   }
 
-  func token(forEmbedCodes embedCodes: [String], callback: @escaping OOEmbedTokenCallback) {
+  func token(forEmbedCodes embedCodes: [String],
+             callback: @escaping OOEmbedTokenCallback) {
     let params = ["account_id": accountId]
     
     let uri = String(format: "/sas/embed_token/%@/%@", option.pcode, embedCodes.joined(separator: ","))

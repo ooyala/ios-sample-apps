@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39CF3BEB226A5823006AA69F /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CF3BEA226A5823006AA69F /* OptionDataSource.swift */; };
 		75599AFD21C27647006FFDAA /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D170216FCFF7008D505D /* OoyalaTVSkinSDK.framework */; };
 		C125993121750A6800E448B2 /* FullscreenPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */; };
 		C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27262175357100ED8299 /* ChildPlayerViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39CF3BEA226A5823006AA69F /* OptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
 		C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenPlayerViewController.swift; sourceTree = "<group>"; };
 		C13A27262175357100ED8299 /* ChildPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildPlayerViewController.swift; sourceTree = "<group>"; };
 		C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractPlayerViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */,
+				39CF3BEA226A5823006AA69F /* OptionDataSource.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */,
 				C13A27292175367600ED8299 /* AbstractPlayerViewController.swift in Sources */,
+				39CF3BEB226A5823006AA69F /* OptionDataSource.swift in Sources */,
 				C13A272B21753C3A00ED8299 /* FairplayPlayerViewController.swift in Sources */,
 				C1A4D145216FCF64008D505D /* VideoTableViewController.swift in Sources */,
 				C1A4D143216FCF64008D505D /* AppDelegate.swift in Sources */,

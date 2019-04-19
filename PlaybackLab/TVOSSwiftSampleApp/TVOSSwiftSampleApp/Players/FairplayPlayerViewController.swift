@@ -29,9 +29,15 @@ class FairplayPlayerViewController: OOOoyalaTVPlayerViewController, OOEmbedToken
     //   which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
     options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: secret)
     
-    player = OOOoyalaPlayer(pcode: option.pcode, domain: OOPlayerDomain(string: option.domain), embedTokenGenerator: self, options: options)
+    player = OOOoyalaPlayer(pcode: option.pcode,
+                            domain: OOPlayerDomain(string: option.domain),
+                            embedTokenGenerator: self,
+                            options: options)
     
-    NotificationCenter.default.addObserver(self, selector: #selector(notificationHandler(_:)), name: nil, object: player)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(notificationHandler(_:)),
+                                           name: nil,
+                                           object: player)
     
     player.setEmbedCode(option.embedCode)
     player.play()
@@ -48,7 +54,8 @@ class FairplayPlayerViewController: OOOoyalaTVPlayerViewController, OOEmbedToken
           player.playheadTime())
   }
 
-  func token(forEmbedCodes embedCodes: [String], callback: @escaping OOEmbedTokenCallback) {
+  func token(forEmbedCodes embedCodes: [String],
+             callback: @escaping OOEmbedTokenCallback) {
     let params = ["account_id": accountId]
 
     let uri = String(format: "/sas/embed_token/%@/%@", option.pcode, embedCodes.joined(separator: ","))
