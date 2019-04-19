@@ -17,6 +17,9 @@
       location = "group:ContentProtectionSampleApp/ContentProtectionSampleApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DiscoverySampleApp/DiscoverySampleApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:FreewheelSampleApp/FreewheelSampleApp.xcodeproj">
    </FileRef>
    <FileRef
