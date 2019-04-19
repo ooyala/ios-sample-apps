@@ -109,12 +109,13 @@
 
 #pragma mark - EmbedTokenGenerator protocol
 
-- (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
+- (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes
+                  callback:(OOEmbedTokenCallback)callback {
   NSDictionary *params = @{@"account_id": self.accountId};  // Only used for concurrent streams
   NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
   OOEmbeddedSecureURLGenerator *urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
                                                                                        secret:self.secretKey];
-  NSURL *embedTokenUrl = [urlGen secureURL:@"http://player.ooyala.com" uri:uri params:params];
+  NSURL *embedTokenUrl = [urlGen secureURLForHost:@"http://player.ooyala.com" uri:uri params:params];
   callback(embedTokenUrl.absoluteString);
 }
 
