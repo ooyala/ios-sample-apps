@@ -20,16 +20,11 @@ class PlayerViewController: UIViewController {
   @IBOutlet weak var playOfflineButton: UIButton!
 
   var dtoAsset: OODtoAsset!
-  
-  // properties required for a Fairplay asset
-  private var apiKey = ""
-  private var apiSecret = ""
-  
-  private var ooyalaPlayerViewController: OOSkinViewController!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
 
+  private lazy var ooyalaPlayer: OOOoyalaPlayer = {
+    // properties required for a Fairplay asset
+    var apiKey: String
+    var apiSecret: String
     var player: OOOoyalaPlayer
 
     if dtoAsset.options.embedTokenGenerator != nil {
@@ -58,19 +53,28 @@ class PlayerViewController: UIViewController {
       player = OOOoyalaPlayer(pcode: self.dtoAsset.options.pcode,
                               domain: self.dtoAsset.options.domain)
     }
-    
+    return player
+  }()
+  private lazy var ooyalaPlayerViewController: OOSkinViewController = {
     guard let jsCodeLocation = Bundle.main.url(forResource: "main",
-                                               withExtension: "jsbundle") else { return }
-    
+                                               withExtension: "jsbundle") else { fatalError() }
+    //    guard let jsCodeLocation = URL(string: "http://localhost:8081/index.ios.bundle?platform=ios") else { return }
+
     let skinOptions = OOSkinOptions(discoveryOptions: nil,
                                     jsCodeLocation: jsCodeLocation,
                                     configFileName: "skin",
                                     overrideConfigs: nil)
-    
-    ooyalaPlayerViewController = OOSkinViewController(player: player,
-                                                      skinOptions: skinOptions,
-                                                      parent: playerView)
-    
+
+    let skinViewController = OOSkinViewController(player: self.ooyalaPlayer,
+                                                  skinOptions: skinOptions,
+                                                  parent: playerView)
+    return skinViewController
+  }()
+
+  // MARK: - Life cycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
     ooyalaPlayerViewController.willMove(toParent: self)
     addChild(ooyalaPlayerViewController)
     ooyalaPlayerViewController.view.frame = playerView.bounds

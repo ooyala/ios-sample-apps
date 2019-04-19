@@ -24,7 +24,8 @@ class BasicEmbedTokenGenerator: NSObject, OOEmbedTokenGenerator {
     super.init()
   }
 
-  func token(forEmbedCodes embedCodes: [String], callback: @escaping OOEmbedTokenCallback) {
+  func token(forEmbedCodes embedCodes: [String],
+             callback: @escaping OOEmbedTokenCallback) {
     let params = ["account_id": accountId]
 
     let uri = "/sas/embed_token/\(pcode)/\(embedCodes.joined(separator: ","))"
