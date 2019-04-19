@@ -81,15 +81,6 @@ NSString *const SFCODE = @"sfcode";
   NSLog(@"Error: %@", self.ooyalaPlayerViewController.player.error);
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-  // Return YES for supported orientations
-  if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-  } else {
-    return YES;
-  }
-}
-
 - (IBAction)onOptButton:(id)sender {
   UIViewController *webController = [UIViewController new];
   UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
