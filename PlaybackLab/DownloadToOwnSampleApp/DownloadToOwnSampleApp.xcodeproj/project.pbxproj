@@ -502,7 +502,6 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleApp/Supporting Files/Info.plist";
@@ -521,7 +520,6 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleApp/Supporting Files/Info.plist";
