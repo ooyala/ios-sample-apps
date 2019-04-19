@@ -88,11 +88,11 @@ class PlayerViewController: UIViewController {
         apiSecret = "API_SECRET"
       }
       
-      let options: OOOptions = OOOptions()!
+      let options: OOOptions = OOOptions()
       // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
       // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
       // which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
-      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: apiSecret)!
+      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey!, secret: apiSecret!)
       player = OOOoyalaPlayer(pcode: option.pcode,
                               domain: option.domain,
                               embedTokenGenerator: embedTokenGenerator,
