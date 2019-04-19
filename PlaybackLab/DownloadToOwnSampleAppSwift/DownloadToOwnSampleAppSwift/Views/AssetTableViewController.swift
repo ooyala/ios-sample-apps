@@ -140,6 +140,8 @@ class AssetTableViewController: UITableViewController {
         self.tableView.reloadRows(at: [indexPath], with: .left)
       })]
 
+    @unknown default:
+      fatalError()
     }
     
     let alertController = UIAlertController(title: dtoAsset.name,
