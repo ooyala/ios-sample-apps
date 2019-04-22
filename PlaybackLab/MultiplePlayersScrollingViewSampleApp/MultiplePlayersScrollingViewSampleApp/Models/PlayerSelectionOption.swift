@@ -28,5 +28,5 @@ class PlayerSelectionOption: NSObject {
     self.init(embedCode: embedCode, pcode: pcode, domain: domain)
     self.embedTokenGenerator = embedTokenGenerator
   }
-  
+
 }
