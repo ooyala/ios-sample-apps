@@ -85,7 +85,7 @@ class MultiplePlayerViewController: UIViewController {
         apiSecret = "API_SECRET"
       }
       
-      let options = OOOptions()!
+      guard let options = OOOptions() else { return }
       // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
       // This is not how this should be implemented in production -
       // In production, you should implement your own OOSecureURLGenerator
