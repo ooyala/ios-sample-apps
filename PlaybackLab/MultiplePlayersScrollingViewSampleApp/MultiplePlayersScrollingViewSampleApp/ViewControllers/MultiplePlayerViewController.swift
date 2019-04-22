@@ -70,9 +70,9 @@ class MultiplePlayerViewController: UIViewController {
   }
   
   func initPlayer(_ playerSelectionOption: PlayerSelectionOption) {
-    var player: OOOoyalaPlayer!
-    var apiKey: String!
-    var apiSecret: String!
+    var player: OOOoyalaPlayer
+    var apiKey: String
+    var apiSecret: String
     
     if playerSelectionOption.embedTokenGenerator != nil {
       if let basicEmbedTokenGenerator = playerSelectionOption.embedTokenGenerator as? BasicEmbedTokenGenerator {
