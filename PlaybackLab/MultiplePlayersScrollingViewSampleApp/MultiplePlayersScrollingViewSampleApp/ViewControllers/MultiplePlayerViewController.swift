@@ -160,12 +160,6 @@ class MultiplePlayerViewController: UIViewController {
 
     collectionView.scrollToItem(at: indexPath, at: .bottom, animated: false)
     
-    let playerSelection = options[indexPath.row]
-    
-    guard let currentItem = sharedPlayer.player.currentItem,
-      !currentItem.embedCode.isEmpty && currentItem.embedCode == playerSelection.embedCode
-      else { return }
-    
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
    
@@ -213,7 +207,7 @@ extension MultiplePlayerViewController: UICollectionViewDelegate {
   
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
     guard let currentItem = sharedPlayer.player.currentItem,
-      let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode })  else { return }
+      let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode }) else { return }
     
     let indexPath = IndexPath(item: index, section: 0)
     
