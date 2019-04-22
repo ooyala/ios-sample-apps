@@ -20,7 +20,6 @@ class MultiplePlayerViewController: UIViewController {
     return label
   }()
 
-  
   private lazy var collectionView: UICollectionView = {
     let collection = UICollectionView(frame: .zero,
                                       collectionViewLayout: UICollectionViewFlowLayout())
