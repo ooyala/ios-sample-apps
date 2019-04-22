@@ -162,10 +162,9 @@ class MultiplePlayerViewController: UIViewController {
     
     let playerSelection = options[indexPath.row]
     
-    if let currentItem = sharedPlayer.player.currentItem,
-      !currentItem.embedCode.isEmpty && currentItem.embedCode == playerSelection.embedCode {
-      return
-    }
+    guard let currentItem = sharedPlayer.player.currentItem,
+      !currentItem.embedCode.isEmpty && currentItem.embedCode == playerSelection.embedCode
+      else { return }
     
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
