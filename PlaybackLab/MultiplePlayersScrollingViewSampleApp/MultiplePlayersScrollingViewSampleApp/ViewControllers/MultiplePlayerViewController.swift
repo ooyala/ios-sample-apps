@@ -34,7 +34,63 @@ class MultiplePlayerViewController: UIViewController {
     return collection
   }()
   
-  var sharedPlayer: OOSkinViewController!
+  private lazy var player: OOOoyalaPlayer = {
+    let playerSelectionOption = options[0]
+    var player: OOOoyalaPlayer
+    var apiKey: String
+    var apiSecret: String
+    
+    if playerSelectionOption.embedTokenGenerator != nil {
+      if let basicEmbedTokenGenerator = playerSelectionOption.embedTokenGenerator as? BasicEmbedTokenGenerator {
+        apiKey = basicEmbedTokenGenerator.apiKey
+        apiSecret = basicEmbedTokenGenerator.apiSecret
+      } else {
+        // If you're not using the BasicEmbedTokenGenerator provided in the example,
+        // supply your own API_KEY and API_SECRET
+        apiKey = "API_KEY"
+        apiSecret = "API_SECRET"
+      }
+      
+      let options = OOOptions()!
+      // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
+      // This is not how this should be implemented in production -
+      // In production, you should implement your own OOSecureURLGenerator
+      // which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
+      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey,
+                                                                secret: apiSecret)
+      
+      player = OOOoyalaPlayer(pcode: playerSelectionOption.pcode,
+                              domain: playerSelectionOption.domain,
+                              embedTokenGenerator: playerSelectionOption.embedTokenGenerator,
+                              options: options)
+      
+    } else {
+      player = OOOoyalaPlayer(pcode: playerSelectionOption.pcode,
+                              domain: playerSelectionOption.domain)
+    }
+    
+    player.actionAtEnd = .pause
+    return player
+  }()
+  
+  private lazy var sharedPlayer: OOSkinViewController = {
+    let jsCodeLocation = Bundle.main.url(forResource: "main",
+                                         withExtension: "jsbundle")!
+    
+    let skinOptions = OOSkinOptions(discoveryOptions: nil,
+                                    jsCodeLocation: jsCodeLocation,
+                                    configFileName: "skin",
+                                    overrideConfigs: nil)
+    
+    let skinViewController = OOSkinViewController(player: self.player,
+                                                  skinOptions: skinOptions,
+                                                  parent: UIView())
+    
+    skinViewController.isAutoFullscreenWithRotatedEnabled = true
+    skinViewController.view.translatesAutoresizingMaskIntoConstraints = false
+    return skinViewController
+  }()
+  
   var playerTimer: Timer!
   
   var lastVelocityYSign = 0
@@ -55,72 +111,12 @@ class MultiplePlayerViewController: UIViewController {
       collectionView.leadingAnchor.constraint(equalTo: view.safeLeadingAnchor),
       collectionView.trailingAnchor.constraint(equalTo: view.safeTrailingAnchor),
       ])
-    
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    guard let playerSelectionOption = options.first else { return }
-    
-    initPlayer(playerSelectionOption)
     addObservers()
     initTimer()
-
-  }
-  
-  func initPlayer(_ playerSelectionOption: PlayerSelectionOption) {
-    var player: OOOoyalaPlayer
-    var apiKey: String
-    var apiSecret: String
-    
-    if playerSelectionOption.embedTokenGenerator != nil {
-      if let basicEmbedTokenGenerator = playerSelectionOption.embedTokenGenerator as? BasicEmbedTokenGenerator {
-        apiKey = basicEmbedTokenGenerator.apiKey
-        apiSecret = basicEmbedTokenGenerator.apiSecret
-      } else {
-        // If you're not using the BasicEmbedTokenGenerator provided in the example,
-        // supply your own API_KEY and API_SECRET
-        apiKey = "API_KEY"
-        apiSecret = "API_SECRET"
-      }
-      
-      guard let options = OOOptions() else { return }
-      // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
-      // This is not how this should be implemented in production -
-      // In production, you should implement your own OOSecureURLGenerator
-      // which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
-      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey,
-                                                                secret: apiSecret)
-      
-      player = OOOoyalaPlayer(pcode: playerSelectionOption.pcode,
-                              domain: playerSelectionOption.domain,
-                              embedTokenGenerator: playerSelectionOption.embedTokenGenerator,
-                              options: options)
-      
-    } else {
-      player = OOOoyalaPlayer(pcode: playerSelectionOption.pcode,
-                              domain: playerSelectionOption.domain)
-    }
-    
-    player.actionAtEnd = .pause
-    
-    let jsCodeLocation = Bundle.main.url(forResource: "main",
-                                         withExtension: "jsbundle")!
-    
-    let skinOptions = OOSkinOptions(discoveryOptions: nil,
-                                    jsCodeLocation: jsCodeLocation,
-                                    configFileName: "skin",
-                                    overrideConfigs: nil)
-    
-    sharedPlayer = OOSkinViewController(player: player,
-                                        skinOptions: skinOptions,
-                                        parent: UIView())
-    
-    sharedPlayer.isAutoFullscreenWithRotatedEnabled = true
-    
-    sharedPlayer.view.translatesAutoresizingMaskIntoConstraints = false
-    
   }
   
   func addObservers() {
