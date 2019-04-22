@@ -27,11 +27,11 @@
 
 /**
  * Initialize a OOVASTAdSpot using the VAST URL
- * @param[in] theTime the time at which to play the ad
- * @param[in] theClickURL the clickthrough URL
- * @param[in] theTrackingURLs the tracking URLs
- * @param[in] theVASTURL the VAST URL to initialize the OOVASTAdSpot with
- * @returns the initialized OOVASTAdSpot
+ * @param theTime the time at which to play the ad
+ * @param theClickURL the clickthrough URL
+ * @param theTrackingURLs the tracking URLs
+ * @param theVASTURL the VAST URL to initialize the OOVASTAdSpot with
+ * @return the initialized OOVASTAdSpot
  */
 - (instancetype)initWithTime:(NSNumber *)theTime
                     duration:(NSInteger)duration
@@ -42,10 +42,10 @@
 
 /** @internal
  * Initialize a OOVASTAdSpot using the specified data (subclasses should override this)
- * @param[in] data the NSDictionary containing the data to use to initialize this OOVASTAdSpot
- * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVASTAd
- * @param[in] duration the content duration
- * @returns the initialized OOVASTAdSpot
+ * @param data the NSDictionary containing the data to use to initialize this OOVASTAdSpot
+ * @param theAPI the OOPlayerAPIClient that was used to fetch this OOVASTAd
+ * @param duration the content duration
+ * @return the initialized OOVASTAdSpot
  */
 - (instancetype)initWithDictionary:(NSDictionary *)data
                                api:(OOPlayerAPIClient *)theAPI
@@ -53,8 +53,8 @@
 
 /** @internal
  * Update the OOVASTAdSpot using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to update this OOVASTAdSpot
- * @returns OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful
+ * @param data the NSDictionary containing the data to use to update this OOVASTAdSpot
+ * @return OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 

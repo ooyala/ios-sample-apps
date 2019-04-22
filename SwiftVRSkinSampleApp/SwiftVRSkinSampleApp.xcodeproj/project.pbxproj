@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392966412267502700051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392966402267502700051EFE /* JavaScriptCore.framework */; };
 		393A469B21CCC6AD005860F3 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469521CCC6AD005860F3 /* RobotoCondensed-Bold.ttf */; };
 		393A469C21CCC6AD005860F3 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469621CCC6AD005860F3 /* ooyala-slick-type.ttf */; };
 		393A469D21CCC6AD005860F3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393A469721CCC6AD005860F3 /* Roboto-Regular.ttf */; };
@@ -72,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		392966402267502700051EFE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		393A469521CCC6AD005860F3 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		393A469621CCC6AD005860F3 /* ooyala-slick-type.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ooyala-slick-type.ttf"; sourceTree = "<group>"; };
 		393A469721CCC6AD005860F3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				CAB5729E2048ADB1009A178D /* OoyalaIMASDK.framework in Frameworks */,
 				CAB5729F2048ADB7009A178D /* GoogleInteractiveMediaAds.framework in Frameworks */,
 				75653C591FB5E9DA001DF291 /* CoreMotion.framework in Frameworks */,
+				392966412267502700051EFE /* JavaScriptCore.framework in Frameworks */,
 				75653C571FB5E9C1001DF291 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				75653C581FB5E9CE001DF291 /* CoreMotion.framework */,
+				392966402267502700051EFE /* JavaScriptCore.framework */,
 				75653C561FB5E9B9001DF291 /* libc++.tbd */,
 			);
 			name = Frameworks;

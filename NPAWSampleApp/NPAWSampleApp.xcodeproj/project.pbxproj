@@ -34,22 +34,12 @@
 		0B1AFB781B02C82300347DFA /* YouboraMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */; };
 		0B89E18D1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */; };
 		0B89E18E1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
-		0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
-		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		0B9797AD1DDB926E0013F12C /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB701B02C58D00347DFA /* OoyalaSDK.framework */; };
-		0BCC6E321D2F391F0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E311D2F391F0040B0B2 /* AVKit.framework */; };
 		0BFFF6C71B33655100D72444 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
-		39278CB22191DCC000F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CB12191DCC000F6F4E2 /* libxml2.tbd */; };
-		39278CB42191DCC900F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CB32191DCC900F6F4E2 /* libc++.tbd */; };
-		97E587591D4AE0BD00202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E587581D4AE0BD00202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B140F531A2E4709001324EE /* NPAWSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPAWSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B140F881A2E5374001324EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B1AFB1D1B02BAAB00347DFA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B1AFB1E1B02BAAB00347DFA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B1AFB201B02BAAB00347DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -76,10 +66,6 @@
 		0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraMedia.framework; sourceTree = "<group>"; };
 		0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAWOptionalMetadataPlayerViewController.h; sourceTree = "<group>"; };
 		0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAWOptionalMetadataPlayerViewController.m; sourceTree = "<group>"; };
-		0BCC6E311D2F391F0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		39278CB12191DCC000F6F4E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		39278CB32191DCC900F6F4E2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		97E587581D4AE0BD00202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39278CB42191DCC900F6F4E2 /* libc++.tbd in Frameworks */,
-				39278CB22191DCC000F6F4E2 /* libxml2.tbd in Frameworks */,
-				97E587591D4AE0BD00202E09 /* JavaScriptCore.framework in Frameworks */,
-				0BCC6E321D2F391F0040B0B2 /* AVKit.framework in Frameworks */,
-				0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */,
 				0B1AFB731B02C58D00347DFA /* YouboraMedia.framework in Frameworks */,
-				0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */,
 				0B1AFB721B02C58D00347DFA /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,14 +112,6 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
-				0BCC6E311D2F391F0040B0B2 /* AVKit.framework */,
-				97E587581D4AE0BD00202E09 /* JavaScriptCore.framework */,
-				39278CB32191DCC900F6F4E2 /* libc++.tbd */,
-				39278CB12191DCC000F6F4E2 /* libxml2.tbd */,
-				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

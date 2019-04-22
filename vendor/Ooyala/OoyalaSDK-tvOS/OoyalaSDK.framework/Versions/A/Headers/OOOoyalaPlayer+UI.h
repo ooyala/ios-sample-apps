@@ -17,7 +17,7 @@
 - (void)hidePromoImage;
 
 /**
- * @returns the video rect
+ * @return the video rect
  */
 - (CGRect)videoRect;
 

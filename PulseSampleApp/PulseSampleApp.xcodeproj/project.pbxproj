@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		0B140F591A2E4709001324EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F581A2E4709001324EE /* main.m */; };
 		0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B140F5B1A2E4709001324EE /* AppDelegate.m */; };
-		0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
 		0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E51A40DF9A00E7DE88 /* LaunchScreen.xib */; };
 		0BC947CE1A817732004CB997 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947C81A817732004CB997 /* PlayerSimple.xib */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
-		26EF171C1D50918900BACD9C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EF171B1D50918900BACD9C /* AVKit.framework */; };
+		3929663722674E6900051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663622674E6900051EFE /* JavaScriptCore.framework */; };
+		3929663922674E7C00051EFE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663822674E7C00051EFE /* libc++.tbd */; };
 		393A477521CCD904005860F3 /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = 393A475B21CCD904005860F3 /* library.json */; };
 		393A477621CCD904005860F3 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 393A475D21CCD904005860F3 /* VERSION */; };
 		393A477721CCD904005860F3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 393A475E21CCD904005860F3 /* main.jsbundle */; };
@@ -48,15 +48,6 @@
 		C402FB0D1CAD4163001D4BBD /* VideoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C402FB091CAD4163001D4BBD /* VideoItemCell.m */; };
 		C402FB101CAD425E001D4BBD /* VideoItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB0E1CAD425E001D4BBD /* VideoItem.h */; };
 		C402FB111CAD425E001D4BBD /* VideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C402FB0F1CAD425E001D4BBD /* VideoItem.m */; };
-		C4082C191D2144E200CC3BC4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4082C181D2144E200CC3BC4 /* libc++.tbd */; };
-		C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
-		C4499AF81CA1887200B6EE20 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */; };
-		C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FA1C884769000B4890 /* JavaScriptCore.framework */; };
-		C477A7FD1C884770000B4890 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FC1C884770000B4890 /* Social.framework */; };
-		C477A7FF1C884776000B4890 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A7FE1C884776000B4890 /* MessageUI.framework */; };
-		C477A8011C884815000B4890 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A8001C884815000B4890 /* libz.tbd */; };
-		C477A8091C888DE9000B4890 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A8081C888DE9000B4890 /* EventKit.framework */; };
-		C477A80B1C888E03000B4890 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C477A80A1C888E03000B4890 /* AdSupport.framework */; };
 		C4A99EC01C6227AD00F55208 /* PulseManagerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A99EBE1C6227AD00F55208 /* PulseManagerViewController.h */; };
 		C4A99EC11C6227AD00F55208 /* PulseManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A99EBF1C6227AD00F55208 /* PulseManagerViewController.m */; };
 		C4BB04431C75FCD100871138 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BB04421C75FCD100871138 /* TableCell.xib */; };
@@ -91,20 +82,12 @@
 		0B140F581A2E4709001324EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B140F5A1A2E4709001324EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B140F5B1A2E4709001324EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B140F881A2E5374001324EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B19FEF31A3AB57E003E57DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		0B19FEFE1A3B7532003E57DF /* libPulseSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPulseSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B7AC43C1A7A26BA0085BC97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0B7AC43E1A7A26CA0085BC97 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		0B7AC4421A7A26F70085BC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0B7AC4441A7A27090085BC97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B9800E61A40DF9A00E7DE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BC947C81A817732004CB997 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
-		26EF171B1D50918900BACD9C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		3929663622674E6900051EFE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		3929663822674E7C00051EFE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		393A475B21CCD904005860F3 /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
 		393A475D21CCD904005860F3 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		393A475E21CCD904005860F3 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -138,14 +121,6 @@
 		C402FB091CAD4163001D4BBD /* VideoItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItemCell.m; sourceTree = "<group>"; };
 		C402FB0E1CAD425E001D4BBD /* VideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoItem.h; sourceTree = "<group>"; };
 		C402FB0F1CAD425E001D4BBD /* VideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItem.m; sourceTree = "<group>"; };
-		C4082C181D2144E200CC3BC4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		C477A7FA1C884769000B4890 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		C477A7FC1C884770000B4890 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		C477A7FE1C884776000B4890 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C477A8001C884815000B4890 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		C477A8081C888DE9000B4890 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		C477A80A1C888E03000B4890 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C4A99EBE1C6227AD00F55208 /* PulseManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseManagerViewController.h; sourceTree = "<group>"; };
 		C4A99EBF1C6227AD00F55208 /* PulseManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseManagerViewController.m; sourceTree = "<group>"; };
 		C4BB04421C75FCD100871138 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
@@ -156,21 +131,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26EF171C1D50918900BACD9C /* AVKit.framework in Frameworks */,
-				C4082C191D2144E200CC3BC4 /* libc++.tbd in Frameworks */,
-				C4499AF81CA1887200B6EE20 /* MediaAccessibility.framework in Frameworks */,
-				C477A80B1C888E03000B4890 /* AdSupport.framework in Frameworks */,
-				C477A8091C888DE9000B4890 /* EventKit.framework in Frameworks */,
-				C477A8011C884815000B4890 /* libz.tbd in Frameworks */,
 				393A47CF21CCD9C9005860F3 /* OoyalaSDK.framework in Frameworks */,
 				393A47D121CCD9E7005860F3 /* OoyalaSkinSDK.framework in Frameworks */,
-				393A47D521CCDA7C005860F3 /* Pulse.framework in Frameworks */,
-				C477A7FF1C884776000B4890 /* MessageUI.framework in Frameworks */,
 				393A48AB21CCF0CF005860F3 /* OoyalaPulseIntegration.framework in Frameworks */,
-				C477A7FD1C884770000B4890 /* Social.framework in Frameworks */,
-				C477A7FB1C884769000B4890 /* JavaScriptCore.framework in Frameworks */,
-				C415FFE41C75FB4600429119 /* MediaPlayer.framework in Frameworks */,
-				0B9458B11AC33879000DD545 /* SystemConfiguration.framework in Frameworks */,
+				393A47D521CCDA7C005860F3 /* Pulse.framework in Frameworks */,
+				3929663722674E6900051EFE /* JavaScriptCore.framework in Frameworks */,
+				3929663922674E7C00051EFE /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,24 +197,8 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C477A80A1C888E03000B4890 /* AdSupport.framework */,
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
-				26EF171B1D50918900BACD9C /* AVKit.framework */,
-				0B7AC43E1A7A26CA0085BC97 /* CFNetwork.framework */,
-				0B7AC43C1A7A26BA0085BC97 /* CoreGraphics.framework */,
-				0B7AC4401A7A26EA0085BC97 /* CoreMedia.framework */,
-				C477A8081C888DE9000B4890 /* EventKit.framework */,
-				0B7AC4421A7A26F70085BC97 /* Foundation.framework */,
-				C477A7FA1C884769000B4890 /* JavaScriptCore.framework */,
-				C4082C181D2144E200CC3BC4 /* libc++.tbd */,
-				C477A8001C884815000B4890 /* libz.tbd */,
-				C4499AF71CA1887200B6EE20 /* MediaAccessibility.framework */,
-				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
-				C477A7FE1C884776000B4890 /* MessageUI.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				C477A7FC1C884770000B4890 /* Social.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0B7AC4441A7A27090085BC97 /* UIKit.framework */,
+				3929663622674E6900051EFE /* JavaScriptCore.framework */,
+				3929663822674E7C00051EFE /* libc++.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -685,7 +635,7 @@
 					"-weak_framework",
 					AVFoundation,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.PulseSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -721,7 +671,7 @@
 					"-weak_framework",
 					AVFoundation,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.PulseSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

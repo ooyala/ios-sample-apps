@@ -1,5 +1,5 @@
 //
-//Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+//Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -6,7 +6,7 @@
 //  Created by Tom Bradley on 21/10/2009.
 //  Version 1.4
 //  
-//  Copyright (c) 2009 Tom Bradley
+//  Copyright © 2009 Tom Bradley
 //  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal

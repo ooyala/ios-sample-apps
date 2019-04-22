@@ -2,7 +2,7 @@
  * @class      OOAdSpot OOAdSpot.h "OOAdSpot.h"
  * @brief      OOAdSpot
  * @details    OOAdSpot.h in OoyalaSDK
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -20,15 +20,15 @@
 
 /**
  * Initialize an ad spot with time
- * @param[in] t the ad spot time
- * @returns initialized ad spot
+ * @param t the ad spot time
+ * @return initialized ad spot
  */
 - (instancetype)initWithTime:(NSNumber *)time;
 
 /**
  * compare two ad spots based on their time *
- * @param[in] other the other object to compare
- * @returns compare results as NSComparisonResult
+ * @param other the other object to compare
+ * @return compare results as NSComparisonResult
  */
 - (NSComparisonResult)compare:(OOAdSpot *)other;
 

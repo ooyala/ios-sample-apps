@@ -16,8 +16,8 @@
  * @li Truncate the NSString to 43 characters
  * @li Strip any '=' characters from the end of the truncated NSString
  * @li Return the resulting NSString
- * @param[in] data the NSString to create the signature from (not prepended with the secret key)
- * @returns an NSString containing the signature
+ * @param data the NSString to create the signature from (not prepended with the secret key)
+ * @return an NSString containing the signature
  */
 - (NSString *)sign:(NSString *)data;
 

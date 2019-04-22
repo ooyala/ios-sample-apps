@@ -3,7 +3,7 @@
  * @brief      OOCaption
  * @details    OOCaption.h in OoyalaSDK
  * @date       12/12/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -30,8 +30,8 @@
 
 /** @internal
  * Initialize a OOCaption using the specified xml (subclasses should override this)
- * @param[in] xml the OOTBXMLElement containing the p xml element to use to initialize this OOCaption
- * @returns the initialized OOCaption
+ * @param xml the OOTBXMLElement containing the p xml element to use to initialize this OOCaption
+ * @return the initialized OOCaption
  */
 - (id)initWithXML:(OOTBXMLElement *)xml;
 

@@ -1,6 +1,6 @@
 /**
  * @class OOBufferView OOBufferView.h "OOBufferView.h"
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <UIKit/UIKit.h>
@@ -17,9 +17,9 @@
 
 /**
  Initialize the Buffer View with an existing Progress Slider
- @param[in] frame the CGFrame to render the View in
- @param[in] slider the existing UIProgressSlider render with
- @returns an initialized OOBufferView, or nil
+ @param frame the CGFrame to render the View in
+ @param slider the existing UIProgressSlider render with
+ @return an initialized OOBufferView, or nil
  */
 - (instancetype)initWithFrame:(CGRect)frame slider:(OOProgressSliderView *)slider;
 
