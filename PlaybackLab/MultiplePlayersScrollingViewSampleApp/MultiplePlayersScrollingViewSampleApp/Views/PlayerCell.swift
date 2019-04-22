@@ -11,10 +11,7 @@ class PlayerCell: UICollectionViewCell {
   
   static let reuseId = "PlayerCellReuseIdentifier"
   
-  public private(set) var playerSelectionOption: PlayerSelectionOption?
-  public var playheadTime: Float64 = 0
-  
-  public lazy var titleLabel: UILabel = {
+  public private(set) lazy var titleLabel: UILabel = {
     let label = UILabel(frame: .zero)
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = ""
@@ -51,8 +48,10 @@ class PlayerCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func update(_ playerSelectionOption: PlayerSelectionOption) {
-    self.playerSelectionOption = playerSelectionOption
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    titleLabel.text = ""
+    videoView.subviews.forEach({ $0.removeFromSuperview() })
   }
   
 }

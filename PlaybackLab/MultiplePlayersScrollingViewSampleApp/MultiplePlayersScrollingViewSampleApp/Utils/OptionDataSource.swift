@@ -11,13 +11,22 @@ class OptionDataSource {
   
   static var options: [PlayerSelectionOption] {
     return [
-      PlayerSelectionOption(embedCode: "ljOGlqMzE65m9-MhcFAt1CTr1lEZTh_O",
+      PlayerSelectionOption(embedCode: "h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx",
                             pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
                             domain: OOPlayerDomain(string: "http://www.ooyala.com")),
       PlayerSelectionOption(embedCode: "92cWp0ZDpDm4Q8rzHfVK6q9m6OtFP-ww",
                             pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
                             domain: OOPlayerDomain(string: "http://www.ooyala.com")),
       PlayerSelectionOption(embedCode: "ZlNDlrMzE6WdC-u2rkmosREUwyXXljeZ",
+                            pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
+                            domain: OOPlayerDomain(string: "http://www.ooyala.com")),
+      PlayerSelectionOption(embedCode: "FwaXZjcjrkydIftLal2cq9ymQMuvjvD8",
+                            pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
+                            domain: OOPlayerDomain(string: "http://www.ooyala.com")),
+      PlayerSelectionOption(embedCode: "ljOGlqMzE65m9-MhcFAt1CTr1lEZTh_O",
+                            pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
+                            domain: OOPlayerDomain(string: "http://www.ooyala.com")),
+      PlayerSelectionOption(embedCode: "9od3M3MDE6-WRg_DRbpCzRyjtK-NTLMp",
                             pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
                             domain: OOPlayerDomain(string: "http://www.ooyala.com")),
       /*

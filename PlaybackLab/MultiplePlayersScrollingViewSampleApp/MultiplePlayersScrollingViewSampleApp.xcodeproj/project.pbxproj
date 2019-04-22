@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83627D8226E5E20008E647D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83627D7226E5E20008E647D /* JavaScriptCore.framework */; };
 		B85422392264F37A00958215 /* MultiplePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85422382264F37A00958215 /* MultiplePlayerViewController.swift */; };
 		B8603265225FDE280049F604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603264225FDE280049F604 /* AppDelegate.swift */; };
 		B860326A225FDE280049F604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8603268225FDE280049F604 /* Main.storyboard */; };
@@ -15,13 +16,7 @@
 		B8603285225FE08E0049F604 /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603284225FE08D0049F604 /* PlayerSelectionOption.swift */; };
 		B8603289225FE0CC0049F604 /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603287225FE0CC0049F604 /* OptionDataSource.swift */; };
 		B860328A225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8603288225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift */; };
-		B86032BF225FE2DB0049F604 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032BE225FE2DB0049F604 /* libz.tbd */; };
-		B86032C1225FE3460049F604 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032C0225FE3460049F604 /* libc++abi.tbd */; };
 		B86032C3225FE3500049F604 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032C2225FE3500049F604 /* libc++.tbd */; };
-		B86032C5225FE3580049F604 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032C4225FE3580049F604 /* libxml2.tbd */; };
-		B86032C8225FE4C80049F604 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032C6225FE3670049F604 /* MessageUI.framework */; };
-		B86032CC225FE4EA0049F604 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032CB225FE4EA0049F604 /* EventKit.framework */; };
-		B86032CE225FE5040049F604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86032CD225FE5040049F604 /* MediaPlayer.framework */; };
 		B8AD6B532260EB1D00EB71E8 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD6B512260EB1C00EB71E8 /* OoyalaSkinSDK.framework */; };
 		B8AD6B542260EB1D00EB71E8 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD6B522260EB1C00EB71E8 /* OoyalaSDK.framework */; };
 		B8AD6B612260ED4100EB71E8 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AD6B5B2260ED4100EB71E8 /* Roboto-Regular.ttf */; };
@@ -42,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B83627D7226E5E20008E647D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		B85422382264F37A00958215 /* MultiplePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePlayerViewController.swift; sourceTree = "<group>"; };
 		B8603261225FDE280049F604 /* MultiplePlayersScrollingViewSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplePlayersScrollingViewSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8603264225FDE280049F604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,13 +49,7 @@
 		B8603284225FE08D0049F604 /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
 		B8603287225FE0CC0049F604 /* OptionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
 		B8603288225FE0CC0049F604 /* BasicEmbedTokenGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicEmbedTokenGenerator.swift; sourceTree = "<group>"; };
-		B86032BE225FE2DB0049F604 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B86032C0225FE3460049F604 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		B86032C2225FE3500049F604 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		B86032C4225FE3580049F604 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		B86032C6225FE3670049F604 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		B86032CB225FE4EA0049F604 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		B86032CD225FE5040049F604 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		B8AD6B512260EB1C00EB71E8 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.framework"; sourceTree = "<group>"; };
 		B8AD6B522260EB1C00EB71E8 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 		B8AD6B5B2260ED4100EB71E8 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -84,15 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83627D8226E5E20008E647D /* JavaScriptCore.framework in Frameworks */,
 				B8AD6B542260EB1D00EB71E8 /* OoyalaSDK.framework in Frameworks */,
 				B8AD6B532260EB1D00EB71E8 /* OoyalaSkinSDK.framework in Frameworks */,
-				B86032CC225FE4EA0049F604 /* EventKit.framework in Frameworks */,
-				B86032CE225FE5040049F604 /* MediaPlayer.framework in Frameworks */,
-				B86032C8225FE4C80049F604 /* MessageUI.framework in Frameworks */,
-				B86032C5225FE3580049F604 /* libxml2.tbd in Frameworks */,
 				B86032C3225FE3500049F604 /* libc++.tbd in Frameworks */,
-				B86032C1225FE3460049F604 /* libc++abi.tbd in Frameworks */,
-				B86032BF225FE2DB0049F604 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,13 +129,8 @@
 		B8603278225FDFAF0049F604 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B86032CB225FE4EA0049F604 /* EventKit.framework */,
-				B86032CD225FE5040049F604 /* MediaPlayer.framework */,
-				B86032C6225FE3670049F604 /* MessageUI.framework */,
+				B83627D7226E5E20008E647D /* JavaScriptCore.framework */,
 				B86032C2225FE3500049F604 /* libc++.tbd */,
-				B86032C0225FE3460049F604 /* libc++abi.tbd */,
-				B86032C4225FE3580049F604 /* libxml2.tbd */,
-				B86032BE225FE2DB0049F604 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
