@@ -11,8 +11,29 @@ class MultiplePlayerViewController: UIViewController {
   
   let options = OptionDataSource.options
   
-  var titleLabel: UILabel!
-  var collectionView: UICollectionView!
+  private lazy var titleLabel: UILabel = {
+    let label = UILabel(frame: .zero)
+    label.text = "Video Feed"
+    label.textAlignment = .center
+    label.font = .boldSystemFont(ofSize: 20)
+    label.translatesAutoresizingMaskIntoConstraints = false
+    return label
+  }()
+
+  
+  private lazy var collectionView: UICollectionView = {
+    let collection = UICollectionView(frame: .zero,
+                                      collectionViewLayout: UICollectionViewFlowLayout())
+    collection.translatesAutoresizingMaskIntoConstraints = false
+    collection.backgroundColor = .white
+    collection.allowsSelection = false
+    collection.decelerationRate = .fast
+    collection.delegate = self
+    collection.dataSource = self
+    collection.register(PlayerCell.self,
+                        forCellWithReuseIdentifier: PlayerCell.reuseId)
+    return collection
+  }()
   
   var sharedPlayer: OOSkinViewController!
   var playerTimer: Timer!
@@ -21,13 +42,6 @@ class MultiplePlayerViewController: UIViewController {
   
   override func loadView() {
     super.loadView()
-    
-    titleLabel = UILabel(frame: .zero)
-    titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    
-    collectionView = UICollectionView(frame: .zero,
-                                      collectionViewLayout: UICollectionViewFlowLayout())
-    collectionView.translatesAutoresizingMaskIntoConstraints = false
     
     view.addSubview(titleLabel)
     view.addSubview(collectionView)
@@ -47,19 +61,6 @@ class MultiplePlayerViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    titleLabel.text = "Video Feed"
-    titleLabel.textAlignment = .center
-    titleLabel.font = .boldSystemFont(ofSize: 20)
-    
-    collectionView.delegate = self
-    collectionView.dataSource = self
-    collectionView.backgroundColor = .white
-    collectionView.allowsSelection = false
-    collectionView.decelerationRate = .fast
-    
-    collectionView.register(PlayerCell.self,
-                            forCellWithReuseIdentifier: PlayerCell.reuseId)
     
     guard let playerSelectionOption = options.first else { return }
     

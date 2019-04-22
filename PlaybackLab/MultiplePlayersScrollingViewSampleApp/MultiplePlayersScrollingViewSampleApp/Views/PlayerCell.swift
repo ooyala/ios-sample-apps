@@ -14,21 +14,24 @@ class PlayerCell: UICollectionViewCell {
   public private(set) var playerSelectionOption: PlayerSelectionOption?
   public var playheadTime: Float64 = 0
   
-  var titleLabel: UILabel!
-  var videoView: UIView!
+  public lazy var titleLabel: UILabel = {
+    let label = UILabel(frame: .zero)
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.text = ""
+    label.textAlignment = .center
+    label.font = .boldSystemFont(ofSize: 17)
+    return label
+  }()
+  
+  public lazy var videoView: UIView = {
+    let view = UIView(frame: .zero)
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.backgroundColor = .black
+    return view
+  }()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
-    titleLabel = UILabel(frame: .zero)
-    titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    titleLabel.textAlignment = .center
-    titleLabel.font = .boldSystemFont(ofSize: 17)
-    titleLabel.text = ""
-    
-    videoView = UIView(frame: .zero)
-    videoView.translatesAutoresizingMaskIntoConstraints = false
-    videoView.backgroundColor = .black
     
     contentView.addSubview(titleLabel)
     contentView.addSubview(videoView)

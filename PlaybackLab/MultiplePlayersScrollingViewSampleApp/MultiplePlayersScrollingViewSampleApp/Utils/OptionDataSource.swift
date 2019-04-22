@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionDataSource: NSObject {
+class OptionDataSource {
   
   static var options: [PlayerSelectionOption] {
     return [
