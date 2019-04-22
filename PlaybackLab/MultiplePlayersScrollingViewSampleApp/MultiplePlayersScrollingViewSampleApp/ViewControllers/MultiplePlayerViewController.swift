@@ -19,7 +19,7 @@ class MultiplePlayerViewController: UIViewController {
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
-
+  
   private lazy var collectionView: UICollectionView = {
     let collection = UICollectionView(frame: .zero,
                                       collectionViewLayout: UICollectionViewFlowLayout())
@@ -51,7 +51,11 @@ class MultiplePlayerViewController: UIViewController {
         apiSecret = "API_SECRET"
       }
       
-      let options = OOOptions()!
+      guard let options = OOOptions() else {
+        player  = OOOoyalaPlayer(pcode: playerSelectionOption.pcode,
+                                 domain: playerSelectionOption.domain)
+        return player
+      }
       // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
       // This is not how this should be implemented in production -
       // In production, you should implement your own OOSecureURLGenerator
@@ -69,11 +73,12 @@ class MultiplePlayerViewController: UIViewController {
                               domain: playerSelectionOption.domain)
     }
     
-    player.actionAtEnd = .pause
     return player
   }()
   
   private lazy var sharedPlayer: OOSkinViewController = {
+    self.player.actionAtEnd = .pause
+    
     let jsCodeLocation = Bundle.main.url(forResource: "main",
                                          withExtension: "jsbundle")!
     
@@ -88,6 +93,7 @@ class MultiplePlayerViewController: UIViewController {
     
     skinViewController.isAutoFullscreenWithRotatedEnabled = true
     skinViewController.view.translatesAutoresizingMaskIntoConstraints = false
+    
     return skinViewController
   }()
   
