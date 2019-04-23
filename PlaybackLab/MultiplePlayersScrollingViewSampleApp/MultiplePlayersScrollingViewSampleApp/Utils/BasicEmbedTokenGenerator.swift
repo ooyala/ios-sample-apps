@@ -10,13 +10,9 @@ import UIKit
 class BasicEmbedTokenGenerator: NSObject, OOEmbedTokenGenerator {
 
   public private(set) var pcode: String
-  
   public private(set) var apiKey: String
-  
   public private(set) var apiSecret: String
-  
   public private(set) var accountId: String
-  
   public private(set) var authorizeHost: String
   
   init(pcode: String, apiKey: String, apiSecret: String, accountId: String, authorizeHost: String) {
