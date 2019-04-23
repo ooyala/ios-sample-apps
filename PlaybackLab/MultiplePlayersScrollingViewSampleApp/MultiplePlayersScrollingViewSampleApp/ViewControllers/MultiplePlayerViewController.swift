@@ -149,18 +149,12 @@ class MultiplePlayerViewController: UIViewController {
   @objc
   func runTimedCode() {
     var indexPath = IndexPath(row: 0, section: 0)
-    
-    if let index = options.firstIndex(where: { $0.embedCode == sharedPlayer.player.currentItem?.embedCode })  {
-      var newIndex: Int = 0
-      if lastVelocityYSign < 0 {
-        newIndex = index + 1
-      } else if lastVelocityYSign > 0 {
-        newIndex = index - 1
-      }
-      if newIndex >= 0 && newIndex < options.count {
-        indexPath = IndexPath(row: newIndex, section: 0)
-      }
-    } 
+
+    if let embedCode = sharedPlayer.player.currentItem?.embedCode,
+      let index = options.firstIndex(where: { $0.embedCode == embedCode })  {
+      let newIndex = (options.count + index - lastVelocityYSign) % options.count
+      indexPath = IndexPath(row: newIndex, section: 0)
+    }
     
     collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
     
