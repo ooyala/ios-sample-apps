@@ -88,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B8603263225FDE280049F604 /* MultiplePlayersScrollingViewSampleApp */,
+				B8AD6B502260EB0100EB71E8 /* VendorLibraries */,
 				B8603262225FDE280049F604 /* Products */,
 				B8603278225FDFAF0049F604 /* Frameworks */,
 			);
@@ -109,7 +110,6 @@
 				B8AD6B4C2260E69500EB71E8 /* Storyboards */,
 				B8603276225FDED40049F604 /* SupportFiles */,
 				B8603286225FE0B30049F604 /* Utils */,
-				B8AD6B502260EB0100EB71E8 /* VendorLibraries */,
 				B8603290225FE1070049F604 /* ViewControllers */,
 				B860328B225FE0DC0049F604 /* Views */,
 			);
@@ -185,6 +185,7 @@
 				B8AD6B512260EB1C00EB71E8 /* OoyalaSkinSDK.framework */,
 			);
 			name = VendorLibraries;
+			path = MultiplePlayersScrollingViewSampleApp;
 			sourceTree = "<group>";
 		};
 		B8AD6B562260EB8700EB71E8 /* Resources */ = {
