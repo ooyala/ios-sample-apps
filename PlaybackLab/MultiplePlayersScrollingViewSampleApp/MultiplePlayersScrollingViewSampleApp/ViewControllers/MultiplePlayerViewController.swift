@@ -20,9 +20,15 @@ class MultiplePlayerViewController: UIViewController {
     return label
   }()
   
+  private lazy var collectionViewFlowLayout: UICollectionViewFlowLayout = {
+    let layout = UICollectionViewFlowLayout()
+    layout.scrollDirection = .vertical
+    return layout
+  }()
+  
   private lazy var collectionView: UICollectionView = {
     let collection = UICollectionView(frame: .zero,
-                                      collectionViewLayout: UICollectionViewFlowLayout())
+                                      collectionViewLayout: self.collectionViewFlowLayout)
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.backgroundColor = .white
     collection.allowsSelection = false
@@ -117,10 +123,7 @@ class MultiplePlayerViewController: UIViewController {
       collectionView.leadingAnchor.constraint(equalTo: view.safeLeadingAnchor),
       collectionView.trailingAnchor.constraint(equalTo: view.safeTrailingAnchor),
       ])
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    
     addObservers()
     initTimer()
   }
@@ -159,21 +162,27 @@ class MultiplePlayerViewController: UIViewController {
         indexPath = IndexPath(row: newIndex, section: 0)
       }
     } 
-
-    collectionView.scrollToItem(at: indexPath, at: .bottom, animated: false)
+    
+    collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
+    
+    let playerSelectionOption = options[indexPath.row]
     
     DispatchQueue.main.async {
-      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
-   
-      if self.sharedPlayer.player.setEmbedCode(cell.playerSelectionOption?.embedCode) {
-        cell.videoView.addSubview(self.sharedPlayer.view)
-        NSLayoutConstraint.activate([
-          self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
-          self.sharedPlayer.view.bottomAnchor.constraint(equalTo: cell.videoView.bottomAnchor),
-          self.sharedPlayer.view.trailingAnchor.constraint(equalTo: cell.videoView.trailingAnchor),
-          self.sharedPlayer.view.leadingAnchor.constraint(equalTo: cell.videoView.leadingAnchor),
-          ])
+      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else {
+        self.initTimer()
+        return
       }
+      
+      self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
+      self.sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
+      
+      cell.videoView.addSubview(self.sharedPlayer.view)
+      NSLayoutConstraint.activate([
+        self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
+        self.sharedPlayer.view.bottomAnchor.constraint(equalTo: cell.videoView.bottomAnchor),
+        self.sharedPlayer.view.trailingAnchor.constraint(equalTo: cell.videoView.trailingAnchor),
+        self.sharedPlayer.view.leadingAnchor.constraint(equalTo: cell.videoView.leadingAnchor),
+        ])
     }
     
   }
@@ -183,13 +192,9 @@ class MultiplePlayerViewController: UIViewController {
     guard let currentItem = sharedPlayer.player.currentItem,
       let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode }) else { return }
     let indexPath = IndexPath(row: index, section: 0)
-    
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
-      if (cell.titleLabel.text?.isEmpty)! {
-        cell.titleLabel.text = self.sharedPlayer.player.currentItem.title
-      }
-      self.sharedPlayer.player.play(withInitialTime: cell.playheadTime)
+      cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem.title)!)"
     }
   }
   
@@ -212,15 +217,10 @@ extension MultiplePlayerViewController: UICollectionViewDelegate {
       let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode }) else { return }
     
     let indexPath = IndexPath(item: index, section: 0)
+    let playerSelectionOption = options[indexPath.row]
     
-    DispatchQueue.main.async {
-      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
-      self.sharedPlayer.player.pause()
-      cell.playheadTime = self.sharedPlayer.player.playheadTime()
-      if cell.videoView.subviews.count > 0 {
-        cell.videoView.subviews.forEach({ $0.removeFromSuperview() })
-      }
-    }
+    sharedPlayer.player.pause()
+    playerSelectionOption.playheadTime = sharedPlayer.player.playheadTime()
     
     initTimer()
   }
@@ -236,8 +236,6 @@ extension MultiplePlayerViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlayerCell.reuseId,
                                                         for: indexPath) as? PlayerCell else { fatalError() }
-    let playerSelectionOption = options[indexPath.row]
-    cell.update(playerSelectionOption)
     return cell
   }
   

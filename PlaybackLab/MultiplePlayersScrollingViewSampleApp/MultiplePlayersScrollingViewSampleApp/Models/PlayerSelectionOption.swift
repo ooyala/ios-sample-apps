@@ -15,6 +15,8 @@ class PlayerSelectionOption {
   
   public private(set) var embedTokenGenerator: OOEmbedTokenGenerator?
   
+  public var playheadTime: Float64 = 0
+  
   init(embedCode: String, pcode: String, domain: OOPlayerDomain) {
     self.embedCode = embedCode
     self.pcode     = pcode
