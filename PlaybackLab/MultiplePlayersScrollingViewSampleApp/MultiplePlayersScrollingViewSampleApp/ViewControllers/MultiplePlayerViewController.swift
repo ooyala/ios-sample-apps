@@ -78,13 +78,12 @@ class MultiplePlayerViewController: UIViewController {
       player = OOOoyalaPlayer(pcode: playerSelectionOption.pcode,
                               domain: playerSelectionOption.domain)
     }
-    
+
+    player.actionAtEnd = .pause
     return player
   }()
   
   private lazy var sharedPlayer: OOSkinViewController = {
-    self.player.actionAtEnd = .pause
-    
     let jsCodeLocation = Bundle.main.url(forResource: "main",
                                          withExtension: "jsbundle")!
     
@@ -197,13 +196,12 @@ class MultiplePlayerViewController: UIViewController {
       cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem.title)!)"
     }
   }
-  
 }
 
 extension MultiplePlayerViewController: UICollectionViewDelegate {
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    let currentVelocityY =  scrollView.panGestureRecognizer.velocity(in: scrollView.superview).y
+    let currentVelocityY = scrollView.panGestureRecognizer.velocity(in: scrollView.superview).y
     let currentVelocityYSign = Int(currentVelocityY).signum()
     
     if currentVelocityYSign != lastVelocityYSign &&
@@ -243,7 +241,9 @@ extension MultiplePlayerViewController: UICollectionViewDataSource {
 
 extension MultiplePlayerViewController: UICollectionViewDelegateFlowLayout {
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath) -> CGSize {
     return collectionView.bounds.size
   }
   
