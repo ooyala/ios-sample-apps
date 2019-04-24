@@ -1,4 +1,5 @@
 #import "OOStream.h"
+#import "OOTBXML.h"
 
 /**
  * Represents a single VAST stream that can be played in a Stream Player.

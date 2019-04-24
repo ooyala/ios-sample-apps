@@ -1,11 +1,10 @@
 @import Foundation;
 
-#import "OOSecureURLGenerator.h"
-
 @class OOFCCTVRatingConfiguration;
 @class OOIQConfiguration;
 @protocol AVPictureInPictureControllerDelegate;
 @protocol OOPlayerInfo;
+@protocol OOSecureURLGenerator;
 
 /**
  Configurations to change the behavior of the OoyalaPlayer
@@ -16,13 +15,13 @@
 
  @discussion Default: default setting object for OOFCCTVRatingConfiguration
  */
-@property (nonatomic) OOFCCTVRatingConfiguration *tvRatingConfiguration;
+@property (nonatomic, nonnull) OOFCCTVRatingConfiguration *tvRatingConfiguration;
 /**
  iqConfiguration iq configuration object for current player
 
  @discussion Default: default analytics values object like playerID for OOiqConfiguration
  */
-@property (nonatomic) OOIQConfiguration *iqConfiguration;
+@property (nonatomic, nonnull) OOIQConfiguration *iqConfiguration;
 /**
  Show cue points for ads if this is set to YES; Default: YES
  */
@@ -56,7 +55,7 @@
 /**
  Helper for signing URLs with provider's secret and API key.
  */
-@property (nonatomic) id<OOSecureURLGenerator> secureURLGenerator;
+@property (nonatomic, nullable) id<OOSecureURLGenerator> secureURLGenerator;
 /**
  Enables PiP mode for devices that support it.
  This does not activate PiP, it will only instantiate the necessary objects needed for PiP mode.
@@ -64,9 +63,9 @@
  */
 @property (nonatomic) BOOL enablePictureInPictureSupport;
 /**
- * The picture in picture delegate to receive PIP events
+ The picture in picture delegate to receive PIP events
  */
-@property (weak, nonatomic) id<AVPictureInPictureControllerDelegate> pipDelegate;
+@property (weak, nonatomic, nullable) id<AVPictureInPictureControllerDelegate> pipDelegate;
 /**
  Bypass the check to ensure the provided PCode matches the asset's Pcode
  */
@@ -74,7 +73,7 @@
 /**
  The PlayerInfo used when making network requests to the Ooyala servers
  */
-@property (nonatomic) id<OOPlayerInfo> playerInfo;
+@property (nonatomic, nullable) id<OOPlayerInfo> playerInfo;
 /**
  Disable the support of VAST and Ooyala Ads that is enabled in the SDK by default
  */
@@ -82,7 +81,7 @@
 /**
  Dynamic Filters to be sent to Azure
  */
-@property (nonatomic) NSArray<NSString *> *dynamicFilters;
+@property (nonatomic, nullable) NSArray<NSString *> *dynamicFilters;
 /**
  Will try to play the video using HEVC, if possible
  */
@@ -95,13 +94,13 @@
 /**
  Markers Inline to be added using an external file or with @c NSDictionary definiton
  */
-@property (nonatomic) NSDictionary *markers;
+@property (nonatomic, nullable) NSDictionary *markers;
 
 /**
  Initialize an @c OOOptions object with the all properties with default values
  @return the initialized object
  */
-- (instancetype)init;
+- (nonnull instancetype)init;
 
 /**
  Logs all properties that are part of this OOOptions.

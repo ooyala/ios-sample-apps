@@ -19,7 +19,7 @@
 
 @end
 
-@interface OOAdSpotPlugin : NSObject<OOAdPlugin>
+@interface OOAdSpotPlugin : NSObject <OOAdPlugin>
 
 @property (nonatomic) Float64 lastAdModeTime;
 @property (readonly) OOAdSpotManager *adSpotManager;

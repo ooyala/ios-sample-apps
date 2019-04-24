@@ -8,16 +8,16 @@
  */
 @interface OOVASTLinearAd : NSObject <OOPlayableItem> 
 
-@property(readonly, nonatomic) NSMutableArray *icons;
-@property(readonly, nonatomic) Float64 skipoffset;
-@property(readonly, nonatomic) Float64 duration;                            /**< The duration of the ad in seconds */
-@property(readonly, nonatomic, strong) NSMutableDictionary *trackingEvents; /**< The tracking events in an NSMutableDictionary of event name to NSMutableArray of NSString */
-@property(readonly, nonatomic, strong) NSString *parameters;                /**< The additional ad parameters */
-@property(readonly, nonatomic, strong) NSString *clickThroughURL;           /**< The click through url */
-@property(readonly, nonatomic, strong) NSMutableArray *clickTrackingURLs;   /**< The click tracking urls in an NSMutableArray of NSString */
-@property(readonly, nonatomic, strong) NSMutableArray *customClickURLs;     /**< The custom click urls in an NSMutableArray of NSString */
-@property(readonly, nonatomic, strong) NSMutableArray *streams;             /**< The streams in an NSMutableArray of OOStream */
-@property(readonly, nonatomic, strong) NSMutableArray *errorCodes;          /**< The error codes */
+@property (readonly, nonatomic) NSMutableArray *icons;
+@property (readonly, nonatomic) Float64 skipoffset;
+@property (readonly, nonatomic) Float64 duration;                    /**< The duration of the ad in seconds */
+@property (readonly, nonatomic) NSMutableDictionary *trackingEvents; /**< The tracking events in an NSMutableDictionary of event name to NSMutableArray of NSString */
+@property (readonly, nonatomic) NSString *parameters;                /**< The additional ad parameters */
+@property (readonly, nonatomic) NSString *clickThroughURL;           /**< The click through url */
+@property (readonly, nonatomic) NSMutableArray *clickTrackingURLs;   /**< The click tracking urls in an NSMutableArray of NSString */
+@property (readonly, nonatomic) NSMutableArray *customClickURLs;     /**< The custom click urls in an NSMutableArray of NSString */
+@property (readonly, nonatomic) NSMutableArray *streams;             /**< The streams in an NSMutableArray of OOStream */
+@property (readonly, nonatomic) NSMutableArray *errorCodes;          /**< The error codes */
 
 /** @internal
  * Initialize a OOVASTLinearAd using the specified xml (subclasses should override this)

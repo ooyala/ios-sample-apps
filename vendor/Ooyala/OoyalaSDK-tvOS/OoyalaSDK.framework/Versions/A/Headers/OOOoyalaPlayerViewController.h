@@ -117,7 +117,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
 /**
  * Returns the currently active controls
  */
-- (OOControlsViewController *)getControls;
+- (OOControlsViewController *)controlsViewController;
 
 /**
  * Shows controls on the current player

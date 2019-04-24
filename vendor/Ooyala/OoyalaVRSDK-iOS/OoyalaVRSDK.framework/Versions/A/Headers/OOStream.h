@@ -7,7 +7,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "OOTBXML.h"
 #import "OOReturnState.h"
 
 @class OOStream;

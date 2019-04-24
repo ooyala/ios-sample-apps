@@ -1,21 +1,19 @@
 @import Foundation;
 
 /**
- * Represents the domain under which Ooyala analytics will be recorded.
- * \ingroup key
+ Represents the domain under which Ooyala analytics will be recorded.
  */
 @interface OOPlayerDomain : NSObject
 
-+ (instancetype)domainWithString:(NSString *)string;
+@property (nonatomic, readonly, nonnull) NSString *domainString;
+@property (nonatomic, readonly, nullable) NSURL *domainURL;
 
-- (instancetype)init __attribute__((unavailable("Use initWithString: instead")));
+- (nonnull instancetype)init __attribute__((unavailable("Use initWithString: instead")));
+
++ (nonnull instancetype)domainWithString:(nonnull NSString *)string;
 /**
- * domainStr must be parseable URL in the form of a string, starting with either http:// or https://.
+ domainStr must be parseable URL in the form of a string, starting with either http:// or https://.
  */
-- (instancetype)initWithString:(NSString *)domainStr;
-
-- (NSString *)asString;
-
-- (NSURL *)asURL;
+- (nonnull instancetype)initWithString:(nonnull NSString *)domainStr;
 
 @end

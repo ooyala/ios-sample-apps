@@ -2,8 +2,8 @@
 //Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
+@import Foundation;
+@import CoreGraphics;
 
 #define OOFCCTVRATINGCONFIGURATION_DURATION_NONE 0
 #define OOFCCTVRATINGCONFIGURATION_DURATION_FOR_EVER CGFLOAT_MAX
@@ -24,10 +24,15 @@ typedef NS_ENUM( NSInteger, OOFCCTvRatingsPosition ) {
  * the layout and behavior of the TV Ratings stamp.
  */
 @interface OOFCCTVRatingConfiguration : NSObject
+
 @property (nonatomic, readonly) int durationSeconds;
 @property (nonatomic, readonly) OOFCCTvRatingsPosition position;
 @property (nonatomic, readonly) CGFloat scale;
 @property (nonatomic, readonly) CGFloat opacity;
--(instancetype) init;
--(instancetype) initWithDurationSeconds:(int)durationSeconds position:(OOFCCTvRatingsPosition)position scale:(CGFloat)scale opacity:(CGFloat)opacity;
+
+- (instancetype)init;
+- (instancetype)initWithDurationSeconds:(int)durationSeconds
+                               position:(OOFCCTvRatingsPosition)position
+                                  scale:(CGFloat)scale
+                                opacity:(CGFloat)opacity;
 @end
