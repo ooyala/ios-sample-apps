@@ -435,23 +435,12 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../vendor/**",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/OoyalaSkinSDK-iOS",
 					"$(PROJECT_DIR)/VendorLibraries",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"${PROJECT_DIR}/../react/node_modules/react-native/React",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DiscoverySampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/OoyalaSkinSDK.framework",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.nuoala.DiscoverySampleApp;
 				PRODUCT_NAME = DiscoverySampleApp;
@@ -470,23 +459,12 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../vendor/**",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/OoyalaSkinSDK-iOS",
 					"$(PROJECT_DIR)/VendorLibraries",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"${PROJECT_DIR}/../react/node_modules/react-native/React",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DiscoverySampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/OoyalaSkinSDK.framework",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.nuoala.DiscoverySampleApp;
 				PRODUCT_NAME = DiscoverySampleApp;

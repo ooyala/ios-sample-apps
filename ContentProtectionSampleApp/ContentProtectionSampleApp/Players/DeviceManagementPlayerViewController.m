@@ -234,11 +234,13 @@
 }
 
 // to use, add embedTokenGenerator:self to our ViewController alloc above
-- (void)tokenForEmbedCodes:(NSArray *)embedCodes callback:(OOEmbedTokenCallback)callback {
+- (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes
+                  callback:(OOEmbedTokenCallback)callback {
   NSDictionary *params = @{@"account_id": self.accountId};  // only used for concurrent streams
-  NSString* uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
-  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey secret:self.secret];
-  NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
+  NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@", self.pcode, [embedCodes componentsJoinedByString:@","]];
+  OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
+                                                                                       secret:self.secret];
+  NSURL* embedTokenUrl = [urlGen secureURLForHost:self.authorizeHost uri:uri params:params];
   callback(embedTokenUrl.absoluteString);
 }
 

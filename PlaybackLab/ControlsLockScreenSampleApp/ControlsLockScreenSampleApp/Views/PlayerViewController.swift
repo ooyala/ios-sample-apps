@@ -16,9 +16,6 @@ class PlayerViewController: UIViewController {
   // properties for the video
   public var option: PlayerSelectionOption!
   
-  // properties required for a Fairplay asset
-  private var apiKey: String?
-  private var apiSecret: String?
   public var ooyalaPlayerVC: OOOoyalaPlayerViewController?
   
   // remote control center
@@ -77,8 +74,11 @@ class PlayerViewController: UIViewController {
   }
   
   private func setupOoyalaPlayerStuff() {
-    var player: OOOoyalaPlayer?
-    
+    var player: OOOoyalaPlayer
+    // properties required for a Fairplay asset
+    var apiKey: String
+    var apiSecret: String
+
     if let embedTokenGenerator = option.embedTokenGenerator {
       if let basicEmbedTokenGenerator = embedTokenGenerator as? BasicEmbedTokenGenerator {
         apiKey = basicEmbedTokenGenerator.apiKey
@@ -88,11 +88,12 @@ class PlayerViewController: UIViewController {
         apiSecret = "API_SECRET"
       }
       
-      let options: OOOptions = OOOptions()!
+      let options: OOOptions = OOOptions()
       // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
       // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
       // which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
-      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: apiSecret)!
+      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey,
+                                                                secret: apiSecret)
       player = OOOoyalaPlayer(pcode: option.pcode,
                               domain: option.domain,
                               embedTokenGenerator: embedTokenGenerator,
@@ -101,9 +102,7 @@ class PlayerViewController: UIViewController {
       player = OOOoyalaPlayer(pcode: option.pcode, domain: option.domain)
     }
 
-    guard let initializatedPlayer = player else { return }
-    
-    ooyalaPlayerVC = OOOoyalaPlayerViewController(player: initializatedPlayer)
+    ooyalaPlayerVC = OOOoyalaPlayerViewController(player: player)
     ooyalaPlayerVC?.player.setEmbedCode(option.embedCode)
   }
   
@@ -140,9 +139,9 @@ class PlayerViewController: UIViewController {
   
   private func setupPlayingInfoCenter() {
     // Set properties of the asset to be shown in the screen (no required).
-    var nowPlayingInfo: [String : Any] = [MPMediaItemPropertyTitle: option.title,
-                                          MPMediaItemPropertyArtist: "Ooyala",
-                                          MPMediaItemPropertyAlbumTitle: "Controls Lock Screen"
+    var nowPlayingInfo: [String: Any] = [MPMediaItemPropertyTitle: option.title,
+                                         MPMediaItemPropertyArtist: "Ooyala",
+                                         MPMediaItemPropertyAlbumTitle: "Controls Lock Screen"
     ]
     
     // Set albumArt to show in the screen if image is available

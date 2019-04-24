@@ -22,11 +22,15 @@ class ChildPlayerViewController: AbstractPlayerViewController {
     super.viewDidLoad()
     
      // Create Ooyala ViewController
-    let player = OOOoyalaPlayer(pcode: option.pcode, domain: OOPlayerDomain(string: option.domain))
+    let player = OOOoyalaPlayer(pcode: option.pcode,
+                                domain: OOPlayerDomain(string: option.domain))
     ooyalaPlayerViewController = OOOoyalaTVPlayerViewController(player: player)
     ooyalaPlayerViewController.playbackControlsEnabled = false
     
-    NotificationCenter.default.addObserver(self, selector: #selector(notificationHandler(_:)), name: nil, object: player)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(notificationHandler(_:)),
+                                           name: nil,
+                                           object: player)
     
     // Attach it to current view
     addChild(ooyalaPlayerViewController)

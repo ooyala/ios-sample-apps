@@ -574,17 +574,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/SecurePlayerSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SecurePlayerSampleApp;
 				PRODUCT_NAME = SecurePlayerSampleApp;
@@ -601,17 +593,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/SecurePlayerSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SecurePlayerSampleApp;
 				PRODUCT_NAME = SecurePlayerSampleApp;
