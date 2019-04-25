@@ -49,6 +49,7 @@
 		393A47EB21CCDED5005860F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47E821CCDED5005860F3 /* OoyalaSDK.framework */; };
 		393A47EC21CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47E921CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework */; };
 		393A47ED21CCDED5005860F3 /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47EA21CCDED5005860F3 /* SecurePlayer.framework */; };
+		39913A6022718E1000FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A5F22718E1000FD61EC /* File.swift */; };
 		5E7EEE8E1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */; };
 		5E7EEE8F1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EEE8D1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m */; };
 		9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */; };
@@ -110,6 +111,7 @@
 		393A47E821CCDED5005860F3 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		393A47E921CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSecurePlayerSDK.framework; sourceTree = "<group>"; };
 		393A47EA21CCDED5005860F3 /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurePlayer.framework; sourceTree = "<group>"; };
+		39913A5F22718E1000FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurePlayerPrePersonalizedPlayerViewController.h; sourceTree = "<group>"; };
 		5E7EEE8D1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurePlayerPrePersonalizedPlayerViewController.m; sourceTree = "<group>"; };
 		9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				0B140F571A2E4709001324EE /* Info.plist */,
+				39913A5F22718E1000FD61EC /* File.swift */,
 				0B140F581A2E4709001324EE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -356,6 +359,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.WAC = {
 								enabled = 0;
@@ -426,6 +430,7 @@
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 				0B19FEDF1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* SecurePlayerListViewController.m in Sources */,
+				39913A6022718E1000FD61EC /* File.swift in Sources */,
 				5E7EEE8F1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,6 +586,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SecurePlayerSampleApp;
 				PRODUCT_NAME = SecurePlayerSampleApp;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -588,6 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,6 +608,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SecurePlayerSampleApp;
 				PRODUCT_NAME = SecurePlayerSampleApp;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
