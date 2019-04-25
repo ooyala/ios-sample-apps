@@ -162,9 +162,6 @@ class MultiplePlayerViewController: UIViewController {
         return
       }
       
-      self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
-      self.sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
-      
       cell.videoView.addSubview(self.sharedPlayer.view)
       NSLayoutConstraint.activate([
         self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
@@ -172,6 +169,11 @@ class MultiplePlayerViewController: UIViewController {
         self.sharedPlayer.view.trailingAnchor.constraint(equalTo: cell.videoView.trailingAnchor),
         self.sharedPlayer.view.leadingAnchor.constraint(equalTo: cell.videoView.leadingAnchor),
         ])
+      
+      if Thread.isMainThread {
+        self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
+        self.sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
+      }
     }
     
   }
