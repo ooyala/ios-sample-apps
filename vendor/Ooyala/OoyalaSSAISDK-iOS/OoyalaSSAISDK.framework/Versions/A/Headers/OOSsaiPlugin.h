@@ -5,6 +5,9 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
+#ifndef OOSsaiPlugin_h
+#define OOSsaiPlugin_h
+
 #import <OoyalaSDK/OoyalaSDK.h>
 
 @class OOOoyalaPlayer;
@@ -47,3 +50,5 @@
 - (BOOL)setParams:(NSString *)ssaiParams;
 
 @end
+
+#endif

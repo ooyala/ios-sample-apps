@@ -3,6 +3,9 @@
 //  OoyalaSDK
 //
 
+#ifndef OOIQConfiguration_h
+#define OOIQConfiguration_h
+
 @import Foundation;
 @class OODeviceInfo;
 
@@ -75,3 +78,5 @@ extern BOOL const OOIQCONFIGURATION_DEFAULT_NETWORK_WIFI;
 @property (nonatomic) BOOL useWifiOnly;
 
 @end
+
+#endif /* OOIQConfiguration_h */

@@ -1,3 +1,6 @@
+#ifndef OODebugMode_h
+#define OODebugMode_h
+
 #define LOG(...) [OODebugMode log:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
 #define ASSERT(condition, ...) [OODebugMode assert:condition tag:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
 #define ASSERT_FALSE(...) [OODebugMode assertFalse:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
@@ -51,3 +54,6 @@ typedef NS_ENUM(NSInteger, DebugMode) {
 + (void)log:(NSString *)tag message:(NSString *)format, ...;
 
 @end
+
+#endif /* OODebugMode_h */
+
