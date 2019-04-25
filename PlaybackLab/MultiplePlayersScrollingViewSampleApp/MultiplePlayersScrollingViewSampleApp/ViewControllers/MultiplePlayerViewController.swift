@@ -32,7 +32,6 @@ class MultiplePlayerViewController: UIViewController {
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.backgroundColor = .white
     collection.allowsSelection = false
-    collection.decelerationRate = .fast
     collection.delegate = self
     collection.dataSource = self
     collection.register(PlayerCell.self,
@@ -159,7 +158,7 @@ class MultiplePlayerViewController: UIViewController {
       indexPath = IndexPath(row: newIndex, section: 0)
     }
     
-    collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
+    collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
     
     currentItem = indexPath.row
     let playerSelectionOption = options[currentItem]
