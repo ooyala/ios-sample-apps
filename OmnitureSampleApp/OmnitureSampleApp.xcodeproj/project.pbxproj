@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3929663322674B9800051EFE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663222674B9800051EFE /* libsqlite3.tbd */; };
+		39913A5622718D1D00FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A5522718D1D00FD61EC /* File.swift */; };
 		CA067BD71CE5347100ACE353 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA067BD61CE5347100ACE353 /* VideoTableViewController.m */; };
 		CA067BDB1CE535D700ACE353 /* AssetDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA067BDA1CE535D700ACE353 /* AssetDataSource.m */; };
 		CA067BDE1CE5362700ACE353 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CA067BDD1CE5362700ACE353 /* PlayerSelectionOption.m */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		3929663222674B9800051EFE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		39913A5522718D1D00FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		CA067BD51CE5347100ACE353 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoTableViewController.h; path = Lists/VideoTableViewController.h; sourceTree = "<group>"; };
 		CA067BD61CE5347100ACE353 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoTableViewController.m; path = Lists/VideoTableViewController.m; sourceTree = "<group>"; };
 		CA067BD91CE535D700ACE353 /* AssetDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetDataSource.h; path = Models/AssetDataSource.h; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */,
 				CA8DAF101CF8BE4A0081EB9D /* ADBMobileConfig.json */,
 				CA15C2E81CDAB16A00B9EF25 /* Info.plist */,
+				39913A5522718D1D00FD61EC /* File.swift */,
 				CA15C2D81CDAB16A00B9EF25 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -188,6 +191,7 @@
 				TargetAttributes = {
 					CA15C2D31CDAB16A00B9EF25 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -230,6 +234,7 @@
 			files = (
 				CA15C3281CDAB3AF00B9EF25 /* BasicPlayerViewController.m in Sources */,
 				CA15C2DC1CDAB16A00B9EF25 /* AppDelegate.m in Sources */,
+				39913A5622718D1D00FD61EC /* File.swift in Sources */,
 				CA067BDE1CE5362700ACE353 /* PlayerSelectionOption.m in Sources */,
 				CA067BDB1CE535D700ACE353 /* AssetDataSource.m in Sources */,
 				CA15C2D91CDAB16A00B9EF25 /* main.m in Sources */,
@@ -368,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +384,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.OmnitureSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -386,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +405,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.OmnitureSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

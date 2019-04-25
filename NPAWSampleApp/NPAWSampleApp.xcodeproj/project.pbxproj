@@ -36,6 +36,7 @@
 		0B89E18E1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
 		0B9797AD1DDB926E0013F12C /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB701B02C58D00347DFA /* OoyalaSDK.framework */; };
 		0BFFF6C71B33655100D72444 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
+		39913A5422718CF200FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A5322718CF200FD61EC /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraMedia.framework; sourceTree = "<group>"; };
 		0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAWOptionalMetadataPlayerViewController.h; sourceTree = "<group>"; };
 		0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAWOptionalMetadataPlayerViewController.m; sourceTree = "<group>"; };
+		39913A5322718CF200FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +125,8 @@
 				0B1AFB1E1B02BAAB00347DFA /* AppDelegate.m */,
 				0B1AFB1F1B02BAAB00347DFA /* LaunchScreen.xib */,
 				0B1AFB211B02BAAB00347DFA /* Main.storyboard */,
-				0B1AFB231B02BAAB00347DFA /* Images.xcassets */,
-				0B1AFB241B02BAAB00347DFA /* Info.plist */,
+				39913A5222718CD000FD61EC /* Supporting Files */,
 				0B1AFB251B02BAAB00347DFA /* Lists */,
-				0B1AFB281B02BAAB00347DFA /* main.m */,
 				0B1AFB291B02BAAB00347DFA /* Players */,
 				0B1AFB2C1B02BAAB00347DFA /* Utils */,
 				0B1AFB311B02BAAB00347DFA /* Views */,
@@ -185,6 +185,17 @@
 				0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */,
 			);
 			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
+		39913A5222718CD000FD61EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B1AFB231B02BAAB00347DFA /* Images.xcassets */,
+				0B1AFB241B02BAAB00347DFA /* Info.plist */,
+				0B1AFB281B02BAAB00347DFA /* main.m */,
+				39913A5322718CF200FD61EC /* File.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					0B1AFB561B02C50500347DFA = {
@@ -314,6 +326,7 @@
 				0B1AFB461B02BAAB00347DFA /* SampleAppPlayerViewController.m in Sources */,
 				0B89E18E1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m in Sources */,
 				0B1AFB401B02BAAB00347DFA /* main.m in Sources */,
+				39913A5422718CF200FD61EC /* File.swift in Sources */,
 				0B1AFB421B02BAAB00347DFA /* NPAWDefaultPlayerViewController.m in Sources */,
 				0B1AFB391B02BAAB00347DFA /* AppDelegate.m in Sources */,
 			);
@@ -459,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -466,13 +480,15 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/NPAWSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NPAWSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NPAWSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -481,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -488,13 +505,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/NPAWSampleApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NPAWSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NPAWSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

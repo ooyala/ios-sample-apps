@@ -38,6 +38,7 @@
 		392966592267608200051EFE /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392966572267608200051EFE /* OoyalaSDK.framework */; };
 		3929665B226760BB00051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929665A226760BB00051EFE /* JavaScriptCore.framework */; };
 		3929665D226760C900051EFE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929665C226760C900051EFE /* libc++.tbd */; };
+		39913A4A22718BF000FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A4922718BF000FD61EC /* File.swift */; };
 		C12263881F5A221C009EDD2E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C12263871F5A221C009EDD2E /* TableViewController.m */; };
 		C18E9F741F44D5D40022CEA8 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = DB22A3BD1EAFE15300FA3E3C /* config.json */; };
 		C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */; };
@@ -90,6 +91,7 @@
 		392966572267608200051EFE /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		3929665A226760BB00051EFE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		3929665C226760C900051EFE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		39913A4922718BF000FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C12263871F5A221C009EDD2E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		C122638B1F5A2229009EDD2E /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		C1D0E9DD1F5DEFEC00B8B9DD /* BrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseView.m; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				0B78242A1B2B7EB600D718AB /* Info.plist */,
 				0B78242C1B2B7EB600D718AB /* main.m */,
+				39913A4922718BF000FD61EC /* File.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -391,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B7824351B2B7EB600D718AB /* main.m in Sources */,
+				39913A4A22718BF000FD61EC /* File.swift in Sources */,
 				C1D0E9DE1F5DEFEC00B8B9DD /* BrowseView.m in Sources */,
 				392966092267130200051EFE /* NetworkManager.m in Sources */,
 				C1D0E9EA1F61B26900B8B9DD /* BrowseButton.m in Sources */,
@@ -431,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
@@ -446,6 +452,8 @@
 				PRODUCT_NAME = DiscoverySampleApp;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -455,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
@@ -470,6 +479,7 @@
 				PRODUCT_NAME = DiscoverySampleApp;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

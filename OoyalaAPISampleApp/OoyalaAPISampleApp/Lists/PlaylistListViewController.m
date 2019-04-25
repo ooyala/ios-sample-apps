@@ -1,6 +1,5 @@
 #import "PlaylistListViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
-#import <OoyalaSDK/OOJSONKit.h>
 #import "ChannelContentTreeTableViewCell.h"
 #import "ChannelContentTreeDetailViewController.h"
 
@@ -40,7 +39,9 @@
   }
 
   // Simple JSON parsing
-  NSDictionary *obj = (NSDictionary*)[[[OOJSONDecoder alloc] init] objectWithData:responseData];
+  NSDictionary *obj = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:responseData
+                                                                      options:0
+                                                                        error:&error];;
   NSLog(@"%@", obj);
 
   videos = (NSMutableArray *)[obj objectForKey:@"data"];

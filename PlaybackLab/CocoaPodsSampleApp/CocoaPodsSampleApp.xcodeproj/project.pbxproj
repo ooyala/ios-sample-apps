@@ -28,6 +28,7 @@
 		0BA65EED1BD01534000D389F /* PlayerSingleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED81BD01534000D389F /* PlayerSingleButton.xib */; };
 		0BA65EEE1BD01534000D389F /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA65ED91BD01534000D389F /* TableCell.xib */; };
 		2347CC2D2B9D0BFCF9BD8512 /* libPods-CocoaPodsSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704DD25C2B00E2785B653FB /* libPods-CocoaPodsSampleApp.a */; };
+		39913A962271A39900FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A952271A39900FD61EC /* File.swift */; };
 		FA78CDFA115FF5E466DE0D88 /* libPods-CocoaPodsSampleAppSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC10AB5DEA8EBF81FC38CA8 /* libPods-CocoaPodsSampleAppSource.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		0BA65ED81BD01534000D389F /* PlayerSingleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSingleButton.xib; sourceTree = "<group>"; };
 		0BA65ED91BD01534000D389F /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		15B62CC592C48B3C8E5EC0AC /* Pods-CocoaPodsSampleAppSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPodsSampleAppSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPodsSampleAppSource/Pods-CocoaPodsSampleAppSource.release.xcconfig"; sourceTree = "<group>"; };
+		39913A952271A39900FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		51BFFC734498BB2808FE7ECB /* Pods-CocoaPodsSampleAppSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPodsSampleAppSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPodsSampleAppSource/Pods-CocoaPodsSampleAppSource.debug.xcconfig"; sourceTree = "<group>"; };
 		5704DD25C2B00E2785B653FB /* libPods-CocoaPodsSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CocoaPodsSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDB077DF86A58F67778E9AF /* Pods-CocoaPodsSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPodsSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPodsSampleApp/Pods-CocoaPodsSampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA65EC51BD01534000D389F /* Images.xcassets */,
+				39913A952271A39900FD61EC /* File.swift */,
 				0BA65EC61BD01534000D389F /* Info.plist */,
 				0BA65ECA1BD01534000D389F /* main.m */,
 			);
@@ -287,6 +290,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					0B19FEFD1A3B7532003E57DF = {
@@ -401,6 +405,7 @@
 			files = (
 				0BA65EE41BD01534000D389F /* BasicSimplePlayerViewController.m in Sources */,
 				0BA65EE11BD01534000D389F /* CocoaPodsListViewController.m in Sources */,
+				39913A962271A39900FD61EC /* File.swift in Sources */,
 				0BA65EE21BD01534000D389F /* main.m in Sources */,
 				0BA65EE61BD01534000D389F /* PlayerSelectionOption.m in Sources */,
 				0BA65EDB1BD01534000D389F /* AppDelegate.m in Sources */,
@@ -546,6 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -563,6 +569,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CocoaPodsSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -572,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -589,6 +598,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CocoaPodsSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

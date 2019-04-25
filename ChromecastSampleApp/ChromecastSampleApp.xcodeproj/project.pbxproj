@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */; };
-		0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */; };
 		0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBC21B0C09BB00347DFA /* AppDelegate.m */; };
 		0B1AFBE21B0C09BB00347DFA /* CoreSDKOnlyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBCF1B0C09BB00347DFA /* CoreSDKOnlyListViewController.m */; };
 		0B1AFBE31B0C09BB00347DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AFBD01B0C09BB00347DFA /* main.m */; };
@@ -18,7 +16,6 @@
 		39088CA221D60FAB00D860A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39088C9F21D60FAB00D860A9 /* Main.storyboard */; };
 		39088CA521D61BCB00D860A9 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 39088CA321D61BCB00D860A9 /* Utils.m */; };
 		3929661F226745A100051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929661E226745A100051EFE /* JavaScriptCore.framework */; };
-		39315E1C2253608000A7A8C7 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39315E1B2253608000A7A8C7 /* OoyalaSkinSDK.framework */; };
 		39315E37225360B000A7A8C7 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 39315E1F225360B000A7A8C7 /* VERSION */; };
 		39315E38225360B000A7A8C7 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 39315E20225360B000A7A8C7 /* main.jsbundle */; };
 		39315E39225360B000A7A8C7 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39315E21225360B000A7A8C7 /* README.txt */; };
@@ -42,11 +39,14 @@
 		39315E50225367B200A7A8C7 /* OptionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E4F225367B200A7A8C7 /* OptionsDataSource.m */; };
 		39315E5322537C6B00A7A8C7 /* SkinSDKListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */; };
 		39315E5622537FDF00A7A8C7 /* SkinPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39315E5522537FDF00A7A8C7 /* SkinPlayerViewController.m */; };
+		39913A4122718B9200FD61EC /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A3D22718B9200FD61EC /* OoyalaSkinSDK.framework */; };
+		39913A4222718B9200FD61EC /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A3E22718B9200FD61EC /* GoogleCast.framework */; };
+		39913A4322718B9200FD61EC /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A3F22718B9200FD61EC /* OoyalaSDK.framework */; };
+		39913A4422718B9200FD61EC /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A4022718B9200FD61EC /* OoyalaCastSDK.framework */; };
+		39913A4622718BA000FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A4522718BA000FD61EC /* File.swift */; };
 		39AE421A21772F7200F1C084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421321772F7200F1C084 /* Images.xcassets */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
-		7AB3313D205BC51E006C4313 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; };
-		7AB3313F205BC525006C4313 /* GoogleCast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB3313C205BC51E006C4313 /* GoogleCast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,7 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7AB3313F205BC525006C4313 /* GoogleCast.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +77,6 @@
 		39088CA321D61BCB00D860A9 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		39088CA421D61BCB00D860A9 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		3929661E226745A100051EFE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		39315E1B2253608000A7A8C7 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSkinSDK.framework; path = VendorLibraries/OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		39315E1F225360B000A7A8C7 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		39315E20225360B000A7A8C7 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		39315E21225360B000A7A8C7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -105,6 +103,11 @@
 		39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinSDKListViewController.m; sourceTree = "<group>"; };
 		39315E5422537FD300A7A8C7 /* SkinPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinPlayerViewController.h; sourceTree = "<group>"; };
 		39315E5522537FDF00A7A8C7 /* SkinPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinPlayerViewController.m; sourceTree = "<group>"; };
+		39913A3D22718B9200FD61EC /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
+		39913A3E22718B9200FD61EC /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
+		39913A3F22718B9200FD61EC /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
+		39913A4022718B9200FD61EC /* OoyalaCastSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaCastSDK.framework; sourceTree = "<group>"; };
+		39913A4522718BA000FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		39AE421321772F7200F1C084 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39AE421421772F7200F1C084 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSampleApp.entitlements; sourceTree = "<group>"; };
@@ -112,10 +115,7 @@
 		5E5B755B1C472C4200371A9E /* CastPlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastPlaybackView.m; sourceTree = "<group>"; };
 		5EA5A7E71B6C07DC008C691C /* OOCastManagerFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCastManagerFetcher.h; sourceTree = "<group>"; };
 		5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOCastManagerFetcher.m; sourceTree = "<group>"; };
-		7AB3313C205BC51E006C4313 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = VendorLibraries/GoogleCast.framework; sourceTree = "<group>"; };
 		FF21F07619CB5ABC00FE9D07 /* ChromecastSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromecastSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaCastSDK.framework; path = "../vendor/Ooyala/OoyalaCastSDK-iOS/OoyalaCastSDK.framework"; sourceTree = "<group>"; };
-		FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,11 +123,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39315E1C2253608000A7A8C7 /* OoyalaSkinSDK.framework in Frameworks */,
-				7AB3313D205BC51E006C4313 /* GoogleCast.framework in Frameworks */,
-				0B1AFB801B0C025A00347DFA /* OoyalaCastSDK.framework in Frameworks */,
-				0B1AFB811B0C025D00347DFA /* OoyalaSDK.framework in Frameworks */,
+				39913A4222718B9200FD61EC /* GoogleCast.framework in Frameworks */,
 				3929661F226745A100051EFE /* JavaScriptCore.framework in Frameworks */,
+				39913A4422718B9200FD61EC /* OoyalaCastSDK.framework in Frameworks */,
+				39913A4322718B9200FD61EC /* OoyalaSDK.framework in Frameworks */,
+				39913A4122718B9200FD61EC /* OoyalaSkinSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,17 +187,6 @@
 				39088CA321D61BCB00D860A9 /* Utils.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		0B1AFBE71B0C0B5900347DFA /* VendorLibraries */ = {
-			isa = PBXGroup;
-			children = (
-				7AB3313C205BC51E006C4313 /* GoogleCast.framework */,
-				FF4A92FB1B0A607D00575391 /* OoyalaCastSDK.framework */,
-				FF4A92FC1B0A607D00575391 /* OoyalaSDK.framework */,
-				39315E1B2253608000A7A8C7 /* OoyalaSkinSDK.framework */,
-			);
-			name = VendorLibraries;
 			sourceTree = "<group>";
 		};
 		39088C9C21D60FAB00D860A9 /* Storyboards */ = {
@@ -276,10 +265,22 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
+		39913A3C22718B9200FD61EC /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				39913A3D22718B9200FD61EC /* OoyalaSkinSDK.framework */,
+				39913A3E22718B9200FD61EC /* GoogleCast.framework */,
+				39913A3F22718B9200FD61EC /* OoyalaSDK.framework */,
+				39913A4022718B9200FD61EC /* OoyalaCastSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
 		39AE420A21772F7200F1C084 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				0B1AFBD01B0C09BB00347DFA /* main.m */,
+				39913A4522718BA000FD61EC /* File.swift */,
 				39AE421321772F7200F1C084 /* Images.xcassets */,
 				39AE421421772F7200F1C084 /* Info.plist */,
 			);
@@ -290,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1AFBC01B0C09BB00347DFA /* ChromecastSampleApp */,
-				0B1AFBE71B0C0B5900347DFA /* VendorLibraries */,
+				39913A3C22718B9200FD61EC /* VendorLibraries */,
 				FF49D21519CBAC4D001B156F /* Frameworks */,
 				FF21F07719CB5ABC00FE9D07 /* Products */,
 			);
@@ -344,6 +345,7 @@
 				TargetAttributes = {
 					FF21F07519CB5ABC00FE9D07 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -406,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1AFBE21B0C09BB00347DFA /* CoreSDKOnlyListViewController.m in Sources */,
+				39913A4622718BA000FD61EC /* File.swift in Sources */,
 				0B1AFBE41B0C09BB00347DFA /* PlayerViewController.m in Sources */,
 				39315E50225367B200A7A8C7 /* OptionsDataSource.m in Sources */,
 				0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */,
@@ -549,13 +552,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ChromecastSampleApp/ChromecastSampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ChromecastSampleApp/Supporting Files/Info.plist";
@@ -571,6 +574,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ChromecastSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -579,13 +584,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ChromecastSampleApp/ChromecastSampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ChromecastSampleApp/Supporting Files/Info.plist";
@@ -601,6 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ChromecastSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
