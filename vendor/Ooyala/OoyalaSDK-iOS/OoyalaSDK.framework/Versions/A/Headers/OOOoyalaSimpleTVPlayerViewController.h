@@ -1,15 +1,12 @@
 /**
- * @class      OOOoyalaPlayerViewController OOOoyalaPlayerViewController.h "OOOoyalaPlayerViewController.h"
- * @brief      OOOoyalaPlayerViewController
- * @details    OOOoyalaPlayerViewController.h in OoyalaSDK
- * @date       1/9/12
- * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
+ @class      OOOoyalaSimpleTVPlayerViewController
+ @date       17/9/17
+ @copyright Copyright © 2017 Ooyala, Inc. All rights reserved.
  */
 
 #import <SceneKit/SceneKit.h>
 #import <UIKit/UIKit.h>
 #import "OOEmbedTokenGenerator.h"
-
 
 @class OOOoyalaAPIClient;
 @class OOControlsViewController;
