@@ -57,6 +57,7 @@
 		39296621226746C500051EFE /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296620226746C500051EFE /* EventKit.framework */; };
 		39296623226747E700051EFE /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296622226747E700051EFE /* libxml2.tbd */; };
 		39296625226747FD00051EFE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296624226747FD00051EFE /* MessageUI.framework */; };
+		39913A8E22718F3B00FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A8D22718F3B00FD61EC /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		39296620226746C500051EFE /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		39296622226747E700051EFE /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		39296624226747FD00051EFE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		39913A8D22718F3B00FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				0B140F571A2E4709001324EE /* Info.plist */,
+				39913A8D22718F3B00FD61EC /* File.swift */,
 				0B140F581A2E4709001324EE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -401,6 +404,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -449,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B19FF6B1A3B8C75003E57DF /* CompleteSampleAppListViewController.m in Sources */,
+				39913A8E22718F3B00FD61EC /* File.swift in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 			);
@@ -584,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,6 +608,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CompleteSampleApp;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "../**";
 			};
 			name = Debug;
@@ -611,6 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -629,6 +638,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CompleteSampleApp;
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "../**";
 			};
 			name = Release;
