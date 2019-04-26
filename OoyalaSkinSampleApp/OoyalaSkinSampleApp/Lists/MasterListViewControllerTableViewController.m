@@ -15,6 +15,7 @@
 #import "MultiAudioListViewController.h"
 #import "SSAIListViewController.h"
 #import "AudioOnlyListViewController.h"
+#import "ChapterMarkersListViewController.h"
 
 @interface MasterListViewControllerTableViewController ()
 
@@ -39,7 +40,8 @@
                      @"Geoblocking",
                      @"Multi audio",
                      @"Ooyala SSAI",
-                     @"Audio only"];
+                     @"Audio only",
+                     @"Chapter Markers"];
 }
 
 #pragma mark - UITableViewDataSource
@@ -92,6 +94,8 @@
     case 8:
       controller = [AudioOnlyListViewController new];
       break;
+    case 9:
+      controller = [ChapterMarkersListViewController new];
     default:
       break;
   }
