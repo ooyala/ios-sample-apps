@@ -81,7 +81,8 @@
   self.adsManager = [[OOIMAManager alloc] initWithOoyalaPlayer:player];
 
   // Load the video
-  [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
+  [self.ooyalaPlayerViewController.player play];
 }
 
 #pragma mark - Private functions

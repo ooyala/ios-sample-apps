@@ -150,16 +150,24 @@
   switch (type) {
     case kIMAAdEvent_AD_BREAK_READY:
       return @"AdBreakReady";
+    case kIMAAdEvent_AD_BREAK_ENDED:
+      return @"AdBreakEnded";
+    case kIMAAdEvent_AD_BREAK_STARTED:
+      return @"AdBreakStarted";
     case kIMAAdEvent_ALL_ADS_COMPLETED:
       return @"AllAdsCompleted";
     case kIMAAdEvent_CLICKED:
       return @"Clicked";
     case kIMAAdEvent_COMPLETE:
       return @"Complete";
+    case kIMAAdEvent_CUEPOINTS_CHANGED:
+      return @"CuePointsChanged";
     case kIMAAdEvent_FIRST_QUARTILE:
       return @"FirstQuartile";
     case kIMAAdEvent_LOADED:
       return @"Loaded";
+    case kIMAAdEvent_LOG:
+      return @"IMA Log";
     case kIMAAdEvent_MIDPOINT:
       return @"MidPoint";
     case kIMAAdEvent_PAUSE:
@@ -170,6 +178,10 @@
       return @"Skipped";
     case kIMAAdEvent_STARTED:
       return @"Started";
+    case kIMAAdEvent_STREAM_LOADED:
+      return @"StreamLoaded";
+    case kIMAAdEvent_STREAM_STARTED:
+      return @"StreamStarted";
     case kIMAAdEvent_TAPPED:
       return @"Tapped";
     case kIMAAdEvent_THIRD_QUARTILE:
