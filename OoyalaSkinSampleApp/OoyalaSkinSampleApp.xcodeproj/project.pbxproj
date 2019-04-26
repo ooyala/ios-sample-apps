@@ -47,6 +47,7 @@
 		393A46ED21CCCDDF005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A46D821CCCDDF005860F3 /* validate.js */; };
 		393A46F021CCCE43005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A46EF21CCCE43005860F3 /* OoyalaSkinSDK.xcassets */; };
 		39913A5A22718DBB00FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A5922718DBB00FD61EC /* File.swift */; };
+		39913CAB2272ED6B00FD61EC /* ChapterMarkersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39913CAA2272ED6B00FD61EC /* ChapterMarkersListViewController.m */; };
 		39D45FE2221D59C6008C9FC7 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDB221D59C6008C9FC7 /* OoyalaSkinSDK.framework */; };
 		39D45FE3221D59C6008C9FC7 /* OoyalaSSAISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDC221D59C6008C9FC7 /* OoyalaSSAISDK.framework */; };
 		39D45FE5221D59C6008C9FC7 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDE221D59C6008C9FC7 /* AdManager.framework */; };
@@ -145,6 +146,8 @@
 		393A46D821CCCDDF005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		393A46EF21CCCE43005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		39913A5922718DBB00FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		39913CA92272ED5A00FD61EC /* ChapterMarkersListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterMarkersListViewController.h; sourceTree = "<group>"; };
+		39913CAA2272ED6B00FD61EC /* ChapterMarkersListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterMarkersListViewController.m; sourceTree = "<group>"; };
 		39D45FDB221D59C6008C9FC7 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		39D45FDC221D59C6008C9FC7 /* OoyalaSSAISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSSAISDK.framework; sourceTree = "<group>"; };
 		39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				97930C181B670D9F009B3512 /* FreewheelTestsListViewController.m */,
 				97930C1A1B670E77009B3512 /* BasicTestsListViewController.h */,
 				97930C1B1B670E77009B3512 /* BasicTestsListViewController.m */,
+				39913CA92272ED5A00FD61EC /* ChapterMarkersListViewController.h */,
+				39913CAA2272ED6B00FD61EC /* ChapterMarkersListViewController.m */,
 				752F36AA20063328007BF377 /* SetAssetListViewController.h */,
 				752F36AB20063328007BF377 /* SetAssetListViewController.m */,
 				52B59C3A201FD88C004F165F /* GeoblockingTableViewController.h */,
@@ -577,6 +582,7 @@
 				97930C1C1B670E77009B3512 /* BasicTestsListViewController.m in Sources */,
 				97930C0D1B670971009B3512 /* FreewheelPlayerViewController.m in Sources */,
 				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
+				39913CAB2272ED6B00FD61EC /* ChapterMarkersListViewController.m in Sources */,
 				75961E5721A5669D000C421A /* AudioOnlyListViewController.m in Sources */,
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
