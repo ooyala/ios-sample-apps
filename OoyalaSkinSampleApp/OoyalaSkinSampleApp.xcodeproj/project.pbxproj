@@ -20,6 +20,9 @@
 		0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B11B3A201A00D72444 /* TallPlayerView.xib */; };
 		0BFFF7B41B3A213800D72444 /* SmallSkinPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */; };
 		0BFFF7B61B3A225E00D72444 /* WidePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */; };
+		391B8A8122733FAA00262F54 /* markers1.json in Resources */ = {isa = PBXBuildFile; fileRef = 391B8A8022733FAA00262F54 /* markers1.json */; };
+		391B8A8322733FE000262F54 /* markers2.json in Resources */ = {isa = PBXBuildFile; fileRef = 391B8A8222733FE000262F54 /* markers2.json */; };
+		391B8A852273470600262F54 /* markers3.json in Resources */ = {isa = PBXBuildFile; fileRef = 391B8A842273470600262F54 /* markers3.json */; };
 		3929660B2267324D00051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929660A2267324D00051EFE /* JavaScriptCore.framework */; };
 		392966122267357800051EFE /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97930E261B699595009B3512 /* EventKit.framework */; };
 		39296613226735BE00051EFE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8E7AD1BE0449500003E2D /* MessageUI.framework */; };
@@ -121,6 +124,9 @@
 		0BFFF7B31B3A213800D72444 /* SmallSkinPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallSkinPlayerView.xib; sourceTree = "<group>"; };
 		0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidePlayerView.xib; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* OoyalaSkinSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OoyalaSkinSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		391B8A8022733FAA00262F54 /* markers1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = markers1.json; sourceTree = "<group>"; };
+		391B8A8222733FE000262F54 /* markers2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = markers2.json; sourceTree = "<group>"; };
+		391B8A842273470600262F54 /* markers3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = markers3.json; sourceTree = "<group>"; };
 		3929660A2267324D00051EFE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		3929661C22673F6200051EFE /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		3929663422674C8E00051EFE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -430,6 +436,9 @@
 				B8FA3A67210FB46D004C6D7F /* ooyala_pulse.json */,
 				752F36B320064F1C007BF377 /* asset1.json */,
 				752F36B420064F1C007BF377 /* asset2.json */,
+				391B8A8022733FAA00262F54 /* markers1.json */,
+				391B8A8222733FE000262F54 /* markers2.json */,
+				391B8A842273470600262F54 /* markers3.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -549,6 +558,7 @@
 				B8FA3A65210F8BFD004C6D7F /* SSAIPlayerViewController.xib in Resources */,
 				393A46E221CCCDDF005860F3 /* Roboto-Bold.ttf in Resources */,
 				393A46ED21CCCDDF005860F3 /* validate.js in Resources */,
+				391B8A8322733FE000262F54 /* markers2.json in Resources */,
 				75961E5121A56684000C421A /* AudioOnlyPlayerViewController.xib in Resources */,
 				393A46DC21CCCDDF005860F3 /* README.txt in Resources */,
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
@@ -558,10 +568,12 @@
 				393A46F021CCCE43005860F3 /* OoyalaSkinSDK.xcassets in Resources */,
 				393A46DF21CCCDDF005860F3 /* Roboto-Regular.ttf in Resources */,
 				0BFFF7B21B3A201A00D72444 /* TallPlayerView.xib in Resources */,
+				391B8A8122733FAA00262F54 /* markers1.json in Resources */,
 				393A46E121CCCDDF005860F3 /* alice.ttf in Resources */,
 				393A46EA21CCCDDF005860F3 /* package.json in Resources */,
 				393A46DD21CCCDDF005860F3 /* RobotoCondensed-Bold.ttf in Resources */,
 				752F36B620064F1C007BF377 /* asset2.json in Resources */,
+				391B8A852273470600262F54 /* markers3.json in Resources */,
 				0B7824671B2FA0BD00D718AB /* DefaultSkinPlayerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
