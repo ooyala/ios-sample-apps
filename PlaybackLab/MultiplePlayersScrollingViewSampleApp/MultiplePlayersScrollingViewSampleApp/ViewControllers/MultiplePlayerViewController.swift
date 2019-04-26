@@ -32,7 +32,6 @@ class MultiplePlayerViewController: UIViewController {
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.backgroundColor = .white
     collection.allowsSelection = false
-    collection.decelerationRate = .fast
     collection.delegate = self
     collection.dataSource = self
     collection.register(PlayerCell.self,
@@ -102,6 +101,8 @@ class MultiplePlayerViewController: UIViewController {
   
   var lastVelocityYSign = 0
   
+  var currentItem = 0
+
   override func loadView() {
     super.loadView()
     
@@ -128,6 +129,11 @@ class MultiplePlayerViewController: UIViewController {
                                            selector: #selector(currentItemChanged),
                                            name: NSNotification.Name.OOOoyalaPlayerCurrentItemChanged,
                                            object: sharedPlayer.player)
+
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(playerStateHandler(_:)),
+                                           name: NSNotification.Name.OOOoyalaPlayerStateChanged,
+                                           object: sharedPlayer.player)
   }
   
   func initTimer() {
@@ -152,9 +158,10 @@ class MultiplePlayerViewController: UIViewController {
       indexPath = IndexPath(row: newIndex, section: 0)
     }
     
-    collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
+    collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
     
-    let playerSelectionOption = options[indexPath.row]
+    currentItem = indexPath.row
+    let playerSelectionOption = options[currentItem]
     
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else {
@@ -172,7 +179,6 @@ class MultiplePlayerViewController: UIViewController {
       
       if Thread.isMainThread {
         self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
-        self.sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
       }
     }
     
@@ -188,6 +194,16 @@ class MultiplePlayerViewController: UIViewController {
       cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem.title)!)"
     }
   }
+
+  @objc
+  func playerStateHandler(_ notification: Notification) {
+    let state = sharedPlayer.player.state()
+    let playerSelectionOption = options[currentItem]
+    if state == .ready {
+      sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
+    }
+  }
+
 }
 
 extension MultiplePlayerViewController: UICollectionViewDelegate {
