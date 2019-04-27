@@ -43,7 +43,7 @@
 
 @property (nonatomic, weak) id<OOIMAManagerDelegate> delegate;
 @property (nonatomic, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
-@property (readonly) IMAAdDisplayContainer *adDisplayContainer;
+@property (nonatomic, readonly) IMAAdDisplayContainer *adDisplayContainer;
 @property (readonly) OOStateNotifier *stateNotifier;
 
 @property (nonatomic, weak) id<OOIMAAdsManagerDelegate> imaAdsManagerDelegate;
