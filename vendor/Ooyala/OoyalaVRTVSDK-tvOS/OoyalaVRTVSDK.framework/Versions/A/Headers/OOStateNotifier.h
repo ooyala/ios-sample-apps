@@ -18,6 +18,7 @@
 @property OOOoyalaPlayerState state;
 
 - (void)notifyPlayheadChange;
+- (void)notifyPlayCompleted;
 - (void)notifyAdsLoaded;
 - (void)notifyAdSkipped;
 - (void)notifyAdStarted;
