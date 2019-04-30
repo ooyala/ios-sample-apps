@@ -41,7 +41,6 @@
 		393A47D521CCDA7C005860F3 /* Pulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47D421CCDA7B005860F3 /* Pulse.framework */; };
 		393A47D621CCDA88005860F3 /* Pulse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47D421CCDA7B005860F3 /* Pulse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		393A48AB21CCF0CF005860F3 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48AA21CCF0CF005860F3 /* OoyalaPulseIntegration.framework */; };
-		39913A5E22718DF200FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A5D22718DF200FD61EC /* File.swift */; };
 		C402FB051CAD414E001D4BBD /* VideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C402FB041CAD414E001D4BBD /* VideoItemCell.xib */; };
 		C402FB0A1CAD4163001D4BBD /* VideoLibraryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */; };
 		C402FB0B1CAD4163001D4BBD /* VideoLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */; };
@@ -115,7 +114,6 @@
 		393A47D221CCDA3A005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
 		393A47D421CCDA7B005860F3 /* Pulse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pulse.framework; sourceTree = "<group>"; };
 		393A48AA21CCF0CF005860F3 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaPulseIntegration.framework; sourceTree = "<group>"; };
-		39913A5D22718DF200FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C402FB041CAD414E001D4BBD /* VideoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoItemCell.xib; sourceTree = "<group>"; };
 		C402FB061CAD4163001D4BBD /* VideoLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoLibraryViewController.h; sourceTree = "<group>"; };
 		C402FB071CAD4163001D4BBD /* VideoLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoLibraryViewController.m; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				393A47D221CCDA3A005860F3 /* OoyalaSkinSDK.xcassets */,
-				39913A5D22718DF200FD61EC /* File.swift */,
 				0B140F571A2E4709001324EE /* Info.plist */,
 				0B140F581A2E4709001324EE /* main.m */,
 			);
@@ -469,7 +466,6 @@
 			files = (
 				C402FB0D1CAD4163001D4BBD /* VideoItemCell.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
-				39913A5E22718DF200FD61EC /* File.swift in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 				C402FB0B1CAD4163001D4BBD /* VideoLibraryViewController.m in Sources */,
 				C402FB111CAD425E001D4BBD /* VideoItem.m in Sources */,
@@ -634,8 +630,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.PulseSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -663,7 +657,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.PulseSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

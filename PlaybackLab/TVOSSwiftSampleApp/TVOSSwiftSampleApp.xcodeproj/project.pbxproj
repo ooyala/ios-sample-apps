@@ -465,7 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -489,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;

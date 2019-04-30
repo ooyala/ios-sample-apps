@@ -31,7 +31,6 @@
 		33CA803C22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */; };
 		3929664C2267540400051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929664B2267540400051EFE /* JavaScriptCore.framework */; };
 		3929664E2267543900051EFE /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929664D2267543900051EFE /* libxml2.tbd */; };
-		39913A9A2271A3F100FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A992271A3F100FD61EC /* File.swift */; };
 		39B70373221C3C130036DE31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70371221C3C130036DE31 /* libc++.tbd */; };
 		39B7037D221C3C440036DE31 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70377221C3C440036DE31 /* OoyalaSkinSDK.framework */; };
 		39B7037F221C3C440036DE31 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70379221C3C440036DE31 /* AdManager.framework */; };
@@ -132,7 +131,6 @@
 		33CA803B22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DefaultSkinPlayerViewController+AVPipControllerDelegate.m"; sourceTree = "<group>"; };
 		3929664B2267540400051EFE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		3929664D2267543900051EFE /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		39913A992271A3F100FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		39B70371221C3C130036DE31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		39B70377221C3C440036DE31 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		39B70378221C3C440036DE31 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInteractiveMediaAds.framework; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 			children = (
 				0B78242A1B2B7EB600D718AB /* Info.plist */,
 				0B78242C1B2B7EB600D718AB /* main.m */,
-				39913A992271A3F100FD61EC /* File.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -586,7 +583,6 @@
 				33CA803C22293EEF006A23B9 /* DefaultSkinPlayerViewController+AVPipControllerDelegate.m in Sources */,
 				0B78244C1B2B834F00D718AB /* PlayerSelectionOption.m in Sources */,
 				0B78244D1B2B834F00D718AB /* SampleAppPlayerViewController.m in Sources */,
-				39913A9A2271A3F100FD61EC /* File.swift in Sources */,
 				97930C2B1B6952D0009B3512 /* IMAPlayerViewController.m in Sources */,
 				97930C101B6709A9009B3512 /* MasterListViewControllerTableViewController.m in Sources */,
 				336DAEFF2226C966003074BD /* BasicSimplePlayerViewController.m in Sources */,
@@ -649,8 +645,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PictureInPictureSampleApp;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -670,7 +664,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PictureInPictureSampleApp;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -678,7 +671,6 @@
 		3394BB67224BDA3D004CCA1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -706,7 +698,6 @@
 		3394BB68224BDA3D004CCA1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

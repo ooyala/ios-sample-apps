@@ -10,7 +10,6 @@
 		392966422267506300051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45B01F559E3B00C29D8D /* JavaScriptCore.framework */; };
 		39296644226750D700051EFE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296643226750D700051EFE /* libc++.tbd */; };
 		393A47F121CCDFC6005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A47F021CCDFC6005860F3 /* OoyalaSkinSDK.xcassets */; };
-		39913A6222718E6900FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A6122718E6900FD61EC /* File.swift */; };
 		523E45AF1F559E2D00C29D8D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E45AE1F559E2D00C29D8D /* CoreMotion.framework */; };
 		754557661F8E524100BEF43C /* OoyalaIMASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754557651F8E524000BEF43C /* OoyalaIMASDK.framework */; };
 		754557681F8E537500BEF43C /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754557671F8E536C00BEF43C /* GoogleInteractiveMediaAds.framework */; };
@@ -79,7 +78,6 @@
 /* Begin PBXFileReference section */
 		39296643226750D700051EFE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		393A47F021CCDFC6005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
-		39913A6122718E6900FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		523E45161F559C7500C29D8D /* VRSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523E45AE1F559E2D00C29D8D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		523E45B01F559E3B00C29D8D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -437,7 +435,6 @@
 			children = (
 				393A47F021CCDFC6005860F3 /* OoyalaSkinSDK.xcassets */,
 				755B35AE1FF25E31009CD1F7 /* data.json */,
-				39913A6122718E6900FD61EC /* File.swift */,
 				755B35B51FF25E31009CD1F7 /* SkinConfig */,
 			);
 			path = Resources;
@@ -633,7 +630,6 @@
 				755B35D61FF25E31009CD1F7 /* CustomVideoTransitionManager.m in Sources */,
 				755B35D31FF25E31009CD1F7 /* VideoItemSection+Mappable.m in Sources */,
 				755B35CD1FF25E31009CD1F7 /* AppDelegate.m in Sources */,
-				39913A6222718E6900FD61EC /* File.swift in Sources */,
 				755B35D51FF25E31009CD1F7 /* CustomVideoViewController.m in Sources */,
 				755B35DA1FF25E31009CD1F7 /* ListOfVideosViewModel.m in Sources */,
 				755B35D91FF25E31009CD1F7 /* ListOfVideosFactory.m in Sources */,
@@ -790,8 +786,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -813,7 +807,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

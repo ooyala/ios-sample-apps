@@ -43,7 +43,6 @@
 		39913A4222718B9200FD61EC /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A3E22718B9200FD61EC /* GoogleCast.framework */; };
 		39913A4322718B9200FD61EC /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A3F22718B9200FD61EC /* OoyalaSDK.framework */; };
 		39913A4422718B9200FD61EC /* OoyalaCastSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A4022718B9200FD61EC /* OoyalaCastSDK.framework */; };
-		39913A4622718BA000FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A4522718BA000FD61EC /* File.swift */; };
 		39AE421A21772F7200F1C084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421321772F7200F1C084 /* Images.xcassets */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
@@ -109,7 +108,6 @@
 		39913A3E22718B9200FD61EC /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
 		39913A3F22718B9200FD61EC /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		39913A4022718B9200FD61EC /* OoyalaCastSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaCastSDK.framework; sourceTree = "<group>"; };
-		39913A4522718BA000FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		39AE421321772F7200F1C084 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39AE421421772F7200F1C084 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39B612CD21552B4100E2277C /* ChromecastSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSampleApp.entitlements; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				0B1AFBD01B0C09BB00347DFA /* main.m */,
-				39913A4522718BA000FD61EC /* File.swift */,
 				39AE421321772F7200F1C084 /* Images.xcassets */,
 				39AE421421772F7200F1C084 /* Info.plist */,
 			);
@@ -410,7 +407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1AFBE21B0C09BB00347DFA /* CoreSDKOnlyListViewController.m in Sources */,
-				39913A4622718BA000FD61EC /* File.swift in Sources */,
 				0B1AFBE41B0C09BB00347DFA /* PlayerViewController.m in Sources */,
 				39315E50225367B200A7A8C7 /* OptionsDataSource.m in Sources */,
 				0B89E2501B1FC85300306176 /* ChromecastPlayerSelectionOption.m in Sources */,
@@ -576,8 +572,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ChromecastSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -608,7 +602,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ChromecastSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

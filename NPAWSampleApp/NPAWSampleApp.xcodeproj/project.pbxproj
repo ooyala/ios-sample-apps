@@ -36,7 +36,6 @@
 		0B89E18E1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
 		0B9797AD1DDB926E0013F12C /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1AFB701B02C58D00347DFA /* OoyalaSDK.framework */; };
 		0BFFF6C71B33655100D72444 /* NPAWOptionalMetadataPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */; };
-		39913A5422718CF200FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A5322718CF200FD61EC /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +66,6 @@
 		0B1AFB711B02C58D00347DFA /* YouboraMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraMedia.framework; sourceTree = "<group>"; };
 		0B89E18B1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAWOptionalMetadataPlayerViewController.h; sourceTree = "<group>"; };
 		0B89E18C1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAWOptionalMetadataPlayerViewController.m; sourceTree = "<group>"; };
-		39913A5322718CF200FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +191,6 @@
 				0B1AFB231B02BAAB00347DFA /* Images.xcassets */,
 				0B1AFB241B02BAAB00347DFA /* Info.plist */,
 				0B1AFB281B02BAAB00347DFA /* main.m */,
-				39913A5322718CF200FD61EC /* File.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 				0B1AFB461B02BAAB00347DFA /* SampleAppPlayerViewController.m in Sources */,
 				0B89E18E1B14DD3700306176 /* NPAWOptionalMetadataPlayerViewController.m in Sources */,
 				0B1AFB401B02BAAB00347DFA /* main.m in Sources */,
-				39913A5422718CF200FD61EC /* File.swift in Sources */,
 				0B1AFB421B02BAAB00347DFA /* NPAWDefaultPlayerViewController.m in Sources */,
 				0B1AFB391B02BAAB00347DFA /* AppDelegate.m in Sources */,
 			);
@@ -487,8 +483,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NPAWSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -512,7 +506,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NPAWSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

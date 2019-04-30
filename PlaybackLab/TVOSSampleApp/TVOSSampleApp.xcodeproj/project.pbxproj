@@ -19,7 +19,6 @@
 		0BC139221D4BF5AA007EBDA4 /* ooyala-slick-type.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1391D1D4BF5AA007EBDA4 /* ooyala-slick-type.ttf */; };
 		0BE8AA2F1CFF889200152888 /* FairplayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */; };
 		0BE8AA321D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8AA311D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m */; };
-		39913A9C2271A41900FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A9B2271A41900FD61EC /* File.swift */; };
 		7503EEA31FE16ADD00D877CC /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7503EEA21FE16ADD00D877CC /* OoyalaTVSkinSDK.framework */; };
 		7503EEA91FE1704000D877CC /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7503EEA81FE1704000D877CC /* OoyalaSDK.framework */; };
 		75BBCF241FE1689B005B9F72 /* OoyalaPulseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BBCF201FE1689B005B9F72 /* OoyalaPulseIntegration.framework */; };
@@ -67,7 +66,6 @@
 		0BE8AA2E1CFF889200152888 /* FairplayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FairplayPlayerViewController.m; sourceTree = "<group>"; };
 		0BE8AA301D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaPlayerTokenPlayerViewController.h; sourceTree = "<group>"; };
 		0BE8AA311D009F9300152888 /* OoyalaPlayerTokenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaPlayerTokenPlayerViewController.m; sourceTree = "<group>"; };
-		39913A9B2271A41900FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7503EEA21FE16ADD00D877CC /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaTVSkinSDK.framework; sourceTree = "<group>"; };
 		7503EEA81FE1704000D877CC /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		75BBCF201FE1689B005B9F72 /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaPulseIntegration.framework; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 				0B3BD6221CF3E68200A8ACDA /* Assets.xcassets */,
 				0B3BD6251CF3E68200A8ACDA /* Info.plist */,
 				0B3BD6291CF3E68200A8ACDA /* main.m */,
-				39913A9B2271A41900FD61EC /* File.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 				AA4D8C941DAE626C00FFD124 /* PulsePlayerViewController.m in Sources */,
 				0B3BD6381CF3E68200A8ACDA /* VideoTableViewController.m in Sources */,
 				0BE8AA2F1CFF889200152888 /* FairplayPlayerViewController.m in Sources */,
-				39913A9C2271A41900FD61EC /* File.swift in Sources */,
 				0B3BD6341CF3E68200A8ACDA /* AppDelegate.m in Sources */,
 				0B3BD63A1CF3E68200A8ACDA /* AbstractPlayerViewController.m in Sources */,
 			);
@@ -442,8 +438,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -467,7 +461,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39913A6422718E8900FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A6322718E8900FD61EC /* File.swift */; };
 		75614B5F1F711F5A005F26B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B5E1F711F5A005F26B7 /* main.m */; };
 		75614B621F711F5A005F26B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B611F711F5A005F26B7 /* AppDelegate.m */; };
 		75614B651F711F5A005F26B7 /* TVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75614B641F711F5A005F26B7 /* TVViewController.m */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		39913A6322718E8900FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		75614B5A1F711F5A005F26B7 /* VRTVSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRTVSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75614B5E1F711F5A005F26B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75614B601F711F5A005F26B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			children = (
 				75614B691F711F5A005F26B7 /* Assets.xcassets */,
 				75614B6B1F711F5A005F26B7 /* Info.plist */,
-				39913A6322718E8900FD61EC /* File.swift */,
 				75614B5E1F711F5A005F26B7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -183,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75614B651F711F5A005F26B7 /* TVViewController.m in Sources */,
-				39913A6422718E8900FD61EC /* File.swift in Sources */,
 				75614B621F711F5A005F26B7 /* AppDelegate.m in Sources */,
 				75614B5F1F711F5A005F26B7 /* main.m in Sources */,
 			);
@@ -328,8 +324,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRTVSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -353,7 +347,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.VRTVSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;

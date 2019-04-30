@@ -37,7 +37,6 @@
 		0BFFF6C41B33395B00D72444 /* IMAPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */; };
 		0BFFF6C51B33395B00D72444 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */; };
 		0BFFF6C61B33395B00D72444 /* IMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */; };
-		39913A4F22718C9700FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A4E22718C9700FD61EC /* File.swift */; };
 		CA9B81431EA569620040B5BB /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9A1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework */; };
 		CA9B81441EA569620040B5BB /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8CF9A1BBC817800F61C1A /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -95,7 +94,6 @@
 		0BFFF6C11B33395B00D72444 /* IMAPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAPlayerViewController.h; sourceTree = "<group>"; };
 		0BFFF6C21B33395B00D72444 /* IMAPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAPlayerViewController.m; sourceTree = "<group>"; };
 		3929662C22674A6E00051EFE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		39913A4E22718C9700FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +220,6 @@
 				0BF4FA141A686CB40050A602 /* Main.storyboard */,
 				0BF4FA161A686CB40050A602 /* Images.xcassets */,
 				0BF4FA171A686CB40050A602 /* Info.plist */,
-				39913A4E22718C9700FD61EC /* File.swift */,
 				0BF4FA1B1A686CB40050A602 /* main.m */,
 			);
 			path = "Supporting Files";
@@ -360,7 +357,6 @@
 				0BF4FA2F1A686CB40050A602 /* main.m in Sources */,
 				0BF4FA331A686CB40050A602 /* PlayerSelectionOption.m in Sources */,
 				0BF4FA281A686CB40050A602 /* AppDelegate.m in Sources */,
-				39913A4F22718C9700FD61EC /* File.swift in Sources */,
 				0BF4FA351A686CB40050A602 /* SampleAppPlayerViewController.m in Sources */,
 				0BFFF6C51B33395B00D72444 /* IMAPlayerViewController.m in Sources */,
 			);
@@ -526,8 +522,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.IMASampleApp1;
 				PRODUCT_NAME = IMASampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -556,7 +550,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.IMASampleApp1;
 				PRODUCT_NAME = IMASampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

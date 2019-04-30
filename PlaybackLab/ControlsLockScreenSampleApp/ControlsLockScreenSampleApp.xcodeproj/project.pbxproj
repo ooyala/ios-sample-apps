@@ -377,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -398,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
