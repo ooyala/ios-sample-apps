@@ -72,7 +72,6 @@
 		0BEE35E81E3049DD00618269 /* ProgrammaticVolumePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* PlayWithInitialTimePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.h */; };
-		39913A3922718B0300FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A3822718B0300FD61EC /* File.swift */; };
 		39D45FF4221D6B77008C9FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D45FF1221D6B77008C9FC7 /* main.m */; };
 		39D45FF5221D6B77008C9FC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D45FF2221D6B77008C9FC7 /* Images.xcassets */; };
 		5E32B2CD1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E32B2CB1CD97313001285A7 /* PerformanceProfilingPlayerViewController.h */; };
@@ -140,7 +139,6 @@
 		0BC947CA1A817732004CB997 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		0BEE35691E30456400618269 /* ProgrammaticVolumePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammaticVolumePlayerViewController.h; sourceTree = "<group>"; };
 		0BEE356A1E30456400618269 /* ProgrammaticVolumePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammaticVolumePlayerViewController.m; sourceTree = "<group>"; };
-		39913A3822718B0300FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		39D45FF1221D6B77008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39D45FF2221D6B77008C9FC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39D45FF3221D6B77008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -301,7 +299,6 @@
 		39D45FF0221D6B77008C9FC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				39913A3822718B0300FD61EC /* File.swift */,
 				39D45FF1221D6B77008C9FC7 /* main.m */,
 				39D45FF2221D6B77008C9FC7 /* Images.xcassets */,
 				39D45FF3221D6B77008C9FC7 /* Info.plist */,
@@ -456,7 +453,6 @@
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				5E32B2CE1CD97313001285A7 /* PerformanceProfilingPlayerViewController.m in Sources */,
 				0B7333AE1A7AEEBD00F0EC32 /* OOSampleAdSpot.m in Sources */,
-				39913A3922718B0300FD61EC /* File.swift in Sources */,
 				0B19FEDF1A3AB4B4003E57DF /* PlayWithInitialTimePlayerViewController.m in Sources */,
 				0B7AC4271A79A93B0085BC97 /* PluginPlayerViewController.m in Sources */,
 				0B19FEF91A3AB608003E57DF /* PlayerSelectionOption.m in Sources */,
@@ -649,8 +645,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -677,7 +671,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

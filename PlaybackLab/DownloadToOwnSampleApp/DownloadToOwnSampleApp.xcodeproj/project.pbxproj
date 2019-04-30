@@ -31,7 +31,6 @@
 		393A48D921CCF293005860F3 /* validate.js in Resources */ = {isa = PBXBuildFile; fileRef = 393A48C621CCF292005860F3 /* validate.js */; };
 		393A48DB21CCF2A1005860F3 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */; };
 		393A48DF21CD0479005860F3 /* OoyalaSkinSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */; };
-		39913A982271A3C100FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A972271A3C100FD61EC /* File.swift */; };
 		39D4607C221E94D8008C9FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4607A221E94D8008C9FC7 /* main.m */; };
 		39D46081221E94E3008C9FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D4607F221E94E3008C9FC7 /* LaunchScreen.storyboard */; };
 		39D46082221E94E3008C9FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D46080221E94E3008C9FC7 /* Main.storyboard */; };
@@ -69,7 +68,6 @@
 		393A48C621CCF292005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
-		39913A972271A3C100FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		39D4607A221E94D8008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39D4607B221E94D8008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39D4607F221E94E3008C9FC7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				39D4607A221E94D8008C9FC7 /* main.m */,
-				39913A972271A3C100FD61EC /* File.swift */,
 				39D4607B221E94D8008C9FC7 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -383,7 +380,6 @@
 				39D4609B221E9574008C9FC7 /* AppDelegate.m in Sources */,
 				39D46098221E94EF008C9FC7 /* PlayerViewController.m in Sources */,
 				39D46086221E94E8008C9FC7 /* AssetListViewController.m in Sources */,
-				39913A982271A3C100FD61EC /* File.swift in Sources */,
 				39D4607C221E94D8008C9FC7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,8 +511,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -536,7 +530,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.DownloadToOwnSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

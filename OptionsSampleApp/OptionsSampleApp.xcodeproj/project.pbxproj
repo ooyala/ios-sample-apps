@@ -29,7 +29,6 @@
 		0BF4FA011A6852290050A602 /* OptionsListTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9772BFB11A43C15E00B255C0 /* OptionsListTableViewController.h */; };
 		0BF4FA091A685F9E0050A602 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA051A685F9E0050A602 /* LaunchScreen.xib */; };
 		0BF4FA0A1A685F9E0050A602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF4FA071A685F9E0050A602 /* Main.storyboard */; };
-		39913A5C22718DD500FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A5B22718DD500FD61EC /* File.swift */; };
 		39E0254A21B7BFC7000CC6A8 /* IQConfigurationPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B50E24E1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.h */; };
 		39E0254B21B7BFCB000CC6A8 /* IQConfigurationPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E24F1DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m */; };
 		9772BF861A43B61500B255C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9772BF851A43B61500B255C0 /* main.m */; };
@@ -72,7 +71,6 @@
 		0BF4F9E11A6850CE0050A602 /* libOptionsSampleAppSource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOptionsSampleAppSource.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF4FA061A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0BF4FA081A685F9E0050A602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		39913A5B22718DD500FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		9772BF801A43B61500B255C0 /* OptionsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9772BF841A43B61500B255C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9772BF851A43B61500B255C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				9772BF841A43B61500B255C0 /* Info.plist */,
-				39913A5B22718DD500FD61EC /* File.swift */,
 				9772BF851A43B61500B255C0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -360,7 +357,6 @@
 				0B50E2511DE3B0A000817DD8 /* IQConfigurationPlayerViewController.m in Sources */,
 				9772BF861A43B61500B255C0 /* main.m in Sources */,
 				0BDC4C1B1AA5037D00576639 /* OptionsViewController.m in Sources */,
-				39913A5C22718DD500FD61EC /* File.swift in Sources */,
 				0BF0B0E71A671E4300026FDC /* SampleAppPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,8 +541,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -573,7 +567,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

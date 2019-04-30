@@ -60,7 +60,6 @@
 		0B94591D1AC33AA9000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457F01AC32C76000DD545 /* OoyalaSDK.framework */; };
 		0B98DDDC1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B98DDDA1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h */; };
 		0B98DDDD1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98DDDB1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m */; };
-		39913A4822718BD500FD61EC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39913A4722718BD500FD61EC /* File.swift */; };
 		39F5EBAF21B968D100BC7E1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F5EBAB21B968D100BC7E1A /* LaunchScreen.xib */; };
 		39F5EBB021B968D100BC7E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F5EBAD21B968D100BC7E1A /* Main.storyboard */; };
 		39F5EBB421B9690600BC7E1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5EBB221B9690600BC7E1A /* main.m */; };
@@ -133,7 +132,6 @@
 		0B9457F01AC32C76000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B98DDDA1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaPlayerTokenPlayerViewController.h; sourceTree = "<group>"; };
 		0B98DDDB1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaPlayerTokenPlayerViewController.m; sourceTree = "<group>"; };
-		39913A4722718BD500FD61EC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		39F5EBAC21B968D100BC7E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		39F5EBAE21B968D100BC7E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		39F5EBB221B9690600BC7E1A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				39F5EBB621B9693700BC7E1A /* Images.xcassets */,
-				39913A4722718BD500FD61EC /* File.swift */,
 				39F5EBB221B9690600BC7E1A /* main.m */,
 				39F5EBB321B9690600BC7E1A /* Info.plist */,
 			);
@@ -529,7 +526,6 @@
 				0B98DDDD1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m in Sources */,
 				0B24B8581AA6827200F131C3 /* MvpdLoginViewController.m in Sources */,
 				0B24B85A1AA6827200F131C3 /* MvpdTableViewController.m in Sources */,
-				39913A4822718BD500FD61EC /* File.swift in Sources */,
 				0B24B8721AA68ED100F131C3 /* AdobePassPlayerViewController.m in Sources */,
 				0B24B8621AA682B500F131C3 /* PlayerSelectionOption.m in Sources */,
 				39F5EBB421B9690600BC7E1A /* main.m in Sources */,
@@ -706,8 +702,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ContentProtectionSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -738,7 +732,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ContentProtectionSampleApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
