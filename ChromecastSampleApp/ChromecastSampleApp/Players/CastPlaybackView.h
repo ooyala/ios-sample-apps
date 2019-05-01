@@ -19,5 +19,10 @@
 - (void)configureCastPlaybackViewBasedOnItem:(OOVideo *)item
                                  displayName:(NSString *)displayName
                                displayStatus:(NSString *)displayStatus;
+- (void)updateTextView:(OOVideo *)item
+           displayName:(NSString *)displayName
+         displayStatus:(NSString *)displayStatus;
+- (void)playCompleted:(NSString *)displayName
+        displayStatus:(NSString *)displayStatus;
 
 @end

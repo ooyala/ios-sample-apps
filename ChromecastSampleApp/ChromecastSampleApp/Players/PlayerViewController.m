@@ -99,25 +99,26 @@
 
 - (void)notificationHandler:(NSNotification *)notification {
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
-    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:self.receiverDisplayName
-                                                  displayStatus:self.receiverDisplayStatus];
     // return here to avoid logging TimeChangedNotificiations for shorter logs
     return;
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
-    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:self.receiverDisplayName
-                                                  displayStatus:self.receiverDisplayStatus];
+    [self.castPlaybackView updateTextView:self.ooyalaPlayer.currentItem
+                              displayName:self.receiverDisplayName
+                            displayStatus:self.receiverDisplayStatus];
   }
   if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
     [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
                                                     displayName:self.receiverDisplayName
                                                   displayStatus:self.receiverDisplayStatus];
   }
-  if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification] && self.embedCode2) {
-    [self play:self.embedCode2];
-    self.embedCode2 = nil;
+  if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification]) {
+    [self.castPlaybackView playCompleted:self.receiverDisplayName
+                           displayStatus:self.receiverDisplayStatus];
+    if (self.embedCode2) {
+      [self play:self.embedCode2];
+      self.embedCode2 = nil;
+    }
   }
 
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
