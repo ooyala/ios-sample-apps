@@ -11,7 +11,7 @@
  *  The default value of |bitrate property|, causes the effective bitrate to
  *  be automatically selected.
  */
-extern const int kIMAAutodetectBitrate;
+extern const NSInteger kIMAAutodetectBitrate;
 
 #pragma mark IMAWebOpenerDelegate
 
@@ -75,7 +75,7 @@ extern const int kIMAAutodetectBitrate;
  *  Example: @[ @"video/mp4", @"application/x-mpegURL" ]
  *  The property is an empty array by default.
  */
-@property(nonatomic, copy) NSArray *mimeTypes;
+@property(nonatomic, copy) NSArray<NSString *> *mimeTypes;
 
 /**
  *  Maximum recommended bitrate. The value is in kbit/s.
@@ -106,7 +106,7 @@ extern const int kIMAAutodetectBitrate;
  *  This property may be ignored for AdSense/AdX ads. For valid values, see
  *  <a href="../Enums/IMAUiElementType.html">IMAUiElementType</a>.
  */
-@property(nonatomic, copy) NSArray *uiElements;
+@property(nonatomic, copy) NSArray<NSNumber *> *uiElements;
 
 /**
  *  Whether or not to disable ad UI for non TrueView ads. Check Ad.getDisableUi to check if this

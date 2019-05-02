@@ -27,9 +27,19 @@
 @property(nonatomic, copy, readonly) NSArray *companionSlots;
 
 /**
+ *  Initializes IMAAdDisplayContainer for rendering the ad and displaying the ad UI without any
+ *  companion slots.
+ *
+ *  @param adContainer    the UIView where the ad will be rendered. Fills the view's bounds.
+ *
+ *  @return the IMAAdDisplayContainer instance
+ */
+- (instancetype)initWithAdContainer:(UIView *)adContainer;
+
+/**
  *  Initializes IMAAdDisplayContainer for rendering the ad and displaying the ad UI.
  *
- *  @param adContainer    the UIView where the ad will be rendered. Fills the view's bounds
+ *  @param adContainer    the UIView where the ad will be rendered. Fills the view's bounds.
  *  @param companionSlots the array of IMACompanionAdSlots. Can be nil or empty.
  *
  *  @return the IMAAdDisplayContainer instance
