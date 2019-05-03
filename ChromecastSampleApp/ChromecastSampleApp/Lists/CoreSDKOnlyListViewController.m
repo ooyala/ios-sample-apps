@@ -25,11 +25,6 @@
   self.title = @"OoyalaSDK assets";
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
-  [self dismissMiniController];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   if (self.castManager.isMiniControllerInteractionAvailable) {
@@ -37,6 +32,11 @@
   } else {
     [self dismissMiniController];
   }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  [self dismissMiniController];
 }
 
 #pragma mark - Table View

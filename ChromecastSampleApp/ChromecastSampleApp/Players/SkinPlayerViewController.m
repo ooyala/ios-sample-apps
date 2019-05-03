@@ -14,12 +14,14 @@
 
 #import "ChromecastPlayerSelectionOption.h"
 #import "OOCastManagerFetcher.h"
+#import "SkinCastPlaybackView.h"
 
 @interface SkinPlayerViewController ()
 
 @property (nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (nonatomic) IBOutlet UIView *videoView;
 @property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic) SkinCastPlaybackView *castPlaybackView;
 @property (nonatomic) OOCastManager *castManager;
 
 @end
@@ -71,6 +73,9 @@
   self.castManager.notifyDelegate = self.skinController.castNotifyHandler;
   [self.skinController setCastManageableHandler:self.castManager];
   
+  self.castPlaybackView = [[SkinCastPlaybackView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+  [self.castManager setCastModeVideoView:self.castPlaybackView];
+
   // Add Chromecast button
   UIBarButtonItem *chromecastItem = [[UIBarButtonItem alloc] initWithCustomView:self.castManager.castButton];
   self.navigationBar.rightBarButtonItem = chromecastItem;
@@ -82,6 +87,12 @@
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
+    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.skinController.player.currentItem];
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
+    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.skinController.player.currentItem];
   }
 
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f",

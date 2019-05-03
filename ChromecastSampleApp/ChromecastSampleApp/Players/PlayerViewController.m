@@ -37,6 +37,8 @@
 
 @implementation PlayerViewController
 
+#pragma mark - Life cycle
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   /*
@@ -92,6 +94,36 @@
   [self play:self.embedCode];
 }
 
+#pragma mark - OOCastManagerDelegate
+
+- (void)castManagerDidEnterCastMode:(OOCastManager *)manager {
+  [self.ooyalaPlayerViewController setFullScreenButtonShowing:NO];
+  [self.ooyalaPlayerViewController setVolumeButtonShowing:YES];
+}
+
+- (void)castManagerDidExitCastMode:(OOCastManager *)manager {
+  [self.ooyalaPlayerViewController setVolumeButtonShowing:NO];
+  [self.ooyalaPlayerViewController setFullScreenButtonShowing:YES];
+}
+
+- (void)castManagerDidDisconnect:(OOCastManager *)manager {
+}
+
+- (void)castManager:(nonnull OOCastManager *)manager
+didFailToStartSessionWithError:(nonnull NSError *)error {
+}
+
+- (void)castManager:(nonnull OOCastManager *)manager
+didEndSessionWithError:(nonnull NSError *)error {
+}
+
+- (void)castManager:(nonnull OOCastManager *)manager
+ castRequestWithtId:(NSInteger)requestId
+   didFailWithError:(nonnull GCKError *)error {
+}
+
+#pragma mark - Private methods
+
 - (void)play:(NSString *)embedCode {
   [self.ooyalaPlayer setEmbedCode:embedCode];
   [self.ooyalaPlayer play];
@@ -120,39 +152,11 @@
       self.embedCode2 = nil;
     }
   }
-
+  
   NSLog(@"Notification Received: %@. state: %@. playhead: %f",
         [notification name],
         [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime]);
-}
-
-#pragma mark - OOCastManagerDelegate
-
-- (void)castManagerDidEnterCastMode:(OOCastManager *)manager {
-  [self.ooyalaPlayerViewController setFullScreenButtonShowing:NO];
-  [self.ooyalaPlayerViewController setVolumeButtonShowing:YES];
-}
-
-- (void)castManagerDidExitCastMode:(OOCastManager *)manager {
-  [self.ooyalaPlayerViewController setVolumeButtonShowing:NO];
-  [self.ooyalaPlayerViewController setFullScreenButtonShowing:YES];
-}
-
-- (void)castManagerDidDisconnect:(OOCastManager *)manager {
-}
-
-- (void)castManager:(nonnull OOCastManager *)manager
-didFailToStartSessionWithError:(nonnull NSError *)error {
-}
-
-- (void)castManager:(nonnull OOCastManager *)manager
-didEndSessionWithError:(nonnull NSError *)error {
-}
-
-- (void)castManager:(nonnull OOCastManager *)manager
- castRequestWithtId:(NSInteger)requestId
-   didFailWithError:(nonnull GCKError *)error {
 }
 
 # pragma mark -
@@ -191,6 +195,8 @@ didEndSessionWithError:(nonnull NSError *)error {
   }
   return status;
 }
+
+#pragma mark - OOEmbedTokenGenerator
 
 /*
  * Get the Ooyala Player Token to play the embed code.

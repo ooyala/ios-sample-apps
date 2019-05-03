@@ -6,7 +6,7 @@
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSDK/OOVideo.h>
 #import "CastPlaybackView.h"
 #import "Utils.h"
 

@@ -6,8 +6,7 @@
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 @class OOVideo;
 
 @interface CastPlaybackView : UIImageView
