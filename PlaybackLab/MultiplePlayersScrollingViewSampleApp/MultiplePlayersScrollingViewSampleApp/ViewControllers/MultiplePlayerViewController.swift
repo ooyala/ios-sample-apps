@@ -149,13 +149,18 @@ class MultiplePlayerViewController: UIViewController {
   @objc
   func runTimedCode() {
     var indexPath = IndexPath(item: 0, section: 0)
-    var distTemp: CGFloat = CGFloat.greatestFiniteMagnitude
-    for cell in collectionView.visibleCells {
-      let t = collectionView.convert(cell.frame, to: collectionView.superview)
-      let dist = distance(from: t, to: collectionView.contentOffset);
-      if dist <= distTemp {
+
+    let visibleCells = collectionView.visibleCells
+    var tmpRatio: CGFloat = 0.0
+    for cell in visibleCells {
+      let cellRect = collectionView.convert(cell.frame, to: collectionView.superview)
+      let intersect = collectionView.frame.intersection(cellRect)
+      let visibleHeight = intersect.height
+      let cellHeight = cellRect.height
+      let ratio = visibleHeight / cellHeight
+      if ratio > tmpRatio {
         indexPath = collectionView.indexPath(for: cell)!
-        distTemp = dist
+        tmpRatio = ratio
       }
     }
     
@@ -168,11 +173,8 @@ class MultiplePlayerViewController: UIViewController {
     let playerSelectionOption = options[currentItem]
     
     DispatchQueue.main.async {
-      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
-      
       if Thread.isMainThread {
         self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
-        
       }
     }
   }
@@ -203,11 +205,6 @@ class MultiplePlayerViewController: UIViewController {
     if state == .ready {
       sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
     }
-  }
-  
-  func distance(from rect: CGRect, to point: CGPoint) -> CGFloat {
-    let dy = max(rect.minY - point.y, point.y - rect.maxY, 0)
-    return dy
   }
   
 }
