@@ -134,7 +134,9 @@
                             <outlet property="delegate" destination="vOE-va-CyG" id="lKS-xr-124"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Ah2-qu-DwJ"/>
                     <connections>
+                        <outlet property="navigationBar" destination="Ah2-qu-DwJ" id="EkP-fi-7b0"/>
                         <segue destination="387-ow-5RS" kind="show" identifier="play" id="a0e-yo-3Cg"/>
                     </connections>
                 </tableViewController>
@@ -164,7 +166,9 @@
                             <outlet property="delegate" destination="ecn-e2-b0j" id="Mdn-bJ-Re9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="BU3-BZ-aV9"/>
                     <connections>
+                        <outlet property="navigationBar" destination="BU3-BZ-aV9" id="SSP-PQ-od3"/>
                         <segue destination="RoY-mk-M9d" kind="show" identifier="play" id="WdC-mo-JJ5"/>
                     </connections>
                 </tableViewController>

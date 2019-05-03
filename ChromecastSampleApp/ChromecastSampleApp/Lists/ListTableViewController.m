@@ -13,8 +13,6 @@
 
 @interface ListTableViewController ()
 
-@property (nonatomic) UINavigationItem *navigationBar;
-
 @end
 
 @implementation ListTableViewController
