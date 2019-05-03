@@ -46,6 +46,7 @@
 		39AE421A21772F7200F1C084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AE421321772F7200F1C084 /* Images.xcassets */; };
 		5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B755B1C472C4200371A9E /* CastPlaybackView.m */; };
 		5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */; };
+		B8955C61227B826B0008569B /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8955C60227B826B0008569B /* ListTableViewController.m */; };
 		C1F5DF63227544880052E8FF /* GoogleCast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39913A3E22718B9200FD61EC /* GoogleCast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,8 @@
 		5E5B755B1C472C4200371A9E /* CastPlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastPlaybackView.m; sourceTree = "<group>"; };
 		5EA5A7E71B6C07DC008C691C /* OOCastManagerFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OOCastManagerFetcher.h; sourceTree = "<group>"; };
 		5EA5A7E81B6C07DC008C691C /* OOCastManagerFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OOCastManagerFetcher.m; sourceTree = "<group>"; };
+		B8955C5F227B826B0008569B /* ListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		B8955C60227B826B0008569B /* ListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		FF21F07619CB5ABC00FE9D07 /* ChromecastSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromecastSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +160,8 @@
 			children = (
 				0B1AFBCE1B0C09BB00347DFA /* CoreSDKOnlyListViewController.h */,
 				0B1AFBCF1B0C09BB00347DFA /* CoreSDKOnlyListViewController.m */,
+				B8955C5F227B826B0008569B /* ListTableViewController.h */,
+				B8955C60227B826B0008569B /* ListTableViewController.m */,
 				39315E5122537C3400A7A8C7 /* SkinSDKListViewController.h */,
 				39315E5222537C6B00A7A8C7 /* SkinSDKListViewController.m */,
 			);
@@ -417,6 +422,7 @@
 				0B1AFBDA1B0C09BB00347DFA /* AppDelegate.m in Sources */,
 				5EA5A7E91B6C07DC008C691C /* OOCastManagerFetcher.m in Sources */,
 				5E5B755C1C472C4200371A9E /* CastPlaybackView.m in Sources */,
+				B8955C61227B826B0008569B /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

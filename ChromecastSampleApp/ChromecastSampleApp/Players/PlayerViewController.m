@@ -16,7 +16,6 @@
 
 @property (nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (nonatomic) IBOutlet UIView *videoView;
-@property (nonatomic) IBOutlet UIView *mediaDetailView;
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
 @property (nonatomic) OOCastManager *castManager;
@@ -53,6 +52,10 @@
   self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
   
+  // Add Chromecast button
+  UIBarButtonItem *chromecastItem = [[UIBarButtonItem alloc] initWithCustomView:self.castManager.castButton];
+  self.navigationBar.rightBarButtonItem = chromecastItem;
+  
   // Add custom parameters
   NSDictionary *customParams = @{@"userName":      @"User",
                                  @"initialVolume": @"1",
@@ -60,9 +63,6 @@
                                  @"title":         self.mediaInfo.title,
                                  @"description":   @"New description"};
   self.castManager.additionalInitParams = customParams;
-  
-  UIBarButtonItem *rightbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
-  self.navigationBar.rightBarButtonItem = rightbutton;
   
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
   self.pcode = self.mediaInfo.pcode;

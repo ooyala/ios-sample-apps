@@ -17,6 +17,7 @@
 
 @interface SkinPlayerViewController ()
 
+@property (nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (nonatomic) IBOutlet UIView *videoView;
 @property (nonatomic) OOSkinViewController *skinController;
 @property (nonatomic) OOCastManager *castManager;
@@ -29,9 +30,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
-  self.title = self.mediaInfo.title;
-  NSLog(@"%@s", self.mediaInfo.domain);
 
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.mediaInfo.pcode
@@ -67,10 +65,15 @@
                                            object:ooyalaPlayer];
   [ooyalaPlayer setEmbedCode:self.mediaInfo.embedCode];
 
-  _castManager = [OOCastManagerFetcher fetchCastManager];
+  self.castManager = [OOCastManagerFetcher fetchCastManager];
+  
   [ooyalaPlayer initCastManager:self.castManager];
   self.castManager.notifyDelegate = self.skinController.castNotifyHandler;
   [self.skinController setCastManageableHandler:self.castManager];
+  
+  // Add Chromecast button
+  UIBarButtonItem *chromecastItem = [[UIBarButtonItem alloc] initWithCustomView:self.castManager.castButton];
+  self.navigationBar.rightBarButtonItem = chromecastItem;
 }
 
 #pragma mark - Private functions
