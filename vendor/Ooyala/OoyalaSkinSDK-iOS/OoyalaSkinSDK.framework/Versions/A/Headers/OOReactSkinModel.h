@@ -76,7 +76,6 @@ extern NSString * _Nonnull const isPipButtonVisibleKey;
 - (void)handleCastDeviceSelected:(nonnull NSString *)deviceId;
 - (void)handleCastDisconnect;
 - (void)handleSwitchPrevious;
-- (void)handleSwitchNext;
 - (void)onVisibilityControlsChanged:(BOOL)isVisible;
 
 @end
