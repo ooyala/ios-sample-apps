@@ -207,11 +207,6 @@ class MultiplePlayerViewController: UIViewController {
     }
   }
   
-  func distance(from rect: CGRect, to point: CGPoint) -> CGFloat {
-    let dy = max(rect.minY - point.y, point.y - rect.maxY, 0)
-    return dy
-  }
-  
 }
 
 extension MultiplePlayerViewController: UICollectionViewDelegate {
