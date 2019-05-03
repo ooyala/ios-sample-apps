@@ -73,7 +73,7 @@ class MultiplePlayerViewController: UIViewController {
       player = OOOoyalaPlayer(pcode: playerSelectionOption.pcode,
                               domain: playerSelectionOption.domain)
     }
-
+    
     player.actionAtEnd = .pause
     return player
   }()
@@ -99,10 +99,8 @@ class MultiplePlayerViewController: UIViewController {
   
   var playerTimer: Timer!
   
-  var lastVelocityYSign = 0
+  var currentItem = -1
   
-  var currentItem = 0
-
   override func loadView() {
     super.loadView()
     
@@ -129,7 +127,7 @@ class MultiplePlayerViewController: UIViewController {
                                            selector: #selector(currentItemChanged),
                                            name: NSNotification.Name.OOOoyalaPlayerCurrentItemChanged,
                                            object: sharedPlayer.player)
-
+    
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(playerStateHandler(_:)),
                                            name: NSNotification.Name.OOOoyalaPlayerStateChanged,
@@ -150,38 +148,33 @@ class MultiplePlayerViewController: UIViewController {
   
   @objc
   func runTimedCode() {
-    var indexPath = IndexPath(row: 0, section: 0)
-
-    if let embedCode = sharedPlayer.player.currentItem?.embedCode,
-      let index = options.firstIndex(where: { $0.embedCode == embedCode })  {
-      let newIndex = (options.count + index - lastVelocityYSign) % options.count
-      indexPath = IndexPath(row: newIndex, section: 0)
+    var indexPath = IndexPath(item: 0, section: 0)
+    var distTemp: CGFloat = CGFloat.greatestFiniteMagnitude
+    for cell in collectionView.visibleCells {
+      let t = collectionView.convert(cell.frame, to: collectionView.superview)
+      let dist = distance(from: t, to: collectionView.contentOffset);
+      if dist <= distTemp {
+        indexPath = collectionView.indexPath(for: cell)!
+        distTemp = dist
+      }
     }
     
-    collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+    if currentItem == indexPath.row {
+      self.sharedPlayer.player.play()
+      return
+    }
     
     currentItem = indexPath.row
     let playerSelectionOption = options[currentItem]
     
     DispatchQueue.main.async {
-      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else {
-        self.initTimer()
-        return
-      }
-      
-      cell.videoView.addSubview(self.sharedPlayer.view)
-      NSLayoutConstraint.activate([
-        self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
-        self.sharedPlayer.view.bottomAnchor.constraint(equalTo: cell.videoView.bottomAnchor),
-        self.sharedPlayer.view.trailingAnchor.constraint(equalTo: cell.videoView.trailingAnchor),
-        self.sharedPlayer.view.leadingAnchor.constraint(equalTo: cell.videoView.leadingAnchor),
-        ])
+      guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
       
       if Thread.isMainThread {
         self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
+        
       }
     }
-    
   }
   
   @objc
@@ -191,10 +184,18 @@ class MultiplePlayerViewController: UIViewController {
     let indexPath = IndexPath(row: index, section: 0)
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
+      
       cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem.title)!)"
+      cell.videoView.addSubview(self.sharedPlayer.view)
+      NSLayoutConstraint.activate([
+        self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
+        self.sharedPlayer.view.bottomAnchor.constraint(equalTo: cell.videoView.bottomAnchor),
+        self.sharedPlayer.view.trailingAnchor.constraint(equalTo: cell.videoView.trailingAnchor),
+        self.sharedPlayer.view.leadingAnchor.constraint(equalTo: cell.videoView.leadingAnchor),
+        ])
     }
   }
-
+  
   @objc
   func playerStateHandler(_ notification: Notification) {
     let state = sharedPlayer.player.state()
@@ -203,20 +204,15 @@ class MultiplePlayerViewController: UIViewController {
       sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
     }
   }
-
+  
+  func distance(from rect: CGRect, to point: CGPoint) -> CGFloat {
+    let dy = max(rect.minY - point.y, point.y - rect.maxY, 0)
+    return dy
+  }
+  
 }
 
 extension MultiplePlayerViewController: UICollectionViewDelegate {
-  
-  func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    let currentVelocityY = scrollView.panGestureRecognizer.velocity(in: scrollView.superview).y
-    let currentVelocityYSign = Int(currentVelocityY).signum()
-    
-    if currentVelocityYSign != lastVelocityYSign &&
-      currentVelocityYSign != 0 {
-      lastVelocityYSign = currentVelocityYSign
-    }
-  }
   
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
     guard let currentItem = sharedPlayer.player.currentItem,
