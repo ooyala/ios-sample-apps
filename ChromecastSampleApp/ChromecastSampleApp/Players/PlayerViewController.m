@@ -16,7 +16,6 @@
 
 @property (nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (nonatomic) IBOutlet UIView *videoView;
-@property (nonatomic) IBOutlet UIView *mediaDetailView;
 @property (nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 @property (nonatomic) OOOoyalaPlayer *ooyalaPlayer;
 @property (nonatomic) OOCastManager *castManager;
@@ -38,6 +37,8 @@
 
 @implementation PlayerViewController
 
+#pragma mark - Life cycle
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   /*
@@ -53,6 +54,10 @@
   self.castManager = [OOCastManagerFetcher fetchCastManager];
   self.castManager.delegate = self;
   
+  // Add Chromecast button
+  UIBarButtonItem *chromecastItem = [[UIBarButtonItem alloc] initWithCustomView:self.castManager.castButton];
+  self.navigationBar.rightBarButtonItem = chromecastItem;
+  
   // Add custom parameters
   NSDictionary *customParams = @{@"userName":      @"User",
                                  @"initialVolume": @"1",
@@ -60,9 +65,6 @@
                                  @"title":         self.mediaInfo.title,
                                  @"description":   @"New description"};
   self.castManager.additionalInitParams = customParams;
-  
-  UIBarButtonItem *rightbutton = [[UIBarButtonItem alloc] initWithCustomView:[self.castManager castButton]];
-  self.navigationBar.rightBarButtonItem = rightbutton;
   
   // Fetch content info and load ooyalaPlayerViewController and ooyalaPlayer
   self.pcode = self.mediaInfo.pcode;
@@ -92,40 +94,6 @@
   [self play:self.embedCode];
 }
 
-- (void)play:(NSString *)embedCode {
-  [self.ooyalaPlayer setEmbedCode:embedCode];
-  [self.ooyalaPlayer play];
-}
-
-- (void)notificationHandler:(NSNotification *)notification {
-  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
-    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:self.receiverDisplayName
-                                                  displayStatus:self.receiverDisplayStatus];
-    // return here to avoid logging TimeChangedNotificiations for shorter logs
-    return;
-  }
-  if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
-    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:self.receiverDisplayName
-                                                  displayStatus:self.receiverDisplayStatus];
-  }
-  if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
-    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
-                                                    displayName:self.receiverDisplayName
-                                                  displayStatus:self.receiverDisplayStatus];
-  }
-  if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification] && self.embedCode2) {
-    [self play:self.embedCode2];
-    self.embedCode2 = nil;
-  }
-
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
-        [notification name],
-        [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
-        [self.ooyalaPlayerViewController.player playheadTime]);
-}
-
 #pragma mark - OOCastManagerDelegate
 
 - (void)castManagerDidEnterCastMode:(OOCastManager *)manager {
@@ -152,6 +120,43 @@ didEndSessionWithError:(nonnull NSError *)error {
 - (void)castManager:(nonnull OOCastManager *)manager
  castRequestWithtId:(NSInteger)requestId
    didFailWithError:(nonnull GCKError *)error {
+}
+
+#pragma mark - Private methods
+
+- (void)play:(NSString *)embedCode {
+  [self.ooyalaPlayer setEmbedCode:embedCode];
+  [self.ooyalaPlayer play];
+}
+
+- (void)notificationHandler:(NSNotification *)notification {
+  if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
+    // return here to avoid logging TimeChangedNotificiations for shorter logs
+    return;
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
+    [self.castPlaybackView updateTextView:self.ooyalaPlayer.currentItem
+                              displayName:self.receiverDisplayName
+                            displayStatus:self.receiverDisplayStatus];
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
+    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.ooyalaPlayer.currentItem
+                                                    displayName:self.receiverDisplayName
+                                                  displayStatus:self.receiverDisplayStatus];
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerPlayCompletedNotification]) {
+    [self.castPlaybackView playCompleted:self.receiverDisplayName
+                           displayStatus:self.receiverDisplayStatus];
+    if (self.embedCode2) {
+      [self play:self.embedCode2];
+      self.embedCode2 = nil;
+    }
+  }
+  
+  NSLog(@"Notification Received: %@. state: %@. playhead: %f",
+        [notification name],
+        [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
+        [self.ooyalaPlayerViewController.player playheadTime]);
 }
 
 # pragma mark -
@@ -190,6 +195,8 @@ didEndSessionWithError:(nonnull NSError *)error {
   }
   return status;
 }
+
+#pragma mark - OOEmbedTokenGenerator
 
 /*
  * Get the Ooyala Player Token to play the embed code.

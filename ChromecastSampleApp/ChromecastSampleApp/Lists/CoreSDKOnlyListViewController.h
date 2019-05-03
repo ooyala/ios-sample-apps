@@ -8,9 +8,8 @@
 
 @import UIKit;
 
-#import <OoyalaCastSDK/OOCastManager.h>
-#import <OoyalaCastSDK/OOCastMiniControllerView.h>
+#import "ListTableViewController.h"
 
-@interface CoreSDKOnlyListViewController : UITableViewController <OOCastManagerDelegate, OOCastMiniControllerDelegate>
+@interface CoreSDKOnlyListViewController : ListTableViewController <OOCastMiniControllerDelegate>
 
 @end

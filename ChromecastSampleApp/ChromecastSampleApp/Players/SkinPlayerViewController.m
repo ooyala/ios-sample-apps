@@ -14,11 +14,14 @@
 
 #import "ChromecastPlayerSelectionOption.h"
 #import "OOCastManagerFetcher.h"
+#import "SkinCastPlaybackView.h"
 
 @interface SkinPlayerViewController ()
 
+@property (nonatomic) IBOutlet UINavigationItem *navigationBar;
 @property (nonatomic) IBOutlet UIView *videoView;
 @property (nonatomic) OOSkinViewController *skinController;
+@property (nonatomic) SkinCastPlaybackView *castPlaybackView;
 @property (nonatomic) OOCastManager *castManager;
 
 @end
@@ -29,9 +32,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
-  self.title = self.mediaInfo.title;
-  NSLog(@"%@s", self.mediaInfo.domain);
 
   OOOptions *options = [OOOptions new];
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.mediaInfo.pcode
@@ -67,10 +67,18 @@
                                            object:ooyalaPlayer];
   [ooyalaPlayer setEmbedCode:self.mediaInfo.embedCode];
 
-  _castManager = [OOCastManagerFetcher fetchCastManager];
+  self.castManager = [OOCastManagerFetcher fetchCastManager];
+  
   [ooyalaPlayer initCastManager:self.castManager];
   self.castManager.notifyDelegate = self.skinController.castNotifyHandler;
   [self.skinController setCastManageableHandler:self.castManager];
+  
+  self.castPlaybackView = [[SkinCastPlaybackView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+  [self.castManager setCastModeVideoView:self.castPlaybackView];
+
+  // Add Chromecast button
+  UIBarButtonItem *chromecastItem = [[UIBarButtonItem alloc] initWithCustomView:self.castManager.castButton];
+  self.navigationBar.rightBarButtonItem = chromecastItem;
 }
 
 #pragma mark - Private functions
@@ -79,6 +87,12 @@
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) {
+    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.skinController.player.currentItem];
+  }
+  if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
+    [self.castPlaybackView configureCastPlaybackViewBasedOnItem:self.skinController.player.currentItem];
   }
 
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f",
