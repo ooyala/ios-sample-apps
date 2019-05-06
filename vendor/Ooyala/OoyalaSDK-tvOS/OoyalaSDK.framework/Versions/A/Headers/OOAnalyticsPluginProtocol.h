@@ -59,7 +59,7 @@
 /**
  Called whenever the user or application calls @c OoyalaPlayer.play()
  */
-- (void)reportPlayRequested;
+- (void)reportPlayRequested:(NSString *)autoplay;
 
 /**
  Called whenever the user seeks the video
