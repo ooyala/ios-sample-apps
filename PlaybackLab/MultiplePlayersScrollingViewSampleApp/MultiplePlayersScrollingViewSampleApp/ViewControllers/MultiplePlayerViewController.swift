@@ -74,7 +74,7 @@ class MultiplePlayerViewController: UIViewController {
                               domain: playerSelectionOption.domain)
     }
     
-    player.actionAtEnd = .pause
+    player.actionAtEnd = .reset
     return player
   }()
   
@@ -131,6 +131,11 @@ class MultiplePlayerViewController: UIViewController {
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(playerStateHandler(_:)),
                                            name: NSNotification.Name.OOOoyalaPlayerStateChanged,
+                                           object: sharedPlayer.player)
+
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(playerSeekCompleted(_:)),
+                                           name: NSNotification.Name.OOOoyalaPlayerSeekCompleted,
                                            object: sharedPlayer.player)
   }
   
@@ -202,9 +207,25 @@ class MultiplePlayerViewController: UIViewController {
   func playerStateHandler(_ notification: Notification) {
     let state = sharedPlayer.player.state()
     let playerSelectionOption = options[currentItem]
-    if state == .ready {
+    
+    switch (state) {
+    case .ready:
       sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
+      break
+    case .completed:
+      playerSelectionOption.playheadTime = 0.0
+      break
+    default:
+      break
     }
+  }
+  
+  @objc
+  func playerSeekCompleted(_ notification: Notification) {
+    let playerSelectionOption = options[currentItem]
+    guard let userInfo = notification.userInfo,
+      let seekInfo = userInfo["seekInfo"] as? OOSeekInfo else { return }
+    playerSelectionOption.playheadTime = seekInfo.seekEnd
   }
   
 }
