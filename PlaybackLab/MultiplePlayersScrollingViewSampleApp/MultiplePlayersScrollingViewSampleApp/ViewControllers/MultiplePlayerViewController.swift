@@ -9,6 +9,8 @@ import UIKit
 
 class MultiplePlayerViewController: UIViewController {
   
+  // MARK: - Properties
+
   let options = OptionDataSource.options
   
   private lazy var titleLabel: UILabel = {
@@ -79,9 +81,11 @@ class MultiplePlayerViewController: UIViewController {
   }()
   
   private lazy var sharedPlayer: OOSkinViewController = {
-    let jsCodeLocation = Bundle.main.url(forResource: "main",
-                                         withExtension: "jsbundle")!
-    
+    guard let jsCodeLocation = Bundle.main.url(forResource: "main",
+                                               withExtension: "jsbundle") else { fatalError() }
+
+    // guard let jsCodeLocation = URL(string: "http://localhost:8081/index.ios.bundle?platform=ios") else { fatalError() }
+
     let skinOptions = OOSkinOptions(discoveryOptions: nil,
                                     jsCodeLocation: jsCodeLocation,
                                     configFileName: "skin",
@@ -101,6 +105,8 @@ class MultiplePlayerViewController: UIViewController {
   
   var currentItem = -1
   
+  // MARK: - Life cycle
+
   override func loadView() {
     super.loadView()
     
@@ -122,6 +128,8 @@ class MultiplePlayerViewController: UIViewController {
     initTimer()
   }
   
+  // MARK: - Private methods
+
   func addObservers() {
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(currentItemChanged),
@@ -137,6 +145,11 @@ class MultiplePlayerViewController: UIViewController {
                                            selector: #selector(playerSeekCompleted(_:)),
                                            name: NSNotification.Name.OOOoyalaPlayerSeekCompleted,
                                            object: sharedPlayer.player)
+
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(fullscreenChanged(_:)),
+                                           name: NSNotification.Name.OOSkinViewControllerFullscreenChanged,
+                                           object: sharedPlayer)
   }
   
   func initTimer() {
@@ -154,7 +167,6 @@ class MultiplePlayerViewController: UIViewController {
   @objc
   func runTimedCode() {
     var indexPath = IndexPath(item: 0, section: 0)
-
     let visibleCells = collectionView.visibleCells
     var tmpRatio: CGFloat = 0.0
     for cell in visibleCells {
@@ -184,15 +196,11 @@ class MultiplePlayerViewController: UIViewController {
     }
   }
   
-  @objc
-  func currentItemChanged() {
-    guard let currentItem = sharedPlayer.player.currentItem,
-      let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode }) else { return }
-    let indexPath = IndexPath(row: index, section: 0)
+  func displayPlayerOnCell(_ indexPath: IndexPath) {
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
-      
       cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem.title)!)"
+      cell.videoView.subviews.forEach({ $0.removeFromSuperview() })
       cell.videoView.addSubview(self.sharedPlayer.view)
       NSLayoutConstraint.activate([
         self.sharedPlayer.view.topAnchor.constraint(equalTo: cell.videoView.topAnchor),
@@ -203,6 +211,16 @@ class MultiplePlayerViewController: UIViewController {
     }
   }
   
+  // MARK: - Observer handlers
+
+  @objc
+  func currentItemChanged() {
+    guard let currentItem = sharedPlayer.player.currentItem,
+      let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode }) else { return }
+    let indexPath = IndexPath(row: index, section: 0)
+    displayPlayerOnCell(indexPath)
+  }
+
   @objc
   func playerStateHandler(_ notification: Notification) {
     let state = sharedPlayer.player.state()
@@ -228,7 +246,23 @@ class MultiplePlayerViewController: UIViewController {
     playerSelectionOption.playheadTime = seekInfo.seekEnd
   }
   
+  @objc
+  func fullscreenChanged(_ notification: Notification) {
+    guard let userInfo = notification.userInfo,
+      let isFullscreen = userInfo["fullscreen"] as? Bool else { return }
+
+    if !isFullscreen {
+      let indexPath = IndexPath(row: currentItem, section: 0)
+      collectionView.scrollToItem(at: indexPath,
+                                  at: .centeredVertically,
+                                  animated: false)
+      displayPlayerOnCell(indexPath)
+    }
+  }
+
 }
+
+// MARK: - UICollectionViewDelegate
 
 extension MultiplePlayerViewController: UICollectionViewDelegate {
   
@@ -247,6 +281,8 @@ extension MultiplePlayerViewController: UICollectionViewDelegate {
   
 }
 
+// MARK: - UICollectionViewDataSource
+
 extension MultiplePlayerViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -260,6 +296,8 @@ extension MultiplePlayerViewController: UICollectionViewDataSource {
   }
   
 }
+
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension MultiplePlayerViewController: UICollectionViewDelegateFlowLayout {
   
