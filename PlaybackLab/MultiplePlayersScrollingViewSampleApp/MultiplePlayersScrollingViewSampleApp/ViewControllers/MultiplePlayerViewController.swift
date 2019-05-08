@@ -240,9 +240,9 @@ class MultiplePlayerViewController: UIViewController {
   
   @objc
   func playerSeekCompleted(_ notification: Notification) {
-    let playerSelectionOption = options[currentItem]
     guard let userInfo = notification.userInfo,
       let seekInfo = userInfo["seekInfo"] as? OOSeekInfo else { return }
+    let playerSelectionOption = options[currentItem]
     playerSelectionOption.playheadTime = seekInfo.seekEnd
   }
   
