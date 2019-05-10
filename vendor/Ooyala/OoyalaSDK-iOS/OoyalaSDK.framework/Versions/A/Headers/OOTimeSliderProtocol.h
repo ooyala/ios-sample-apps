@@ -8,7 +8,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "OOOoyalaPlayer.h" // Neef for visible OOUIProgressSliderMode enum
 
-
 @protocol OOTimeSliderProtocol
 
 - (void)setDuration:(float)duration;

@@ -3,7 +3,7 @@
  * @brief      OOVideo
  * @details    OOVideo.h in OoyalaSDK
  * @date       11/21/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOPlayableItem.h"
@@ -39,23 +39,23 @@
 
 /**
  * Initialize a OOVideo using the specified data (subclasses should override this)
- * @param[in] unbundledVideo defines the streams and ads to use initializing the OOVideo.
+ * @param unbundledVideo defines the streams and ads to use initializing the OOVideo.
  */
 - (instancetype)initWithUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
- * @param[in] theStreams NSArray containing OOStreams.
- * @param[in] theAds NSArray containing OOManagedAdSpots.
+ * @param theStreams NSArray containing OOStreams.
+ * @param theAds NSArray containing OOManagedAdSpots.
  */
 - (instancetype)initWithUnbundledStreams:(NSArray*)theStreams ads:(NSArray*)theAds;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
- * @param[in] data the NSDictionary containing the data to use to initialize this OOVideo
- * @param[in] theEmbedCode the embed code to fetch from the dictionary
- * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
- * @returns the initialized OOVideo
+ * @param data the NSDictionary containing the data to use to initialize this OOVideo
+ * @param theEmbedCode the embed code to fetch from the dictionary
+ * @param theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
+ * @return the initialized OOVideo
  */
 - (instancetype)initWithDictionary:(NSDictionary *)data
                          embedCode:(NSString *)theEmbedCode
@@ -63,11 +63,11 @@
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
- * @param[in] data the NSDictionary containing the data to use to initialize this OOVideo
- * @param[in] theEmbedCode the embed code to fetch from the dictionary
- * @param[in] theParent the parent OOChannel of this OOVideo
- * @param[in] theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
- * @returns the initialized OOVideo
+ * @param data the NSDictionary containing the data to use to initialize this OOVideo
+ * @param theEmbedCode the embed code to fetch from the dictionary
+ * @param theParent the parent OOChannel of this OOVideo
+ * @param theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
+ * @return the initialized OOVideo
  */
 - (instancetype)initWithDictionary:(NSDictionary *)data
                          embedCode:(NSString *)theEmbedCode
@@ -76,47 +76,47 @@
 
 /** @internal
  * Update the OOVideo using the specified data (subclasses should override and call this)
- * @param[in] data the NSDictionary containing the data to use to update this OOVideo
- * @returns a OOReturnState based on if the data matched or not (or parsing failed)
+ * @param data the NSDictionary containing the data to use to update this OOVideo
+ * @return a OOReturnState based on if the data matched or not (or parsing failed)
  */
 - (OOReturnState)updateWithDictionary:(NSDictionary *)data;
 
 /** @internal
  * Update the OOVideo high availability parameters using the specified data
- * @param[in] data the NSDictionary containing the data to use to update this OOVideo
- * @returns a BOOL value based on if the data matched or not (or parsing failed)
+ * @param data the NSDictionary containing the data to use to update this OOVideo
+ * @return a BOOL value based on if the data matched or not (or parsing failed)
  */
 - (BOOL)updateHighAvailabilityWithDictionary:(NSDictionary *)data;
 
 /**
  * Get the first OOVideo for this OOVideo, which is this OOVideo
- * @returns self
+ * @return self
  */
 - (OOVideo *)firstVideo;
 
 /**
  * Get the next OOVideo for this OOVideo from the parent
- * @returns nil if this is the last OOVideo or there is no parent, otherwise the next OOVideo
+ * @return nil if this is the last OOVideo or there is no parent, otherwise the next OOVideo
  */
 - (OOVideo *)nextVideo;
 
 /**
  * Get the previous OOVideo for this OOVideo from the parent
- * @returns nil if this is the first OOVideo or there is no parent, otherwise the previous OOVideo
+ * @return nil if this is the first OOVideo or there is no parent, otherwise the previous OOVideo
  */
 - (OOVideo *)previousVideo;
 
 /** @internal
  * Get the OOVideo with the specified embed code
- * @param[in] embedCode the embed code to look up
- * @param[in] currentItem the current OOVideo
- * @returns the video if embed code matches, else nil
+ * @param embedCode the embed code to look up
+ * @param currentItem the current OOVideo
+ * @return the video if embed code matches, else nil
  */
 - (OOVideo *)videoFromEmbedCode:(NSString *)embedCode withCurrentItem:(OOVideo *)currentItem;
 
 /** @internal
  * Fetch the additional required info for playback (ads and closed captions)
- * @returns NO if errors occurred or YES if successful
+ * @return NO if errors occurred or YES if successful
  */
 - (BOOL)fetchPlaybackInfo;
 
@@ -128,13 +128,13 @@
 
 /**
  * Check if the OOVideo has ads
- * @returns whether the OOVideo has ads or not
+ * @return whether the OOVideo has ads or not
  */
 - (BOOL)hasAds;
 
 /**
  * Check if the OOVideo has Closed Captions
- * @returns whether the OOVideo has closed captions or not
+ * @return whether the OOVideo has closed captions or not
  */
 - (BOOL)hasClosedCaptions;
 

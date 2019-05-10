@@ -6,13 +6,10 @@
 //  Copyright © 2019 Ooyala, Inc. All rights reserved.
 //
 
-#ifndef SkinSDKListViewController_h
-#define SkinSDKListViewController_h
-
 @import UIKit;
 
-@interface SkinSDKListViewController : UITableViewController
+#import "ListTableViewController.h"
+
+@interface SkinSDKListViewController : ListTableViewController
 
 @end
-
-#endif /* SkinSDKListViewController_h */

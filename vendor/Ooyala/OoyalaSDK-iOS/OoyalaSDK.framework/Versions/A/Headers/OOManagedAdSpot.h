@@ -4,7 +4,7 @@
  * @details    OOAdSpot.h in OoyalaSDK
  * @warning    This is an abstract class. It is not meant to be instantiated.
  * @date       11/29/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "OOAdSpot.h"
@@ -20,9 +20,5 @@
 
 @property (readonly) NSURL *clickURL; /**< The URL which should be opened when the OOAdSpot is clicked */
 @property (readonly) NSArray *trackingURLs; /**< The Array of URLs which should be pinged when the OOAdSpot plays */
-
-+ (OOManagedAdSpot *)adSpotFromDictionary:(NSDictionary *)data
-                                      api:(OOPlayerAPIClient *)api
-                                 duration:(Float64)duration;
 
 @end

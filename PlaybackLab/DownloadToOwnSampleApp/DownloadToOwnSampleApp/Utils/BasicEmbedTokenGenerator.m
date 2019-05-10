@@ -25,7 +25,7 @@
   return self;
 }
 
-- (void)tokenForEmbedCodes:(NSArray *)embedCodes
+- (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes
                   callback:(OOEmbedTokenCallback)callback {
   NSDictionary *params = @{@"account_id": self.accountId};
   NSString *uri = [NSString stringWithFormat:@"/sas/embed_token/%@/%@",
@@ -35,7 +35,7 @@
   // We recommend generating this URL in a remote server you own, as we discourage storing apiKey and apiSecret information within the app because of security concerns.
   OOEmbeddedSecureURLGenerator* urlGen = [[OOEmbeddedSecureURLGenerator alloc] initWithAPIKey:self.apiKey
                                                                                        secret:self.apiSecret];
-  NSURL* embedTokenUrl = [urlGen secureURL:self.authorizeHost uri:uri params:params];
+  NSURL* embedTokenUrl = [urlGen secureURLForHost:self.authorizeHost uri:uri params:params];
   callback(embedTokenUrl.absoluteString);
 }
 

@@ -32,6 +32,25 @@
                     embedCode:(NSString *)embedCode
                         pcode:(NSString *)pcode
                  playerDomain:(NSString *)playerDomain
+               viewController:(Class)viewController
+              markersFileName:(NSString *)markersFileName
+                          nib:(NSString *)nib {
+  if (self = [self initWithTitle:title
+                       embedCode:embedCode
+                           pcode:pcode
+                    playerDomain:playerDomain
+                  viewController:viewController
+                             nib:nib]) {
+    _markersFileName = markersFileName;
+  }
+  return self;
+}
+
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                 playerDomain:(NSString *)playerDomain
                 adSetProvider:(NSString *)adSetProvider
                viewController:(Class)viewController
                           nib:(NSString *)nib {

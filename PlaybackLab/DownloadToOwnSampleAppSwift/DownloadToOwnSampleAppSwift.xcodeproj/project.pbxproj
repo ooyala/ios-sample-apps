@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3929664A2267537F00051EFE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 392966492267537F00051EFE /* libc++.tbd */; };
 		39B703B7221C3E9B0036DE31 /* OoyalaSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B703B5221C3E9B0036DE31 /* OoyalaSkinSDK.framework */; };
 		39B703B8221C3E9B0036DE31 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B703B6221C3E9B0036DE31 /* OoyalaSDK.framework */; };
 		39B703D1221C3EBA0036DE31 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 39B703BA221C3EBA0036DE31 /* main.jsbundle */; };
@@ -32,34 +33,17 @@
 		AE1B86B12020DF2000FCF6CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B86AF2020DF2000FCF6CA /* Main.storyboard */; };
 		AE1B86B32020DF2000FCF6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1B86B22020DF2000FCF6CA /* Assets.xcassets */; };
 		AE1B86B62020DF2000FCF6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B86B42020DF2000FCF6CA /* LaunchScreen.storyboard */; };
-		AE1B86D42020E48D00FCF6CA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C42020E48C00FCF6CA /* CFNetwork.framework */; };
-		AE1B86D52020E48D00FCF6CA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C52020E48C00FCF6CA /* Security.framework */; };
-		AE1B86D62020E48D00FCF6CA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C62020E48C00FCF6CA /* CoreMedia.framework */; };
-		AE1B86D72020E48D00FCF6CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C72020E48C00FCF6CA /* Foundation.framework */; };
-		AE1B86D82020E48D00FCF6CA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C82020E48C00FCF6CA /* MediaPlayer.framework */; };
-		AE1B86D92020E48D00FCF6CA /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86C92020E48C00FCF6CA /* libxml2.tbd */; };
-		AE1B86DA2020E48D00FCF6CA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CA2020E48C00FCF6CA /* AVKit.framework */; };
-		AE1B86DB2020E48D00FCF6CA /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CB2020E48C00FCF6CA /* MediaAccessibility.framework */; };
-		AE1B86DC2020E48D00FCF6CA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CC2020E48C00FCF6CA /* SystemConfiguration.framework */; };
-		AE1B86DD2020E48D00FCF6CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CD2020E48C00FCF6CA /* UIKit.framework */; };
-		AE1B86DE2020E48D00FCF6CA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CE2020E48C00FCF6CA /* CoreText.framework */; };
-		AE1B86DF2020E48D00FCF6CA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86CF2020E48C00FCF6CA /* AdSupport.framework */; };
-		AE1B86E02020E48D00FCF6CA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D02020E48D00FCF6CA /* AVFoundation.framework */; };
 		AE1B86E12020E48D00FCF6CA /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D12020E48D00FCF6CA /* JavaScriptCore.framework */; };
-		AE1B86E22020E48D00FCF6CA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D22020E48D00FCF6CA /* libc++.tbd */; };
-		AE1B86E32020E48D00FCF6CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1B86D32020E48D00FCF6CA /* QuartzCore.framework */; };
 		AE1B86E52020E53100FCF6CA /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86E42020E53100FCF6CA /* PlayerSelectionOption.swift */; };
 		AE1B86E82020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86E72020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift */; };
 		AE1B86EA2020E76000FCF6CA /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86E92020E76000FCF6CA /* OptionDataSource.swift */; };
 		AE1B86EC20210BD500FCF6CA /* AssetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */; };
 		AE1B86EE2021141300FCF6CA /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86ED2021141300FCF6CA /* PlayerViewController.swift */; };
 		AE1B86F0202118B600FCF6CA /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B86EF202118B600FCF6CA /* OptionTableViewCell.swift */; };
-		AEC5A2072028E424005F94FF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A2062028E423005F94FF /* libz.tbd */; };
-		AEC5A2092028E4DC005F94FF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A2082028E4DC005F94FF /* MessageUI.framework */; };
-		AEC5A20B2028E4E6005F94FF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5A20A2028E4E6005F94FF /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		392966492267537F00051EFE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		39B703B5221C3E9B0036DE31 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		39B703B6221C3E9B0036DE31 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		39B703BA221C3EBA0036DE31 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -87,22 +71,7 @@
 		AE1B86B22020DF2000FCF6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE1B86B52020DF2000FCF6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE1B86B72020DF2000FCF6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE1B86C42020E48C00FCF6CA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		AE1B86C52020E48C00FCF6CA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AE1B86C62020E48C00FCF6CA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		AE1B86C72020E48C00FCF6CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AE1B86C82020E48C00FCF6CA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		AE1B86C92020E48C00FCF6CA /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		AE1B86CA2020E48C00FCF6CA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		AE1B86CB2020E48C00FCF6CA /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		AE1B86CC2020E48C00FCF6CA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AE1B86CD2020E48C00FCF6CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		AE1B86CE2020E48C00FCF6CA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		AE1B86CF2020E48C00FCF6CA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		AE1B86D02020E48D00FCF6CA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE1B86D12020E48D00FCF6CA /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		AE1B86D22020E48D00FCF6CA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		AE1B86D32020E48D00FCF6CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AE1B86E42020E53100FCF6CA /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
 		AE1B86E62020E57800FCF6CA /* DownloadToOwnSampleAppSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadToOwnSampleAppSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE1B86E72020E71A00FCF6CA /* BasicEmbedTokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEmbedTokenGenerator.swift; sourceTree = "<group>"; };
@@ -110,9 +79,6 @@
 		AE1B86EB20210BD500FCF6CA /* AssetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewController.swift; sourceTree = "<group>"; };
 		AE1B86ED2021141300FCF6CA /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		AE1B86EF202118B600FCF6CA /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
-		AEC5A2062028E423005F94FF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		AEC5A2082028E4DC005F94FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		AEC5A20A2028E4E6005F94FF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,27 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEC5A20B2028E4E6005F94FF /* Social.framework in Frameworks */,
-				AE1B86D42020E48D00FCF6CA /* CFNetwork.framework in Frameworks */,
-				AE1B86D52020E48D00FCF6CA /* Security.framework in Frameworks */,
-				AE1B86D62020E48D00FCF6CA /* CoreMedia.framework in Frameworks */,
-				AE1B86D72020E48D00FCF6CA /* Foundation.framework in Frameworks */,
-				AE1B86DB2020E48D00FCF6CA /* MediaAccessibility.framework in Frameworks */,
-				AE1B86D82020E48D00FCF6CA /* MediaPlayer.framework in Frameworks */,
-				39B703B7221C3E9B0036DE31 /* OoyalaSkinSDK.framework in Frameworks */,
-				AEC5A2092028E4DC005F94FF /* MessageUI.framework in Frameworks */,
-				AE1B86D92020E48D00FCF6CA /* libxml2.tbd in Frameworks */,
-				AE1B86DA2020E48D00FCF6CA /* AVKit.framework in Frameworks */,
-				AE1B86DC2020E48D00FCF6CA /* SystemConfiguration.framework in Frameworks */,
-				AE1B86DD2020E48D00FCF6CA /* UIKit.framework in Frameworks */,
-				AE1B86DE2020E48D00FCF6CA /* CoreText.framework in Frameworks */,
-				AE1B86DF2020E48D00FCF6CA /* AdSupport.framework in Frameworks */,
-				AE1B86E02020E48D00FCF6CA /* AVFoundation.framework in Frameworks */,
-				AE1B86E12020E48D00FCF6CA /* JavaScriptCore.framework in Frameworks */,
 				39B703B8221C3E9B0036DE31 /* OoyalaSDK.framework in Frameworks */,
-				AE1B86E22020E48D00FCF6CA /* libc++.tbd in Frameworks */,
-				AEC5A2072028E424005F94FF /* libz.tbd in Frameworks */,
-				AE1B86E32020E48D00FCF6CA /* QuartzCore.framework in Frameworks */,
+				39B703B7221C3E9B0036DE31 /* OoyalaSkinSDK.framework in Frameworks */,
+				AE1B86E12020E48D00FCF6CA /* JavaScriptCore.framework in Frameworks */,
+				3929664A2267537F00051EFE /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,8 +177,8 @@
 			children = (
 				AE1B86AA2020DF2000FCF6CA /* DownloadToOwnSampleAppSwift */,
 				39B703B4221C3E9B0036DE31 /* VendorLibraries */,
-				AE1B86A92020DF2000FCF6CA /* Products */,
 				AE1B86C12020E3F000FCF6CA /* Frameworks */,
+				AE1B86A92020DF2000FCF6CA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -294,25 +243,8 @@
 		AE1B86C12020E3F000FCF6CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AEC5A20A2028E4E6005F94FF /* Social.framework */,
-				AEC5A2082028E4DC005F94FF /* MessageUI.framework */,
-				AEC5A2062028E423005F94FF /* libz.tbd */,
-				AE1B86CF2020E48C00FCF6CA /* AdSupport.framework */,
-				AE1B86D02020E48D00FCF6CA /* AVFoundation.framework */,
-				AE1B86CA2020E48C00FCF6CA /* AVKit.framework */,
-				AE1B86C42020E48C00FCF6CA /* CFNetwork.framework */,
-				AE1B86C62020E48C00FCF6CA /* CoreMedia.framework */,
-				AE1B86CE2020E48C00FCF6CA /* CoreText.framework */,
-				AE1B86C72020E48C00FCF6CA /* Foundation.framework */,
+				392966492267537F00051EFE /* libc++.tbd */,
 				AE1B86D12020E48D00FCF6CA /* JavaScriptCore.framework */,
-				AE1B86D22020E48D00FCF6CA /* libc++.tbd */,
-				AE1B86C92020E48C00FCF6CA /* libxml2.tbd */,
-				AE1B86CB2020E48C00FCF6CA /* MediaAccessibility.framework */,
-				AE1B86C82020E48C00FCF6CA /* MediaPlayer.framework */,
-				AE1B86D32020E48D00FCF6CA /* QuartzCore.framework */,
-				AE1B86C52020E48C00FCF6CA /* Security.framework */,
-				AE1B86CC2020E48C00FCF6CA /* SystemConfiguration.framework */,
-				AE1B86CD2020E48C00FCF6CA /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -358,7 +290,7 @@
 				TargetAttributes = {
 					AE1B86A72020DF2000FCF6CA = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};

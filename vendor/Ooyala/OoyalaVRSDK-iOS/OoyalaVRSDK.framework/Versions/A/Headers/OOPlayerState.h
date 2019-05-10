@@ -5,7 +5,7 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #ifndef OOPlayerState_h
 #define OOPlayerState_h
@@ -52,15 +52,15 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerDesiredState) {
 @interface OOOoyalaPlayerStateConverter : NSObject
 /**
  * Converts PlayerState to a String.
- * @param[in] state the PlayerState
- * @returns an external facing state string
+ * @param state the PlayerState
+ * @return an external facing state string
  */
 + (NSString *)playerStateToString:(OOOoyalaPlayerState)state;
 
 /**
  * Converts PlayerDesiredState to a String.
- * @param[in] desiredState the PlayerState
- * @returns an external facing DesiredState string
+ * @param desiredState the PlayerState
+ * @return an external facing DesiredState string
  */
 + (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
 @end

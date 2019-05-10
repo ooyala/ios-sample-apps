@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3929663322674B9800051EFE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663222674B9800051EFE /* libsqlite3.tbd */; };
 		CA067BD71CE5347100ACE353 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA067BD61CE5347100ACE353 /* VideoTableViewController.m */; };
 		CA067BDB1CE535D700ACE353 /* AssetDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA067BDA1CE535D700ACE353 /* AssetDataSource.m */; };
 		CA067BDE1CE5362700ACE353 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = CA067BDD1CE5362700ACE353 /* PlayerSelectionOption.m */; };
@@ -16,17 +17,13 @@
 		CA15C2E41CDAB16A00B9EF25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E31CDAB16A00B9EF25 /* Assets.xcassets */; };
 		CA15C2E71CDAB16A00B9EF25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA15C2E51CDAB16A00B9EF25 /* LaunchScreen.storyboard */; };
 		CA15C3281CDAB3AF00B9EF25 /* BasicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15C3271CDAB3AF00B9EF25 /* BasicPlayerViewController.m */; };
-		CA15C32A1CDAB72F00B9EF25 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */; };
-		CA15C32C1CDAB73B00B9EF25 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA15C32B1CDAB73B00B9EF25 /* SystemConfiguration.framework */; };
-		CA2233431D35905200D9B51F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2233421D35905200D9B51F /* AVKit.framework */; };
 		CA42632F1CF8BDA100A02F24 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42632D1CF8BDA100A02F24 /* OoyalaSDK.framework */; };
-		CA4263311CF8BDEF00A02F24 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4263301CF8BDEF00A02F24 /* libsqlite3.tbd */; };
 		CA8DAF111CF8BE4A0081EB9D /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = CA8DAF101CF8BE4A0081EB9D /* ADBMobileConfig.json */; };
 		CA8DAF131CF8C1B90081EB9D /* OoyalaAdobeAnalyticsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DAF121CF8C1B90081EB9D /* OoyalaAdobeAnalyticsSDK.framework */; };
-		CABBE7EF1D5A5367006DE56F /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABBE7EE1D5A5367006DE56F /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3929663222674B9800051EFE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CA067BD51CE5347100ACE353 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoTableViewController.h; path = Lists/VideoTableViewController.h; sourceTree = "<group>"; };
 		CA067BD61CE5347100ACE353 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoTableViewController.m; path = Lists/VideoTableViewController.m; sourceTree = "<group>"; };
 		CA067BD91CE535D700ACE353 /* AssetDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetDataSource.h; path = Models/AssetDataSource.h; sourceTree = "<group>"; };
@@ -43,14 +40,9 @@
 		CA15C2E81CDAB16A00B9EF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA15C3261CDAB3AF00B9EF25 /* BasicPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicPlayerViewController.h; path = Players/BasicPlayerViewController.h; sourceTree = "<group>"; };
 		CA15C3271CDAB3AF00B9EF25 /* BasicPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicPlayerViewController.m; path = Players/BasicPlayerViewController.m; sourceTree = "<group>"; };
-		CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		CA15C32B1CDAB73B00B9EF25 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		CA2233421D35905200D9B51F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		CA42632D1CF8BDA100A02F24 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
-		CA4263301CF8BDEF00A02F24 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CA8DAF101CF8BE4A0081EB9D /* ADBMobileConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ADBMobileConfig.json; sourceTree = "<group>"; };
 		CA8DAF121CF8C1B90081EB9D /* OoyalaAdobeAnalyticsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaAdobeAnalyticsSDK.framework; sourceTree = "<group>"; };
-		CABBE7EE1D5A5367006DE56F /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +52,7 @@
 			files = (
 				CA42632F1CF8BDA100A02F24 /* OoyalaSDK.framework in Frameworks */,
 				CA8DAF131CF8C1B90081EB9D /* OoyalaAdobeAnalyticsSDK.framework in Frameworks */,
-				CA15C32C1CDAB73B00B9EF25 /* SystemConfiguration.framework in Frameworks */,
-				CA15C32A1CDAB72F00B9EF25 /* MediaPlayer.framework in Frameworks */,
-				CABBE7EF1D5A5367006DE56F /* JavaScriptCore.framework in Frameworks */,
-				CA2233431D35905200D9B51F /* AVKit.framework in Frameworks */,
-				CA4263311CF8BDEF00A02F24 /* libsqlite3.tbd in Frameworks */,
+				3929663322674B9800051EFE /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,11 +143,7 @@
 		CA15C32D1CDAB75E00B9EF25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CABBE7EE1D5A5367006DE56F /* JavaScriptCore.framework */,
-				CA2233421D35905200D9B51F /* AVKit.framework */,
-				CA4263301CF8BDEF00A02F24 /* libsqlite3.tbd */,
-				CA15C32B1CDAB73B00B9EF25 /* SystemConfiguration.framework */,
-				CA15C3291CDAB72F00B9EF25 /* MediaPlayer.framework */,
+				3929663222674B9800051EFE /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,6 +188,7 @@
 				TargetAttributes = {
 					CA15C2D31CDAB16A00B9EF25 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -384,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

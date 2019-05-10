@@ -9,76 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ooyala SDK assets-->
-        <scene sceneID="Umi-cg-ZJp">
-            <objects>
-                <tableViewController id="N4w-ed-mwO" customClass="CoreSDKOnlyListViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" id="87i-0J-ebA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="et7-cr-ycn">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="et7-cr-ycn" id="rmE-TP-UcN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="N4w-ed-mwO" id="dtb-ms-jBD"/>
-                            <outlet property="delegate" destination="N4w-ed-mwO" id="iGL-KG-1Ll"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Ooyala SDK assets" id="S3C-Lo-vIV"/>
-                    <connections>
-                        <outlet property="navigationBar" destination="S3C-Lo-vIV" id="95e-hk-IE7"/>
-                        <segue destination="xSG-6Z-pQV" kind="show" identifier="play" id="5W6-4j-RGj"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KN9-T7-kmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1130" y="342"/>
-        </scene>
-        <!--PlayerView-->
-        <scene sceneID="75h-h6-PIL">
-            <objects>
-                <viewController id="xSG-6Z-pQV" customClass="PlayerViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="89S-ig-Dfv"/>
-                        <viewControllerLayoutGuide type="bottom" id="sHu-wj-dSO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="imO-2l-6ga">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlU-pW-egY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="PlU-pW-egY" firstAttribute="bottom" secondItem="sHu-wj-dSO" secondAttribute="top" id="25m-CP-8Je"/>
-                            <constraint firstAttribute="trailing" secondItem="PlU-pW-egY" secondAttribute="trailing" id="4VF-UF-jYR"/>
-                            <constraint firstItem="PlU-pW-egY" firstAttribute="leading" secondItem="imO-2l-6ga" secondAttribute="leading" id="Dbf-T4-czn"/>
-                            <constraint firstItem="PlU-pW-egY" firstAttribute="top" secondItem="89S-ig-Dfv" secondAttribute="bottom" id="Pud-fx-6u6"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="PlayerView" id="FzV-oi-Bl8">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="0Hw-u0-oE9"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="navigationBar" destination="FzV-oi-Bl8" id="iYg-3J-oKT"/>
-                        <outlet property="videoView" destination="PlU-pW-egY" id="vU1-v0-nlo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RJg-9S-dpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2022" y="342"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="TM2-tj-nKn">
             <objects>
@@ -95,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQH-he-wZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-943" y="687"/>
+            <point key="canvasLocation" x="-729" y="687"/>
         </scene>
         <!--Master-->
         <scene sceneID="XFO-N7-y1O">
@@ -133,7 +63,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="N4w-ed-mwO" kind="show" id="G0V-qy-XvR"/>
+                                            <segue destination="ecn-e2-b0j" kind="show" id="XJz-2i-qDR"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="66i-gs-BuU" style="IBUITableViewCellStyleDefault" id="Fuw-nP-4kj">
@@ -161,7 +91,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="cem-nr-H6l" kind="show" id="hat-q1-tri"/>
+                                            <segue destination="vOE-va-CyG" kind="show" id="muN-jb-4Z6"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -172,75 +102,151 @@
                             <outlet property="delegate" destination="1iY-Tt-yg0" id="Qif-0s-5lH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Choose cast examples" id="SjC-uK-b5C"/>
+                    <navigationItem key="navigationItem" title="Choose Cast examples" id="SjC-uK-b5C">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ype-p9-pf8"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3H-60-GMY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="106" y="687"/>
         </scene>
-        <!--Skin SDK assets-->
-        <scene sceneID="Bpi-vS-bFh">
+        <!--SkinSDK List View Controller-->
+        <scene sceneID="H68-hD-caj">
             <objects>
-                <tableViewController id="cem-nr-H6l" customClass="SkinSDKListViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" id="AtQ-Fa-fgC">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evW-pw-bgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="vOE-va-CyG" customClass="SkinSDKListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8av-aN-Dnx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Zvx-N1-6hb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ANw-ty-j9X">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zvx-N1-6hb" id="rSg-XU-rqT">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ANw-ty-j9X" id="1rF-Ha-cZz">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="cem-nr-H6l" id="Td8-mK-Vra"/>
-                            <outlet property="delegate" destination="cem-nr-H6l" id="tu1-iY-9uY"/>
+                            <outlet property="dataSource" destination="vOE-va-CyG" id="PCE-Fp-qXA"/>
+                            <outlet property="delegate" destination="vOE-va-CyG" id="lKS-xr-124"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Skin SDK assets" id="rhI-cr-Lsh"/>
+                    <navigationItem key="navigationItem" id="Ah2-qu-DwJ"/>
                     <connections>
-                        <segue destination="8ty-kh-uhx" kind="show" identifier="play" id="RAy-8h-bo7"/>
+                        <outlet property="navigationBar" destination="Ah2-qu-DwJ" id="EkP-fi-7b0"/>
+                        <segue destination="387-ow-5RS" kind="show" identifier="play" id="a0e-yo-3Cg"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S7h-9y-59a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="1031"/>
+            <point key="canvasLocation" x="900" y="1101"/>
         </scene>
-        <!--Skin Player View Controller-->
-        <scene sceneID="n41-YP-won">
+        <!--CoreSDK Only List View Controller-->
+        <scene sceneID="sTp-bd-au7">
             <objects>
-                <viewController id="8ty-kh-uhx" customClass="SkinPlayerViewController" sceneMemberID="viewController">
+                <tableViewController id="ecn-e2-b0j" customClass="CoreSDKOnlyListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bWm-TA-fYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ncf-SY-Wpz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ncf-SY-Wpz" id="bJ9-F3-xrm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ecn-e2-b0j" id="CKv-T7-8hc"/>
+                            <outlet property="delegate" destination="ecn-e2-b0j" id="Mdn-bJ-Re9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BU3-BZ-aV9"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="BU3-BZ-aV9" id="SSP-PQ-od3"/>
+                        <segue destination="RoY-mk-M9d" kind="show" identifier="play" id="WdC-mo-JJ5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0l-8H-QIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="304"/>
+        </scene>
+        <!--OoyalaSDK-->
+        <scene sceneID="1Re-Vv-cUA">
+            <objects>
+                <viewController id="RoY-mk-M9d" customClass="PlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vl2-K6-9X8"/>
-                        <viewControllerLayoutGuide type="bottom" id="0p5-mS-NMQ"/>
+                        <viewControllerLayoutGuide type="top" id="KHy-jd-AUL"/>
+                        <viewControllerLayoutGuide type="bottom" id="ocX-Yi-HxO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CYO-k5-5jM">
+                    <view key="view" contentMode="scaleToFill" id="rFf-5Y-5Rf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-Hm-cWI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qh8-7b-ohw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vWm-Hm-cWI" firstAttribute="leading" secondItem="CYO-k5-5jM" secondAttribute="leading" id="8KT-co-zHk"/>
-                            <constraint firstAttribute="trailing" secondItem="vWm-Hm-cWI" secondAttribute="trailing" id="H57-2F-eHb"/>
-                            <constraint firstItem="0p5-mS-NMQ" firstAttribute="top" secondItem="vWm-Hm-cWI" secondAttribute="bottom" id="dVp-E6-khj"/>
-                            <constraint firstItem="vWm-Hm-cWI" firstAttribute="top" secondItem="vl2-K6-9X8" secondAttribute="bottom" id="qaN-Ze-bd3"/>
+                            <constraint firstAttribute="trailing" secondItem="Qh8-7b-ohw" secondAttribute="trailing" id="6Sy-qn-X4p"/>
+                            <constraint firstItem="Qh8-7b-ohw" firstAttribute="top" secondItem="KHy-jd-AUL" secondAttribute="bottom" id="6dh-Kb-3zP"/>
+                            <constraint firstItem="ocX-Yi-HxO" firstAttribute="top" secondItem="Qh8-7b-ohw" secondAttribute="bottom" id="Aem-6l-gJ3"/>
+                            <constraint firstItem="ocX-Yi-HxO" firstAttribute="top" secondItem="Qh8-7b-ohw" secondAttribute="bottom" id="MfC-I4-0tu"/>
+                            <constraint firstItem="Qh8-7b-ohw" firstAttribute="top" secondItem="KHy-jd-AUL" secondAttribute="bottom" id="SAE-tK-ju6"/>
+                            <constraint firstItem="Qh8-7b-ohw" firstAttribute="leading" secondItem="rFf-5Y-5Rf" secondAttribute="leading" id="YqA-Cy-ZTm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="OoyalaSDK" id="7ee-Ej-9Dh"/>
                     <connections>
-                        <outlet property="videoView" destination="vWm-Hm-cWI" id="fMZ-U7-v1P"/>
+                        <outlet property="navigationBar" destination="7ee-Ej-9Dh" id="wUC-WJ-rlv"/>
+                        <outlet property="videoView" destination="Qh8-7b-ohw" id="yww-Dn-ZFU"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tBK-14-DO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJU-Av-mO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.5999999999999" y="1029.5352323838081"/>
+            <point key="canvasLocation" x="1874" y="304"/>
+        </scene>
+        <!--OoyalaSkinSDK-->
+        <scene sceneID="nc2-Wj-VTn">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCp-tN-TRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="387-ow-5RS" customClass="SkinPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IvF-p1-fu3"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1m-yP-Ja1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J5e-N8-scS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="av3-Po-bg1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="av3-Po-bg1" secondAttribute="trailing" id="3FP-vK-BaR"/>
+                            <constraint firstItem="av3-Po-bg1" firstAttribute="leading" secondItem="J5e-N8-scS" secondAttribute="leading" id="Mdc-wB-pmc"/>
+                            <constraint firstItem="av3-Po-bg1" firstAttribute="top" secondItem="IvF-p1-fu3" secondAttribute="bottom" id="dew-YU-Wvx"/>
+                            <constraint firstItem="h1m-yP-Ja1" firstAttribute="top" secondItem="av3-Po-bg1" secondAttribute="bottom" id="kpU-9n-w3y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="OoyalaSkinSDK" id="PQa-m3-Bqv"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="PQa-m3-Bqv" id="QYm-Pv-Fkc"/>
+                        <outlet property="videoView" destination="av3-Po-bg1" id="YQX-jd-2Yy"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1910" y="1101"/>
         </scene>
     </scenes>
 </document>

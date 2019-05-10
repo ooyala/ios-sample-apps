@@ -11,23 +11,7 @@
 		0B193ABD1AC109A500EFFE17 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193ABC1AC109A500EFFE17 /* BaseViewController.swift */; };
 		0B193AD11AC109A500EFFE17 /* SwiftSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193AD01AC109A500EFFE17 /* SwiftSampleAppTests.swift */; };
 		0B193ADD1AC1173C00EFFE17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B193ADC1AC1173C00EFFE17 /* ViewController.swift */; };
-		0B193ADF1AC117F800EFFE17 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193ADE1AC117F800EFFE17 /* CoreMedia.framework */; };
-		0B193AE11AC1182D00EFFE17 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */; };
-		0B193AE41AC1184500EFFE17 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */; };
-		0B193AE51AC1184500EFFE17 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */; };
-		0B193AE91AC1186D00EFFE17 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */; };
-		0B193AEB1AC1187A00EFFE17 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEA1AC1187A00EFFE17 /* Security.framework */; };
-		0B193AED1AC1188B00EFFE17 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */; };
-		0B193AEF1AC1189A00EFFE17 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AEE1AC1189A00EFFE17 /* CoreText.framework */; };
-		0B193AF11AC118A900EFFE17 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF01AC118A900EFFE17 /* AdSupport.framework */; };
-		0B193AF31AC118B700EFFE17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF21AC118B700EFFE17 /* QuartzCore.framework */; };
-		0B193AF51AC118BE00EFFE17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF41AC118BE00EFFE17 /* UIKit.framework */; };
-		0B193AF71AC118CA00EFFE17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF61AC118CA00EFFE17 /* Foundation.framework */; };
-		0B193AF91AC118D500EFFE17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */; };
 		0B50E1D11DDD429B00817DD8 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B50E1D01DDD429B00817DD8 /* OoyalaSDK.framework */; };
-		0B50E1D31DDD45D000817DD8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B50E1D21DDD45D000817DD8 /* JavaScriptCore.framework */; };
-		0B50E1D51DDD45D400817DD8 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B50E1D41DDD45D400817DD8 /* AVKit.framework */; };
-		39278CE02192E6EE00F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CDF2192E6EE00F6F4E2 /* libc++.tbd */; };
 		39D45FA3221D42B5008C9FC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D45FA0221D42B5008C9FC7 /* Images.xcassets */; };
 		39D45FAA221D42DB008C9FC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39D45FA6221D42DB008C9FC7 /* LaunchScreen.xib */; };
 		39D45FAB221D42DB008C9FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D45FA8221D42DB008C9FC7 /* Main.storyboard */; };
@@ -106,24 +90,7 @@
 		0B193ACF1AC109A500EFFE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B193AD01AC109A500EFFE17 /* SwiftSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSampleAppTests.swift; sourceTree = "<group>"; };
 		0B193ADC1AC1173C00EFFE17 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0B193ADE1AC117F800EFFE17 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0B193AEA1AC1187A00EFFE17 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0B193AEE1AC1189A00EFFE17 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		0B193AF01AC118A900EFFE17 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		0B193AF21AC118B700EFFE17 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0B193AF41AC118BE00EFFE17 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0B193AF61AC118CA00EFFE17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0B50E1D01DDD429B00817DD8 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
-		0B50E1D21DDD45D000817DD8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		0B50E1D41DDD45D400817DD8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		39278CDF2192E6EE00F6F4E2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		39278CE12192E6FB00F6F4E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		39D45FA0221D42B5008C9FC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		39D45FA1221D42B5008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39D45FA2221D42B5008C9FC7 /* SwiftSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -144,23 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39278CE02192E6EE00F6F4E2 /* libc++.tbd in Frameworks */,
-				0B50E1D51DDD45D400817DD8 /* AVKit.framework in Frameworks */,
-				0B50E1D31DDD45D000817DD8 /* JavaScriptCore.framework in Frameworks */,
-				0B193AF91AC118D500EFFE17 /* CoreGraphics.framework in Frameworks */,
-				0B193AF71AC118CA00EFFE17 /* Foundation.framework in Frameworks */,
-				0B193AF51AC118BE00EFFE17 /* UIKit.framework in Frameworks */,
-				0B193AF31AC118B700EFFE17 /* QuartzCore.framework in Frameworks */,
-				0B193AF11AC118A900EFFE17 /* AdSupport.framework in Frameworks */,
-				0B193AEF1AC1189A00EFFE17 /* CoreText.framework in Frameworks */,
-				0B193AED1AC1188B00EFFE17 /* AVFoundation.framework in Frameworks */,
-				0B193AEB1AC1187A00EFFE17 /* Security.framework in Frameworks */,
 				0B50E1D11DDD429B00817DD8 /* OoyalaSDK.framework in Frameworks */,
-				0B193AE91AC1186D00EFFE17 /* SystemConfiguration.framework in Frameworks */,
-				0B193AE41AC1184500EFFE17 /* MediaAccessibility.framework in Frameworks */,
-				0B193AE51AC1184500EFFE17 /* MediaPlayer.framework in Frameworks */,
-				0B193AE11AC1182D00EFFE17 /* CFNetwork.framework in Frameworks */,
-				0B193ADF1AC117F800EFFE17 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,11 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				0B193AB71AC109A500EFFE17 /* SwiftSampleApp */,
-				0B50E1CF1DDD429B00817DD8 /* VendorLibraries */,
 				39D45FAF221D44CE008C9FC7 /* SwiftSampleApp WatchKit */,
 				39D45FBE221D44D1008C9FC7 /* SwiftSampleApp WatchKit Extension */,
-				0B193AFE1AC118FB00EFFE17 /* Frameworks */,
 				0B193ACD1AC109A500EFFE17 /* SwiftSampleAppTests */,
+				0B50E1CF1DDD429B00817DD8 /* VendorLibraries */,
+				0B193AFE1AC118FB00EFFE17 /* Frameworks */,
 				0B193AB61AC109A500EFFE17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -237,23 +188,6 @@
 		0B193AFE1AC118FB00EFFE17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39278CE12192E6FB00F6F4E2 /* libxml2.tbd */,
-				39278CDF2192E6EE00F6F4E2 /* libc++.tbd */,
-				0B50E1D41DDD45D400817DD8 /* AVKit.framework */,
-				0B50E1D21DDD45D000817DD8 /* JavaScriptCore.framework */,
-				0B193AF81AC118D500EFFE17 /* CoreGraphics.framework */,
-				0B193AF61AC118CA00EFFE17 /* Foundation.framework */,
-				0B193AF41AC118BE00EFFE17 /* UIKit.framework */,
-				0B193AF21AC118B700EFFE17 /* QuartzCore.framework */,
-				0B193AF01AC118A900EFFE17 /* AdSupport.framework */,
-				0B193AEE1AC1189A00EFFE17 /* CoreText.framework */,
-				0B193AEC1AC1188B00EFFE17 /* AVFoundation.framework */,
-				0B193AEA1AC1187A00EFFE17 /* Security.framework */,
-				0B193AE81AC1186D00EFFE17 /* SystemConfiguration.framework */,
-				0B193AE21AC1184500EFFE17 /* MediaAccessibility.framework */,
-				0B193AE31AC1184500EFFE17 /* MediaPlayer.framework */,
-				0B193AE01AC1182D00EFFE17 /* CFNetwork.framework */,
-				0B193ADE1AC117F800EFFE17 /* CoreMedia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -387,17 +321,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					0B193AB41AC109A500EFFE17 = {
 						CreatedOnToolsVersion = 6.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					0B193AC91AC109A500EFFE17 = {
 						CreatedOnToolsVersion = 6.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0B193AB41AC109A500EFFE17;
 					};
 					39D45FAD221D44CE008C9FC7 = {
@@ -406,17 +340,16 @@
 					};
 					39D45FB9221D44D1008C9FC7 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 0B193AB01AC109A500EFFE17 /* Build configuration list for PBXProject "SwiftSampleApp" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				global,
@@ -550,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -592,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -605,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -640,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -662,10 +597,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -692,10 +623,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/VendorLibraries",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftSampleApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -725,7 +652,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSampleApp.app/SwiftSampleApp";
 			};
@@ -743,7 +669,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSampleApp.app/SwiftSampleApp";
 			};
@@ -762,6 +687,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "SwiftSampleApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -792,6 +718,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "SwiftSampleApp WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";

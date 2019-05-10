@@ -18,6 +18,7 @@
 @property (nonatomic) NSString *adSetProvider;
 @property (nonatomic) NSString *playerDomain;
 @property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *markersFileName;
 @property Class viewController;
 
 - (instancetype)initWithTitle:(NSString *)title
@@ -25,6 +26,14 @@
                         pcode:(NSString *)pcode
                  playerDomain:(NSString *)playerDomain
                viewController:(Class)viewController
+                          nib:(NSString *)nib;
+
+- (instancetype)initWithTitle:(NSString *)title
+                    embedCode:(NSString *)embedCode
+                        pcode:(NSString *)pcode
+                 playerDomain:(NSString *)playerDomain
+               viewController:(Class)viewController
+              markersFileName:(NSString *)markersFileName
                           nib:(NSString *)nib;
 
 - (instancetype)initWithTitle:(NSString *)title

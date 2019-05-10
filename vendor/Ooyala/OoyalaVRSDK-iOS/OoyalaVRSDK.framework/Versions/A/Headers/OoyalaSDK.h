@@ -17,6 +17,7 @@
 #import "OOOoyalaPlayer+MoviePlayerCreation.h"
 #import "OOOoyalaPlayer+UI.h"
 #import "OOOoyalaPlayer+MultiAudio.h"
+#import "OOOoyalaPlayer+StateMachine.h"
 
 #import "OOFCCTVRatingConfiguration.h"
 #import "OOIQConfiguration.h"
@@ -69,6 +70,23 @@
 #import "OOVolumeButton.h"
 #import "OOControlsViewController.h"
 #import "OOImages.h"
+#import "OOPreviousButton.h"
+#import "OONextButton.h"
+
+#import "OOInlineControlsView.h"
+#import "OOInlineViewController.h"
+#import "OOInlineControlsBottomBar.h"
+#import "OOFullScreenControlsView.h"
+#import "OOFullScreenViewController.h"
+#import "OOFullScreenControlsBottomBar.h"
+#import "OOFullScreenControlsBottomBarMainControlsView.h"
+#import "OOFullScreenControlsTopBar.h"
+#import "OOFullScreenControlsBottomBarVolumeView.h"
+#import "OOVolumeSliderView.h"
+#import "OOTimeSliderDelegate.h"
+#import "OOTimeSliderProtocol.h"
+
+#import "OOAnalyticsPluginBaseImpl.h"
 
 // Audio
 #import "OOAudioSession.h"
@@ -122,6 +140,7 @@
 #import "OOFCCTVRating.h"
 #import "OOMultiAudioProtocol.h"
 #import "OOAudioTrackProtocol.h"
+#import "OOMarker.h"
 
 // Offline
 #if !TARGET_OS_TV // Check is tvOS
@@ -149,6 +168,8 @@
 #import "OOEmbedTokenGenerator.h"
 #import "OOSecureURLGenerator.h"
 #import "OOSignatureGenerator.h"
+
+#import "OOFairplayContentKeyDelegate.h"
 
 #import "OOCastModeOptions.h"
 #import "OOCastManagerProtocol.h"

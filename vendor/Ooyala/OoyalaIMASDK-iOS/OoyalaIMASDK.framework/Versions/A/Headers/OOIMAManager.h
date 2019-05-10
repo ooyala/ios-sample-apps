@@ -1,6 +1,6 @@
 /**
  * @class      OOIMAManager OOIMAManager.h "OOIMAManager.h"
- * @copyright  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+ * @copyright  Copyright © 2013 Ooyala, Inc. All rights reserved.
  */
 
 @import UIKit;
@@ -43,7 +43,7 @@
 
 @property (nonatomic, weak) id<OOIMAManagerDelegate> delegate;
 @property (nonatomic, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
-@property (readonly) IMAAdDisplayContainer *adDisplayContainer;
+@property (nonatomic, readonly) IMAAdDisplayContainer *adDisplayContainer;
 @property (readonly) OOStateNotifier *stateNotifier;
 
 @property (nonatomic, weak) id<OOIMAAdsManagerDelegate> imaAdsManagerDelegate;
@@ -64,24 +64,24 @@
 
 /**
  * Initialize a OOIMAManager using the OOOoyalaPlayer
- * @param[in] player the OOOoyalaPlayer
- * @returns the initialized OOIMAManager
+ * @param player the OOOoyalaPlayer
+ * @return the initialized OOIMAManager
  */
 - (instancetype)initWithOoyalaPlayer:(OOOoyalaPlayer *)player;
 
 /**
  * Initialize a OOIMAManager using the OOOoyalaPlayer and an Ooyala IMA Configuration
- * @param[in] player the OOOoyalaPlayer
- * @param[in] configuration the OOIMAConfiguration to configure the Ooyala IMA Integration. can be nil
+ * @param player the OOOoyalaPlayer
+ * @param configuration the OOIMAConfiguration to configure the Ooyala IMA Integration. can be nil
 
- * @returns the initialized OOIMAManager
+ * @return the initialized OOIMAManager
  */
 - (instancetype)initWithOoyalaPlayer:(OOOoyalaPlayer *)player
                        configuration:(OOIMAConfiguration *)configuration;
 
 /**
  * Add a compnanionSlot to AdsPlayer
- * @param[in] slot the UIView the user wants to use to hold the slot
+ * @param slot the UIView the user wants to use to hold the slot
  * NOTE: this UIView cannot be changed to fit the screen automatically so the companion slots 
  * may be located inappropriately when the orientation changed
  */
@@ -90,7 +90,7 @@
 /**
  * Add tag parameters to the end of the original URL for ads request.
  * The parameters will be overridden by the latest call if this method get called multiple times
- * @param[in] adTagParameters A dictionary of the key-value pairs to be appended to the tag as query string parameters */
+ * @param adTagParameters A dictionary of the key-value pairs to be appended to the tag as query string parameters */
 - (void)setAdTagParameters:(NSDictionary*)adTagParameters;
 
 /**

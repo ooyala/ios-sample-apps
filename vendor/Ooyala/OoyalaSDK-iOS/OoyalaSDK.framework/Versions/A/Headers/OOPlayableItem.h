@@ -7,7 +7,7 @@
 
 /**
  * Returns a set of streams representing the currently playing content
- * @returns An NSArray of OOStreams.
+ * @return An NSArray of OOStreams.
  */
 - (NSArray *)getStreams;
 

@@ -3,7 +3,7 @@
  * @brief      OOPlayer
  * @details    OOPlayer.h in OoyalaSDK
  * @date       12/14/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>

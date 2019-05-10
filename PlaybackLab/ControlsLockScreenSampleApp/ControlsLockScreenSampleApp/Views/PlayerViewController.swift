@@ -16,10 +16,7 @@ class PlayerViewController: UIViewController {
   // properties for the video
   public var option: PlayerSelectionOption!
   
-  // properties required for a Fairplay asset
-  private var apiKey: String?
-  private var apiSecret: String?
-  private var ooyalaPlayerVC: OOOoyalaPlayerViewController?
+  public var ooyalaPlayerVC: OOOoyalaPlayerViewController?
   
   // remote control center
   private let remoteCommandCenter = MPRemoteCommandCenter.shared()
@@ -77,8 +74,11 @@ class PlayerViewController: UIViewController {
   }
   
   private func setupOoyalaPlayerStuff() {
-    var player: OOOoyalaPlayer?
-    
+    var player: OOOoyalaPlayer
+    // properties required for a Fairplay asset
+    var apiKey: String
+    var apiSecret: String
+
     if let embedTokenGenerator = option.embedTokenGenerator {
       if let basicEmbedTokenGenerator = embedTokenGenerator as? BasicEmbedTokenGenerator {
         apiKey = basicEmbedTokenGenerator.apiKey
@@ -88,11 +88,12 @@ class PlayerViewController: UIViewController {
         apiSecret = "API_SECRET"
       }
       
-      let options: OOOptions = OOOptions()!
+      let options: OOOptions = OOOptions()
       // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
       // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
       // which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
-      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey, secret: apiSecret)!
+      options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey,
+                                                                secret: apiSecret)
       player = OOOoyalaPlayer(pcode: option.pcode,
                               domain: option.domain,
                               embedTokenGenerator: embedTokenGenerator,
@@ -101,18 +102,11 @@ class PlayerViewController: UIViewController {
       player = OOOoyalaPlayer(pcode: option.pcode, domain: option.domain)
     }
 
-    guard let initializatedPlayer = player else { return }
-    
-    ooyalaPlayerVC = OOOoyalaPlayerViewController(player: initializatedPlayer)
+    ooyalaPlayerVC = OOOoyalaPlayerViewController(player: player)
     ooyalaPlayerVC?.player.setEmbedCode(option.embedCode)
   }
   
   private func addObservers() {
-    NotificationCenter.default.addObserver(self,
-                                           selector: #selector(applicationDidEnterBackground(_:)),
-                                           name: UIApplication.didEnterBackgroundNotification,
-                                           object: nil)
-    
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(playerStateChange(_:)),
                                            name: NSNotification.Name.OOOoyalaPlayerStateChanged,
@@ -145,9 +139,9 @@ class PlayerViewController: UIViewController {
   
   private func setupPlayingInfoCenter() {
     // Set properties of the asset to be shown in the screen (no required).
-    var nowPlayingInfo: [String : Any] = [MPMediaItemPropertyTitle: option.title,
-                                          MPMediaItemPropertyArtist: "Ooyala",
-                                          MPMediaItemPropertyAlbumTitle: "Controls Lock Screen"
+    var nowPlayingInfo: [String: Any] = [MPMediaItemPropertyTitle: option.title,
+                                         MPMediaItemPropertyArtist: "Ooyala",
+                                         MPMediaItemPropertyAlbumTitle: "Controls Lock Screen"
     ]
     
     // Set albumArt to show in the screen if image is available
@@ -161,11 +155,10 @@ class PlayerViewController: UIViewController {
   }
   
   // Updates the time labels.
-  private func updatePlayingInfoCenter() {
+  public func updatePlayingInfoCenter() {
     let playingInfoCenter = MPNowPlayingInfoCenter.default()
     guard var displayInfo = playingInfoCenter.nowPlayingInfo,
       let player = ooyalaPlayerVC?.player else { return }
-    
     displayInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.isPlaying() ? 1 : 0
     displayInfo[MPMediaItemPropertyPlaybackDuration] = player.duration()
     displayInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player.playheadTime()
@@ -175,7 +168,6 @@ class PlayerViewController: UIViewController {
   // MARK: - Custom selectors
   @objc func playPauseCommand(_ sender: MPRemoteCommandEvent) {
     guard let player = ooyalaPlayerVC?.player else { return }
-    
     if player.isPlaying() {
       player.pause()
     } else {
@@ -206,15 +198,6 @@ class PlayerViewController: UIViewController {
     player.seek(sender.positionTime)
     player.play()
     updatePlayingInfoCenter()
-  }
-  
-  @objc func applicationDidEnterBackground(_ notification: Notification) {
-    // The app detects that is running in background, we need to call the play method twice
-    // to let the AudioSession works and play the audio.
-    guard let player = ooyalaPlayerVC?.player else { return }
-    
-    player.perform(#selector(player.play as () -> Void))
-    player.perform(#selector(player.play as () -> Void), with: nil, afterDelay: 0.1)
   }
   
   @objc func playerStateChange(_ notification: Notification) {

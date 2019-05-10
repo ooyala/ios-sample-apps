@@ -56,13 +56,13 @@
  *  Width of the slot, in pixels. This value is sent to the DFP ad server for
  *  targeting.
  */
-@property(nonatomic, readonly) int width;
+@property(nonatomic, readonly) NSInteger width;
 
 /**
  *  Height of the slot, in pixels. This value is sent to the DFP ad server for
  *  targeting.
  */
-@property(nonatomic, readonly) int height;
+@property(nonatomic, readonly) NSInteger height;
 
 /**
  *  The IMACompanionDelegate for receiving events from the companion ad slot.
@@ -78,7 +78,7 @@
  *
  *  @return the IMACompanionAdSlot instance
  */
-- (instancetype)initWithView:(UIView *)view width:(int)width height:(int)height;
+- (instancetype)initWithView:(UIView *)view width:(NSInteger)width height:(NSInteger)height;
 
 /**
  * :nodoc:

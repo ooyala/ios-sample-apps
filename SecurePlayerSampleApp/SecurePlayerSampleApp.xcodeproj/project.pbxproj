@@ -20,8 +20,6 @@
 		0B19FF631A3B80FB003E57DF /* SecurePlayerPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */; };
 		0B92BC981BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B92BC961BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.h */; };
 		0B92BC991BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92BC971BA226D3006F7979 /* SecurePlayerOPTPlayerViewController.m */; };
-		0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */; };
-		0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F881A2E5374001324EE /* MediaPlayer.framework */; };
 		0B9800E71A40DF9A00E7DE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9800E51A40DF9A00E7DE88 /* LaunchScreen.xib */; };
 		0BC947D81A817756004CB997 /* PlayerDoubleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947D21A817756004CB997 /* PlayerDoubleButton.xib */; };
 		0BC947D91A817756004CB997 /* PlayerDoubleSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC947D31A817756004CB997 /* PlayerDoubleSwitch.xib */; };
@@ -33,16 +31,6 @@
 		0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */; };
 		0BCEFB801C976E4900DCC36C /* BasicSimplePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCEFB7E1C976E4900DCC36C /* BasicSimplePlayerViewController.h */; };
 		0BCEFB811C976E4900DCC36C /* BasicSimplePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEFB7F1C976E4900DCC36C /* BasicSimplePlayerViewController.m */; };
-		0BD84A001B91151F006CB6D0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8C1A2E53B0001324EE /* Security.framework */; };
-		0BD84A021B911525006CB6D0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A011B911525006CB6D0 /* CoreText.framework */; };
-		0BD84A031B91152D006CB6D0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B140F8A1A2E53A6001324EE /* AVFoundation.framework */; };
-		0BD84A051B911533006CB6D0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A041B911533006CB6D0 /* AudioToolbox.framework */; };
-		0BD84A071B911538006CB6D0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A061B911538006CB6D0 /* CFNetwork.framework */; };
-		0BD84A091B91153E006CB6D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A081B91153E006CB6D0 /* QuartzCore.framework */; };
-		0BD84A0B1B911545006CB6D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A0A1B911545006CB6D0 /* UIKit.framework */; };
-		0BD84A0D1B91154A006CB6D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A0C1B91154A006CB6D0 /* CoreGraphics.framework */; };
-		0BD84A0F1B911550006CB6D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */; };
-		0BD84A111B911555006CB6D0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD84A101B911555006CB6D0 /* CoreMedia.framework */; };
 		0BD84A1E1B91179A006CB6D0 /* bgroupcert.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0BD84A171B91179A006CB6D0 /* bgroupcert.dat */; };
 		0BD84A1F1B91179A006CB6D0 /* devcerttemplate.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0BD84A181B91179A006CB6D0 /* devcerttemplate.dat */; };
 		0BD84A201B91179A006CB6D0 /* iOS-cap.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0BD84A191B91179A006CB6D0 /* iOS-cap.xml */; };
@@ -52,24 +40,19 @@
 		0BD84A241B91179A006CB6D0 /* zgpriv.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0BD84A1D1B91179A006CB6D0 /* zgpriv.dat */; };
 		0BD84A271B912588006CB6D0 /* PlayerSelectionOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD84A251B912588006CB6D0 /* PlayerSelectionOption.h */; };
 		0BD84A281B912588006CB6D0 /* PlayerSelectionOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */; };
-		0BDBDBE71D35C181003933D0 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDBDBE61D35C181003933D0 /* AVKit.framework */; };
-		0BDC86FE1D5B96E00012EFA8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* SecurePlayerPlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */; };
-		39278CC62191DE7B00F6F4E2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC52191DE7A00F6F4E2 /* libc++.tbd */; };
-		39278CC82191DE8100F6F4E2 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC72191DE8100F6F4E2 /* libxml2.tbd */; };
-		39278CCA2191DE8700F6F4E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CC92191DE8700F6F4E2 /* libz.tbd */; };
-		39278CCC2191DE8D00F6F4E2 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39278CCB2191DE8C00F6F4E2 /* libresolv.tbd */; };
 		39278CD62192D40F00F6F4E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39278CD52192D40F00F6F4E2 /* Images.xcassets */; };
+		3929663B22674F5900051EFE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663A22674F5900051EFE /* CoreLocation.framework */; };
+		3929663D22674F8500051EFE /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663C22674F8500051EFE /* ExternalAccessory.framework */; };
+		3929663F22674FA100051EFE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663E22674FA100051EFE /* libc++.tbd */; };
 		393A47EB21CCDED5005860F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47E821CCDED5005860F3 /* OoyalaSDK.framework */; };
 		393A47EC21CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47E921CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework */; };
 		393A47ED21CCDED5005860F3 /* SecurePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A47EA21CCDED5005860F3 /* SecurePlayer.framework */; };
-		39D4609D221EA1BD008C9FC7 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D4609C221EA1BC008C9FC7 /* ExternalAccessory.framework */; };
 		5E7EEE8E1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */; };
 		5E7EEE8F1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EEE8D1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m */; };
 		9782DB011BFC1E9E0094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */; };
 		9782DB021BFC1E9E0094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */; };
-		97E5875F1D4AE14800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,10 +75,6 @@
 		0B140F581A2E4709001324EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B140F5A1A2E4709001324EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B140F5B1A2E4709001324EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B140F881A2E5374001324EE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		0B140F8A1A2E53A6001324EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0B140F8C1A2E53B0001324EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0B19FEDC1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurePlayerPlayerViewController.h; sourceTree = "<group>"; };
 		0B19FEDD1A3AB4B4003E57DF /* SecurePlayerPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurePlayerPlayerViewController.m; sourceTree = "<group>"; };
 		0B19FEE11A3AB4BC003E57DF /* SecurePlayerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurePlayerListViewController.h; sourceTree = "<group>"; };
@@ -115,15 +94,6 @@
 		0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0BCEFB7E1C976E4900DCC36C /* BasicSimplePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicSimplePlayerViewController.h; sourceTree = "<group>"; };
 		0BCEFB7F1C976E4900DCC36C /* BasicSimplePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicSimplePlayerViewController.m; sourceTree = "<group>"; };
-		0BD84A011B911525006CB6D0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		0BD84A041B911533006CB6D0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		0BD84A061B911538006CB6D0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		0BD84A081B91153E006CB6D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0BD84A0A1B911545006CB6D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0BD84A0C1B91154A006CB6D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		0BD84A101B911555006CB6D0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		0BD84A121B91159B006CB6D0 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		0BD84A171B91179A006CB6D0 /* bgroupcert.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgroupcert.dat; sourceTree = "<group>"; };
 		0BD84A181B91179A006CB6D0 /* devcerttemplate.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = devcerttemplate.dat; sourceTree = "<group>"; };
 		0BD84A191B91179A006CB6D0 /* iOS-cap.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "iOS-cap.xml"; sourceTree = "<group>"; };
@@ -133,22 +103,17 @@
 		0BD84A1D1B91179A006CB6D0 /* zgpriv.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = zgpriv.dat; sourceTree = "<group>"; };
 		0BD84A251B912588006CB6D0 /* PlayerSelectionOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSelectionOption.h; sourceTree = "<group>"; };
 		0BD84A261B912588006CB6D0 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
-		0BDBDBE61D35C181003933D0 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		39278CC52191DE7A00F6F4E2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		39278CC72191DE8100F6F4E2 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		39278CC92191DE8700F6F4E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		39278CCB2191DE8C00F6F4E2 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		39278CD52192D40F00F6F4E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3929663A22674F5900051EFE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3929663C22674F8500051EFE /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		3929663E22674FA100051EFE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		393A47E821CCDED5005860F3 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		393A47E921CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSecurePlayerSDK.framework; sourceTree = "<group>"; };
 		393A47EA21CCDED5005860F3 /* SecurePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurePlayer.framework; sourceTree = "<group>"; };
-		39D4609C221EA1BC008C9FC7 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		5E7EEE8C1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurePlayerPrePersonalizedPlayerViewController.h; sourceTree = "<group>"; };
 		5E7EEE8D1CA9E70E0049E43F /* SecurePlayerPrePersonalizedPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurePlayerPrePersonalizedPlayerViewController.m; sourceTree = "<group>"; };
 		9782DAFF1BFC1E9E0094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DB001BFC1E9E0094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
-		97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,29 +121,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D4609D221EA1BD008C9FC7 /* ExternalAccessory.framework in Frameworks */,
-				39278CCC2191DE8D00F6F4E2 /* libresolv.tbd in Frameworks */,
-				39278CCA2191DE8700F6F4E2 /* libz.tbd in Frameworks */,
-				39278CC82191DE8100F6F4E2 /* libxml2.tbd in Frameworks */,
-				39278CC62191DE7B00F6F4E2 /* libc++.tbd in Frameworks */,
-				0BDC86FE1D5B96E00012EFA8 /* CoreLocation.framework in Frameworks */,
-				97E5875F1D4AE14800202E09 /* JavaScriptCore.framework in Frameworks */,
-				0BDBDBE71D35C181003933D0 /* AVKit.framework in Frameworks */,
-				0BD84A111B911555006CB6D0 /* CoreMedia.framework in Frameworks */,
-				393A47ED21CCDED5005860F3 /* SecurePlayer.framework in Frameworks */,
-				0BD84A0F1B911550006CB6D0 /* OpenGLES.framework in Frameworks */,
-				393A47EC21CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework in Frameworks */,
-				0BD84A0D1B91154A006CB6D0 /* CoreGraphics.framework in Frameworks */,
-				0BD84A0B1B911545006CB6D0 /* UIKit.framework in Frameworks */,
-				0BD84A091B91153E006CB6D0 /* QuartzCore.framework in Frameworks */,
-				0BD84A071B911538006CB6D0 /* CFNetwork.framework in Frameworks */,
-				0BD84A051B911533006CB6D0 /* AudioToolbox.framework in Frameworks */,
-				0BD84A031B91152D006CB6D0 /* AVFoundation.framework in Frameworks */,
-				0BD84A021B911525006CB6D0 /* CoreText.framework in Frameworks */,
-				0BD84A001B91151F006CB6D0 /* Security.framework in Frameworks */,
-				0B9458B41AC338C9000DD545 /* MediaPlayer.framework in Frameworks */,
 				393A47EB21CCDED5005860F3 /* OoyalaSDK.framework in Frameworks */,
-				0B9458B31AC338BD000DD545 /* SystemConfiguration.framework in Frameworks */,
+				393A47EC21CCDED5005860F3 /* OoyalaSecurePlayerSDK.framework in Frameworks */,
+				393A47ED21CCDED5005860F3 /* SecurePlayer.framework in Frameworks */,
+				3929663B22674F5900051EFE /* CoreLocation.framework in Frameworks */,
+				3929663D22674F8500051EFE /* ExternalAccessory.framework in Frameworks */,
+				3929663F22674FA100051EFE /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,27 +188,9 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39D4609C221EA1BC008C9FC7 /* ExternalAccessory.framework */,
-				0BD84A041B911533006CB6D0 /* AudioToolbox.framework */,
-				0B140F8A1A2E53A6001324EE /* AVFoundation.framework */,
-				0BDBDBE61D35C181003933D0 /* AVKit.framework */,
-				0BD84A061B911538006CB6D0 /* CFNetwork.framework */,
-				0BD84A0C1B91154A006CB6D0 /* CoreGraphics.framework */,
-				0BDC86FD1D5B96E00012EFA8 /* CoreLocation.framework */,
-				0BD84A101B911555006CB6D0 /* CoreMedia.framework */,
-				0BD84A011B911525006CB6D0 /* CoreText.framework */,
-				97E5875E1D4AE14800202E09 /* JavaScriptCore.framework */,
-				39278CC52191DE7A00F6F4E2 /* libc++.tbd */,
-				39278CCB2191DE8C00F6F4E2 /* libresolv.tbd */,
-				39278CC72191DE8100F6F4E2 /* libxml2.tbd */,
-				39278CC92191DE8700F6F4E2 /* libz.tbd */,
-				0BD84A121B91159B006CB6D0 /* MediaAccessibility.framework */,
-				0B140F881A2E5374001324EE /* MediaPlayer.framework */,
-				0BD84A0E1B911550006CB6D0 /* OpenGLES.framework */,
-				0BD84A081B91153E006CB6D0 /* QuartzCore.framework */,
-				0B140F8C1A2E53B0001324EE /* Security.framework */,
-				0B140F8E1A2E53BE001324EE /* SystemConfiguration.framework */,
-				0BD84A0A1B911545006CB6D0 /* UIKit.framework */,
+				3929663A22674F5900051EFE /* CoreLocation.framework */,
+				3929663C22674F8500051EFE /* ExternalAccessory.framework */,
+				3929663E22674FA100051EFE /* libc++.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -426,6 +356,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.WAC = {
 								enabled = 0;
@@ -639,22 +570,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/SecurePlayerSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SecurePlayerSampleApp;
 				PRODUCT_NAME = SecurePlayerSampleApp;
@@ -666,22 +590,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/SecurePlayerSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.SecurePlayerSampleApp;
 				PRODUCT_NAME = SecurePlayerSampleApp;

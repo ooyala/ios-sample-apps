@@ -54,7 +54,7 @@
  *  playback.
  */
 
-@property(nonatomic, copy, readonly) NSArray *uiElements;
+@property(nonatomic, copy, readonly) NSArray<NSNumber *> *uiElements;
 
 /**
  *  Whether or not the ad UI will be disabled for this ad.

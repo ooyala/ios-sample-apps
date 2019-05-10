@@ -90,8 +90,7 @@
                                                                overrideConfigs:overrideConfigs];
   self.skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
                                                          skinOptions:skinOptions
-                                                              parent:self.playerView
-                                                       launchOptions:nil];
+                                                              parent:self.playerView];
   [self addChildViewController:self.skinController];
   self.skinController.view.frame = self.playerView.bounds;
   

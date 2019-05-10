@@ -19,8 +19,8 @@
 
 /**
  * Register ad player for an ad type
- * @param[in] adPlayerClass the ad player class
- * @param[in] adClass the ad class
+ * @param adPlayerClass the ad player class
+ * @param adClass the ad class
  */
 - (void)registerAdPlayer:(Class)adPlayerClass forType:(Class)adClass;
 

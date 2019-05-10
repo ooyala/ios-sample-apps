@@ -15,34 +15,34 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
- * Init an OOOfflineVideo with the location of a downloaded asset.
- * Use this for Clear (non protected) HLS assets.
- *
- * @param location where the downloaded asset is located locally.
+ Init an OOOfflineVideo with the location of a downloaded asset.
+ Use this for Clear (non protected) HLS assets.
+ 
+ @param location where the downloaded asset is located locally.
  */
 - (instancetype)initWithVideoLocation:(NSURL *)location NS_DESIGNATED_INITIALIZER;
 
 /**
- * Init an OOOfflineVideo with the location of a downloaded asset.
- * Use this for Fairplay HLS assets.
- *
- * @param location where the downloaded asset is located locally.
- * @param keyLocation where the Fairplay key is stored.
+ Init an OOOfflineVideo with the location of a downloaded asset.
+ Use this for Fairplay HLS assets.
+ 
+ @param location where the downloaded asset is located locally.
+ @param keyLocation where the Fairplay key is stored.
  */
 - (instancetype)initWithVideoLocation:(NSURL *)location fairplayKeyLocation:(NSURL *)keyLocation;
 
 /**
- * Class method that uses initWithFileLocation: initializer.
- *
- * @param location where the downloaded asset is located locally.
+ Class method that uses initWithVideoLocation: initializer.
+ 
+ @param location where the downloaded asset is located locally.
  */
 + (OOOfflineVideo *)videoWithVideoLocation:(NSURL *)location;
 
 /**
- * Class method that uses initWithFileLocation:keyLocation: initializer.
- *
- * @param location where the downloaded asset is located locally.
- * @param keyLocation where the Fairplay key is stored.
+ Class method that uses initWithVideoLocation:fairplayKeyLocation: initializer.
+ 
+ @param location where the downloaded asset is located locally.
+ @param keyLocation where the Fairplay key is stored.
  */
 + (OOOfflineVideo *)videoWithVideoLocation:(NSURL *)location fairplayKeyLocation:(NSURL *)keyLocation;
 @end

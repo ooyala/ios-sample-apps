@@ -7,13 +7,19 @@
 
 import Foundation
 
-class OptionDataSource: NSObject {
+class OptionDataSource {
 
-  class func options() -> [PlayerSelectionOption] {
+  static var options: [PlayerSelectionOption] {
     return [
       PlayerSelectionOption(pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
                             embedCode: "JiOTdrdzqAujYa5qvnOxszbrTEuU5HMt",
                             title: "HLS Clear",
+                            thumbnailURL: URL(string: "https://pbs.twimg.com/profile_images/519213440733171712/-Hwz3vF3.png")!,
+                            domain: OOPlayerDomain(string: "http://www.ooyala.com")),
+
+      PlayerSelectionOption(pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
+                            embedCode: "Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1",
+                            title: "HLS Video",
                             thumbnailURL: URL(string: "https://pbs.twimg.com/profile_images/519213440733171712/-Hwz3vF3.png")!,
                             domain: OOPlayerDomain(string: "http://www.ooyala.com")),
       

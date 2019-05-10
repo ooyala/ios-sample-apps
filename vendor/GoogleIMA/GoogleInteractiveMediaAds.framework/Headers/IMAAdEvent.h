@@ -30,6 +30,17 @@ typedef NS_ENUM(NSInteger, IMAAdEventType){
    */
   kIMAAdEvent_AD_BREAK_STARTED,
   /**
+   *  Ad period ended (only used for dynamic ad insertion).
+   */
+  kIMAAdEvent_AD_PERIOD_ENDED,
+  /**
+   *  Ad period started is fired when an ad period starts. This includes the
+   *  entire ad break including slate as well. This event will be fired even for
+   *  ads that are being replayed or when seeking to the middle of an ad break.
+   *  (only used for dynamic ad insertion).
+   */
+  kIMAAdEvent_AD_PERIOD_STARTED,
+  /**
    *  All ads managed by the ads manager have completed.
    */
   kIMAAdEvent_ALL_ADS_COMPLETED,

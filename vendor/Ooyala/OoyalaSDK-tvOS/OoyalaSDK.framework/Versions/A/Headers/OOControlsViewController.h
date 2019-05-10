@@ -3,19 +3,21 @@
  * @brief      OOControlsViewController
  * @details    OOControlsViewController.h in OoyalaSDK
  * @date       2/23/12
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "OOOoyalaPlayerViewController.h"
 #import "OOPlayerState.h"
 #import "OOEnums.h"
+#import "OOOoyalaPlayerDelegate.h"
 
 @class OOOoyalaPlayer;
 
 static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 
-@interface OOControlsViewController : UIViewController
+@interface OOControlsViewController : UIViewController <OOOoyalaPlayerDelegate>
 
 @property (nonatomic, weak) id delegate;
 @property (nonatomic, weak) OOOoyalaPlayer *player;
