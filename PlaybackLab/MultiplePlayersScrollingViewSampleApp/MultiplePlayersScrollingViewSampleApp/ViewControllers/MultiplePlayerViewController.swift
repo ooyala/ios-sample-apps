@@ -30,7 +30,7 @@ class MultiplePlayerViewController: UIViewController {
   
   private lazy var collectionView: UICollectionView = {
     let collection = UICollectionView(frame: .zero,
-                                      collectionViewLayout: self.collectionViewFlowLayout)
+                                      collectionViewLayout: collectionViewFlowLayout)
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.backgroundColor = .white
     collection.allowsSelection = false
@@ -105,6 +105,8 @@ class MultiplePlayerViewController: UIViewController {
   
   var currentItem = -1
   
+  var isScrolling = false
+
   // MARK: - Life cycle
 
   override func loadView() {
@@ -147,6 +149,11 @@ class MultiplePlayerViewController: UIViewController {
                                            object: sharedPlayer.player)
 
     NotificationCenter.default.addObserver(self,
+                                           selector: #selector(playerTimeChanged(_:)),
+                                           name: NSNotification.Name.OOOoyalaPlayerTimeChanged,
+                                           object: sharedPlayer.player)
+
+    NotificationCenter.default.addObserver(self,
                                            selector: #selector(fullscreenChanged(_:)),
                                            name: NSNotification.Name.OOSkinViewControllerFullscreenChanged,
                                            object: sharedPlayer)
@@ -181,17 +188,21 @@ class MultiplePlayerViewController: UIViewController {
       }
     }
     
+    var playerSelectionOption = options[indexPath.row]
     if currentItem == indexPath.row {
-      self.sharedPlayer.player.play()
+      if !playerSelectionOption.isPaused {
+        sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
+      } else {
+        sharedPlayer.player.seek(playerSelectionOption.playheadTime)
+      }
       return
-    }
-    
-    currentItem = indexPath.row
-    let playerSelectionOption = options[currentItem]
-    
-    DispatchQueue.main.async {
-      if Thread.isMainThread {
-        self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
+    } else {
+      currentItem = indexPath.row
+      playerSelectionOption = options[currentItem]
+      DispatchQueue.main.async {
+        if Thread.isMainThread {
+          self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
+        }
       }
     }
   }
@@ -215,6 +226,7 @@ class MultiplePlayerViewController: UIViewController {
 
   @objc
   func currentItemChanged() {
+    isScrolling = false
     guard let currentItem = sharedPlayer.player.currentItem,
       let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode }) else { return }
     let indexPath = IndexPath(row: index, section: 0)
@@ -223,12 +235,28 @@ class MultiplePlayerViewController: UIViewController {
 
   @objc
   func playerStateHandler(_ notification: Notification) {
+    if isScrolling {
+      return
+    }
+
     let state = sharedPlayer.player.state()
     let playerSelectionOption = options[currentItem]
     
+    print("Ooyala Player State: \(String(describing: OOOoyalaPlayerStateConverter.playerState(toString: state)!))")
+
     switch (state) {
     case .ready:
-      sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
+      if !playerSelectionOption.isPaused {
+        sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
+      } else {
+        sharedPlayer.player.seek(playerSelectionOption.playheadTime)
+      }
+      break
+    case .playing:
+      playerSelectionOption.isPaused = false
+      break
+    case .paused:
+      playerSelectionOption.isPaused = true
       break
     case .completed:
       playerSelectionOption.playheadTime = 0.0
@@ -238,6 +266,15 @@ class MultiplePlayerViewController: UIViewController {
     }
   }
   
+  @objc
+  func playerTimeChanged(_ notification: Notification) {
+    if isScrolling {
+      return
+    }
+    let playerSelectionOption = options[currentItem]
+    playerSelectionOption.playheadTime = sharedPlayer.player.playheadTime()
+  }
+
   @objc
   func playerSeekCompleted(_ notification: Notification) {
     guard let userInfo = notification.userInfo,
@@ -266,16 +303,9 @@ class MultiplePlayerViewController: UIViewController {
 
 extension MultiplePlayerViewController: UICollectionViewDelegate {
   
-  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-    guard let currentItem = sharedPlayer.player.currentItem,
-      let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode }) else { return }
-    
-    let indexPath = IndexPath(item: index, section: 0)
-    let playerSelectionOption = options[indexPath.row]
-    
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    isScrolling = true
     sharedPlayer.player.pause()
-    playerSelectionOption.playheadTime = sharedPlayer.player.playheadTime()
-    
     initTimer()
   }
   
