@@ -12,6 +12,7 @@ class PlayerSelectionOption {
   public private(set) var domain: OOPlayerDomain
   public private(set) var embedTokenGenerator: OOEmbedTokenGenerator?
   public var playheadTime: Float64 = 0
+  public var isPaused = false
   
   init(embedCode: String,
        pcode: String,
