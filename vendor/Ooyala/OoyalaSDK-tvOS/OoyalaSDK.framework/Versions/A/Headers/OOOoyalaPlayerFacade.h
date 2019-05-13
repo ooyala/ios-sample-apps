@@ -70,12 +70,12 @@
 
 /**
  * Get the version and RC of the Ooyala SDK
- * @returns the string that represents the SDK version
+ * @return the string that represents the SDK version
  */
 + (NSString *)version;
 
 /**
- * @returns YES means to try to use local/debug DRM modes,
+ * @return YES means to try to use local/debug DRM modes,
  * NO means to use regular DRM config.
  */
 + (BOOL)useDebugDRMPlayback;
@@ -83,13 +83,13 @@
 
 /**
  * set encryptedloopback.
- * @param[in] enabled true if enabled, false if disabled
+ * @param enabled true if enabled, false if disabled
  */
 + (void)setEncryptedLoopback:(BOOL)enabled;
 
 /**
  * get encryptedloopback.
- * @returns encryptedLoopback;
+ * @return encryptedLoopback;
  */
 + (BOOL)encryptedLoopback;
 
@@ -108,7 +108,7 @@
 /**
  Use to set different states for Ooyala Analytics (IQ) tracking. Default OOIQAnalyticsTrackingStateDefault.
  @warning Property should be set before creating an instance of OOoyalaPlayer.
- @param[in] state The IQ analytics state
+ @param state The IQ analytics state
  */
 + (void)setIqAnalyticsTrackingState:(OOIQAnalyticsTrackingState)state;
 
@@ -177,7 +177,7 @@
 
 /**
  * Gets the user's current desired state.
- * @returns a string containing the current state
+ * @return a string containing the current state
  */
 @property (nonatomic, readonly)OOOoyalaPlayerDesiredState desiredState;
 
@@ -206,26 +206,26 @@
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
- * @param[in] apiClient the initialized OOOoyalaAPIClient to use
- * @returns the initialized OOOoyalaPlayer
+ * @param apiClient the initialized OOOoyalaAPIClient to use
+ * @return the initialized OOOoyalaPlayer
  */
 - (instancetype)initWithOoyalaAPIClient:(OOOoyalaAPIClient *)apiClient;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
- * @param[in] pcode Your Provider Code
- * @param[in] domain Your Embed Domain
- * @returns the initialized OOOoyalaPlayer
+ * @param pcode Your Provider Code
+ * @param domain Your Embed Domain
+ * @return the initialized OOOoyalaPlayer
  */
 - (instancetype)initWithPcode:(NSString *)pcode
                        domain:(OOPlayerDomain *)domain;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
- * @param[in] pcode Your Provider Code
- * @param[in] domain Your Embed Domain
- * @param[in] options the options
- * @returns the initialized OOOoyalaPlayer
+ * @param pcode Your Provider Code
+ * @param domain Your Embed Domain
+ * @param options the options
+ * @return the initialized OOOoyalaPlayer
  */
 - (instancetype)initWithPcode:(NSString *)pcode
                        domain:(OOPlayerDomain *)domain
@@ -233,10 +233,10 @@
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
- * @param[in] pcode Your Provider Code
- * @param[in] domain Your Embed Domain
- * @param[in] embedTokenGenerator the initialized OOEmbedTokenGenerator to use
- * @returns the initialized OOOoyalaPlayer
+ * @param pcode Your Provider Code
+ * @param domain Your Embed Domain
+ * @param embedTokenGenerator the initialized OOEmbedTokenGenerator to use
+ * @return the initialized OOOoyalaPlayer
  */
 - (instancetype)initWithPcode:(NSString *)pcode
                        domain:(OOPlayerDomain *)domain
@@ -244,11 +244,11 @@
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
- * @param[in] pcode Your Provider Code
- * @param[in] domain Your Embed Domain
- * @param[in] embedTokenGenerator the initialized OOEmbedTokenGenerator to use
- * @param[in] options Extra settings
- * @returns the initialized OOOoyalaPlayer
+ * @param pcode Your Provider Code
+ * @param domain Your Embed Domain
+ * @param embedTokenGenerator the initialized OOEmbedTokenGenerator to use
+ * @param options Extra settings
+ * @return the initialized OOOoyalaPlayer
  */
 - (instancetype)initWithPcode:(NSString *)pcode
                        domain:(OOPlayerDomain *)domain
@@ -261,93 +261,93 @@
 - (void)setDesiredState:(OOOoyalaPlayerDesiredState)desiredState;
 
 /**
- * @param[in] stream non-nil, non-empty NSArray containing OOStreams.
+ * @param stream non-nil, non-empty NSArray containing OOStreams.
  */
 - (BOOL)setStream:(OOStream*)stream;
 
 /**
- * @param[in] streams non-nil, non-empty NSArray containing OOStreams.
+ * @param streams non-nil, non-empty NSArray containing OOStreams.
  */
 - (BOOL)setStreams:(NSArray*)streams;
 
 /**
  * Casting of OOUnbundledVideo is not supported.
- * @param[in] unbundledVideo non-nil OOUnbundledVideo containing OOStreams.
+ * @param unbundledVideo non-nil OOUnbundledVideo containing OOStreams.
  */
 - (BOOL)setUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
 
 /**
  * Reinitializes the player with a new embedCode.
- * @param[in] embedCode the embed code to use
- * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @param embedCode the embed code to use
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setEmbedCode:(NSString *)embedCode;
 
 /**
  * Reinitializes the player with the new embedCodes (as an array).
- * @param[in] embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
- * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setEmbedCodes:(NSArray *)embedCodes;
 
 /**
  * Reinitializes the player with a new embedCode and sets the ad set dynamically.
- * @param[in] embedCode the embed code to use
- * @param[in] adSetCode (possibly nil) the ad set code to use
- * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @param embedCode the embed code to use
+ * @param adSetCode (possibly nil) the ad set code to use
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setEmbedCode:(NSString *)embedCode adSetCode:(NSString *)adSetCode;
 
 /**
  * Reinitializes the player with the new embedCodes (as an array) and sets the ad set dynamically.
- * @param[in] embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
- * @param[in] adSetCode (possibly nil) the ad set code to use.
- * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
+ * @param adSetCode (possibly nil) the ad set code to use.
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setEmbedCodes:(NSArray *)embedCodes adSetCode:(NSString *)adSetCode;
 
 /**
  * Reinitializes the player with a new external ID. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
- * @param[in] externalId the external ID to use
- * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @param externalId the external ID to use
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setExternalId:(NSString *)externalId;
 
 /**
  * Reinitializes the player with the new external IDs (as an array). External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
- * @param[in] externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
- * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @param externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)setExternalIds:(NSArray *)externalIds;
 
 /**
  * Reinitializes the player with a root item.
- * @param[in] theRootItem the root item to use
+ * @param theRootItem the root item to use
  */
 - (void)setRootItem:(OOContentItem *)theRootItem;
 
 /**
  * Reinitializes the player with a new asset JSON.
- * @param[in] asset the new asset JSON to use
+ * @param asset the new asset JSON to use
  */
 - (void)setAsset:(NSDictionary *)asset;
 
 /**
  * Sets the current video in a channel, if the video is present.
- * @param[in] embedCode the embed code of the video to play
- * @returns YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @param embedCode the embed code of the video to play
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
  */
 - (BOOL)changeCurrentItemToEmbedCode:(NSString *)embedCode;
 
 /**
  * Sets the current video.  OOVideo must be a part of the content tree provided by the root item.
- * @returns a BOOL indicating that the item was successfully changed
+ * @return a BOOL indicating that the item was successfully changed
  */
 - (BOOL)changeCurrentItemToVideo:(OOVideo *)video;
 
 /**
  * Set the unbundled HA video.
- * @returns a BOOL indicating that the item was successfully changed
+ * @return a BOOL indicating that the item was successfully changed
  */
 - (BOOL) changeUnbundledVideo:(OOVideo *)video;
 
@@ -362,7 +362,7 @@
 
 /**
  * Gets the player's current state.
- * @returns a string containing the current state
+ * @return a string containing the current state
  */
 - (OOOoyalaPlayerState)state;
 
@@ -370,7 +370,7 @@
 
 /**
  * DEPRECATED. Sets a tag for custom analytics.
- * @param[in] tags n array of NSStrings
+ * @param tags n array of NSStrings
  */
 - (void)setCustomAnalyticsTags:(NSArray *)tags;
 
@@ -382,13 +382,6 @@
  * Return an OoyalaAPIClient
  */
 - (OOOoyalaAPIClient *)api;
-
-/**
- Returns a string with all the actions made by offline analytics
- @param[in] embedCode of the offline file
- @returns a string with a list of the actions
- */
-- (NSString *)dataFromFile:(NSString *)embedCode;
 
 @end
 

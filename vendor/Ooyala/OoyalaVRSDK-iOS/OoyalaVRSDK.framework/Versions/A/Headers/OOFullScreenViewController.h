@@ -5,7 +5,6 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-
 #import <Foundation/Foundation.h>
 #import "OOTimeSliderDelegate.h"
 #import "OOControlsDelegate.h"

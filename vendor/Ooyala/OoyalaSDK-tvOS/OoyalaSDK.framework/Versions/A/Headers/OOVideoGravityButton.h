@@ -14,7 +14,7 @@
 
 /**
  Set if the Fill icon is showing, or if the Fit icon is showing.
- @param[in] isGravityFillShowing YES to show the Fill icon, or NO to show the Fit icon
+ @param isGravityFillShowing YES to show the Fill icon, or NO to show the Fit icon
  */
 - (void)setIsGravityFillShowing:(BOOL)isGravityFillShowing;
 

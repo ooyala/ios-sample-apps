@@ -140,6 +140,8 @@ class AssetTableViewController: UITableViewController {
         self.tableView.reloadRows(at: [indexPath], with: .left)
       })]
 
+    @unknown default:
+      fatalError()
     }
     
     let alertController = UIAlertController(title: dtoAsset.name,
@@ -169,7 +171,7 @@ class AssetTableViewController: UITableViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let dtoAsset = sender as? OODtoAsset,
        segue.identifier == playerSegue {
-       let playerViewController = segue.destination as! PlayerViewController
+      guard let playerViewController = segue.destination as? PlayerViewController else { return }
       playerViewController.dtoAsset = dtoAsset
     }
   }

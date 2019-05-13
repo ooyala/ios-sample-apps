@@ -18,17 +18,8 @@
 		0BA32FC51D932A34007A0017 /* SampleAppPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA32FB81D932A34007A0017 /* SampleAppPlayerViewController.m */; };
 		0BA32FC61D932A34007A0017 /* PlayerSimple.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA32FBA1D932A34007A0017 /* PlayerSimple.xib */; };
 		0BA32FC71D932A34007A0017 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA32FBB1D932A34007A0017 /* TableCell.xib */; };
-		39B702D1221C1D000036DE31 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702D0221C1D000036DE31 /* libxml2.tbd */; };
-		39B702D3221C1D070036DE31 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702D2221C1D070036DE31 /* libc++.tbd */; };
-		39B702D5221C1D0F0036DE31 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702D4221C1D0F0036DE31 /* libsqlite3.tbd */; };
-		39B702DE221C1D720036DE31 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702DD221C1D720036DE31 /* AVKit.framework */; };
-		39B702E0221C1D7A0036DE31 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702DF221C1D790036DE31 /* MediaAccessibility.framework */; };
-		39B702E2221C1D810036DE31 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702E1221C1D810036DE31 /* JavaScriptCore.framework */; };
-		39B702E4221C1D880036DE31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702E3221C1D870036DE31 /* CoreLocation.framework */; };
-		39B702E6221C1D8E0036DE31 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702E5221C1D8E0036DE31 /* MediaPlayer.framework */; };
-		39B702E8221C1D950036DE31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702E7221C1D950036DE31 /* SystemConfiguration.framework */; };
-		39B702EA221C1D9F0036DE31 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B702E9221C1D9F0036DE31 /* AdSupport.framework */; };
-		39B70304221C30560036DE31 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B70303221C30560036DE31 /* WebKit.framework */; };
+		3929662F22674A7D00051EFE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929662E22674A7D00051EFE /* WebKit.framework */; };
+		3929663122674AA800051EFE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3929663022674AA800051EFE /* libsqlite3.tbd */; };
 		9784D01E1AD5D316002F2ECD /* NielsenAppApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */; };
 		9784D01F1AD5D316002F2ECD /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */; };
 		9784D0331AD5EE79002F2ECD /* OoyalaNielsenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784D0321AD5EE79002F2ECD /* OoyalaNielsenSDK.framework */; };
@@ -52,17 +43,8 @@
 		0BA32FB81D932A34007A0017 /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0BA32FBA1D932A34007A0017 /* PlayerSimple.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerSimple.xib; sourceTree = "<group>"; };
 		0BA32FBB1D932A34007A0017 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		39B702D0221C1D000036DE31 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		39B702D2221C1D070036DE31 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		39B702D4221C1D0F0036DE31 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		39B702DD221C1D720036DE31 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		39B702DF221C1D790036DE31 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		39B702E1221C1D810036DE31 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		39B702E3221C1D870036DE31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		39B702E5221C1D8E0036DE31 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		39B702E7221C1D950036DE31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		39B702E9221C1D9F0036DE31 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		39B70303221C30560036DE31 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3929662E22674A7D00051EFE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3929663022674AA800051EFE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		970B98071A1AD5D90091AD38 /* NielsenSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NielsenSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9784D01B1AD5D316002F2ECD /* NielsenAppApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NielsenAppApi.framework; sourceTree = "<group>"; };
 		9784D01C1AD5D316002F2ECD /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
@@ -74,20 +56,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39B70304221C30560036DE31 /* WebKit.framework in Frameworks */,
-				39B702EA221C1D9F0036DE31 /* AdSupport.framework in Frameworks */,
-				39B702E8221C1D950036DE31 /* SystemConfiguration.framework in Frameworks */,
-				39B702E6221C1D8E0036DE31 /* MediaPlayer.framework in Frameworks */,
-				39B702E4221C1D880036DE31 /* CoreLocation.framework in Frameworks */,
-				39B702E2221C1D810036DE31 /* JavaScriptCore.framework in Frameworks */,
-				39B702E0221C1D7A0036DE31 /* MediaAccessibility.framework in Frameworks */,
-				39B702DE221C1D720036DE31 /* AVKit.framework in Frameworks */,
-				39B702D5221C1D0F0036DE31 /* libsqlite3.tbd in Frameworks */,
-				39B702D3221C1D070036DE31 /* libc++.tbd in Frameworks */,
-				39B702D1221C1D000036DE31 /* libxml2.tbd in Frameworks */,
+				9784D01F1AD5D316002F2ECD /* OoyalaSDK.framework in Frameworks */,
 				9784D0331AD5EE79002F2ECD /* OoyalaNielsenSDK.framework in Frameworks */,
 				9784D01E1AD5D316002F2ECD /* NielsenAppApi.framework in Frameworks */,
-				9784D01F1AD5D316002F2ECD /* OoyalaSDK.framework in Frameworks */,
+				3929662F22674A7D00051EFE /* WebKit.framework in Frameworks */,
+				3929663122674AA800051EFE /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,17 +123,8 @@
 		39B702CF221C1D000036DE31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39B70303221C30560036DE31 /* WebKit.framework */,
-				39B702E9221C1D9F0036DE31 /* AdSupport.framework */,
-				39B702E7221C1D950036DE31 /* SystemConfiguration.framework */,
-				39B702E5221C1D8E0036DE31 /* MediaPlayer.framework */,
-				39B702E3221C1D870036DE31 /* CoreLocation.framework */,
-				39B702E1221C1D810036DE31 /* JavaScriptCore.framework */,
-				39B702DF221C1D790036DE31 /* MediaAccessibility.framework */,
-				39B702DD221C1D720036DE31 /* AVKit.framework */,
-				39B702D4221C1D0F0036DE31 /* libsqlite3.tbd */,
-				39B702D2221C1D070036DE31 /* libc++.tbd */,
-				39B702D0221C1D000036DE31 /* libxml2.tbd */,
+				3929663022674AA800051EFE /* libsqlite3.tbd */,
+				3929662E22674A7D00051EFE /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,8 +153,8 @@
 			children = (
 				0BA32FA41D932A34007A0017 /* NielsenSampleApp */,
 				9784D0191AD5D316002F2ECD /* VendorLibraries */,
-				970B98081A1AD5D90091AD38 /* Products */,
 				39B702CF221C1D000036DE31 /* Frameworks */,
+				970B98081A1AD5D90091AD38 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,6 +207,7 @@
 				TargetAttributes = {
 					970B98061A1AD5D90091AD38 = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -422,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -448,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";

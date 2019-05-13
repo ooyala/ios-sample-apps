@@ -3,7 +3,7 @@
  * @brief      OOFreewheelManager
  * @details    OOFreewheelManager.h in OoyalaFreewheelSDK
  * @date       11/7/13
- * @copyright  Copyright (c) 2013 Ooyala, Inc. All rights reserved.
+ * @copyright  Copyright © 2013 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -32,14 +32,14 @@
 
  /**
  * Initialize a OOFreewheelManager using the OOOoyalaPlayerViewController
- * @param[in] viewController the OOOoylaPlayerViewController control the OOOoyalaPlayer's View
+ * @param viewController the OOOoylaPlayerViewController control the OOOoyalaPlayer's View
  * @return the initialized OOFreewheelManager
  */
 - (id)initWithOoyalaPlayerViewController:(OOOoyalaPlayerViewController *)viewController;
 
 /**
  * Initialize a OOFreewheelManager using the OOOoyalaPlayer
- * @param[in] player the OOOoylaPlayer
+ * @param player the OOOoylaPlayer
  * @return the initialized OOFreewheelManager
  */
 - (id)initWithOoyalaPlayer:(OOOoyalaPlayer *)player;
@@ -52,7 +52,7 @@
  * "fw_android_player_profile"    "fw_tutorial_android"
  * "fw_android_site_section_id"   "fw_tutorial_android"
  * "fw_android_video_asset_id"    "fw_simple_tutorial_asset"</pre>
- * @param[in] freewheelParameters Dictionary with the above defined string keys and values
+ * @param freewheelParameters Dictionary with the above defined string keys and values
  */
 - (void)overrideFreewheelParameters:(NSMutableDictionary *)freewheelParameters;
 

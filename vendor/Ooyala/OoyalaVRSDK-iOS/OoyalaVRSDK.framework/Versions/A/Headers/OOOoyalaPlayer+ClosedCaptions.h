@@ -20,7 +20,7 @@
 
 /**
  * Get the available closed captions languages
- * @returns an NSArray containing the available closed captions languages as NSStrings
+ * @return an NSArray containing the available closed captions languages as NSStrings
  */
 - (NSArray *)availableClosedCaptionsLanguages;
 

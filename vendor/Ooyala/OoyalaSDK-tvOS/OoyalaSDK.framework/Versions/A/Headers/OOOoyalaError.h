@@ -4,7 +4,7 @@
  * @brief      OOOoyalaError
  * @details    OOOoyalaError.h in OoyalaSDK
  * @date       11/21/11
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 @import Foundation;
@@ -62,41 +62,41 @@ typedef NS_ENUM(NSInteger, OOOoyalaErrorCode) {
 
 /** @internal
  * Initialize an OOOoyalaError
- * @param[in] code the error's code
- * @returns the initialized OOOoyalaError
+ * @param code the error's code
+ * @return the initialized OOOoyalaError
  */
 - (instancetype)initWithCode:(OOOoyalaErrorCode)code;
 
 /** @internal
  * Initialize an OOOoyalaError
- * @param[in] error the NSError to initialize the OOOoyalaError from
- * @returns the initialized OOOoyalaError
+ * @param error the NSError to initialize the OOOoyalaError from
+ * @return the initialized OOOoyalaError
  */
 - (instancetype)initWithNSError:(NSError *)error;
 
 /** @internal
  * Initialize an OOOoyalaError
- * @param[in] error the NSError to initialize the OOOoyalaError from
- * @param[in] code the OOOoyalaErrorCode to use
- * @returns the initialized OOOoyalaError
+ * @param error the NSError to initialize the OOOoyalaError from
+ * @param code the OOOoyalaErrorCode to use
+ * @return the initialized OOOoyalaError
  */
 - (instancetype)initWithNSError:(NSError *)error
                            code:(OOOoyalaErrorCode)code;
 
 /** @internal
  * Initialize an OOOoyalaError
- * @param[in] code the error's code
- * @param[in] description the error's description
- * @returns the initialized OOOoyalaError
+ * @param code the error's code
+ * @param description the error's description
+ * @return the initialized OOOoyalaError
  */
 - (instancetype)initWithCode:(OOOoyalaErrorCode)code description:(NSString *)description;
 
 /** @internal
  * Initialize an OOOoyalaError
- * @param[in] code the error's code
- * @param[in] description the error's description
- * @param[in] userInfo a dictionary with more information about the error
- * @returns the initialized OOOoyalaError
+ * @param code the error's code
+ * @param description the error's description
+ * @param userInfo a dictionary with more information about the error
+ * @return the initialized OOOoyalaError
  */
 - (instancetype)initWithCode:(OOOoyalaErrorCode)code
                  description:(NSString *)description
@@ -104,35 +104,35 @@ typedef NS_ENUM(NSInteger, OOOoyalaErrorCode) {
 
 /** @internal
  * Create an OOOoyalaError from the given data
- * @param[in] code the OOOoyalaErrorCode of the error
- * @param[in] description the description of the error
- * @returns the created OOOoyalaError
+ * @param code the OOOoyalaErrorCode of the error
+ * @param description the description of the error
+ * @return the created OOOoyalaError
  */
 + (OOOoyalaError *)errorWithCode:(OOOoyalaErrorCode)code
                      description:(NSString *)description;
 
 /** @internal
  * Create an OOOoyalaError from the given NSError
- * @param[in] error the NSError to create the OOOoyalaError from
- * @returns the created OOOoyalaError
+ * @param error the NSError to create the OOOoyalaError from
+ * @return the created OOOoyalaError
  */
 + (OOOoyalaError *)errorWithNSError:(NSError *)error;
 
 /** @internal
  * Create an OOOoyalaError from the given NSError
- * @param[in] error the NSError to create the OOOoyalaError from
- * @param[in] code the OOOoyalaErrorCode to use
- * @returns the created OOOoyalaError
+ * @param error the NSError to create the OOOoyalaError from
+ * @param code the OOOoyalaErrorCode to use
+ * @return the created OOOoyalaError
  */
 + (OOOoyalaError *)errorWithNSError:(NSError *)error
                                code:(OOOoyalaErrorCode)code;
 
 /** @internal
  * Create an OOOoyalaError from the given data
- * @param[in] code the OOOoyalaErrorCode of the error
- * @param[in] description the description of the error
- * @param[in] userInfo a dictionary with more information about the error
- * @returns the created OOOoyalaError
+ * @param code the OOOoyalaErrorCode of the error
+ * @param description the description of the error
+ * @param userInfo a dictionary with more information about the error
+ * @return the created OOOoyalaError
  */
 + (OOOoyalaError *)errorWithCode:(OOOoyalaErrorCode)code
                      description:(NSString *)description

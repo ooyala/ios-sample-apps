@@ -5,7 +5,7 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit.UIButton;
 #import "OOImages.h"
 
 #ifndef OOScalableImageButton_h
@@ -16,9 +16,9 @@
 @property (nonatomic) CGFloat scale;
 
 /**
- Initialize an OOPlayPauseButton
- @param[in] scale a multiplier to resize the button
- @returns an initialized OOPlayPauseButton, or nil
+ Initialize an OOScalableImageButton
+ @param scale a multiplier to resize the button
+ @return an initialized OOScalableImageButton, or nil
  */
 - (instancetype)initWithScale:(CGFloat)scale;
 

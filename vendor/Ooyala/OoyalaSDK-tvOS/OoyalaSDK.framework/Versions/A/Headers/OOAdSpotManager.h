@@ -2,7 +2,7 @@
  * @class     OOAdSpotManager OOAdSpotManager.h "OOAdSpotManager.h"
  * @brief     OOAdSpotManager
  * @details   OOAdSpotManager.h in OoyalaSDK
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import "CoreMedia/CMTime.h"
@@ -50,7 +50,7 @@
  *
  * @param time
  *          in CMTime
- * @returns the unplayed adspot before the specified time which, null if no
+ * @return the unplayed adspot before the specified time which, null if no
  *          such adspot
  */
 - (OOAdSpot *)adBeforeTime:(Float64)time;
@@ -66,42 +66,42 @@
 /**
  * get the adspot list size
  *
- * @returns size
+ * @return size
  */
 - (NSUInteger)count;
 
 /**
  * Get first ad in ad array
  *
- * @returns OOAdSpot
+ * @return OOAdSpot
  */
 - (OOAdSpot *)firstAd;
 
 /**
  * Get next ad to be played
  *
- * @returns OOAdSpot
+ * @return OOAdSpot
  */
 - (OOAdSpot *)nextAd;
 
 /**
  * Get last ad in ad array
  *
- * @returns OOAdSpot
+ * @return OOAdSpot
  */
 - (OOAdSpot *)lastAd;
 
 /**
  * Returns YES if all ads were already played
  *
- * @returns YES or NO
+ * @return YES or NO
  */
 - (BOOL)allAdsPlayed;
 
 /**
  * Returns YES if ad was already played
  *
- * @returns YES or NO
+ * @return YES or NO
  */
 - (BOOL)adPlayed:(OOAdSpot *)ad;
   

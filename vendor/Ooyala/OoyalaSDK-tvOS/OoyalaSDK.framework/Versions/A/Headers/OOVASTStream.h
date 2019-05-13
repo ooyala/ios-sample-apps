@@ -1,4 +1,5 @@
 #import "OOStream.h"
+#import "OOTBXML.h"
 
 /**
  * Represents a single VAST stream that can be played in a Stream Player.
@@ -18,8 +19,8 @@
 
 /** @internal
  * Initialize a OOStream using the specified VAST MediaFile XML (subclasses should override this)
- * @param[in] xml the OOTBXMLElement containing the xml to use to initialize this OOStream
- * @returns the initialized OOStream
+ * @param xml the OOTBXMLElement containing the xml to use to initialize this OOStream
+ * @return the initialized OOStream
  */
 - (id)initWithXML:(OOTBXMLElement *)xml;
 

@@ -10,30 +10,45 @@
 #ifndef OO360GVRPlayerView_h
 #define OO360GVRPlayerView_h
 
+/**
+ * @class OO360GVRPlayerView
+ * @brief An OO360GVRPlayerView using to show VR scene
+ */
 @interface OO360GVRPlayerView : OOOoyalaPlayerView
 
 /**
- * An enum whose cases describe how a user can change the video type.
+ * @enum OO360VideoType
+ * @discussion Enum with video rendering possible types
  */
 typedef NS_ENUM(NSInteger, OO360VideoType) {
+  /** Render video in mono type with handle touches */
   Mono,
+  /** Render video in stereo type for using cardboard without handling touches */
   Stereo,
 };
-
+/**
+ * @property videoType
+ * @brief This property is using to choose scene for a rendering. Default: Mono
+ */
 @property (nonatomic, assign) OO360VideoType videoType;
 
 /**
- * Switch mono/stereo type
+ *  @brief Switch video mode between Stereo and Mono
+ *  @param type New video type, that will be choose a scene to render
  */
 - (void)switchVideoType:(OO360VideoType)type;
 
 /**
- * Pause or resume the render loop.
+ *  @brief Pause render when video has been paused
+ *  @see 00360GVRRenderView
+ *  @param paused true if video has been paused, false otherwise
  */
 - (void)setPaused:(BOOL)paused;
 
 /**
- * Set hidden internal render views.
+ *  @abstract Hide render view if video has ended
+ *  @see 00360GVRRenderView
+ *  @param hidden: true if needs to hide render view, false otherwise
  */
 - (void)setHidden:(BOOL)hidden;
 

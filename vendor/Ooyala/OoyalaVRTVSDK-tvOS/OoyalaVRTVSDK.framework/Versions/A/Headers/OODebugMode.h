@@ -1,3 +1,6 @@
+#ifndef OODebugMode_h
+#define OODebugMode_h
+
 #define LOG(...) [OODebugMode log:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
 #define ASSERT(condition, ...) [OODebugMode assert:condition tag:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
 #define ASSERT_FALSE(...) [OODebugMode assertFalse:[NSString stringWithUTF8String:__FILE__] message:__VA_ARGS__];
@@ -18,36 +21,39 @@ typedef NS_ENUM(NSInteger, DebugMode) {
 
 /**
  * gets current debug mode.
- * @returns debug mode
+ * @return debug mode
  */
 + (DebugMode)getDebugMode;
 
 /**
  * sets the debug mode.
- * @param[in] mode the debug mode to be set
+ * @param mode the debug mode to be set
  */
 + (void)setDebugMode:(DebugMode)mode;
 
 /**
  * assert a certain condition
- * @param[in] condition the condition to test
- * @param[in] tag the tag of the component
- * @param[in] format of the message
+ * @param condition the condition to test
+ * @param tag the tag of the component
+ * @param format of the message
  */
 + (void)assert:(BOOL)condition tag:(NSString *)tag message:(NSString *)format, ...;
 
 /**
  * helper function to assert a false condition
- * @param[in] tag the tag
- * @param[in] format of the message
+ * @param tag the tag
+ * @param format of the message
  */
 + (void)assertFalse:(NSString *)tag message:(NSString *)format, ...;
 
 /**
  * log if the debug mode is not none, ignore otherwise
- * @param[in] tag the tag
- * @param[in] format of the message
+ * @param tag the tag
+ * @param format of the message
  */
 + (void)log:(NSString *)tag message:(NSString *)format, ...;
 
 @end
+
+#endif /* OODebugMode_h */
+

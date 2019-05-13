@@ -86,8 +86,7 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
                                                                overrideConfigs:nil];
   _ooyalaPlayerViewController = [[OOSkinViewController alloc] initWithPlayer:player
                                                                  skinOptions:skinOptions
-                                                                      parent:self.playerView
-                                                               launchOptions:nil];
+                                                                      parent:self.playerView];
   
   [self.ooyalaPlayerViewController willMoveToParentViewController:self];
   [self addChildViewController:self.ooyalaPlayerViewController];

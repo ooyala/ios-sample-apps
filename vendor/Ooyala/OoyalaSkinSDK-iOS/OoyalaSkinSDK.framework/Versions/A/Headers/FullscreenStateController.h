@@ -5,11 +5,10 @@
 //  Copyright © 2018 ooyala. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @class UIView;
 @class UIViewController;
-
 
 @interface FullscreenStateController : NSObject
 
@@ -20,7 +19,7 @@
 
 - (void)setFullscreen:(BOOL)fullscreen
 withOrientaionChanges:(BOOL)isOrientaionChanges
-           completion:(nullable void (^)())completion;
+           completion:(nullable void (^)(void))completion;
 - (void)viewWillTransition:(BOOL)isAutoFullscreenWithRotatedEnabled;
 
 @end

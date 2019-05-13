@@ -15,11 +15,12 @@
 #pragma mark - Private properties
 
 @property (nonatomic) OOSkinViewController *skinController;
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 @property (nonatomic) UIImageView *screenshotView;
+@property (nonatomic) NSString *markersFileName;
 
 @end
 
@@ -36,11 +37,12 @@
   self = [super initWithPlayerSelectionOption: playerSelectionOption qaModeEnabled:qaModeEnabled];
   _sharePlugins = [NSMutableArray array];
   if (self.playerSelectionOption) {
-    _nib          = self.playerSelectionOption.nib;
-    _embedCode    = self.playerSelectionOption.embedCode;
-    _playerDomain = self.playerSelectionOption.playerDomain;
-    _pcode        = playerSelectionOption.pcode;
-    self.title    = self.playerSelectionOption.title;
+    _nib             = self.playerSelectionOption.nib;
+    _embedCode       = self.playerSelectionOption.embedCode;
+    _playerDomain    = self.playerSelectionOption.playerDomain;
+    _pcode           = self.playerSelectionOption.pcode;
+    _markersFileName = self.playerSelectionOption.markersFileName;
+    self.title       = self.playerSelectionOption.title;
 
     NSLog(@"%@s", self.playerDomain);
   }
@@ -59,6 +61,8 @@
   
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   OOOptions *options = [OOOptions new];
+  options.markers = [self loadJSONFromBundleWithName:self.markersFileName];
+
   OOOoyalaPlayer *ooyalaPlayer = [[OOOoyalaPlayer alloc] initWithPcode:self.pcode
                                                                 domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
                                                                options:options];
@@ -77,8 +81,7 @@
   
   _skinController = [[OOSkinViewController alloc] initWithPlayer:ooyalaPlayer
                                                      skinOptions:skinOptions
-                                                          parent:_videoView
-                                                   launchOptions:nil];
+                                                          parent:_videoView];
   [self addChildViewController:_skinController];
   _skinController.view.frame = self.videoView.bounds;
 
@@ -98,6 +101,23 @@
   [ooyalaPlayer setEmbedCode:self.embedCode];
   
   [self configureScreenshot];
+}
+
+- (NSDictionary *)loadJSONFromBundleWithName:(NSString *)name {
+  // Load asset from local storage
+  NSString *pathToTestDataJSON = [NSBundle.mainBundle pathForResource:name
+                                                               ofType:@"json"];
+  if (!pathToTestDataJSON) { return nil; }
+
+  NSURL *urlToTestDataJSON = [NSURL fileURLWithPath:pathToTestDataJSON];
+  NSData *jsonData = [NSData dataWithContentsOfURL:urlToTestDataJSON];
+
+  if (!jsonData) { return nil; }
+
+  NSError *error;
+  return [NSJSONSerialization JSONObjectWithData:jsonData
+                                         options:NSJSONReadingAllowFragments
+                                           error:&error];
 }
 
 #pragma mark - Screenshot

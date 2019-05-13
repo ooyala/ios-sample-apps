@@ -30,15 +30,15 @@
 
 /** @internal
  * Initialize a OOVASTAd using the specified xml (subclasses should override this)
- * @param[in] xml the OOTBXMLElement containing the xml to use to initialize 'this OOVASTAd
- * @returns the initialized OOVASTAd
+ * @param xml the OOTBXMLElement containing the xml to use to initialize 'this OOVASTAd
+ * @return the initialized OOVASTAd
  */
 - (instancetype)initWithXML:(OOTBXMLElement *)xml;
 
 /** @internal
  * Update the OOVASTAd using the specified xml (subclasses should override this)
- * @param[in] xml the OOTBXMLElement containing the xml to use to update this OOVASTAd
- * @returns YES if the XML was properly formatter, NO if not
+ * @param xml the OOTBXMLElement containing the xml to use to update this OOVASTAd
+ * @return YES if the XML was properly formatter, NO if not
  */
 - (BOOL)updateWithXML:(OOTBXMLElement *)xml;
 

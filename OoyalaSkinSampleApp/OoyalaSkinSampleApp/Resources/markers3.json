@@ -1,0 +1,18 @@
+{
+  "markers": {
+    "config": "https://www.mocky.io/v2/5c9419c83100006b0555482d",
+    "inline": [
+      {
+        "start": 180,
+        "end": 192,
+        "text":"test test",
+      },
+      {
+        "start": 60,
+        "end": 62,
+        "iconUrl": "https://www.dropbox.com/s/8uagl5ste748ywi/wolverine.svg?raw=1",
+        "type": "icon",
+      }
+    ],
+  }
+}

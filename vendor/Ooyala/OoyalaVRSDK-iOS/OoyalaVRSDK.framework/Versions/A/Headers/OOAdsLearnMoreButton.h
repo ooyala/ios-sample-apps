@@ -1,6 +1,6 @@
 /**
  * @class OOAdsLearnMoreButton OOAdsLearnMoreButton.h "OOAdsLearnMoreButton.h"
- * @copyright Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+ * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
 #import <Foundation/Foundation.h>
@@ -19,8 +19,8 @@
 
 /**
   Initializes the learn more button, to be connected to a specific Ad Player
-  @param[in] AdsPlayer the Ad Player to interface with
-  @returns an initialized OOAdsLearnMoreButton
+  @param AdsPlayer the Ad Player to interface with
+  @return an initialized OOAdsLearnMoreButton
  */
 -(id)initWithAdPlayer:(OOAdMoviePlayer *) AdsPlayer;
 /**

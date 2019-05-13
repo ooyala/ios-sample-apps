@@ -2,7 +2,7 @@
 //  OOStreamPlayer.h
 //  OoyalaSDK
 //
-// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+// Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -32,8 +32,8 @@
 
 /**
  * seek to time
- * @param[in] time to seek
- * @param[in] onCompletion a callback when seek is completed
+ * @param time to seek
+ * @param onCompletion a callback when seek is completed
  */
 - (void)seekToTime:(Float64)time completion:(void (^)(void))onCompletion;
 

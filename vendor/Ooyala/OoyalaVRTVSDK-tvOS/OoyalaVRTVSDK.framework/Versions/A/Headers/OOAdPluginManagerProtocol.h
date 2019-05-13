@@ -2,7 +2,7 @@
 //  OOAdPluginManagerProtocol.h
 //  OoyalaSDK
 //
-// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+// Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

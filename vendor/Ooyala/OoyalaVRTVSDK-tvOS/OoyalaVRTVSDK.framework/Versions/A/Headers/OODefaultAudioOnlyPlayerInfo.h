@@ -2,7 +2,7 @@
 //  OODefaultAudioOnlyPlayerInfo.h
 //  OoyalaSDK
 //
-//  Created by Max Kupetskii on 12/28/18.
+//  Created on 12/28/18.
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 

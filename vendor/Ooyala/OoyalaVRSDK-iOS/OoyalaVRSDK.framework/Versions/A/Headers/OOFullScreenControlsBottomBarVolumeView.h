@@ -5,11 +5,9 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "OOVolumeSliderView.h"
 #import "OOAirPlayButton.h"
-#import "OOPipButton.h"
-
+#import "OOPiPButton.h"
 
 @interface OOFullScreenControlsBottomBarVolumeView : UIView
 

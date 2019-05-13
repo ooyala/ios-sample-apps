@@ -39,7 +39,7 @@
 
 /**
  Get the absolute value of the scrubber.  Used primarily during live streaming
- @returns the absolute value of the scrubber's value
+ @return the absolute value of the scrubber's value
  */
 - (Float64)scrubberAbsoluteValue;
 /**

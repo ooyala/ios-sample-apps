@@ -1,16 +1,17 @@
-#import <Foundation/Foundation.h>
-
 #ifndef OOAdPlugin_h
 #define OOAdPlugin_h
 
+@import Foundation;
+
+#import "OOLifeCycle.h"
+
 @protocol OOPlayerProtocol;
-@protocol OOLifeCycle;
 
 /**
  * @brief An interface to implement an Ad Plugin, which can plug into the OoyalaPlayer
  * @see OOOoyalaPlayer.registerAdPlayer:forType:
  */
-@protocol OOAdPlugin<NSObject, OOLifeCycle>
+@protocol OOAdPlugin <NSObject, OOLifeCycle>
 
 /**
  * This is called when content changed

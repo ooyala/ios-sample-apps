@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392966462267528700051EFE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 392966452267528700051EFE /* libc++.tbd */; };
+		39296648226752F900051EFE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39296647226752F900051EFE /* JavaScriptCore.framework */; };
 		393A489F21CCE49E005860F3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A488821CCE49E005860F3 /* OoyalaSDK.framework */; };
 		393A48C721CCF293005860F3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 393A48B021CCF292005860F3 /* main.jsbundle */; };
 		393A48C821CCF293005860F3 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 393A48B121CCF292005860F3 /* README.txt */; };
@@ -39,17 +41,11 @@
 		39D46097221E94EF008C9FC7 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4608F221E94EF008C9FC7 /* OptionTableViewCell.m */; };
 		39D46098221E94EF008C9FC7 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D46093221E94EF008C9FC7 /* PlayerViewController.m */; };
 		39D4609B221E9574008C9FC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4609A221E9574008C9FC7 /* AppDelegate.m */; };
-		CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EE981D76409700E168F6 /* MediaPlayer.framework */; };
-		CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */; };
-		CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA34EEB31D7640B500E168F6 /* AVKit.framework */; };
-		CA79AF751E00B2CD0027754F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF741E00B2CD0027754F /* libxml2.tbd */; };
-		CA79AF771E00B2D30027754F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF761E00B2D30027754F /* libc++.tbd */; };
-		CA79AF791E00B2DF0027754F /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF781E00B2DF0027754F /* libc++abi.tbd */; };
-		CA79AF7B1E00B2E80027754F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA79AF7A1E00B2E80027754F /* libz.tbd */; };
-		CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		392966452267528700051EFE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		39296647226752F900051EFE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		393A488821CCE49E005860F3 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		393A48B021CCF292005860F3 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		393A48B121CCF292005860F3 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -72,15 +68,6 @@
 		393A48C621CCF292005860F3 /* validate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = validate.js; sourceTree = "<group>"; };
 		393A48DA21CCF2A1005860F3 /* OoyalaSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSkinSDK.framework; sourceTree = "<group>"; };
 		393A48DE21CD0479005860F3 /* OoyalaSkinSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = OoyalaSkinSDK.xcassets; path = "../../../../vendor/Ooyala/OoyalaSkinSDK-iOS/OoyalaSkinSDK.xcassets"; sourceTree = "<group>"; };
-		395EE290221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		395EE292221442840048166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetListViewController.m; sourceTree = "<group>"; };
-		39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
-		39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
-		39D46002221D6E62008C9FC7 /* OptionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsDataSource.m; sourceTree = "<group>"; };
-		39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSelectionOption.m; sourceTree = "<group>"; };
-		39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
-		39D4600E221D6EA4008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39D4607A221E94D8008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39D4607B221E94D8008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39D4607F221E94E3008C9FC7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,15 +86,7 @@
 		39D46093221E94EF008C9FC7 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		39D46099221E9574008C9FC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39D4609A221E9574008C9FC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA34EE981D76409700E168F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		CA34EEB31D7640B500E168F6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		CA79AF741E00B2CD0027754F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		CA79AF761E00B2D30027754F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		CA79AF781E00B2DF0027754F /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
-		CA79AF7A1E00B2E80027754F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CA7ED8F81D5964E700EA0A57 /* DownloadToOwnSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadToOwnSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,16 +94,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA34EEB41D7640B500E168F6 /* AVKit.framework in Frameworks */,
-				CA34EEB21D7640A100E168F6 /* JavaScriptCore.framework in Frameworks */,
-				CA34EE991D76409700E168F6 /* MediaPlayer.framework in Frameworks */,
-				CAC6204A1D63C9AB004902F3 /* SystemConfiguration.framework in Frameworks */,
-				CA79AF7B1E00B2E80027754F /* libz.tbd in Frameworks */,
-				CA79AF791E00B2DF0027754F /* libc++abi.tbd in Frameworks */,
-				CA79AF771E00B2D30027754F /* libc++.tbd in Frameworks */,
+				39296648226752F900051EFE /* JavaScriptCore.framework in Frameworks */,
+				392966462267528700051EFE /* libc++.tbd in Frameworks */,
 				393A48DB21CCF2A1005860F3 /* OoyalaSkinSDK.framework in Frameworks */,
 				393A489F21CCE49E005860F3 /* OoyalaSDK.framework in Frameworks */,
-				CA79AF751E00B2CD0027754F /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,22 +180,6 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
-		39D46078221E94AF008C9FC7 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				39D46007221D6E62008C9FC7 /* OptionTableViewCell.m */,
-				39D46003221D6E62008C9FC7 /* PlayerSelectionOption.m */,
-				39D46000221D6E62008C9FC7 /* BasicEmbedTokenGenerator.m */,
-				39D46002221D6E62008C9FC7 /* OptionsDataSource.m */,
-				39D45FF9221D6E44008C9FC7 /* AssetListViewController.m */,
-				39D4600E221D6EA4008C9FC7 /* main.m */,
-				39D45FFD221D6E51008C9FC7 /* PlayerViewController.m */,
-				395EE291221442840048166D /* Main.storyboard */,
-				395EE28F221442840048166D /* LaunchScreen.storyboard */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		39D46079221E94D8008C9FC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +246,6 @@
 				393A486C21CCE49E005860F3 /* VendorLibraries */,
 				CAC620481D63C9AB004902F3 /* Frameworks */,
 				CA7ED8F91D5964E700EA0A57 /* Products */,
-				39D46078221E94AF008C9FC7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -319,14 +275,8 @@
 		CAC620481D63C9AB004902F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CA34EEB31D7640B500E168F6 /* AVKit.framework */,
-				CA34EEB11D7640A100E168F6 /* JavaScriptCore.framework */,
-				CA34EE981D76409700E168F6 /* MediaPlayer.framework */,
-				CAC620491D63C9AB004902F3 /* SystemConfiguration.framework */,
-				CA79AF7A1E00B2E80027754F /* libz.tbd */,
-				CA79AF781E00B2DF0027754F /* libc++abi.tbd */,
-				CA79AF761E00B2D30027754F /* libc++.tbd */,
-				CA79AF741E00B2CD0027754F /* libxml2.tbd */,
+				39296647226752F900051EFE /* JavaScriptCore.framework */,
+				392966452267528700051EFE /* libc++.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -357,21 +307,21 @@
 		CA7ED8F01D5964E700EA0A57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ooyala, Inc";
 				TargetAttributes = {
 					CA7ED8F71D5964E700EA0A57 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeamName = "Ooyala Inc";
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = CA7ED8F31D5964E700EA0A57 /* Build configuration list for PBXProject "DownloadToOwnSampleApp" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				global,
@@ -436,30 +386,12 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		395EE28F221442840048166D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				395EE290221442840048166D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		395EE291221442840048166D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				395EE292221442840048166D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		CA7ED90D1D5964E700EA0A57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -516,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -567,10 +500,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleApp/Supporting Files/Info.plist";
@@ -586,10 +519,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/VendorLibraries/**",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/DownloadToOwnSampleApp/Supporting Files/Info.plist";

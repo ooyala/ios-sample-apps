@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39CF3BEB226A5823006AA69F /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CF3BEA226A5823006AA69F /* OptionDataSource.swift */; };
 		75599AFD21C27647006FFDAA /* OoyalaTVSkinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D170216FCFF7008D505D /* OoyalaTVSkinSDK.framework */; };
 		C125993121750A6800E448B2 /* FullscreenPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */; };
 		C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A27262175357100ED8299 /* ChildPlayerViewController.swift */; };
@@ -19,11 +20,6 @@
 		C1A4D148216FCF64008D505D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A4D146216FCF64008D505D /* Main.storyboard */; };
 		C1A4D14A216FCF67008D505D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A4D149216FCF67008D505D /* Assets.xcassets */; };
 		C1A4D155216FCF67008D505D /* TVOSSwiftSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4D154216FCF67008D505D /* TVOSSwiftSampleAppTests.swift */; };
-		C1A4D17A216FDFB5008D505D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D179216FDFB5008D505D /* VideoToolbox.framework */; };
-		C1A4D17C216FDFC1008D505D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D17B216FDFC1008D505D /* JavaScriptCore.framework */; };
-		C1A4D17E216FDFCA008D505D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D17D216FDFCA008D505D /* MediaPlayer.framework */; };
-		C1A4D180216FDFCF008D505D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D17F216FDFCF008D505D /* SystemConfiguration.framework */; };
-		C1A4D182216FDFDC008D505D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D181216FDFDB008D505D /* libz.tbd */; };
 		C1A68254217A9556002047B3 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A4D16F216FCFF7008D505D /* OoyalaSDK.framework */; };
 		C1B0EDAF216FF5CC00EB48E7 /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39CF3BEA226A5823006AA69F /* OptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
 		C125993021750A6800E448B2 /* FullscreenPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenPlayerViewController.swift; sourceTree = "<group>"; };
 		C13A27262175357100ED8299 /* ChildPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildPlayerViewController.swift; sourceTree = "<group>"; };
 		C13A27282175367600ED8299 /* AbstractPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractPlayerViewController.swift; sourceTree = "<group>"; };
@@ -57,13 +54,7 @@
 		C1A4D16E216FCFF7008D505D /* OoyalaPulseIntegration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaPulseIntegration.framework; path = "../../../vendor/Ooyala/OoyalaPulseIntegration-tvOS/OoyalaPulseIntegration.framework"; sourceTree = "<group>"; };
 		C1A4D16F216FCFF7008D505D /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../../vendor/Ooyala/OoyalaSDK-tvOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 		C1A4D170216FCFF7008D505D /* OoyalaTVSkinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaTVSkinSDK.framework; path = "../../../vendor/Ooyala/OoyalaSkinSDK-tvOS/OoyalaTVSkinSDK.framework"; sourceTree = "<group>"; };
-		C1A4D179216FDFB5008D505D /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		C1A4D17B216FDFC1008D505D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		C1A4D17D216FDFCA008D505D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		C1A4D17F216FDFCF008D505D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C1A4D181216FDFDB008D505D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C1A4D183216FE068008D505D /* TVOSSwiftSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVOSSwiftSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		C1A681EC217A8997002047B3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,11 +65,6 @@
 			files = (
 				75599AFD21C27647006FFDAA /* OoyalaTVSkinSDK.framework in Frameworks */,
 				C1A68254217A9556002047B3 /* OoyalaSDK.framework in Frameworks */,
-				C1A4D182216FDFDC008D505D /* libz.tbd in Frameworks */,
-				C1A4D180216FDFCF008D505D /* SystemConfiguration.framework in Frameworks */,
-				C1A4D17E216FDFCA008D505D /* MediaPlayer.framework in Frameworks */,
-				C1A4D17C216FDFC1008D505D /* JavaScriptCore.framework in Frameworks */,
-				C1A4D17A216FDFB5008D505D /* VideoToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,9 +121,9 @@
 			children = (
 				C1A4D141216FCF64008D505D /* TVOSSwiftSampleApp */,
 				C1A4D153216FCF67008D505D /* TVOSSwiftSampleAppTests */,
-				C1A4D140216FCF64008D505D /* Products */,
 				C1A4D16D216FCF8D008D505D /* VendorLibraries */,
 				C1A4D178216FDFB5008D505D /* Frameworks */,
+				C1A4D140216FCF64008D505D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,12 +172,6 @@
 		C1A4D178216FDFB5008D505D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1A681EC217A8997002047B3 /* CoreFoundation.framework */,
-				C1A4D181216FDFDB008D505D /* libz.tbd */,
-				C1A4D17F216FDFCF008D505D /* SystemConfiguration.framework */,
-				C1A4D17D216FDFCA008D505D /* MediaPlayer.framework */,
-				C1A4D17B216FDFC1008D505D /* JavaScriptCore.framework */,
-				C1A4D179216FDFB5008D505D /* VideoToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C1B0EDAE216FF5CC00EB48E7 /* PlayerSelectionOption.swift */,
+				39CF3BEA226A5823006AA69F /* OptionDataSource.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -254,9 +235,11 @@
 				TargetAttributes = {
 					C1A4D13E216FCF64008D505D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					C1A4D14F216FCF67008D505D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = C1A4D13E216FCF64008D505D;
 					};
 				};
@@ -307,6 +290,7 @@
 			files = (
 				C13A27272175357100ED8299 /* ChildPlayerViewController.swift in Sources */,
 				C13A27292175367600ED8299 /* AbstractPlayerViewController.swift in Sources */,
+				39CF3BEB226A5823006AA69F /* OptionDataSource.swift in Sources */,
 				C13A272B21753C3A00ED8299 /* FairplayPlayerViewController.swift in Sources */,
 				C1A4D145216FCF64008D505D /* VideoTableViewController.swift in Sources */,
 				C1A4D143216FCF64008D505D /* AppDelegate.swift in Sources */,
@@ -467,13 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp/Utils",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = TVOSSwiftSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,10 +467,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				USER_HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)",
-				);
 			};
 			name = Debug;
 		};
@@ -498,13 +475,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp/Utils",
-					"$(PROJECT_DIR)/TVOSSwiftSampleApp",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = TVOSSwiftSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,10 +491,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				USER_HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)",
-				);
 			};
 			name = Release;
 		};
@@ -539,7 +509,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVOSSwiftSampleApp.app/TVOSSwiftSampleApp";
 			};
@@ -560,7 +530,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVOSSwiftSampleApp.app/TVOSSwiftSampleApp";
 			};

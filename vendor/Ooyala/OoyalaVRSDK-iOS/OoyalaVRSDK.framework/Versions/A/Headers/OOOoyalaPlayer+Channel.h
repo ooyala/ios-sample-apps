@@ -15,18 +15,18 @@
 
 /**
  * Tries to set the current video to the next video in the OOChannel or ChannetSet
- * @returns a BOOL indicating that the item was successfully changed
+ * @return a BOOL indicating that the item was successfully changed
  */
 - (BOOL)nextVideo;
 
 /**
  * Tries to set the current video to the previous video in the OOChannel or ChannetSet
- * @returns a BOOL indicating that the item was successfully changed
+ * @return a BOOL indicating that the item was successfully changed
  */
 - (BOOL)previousVideo;
 
 /**
- * @returns current frame of current asset
+ * @return current frame of current asset
  */
 - (UIImage *)screenshot;
 

@@ -6,7 +6,7 @@
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-#import <OoyalaSDK/OoyalaSDK.h>
+#import <OoyalaSDK/OOVideo.h>
 #import "CastPlaybackView.h"
 #import "Utils.h"
 
@@ -30,36 +30,35 @@
   if (!self.textView) {
     [self buildPlaybackView:item];
   }
-  [self updateTextView:item displayName:displayName displayStatus:displayStatus];
+  [self updateTextView:item
+           displayName:displayName
+         displayStatus:displayStatus];
+  [self updatePromoImage:item];
 }
 
 - (void)buildPlaybackView:(OOVideo *)item {
-  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    UIImage *image = [UIImage imageWithData:[Utils getDataFromImageURL:item.promoImageURL]];
-    
-    dispatch_sync(dispatch_get_main_queue(), ^{
-      [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-      self.image = image;
-      self.layer.borderColor = UIColor.redColor.CGColor;
-      self.layer.borderWidth = 5.0;
-      self.contentMode = UIViewContentModeScaleAspectFit;
-      
-      self.textView = [[UITextView alloc] initWithFrame:self.frame];
-      self.textView.userInteractionEnabled = NO;
-      self.textView.font = [UIFont boldSystemFontOfSize:30];
-      self.textView.textColor = UIColor.whiteColor;
-      self.textView.backgroundColor = UIColor.clearColor;
-      self.textView.textAlignment = NSTextAlignmentCenter;
-      self.textView.center = self.center;
-      self.textView.translatesAutoresizingMaskIntoConstraints = NO;
-      [self addSubview:self.textView];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    self.image = nil;
+    self.layer.borderColor = UIColor.redColor.CGColor;
+    self.layer.borderWidth = 5.0;
+    self.contentMode = UIViewContentModeScaleAspectFit;
 
-      NSLayoutConstraint *horizontal = [self.textView.centerXAnchor constraintEqualToAnchor:self.centerXAnchor];
-      NSLayoutConstraint *vertical = [self.textView.centerYAnchor constraintEqualToAnchor:self.centerYAnchor];
-      NSLayoutConstraint *width = [self.textView.widthAnchor constraintEqualToAnchor:self.widthAnchor];
-      NSLayoutConstraint *height = [self.textView.heightAnchor constraintEqualToAnchor:self.heightAnchor];
-      [NSLayoutConstraint activateConstraints:@[horizontal, vertical, width, height]];
-    });
+    self.textView = [[UITextView alloc] initWithFrame:self.frame];
+    self.textView.userInteractionEnabled = NO;
+    self.textView.font = [UIFont boldSystemFontOfSize:30];
+    self.textView.textColor = UIColor.whiteColor;
+    self.textView.backgroundColor = UIColor.clearColor;
+    self.textView.textAlignment = NSTextAlignmentCenter;
+    self.textView.center = self.center;
+    self.textView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.textView];
+
+    NSLayoutConstraint *horizontal = [self.textView.centerXAnchor constraintEqualToAnchor:self.centerXAnchor];
+    NSLayoutConstraint *vertical = [self.textView.centerYAnchor constraintEqualToAnchor:self.centerYAnchor];
+    NSLayoutConstraint *width = [self.textView.widthAnchor constraintEqualToAnchor:self.widthAnchor];
+    NSLayoutConstraint *height = [self.textView.heightAnchor constraintEqualToAnchor:self.heightAnchor];
+    [NSLayoutConstraint activateConstraints:@[horizontal, vertical, width, height]];
   });
 }
 
@@ -67,7 +66,7 @@
            displayName:(NSString *)displayName
          displayStatus:(NSString *)displayStatus {
   if (self.textView) {
-    dispatch_async( dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
       NSString *videoTitle = item.title;
       NSString *videoDescription = item.itemDescription;
       self.textView.text = [NSString stringWithFormat:@"\n\n Title: %@\n\n Description: %@\n\n Receiver: %@\n\n State: %@",
@@ -77,6 +76,25 @@
                             displayStatus];
     });
   }
+}
+
+- (void)updatePromoImage:(OOVideo *)item {
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    UIImage *image = [UIImage imageWithData:[Utils getDataFromImageURL:item.promoImageURL]];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      self.image = image;
+    });
+  });
+}
+
+- (void)playCompleted:(NSString *)displayName
+        displayStatus:(NSString *)displayStatus {
+  dispatch_async(dispatch_get_main_queue(), ^{
+    self.textView.text = [NSString stringWithFormat:@"\n\n Receiver: %@\n\n State: %@",
+                          displayName,
+                          displayStatus];
+    self.image = nil;
+  });
 }
 
 @end

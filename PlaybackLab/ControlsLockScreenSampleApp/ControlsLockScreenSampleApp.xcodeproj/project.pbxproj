@@ -7,37 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39225CF0224A5E0F00FA5290 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39225CEE224A5E0600FA5290 /* OoyalaSDK.framework */; };
 		AEE93E551F97C5FC004ABE42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E541F97C5FC004ABE42 /* AppDelegate.swift */; };
 		AEE93E571F97C5FC004ABE42 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E561F97C5FC004ABE42 /* PlayerViewController.swift */; };
 		AEE93E5A1F97C5FC004ABE42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE93E581F97C5FC004ABE42 /* Main.storyboard */; };
 		AEE93E5C1F97C5FC004ABE42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE93E5B1F97C5FC004ABE42 /* Assets.xcassets */; };
 		AEE93E5F1F97C5FC004ABE42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE93E5D1F97C5FC004ABE42 /* LaunchScreen.storyboard */; };
-		AEE93E691F97C69E004ABE42 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E681F97C69E004ABE42 /* OoyalaSDK.framework */; };
 		AEE93E6D1F97CA50004ABE42 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E6C1F97CA50004ABE42 /* ListTableViewController.swift */; };
 		AEE93E701F97CACC004ABE42 /* PlayerSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E6F1F97CACC004ABE42 /* PlayerSelectionOption.swift */; };
 		AEE93E731F97CF0C004ABE42 /* BasicEmbedTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E721F97CF0C004ABE42 /* BasicEmbedTokenGenerator.swift */; };
 		AEE93E751F97D135004ABE42 /* OptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93E741F97D135004ABE42 /* OptionDataSource.swift */; };
-		AEE93E8A1F97E919004ABE42 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E831F97E6BF004ABE42 /* AdSupport.framework */; };
-		AEE93E8B1F97E919004ABE42 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E841F97E6C0004ABE42 /* AVFoundation.framework */; };
-		AEE93E8C1F97E919004ABE42 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E7D1F97E6BF004ABE42 /* AVKit.framework */; };
-		AEE93E8D1F97E919004ABE42 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E771F97E6BF004ABE42 /* CFNetwork.framework */; };
-		AEE93E8E1F97E919004ABE42 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E761F97E6BF004ABE42 /* CoreGraphics.framework */; };
-		AEE93E8F1F97E919004ABE42 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E791F97E6BF004ABE42 /* CoreMedia.framework */; };
-		AEE93E901F97E919004ABE42 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E821F97E6BF004ABE42 /* CoreText.framework */; };
-		AEE93E911F97E919004ABE42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E7A1F97E6BF004ABE42 /* Foundation.framework */; };
-		AEE93E921F97E919004ABE42 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E851F97E6C0004ABE42 /* JavaScriptCore.framework */; };
-		AEE93E931F97E919004ABE42 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E7B1F97E6BF004ABE42 /* libc++.tbd */; };
-		AEE93E941F97E919004ABE42 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E7C1F97E6BF004ABE42 /* libxml2.tbd */; };
-		AEE93E951F97E919004ABE42 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E7E1F97E6BF004ABE42 /* MediaAccessibility.framework */; };
-		AEE93E961F97E919004ABE42 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E7F1F97E6BF004ABE42 /* MediaPlayer.framework */; };
-		AEE93E971F97E919004ABE42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E861F97E6C0004ABE42 /* QuartzCore.framework */; };
-		AEE93E981F97E919004ABE42 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E781F97E6BF004ABE42 /* Security.framework */; };
-		AEE93E991F97E919004ABE42 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E801F97E6BF004ABE42 /* SystemConfiguration.framework */; };
-		AEE93E9A1F97E919004ABE42 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE93E811F97E6BF004ABE42 /* UIKit.framework */; };
 		AEE93ECD1F9D942E004ABE42 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE93ECC1F9D942E004ABE42 /* OptionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39225CEE224A5E0600FA5290 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		AEE93E511F97C5FC004ABE42 /* ControlsLockScreenSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlsLockScreenSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE93E541F97C5FC004ABE42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEE93E561F97C5FC004ABE42 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -45,29 +29,11 @@
 		AEE93E5B1F97C5FC004ABE42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEE93E5E1F97C5FC004ABE42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE93E601F97C5FC004ABE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEE93E681F97C69E004ABE42 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OoyalaSDK.framework; path = "../../vendor/Ooyala/OoyalaSDK-iOS/OoyalaSDK.framework"; sourceTree = "<group>"; };
 		AEE93E6A1F97C6B0004ABE42 /* ControlsLockScreenSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControlsLockScreenSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		AEE93E6C1F97CA50004ABE42 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		AEE93E6F1F97CACC004ABE42 /* PlayerSelectionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectionOption.swift; sourceTree = "<group>"; };
 		AEE93E721F97CF0C004ABE42 /* BasicEmbedTokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEmbedTokenGenerator.swift; sourceTree = "<group>"; };
 		AEE93E741F97D135004ABE42 /* OptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDataSource.swift; sourceTree = "<group>"; };
-		AEE93E761F97E6BF004ABE42 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AEE93E771F97E6BF004ABE42 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		AEE93E781F97E6BF004ABE42 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AEE93E791F97E6BF004ABE42 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		AEE93E7A1F97E6BF004ABE42 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AEE93E7B1F97E6BF004ABE42 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		AEE93E7C1F97E6BF004ABE42 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		AEE93E7D1F97E6BF004ABE42 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		AEE93E7E1F97E6BF004ABE42 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		AEE93E7F1F97E6BF004ABE42 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		AEE93E801F97E6BF004ABE42 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AEE93E811F97E6BF004ABE42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		AEE93E821F97E6BF004ABE42 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		AEE93E831F97E6BF004ABE42 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		AEE93E841F97E6C0004ABE42 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		AEE93E851F97E6C0004ABE42 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		AEE93E861F97E6C0004ABE42 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AEE93ECC1F9D942E004ABE42 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,24 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE93E691F97C69E004ABE42 /* OoyalaSDK.framework in Frameworks */,
-				AEE93E8A1F97E919004ABE42 /* AdSupport.framework in Frameworks */,
-				AEE93E8B1F97E919004ABE42 /* AVFoundation.framework in Frameworks */,
-				AEE93E8C1F97E919004ABE42 /* AVKit.framework in Frameworks */,
-				AEE93E8D1F97E919004ABE42 /* CFNetwork.framework in Frameworks */,
-				AEE93E8E1F97E919004ABE42 /* CoreGraphics.framework in Frameworks */,
-				AEE93E8F1F97E919004ABE42 /* CoreMedia.framework in Frameworks */,
-				AEE93E901F97E919004ABE42 /* CoreText.framework in Frameworks */,
-				AEE93E911F97E919004ABE42 /* Foundation.framework in Frameworks */,
-				AEE93E921F97E919004ABE42 /* JavaScriptCore.framework in Frameworks */,
-				AEE93E931F97E919004ABE42 /* libc++.tbd in Frameworks */,
-				AEE93E941F97E919004ABE42 /* libxml2.tbd in Frameworks */,
-				AEE93E951F97E919004ABE42 /* MediaAccessibility.framework in Frameworks */,
-				AEE93E961F97E919004ABE42 /* MediaPlayer.framework in Frameworks */,
-				AEE93E971F97E919004ABE42 /* QuartzCore.framework in Frameworks */,
-				AEE93E981F97E919004ABE42 /* Security.framework in Frameworks */,
-				AEE93E991F97E919004ABE42 /* SystemConfiguration.framework in Frameworks */,
-				AEE93E9A1F97E919004ABE42 /* UIKit.framework in Frameworks */,
+				39225CF0224A5E0F00FA5290 /* OoyalaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,12 +58,21 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		398C0FAF2243AA14003EF3BE /* VendorLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				39225CEE224A5E0600FA5290 /* OoyalaSDK.framework */,
+			);
+			path = VendorLibraries;
+			sourceTree = "<group>";
+		};
 		AEE93E481F97C5FC004ABE42 = {
 			isa = PBXGroup;
 			children = (
 				AEE93E531F97C5FC004ABE42 /* ControlsLockScreenSampleApp */,
-				AEE93E521F97C5FC004ABE42 /* Products */,
+				398C0FAF2243AA14003EF3BE /* VendorLibraries */,
 				AEE93E671F97C69E004ABE42 /* Frameworks */,
+				AEE93E521F97C5FC004ABE42 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,24 +111,6 @@
 		AEE93E671F97C69E004ABE42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AEE93E831F97E6BF004ABE42 /* AdSupport.framework */,
-				AEE93E841F97E6C0004ABE42 /* AVFoundation.framework */,
-				AEE93E7D1F97E6BF004ABE42 /* AVKit.framework */,
-				AEE93E771F97E6BF004ABE42 /* CFNetwork.framework */,
-				AEE93E761F97E6BF004ABE42 /* CoreGraphics.framework */,
-				AEE93E791F97E6BF004ABE42 /* CoreMedia.framework */,
-				AEE93E821F97E6BF004ABE42 /* CoreText.framework */,
-				AEE93E7A1F97E6BF004ABE42 /* Foundation.framework */,
-				AEE93E851F97E6C0004ABE42 /* JavaScriptCore.framework */,
-				AEE93E7B1F97E6BF004ABE42 /* libc++.tbd */,
-				AEE93E7C1F97E6BF004ABE42 /* libxml2.tbd */,
-				AEE93E7E1F97E6BF004ABE42 /* MediaAccessibility.framework */,
-				AEE93E7F1F97E6BF004ABE42 /* MediaPlayer.framework */,
-				AEE93E861F97E6C0004ABE42 /* QuartzCore.framework */,
-				AEE93E781F97E6BF004ABE42 /* Security.framework */,
-				AEE93E801F97E6BF004ABE42 /* SystemConfiguration.framework */,
-				AEE93E811F97E6BF004ABE42 /* UIKit.framework */,
-				AEE93E681F97C69E004ABE42 /* OoyalaSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,7 +174,7 @@
 				TargetAttributes = {
 					AEE93E501F97C5FC004ABE42 = {
 						CreatedOnToolsVersion = 9.0.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -425,12 +365,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = "ControlsLockScreenSampleApp/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -442,12 +386,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/VendorLibraries",
+				);
 				INFOPLIST_FILE = "ControlsLockScreenSampleApp/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.ControlsLockScreenSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ControlsLockScreenSampleApp/Support Files/ControlsLockScreenSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

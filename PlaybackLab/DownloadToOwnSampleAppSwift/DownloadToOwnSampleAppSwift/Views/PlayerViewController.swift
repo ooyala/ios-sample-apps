@@ -20,17 +20,12 @@ class PlayerViewController: UIViewController {
   @IBOutlet weak var playOfflineButton: UIButton!
 
   var dtoAsset: OODtoAsset!
-  
-  // properties required for a Fairplay asset
-  private var apiKey = ""
-  private var apiSecret = ""
-  
-  private var ooyalaPlayerViewController: OOSkinViewController!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
 
-    var player: OOOoyalaPlayer!
+  private lazy var ooyalaPlayer: OOOoyalaPlayer = {
+    // properties required for a Fairplay asset
+    var apiKey: String
+    var apiSecret: String
+    var player: OOOoyalaPlayer
 
     if dtoAsset.options.embedTokenGenerator != nil {
       if let basicEmbedTokenGen = dtoAsset.options.embedTokenGenerator as? BasicEmbedTokenGenerator {
@@ -42,7 +37,7 @@ class PlayerViewController: UIViewController {
         apiKey = "API_KEY"
         apiSecret = "API_SECRET"
       }
-      let options = OOOptions()!
+      let options = OOOptions()
       // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
       // This is not how this should be implemented in production -
       // In production, you should implement your own OOSecureURLGenerator
@@ -58,20 +53,28 @@ class PlayerViewController: UIViewController {
       player = OOOoyalaPlayer(pcode: self.dtoAsset.options.pcode,
                               domain: self.dtoAsset.options.domain)
     }
-    
-    let jsCodeLocation = Bundle.main.url(forResource: "main",
-                                         withExtension: "jsbundle")
-    
+    return player
+  }()
+  private lazy var ooyalaPlayerViewController: OOSkinViewController = {
+    guard let jsCodeLocation = Bundle.main.url(forResource: "main",
+                                               withExtension: "jsbundle") else { fatalError() }
+    //    guard let jsCodeLocation = URL(string: "http://localhost:8081/index.ios.bundle?platform=ios") else { return }
+
     let skinOptions = OOSkinOptions(discoveryOptions: nil,
                                     jsCodeLocation: jsCodeLocation,
                                     configFileName: "skin",
                                     overrideConfigs: nil)
-    
-    ooyalaPlayerViewController = OOSkinViewController(player: player,
-                                                      skinOptions: skinOptions,
-                                                      parent: playerView,
-                                                      launchOptions: nil)!
-    
+
+    let skinViewController = OOSkinViewController(player: self.ooyalaPlayer,
+                                                  skinOptions: skinOptions,
+                                                  parent: playerView)
+    return skinViewController
+  }()
+
+  // MARK: - Life cycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
     ooyalaPlayerViewController.willMove(toParent: self)
     addChild(ooyalaPlayerViewController)
     ooyalaPlayerViewController.view.frame = playerView.bounds

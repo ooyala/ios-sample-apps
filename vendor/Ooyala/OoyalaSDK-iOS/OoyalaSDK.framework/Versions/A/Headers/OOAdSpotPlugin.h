@@ -2,7 +2,7 @@
 //  OODefaultAdsPlugin.h
 //  OoyalaSDK
 //
-// Copyright (c) 2015 Ooyala, Inc. All rights reserved.
+// Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import "OOAdPlugin.h"
@@ -19,7 +19,7 @@
 
 @end
 
-@interface OOAdSpotPlugin : NSObject<OOAdPlugin>
+@interface OOAdSpotPlugin : NSObject <OOAdPlugin>
 
 @property (nonatomic) Float64 lastAdModeTime;
 @property (readonly) OOAdSpotManager *adSpotManager;

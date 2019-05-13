@@ -5,10 +5,10 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "OOFullScreenControlsBottomBarMainControlsView.h"
 #import "OOFullScreenControlsBottomBarVolumeView.h"
-
 
 @interface OOFullScreenControlsBottomBar : UIView
 

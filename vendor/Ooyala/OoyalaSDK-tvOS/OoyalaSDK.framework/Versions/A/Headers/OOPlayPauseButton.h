@@ -14,6 +14,8 @@
 
 @property (nonatomic) BOOL isPlayShowing; /**< set to YES to show the play icon, or NO to show the pause icon */
 
+- (void)showReplayIcon; /**< called when playback is completed */
+
 @end
 
 #endif /* OOPlayPauseButton_h */

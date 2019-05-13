@@ -2,7 +2,7 @@
 //  OOReactSkinModel.h
 //  OoyalaSkinSDK
 //
-//  Created by Maksim Kupetskii on 8/13/18.
+//  Created on 8/13/18.
 //  Copyright © 2018 ooyala. All rights reserved.
 //
 
@@ -13,13 +13,17 @@
 @class OOClosedCaptionsStyle;
 @class RCTRootView;
 @protocol OOSkinViewControllerDelegate;
+@protocol OOCastNotifiable;
+@protocol OOCastManageable;
 
+extern NSString * _Nonnull const isPipButtonVisibleKey;
 
 @interface OOReactSkinModel : NSObject<RCTBridgeDelegate>
 
 @property (nonnull, nonatomic) NSDictionary *skinConfig;
 @property (nullable, nonatomic, readwrite) OOClosedCaptionsStyle *closedCaptionsDeviceStyle;
 @property (nonatomic, readonly) CGRect videoViewFrame;
+@property (nonatomic, nonnull, readonly) id<OOCastNotifiable> castNotifyHandler;
 
 - (nonnull instancetype)initWithWithPlayer:(nonnull OOOoyalaPlayer *)player
                                skinOptions:(nonnull OOSkinOptions *)skinOptions
@@ -28,6 +32,8 @@
 - (void)sendEventWithName:(nonnull NSString *)eventName body:(nullable id)body;
 - (void)setIsReactReady:(BOOL)isReactReady;
 - (void)ccStyleChanged:(nullable NSNotification *)notification;
+- (void)setCastManageableHandler:(nonnull id<OOCastManageable>)castManageableHandler;
+- (void)forceUpdateCast;
 
 // Note: This is for IMA ad playback only.
 // When IMA ad plays, IMA consumes clicks for learn more, skip, etc and notify ooyala if the click is not consumed.
@@ -66,5 +72,10 @@
 - (void)handleDiscoveryClick:(nullable NSString *)bucketInfo embedCode:(nonnull NSString *)embedCode;
 - (void)handleDiscoveryImpress:(nullable NSString *)bucketInfo;
 - (void)handleVolumeChanged:(float)volume;
+- (void)handleAirPlay;
+- (void)handleCastDeviceSelected:(nonnull NSString *)deviceId;
+- (void)handleCastDisconnect;
+- (void)handleSwitchPrevious;
+- (void)onVisibilityControlsChanged:(BOOL)isVisible;
 
 @end
