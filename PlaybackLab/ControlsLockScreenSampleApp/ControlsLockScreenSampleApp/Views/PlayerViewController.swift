@@ -16,7 +16,7 @@ class PlayerViewController: UIViewController {
   // properties for the video
   public var option: PlayerSelectionOption!
   
-  public var ooyalaPlayerVC: OOOoyalaPlayerViewController?
+  private var ooyalaPlayerVC: OOOoyalaPlayerViewController?
   
   // remote control center
   private let remoteCommandCenter = MPRemoteCommandCenter.shared()
@@ -88,18 +88,23 @@ class PlayerViewController: UIViewController {
         apiSecret = "API_SECRET"
       }
       
-      let options: OOOptions = OOOptions()
+      let options = OOOptions()
       // For this example, we use the OOEmbededSecureURLGenerator to create the signed URL on the client
       // This is not how this should be implemented in production - In production, you should implement your own OOSecureURLGenerator
       // which contacts a server of your own, which will help sign the url with the appropriate API Key and Secret
       options.secureURLGenerator = OOEmbeddedSecureURLGenerator(apiKey: apiKey,
                                                                 secret: apiSecret)
+      options.backgroundMode = .allowed
       player = OOOoyalaPlayer(pcode: option.pcode,
                               domain: option.domain,
                               embedTokenGenerator: embedTokenGenerator,
                               options: options)
     } else {
-      player = OOOoyalaPlayer(pcode: option.pcode, domain: option.domain)
+      let options = OOOptions()
+      options.backgroundMode = .allowed
+      player = OOOoyalaPlayer(pcode: option.pcode,
+                              domain: option.domain,
+                              options: options)
     }
 
     ooyalaPlayerVC = OOOoyalaPlayerViewController(player: player)
@@ -213,7 +218,6 @@ class PlayerViewController: UIViewController {
   // MARK: - Initialization
   deinit {
     // Remove observers, targets and destroy the player.
-    NotificationCenter.default.removeObserver(self)
     remoteCommandCenter.playCommand.removeTarget(self)
     remoteCommandCenter.pauseCommand.removeTarget(self)
     remoteCommandCenter.skipBackwardCommand.removeTarget(self)
