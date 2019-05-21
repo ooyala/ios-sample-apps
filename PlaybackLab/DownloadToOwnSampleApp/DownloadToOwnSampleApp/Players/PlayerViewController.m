@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
   Undefined
 };
 
-@interface PlayerViewController ()
+@interface PlayerViewController () <OOEmbedTokenGenerator>
 
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 
@@ -145,6 +145,12 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
   [self.ooyalaPlayerViewController.player pause];
   [self.ooyalaPlayerViewController.player setPlayheadTime:0];
   [self.ooyalaPlayerViewController.player play];
+}
+
+- (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes
+                  callback:(OOEmbedTokenCallback)callback {
+  [self.dtoAsset.options.embedTokenGenerator tokenForEmbedCodes:embedCodes
+                                                       callback:callback];
 }
 
 @end
