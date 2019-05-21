@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+@class OODtoAsset;
+
 /**
  Manages the assets to be downloaded.
  */
@@ -16,5 +18,7 @@
  @return an Array of PlayerSelectionOption instances to be used throughout the app. 
  */
 + (NSArray *)options;
+
++ (NSMutableArray<OODtoAsset *> *)dtoAssets;
 
 @end
