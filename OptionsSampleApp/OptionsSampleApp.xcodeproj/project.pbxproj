@@ -142,13 +142,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0BF4FA041A685F9E0050A602 /* Base.lproj */ = {
+		0BF4FA041A685F9E0050A602 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				0BF4FA051A685F9E0050A602 /* LaunchScreen.xib */,
 				0BF4FA071A685F9E0050A602 /* Main.storyboard */,
 			);
-			path = Base.lproj;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		9772BF771A43B61500B255C0 = {
@@ -175,13 +175,12 @@
 			children = (
 				9772BF871A43B61500B255C0 /* AppDelegate.h */,
 				9772BF881A43B61500B255C0 /* AppDelegate.m */,
-				0BF4FA041A685F9E0050A602 /* Base.lproj */,
-				9772BF901A43B61500B255C0 /* Images.xcassets */,
 				9772BFA91A43B6B200B255C0 /* Lists */,
 				9772BFAA1A43B6C000B255C0 /* Players */,
-				9772BF831A43B61500B255C0 /* Supporting Files */,
-				0BF0B0E11A671E4300026FDC /* Utils */,
 				0BC948051A8177E2004CB997 /* Views */,
+				0BF0B0E11A671E4300026FDC /* Utils */,
+				0BF4FA041A685F9E0050A602 /* Storyboards */,
+				9772BF831A43B61500B255C0 /* Supporting Files */,
 			);
 			path = OptionsSampleApp;
 			sourceTree = "<group>";
@@ -189,6 +188,7 @@
 		9772BF831A43B61500B255C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9772BF901A43B61500B255C0 /* Images.xcassets */,
 				9772BF841A43B61500B255C0 /* Info.plist */,
 				9772BF851A43B61500B255C0 /* main.m */,
 			);
@@ -303,6 +303,7 @@
 			knownRegions = (
 				en,
 				Base,
+				global,
 			);
 			mainGroup = 9772BF771A43B61500B255C0;
 			productRefGroup = 9772BF811A43B61500B255C0 /* Products */;
