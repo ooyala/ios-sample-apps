@@ -7,15 +7,15 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 @interface PlayerSelectionOption : NSObject
 
-@property NSString *embedCode;
-@property NSString *pcode;
-@property NSString *domain;
-@property NSString *title;
-@property NSString *nib;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *domain;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *nib;
 @property Class viewController;
 
 - (instancetype)initWithTitle:(NSString *)title
