@@ -21,7 +21,6 @@
   return self;
 }
 
-- (IBAction)onButtonClick:(id)sender {
-}
+- (IBAction)onButtonClick:(id)sender {}
 
 @end

@@ -8,8 +8,9 @@
  * @copyright  Copyright (c) 2014 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
-#import "PlayerSelectionOption.h"
+@import UIKit;
+
+@class PlayerSelectionOption;
 
 @interface SampleAppPlayerViewController : UIViewController
 
@@ -25,6 +26,7 @@
 @property (nonatomic) IBOutlet UIStackView *stackView1;
 @property (weak, nonatomic) IBOutlet UIView *playerView1;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+
 @property (nonatomic) BOOL qaModeEnabled;
 @property (nonatomic) PlayerSelectionOption *playerSelectionOption;
 
