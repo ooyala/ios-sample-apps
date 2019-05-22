@@ -8,6 +8,7 @@
 #import "IQConfigurationPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
+#import "PlayerSelectionOption.h"
 
 @interface IQConfigurationPlayerViewController ()
 
@@ -32,10 +33,10 @@
   self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:qaModeEnabled];
   self.nib = @"PlayerSimple";
   if (self.playerSelectionOption) {
-    _embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-    _pcode = self.playerSelectionOption.pcode;
+    _embedCode    = self.playerSelectionOption.embedCode;
+    _pcode        = self.playerSelectionOption.pcode;
     _playerDomain = self.playerSelectionOption.domain;
+    self.title    = self.playerSelectionOption.title;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -87,7 +88,6 @@
 }
 
 - (void)notificationHandler:(NSNotification *)notification {
-  
   // Ignore TimeChangedNotificiations for shorter logs
   if ([notification.name isEqualToString:OOOoyalaPlayerTimeChangedNotification]) {
     return;
@@ -95,8 +95,8 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.ooyalaPlayerViewController.player state]],
-                       [self.ooyalaPlayerViewController.player playheadTime], appDel.count];
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.ooyalaPlayerViewController.player.state],
+                       self.ooyalaPlayerViewController.player.playheadTime, appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView
