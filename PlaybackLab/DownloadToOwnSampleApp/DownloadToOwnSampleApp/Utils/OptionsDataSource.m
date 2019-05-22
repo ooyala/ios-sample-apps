@@ -9,6 +9,7 @@
 #import "OptionsDataSource.h"
 #import "PlayerSelectionOption.h"
 #import "BasicEmbedTokenGenerator.h"
+#import <OoyalaSDK/OoyalaSDK.h>
 
 @implementation OptionsDataSource
 
@@ -46,6 +47,29 @@
            
            // if required, add more test cases here
            ];
+}
+
++ (NSMutableArray<OODtoAsset *> *)dtoAssets {
+  NSMutableArray *options = [NSMutableArray array];
+  for (PlayerSelectionOption *oneOption in self.options) {
+    [options addObject:[self buildDtoAssetForOption:oneOption]];
+  }
+  return options;
+}
+
+/**
+ Builds an OODtoAsset with the given options.
+
+ @param option PlayerSelectionOption with the asset information.
+ @return new OODtoAsset instance.
+ */
++ (OODtoAsset *)buildDtoAssetForOption:(PlayerSelectionOption *)option {
+  OOAssetDownloadOptions *options = [OOAssetDownloadOptions new];
+  options.pcode = option.pcode;
+  options.embedCode = option.embedCode;
+  options.domain = [OOPlayerDomain domainWithString:option.domain];
+  options.embedTokenGenerator = option.embedTokenGenerator;
+  return [OODtoAsset initWithOptions:options andName:option.title];
 }
 
 @end
