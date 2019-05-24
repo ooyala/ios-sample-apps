@@ -9,6 +9,16 @@
 #import "BasicEmbedTokenGenerator.h"
 #import <OoyalaSDK/OOEmbeddedSecureURLGenerator.h>
 
+@interface BasicEmbedTokenGenerator ()
+
+- (instancetype)initWithPcode:(NSString *)pcode
+                       apiKey:(NSString *)apiKey
+                    apiSecret:(NSString *)apiSecret
+                    accountId:(NSString *)accountId
+                authorizeHost:(NSString *)authorizeHost;
+
+@end
+
 @implementation BasicEmbedTokenGenerator
 
 - (instancetype)initWithPcode:(NSString *)pcode
@@ -24,6 +34,19 @@
     _authorizeHost = authorizeHost;
   }
   return self;
+}
+
++ (instancetype)initWithPcode:(NSString *)pcode
+                       apiKey:(NSString *)apiKey
+                    apiSecret:(NSString *)apiSecret
+                    accountId:(NSString *)accountId
+                authorizeHost:(NSString *)authorizeHost {
+  BasicEmbedTokenGenerator *tokenGenerator = [[BasicEmbedTokenGenerator alloc] initWithPcode:pcode
+                                                                                      apiKey:apiKey
+                                                                                   apiSecret:apiSecret
+                                                                                   accountId:accountId
+                                                                               authorizeHost:authorizeHost];
+  return tokenGenerator;
 }
 
 - (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes

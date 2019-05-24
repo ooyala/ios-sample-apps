@@ -18,7 +18,7 @@
 @property (nonatomic) NSString *accountId;
 @property (nonatomic) NSString *authorizeHost;
 
-- (instancetype)initWithPcode:(NSString *)pcode
++ (instancetype)initWithPcode:(NSString *)pcode
                        apiKey:(NSString *)apiKey
                     apiSecret:(NSString *)apiSecret
                     accountId:(NSString *)accountId
