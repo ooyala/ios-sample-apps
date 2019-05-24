@@ -1,6 +1,6 @@
 //
-//  ViewController.h
-//  AdobePassDemoApp
+//  FairplayPlayerViewController.h
+//  ContentProtectionSampleApp
 //
 //  Created on 5/15/12.
 //  Copyright © 2012 Ooyala Inc. All rights reserved.

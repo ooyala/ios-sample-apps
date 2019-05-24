@@ -1,6 +1,6 @@
 //
 //  Util.h
-//  AdobePassDemoApp
+//  ContentProtectionSampleApp
 //
 //  Created on 5/16/12.
 //  Copyright © 2012 Ooyala Inc. All rights reserved.
