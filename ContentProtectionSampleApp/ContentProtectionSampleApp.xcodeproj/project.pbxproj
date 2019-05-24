@@ -60,6 +60,10 @@
 		0B94591D1AC33AA9000DD545 /* OoyalaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9457F01AC32C76000DD545 /* OoyalaSDK.framework */; };
 		0B98DDDC1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B98DDDA1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h */; };
 		0B98DDDD1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B98DDDB1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m */; };
+		3929E8EB2296EF1E00EB658D /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3929E8E92296EF1E00EB658D /* BasicEmbedTokenGenerator.m */; };
+		3929E8EC2296EF1E00EB658D /* BasicEmbedTokenGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3929E8E92296EF1E00EB658D /* BasicEmbedTokenGenerator.m */; };
+		3929E8ED2296EF1E00EB658D /* BasicEmbedTokenGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3929E8EA2296EF1E00EB658D /* BasicEmbedTokenGenerator.h */; };
+		3929E8EE2296EF1E00EB658D /* BasicEmbedTokenGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3929E8EA2296EF1E00EB658D /* BasicEmbedTokenGenerator.h */; };
 		39F5EBAF21B968D100BC7E1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F5EBAB21B968D100BC7E1A /* LaunchScreen.xib */; };
 		39F5EBB021B968D100BC7E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F5EBAD21B968D100BC7E1A /* Main.storyboard */; };
 		39F5EBB421B9690600BC7E1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5EBB221B9690600BC7E1A /* main.m */; };
@@ -132,6 +136,8 @@
 		0B9457F01AC32C76000DD545 /* OoyalaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaSDK.framework; sourceTree = "<group>"; };
 		0B98DDDA1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OoyalaPlayerTokenPlayerViewController.h; sourceTree = "<group>"; };
 		0B98DDDB1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OoyalaPlayerTokenPlayerViewController.m; sourceTree = "<group>"; };
+		3929E8E92296EF1E00EB658D /* BasicEmbedTokenGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEmbedTokenGenerator.m; sourceTree = "<group>"; };
+		3929E8EA2296EF1E00EB658D /* BasicEmbedTokenGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicEmbedTokenGenerator.h; sourceTree = "<group>"; };
 		39F5EBAC21B968D100BC7E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		39F5EBAE21B968D100BC7E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		39F5EBB221B9690600BC7E1A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -341,6 +347,8 @@
 				0B24B84B1AA6827200F131C3 /* AdobePassUiDelegate.h */,
 				0B24B84C1AA6827200F131C3 /* AdobePassViewController.h */,
 				0B24B84D1AA6827200F131C3 /* AdobePassViewController.m */,
+				3929E8EA2296EF1E00EB658D /* BasicEmbedTokenGenerator.h */,
+				3929E8E92296EF1E00EB658D /* BasicEmbedTokenGenerator.m */,
 				0B24B84E1AA6827200F131C3 /* MvpdLoginViewController.h */,
 				0B24B84F1AA6827200F131C3 /* MvpdLoginViewController.m */,
 				0B24B8501AA6827200F131C3 /* MvpdTableViewController.h */,
@@ -389,6 +397,7 @@
 				0B9457F91AC32C76000DD545 /* NSUtils.h in Headers */,
 				0B9457FB1AC32C76000DD545 /* AuthenticationToken.h in Headers */,
 				0B98DDDC1C77E9D60093026A /* OoyalaPlayerTokenPlayerViewController.h in Headers */,
+				3929E8ED2296EF1E00EB658D /* BasicEmbedTokenGenerator.h in Headers */,
 				0B24B86B1AA682DC00F131C3 /* ContentProtectionListViewController.h in Headers */,
 				0B24B8671AA682CC00F131C3 /* FairplayPlayerViewController.h in Headers */,
 				0B9457F81AC32C76000DD545 /* EntitlementDelegate.h in Headers */,
@@ -412,6 +421,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3929E8EE2296EF1E00EB658D /* BasicEmbedTokenGenerator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3929E8EB2296EF1E00EB658D /* BasicEmbedTokenGenerator.m in Sources */,
 				0B24B8681AA682CC00F131C3 /* FairplayPlayerViewController.m in Sources */,
 				FF86C1C31A9BF06700C328A9 /* AppDelegate.m in Sources */,
 				0B24B85C1AA6827200F131C3 /* Util.m in Sources */,
@@ -537,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3929E8EC2296EF1E00EB658D /* BasicEmbedTokenGenerator.m in Sources */,
 				0B4FE7951CE2AA7C000DCC00 /* OoyalaPlayerTokenPlayerViewController.m in Sources */,
 				0B89E1DE1B1803EF00306176 /* DeviceManagementPlayerViewController.m in Sources */,
 				0B24B8D61AA6998500F131C3 /* Util.m in Sources */,
