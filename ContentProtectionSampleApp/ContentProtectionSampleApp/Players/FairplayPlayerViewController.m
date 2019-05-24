@@ -1,7 +1,15 @@
+//
+//  FairplayPlayerViewController.m
+//  ContentProtectionSampleApp
+//
+//  Created on 5/15/12.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
+//
+
 /**
- * This activity illustrates how you configure your application to run Fairplay assets
+ * This class illustrates how you configure your application to run Fairplay assets
  *
- * This activity will NOT Playback any video.  You will need to:
+ * This class will NOT Playback any video. You will need to:
  *  1) provide your own embed code, which has Fairplay protection
  *  2) provide your own PCODE, which owns the embed code
  *  3) have your API Key and Secret, which correlate to a user from the provider
@@ -11,6 +19,7 @@
 
 #import "FairplayPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
+#import "BasicEmbedTOkenGenerator.h"
 
 @interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 
@@ -55,10 +64,19 @@
    * The API Key and Secret should not be saved inside your applciation (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
-  self.apiKey = @"Fill me in";
-  self.secret = @"Fill me in";
-  self.accountId = @"Fill me in";
-  self.authorizeHost = @"http://player.ooyala.com";
+  if (self.playerSelectionOption.embedTokenGenerator &&
+      [self.playerSelectionOption.embedTokenGenerator isKindOfClass:BasicEmbedTokenGenerator.class]) {
+    BasicEmbedTokenGenerator *tokenGenerator = (BasicEmbedTokenGenerator *)self.playerSelectionOption.embedTokenGenerator;
+    self.apiKey        = tokenGenerator.apiKey;
+    self.secret        = tokenGenerator.apiSecret;
+    self.accountId     = tokenGenerator.accountId;
+    self.authorizeHost = tokenGenerator.authorizeHost;
+  } else {
+    self.apiKey        = @"API_KEY";
+    self.secret        = @"API_SECRET";
+    self.accountId     = @"ACCOUNT_ID";
+    self.authorizeHost = @"AUTHORIZE_HOST";
+  }
   [OODebugMode setDebugMode:LogAndAbort];
   ASSERT([self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey.");
 

@@ -1,15 +1,14 @@
-/**
- * @class      DeviceManagementPlayerViewController DeviceManagementPlayerViewController.m "DeviceManagementPlayerViewController.m"
- * @brief      A Player that demonstrates how to respond to Device Management errors when using DRM-protected content
- * @details    This is a non-runnable sample ViewController that demonstrates how to respond to Device Management notifications
- *  such as when new devices are registered.
- * @date       12/12/14
- * @copyright  Copyright © 2014 Ooyala Inc. All rights reserved.
- */
+//
+//  DeviceManagementPlayerViewController.m
+//  ContentProtectionSampleApp
+//
+//  Created on 5/15/12.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
+//
 
 #import "DeviceManagementPlayerViewController.h"
-#import "AdobePassViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
+#import "BasicEmbedTokenGenerator.h"
 
 @interface DeviceManagementPlayerViewController () <OOEmbedTokenGenerator>
 
@@ -40,11 +39,6 @@
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
   self.nib = @"PlayerSimple";
 
-  self.apiKey = @"Fill me in";
-  self.secret = @"Fill me in";
-  self.accountId = @"Fill me in";
-  self.authorizeHost = @"http://player.ooyala.com";
-
   if (self.playerSelectionOption) {
     self.embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
@@ -53,6 +47,23 @@
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
+  }
+  /*
+   * The API Key and Secret should not be saved inside your applciation (even in git!).
+   * However, for debugging you can use them to locally generate Ooyala Player Tokens.
+   */
+  if (self.playerSelectionOption.embedTokenGenerator &&
+      [self.playerSelectionOption.embedTokenGenerator isKindOfClass:BasicEmbedTokenGenerator.class]) {
+    BasicEmbedTokenGenerator *tokenGenerator = (BasicEmbedTokenGenerator *)self.playerSelectionOption.embedTokenGenerator;
+    self.apiKey        = tokenGenerator.apiKey;
+    self.secret        = tokenGenerator.apiSecret;
+    self.accountId     = tokenGenerator.accountId;
+    self.authorizeHost = tokenGenerator.authorizeHost;
+  } else {
+    self.apiKey        = @"API_KEY";
+    self.secret        = @"API_SECRET";
+    self.accountId     = @"ACCOUNT_ID";
+    self.authorizeHost = @"AUTHORIZE_HOST";
   }
   return self;
 }
