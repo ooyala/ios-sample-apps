@@ -13,9 +13,7 @@
 
 @interface ContentProtectionListViewController ()
 
-@property NSArray *options;
-@property NSMutableArray *optionList;
-@property NSMutableArray *optionEmbedCodes;
+@property (nonatomic) NSArray *options;
 
 @end
 
@@ -29,7 +27,7 @@
   [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
        forCellReuseIdentifier:@"TableCell"];
 
-  _options = OptionsDataSource.options;
+  self.options = OptionsDataSource.options;
 }
 
 #pragma mark - Table view data source

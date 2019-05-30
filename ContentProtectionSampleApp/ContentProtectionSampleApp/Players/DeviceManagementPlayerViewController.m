@@ -14,15 +14,15 @@
 
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 
-@property NSString *apiKey;
-@property NSString *secret;
-@property NSString *accountId;
-@property NSString *authorizeHost;
+@property (nonatomic) NSString *apiKey;
+@property (nonatomic) NSString *secret;
+@property (nonatomic) NSString *accountId;
+@property (nonatomic) NSString *authorizeHost;
 
 @property (nonatomic) NSString *publicDeviceId;
 @property (weak) UIAlertAction *saveAction;
@@ -37,33 +37,33 @@
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSimple";
+  _nib = @"PlayerSimple";
 
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _pcode = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
   }
   /*
-   * The API Key and Secret should not be saved inside your applciation (even in git!).
+   * The API Key and Secret should not be saved inside your application (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
   if (self.playerSelectionOption.embedTokenGenerator &&
       [self.playerSelectionOption.embedTokenGenerator isKindOfClass:BasicEmbedTokenGenerator.class]) {
     BasicEmbedTokenGenerator *tokenGenerator = (BasicEmbedTokenGenerator *)self.playerSelectionOption.embedTokenGenerator;
-    self.apiKey        = tokenGenerator.apiKey;
-    self.secret        = tokenGenerator.apiSecret;
-    self.accountId     = tokenGenerator.accountId;
-    self.authorizeHost = tokenGenerator.authorizeHost;
+    _apiKey        = tokenGenerator.apiKey;
+    _secret        = tokenGenerator.apiSecret;
+    _accountId     = tokenGenerator.accountId;
+    _authorizeHost = tokenGenerator.authorizeHost;
   } else {
-    self.apiKey        = @"API_KEY";
-    self.secret        = @"API_SECRET";
-    self.accountId     = @"ACCOUNT_ID";
-    self.authorizeHost = @"AUTHORIZE_HOST";
+   _apiKey        = @"API_KEY";
+   _secret        = @"API_SECRET";
+   _accountId     = @"ACCOUNT_ID";
+   _authorizeHost = @"AUTHORIZE_HOST";
   }
   return self;
 }
