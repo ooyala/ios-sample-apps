@@ -58,7 +58,7 @@
   }
 
   /*
-   * The API Key and Secret should not be saved inside your applciation (even in git!).
+   * The API Key and Secret should not be saved inside your application (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
   if (self.playerSelectionOption.embedTokenGenerator &&
