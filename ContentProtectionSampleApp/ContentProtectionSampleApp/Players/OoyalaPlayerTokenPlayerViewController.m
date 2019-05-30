@@ -1,25 +1,24 @@
-/**
- * @class      DeviceManagementPlayerViewController DeviceManagementPlayerViewController.m "DeviceManagementPlayerViewController.m"
- * @brief      A Player that demonstrates how to respond to Device Management errors when using DRM-protected content
- * @details    This is a non-runnable sample ViewController that demonstrates how to respond to Device Management notifications
- *  such as when new devices are registered.
- * @date       12/12/14
- * @copyright  Copyright © 2014 Ooyala Inc, Inc. All rights reserved.
- */
+//
+//  OoyalaPlayerTokenPlayerViewController.m
+//  ContentProtectionSampleApp
+//
+//  Created on 5/15/12.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
+//
 
 #import "OoyalaPlayerTokenPlayerViewController.h"
-#import "AdobePassViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
+#import "BasicEmbedTokenGenerator.h"
 
 /**
- * This activity illustrates how you use Ooyala Player Token.
+ * This class illustrates how you use Ooyala Player Token.
  * Ooyala Player Token can also be used in conjunction with the following security mechanisms
  * 1) Device Management,
  * 2) Concurrent Streams,
  * 3) Entitlements, and
  * 4) Stream Takedown
  *
- * This activity will NOT Playback any video.  You will need to:
+ * This class will NOT Playback any video.  You will need to:
  *  1) provide your own embed code, restricted with Ooyala Player Token
  *  2) provide your own PCODE, which owns the embed code
  *  3) have your API Key and Secret, which correlate to a user from the provider
@@ -30,15 +29,15 @@
 
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 
-@property NSString *authorizeHost;
-@property NSString *apiKey;
-@property NSString *secret;
-@property NSString *accountId;
+@property (nonatomic) NSString *authorizeHost;
+@property (nonatomic) NSString *apiKey;
+@property (nonatomic) NSString *secret;
+@property (nonatomic) NSString *accountId;
 
 @end
 
@@ -46,26 +45,35 @@
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSimple";
+  _nib = @"PlayerSimple";
 
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _pcode = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
   }
 
   /*
-   * The API Key and Secret should not be saved inside your applciation (even in git!).
+   * The API Key and Secret should not be saved inside your application (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
-  self.apiKey = @"Fill me in";
-  self.secret = @"Fill me in";
-  self.accountId = @"Fill me in";
-  self.authorizeHost = @"http://player.ooyala.com";
+  if (self.playerSelectionOption.embedTokenGenerator &&
+      [self.playerSelectionOption.embedTokenGenerator isKindOfClass:BasicEmbedTokenGenerator.class]) {
+    BasicEmbedTokenGenerator *tokenGenerator = (BasicEmbedTokenGenerator *)self.playerSelectionOption.embedTokenGenerator;
+    _apiKey        = tokenGenerator.apiKey;
+    _secret        = tokenGenerator.apiSecret;
+    _accountId     = tokenGenerator.accountId;
+    _authorizeHost = tokenGenerator.authorizeHost;
+  } else {
+    _apiKey        = @"API_KEY";
+    _secret        = @"API_SECRET";
+    _accountId     = @"ACCOUNT_ID";
+    _authorizeHost = @"AUTHORIZE_HOST";
+  }
   [OODebugMode setDebugMode:LogAndAbort];
   ASSERT([self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey.");
 
