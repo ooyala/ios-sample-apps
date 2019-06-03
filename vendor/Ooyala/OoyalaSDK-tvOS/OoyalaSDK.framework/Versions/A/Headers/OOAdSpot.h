@@ -20,7 +20,7 @@
 
 /**
  * Initialize an ad spot with time
- * @param t the ad spot time
+ * @param time the ad spot time
  * @return initialized ad spot
  */
 - (instancetype)initWithTime:(NSNumber *)time;

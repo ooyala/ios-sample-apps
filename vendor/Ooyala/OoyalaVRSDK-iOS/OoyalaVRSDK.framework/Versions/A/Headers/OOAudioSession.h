@@ -10,6 +10,8 @@
 
 @import Foundation;
 
+extern NSString *const volumePropertyKey;
+
 @protocol OOAudioSessionDelegate <NSObject>
 @optional
 - (void)volumeChanged:(float)volume;

@@ -81,4 +81,13 @@ typedef NS_ENUM(NSUInteger, OOIQAnalyticsTrackingState) {
   OOIQAnalyticsTrackingStateAnonymous,
 };
 
+
+/**
+ Defines player behavior if app moved into background mode during video playback, default mode is OOBackgroundPlaybackModeDisabled
+ */
+typedef NS_ENUM(NSInteger, OOBackgroundPlaybackMode) {
+  OOBackgroundPlaybackModeDisabled, //default
+  OOBackgroundPlaybackModeAllowed
+};
+
 #endif /* Enums_h */
