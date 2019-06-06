@@ -18,6 +18,7 @@
 @interface OOSkinViewController : UIViewController
 
 // Notifications
+extern NSString *const _Nonnull OOSkinViewControllerFullscreenWillChangeNotification; /* Fires when fullscreen button is tapped before entering/exiting fullscreen */
 extern NSString *const _Nonnull OOSkinViewControllerFullscreenChangedNotification; /* Fires when player goes FullScreen  */
 
 @property (nonatomic, nonnull, readonly) OOOoyalaPlayer *player;
