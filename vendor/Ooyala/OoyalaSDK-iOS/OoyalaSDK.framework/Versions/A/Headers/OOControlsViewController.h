@@ -12,12 +12,16 @@
 #import "OOPlayerState.h"
 #import "OOEnums.h"
 #import "OOOoyalaPlayerDelegate.h"
+#import "OOTimeSliderDelegate.h"
 
 @class OOOoyalaPlayer;
 
 static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 
-@interface OOControlsViewController : UIViewController <OOOoyalaPlayerDelegate>
+@interface OOControlsViewController : UIViewController <OOOoyalaPlayerDelegate, OOTimeSliderDelegate> {
+  @protected
+  BOOL searchStarted; //OS: visible only for inheritors
+}
 
 @property (nonatomic, weak) id delegate;
 @property (nonatomic, weak) OOOoyalaPlayer *player;
