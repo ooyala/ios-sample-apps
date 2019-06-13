@@ -103,7 +103,7 @@ class MultiplePlayerViewController: UIViewController {
   
   var playerTimer: Timer!
   
-  var currentItem = -1
+  var currentItemIndex = -1
   
   var isScrolling = false
 
@@ -173,7 +173,7 @@ class MultiplePlayerViewController: UIViewController {
   
   @objc
   func runTimedCode() {
-    var indexPath = IndexPath(item: 0, section: 0)
+    var indexPathForVisibleCell = IndexPath(item: 0, section: 0)
     let visibleCells = collectionView.visibleCells
     var tmpRatio: CGFloat = 0.0
     for cell in visibleCells {
@@ -183,13 +183,13 @@ class MultiplePlayerViewController: UIViewController {
       let cellHeight = cellRect.height
       let ratio = visibleHeight / cellHeight
       if ratio > tmpRatio {
-        indexPath = collectionView.indexPath(for: cell)!
+        indexPathForVisibleCell = collectionView.indexPath(for: cell)!
         tmpRatio = ratio
       }
     }
     
-    var playerSelectionOption = options[indexPath.row]
-    if currentItem == indexPath.row {
+    var playerSelectionOption = options[indexPathForVisibleCell.row]
+    if currentItemIndex == indexPathForVisibleCell.row {
       if !playerSelectionOption.isPaused {
         sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
       } else {
@@ -197,8 +197,8 @@ class MultiplePlayerViewController: UIViewController {
       }
       return
     } else {
-      currentItem = indexPath.row
-      playerSelectionOption = options[currentItem]
+      currentItemIndex = indexPathForVisibleCell.row
+      playerSelectionOption = options[currentItemIndex]
       DispatchQueue.main.async {
         if Thread.isMainThread {
           self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
@@ -240,7 +240,7 @@ class MultiplePlayerViewController: UIViewController {
     }
 
     let state = sharedPlayer.player.state()
-    let playerSelectionOption = options[currentItem]
+    let playerSelectionOption = options[currentItemIndex]
     
     print("Ooyala Player State: \(String(describing: OOOoyalaPlayerStateConverter.playerState(toString: state)!))")
 
@@ -271,7 +271,7 @@ class MultiplePlayerViewController: UIViewController {
     if isScrolling {
       return
     }
-    let playerSelectionOption = options[currentItem]
+    let playerSelectionOption = options[currentItemIndex]
     playerSelectionOption.playheadTime = sharedPlayer.player.playheadTime()
   }
 
@@ -279,7 +279,7 @@ class MultiplePlayerViewController: UIViewController {
   func playerSeekCompleted(_ notification: Notification) {
     guard let userInfo = notification.userInfo,
       let seekInfo = userInfo["seekInfo"] as? OOSeekInfo else { return }
-    let playerSelectionOption = options[currentItem]
+    let playerSelectionOption = options[currentItemIndex]
     playerSelectionOption.playheadTime = seekInfo.seekEnd
   }
   
@@ -289,7 +289,7 @@ class MultiplePlayerViewController: UIViewController {
       let isFullscreen = userInfo["fullscreen"] as? Bool else { return }
 
     if !isFullscreen {
-      let indexPath = IndexPath(row: currentItem, section: 0)
+      let indexPath = IndexPath(row: currentItemIndex, section: 0)
       collectionView.scrollToItem(at: indexPath,
                                   at: .centeredVertically,
                                   animated: false)
