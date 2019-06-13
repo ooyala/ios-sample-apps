@@ -1,32 +1,19 @@
 //
-//  OOStateNotifier.h
+//  OOAnalyticsAdEventsReportingProtocol.h
 //  OoyalaSDK
 //
-//  Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Created on 6/10/19.
+//  Copyright © 2019 Ooyala, Inc. All rights reserved.
 //
 
-#ifndef OOStateNotifier_h
-#define OOStateNotifier_h
+#ifndef OOAnalyticsAdEventsReportingProtocol_h
+#define OOAnalyticsAdEventsReportingProtocol_h
 
-#import "OOAdPodInfo.h"
-#import "OOPlayerState.h"
+@import Foundation;
+
 #import "OOOoyalaPlayer+Ads.h"
 
-@class OOSsaiAdsMetadata;
-
-@interface OOStateNotifier : NSObject
-
-@property (nonatomic) OOOoyalaPlayerState state;
-
-- (void)notifyPlayheadChange;
-
-- (void)notifyPlayCompleted;
-
-- (void)notifyAdsLoaded;
-
-- (void)notifyAdSkipped;
-
-- (void)notifyAdStarted;
+@protocol OOAnalyticsAdEventsReportingProtocol
 
 - (void)notifyAdRequestFromPlugin:(OOAdProvider)plugin
                     forAdPosition:(Float64)adPosition;
@@ -69,22 +56,6 @@
 - (void)notifyAdPlaythroughFromPlugin:(OOAdProvider)plugin
                       quartilePercent:(OOAdQuartile)quartilePercent;
 
-/**
- Notifies the player the ads metadata has been received.
- Used for SSAI ads.
- @param adsMetadata metadata returned by SSAI endpoint
- */
-- (void)notifySSAIAdsMetadataReceived:(OOSsaiAdsMetadata *)adsMetadata;
-/**
- Notifies the player a when an SSAI ad break has started
- @param adPodInfo ad metadata to display in adScreen
- */
-- (void)notifySSAIAdPlaying:(OOAdPodInfo *)adPodInfo;
-/**
- Notifies the player a when an SSAI ad break has ended
- */
-- (void)notifySSAIAdPlayed;
-
 @end
 
-#endif /* OOStateNotifier_h */
+#endif /* OOAnalyticsAdEventsReportingProtocol_h */

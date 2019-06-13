@@ -5,9 +5,9 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import "CoreMedia/CMTime.h"
-#import <Foundation/Foundation.h>
-#import "OOAdSpot.h"
+@import Foundation;
+
+@class OOAdSpot;
 
 /**
  * A class that manages a list of ad spots for a content
