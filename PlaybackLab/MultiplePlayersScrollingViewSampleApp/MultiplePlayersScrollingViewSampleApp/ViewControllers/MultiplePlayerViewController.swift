@@ -101,14 +101,11 @@ class MultiplePlayerViewController: UIViewController {
     return skinViewController
   }()
   
-  var playerTimer: Timer!
-  
-  var currentItemIndex = -1
-  
-  var isScrolling = false
+  private var playerTimer: Timer!
+  private var currentItemIndex = -1
+  fileprivate var isScrolling = false
 
   // MARK: - Life cycle
-
   override func loadView() {
     super.loadView()
     
@@ -131,8 +128,7 @@ class MultiplePlayerViewController: UIViewController {
   }
   
   // MARK: - Private methods
-
-  func addObservers() {
+  private func addObservers() {
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(currentItemChanged),
                                            name: NSNotification.Name.OOOoyalaPlayerCurrentItemChanged,
@@ -159,7 +155,7 @@ class MultiplePlayerViewController: UIViewController {
                                            object: sharedPlayer)
   }
   
-  func initTimer() {
+  fileprivate func initTimer() {
     if playerTimer != nil {
       playerTimer.invalidate()
     }
@@ -189,6 +185,7 @@ class MultiplePlayerViewController: UIViewController {
     }
     
     var playerSelectionOption = options[indexPathForVisibleCell.row]
+    
     if currentItemIndex == indexPathForVisibleCell.row {
       if !playerSelectionOption.isPaused {
         sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
@@ -207,7 +204,7 @@ class MultiplePlayerViewController: UIViewController {
     }
   }
   
-  func displayPlayerOnCell(_ indexPath: IndexPath) {
+  private func displayPlayerOnCell(_ indexPath: IndexPath) {
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
       cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem.title)!)"
@@ -223,7 +220,6 @@ class MultiplePlayerViewController: UIViewController {
   }
   
   // MARK: - Observer handlers
-
   @objc
   func currentItemChanged() {
     isScrolling = false
