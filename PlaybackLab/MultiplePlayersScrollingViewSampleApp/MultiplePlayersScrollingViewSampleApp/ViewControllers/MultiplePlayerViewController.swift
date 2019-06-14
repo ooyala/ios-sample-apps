@@ -135,7 +135,7 @@ class MultiplePlayerViewController: UIViewController {
                                            object: sharedPlayer.player)
     
     NotificationCenter.default.addObserver(self,
-                                           selector: #selector(playerStateHandler(_:)),
+                                           selector: #selector(playerStateHandler(_:)), //running new asset lifecycle: step 2/3
                                            name: NSNotification.Name.OOOoyalaPlayerStateChanged,
                                            object: sharedPlayer.player)
 
@@ -193,13 +193,11 @@ class MultiplePlayerViewController: UIViewController {
         sharedPlayer.player.seek(playerSelectionOption.playheadTime)
       }
       return
-    } else {
+    } else { //running new asset lifecycle: step 1/3
       currentItemIndex = indexPathForVisibleCell.row
       playerSelectionOption = options[currentItemIndex]
       DispatchQueue.main.async {
-        if Thread.isMainThread {
-          self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
-        }
+        self.sharedPlayer.player.setEmbedCode(playerSelectionOption.embedCode)
       }
     }
   }
@@ -219,6 +217,22 @@ class MultiplePlayerViewController: UIViewController {
     }
   }
   
+  private func checkSelectionOptionAndReplaceIfNeed(selectionOption: PlayerSelectionOption) -> PlayerSelectionOption {
+    
+    guard let currentItem = sharedPlayer.player.currentItem else {
+      return selectionOption
+    }
+    
+    if currentItem.embedCode != selectionOption.embedCode {
+      //print("❌ ❌ ❌ playerSelection Option embedCode [\(selectionOption.embedCode)]. player.currentItem.embedCode: \(String(describing: sharedPlayer.player.currentItem.embedCode))")
+      let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode })
+      if let foundIndex = index {
+        return options[foundIndex]
+      }
+    }
+    return selectionOption
+  }
+  
   // MARK: - Observer handlers
   @objc
   func currentItemChanged() {
@@ -236,12 +250,12 @@ class MultiplePlayerViewController: UIViewController {
     }
 
     let state = sharedPlayer.player.state()
-    let playerSelectionOption = options[currentItemIndex]
-    
+    var playerSelectionOption = options[currentItemIndex]
+    playerSelectionOption = checkSelectionOptionAndReplaceIfNeed(selectionOption: playerSelectionOption)
     print("Ooyala Player State: \(String(describing: OOOoyalaPlayerStateConverter.playerState(toString: state)!))")
 
     switch (state) {
-    case .ready:
+    case .ready:  //running new asset lifecycle: step 3/3
       if !playerSelectionOption.isPaused {
         sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
       } else {
