@@ -187,12 +187,16 @@ class MultiplePlayerViewController: UIViewController {
     var playerSelectionOption = options[indexPathForVisibleCell.row]
     
     if currentItemIndex == indexPathForVisibleCell.row {
+      //OS: this even can occurs after player was requested to set another embed code, so better change ebmbed codes
+      guard playerSelectionOption.embedCode == sharedPlayer.player.currentItem.embedCode else {
+        print("❌ ERROR. early return")
+        return
+      }
       if !playerSelectionOption.isPaused {
         sharedPlayer.player.play(withInitialTime: playerSelectionOption.playheadTime)
       } else {
         sharedPlayer.player.seek(playerSelectionOption.playheadTime)
       }
-      return
     } else { //running new asset lifecycle: step 1/3
       currentItemIndex = indexPathForVisibleCell.row
       playerSelectionOption = options[currentItemIndex]
@@ -221,7 +225,6 @@ class MultiplePlayerViewController: UIViewController {
     guard let currentItem = sharedPlayer.player.currentItem else {
       return selectionOption
     }
-    
     if currentItem.embedCode != selectionOption.embedCode {
       let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode })
       if let foundIndex = index {
@@ -249,6 +252,7 @@ class MultiplePlayerViewController: UIViewController {
 
     let state = sharedPlayer.player.state()
     var playerSelectionOption = options[currentItemIndex]
+    //OS: notification OOOoyalaPlayerStateChanged can arrive when table scrolled to another cell and selection option
     playerSelectionOption = checkSelectionOptionAndReplaceIfNeed(selectionOption: playerSelectionOption)
     print("Ooyala Player State: \(String(describing: OOOoyalaPlayerStateConverter.playerState(toString: state)!))")
 
