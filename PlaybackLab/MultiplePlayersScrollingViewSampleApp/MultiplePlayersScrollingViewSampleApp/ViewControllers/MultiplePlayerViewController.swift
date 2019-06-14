@@ -178,8 +178,8 @@ class MultiplePlayerViewController: UIViewController {
       let visibleHeight = intersect.height
       let cellHeight = cellRect.height
       let ratio = visibleHeight / cellHeight
-      if ratio > tmpRatio {
-        indexPathForVisibleCell = collectionView.indexPath(for: cell)!
+      if ratio > tmpRatio, let index = collectionView.indexPath(for: cell) {
+        indexPathForVisibleCell = index
         tmpRatio = ratio
       }
     }
@@ -218,13 +218,11 @@ class MultiplePlayerViewController: UIViewController {
   }
   
   private func checkSelectionOptionAndReplaceIfNeed(selectionOption: PlayerSelectionOption) -> PlayerSelectionOption {
-    
     guard let currentItem = sharedPlayer.player.currentItem else {
       return selectionOption
     }
     
     if currentItem.embedCode != selectionOption.embedCode {
-      //print("❌ ❌ ❌ playerSelection Option embedCode [\(selectionOption.embedCode)]. player.currentItem.embedCode: \(String(describing: sharedPlayer.player.currentItem.embedCode))")
       let index = options.firstIndex(where: { $0.embedCode == currentItem.embedCode })
       if let foundIndex = index {
         return options[foundIndex]
