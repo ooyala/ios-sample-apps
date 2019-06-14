@@ -12,6 +12,8 @@
 
 @import Foundation;
 
+#import "OOAnalyticsAdEventsReportingProtocol.h"
+
 typedef NS_ENUM(NSInteger, OOBitrateState) {
   /** Bitrate after the play has started */
   OOBitrateStateInitial,
@@ -25,7 +27,7 @@ typedef NS_ENUM(NSInteger, OOBitrateState) {
 @class OOSeekInfo;
 @class OOOoyalaError;
 
-@protocol OOAnalyticsPluginProtocol <NSObject>
+@protocol OOAnalyticsPluginProtocol <NSObject, OOAnalyticsAdEventsReportingProtocol>
 /**
  This is called when content is about to play
  */
