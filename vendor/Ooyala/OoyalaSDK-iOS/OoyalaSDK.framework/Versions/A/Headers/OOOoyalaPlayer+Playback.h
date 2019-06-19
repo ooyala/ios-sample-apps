@@ -112,6 +112,11 @@
 - (void)play;
 
 /**
+ * Plays the current video, use with @c MPRemoteCommandCenter
+ */
+- (void)playFromBackground;
+
+/**
  * Plays the current video with an initial time
  */
 - (void)playWithInitialTime:(Float64)time;
