@@ -30,16 +30,13 @@ class PlayerViewController: UIViewController {
     setupOoyalaPlayerStuff()
     
     if let playerVC = ooyalaPlayerVC {
-      addPlayerViewController(vc:playerVC)
+      addPlayerViewController(vc: playerVC)
     }
     
     addObservers()
     setupCommandCenter()
     setupPlayingInfoCenter()
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+
     ooyalaPlayerVC?.player.play()
   }
   
@@ -57,19 +54,19 @@ class PlayerViewController: UIViewController {
     NSLayoutConstraint.activate([
       view.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
       view.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
-      ])
+    ])
     guard let view = vc.view else { return }
     if #available(iOS 11, *) {
       let guide = self.view.safeAreaLayoutGuide
       NSLayoutConstraint.activate([
         view.topAnchor.constraint(equalTo: guide.topAnchor),
         guide.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+      ])
     } else {
       NSLayoutConstraint.activate([
         view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
         bottomLayoutGuide.topAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+      ])
     }
   }
   
@@ -176,7 +173,7 @@ class PlayerViewController: UIViewController {
     if player.isPlaying() {
       player.pause()
     } else {
-      player.play()
+      player.playFromBackground()
     }
     updatePlayingInfoCenter()
   }
@@ -212,7 +209,9 @@ class PlayerViewController: UIViewController {
   @objc func notificationHandler(_ notification: Notification)  {
     // Ignore TimeChangedNotificiations for shorter logs
     if notification.name == NSNotification.Name.OOOoyalaPlayerTimeChanged { return }
-    print("PlayerVC Notification Received: \(notification.name). state: \(String(describing: ooyalaPlayerVC?.player.state)). playhead: \(String(describing: self.ooyalaPlayerVC?.player.playheadTime))")
+    guard let player = ooyalaPlayerVC?.player,
+          let stringState = OOOoyalaPlayerStateConverter.playerState(toString: player.state()) else { return }
+    print("PlayerVC Notification Received: \(notification.name.rawValue), state: \(stringState), playhead: \(player.playheadTime())")
   }
   
   // MARK: - Initialization
