@@ -131,7 +131,10 @@
 
   switch ((OOOoyalaPlayerState)[change[NSKeyValueChangeNewKey] intValue]) {
     case OOOoyalaPlayerStateCompleted:
-      [self.notifier notifyAdCompleted];
+      [self.notifier notifyAdCompletedFromPlugin:OOAdProviderNone
+                             timeSinceImpression:0
+                                       isSkipped:NO
+                                        adTagUrl:@""];
       [self.adPlayer removeFromSuperview];
       [self.adPlayer destroy];
       self.adPlayer = nil;
