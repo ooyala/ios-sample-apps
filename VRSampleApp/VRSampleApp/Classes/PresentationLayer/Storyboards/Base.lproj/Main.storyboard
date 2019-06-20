@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -215,25 +214,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-kQ-0P6">
+                                <rect key="frame" x="16" y="72" width="343" height="439"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZz-H0-FMC">
-                                <rect key="frame" x="0.0" y="444.5" width="375" height="222.5"/>
+                                <rect key="frame" x="0.0" y="519" width="375" height="148"/>
                                 <color key="backgroundColor" red="0.3441965045" green="0.36631719559999998" blue="0.32943376990000001" alpha="0.1929742518" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="qaInfoTextView"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-kQ-0P6">
-                                <rect key="frame" x="42" y="106" width="290" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kZz-H0-FMC" firstAttribute="leading" secondItem="3ok-sT-99y" secondAttribute="leading" id="8kH-IV-PHO"/>
+                            <constraint firstItem="kZz-H0-FMC" firstAttribute="top" secondItem="lgD-kQ-0P6" secondAttribute="bottom" constant="8" id="JyV-yG-wTS"/>
+                            <constraint firstItem="lgD-kQ-0P6" firstAttribute="leading" secondItem="3ok-sT-99y" secondAttribute="leading" constant="16" id="Lp4-hp-10B"/>
+                            <constraint firstItem="3ok-sT-99y" firstAttribute="trailing" secondItem="lgD-kQ-0P6" secondAttribute="trailing" constant="16" id="eaF-0e-I0j"/>
+                            <constraint firstItem="lgD-kQ-0P6" firstAttribute="top" secondItem="LLZ-aC-9Q6" secondAttribute="bottom" constant="8" id="iO3-BX-Md1"/>
                             <constraint firstItem="3ok-sT-99y" firstAttribute="trailing" secondItem="kZz-H0-FMC" secondAttribute="trailing" id="qCz-Vi-CkZ"/>
                             <constraint firstItem="3ok-sT-99y" firstAttribute="bottom" secondItem="kZz-H0-FMC" secondAttribute="bottom" id="rRT-Ov-Cyv"/>
-                            <constraint firstItem="kZz-H0-FMC" firstAttribute="height" secondItem="YMz-IJ-QCK" secondAttribute="height" multiplier="1:3" id="vnc-p9-nTn"/>
+                            <constraint firstItem="kZz-H0-FMC" firstAttribute="height" secondItem="YMz-IJ-QCK" secondAttribute="height" multiplier="1:4.5" id="vnc-p9-nTn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3ok-sT-99y"/>
                     </view>
@@ -245,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52X-m6-acl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="134"/>
+            <point key="canvasLocation" x="1088.8" y="133.5832083958021"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="tL6-LL-LPq">
@@ -259,25 +261,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ia-ed-UTl">
+                                <rect key="frame" x="16" y="72" width="343" height="439"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoJ-6G-dlM">
-                                <rect key="frame" x="0.0" y="444.5" width="375" height="222.5"/>
+                                <rect key="frame" x="0.0" y="519" width="375" height="148"/>
                                 <color key="backgroundColor" red="0.3441965045" green="0.36631719559999998" blue="0.32943376990000001" alpha="0.1929742518" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="qaInfoTextView"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ia-ed-UTl">
-                                <rect key="frame" x="42" y="106" width="290" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UoJ-6G-dlM" firstAttribute="height" secondItem="aQl-kY-bMS" secondAttribute="height" multiplier="1:3" id="2xE-I2-Enh"/>
+                            <constraint firstItem="2Ia-ed-UTl" firstAttribute="top" secondItem="OGq-9O-obA" secondAttribute="bottom" constant="8" id="2CP-qP-LZa"/>
+                            <constraint firstItem="UoJ-6G-dlM" firstAttribute="height" secondItem="aQl-kY-bMS" secondAttribute="height" multiplier="1:4.5" id="2xE-I2-Enh"/>
                             <constraint firstItem="exf-hb-iEf" firstAttribute="bottom" secondItem="UoJ-6G-dlM" secondAttribute="bottom" id="Edp-5u-Xp5"/>
+                            <constraint firstItem="2Ia-ed-UTl" firstAttribute="leading" secondItem="exf-hb-iEf" secondAttribute="leading" constant="16" id="k2H-XN-G5N"/>
                             <constraint firstItem="exf-hb-iEf" firstAttribute="trailing" secondItem="UoJ-6G-dlM" secondAttribute="trailing" id="k83-mb-VUG"/>
                             <constraint firstItem="UoJ-6G-dlM" firstAttribute="leading" secondItem="exf-hb-iEf" secondAttribute="leading" id="l2o-ep-ylk"/>
+                            <constraint firstItem="UoJ-6G-dlM" firstAttribute="top" secondItem="2Ia-ed-UTl" secondAttribute="bottom" constant="8" id="llI-Ta-XWc"/>
+                            <constraint firstItem="exf-hb-iEf" firstAttribute="trailing" secondItem="2Ia-ed-UTl" secondAttribute="trailing" constant="16" id="w58-Gr-yv6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="exf-hb-iEf"/>
                     </view>
@@ -289,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tov-X1-RFm" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="134"/>
+            <point key="canvasLocation" x="1765.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
