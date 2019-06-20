@@ -102,10 +102,6 @@
   [ooyalaPlayer setEmbedCode:self.embedCode];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-  [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentProduction];
-}
-
 #pragma mark - EmbedTokenGenerator protocol
 
 - (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes
