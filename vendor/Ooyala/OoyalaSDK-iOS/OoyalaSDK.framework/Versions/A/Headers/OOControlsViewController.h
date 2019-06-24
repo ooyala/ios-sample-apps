@@ -20,7 +20,8 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 
 @interface OOControlsViewController : UIViewController <OOOoyalaPlayerDelegate, OOTimeSliderDelegate> {
   @protected
-  BOOL searchStarted; //OS: visible only for inheritors
+  BOOL searchStarted;
+  BOOL inAdMode;
 }
 
 @property (nonatomic, weak) id delegate;

@@ -15,6 +15,8 @@
 @protocol OOOoyalaPlayerDelegate <NSObject>
 
 - (void)ooyalaPlayerDidChangeToState:(OOOoyalaPlayerState)state;
+- (void)ooyalaPlayerDidSwitchToPlayBack;
+- (void)ooyalaPlayerDidSwitchToAd;
 
 @end
 

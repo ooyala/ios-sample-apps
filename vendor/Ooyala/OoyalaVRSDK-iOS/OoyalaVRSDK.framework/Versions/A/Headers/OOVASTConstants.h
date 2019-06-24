@@ -126,14 +126,16 @@ extern NSString *const OO_TAG_REWIND;                         /**< The tag for r
 extern NSString *const OO_TAG_CLOSE_LINEAR;                   /**< The tag for close linear event */
 extern NSString *const OO_TAG_CLICK_THROUGH;                  /**< The tag for click through event */
 
-extern NSInteger const OO_ERROR_XML_PARSE;                    /**< The code of XML parsing error */
-extern NSInteger const OO_ERROR_VAST_SCHEMA;                  /**< The code of VAST schema validation error */
-extern NSInteger const OO_ERROR_VAST_VERSION;                 /**< The code of VAST version of response not supported error */
-extern NSInteger const OO_ERROR_GENERAL_WRAPPER;              /**< The code of General Wrapper error */
-extern NSInteger const OO_ERROR_WRAPPER_LIMIT;                /**< The code of Wrapper limit reached error */
-extern NSInteger const OO_ERROR_VAST_RESPONSE_WRAPPER;        /**< The code of No ads VAST response after Wrappers error */
-extern NSInteger const OO_ERROR_GENERAL_LINEAR;               /**< The code of General linear error */
-extern NSInteger const OO_ERROR_GENERAL_NONLINEAR_ADS;        /**< The code of General NonLinear ads error */
-extern NSInteger const OO_ERROR_LINEAR_FILE_NOT_FOUND;
-extern NSInteger const OO_ERROR_LINEAR_TIMEOUT_MEDIAFILE;
-extern NSInteger const OO_ERROR_LINEAR_SUPPORTED_MEDIA_NOT_FOUND;
+typedef NS_ENUM(NSInteger, OOVastError) {
+  OOVastErrorXmlParse = 100,                      /**< The code of XML parsing error */
+  OOVastErrorVastSchema = 101,                    /**< The code of VAST schema validation error */
+  OOVastErrorVastVersion = 102,                   /**< The code of VAST version of response not supported error */
+  OOVastErrorGeneralWrapper = 300,                /**< The code of General Wrapper error */
+  OOVastErrorWrapperLimit = 302,                  /**< The code of Wrapper limit reached error */
+  OOVastErrorVastResponseWrapper = 303,           /**< The code of No ads VAST response after Wrappers error */
+  OOVastErrorGeneralLinear = 400,                 /**< The code of General linear error */
+  OOVastErrorLinearFileNotFound = 401,
+  OOVastErrorLinearTimeoutMediafile = 402,
+  OOVastErrorLinearSupportedMediaNotFound = 403,
+  OOVastErrorGeneralNonlinearAds = 500            /**< The code of General NonLinear ads error */
+};
