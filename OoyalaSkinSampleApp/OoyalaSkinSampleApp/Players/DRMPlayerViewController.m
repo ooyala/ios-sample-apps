@@ -71,8 +71,6 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
-  
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
   // Create Options

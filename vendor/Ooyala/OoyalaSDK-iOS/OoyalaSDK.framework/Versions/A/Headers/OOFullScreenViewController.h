@@ -6,13 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OOTimeSliderDelegate.h"
 #import "OOControlsDelegate.h"
 #import "OOVolumeSliderDelegate.h"
 #import "OOControlsViewController.h"
 
 
-@interface OOFullScreenViewController : OOControlsViewController <OOControlsDelegate, OOTimeSliderDelegate, OOVolumeSliderDelegate>
+@interface OOFullScreenViewController : OOControlsViewController <OOControlsDelegate, OOVolumeSliderDelegate>
 
 @property (nonatomic) BOOL isGravityFilled;
 

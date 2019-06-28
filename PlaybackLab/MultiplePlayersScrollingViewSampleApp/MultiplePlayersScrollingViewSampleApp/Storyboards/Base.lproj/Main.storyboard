@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KWU-fr-pwu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="76k-Hn-cPX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RJ4-hg-SeN">
+            <objects>
+                <navigationController id="76k-Hn-cPX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w1D-BB-iGM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rv0-g2-e8V" kind="relationship" relationship="rootViewController" id="7cW-ja-0LF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQ3-09-c41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1582" y="-261"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z4k-0g-P2j">
+            <objects>
+                <viewController id="rv0-g2-e8V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sPW-nv-Lvk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f0-qp-XP9">
+                                <rect key="frame" x="112.5" y="350.5" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="L8E-p5-P7s"/>
+                                    <constraint firstAttribute="height" constant="30" id="jZV-p5-OSX"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="KWU-fr-pwu" kind="show" id="hpA-Ul-PqD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1f0-qp-XP9" firstAttribute="centerY" secondItem="EcM-Bo-h4i" secondAttribute="centerY" id="tnw-kX-YAm"/>
+                            <constraint firstItem="1f0-qp-XP9" firstAttribute="centerX" secondItem="EcM-Bo-h4i" secondAttribute="centerX" id="uAK-9E-Vd3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EcM-Bo-h4i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N5A-1d-FtR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h49-SU-vMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="O3r-WC-R3w"/>
+            </objects>
+            <point key="canvasLocation" x="-771" y="-264"/>
+        </scene>
         <!--Multiple Player View Controller-->
         <scene sceneID="lOZ-Xp-vgk">
             <objects>
@@ -22,6 +72,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Thc-Tm-64A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="pzH-YI-tky"/>
             </objects>
             <point key="canvasLocation" x="90" y="-261"/>
         </scene>

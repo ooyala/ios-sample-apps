@@ -13,7 +13,7 @@
 @class OOOoyalaPlayer;
 
 /**
- * Ooyala SSAI plugin implementation.
+ Ooyala SSAI plugin implementation.
  */
 @interface OOSsaiPlugin : NSObject<OOAdPlugin>
 

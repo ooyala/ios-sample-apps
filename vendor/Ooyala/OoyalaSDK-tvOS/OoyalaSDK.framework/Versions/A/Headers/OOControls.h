@@ -7,6 +7,7 @@
 
 @protocol OOControls <NSObject>
 
+// TODO: - need ensure that protocol's method -setIsPlayingState: used in all linked SDK's only for play/pause icon and improove naming
 - (void)setIsPlayingState:(BOOL)isPlaying;
 - (void)setFullscreenButtonShowing:(BOOL)showing;
 - (void)setAirPlayButtonShowing:(BOOL)showing;

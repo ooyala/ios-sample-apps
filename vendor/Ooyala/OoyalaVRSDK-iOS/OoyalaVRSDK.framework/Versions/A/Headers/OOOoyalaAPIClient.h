@@ -13,7 +13,6 @@
 #import "OOEmbedTokenGenerator.h"
 
 @class OOPlayerAPIClient;
-@class OOOoyalaAPIHelper;
 @class OOContentItem;
 @class OOOoyalaError;
 @class OOPlayerDomain;
@@ -168,16 +167,6 @@
  */
 - (void)contentTreeNext:(id<OOPaginatedParentItem>)parent
                callback:(OOContentTreeNextCallback)callback;
-
-/**
- * Asynchronously fetch a raw NSDictionary/NSArray from any backlot API (GET requests only)
- * @param uri the URI to be fetched from backlot *not* including "/v2". For example, to request https://api.ooyala.com/v2/assets, uri should be "/assets"
- * @param params Additional params that the API may require in the form of dictionary.
- * @param callback the OOObjectFromBacklotAPICallback to execute when the asynchronous fetch completes
- */
-- (void)objectFromBacklotAPI:(NSString *)uri
-                      params:(NSDictionary *)params
-                withCallback:(OOObjectFromBacklotAPICallback)callback;
 
 /** @internal
  * Get the provider code that this OOOoyalaAPIClient uses

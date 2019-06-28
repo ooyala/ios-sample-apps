@@ -8,8 +8,9 @@
 #ifndef OOOyalaPlayerFacade_h
 #define OOOyalaPlayerFacade_h
 
-#import <AVFoundation/AVFoundation.h>
-#import <UIKit/UIKit.h>
+@import AVFoundation;
+@import UIKit;
+
 #import "OOCallbacks.h"
 #import "OOPlayerState.h"
 #import "OOEnums.h"
@@ -134,6 +135,7 @@
 @property (nonatomic) OOCurrentItemChangedCallback currentItemChangedCallback; /**< A callback that will be called every time the current item is changed */
 
 @property (nonatomic) OOOoyalaPlayerActionAtEnd actionAtEnd; /**< the OOOoyalaPlayerActionAtEnd to perform when the current item finishes playing. */
+
 @property (readonly, nonatomic, getter = isExternalPlaybackActive) BOOL externalPlaybackActive;
 
 @property (nonatomic) BOOL allowsExternalPlayback;

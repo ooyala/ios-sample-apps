@@ -22,13 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     do {
       try session.setCategory(.playback, mode: .default)
       print("AVAudioSession Category Playback OK")
-      do {
-        try session.setActive(true)
-        print("AVAudioSession is Active")
-      } catch let error as NSError {
-        print(error.localizedDescription)
-      }
-    } catch let error as NSError {
+      try session.setActive(true)
+      print("AVAudioSession is Active")
+    } catch {
       print(error.localizedDescription)
     }
     

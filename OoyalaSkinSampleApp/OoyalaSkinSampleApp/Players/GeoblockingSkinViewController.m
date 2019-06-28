@@ -56,7 +56,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentStaging];
   
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
   
@@ -101,10 +100,6 @@
   
   // Load the video
   [ooyalaPlayer setEmbedCode:self.embedCode];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-  [OOOoyalaPlayer setEnvironment:OOOoyalaPlayerEnvironmentProduction];
 }
 
 #pragma mark - EmbedTokenGenerator protocol

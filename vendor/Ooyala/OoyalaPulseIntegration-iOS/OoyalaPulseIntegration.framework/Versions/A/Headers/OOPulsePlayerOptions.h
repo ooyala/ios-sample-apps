@@ -6,24 +6,21 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /**
- *  The OOPulsePlayerOptions allows you to display or hide the ad title while using
-    the OOPulseManager.
+ The @c OOPulsePlayerOptions allows you to display or hide the ad title while using
+ the @c OOPulseManager.
  */
 @class OOPulsePlayerOptions;
 
 @interface OOPulsePlayerOptions : NSObject
 
-@property (nonatomic,assign) BOOL displayingAdTitle;
+@property (nonatomic) BOOL displayingAdTitle;
 
 /**
- *  Initialize the OOPulsePlayerOption.
- *
- *  @param displayingAdTitle The option to whether display or hide the ad title.
- *
- *  @return The OOPulsePlayerOptions instance.
+ Initialize the OOPulsePlayerOption.
+ @return The OOPulsePlayerOptions instance.
  */
 - (instancetype)init;
 
