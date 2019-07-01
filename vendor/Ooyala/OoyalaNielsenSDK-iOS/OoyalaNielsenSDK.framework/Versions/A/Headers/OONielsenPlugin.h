@@ -1,20 +1,19 @@
 /**
-* @class      OONielsenPlugin OONielsenPlugin.h "OONielsenPlugin.h"
-* @brief      OONielsenPlugin
-* @details    OONielsenPlugin.h in OoyalaNielsenSDK
-* @date       11/13/14
-* @copyright  Copyright © 2014 Ooyala, Inc. All rights reserved.
+@class      OONielsenPlugin OONielsenPlugin.h "OONielsenPlugin.h"
+@brief      OONielsenPlugin
+@details    OONielsenPlugin.h in OoyalaNielsenSDK
+@date       11/13/14
+@copyright  Copyright © 2014 Ooyala, Inc. All rights reserved.
 */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @class OOOoyalaPlayer;
 @class NielsenAppApi;
 /**
- * Ooyala Nielson analytics plugin implementation.
+ Ooyala Nielson analytics plugin implementation.
  */
 @interface OONielsenPlugin : NSObject
-
 /**
  Initializes the ID3Meter metering framework.
  @param player the ooyala player the plugin associate with
@@ -39,6 +38,6 @@
 - (NielsenAppApi *)getNielsenAppApi;
 
 /** cutomer metadata that overrides server values */
-@property (nonatomic, retain) NSDictionary *customMetadata;
+@property (nonatomic) NSDictionary *customMetadata;
 
 @end

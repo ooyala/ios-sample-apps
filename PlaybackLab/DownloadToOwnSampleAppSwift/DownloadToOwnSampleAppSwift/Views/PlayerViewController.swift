@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlayerViewController: UIViewController {
+class PlayerViewController: UIViewController, OOEmbedTokenGenerator {
   
   @IBOutlet weak var titleLabel: UILabel!
   
@@ -118,5 +118,9 @@ class PlayerViewController: UIViewController {
   deinit {
     print("<PlayerViewController> has been destroyed.")
   }
-  
+
+  func token(forEmbedCodes embedCodes: [String], callback: @escaping OOEmbedTokenCallback) {
+    guard let embedTokenGenerator = dtoAsset.options.embedTokenGenerator else { return }
+    embedTokenGenerator.token(forEmbedCodes: embedCodes, callback: callback)
+  }
 }

@@ -2,17 +2,19 @@
 //  OOModule.h
 //  OoyalaSDK
 //
-// Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface OOModule : NSObject
 
-@property (nonatomic, strong, readonly) NSString *name;
-@property (nonatomic, strong, readonly) NSString *type;
-@property (nonatomic, strong, readonly) NSDictionary *metadata;
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSString *type;
+@property (nonatomic, readonly) NSDictionary *metadata;
 
-- (id)initWithName:(NSString *)name type:(NSString *)type metadata:(NSDictionary *)metadata;
+- (instancetype)initWithName:(NSString *)name
+                        type:(NSString *)type
+                    metadata:(NSDictionary *)metadata;
 
 @end

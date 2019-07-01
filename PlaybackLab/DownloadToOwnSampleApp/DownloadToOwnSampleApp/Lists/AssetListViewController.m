@@ -15,7 +15,7 @@
 
 @interface AssetListViewController ()
 
-@property (nonatomic) NSMutableArray<OODtoAsset *> *dtoAssets;
+@property (nonatomic) NSArray<OODtoAsset *> *dtoAssets;
 @property NSIndexPath *selectedIndexPath;
 
 @end
@@ -35,11 +35,7 @@ static NSString *const playerSegue = @"videoSegue";
   self.tableView.tableFooterView = [UIView new];
 
   // Create data for table view
-  self.dtoAssets = [NSMutableArray array];
-  NSArray *options = OptionsDataSource.options;
-  for (PlayerSelectionOption *oneOption in options) {
-    [self.dtoAssets addObject:[self buildDtoAssetForOption:oneOption]];
-  }
+  self.dtoAssets = OptionsDataSource.dtoAssets;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,21 +46,6 @@ static NSString *const playerSegue = @"videoSegue";
 }
 
 #pragma mark - Private functions
-
-/**
- Builds an OODtoAsset with the given options.
-
- @param option PlayerSelectionOption with the asset information.
- @return new OODtoAsset instance.
- */
-- (OODtoAsset *)buildDtoAssetForOption:(PlayerSelectionOption *)option {
-  OOAssetDownloadOptions *options = [OOAssetDownloadOptions new];
-  options.pcode = option.pcode;
-  options.embedCode = option.embedCode;
-  options.domain = [OOPlayerDomain domainWithString:option.domain];
-  options.embedTokenGenerator = option.embedTokenGenerator;
-  return [[OODtoAsset alloc] initWithOptions:options andName:option.title];
-}
 
 /**
  Re-sets closures for the selected cell after coming back from PlayerViewController

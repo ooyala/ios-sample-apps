@@ -1,7 +1,15 @@
+//
+//  FairplayPlayerViewController.m
+//  ContentProtectionSampleApp
+//
+//  Created on 5/15/12.
+//  Copyright © 2012 Ooyala Inc. All rights reserved.
+//
+
 /**
- * This activity illustrates how you configure your application to run Fairplay assets
+ * This class illustrates how you configure your application to run Fairplay assets
  *
- * This activity will NOT Playback any video.  You will need to:
+ * This class will NOT Playback any video. You will need to:
  *  1) provide your own embed code, which has Fairplay protection
  *  2) provide your own PCODE, which owns the embed code
  *  3) have your API Key and Secret, which correlate to a user from the provider
@@ -11,6 +19,7 @@
 
 #import "FairplayPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
+#import "BasicEmbedTOkenGenerator.h"
 
 @interface FairplayPlayerViewController () <OOEmbedTokenGenerator>
 
@@ -18,17 +27,17 @@
 
 @property OOOoyalaPlayerViewController *ooyalaPlayerViewController;
 
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 
 // required for FairPlay.
-@property NSString *apiKey;
-@property NSString *secret;
+@property (nonatomic) NSString *apiKey;
+@property (nonatomic) NSString *secret;
 // additionaly required if using OPT.
-@property NSString *authorizeHost;
-@property NSString *accountId;
+@property (nonatomic) NSString *authorizeHost;
+@property (nonatomic) NSString *accountId;
 
 @end
 
@@ -39,26 +48,35 @@
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerSimple";
+  _nib = @"PlayerSimple";
 
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _pcode = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
   }
 
   /*
-   * The API Key and Secret should not be saved inside your applciation (even in git!).
+   * The API Key and Secret should not be saved inside your application (even in git!).
    * However, for debugging you can use them to locally generate Ooyala Player Tokens.
    */
-  self.apiKey = @"Fill me in";
-  self.secret = @"Fill me in";
-  self.accountId = @"Fill me in";
-  self.authorizeHost = @"http://player.ooyala.com";
+  if (self.playerSelectionOption.embedTokenGenerator &&
+      [self.playerSelectionOption.embedTokenGenerator isKindOfClass:BasicEmbedTokenGenerator.class]) {
+    BasicEmbedTokenGenerator *tokenGenerator = (BasicEmbedTokenGenerator *)self.playerSelectionOption.embedTokenGenerator;
+    _apiKey        = tokenGenerator.apiKey;
+    _secret        = tokenGenerator.apiSecret;
+    _accountId     = tokenGenerator.accountId;
+    _authorizeHost = tokenGenerator.authorizeHost;
+  } else {
+    _apiKey        = @"API_KEY";
+    _secret        = @"API_SECRET";
+    _accountId     = @"ACCOUNT_ID";
+    _authorizeHost = @"AUTHORIZE_HOST";
+  }
   [OODebugMode setDebugMode:LogAndAbort];
   ASSERT([self.apiKey containsString:self.pcode], @"self.pcode must be the long prefix of self.apiKey.");
 

@@ -1,6 +1,6 @@
 //
 //  ContentProtectionListViewController.h
-//  ContentProtectionListViewController
+//  ContentProtectionSampleApp
 //
 //  Created on 2/23/15.
 //  Copyright © 2015 Ooyala Inc. All rights reserved.

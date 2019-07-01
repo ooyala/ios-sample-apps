@@ -12,7 +12,7 @@
 
 @interface OOManagedAdsPlugin : OOAdSpotPlugin<OOAdSpotPluginDelegate>
 
-- (instancetype)initWithPlayer:(OOOoyalaPlayer *)p;
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player;
 - (void)insertAd:(OOManagedAdSpot *)ad;
 
 @end

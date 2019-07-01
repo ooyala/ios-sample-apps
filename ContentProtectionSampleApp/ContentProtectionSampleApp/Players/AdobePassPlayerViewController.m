@@ -1,6 +1,6 @@
 //
-//  ViewController.m
-//  AdobePassDemoApp
+//  AdobePassPlayerViewController.m
+//  ContentProtectionSampleApp
 //
 //  Created on 5/15/12.
 //  Copyright © 2012 Ooyala Inc. All rights reserved.
@@ -12,10 +12,10 @@
 
 @interface AdobePassPlayerViewController () <AdobePassViewControllerDelegate>
 
-@property NSString *embedCode;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
 
 @end
 
@@ -23,13 +23,13 @@
 
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption {
   self = [super initWithPlayerSelectionOption: playerSelectionOption];
-  self.nib = @"PlayerDoubleButton";
+  _nib = @"PlayerDoubleButton";
 
   if (self.playerSelectionOption) {
-    self.embedCode = self.playerSelectionOption.embedCode;
+    _embedCode = self.playerSelectionOption.embedCode;
     self.title = self.playerSelectionOption.title;
-    self.pcode = self.playerSelectionOption.pcode;
-    self.playerDomain = self.playerSelectionOption.domain;
+    _pcode = self.playerSelectionOption.pcode;
+    _playerDomain = self.playerSelectionOption.domain;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;

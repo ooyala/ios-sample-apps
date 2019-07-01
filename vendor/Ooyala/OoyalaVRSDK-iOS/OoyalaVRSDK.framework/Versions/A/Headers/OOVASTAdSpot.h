@@ -13,12 +13,12 @@
 }
 
 @property (readonly, nonatomic) NSString *signature;         /**< The signature for the vast request */
-@property (readonly, nonatomic) NSInteger expires;                   /**< The expires for the vast request */
+@property (readonly, nonatomic) NSInteger expires;           /**< The expires for the vast request */
 @property (readonly, nonatomic) NSURL *vastURL;              /**< The url for the vast request */
 @property (readonly, nonatomic) NSMutableArray *ads;         /**< The actual ads */
 @property (readonly, nonatomic) NSMutableArray *vmapAdSpots; /**< The vmap ad spots */
-@property (readonly, nonatomic) NSInteger contentDuration;           /**< The duration of the ad */
-@property (readonly, nonatomic) NSMutableDictionary *errors;           /**< The errors of ads */
+@property (readonly, nonatomic) NSInteger contentDuration;   /**< The duration of the ad */
+@property (readonly, nonatomic) NSMutableDictionary *errors; /**< The errors of ads */
 
 
 - (instancetype)initWithOffset:(NSInteger)timeoffset

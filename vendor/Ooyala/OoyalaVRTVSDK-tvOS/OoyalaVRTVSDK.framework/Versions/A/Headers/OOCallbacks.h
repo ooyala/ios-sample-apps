@@ -61,13 +61,6 @@ typedef void(^OOMetadataDictionaryFromAPICallback)(OOOoyalaError *error);
 typedef void(^OOFetchMoreChildrenCallback)(NSRange range, OOOoyalaError *error);
 
 /**
- The callback used for OOOoyalaAPIClient.objectFromBacklotAPI:params:callback: calls
-
- @param object the NSArray or NSDictionary returned from the backlot API
- */
-typedef void(^OOObjectFromBacklotAPICallback)(NSObject *object);
-
-/**
  The callback used for authorization requests
 
  @param error the OOOoyalaError if one occurred

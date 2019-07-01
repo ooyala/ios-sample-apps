@@ -36,7 +36,6 @@ NS_CLASS_AVAILABLE_IOS(10.0)
  \ingroup offline
  */
 @interface OODtoAsset : NSObject
-
 /**
  Embed code managed by this OODtoAsset instance.
  It's first initialized when supplying the OOAssetDownloadOptions.
@@ -52,14 +51,12 @@ NS_CLASS_AVAILABLE_IOS(10.0)
 @property (nonatomic, readonly, nonnull) OOAssetDownloadOptions *options;
 
 @property (nonatomic, nonnull) AVURLAsset *urlAsset;
-
 /**
  AVMediaSelection set for a specific asset (e.g. closed captions).
  */
 @property (nonatomic, nullable) AVMediaSelection *mediaSelection;
 
 @property (nonatomic, nullable) NSString *currentDownload;
-
 /**
  NSURL pointing to a local resource with the downloaded asset
  */
@@ -68,7 +65,6 @@ NS_CLASS_AVAILABLE_IOS(10.0)
  NSURL pointing to a local resource with the Fairplay key
  */
 @property (nonatomic, readonly, nullable) NSURL *fairplayKey;
-
 /**
  State of the asset
  */
@@ -77,7 +73,6 @@ NS_CLASS_AVAILABLE_IOS(10.0)
  String text of the asset's state
  */
 @property (nonatomic, readonly, nonnull) NSString *stateText;
-
 /**
  An instance of OOOfflineVideo for the specific asset if downloaded
  */
@@ -107,6 +102,23 @@ NS_CLASS_AVAILABLE_IOS(10.0)
  */
 - (nonnull instancetype)initWithOptions:(nonnull OOAssetDownloadOptions *)options
                                 andName:(nonnull NSString *)name NS_DESIGNATED_INITIALIZER;
+
+/**
+ Initializes a new OODtoAsset instance with the supplied OOAssetDownloadOptions.
+
+ @param options Must not be null and all values are required.
+ @param name Human readable name for the asset
+ @return new OODtoAsset instance
+ */
++ (nonnull OODtoAsset *)initWithOptions:(nonnull OOAssetDownloadOptions *)options
+                                andName:(nonnull NSString *)name;
+
+/**
+ Sets completionHandler from @c application:handleEventsForBackgroundURLSession method
+
+ @param backgroundSessionCompletionHandler a completionHandler provided by the system
+ */
++ (void)setBackgroundSessionCompletionHandler:(void (^_Nullable)(void))backgroundSessionCompletionHandler;
 
 /**
  Starts a download of an asset with the progress closure
@@ -162,5 +174,12 @@ NS_CLASS_AVAILABLE_IOS(10.0)
  @param callback a nullable array of streams
  */
 - (void)getStreamsWithCallback:(void (^_Nullable)(NSArray<OOAssetDownloadStream *> * _Nullable streams))callback;
+
+/**
+ Tries to restore downloading of assets. Should be called in @c application:didFinishLaunchingWithOptions
+
+ @param dtoAssets an array of DTO assets
+ */
++ (void)restoreAllDownloadsForDtoAssets:(NSMutableArray<OODtoAsset *> *_Nonnull)dtoAssets;
 
 @end

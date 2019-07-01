@@ -1,4 +1,7 @@
+
 @import Foundation;
+
+#import "OOEnums.h"
 
 @class OOFCCTVRatingConfiguration;
 @class OOIQConfiguration;
@@ -62,6 +65,11 @@
  @discussion Default: @c NO
  */
 @property (nonatomic) BOOL enablePictureInPictureSupport;
+
+/**
+ The OOBackgroundPlaybackModeAllowed to keep player playing during pbackground mode. */
+@property (nonatomic) OOBackgroundPlaybackMode backgroundMode;
+
 /**
  The picture in picture delegate to receive PIP events
  */
@@ -95,6 +103,11 @@
  Markers Inline to be added using an external file or with @c NSDictionary definiton
  */
 @property (nonatomic, nullable) NSDictionary *markers;
+/**
+ The initial time to play from
+ Added for future support, use @c playWithInitialTime: instead
+ */
+@property (nonatomic) Float64 initialTime;
 
 /**
  Initialize an @c OOOptions object with the all properties with default values

@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaErrorCode) {
   OOOoyalaErrorCodeAdvertistingIdFailure         = 25,  /**< Failed to obtain advertising Id */
   OOOoyalaErrorCodeDiscoveryGetFailure           = 26,  /**< Failed to get discovery results */
   OOOoyalaErrorCodeDiscoveryPostFailure          = 27,  /**< Failed to post discovery pins */
-  OOOoyalaErrorCodePlayerFormatMissmatch         = 28,  /**< Player and player content do not correspond */
+  OOOoyalaErrorCodePlayerFormatMismatch          = 28,  /**< Player and player content do not correspond */
   OOOoyalaErrorCodeCreateVRPlayerFailed          = 29,  /**< Failed to create VR player. */
   OOOoyalaErrorCodeUnknownError                  = 30,  /**< Unknown error */
   OOOoyalaErrorCodeGeoBlockingError              = 31,  /**< Geo blocking error */
@@ -59,6 +59,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaErrorCode) {
 @property (readonly, nonatomic) NSString *message; /**< The OOOoyalaError's description */
 @property (readonly, nonatomic) NSError *error; /**< The underlying NSError if it exists */
 @property (readonly, nonatomic) NSDictionary *userInfo; /**< An optional NSDictionary that has more info about the error */
+@property (nonatomic) NSString *failingUrl; /**< A failing URL if present */
 
 /** @internal
  * Initialize an OOOoyalaError
@@ -89,7 +90,8 @@ typedef NS_ENUM(NSInteger, OOOoyalaErrorCode) {
  * @param description the error's description
  * @return the initialized OOOoyalaError
  */
-- (instancetype)initWithCode:(OOOoyalaErrorCode)code description:(NSString *)description;
+- (instancetype)initWithCode:(OOOoyalaErrorCode)code
+                 description:(NSString *)description;
 
 /** @internal
  * Initialize an OOOoyalaError
