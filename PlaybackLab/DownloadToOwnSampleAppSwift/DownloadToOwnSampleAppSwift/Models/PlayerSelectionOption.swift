@@ -13,7 +13,7 @@ class PlayerSelectionOption {
   public private(set) var pcode: String
   public private(set) var embedCode: String
   public private(set) var title: String
-  public private(set) weak var embedTokenGenerator: OOEmbedTokenGenerator?
+  public private(set) var embedTokenGenerator: OOEmbedTokenGenerator?
   
   init(pcode: String,
        embedCode: String,
