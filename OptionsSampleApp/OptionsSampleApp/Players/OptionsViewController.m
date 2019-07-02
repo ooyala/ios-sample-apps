@@ -9,6 +9,7 @@
 #import "OptionsViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
+#import "PlayerSelectionOption.h"
 
 @interface OptionsViewController () <UITextFieldDelegate>
 
@@ -16,26 +17,21 @@
 
 @property IBOutlet UIButton *button;
 @property IBOutlet UIView *playerView;
-@property (nonatomic) OOOoyalaPlayerViewController* playerViewController;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
-@property NSString *embedCode;
+
+@property (nonatomic) OOOoyalaPlayerViewController *playerViewController;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
 
 @end
 
 @implementation OptionsViewController{
-    AppDelegate *appDel;
+  AppDelegate *appDel;
 }
 
 #pragma mark - Synthesize
 
-@synthesize switchLabel1 = _switchLabel1;
-@synthesize switchLabel2 = _switchLabel2;
-@synthesize switch1 = _switch1;
-@synthesize switch2 = _switch2;
-@synthesize text1 = _text1;
-@synthesize text2 = _text2;
 @dynamic playerView;
 
 #pragma mark - Initialization
@@ -43,16 +39,13 @@
 - (instancetype)initWithPlayerSelectionOption:(PlayerSelectionOption *)playerSelectionOption
                                 qaModeEnabled:(BOOL)qaModeEnabled {
   self = [super initWithPlayerSelectionOption:playerSelectionOption qaModeEnabled:qaModeEnabled];
-  if (playerSelectionOption.nib) {
-    _nib = playerSelectionOption.nib;
-  } else {
-    _nib = @"PlayerDoubleSwitch";
-  }
+  _nib = playerSelectionOption.nib ?: @"PlayerDoubleSwitch";
+
   if (self.playerSelectionOption) {
-    _embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-    _pcode = self.playerSelectionOption.pcode;
+    _embedCode    = self.playerSelectionOption.embedCode;
+    _pcode        = self.playerSelectionOption.pcode;
     _playerDomain = self.playerSelectionOption.domain;
+    self.title    = self.playerSelectionOption.title;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -64,7 +57,7 @@
 
 - (void)loadView {
   [super loadView];
-  [[NSBundle mainBundle] loadNibNamed:self.nib owner:self options:nil];
+  [NSBundle.mainBundle loadNibNamed:self.nib owner:self options:nil];
 }
 
 - (void)viewDidLoad {
@@ -75,26 +68,26 @@
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
   
-  if (_switch1) {
-    _switchLabel1.text = @"ShowPromoImage";
-    _switch1.on = NO;
+  if (self.switch1) {
+    self.switchLabel1.text = @"ShowPromoImage";
+    self.switch1.on = NO;
   }
   
-  if (_switch2) {
-    _switchLabel2.text = @"Preload";
-    _switch2.on = YES;
+  if (self.switch2) {
+    self.switchLabel2.text = @"Preload";
+    self.switch2.on = YES;
   }
   
-  if (_text1) {
-    _switchLabel1.text = @"n/w timeout";
-    _text1.text = @"60.0";
-    _text1.delegate = self;
+  if (self.text1) {
+    self.switchLabel1.text = @"n/w timeout";
+    self.text1.text = @"60.0";
+    self.text1.delegate = self;
   }
   
-  if (_text2) {
-    _switchLabel2.text = @"";
-    _switchLabel2.enabled = NO;
-    _text2.enabled = NO;
+  if (self.text2) {
+    self.switchLabel2.text = @"";
+    self.switchLabel2.enabled = NO;
+    self.text2.enabled = NO;
   }
   
   [_button setTitle:@"Create" forState:UIControlStateNormal];
@@ -103,16 +96,6 @@
 }
 
 #pragma mark - Actions
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (IBAction)onButtonClick:(id)sender {
   OOOptions *options = [OOOptions new];
@@ -147,14 +130,14 @@
   
   // Setup video view
   CGRect rect = self.playerView.bounds;
-  _playerViewController.view.frame = rect;
-  [self addChildViewController:_playerViewController];
-  [self.playerView addSubview:_playerViewController.view];
+  self.playerViewController.view.frame = rect;
+  [self addChildViewController:self.playerViewController];
+  [self.playerView addSubview:self.playerViewController.view];
   
-  [_playerViewController.player setEmbedCode:self.embedCode];
+  [self.playerViewController.player setEmbedCode:self.embedCode];
   
-  if (_initialTime > 0) {
-    [_playerViewController.player playWithInitialTime:_initialTime];
+  if (self.initialTime > 0) {
+    [self.playerViewController.player playWithInitialTime:self.initialTime];
   }
 }
 
@@ -175,9 +158,8 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.playerViewController.player state]],
-                       [self.playerViewController.player playheadTime], appDel.count];
-  
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.playerViewController.player.state],
+                       self.playerViewController.player.playheadTime, appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView

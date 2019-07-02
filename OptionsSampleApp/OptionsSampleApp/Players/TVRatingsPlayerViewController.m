@@ -9,33 +9,28 @@
 #import "TVRatingsPlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
+#import "PlayerSelectionOption.h"
 
 @interface TVRatingsPlayerViewController () <UITextFieldDelegate>
 
 #pragma mark - Private properties
 
-@property IBOutlet UIButton *button;
-@property IBOutlet UIView *playerView;
-@property OOOoyalaPlayerViewController *playerViewController;
-@property NSString *nib;
-@property NSString *pcode;
-@property NSString *playerDomain;
-@property NSString *embedCode;
+@property (nonatomic) IBOutlet UIButton *button;
+@property (nonatomic) IBOutlet UIView *playerView;
+
+@property (nonatomic) OOOoyalaPlayerViewController *playerViewController;
+@property (nonatomic) NSString *nib;
+@property (nonatomic) NSString *pcode;
+@property (nonatomic) NSString *playerDomain;
+@property (nonatomic) NSString *embedCode;
 @property int tvRatingDuration;
 
 @end
 
-@implementation TVRatingsPlayerViewController{
+@implementation TVRatingsPlayerViewController {
   AppDelegate *appDel;
 }
 
-#pragma mark - Synthesize
-
-@synthesize switchLabel1 = _switchLabel1;
-@synthesize switchLabel2 = _switchLabel2;
-@synthesize switch1 = _switch1;
-@synthesize switch2 = _switch2;
-@synthesize button1 = _button1;
 @dynamic playerView;
 
 #pragma mark - Initialization
@@ -46,10 +41,10 @@
   _nib = @"PlayerDoubleSwitch";
   _tvRatingDuration = 5;
   if (self.playerSelectionOption) {
-    _embedCode = self.playerSelectionOption.embedCode;
-    self.title = self.playerSelectionOption.title;
-    _pcode = self.playerSelectionOption.pcode;
+    _embedCode    = self.playerSelectionOption.embedCode;
+    _pcode        = self.playerSelectionOption.pcode;
     _playerDomain = self.playerSelectionOption.domain;
+    self.title    = self.playerSelectionOption.title;
   } else {
     NSLog(@"There was no PlayerSelectionOption!");
     return nil;
@@ -72,16 +67,16 @@
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
   
-  if (_switch1) {
-    _switchLabel1.text = @"On = Top, Off = Bottom";
-    _switch1.on = NO;
+  if (self.switch1) {
+    self.switchLabel1.text = @"On = Top, Off = Bottom";
+    self.switch1.on = NO;
   }
-  if (_switch2) {
-    _switchLabel2.text = @"On = Left, Off = Right";
-    _switch2.on = NO;
+  if (self.switch2) {
+    self.switchLabel2.text = @"On = Left, Off = Right";
+    self.switch2.on = NO;
   }
   
-  [_button1 setTitle:@"Set EC" forState:UIControlStateNormal];
+  [self.button1 setTitle:@"Set EC" forState:UIControlStateNormal];
 }
 
 - (IBAction)onButtonClick:(id)sender {
@@ -93,7 +88,7 @@
   }
   
   OOFCCTVRatingConfiguration *tvRatingConfig = [[OOFCCTVRatingConfiguration alloc] initWithDurationSeconds:_tvRatingDuration
-                                                                                                  position:[self getTVRatingPosition]
+                                                                                                  position:self.tvRatingPosition
                                                                                                      scale:OOFCCTVRATINGCONFIGURATION_DEFAULT_SCALE
                                                                                                    opacity:OOFCCTVRATINGCONFIGURATION_DEFAULT_OPACITY];
   options.tvRatingConfiguration = tvRatingConfig;
@@ -103,10 +98,10 @@
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain] options:options];
   _playerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(notificationHandler:)
-                                               name:nil
-                                             object:self.playerViewController.player];
+  [NSNotificationCenter.defaultCenter addObserver:self
+                                         selector:@selector(notificationHandler:)
+                                             name:nil
+                                           object:self.playerViewController.player];
   
   // Setup video view
   CGRect rect = self.playerView.bounds;
@@ -123,16 +118,18 @@
 
 #pragma mark - Private functions
 
-- (OOFCCTvRatingsPosition)getTVRatingPosition {
-  if (_switch1.on && _switch2.on) {
+- (OOFCCTvRatingsPosition)tvRatingPosition {
+  if (self.switch1.on && self.switch2.on) {
     return OOFCCTvRatingsPositionTopLeft;
-  } else if (_switch1.on&& !_switch2.on) {
-    return OOFCCTvRatingsPositionTopRight;
-  } else if (!_switch1.on && _switch2.on) {
-    return OOFCCTvRatingsPositionBottomLeft;
-  } else { // if (_switch1.on == NO && _switch2.on == NO)
-    return OOFCCTvRatingsPositionBottomRight;
   }
+  if (self.switch1.on && !self.switch2.on) {
+    return OOFCCTvRatingsPositionTopRight;
+  }
+  if (!self.switch1.on && self.switch2.on) {
+    return OOFCCTvRatingsPositionBottomLeft;
+  }
+  // if (!self.switch1.on && !self.switch2.on)
+  return OOFCCTvRatingsPositionBottomRight;
 }
 
 - (void)notificationHandler:(NSNotification *)notification {
@@ -143,8 +140,8 @@
   
   NSString *message = [NSString stringWithFormat:@"Notification Received: %@. state: %@. playhead: %f count: %d",
                        notification.name,
-                       [OOOoyalaPlayerStateConverter playerStateToString:[self.playerViewController.player state]],
-                       [self.playerViewController.player playheadTime], appDel.count];
+                       [OOOoyalaPlayerStateConverter playerStateToString:self.playerViewController.player.state],
+                       self.playerViewController.player.playheadTime, appDel.count];
   NSLog(@"%@",message);
   
   // In QA Mode , adding notifications to the TextView

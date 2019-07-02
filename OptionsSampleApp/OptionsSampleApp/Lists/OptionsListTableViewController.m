@@ -80,23 +80,21 @@ static NSString *cellId = @"pickerCell";
   _options = [NSArray array];
   _options = [self playerSelectionOptions];
 
-  UISwitch *swtLog = [UISwitch new];
-  [swtLog addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
-  UILabel *lblLog = [[UILabel alloc] initWithFrame:CGRectMake(0,0,44,44)];
-  lblLog.text = @"QA";
-  UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithCustomView:swtLog];
-  UIBarButtonItem *lbl = [[UIBarButtonItem alloc] initWithCustomView:lblLog];
-  self.navigationItem.rightBarButtonItems = @[btn, lbl] ;
-  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil] forCellReuseIdentifier:@"TableCell"];
+  UISwitch *switchLog = [UISwitch new];
+  [switchLog addTarget:self
+             action:@selector(changeSwitch:)
+   forControlEvents:UIControlEventValueChanged];
+  UILabel *labelLog = [[UILabel alloc] initWithFrame:CGRectMake(0,0,44,44)];
+  labelLog.text = @"QA";
+  UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithCustomView:switchLog];
+  UIBarButtonItem *lbl = [[UIBarButtonItem alloc] initWithCustomView:labelLog];
+  self.navigationItem.rightBarButtonItems = @[btn, lbl];
+  [self.tableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil]
+       forCellReuseIdentifier:@"TableCell"];
 }
 
-- (void)changeSwitch:(id)sender{
-  if ([sender isOn]) {
-    self.qaLogEnabled=YES;
-  } else {
-    self.qaLogEnabled=NO;
-  }
-//  self.qaLogEnabled = [sender isOn];
+- (void)changeSwitch:(id)sender {
+  self.qaLogEnabled = [sender isOn];
 }
 
 #pragma mark - Table view data source
