@@ -11,6 +11,7 @@
 #import "OOCastManagerFetcher.h"
 #import "CastPlaybackView.h"
 #import "ChromecastPlayerSelectionOption.h"
+#import <GoogleCast/GCKDevice.h>
 
 @interface PlayerViewController ()
 

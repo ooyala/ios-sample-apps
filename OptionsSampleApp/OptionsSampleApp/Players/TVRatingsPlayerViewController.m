@@ -89,8 +89,8 @@
   
   OOFCCTVRatingConfiguration *tvRatingConfig = [[OOFCCTVRatingConfiguration alloc] initWithDurationSeconds:_tvRatingDuration
                                                                                                   position:self.tvRatingPosition
-                                                                                                     scale:OOFCCTVRATINGCONFIGURATION_DEFAULT_SCALE
-                                                                                                   opacity:OOFCCTVRATINGCONFIGURATION_DEFAULT_OPACITY];
+                                                                                                     scale:0.2
+                                                                                                   opacity:0.9];
   options.tvRatingConfiguration = tvRatingConfig;
   
   // Create Ooyala ViewController
