@@ -462,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -486,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ooyala.TVOSSwiftSampleApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVOSSwiftSampleApp/Supporting Files/TVOSSwiftSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

@@ -104,7 +104,7 @@
     // Notification when player has all information from Ooyala APIs
   } else if ([notification.name isEqualToString:OOOoyalaPlayerCurrentItemChangedNotification]) {
     OOVideo *video = self.ooyalaPlayerViewController.player.currentItem;
-    NSArray *streams = [video getStreams];
+    NSArray *streams = [video streams];
     OOStream *stream;
     if (streams.count > 0) {
       stream = streams.firstObject;
