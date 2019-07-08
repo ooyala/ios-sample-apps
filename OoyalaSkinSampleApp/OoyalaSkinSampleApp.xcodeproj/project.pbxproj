@@ -59,6 +59,7 @@
 		39D45FE9221D59CF008C9FC7 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */; };
 		39D45FEA221D59CF008C9FC7 /* GoogleInteractiveMediaAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39D45FDD221D59C6008C9FC7 /* GoogleInteractiveMediaAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39D45FEE221D5A67008C9FC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D45FEC221D5A67008C9FC7 /* main.m */; };
+		39E0983122CF893600D55328 /* DRMPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39E0983022CF893600D55328 /* DRMPlayerViewController.xib */; };
 		52B59C3C201FD88C004F165F /* GeoblockingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */; };
 		52B59C3F201FD914004F165F /* GeoblockingSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C3E201FD914004F165F /* GeoblockingSkinViewController.m */; };
 		52B59C43201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B59C42201FD9A1004F165F /* GeoblockingPlayerSelectionOptions.m */; };
@@ -161,6 +162,7 @@
 		39D45FE1221D59C6008C9FC7 /* OoyalaFreewheelSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OoyalaFreewheelSDK.framework; sourceTree = "<group>"; };
 		39D45FEC221D5A67008C9FC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39D45FED221D5A67008C9FC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E0983022CF893600D55328 /* DRMPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRMPlayerViewController.xib; sourceTree = "<group>"; };
 		52B59C3A201FD88C004F165F /* GeoblockingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingTableViewController.h; sourceTree = "<group>"; };
 		52B59C3B201FD88C004F165F /* GeoblockingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoblockingTableViewController.m; sourceTree = "<group>"; };
 		52B59C3D201FD914004F165F /* GeoblockingSkinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoblockingSkinViewController.h; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				0BFFF7B51B3A225E00D72444 /* WidePlayerView.xib */,
 				0B78246A1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib */,
 				0B7824661B2FA0BD00D718AB /* DefaultSkinPlayerView.xib */,
+				39E0983022CF893600D55328 /* DRMPlayerViewController.xib */,
 				0B7824561B2B841800D718AB /* TableCell.xib */,
 				752F36B020063469007BF377 /* SetAssetSkinPlayerView.xib */,
 				B8FA3A63210F8BFD004C6D7F /* SSAIPlayerViewController.xib */,
@@ -560,6 +563,7 @@
 				393A46DC21CCCDDF005860F3 /* README.txt in Resources */,
 				0B78246B1B2FA5DA00D718AB /* SmallSkinPlayerViewTwo.xib in Resources */,
 				393A46E321CCCDDF005860F3 /* zh.json in Resources */,
+				39E0983122CF893600D55328 /* DRMPlayerViewController.xib in Resources */,
 				393A46DE21CCCDDF005860F3 /* ooyala-slick-type.ttf in Resources */,
 				B8FA3A68210FB46D004C6D7F /* google_dfp.json in Resources */,
 				393A46F021CCCE43005860F3 /* OoyalaSkinSDK.xcassets in Resources */,
