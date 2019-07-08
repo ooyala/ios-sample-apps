@@ -38,4 +38,9 @@
   [self.window makeKeyAndVisible];
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application
+  supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+  return UIInterfaceOrientationMaskAll;
+}
+
 @end
