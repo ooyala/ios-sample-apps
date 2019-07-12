@@ -93,9 +93,6 @@
     // Notifications for when Ooyala API requests are completed
   } else if ([notification.name isEqualToString:OOOoyalaPlayerEmbedCodeSetNotification]) {
     NSLog(@"Note: The Embed Code has been set, effectively restarting the OoyalaPlayer");
-  } else if ([notification.name isEqualToString:OOOoyalaPlayerContentTreeReadyNotification]) {
-  } else if ([notification.name isEqualToString:OOOoyalaPlayerAuthorizationReadyNotification]) {
-  } else if ([notification.name isEqualToString:OOOoyalaPlayerMetadataReadyNotification]) {
     // Notification when the playback starts or completes
   } else if ([notification.name isEqualToString:OOOoyalaPlayerPlayStartedNotification]) {
     NSLog(@"Note: The player has started playback of this asset for the first time");

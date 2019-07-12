@@ -132,9 +132,6 @@
     [self.delegate didStartPlaying];
     NSLog(@"%@", @"Playback started");
   }
-  if ([notification.name isEqualToString:OOOoyalaPlayerEmbedCodeSetNotification]) {
-    NSLog(@"%@", @"Playback started");
-  }
 }
 
 @end
