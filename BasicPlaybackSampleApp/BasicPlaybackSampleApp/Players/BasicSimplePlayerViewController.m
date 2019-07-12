@@ -99,17 +99,21 @@
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   //Deprecated API. Remove this call when SDK version become more then 4.46.0_GA. Uncomment code with Asynchronous method instead.
   [self.ooyalaPlayerViewController.player play];
+
   
   //new API. Uncomment when SDK version become more then 4.46.0_GA
   /*
   __weak BasicSimplePlayerViewController *weakSelf = self;
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(BOOL isSuccess) {
-    NSLog(@"✅ got callback. is Success: %d", isSuccess);
-    if (weakSelf && isSuccess) {
+  [self.ooyalaPlayerViewController.player setEmbedCode:asset withCallback:^(OOOoyalaError *error) {
+   
+    NSLog(@"✅ got callback. is success: %d", (error == nil));
+    NSLog(@"----");
+    if (weakSelf && !error) {
       [weakSelf.ooyalaPlayerViewController.player play];
+    } else {
+      NSLog(@"❌ error: %@", error.debugDescription);
     }
-  }];
-*/
+  }];*/
 }
 
 #pragma mark - Private functions
