@@ -96,24 +96,21 @@
   [self addPlayerViewController:self.ooyalaPlayerViewController];
   
   // Load the video
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
+  //[self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
   //Deprecated API. Remove this call when SDK version become more then 4.46.0_GA. Uncomment code with Asynchronous method instead.
-  [self.ooyalaPlayerViewController.player play];
-
+  //[self.ooyalaPlayerViewController.player play];
   
   //new API. Uncomment when SDK version become more then 4.46.0_GA
-  /*
   __weak BasicSimplePlayerViewController *weakSelf = self;
-  [self.ooyalaPlayerViewController.player setEmbedCode:asset withCallback:^(OOOoyalaError *error) {
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
    
-    NSLog(@"✅ got callback. is success: %d", (error == nil));
-    NSLog(@"----");
+    NSLog(@"✅ got callback. embed: %@, is success: %d", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil));
     if (weakSelf && !error) {
       [weakSelf.ooyalaPlayerViewController.player play];
     } else {
       NSLog(@"❌ error: %@", error.debugDescription);
     }
-  }];*/
+  }];
 }
 
 #pragma mark - Private functions
