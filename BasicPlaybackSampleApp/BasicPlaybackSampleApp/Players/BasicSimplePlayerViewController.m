@@ -9,6 +9,7 @@
 #import "BasicSimplePlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import <OoyalaSDK/OOOptions.h>
+#import <OoyalaSDK/OODebugMode.h>
 
 #import "AppDelegate.h"
 
@@ -101,14 +102,14 @@
   //[self.ooyalaPlayerViewController.player play];
   
   //new API. Uncomment when SDK version become more then 4.46.0_GA
-  __weak BasicSimplePlayerViewController *weakSelf = self;
+  __weak typeof(self) weakSelf = self;
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
    
-    NSLog(@"✅ got callback. embed: %@, is success: %d", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil));
+    LOG(@"✅ got callback. embed: %@, is success: %d", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil));
     if (weakSelf && !error) {
       [weakSelf.ooyalaPlayerViewController.player play];
     } else {
-      NSLog(@"❌ error: %@", error.debugDescription);
+      LOG(@"❌ error: %@", error.debugDescription);
     }
   }];
 }
