@@ -105,7 +105,7 @@
   __weak typeof(self) weakSelf = self;
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
    
-    LOG(@"✅ got callback. embed: %@, is success: %d", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil));
+    LOG(@"✅ got callback. embed: %@, is success: %@", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
     if (weakSelf && !error) {
       [weakSelf.ooyalaPlayerViewController.player play];
     } else {
