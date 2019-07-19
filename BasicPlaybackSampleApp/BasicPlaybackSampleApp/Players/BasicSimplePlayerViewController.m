@@ -103,12 +103,26 @@
   
   //new API. Uncomment when SDK version become more then 4.46.0_GA
   __weak typeof(self) weakSelf = self;
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
-   
-    LOG(@"✅ got callback. embed: %@, is success: %@", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
-    if (weakSelf && !error) {
+  
+  //OS: to avoid calling '[weakSelf.player play]' until player really ready to play
+  void (^expectedBlock) (OOVideo *currentItem);
+  expectedBlock = ^ (OOVideo *currentItem) {
+    LOG(@"✅ ✅ ✅ got expectedBlock");
+    if ([currentItem.embedCode isEqualToString:weakSelf.embedCode]) {
+      NSLog(@"✅ aseet with embed code %@", currentItem.embedCode);
       [weakSelf.ooyalaPlayerViewController.player play];
+      //OS: block must be removed after '[weakSelf.player play]', to prevent ignition from OOBaseStreamPlayer's KVO 'AVPlayerItemStatusReadyToPlay'
+      weakSelf.ooyalaPlayerViewController.player.currentItemChangedCallback = nil;
     } else {
+      NSLog(@"❌ aseet with embed code %@ must be in hospital and take injections", currentItem.embedCode);
+    }
+  };
+  self.ooyalaPlayerViewController.player.currentItemChangedCallback = expectedBlock; //OOCurrentItemChangedCallback
+
+  
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
+    LOG(@"✅ got callback. embed: %@, is success: %@. But it doesn't mean that status is 'AVPlayerItemStatusReadyToPlay'", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
+    if (error) {
       LOG(@"❌ error: %@", error.debugDescription);
     }
   }];
