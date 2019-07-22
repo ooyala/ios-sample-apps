@@ -96,21 +96,7 @@
   // Attach it to current view
   [self addPlayerViewController:self.ooyalaPlayerViewController];
   
-  // Load the video
-  //[self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  //Deprecated API. Remove this call when SDK version become more then 4.46.0_GA. Uncomment code with Asynchronous method instead.
-  //[self.ooyalaPlayerViewController.player play];
-  
-  //new API. Uncomment when SDK version become more then 4.46.0_GA
   __weak typeof(self) weakSelf = self;
-  
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
-    LOG(@"✅ got callback. embed: %@, is success: %@. But it doesn't mean that status is 'AVPlayerItemStatusReadyToPlay'", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
-    if (error) {
-      LOG(@"❌ error: %@", error.debugDescription);
-    }
-  }];
-  
   //OS: to avoid calling '[weakSelf.player play]' until player really ready to play
   void (^expectedBlock) (OOVideo *currentItem);
   expectedBlock = ^(OOVideo *currentItem) {
@@ -125,6 +111,19 @@
     }
   };
   self.ooyalaPlayerViewController.player.currentItemChangedCallback = expectedBlock; //OOCurrentItemChangedCallback
+  
+  // Load the video
+  //[self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
+  //Deprecated API. Remove this call when SDK version become more then 4.46.0_GA. Uncomment code with Asynchronous method instead.
+  //[self.ooyalaPlayerViewController.player play];
+  
+  //new API. Uncomment when SDK version become more then 4.46.0_GA
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
+    LOG(@"✅ got callback. embed: %@, is success: %@. But it doesn't mean that status is 'AVPlayerItemStatusReadyToPlay'", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
+    if (error) {
+      LOG(@"❌ error: %@", error.debugDescription);
+    }
+  }];
 }
 
 #pragma mark - Private functions
