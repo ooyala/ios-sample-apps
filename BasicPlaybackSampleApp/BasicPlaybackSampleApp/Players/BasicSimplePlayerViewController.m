@@ -113,7 +113,7 @@
   
   //OS: to avoid calling '[weakSelf.player play]' until player really ready to play
   void (^expectedBlock) (OOVideo *currentItem);
-  expectedBlock = ^ (OOVideo *currentItem) {
+  expectedBlock = ^(OOVideo *currentItem) {
     LOG(@"✅ got expectedBlock");
     if ([currentItem.embedCode isEqualToString:weakSelf.embedCode]) {
       NSLog(@"✅ aseet with embed code %@", currentItem.embedCode);
@@ -121,7 +121,7 @@
       //OS: block must be removed after '[weakSelf.player play]', to prevent ignition from OOBaseStreamPlayer's KVO 'AVPlayerItemStatusReadyToPlay'
       weakSelf.ooyalaPlayerViewController.player.currentItemChangedCallback = nil;
     } else {
-      NSLog(@"❌ asset with embed code %@ must be in hospital and take injections", currentItem.embedCode);
+      NSLog(@"❌ Error: got player with embed code [%@] that is not expected", currentItem.embedCode);
     }
   };
   self.ooyalaPlayerViewController.player.currentItemChangedCallback = expectedBlock; //OOCurrentItemChangedCallback
