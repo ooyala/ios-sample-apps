@@ -102,12 +102,10 @@
   expectedBlock = ^(OOVideo *currentItem) {
     LOG(@"✅ got expectedBlock");
     if ([currentItem.embedCode isEqualToString:weakSelf.embedCode]) {
-      NSLog(@"✅ aseet with embed code %@", currentItem.embedCode);
+      LOG(@"✅ aseet with embed code %@", currentItem.embedCode);
       [weakSelf.ooyalaPlayerViewController.player play];
       //OS: block must be removed after '[weakSelf.player play]', to prevent ignition from OOBaseStreamPlayer's KVO 'AVPlayerItemStatusReadyToPlay'
       weakSelf.ooyalaPlayerViewController.player.currentItemChangedCallback = nil;
-    } else {
-      NSLog(@"❌ Error: got player with embed code [%@] that is not expected", currentItem.embedCode);
     }
   };
   self.ooyalaPlayerViewController.player.currentItemChangedCallback = expectedBlock; //OOCurrentItemChangedCallback
@@ -120,9 +118,6 @@
   //new API. Uncomment when SDK version become more then 4.46.0_GA
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
     LOG(@"✅ got callback. embed: %@, is success: %@. But it doesn't mean that status is 'AVPlayerItemStatusReadyToPlay'", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
-    if (error) {
-      LOG(@"❌ error: %@", error.debugDescription);
-    }
   }];
 }
 
