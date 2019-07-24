@@ -39,7 +39,7 @@
 - (void)displayContainerUpdated:(IMAAdDisplayContainer *)adDisplayContainer;
 @end
 
-@interface OOIMAManager : NSObject<OOAdPlugin>
+@interface OOIMAManager : NSObject <OOAdPlugin>
 
 @property (nonatomic, weak) id<OOIMAManagerDelegate> delegate;
 @property (nonatomic, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
@@ -91,7 +91,7 @@
  * Add tag parameters to the end of the original URL for ads request.
  * The parameters will be overridden by the latest call if this method get called multiple times
  * @param adTagParameters A dictionary of the key-value pairs to be appended to the tag as query string parameters */
-- (void)setAdTagParameters:(NSDictionary*)adTagParameters;
+- (void)setAdTagParameters:(NSDictionary *)adTagParameters;
 
 /**
  * Play, or queue up automatic playing of ads if they are still loading.

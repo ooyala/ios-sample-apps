@@ -6,11 +6,12 @@
 //  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
 @class OOOoyalaPlayer;
 @class OOCastPlayer;
-@protocol OOEmbedTokenGenerator;
 @class OOCastModeOptions;
+@protocol OOEmbedTokenGenerator;
 
 @protocol OOCastManagerProtocol <NSObject>
 

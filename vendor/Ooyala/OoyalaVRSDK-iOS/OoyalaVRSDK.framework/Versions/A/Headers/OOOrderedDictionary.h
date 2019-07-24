@@ -10,28 +10,28 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface OOOrderedDictionary : NSObject <NSFastEnumeration> {
 @private
   SEL keySelector;
 }
 
-@property(nonatomic, assign) SEL keySelector; /**< the selector to use for the key when adding objects using OOOrderedDictionary.addObject: */
+@property (nonatomic, assign) SEL keySelector; /**< the selector to use for the key when adding objects using OOOrderedDictionary.addObject: */
 
 /**
  * Initialize a OOOrderedDictionary
  * @param keySelector the selector to use to fetch the key from objects added (using OrderedDicitonary.addObject:)
  * @return the initialized OOOrderedDictionary
  */
-- (id)initWithKeySelector:(SEL)keySelector;
+- (instancetype)initWithKeySelector:(SEL)keySelector;
 
 /**
  * Initialize a OOOrderedDictionary
  * @param numItems the initial capacity of the OOOrderedDictionary (not count, just capacity)
  * @return the initialized OOOrderedDictionary
  */
-- (id)initWithCapacity:(NSUInteger)numItems;
+- (instancetype)initWithCapacity:(NSUInteger)numItems;
 
 /**
  * Initialize a OOOrderedDictionary
@@ -39,7 +39,7 @@
  * @param keySelector the selector to use to fetch the key from objects added (using OrderedDicitonary.addObject:)
  * @return the initialized OOOrderedDictionary
  */
-- (id)initWithCapacity:(NSUInteger)numItems keySelector:(SEL)keySelector;
+- (instancetype)initWithCapacity:(NSUInteger)numItems keySelector:(SEL)keySelector;
 
 /**
  * Add an object to the OOOrderedDictionary
@@ -138,6 +138,8 @@
 /** @internal
  * This method is required by the protocol NSFastEnumeration. Simply calls the same from the internal NSMutableArray.
  */
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id *)stackbuf count:(NSUInteger)len;
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
+                                  objects:(__unsafe_unretained id *)stackbuf
+                                    count:(NSUInteger)len;
 
 @end

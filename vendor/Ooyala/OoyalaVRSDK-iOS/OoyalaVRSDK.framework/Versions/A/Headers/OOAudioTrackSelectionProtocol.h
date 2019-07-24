@@ -4,10 +4,9 @@
 //
 //  Created on 2/9/17.
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
-
+//
 
 @protocol OOAudioTrackProtocol;
-
 
 /**
  This protocol defines all the required methods to manage audio tracks for an asset.
@@ -56,7 +55,7 @@ if ([notification.name isEqualToString:OOOoyalaPlayerStateChangedNotification]) 
  
  @return an OOAudioTrackProtocol object or nil if nothing was found.
  */
-- (id <OOAudioTrackProtocol>)selectedAudioTrack;
+- (id<OOAudioTrackProtocol>)selectedAudioTrack;
 
 /**
  Requests the player to change the current audio track to the one provided as a parameter.

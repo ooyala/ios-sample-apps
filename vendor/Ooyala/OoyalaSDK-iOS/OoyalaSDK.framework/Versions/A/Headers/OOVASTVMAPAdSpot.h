@@ -1,5 +1,6 @@
 #import "OOVASTAdSpot.h"
-#import "OOVASTOffset.h"
+
+@class OOVASTOffset;
 
 /**
  * Defines all information around an Ad Spot as it was defined in a VMAP XML

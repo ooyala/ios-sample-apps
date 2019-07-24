@@ -29,7 +29,8 @@
  @param location where the downloaded asset is located locally.
  @param keyLocation where the Fairplay key is stored.
  */
-- (instancetype)initWithVideoLocation:(NSURL *)location fairplayKeyLocation:(NSURL *)keyLocation;
+- (instancetype)initWithVideoLocation:(NSURL *)location
+                  fairplayKeyLocation:(NSURL *)keyLocation;
 
 /**
  Class method that uses initWithVideoLocation: initializer.
@@ -44,5 +45,7 @@
  @param location where the downloaded asset is located locally.
  @param keyLocation where the Fairplay key is stored.
  */
-+ (OOOfflineVideo *)videoWithVideoLocation:(NSURL *)location fairplayKeyLocation:(NSURL *)keyLocation;
++ (OOOfflineVideo *)videoWithVideoLocation:(NSURL *)location
+                       fairplayKeyLocation:(NSURL *)keyLocation;
+
 @end

@@ -6,7 +6,6 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
 /**
@@ -20,19 +19,19 @@
 }
 
 /** Time when the text should appear */
-@property(readonly, nonatomic) Float64 begin;
+@property (readonly, nonatomic) Float64 begin;
 /** Time when the text should disappear */
-@property(readonly, nonatomic) Float64 end;
+@property (readonly, nonatomic) Float64 end;
 /** Text string to appear */
-@property(readonly, nonatomic, strong) NSString *text;
+@property (readonly, nonatomic) NSString *text;
 
--(id)initWithBegin:(Float64)begin_ end:(Float64)end_ text:(NSString*)text_;
+- (instancetype)initWithBegin:(Float64)begin_ end:(Float64)end_ text:(NSString *)text_;
 
 /** @internal
  * Initialize a OOCaption using the specified xml (subclasses should override this)
  * @param xml the OOTBXMLElement containing the p xml element to use to initialize this OOCaption
  * @return the initialized OOCaption
  */
-- (id)initWithXML:(OOTBXMLElement *)xml;
+- (instancetype)initWithXML:(OOTBXMLElement *)xml;
 
 @end

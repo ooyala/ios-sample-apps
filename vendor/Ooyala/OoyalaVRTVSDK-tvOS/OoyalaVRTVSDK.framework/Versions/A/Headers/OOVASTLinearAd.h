@@ -1,4 +1,3 @@
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 #import "OOPlayableItem.h"
 
@@ -24,19 +23,19 @@
  * @param xml the OOTBXMLElement containing the xml to use to initialize this OOVASTLinearAd
  * @return the initialized OOVASTLinearAd
  */
-- (id)initWithXML:(OOTBXMLElement *)xml;
+- (instancetype)initWithXML:(OOTBXMLElement *)xml;
 
 /** @internal
  * Update the tracking events of the inline linear ad by adding the new tracking events of the wrapper ad
  * @param newTrackingEvents the NSMutableDictionary of the wrapper's tracking events
  */
-- (void)updateTrackingEvents:(NSMutableDictionary*)newTrackingEvents;
+- (void)updateTrackingEvents:(NSMutableDictionary *)newTrackingEvents;
 
 /** @internal
  * Update the click tracking URLs of the inline linear ad by adding the new click tracking URLs of the wrapper ad
  * @param newClickTrackingURLs the NSMutableArray of the wrapper's click tracking URLs
  */
-- (void)updateClickTrackingURLs:(NSMutableArray*)newClickTrackingURLs;
+- (void)updateClickTrackingURLs:(NSMutableArray *)newClickTrackingURLs;
 
 - (void)merge:(OOVASTLinearAd *)linear;
 

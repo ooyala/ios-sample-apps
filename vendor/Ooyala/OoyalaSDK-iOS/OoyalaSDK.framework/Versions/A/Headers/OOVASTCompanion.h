@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
-#import "OOVASTResource.h"
+
+@class OOVASTResource;
 
 /**
  * A Companion ad that was defined in a VAST advertisement 
@@ -8,7 +8,7 @@
  */
 @interface OOVASTCompanion : NSObject
 
-@property (readonly, nonatomic) NSString *id;
+@property (readonly, nonatomic) NSString *compId;
 @property (readonly, nonatomic) NSInteger width;
 @property (readonly, nonatomic) NSInteger height;
 @property (readonly, nonatomic) NSInteger assetWidth;
@@ -24,6 +24,6 @@
 @property (readonly, nonatomic) OOTBXMLElement *creativeExtensions;
 @property (readonly, nonatomic) NSString *parameters;
 
-- (id)initWithElement:(OOTBXMLElement *)element;
+- (instancetype)initWithElement:(OOTBXMLElement *)element;
 
 @end

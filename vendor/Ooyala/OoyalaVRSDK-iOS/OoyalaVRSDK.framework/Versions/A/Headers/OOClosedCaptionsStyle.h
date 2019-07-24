@@ -1,8 +1,5 @@
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <MediaAccessibility/MACaptionAppearance.h>
-#import <MediaAccessibility/MediaAccessibility.h>
-#import <CoreFoundation/CoreFoundation.h>
+@import UIKit;
+@import MediaAccessibility.MACaptionAppearance;
 
 /**
  * Defines text style to be used when displaying closed captions.
@@ -11,7 +8,7 @@
 @interface OOClosedCaptionsStyle : NSObject
 
 /** Closed captions text color */
-@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic) UIColor *textColor;
 
 /** Closed captions text opacity (between opaque and semi-transparent) */
 @property (nonatomic) CGFloat textOpacity;
@@ -20,10 +17,10 @@
 @property (nonatomic) NSInteger textSize;
 
 /** Closed captions text font name */
-@property (nonatomic, strong) NSString* textFontName;
+@property (nonatomic) NSString *textFontName;
 
 /** Closed captions window color */
-@property (nonatomic, strong) UIColor* windowColor;
+@property (nonatomic) UIColor *windowColor;
 
 /** Closed captions window opacity */
 @property (nonatomic) CGFloat windowOpacity;
@@ -31,11 +28,11 @@
 /** Closed captions presentation, deprecated */
 typedef NS_ENUM(NSInteger, OOClosedCaptionPresentation) {
   /** text that appears all at once */
-  OOClosedCaptionPopOn,
+  OOClosedCaptionPresentationPopOn,
   /** text that scrolls up as new text appears */
-  OOClosedCaptionRollUp,
+  OOClosedCaptionPresentationRollUp,
   /** text where each new letter or word is displayed as it arrives */
-  OOClosedCaptionPaintOn
+  OOClosedCaptionPresentationPaintOn
 };
 
 /** Closed captions presentation */
@@ -52,7 +49,7 @@ typedef NS_ENUM(NSInteger, OOClosedCaptionPresentation) {
  *  So in our SDK when we mention "background" we mean the " window"  in this case
  *  Closed captions background color
  */
-@property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic) UIColor *backgroundColor;
 
 
 /** Closed captions background opacity (between opaque and semi-transparent)
@@ -63,10 +60,10 @@ typedef NS_ENUM(NSInteger, OOClosedCaptionPresentation) {
 /**
  * update closed caption style
  */
-- (void) updateStyle;
+- (void)updateStyle;
 /**
  * compare closed captions style
  */
-- (NSComparisonResult)compare:(OOClosedCaptionsStyle *) closedCaptionDeviceStyle;
+- (NSComparisonResult)compare:(OOClosedCaptionsStyle *)closedCaptionDeviceStyle;
 
 @end

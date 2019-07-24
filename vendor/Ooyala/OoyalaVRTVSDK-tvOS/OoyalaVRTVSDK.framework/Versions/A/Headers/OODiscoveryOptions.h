@@ -7,10 +7,10 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /**
- * The Dicovery types supported by discovery manager
+ * The Discovery types supported by discovery manager
  */
 typedef NS_ENUM(NSUInteger, OODiscoveryType) {
   OODiscoveryTypeMomentum = 0,
@@ -29,14 +29,14 @@ typedef NS_ENUM(NSUInteger, OODiscoveryType) {
  * Initialize an OODiscoveryOptions object with the all properties with default values
  * @return the initialized OOOptions
  */
-- (instancetype) init;
+- (instancetype)init;
 
 /**
  * Initialize an OODiscoveryOptions object with the given parameters
  * @return the initialized OOOptions
  */
-- (instancetype) initWithType:(OODiscoveryType)type
-                        limit:(int)limit
-                      timeout:(NSTimeInterval)timeout;
+- (instancetype)initWithType:(OODiscoveryType)type
+                       limit:(int)limit
+                     timeout:(NSTimeInterval)timeout;
 
 @end

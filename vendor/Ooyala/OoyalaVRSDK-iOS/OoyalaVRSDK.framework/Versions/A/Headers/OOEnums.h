@@ -90,4 +90,13 @@ typedef NS_ENUM(NSInteger, OOBackgroundPlaybackMode) {
   OOBackgroundPlaybackModeAllowed
 };
 
+/** @internal
+ Possible return states for update methods
+ */
+typedef NS_ENUM(NSInteger, OOReturnState) {
+  OOReturnStateMatched,                    /**< @internal Found a match (success) */
+  OOReturnStateUnmatched,                  /**< @internal No match found, but no errors either */
+  OOReturnStateFail                        /**< @internal Error case */
+};
+
 #endif /* Enums_h */

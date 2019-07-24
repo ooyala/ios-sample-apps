@@ -1,9 +1,9 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
-typedef NS_ENUM(NSInteger, OffsetType) {
-  OffsetTypeSeconds,
-  OffsetTypePercentage,
-  OffsetTypePosition
+typedef NS_ENUM(NSInteger, OOOffsetType) {
+  OOOffsetTypeSeconds,
+  OOOffsetTypePercentage,
+  OOOffsetTypePosition
 };
 
 /**
@@ -12,12 +12,13 @@ typedef NS_ENUM(NSInteger, OffsetType) {
  */
 @interface OOVASTOffset : NSObject
 
-@property (readonly, nonatomic, assign) OffsetType type;
+@property (readonly, nonatomic) OOOffsetType type;
 
-- (id)initWithType:(OffsetType)type value:(Float64)value;
-- (id)initWithOffset:(NSString *)offsetStr;
+- (instancetype)initWithType:(OOOffsetType)type value:(Float64)value;
+- (instancetype)initWithOffset:(NSString *)offsetStr;
 
-- (Float64)getPercentage;
-- (Float64)getSeconds;
-- (NSInteger)getPosition;
+- (Float64)percentage;
+- (Float64)seconds;
+- (NSInteger)position;
+
 @end

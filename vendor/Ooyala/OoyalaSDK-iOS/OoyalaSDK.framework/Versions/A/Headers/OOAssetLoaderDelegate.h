@@ -6,13 +6,13 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
-#import "OOSecureURLGenerator.h"
+@import AVFoundation;
 
 @class OOStream;
 @protocol OOFairplayContentKeyDelegate;
+@protocol OOSecureURLGenerator;
 
-@interface OOAssetLoaderDelegate : NSObject<AVAssetResourceLoaderDelegate>
+@interface OOAssetLoaderDelegate : NSObject <AVAssetResourceLoaderDelegate>
 
 - (instancetype)init NS_UNAVAILABLE;
 

@@ -8,7 +8,6 @@
  */
 
 #import "OOAdSpot.h"
-#import "OOReturnState.h"
 
 @class OOPlayerAPIClient;
 

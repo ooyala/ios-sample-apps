@@ -66,12 +66,13 @@
 #import "OOFullscreenButton.h"
 #import "OOPlayPauseButton.h"
 #import "OOVideoGravityButton.h"
-#import "ScrubberSliderFraming.h"
 #import "OOVolumeButton.h"
 #import "OOControlsViewController.h"
 #import "OOImages.h"
 #import "OOPreviousButton.h"
 #import "OONextButton.h"
+#import "OOPiPButton.h"
+#import "OOAirPlayButton.h"
 
 #import "OOInlineControlsView.h"
 #import "OOInlineViewController.h"
@@ -85,6 +86,7 @@
 #import "OOVolumeSliderView.h"
 #import "OOTimeSliderDelegate.h"
 #import "OOTimeSliderProtocol.h"
+#import "OOProgressSliderView.h"
 
 #import "OOAnalyticsPluginBaseImpl.h"
 
@@ -159,6 +161,7 @@
 // Utils classes
 #import "OODebugMode.h"
 #import "OOOoyalaError.h"
+#import "OOOoyalaErrorCode.h"
 #import "OOOrderedDictionary.h"
 #import "OOTBXML.h"
 
@@ -175,7 +178,6 @@
 #import "OOCastManagerProtocol.h"
 #import "OOCallbacks.h"
 #import "OOModule.h"
-#import "OOReturnState.h"
 #import "OOStreamPlayerMappingCreator.h"
 #import "OOStreamPlayerMappingPredicate.h"
 #import "OOLifeCycle.h"

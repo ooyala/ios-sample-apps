@@ -6,7 +6,6 @@
 //
 
 @import UIKit.UIButton;
-#import "OOImages.h"
 
 #ifndef OOScalableImageButton_h
 #define OOScalableImageButton_h

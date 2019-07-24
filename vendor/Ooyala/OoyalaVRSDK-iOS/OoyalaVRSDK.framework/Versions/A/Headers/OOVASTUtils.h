@@ -1,4 +1,3 @@
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
 /**
@@ -8,8 +7,11 @@
 @interface OOVASTUtils : NSObject
 
 + (void)setAdvertisingId:(NSString *)adId;
+
 + (NSString *)advertisingId;
+
 + (NSURL *)urlFromAdUrlString:(NSString *)url;
+
 + (void)logErrorCodes:(NSArray *)errorCodes;
 
 + (BOOL)boolValueForAttribute:(NSString *)attribute
@@ -22,4 +24,5 @@
 
 + (void)parseTrackingEventsWithElement:(OOTBXMLElement *)element
                                   dict:(NSMutableDictionary *)dict;
+
 @end

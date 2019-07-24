@@ -11,8 +11,6 @@
 #ifndef OOOoyalaPlayer_PlaybackWorkflow_h
 #define OOOoyalaPlayer_PlaybackWorkflow_h
 
-@class OOAuthHeartbeat;
-
 @interface OOOoyalaPlayer (PlaybackWorkflow)
 
 - (void)prepareContent;
@@ -22,7 +20,6 @@
                        context:(void *)context;
 - (void)onComplete;
 - (void)onContentError;
-- (void)stopPlaybackOnHeartbeatFailure:(OOAuthHeartbeat *)sender;
 
 @end
 

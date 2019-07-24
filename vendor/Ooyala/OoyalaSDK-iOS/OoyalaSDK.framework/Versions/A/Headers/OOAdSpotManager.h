@@ -104,5 +104,5 @@
  * @return YES or NO
  */
 - (BOOL)adPlayed:(OOAdSpot *)ad;
-  
+
 @end

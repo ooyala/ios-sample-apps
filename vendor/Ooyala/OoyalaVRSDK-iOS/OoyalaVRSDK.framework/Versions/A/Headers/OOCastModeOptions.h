@@ -7,6 +7,7 @@
 //
 
 @import Foundation;
+
 @protocol OOEmbedTokenGenerator;
 
 @interface OOCastModeOptions : NSObject
@@ -24,6 +25,7 @@
               embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
                        ccLanguage:(NSString *)ccLanguage
                         authToken:(NSString *)authToken;
+
 @end
 
 

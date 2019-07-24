@@ -5,7 +5,8 @@
  * @date       09/02/15
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
-#import <Foundation/Foundation.h>
+
+@import Foundation;
 
 @interface OOClosedCaptionsItem : NSObject
 

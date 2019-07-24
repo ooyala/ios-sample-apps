@@ -28,7 +28,7 @@ extern NSString * _Nonnull const isPipButtonVisibleKey;
 - (nonnull instancetype)initWithWithPlayer:(nonnull OOOoyalaPlayer *)player
                                skinOptions:(nonnull OOSkinOptions *)skinOptions
                     skinControllerDelegate:(nonnull id<OOSkinViewControllerDelegate>)skinControllerDelegate;
-- (nonnull RCTRootView*)viewForModuleWithName:(nonnull NSString *)moduleName;
+- (nonnull RCTRootView *)viewForModuleWithName:(nonnull NSString *)moduleName;
 - (void)sendEventWithName:(nonnull NSString *)eventName body:(nullable id)body;
 - (void)setIsReactReady:(BOOL)isReactReady;
 - (void)ccStyleChanged:(nullable NSNotification *)notification;

@@ -11,6 +11,6 @@
 @class OOClosedCaptionsView;
 
 @interface OOSkinAutoUpdatingClosedCaptionsStyle : OOClosedCaptionsStyle
-- (instancetype)initWithClosedCaptionsView:(OOClosedCaptionsView*)ccView;
+- (instancetype)initWithClosedCaptionsView:(OOClosedCaptionsView *)ccView;
 @end
 

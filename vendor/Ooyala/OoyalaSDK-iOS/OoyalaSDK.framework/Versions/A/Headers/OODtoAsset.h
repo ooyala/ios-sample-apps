@@ -7,6 +7,7 @@
 //
 
 @import AVFoundation;
+
 @class AVURLAsset;
 @class AVMediaSelection;
 @class OOAssetDownloadOptions;

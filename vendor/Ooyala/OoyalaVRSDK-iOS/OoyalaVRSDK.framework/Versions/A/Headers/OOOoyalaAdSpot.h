@@ -9,7 +9,8 @@
 #import "OOManagedAdSpot.h"
 #import "OOAuthorizableItem.h"
 #import "OOPlayableItem.h"
-#import "OOOoyalaAPIClient.h"
+
+@class OOOoyalaAPIClient;
 
 /**
  * A single ooyala video ad associated with specific time

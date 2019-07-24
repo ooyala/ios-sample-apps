@@ -3,7 +3,7 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /**
  An interface that gives OOCuePointsView the duration to use when rendering its cuepoints
@@ -36,6 +36,7 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame
                       padding:(CGFloat)padding
-           durationDataSource:(id <OOCuePointViewDurationDataSource>)durationDataSource
+           durationDataSource:(id<OOCuePointViewDurationDataSource>)durationDataSource
                      diameter:(CGFloat)diameter;
+
 @end

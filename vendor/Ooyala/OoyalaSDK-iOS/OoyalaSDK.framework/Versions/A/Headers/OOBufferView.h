@@ -3,8 +3,9 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
-#import "OOProgressSliderView.h"
+@import UIKit;
+
+@class OOProgressSliderView;
 
 /**
  A wrappper of the Progress Slider that allows a view for the buffering duration to appear

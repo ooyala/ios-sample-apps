@@ -8,11 +8,13 @@
 #ifndef OOStateNotifier_h
 #define OOStateNotifier_h
 
-#import "OOAdPodInfo.h"
 #import "OOPlayerState.h"
 #import "OOOoyalaPlayer+Ads.h"
 
+@class OOAdPodInfo;
 @class OOSsaiAdsMetadata;
+@class OOAdOverlayInfo;
+@class OOSeekInfo;
 
 @interface OOStateNotifier : NSObject
 
@@ -22,11 +24,17 @@
 
 - (void)notifyPlayCompleted;
 
+- (void)notifySeekCompletedWithSeekInfo:(OOSeekInfo *)seekInfo;
+
 - (void)notifyAdsLoaded;
+
+- (void)notifyAdStartedWithAdPodInfo:(OOAdPodInfo *)adPodInfo;
+
+- (void)notifyAdOverlayDisplay:(OOAdOverlayInfo *)adOverlayInfo;
 
 - (void)notifyAdSkipped;
 
-- (void)notifyAdStarted;
+- (void)notifyAdTapped;
 
 - (void)notifyAdRequestFromPlugin:(OOAdProvider)plugin
                     forAdPosition:(Float64)adPosition;

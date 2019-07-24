@@ -6,12 +6,13 @@
 //
 
 @import UIKit;
+
 #import "OOControls.h"
 #import "OOTimeSliderProtocol.h"
 #import "OOVolumeSliderProtocol.h"
-#import "OOControlsDelegate.h"
-#import "OOTimeSliderDelegate.h"
 
+@protocol OOControlsDelegate;
+@protocol OOTimeSliderDelegate;
 
 @interface OOInlineControlsView : UIView <OOControls, OOTimeSliderProtocol, OOVolumeSliderProtocol>
 

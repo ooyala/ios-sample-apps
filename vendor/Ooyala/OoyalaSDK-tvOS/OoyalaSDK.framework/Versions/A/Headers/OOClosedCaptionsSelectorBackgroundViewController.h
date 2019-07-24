@@ -1,5 +1,6 @@
-#import <UIKit/UIKit.h>
-#import "OOClosedCaptionsSelectorViewController.h"
+@import UIKit;
+
+@class OOClosedCaptionsSelectorViewController;
 
 /**
  * A View controller that is used to display the background of the CC Selector
@@ -8,6 +9,6 @@
  */
 @interface OOClosedCaptionsSelectorBackgroundViewController : UIViewController
 
-- (instancetype)initWithSelectorView:(OOClosedCaptionsSelectorViewController*)selectorController;
+- (instancetype)initWithSelectorView:(OOClosedCaptionsSelectorViewController *)selectorController;
 
 @end

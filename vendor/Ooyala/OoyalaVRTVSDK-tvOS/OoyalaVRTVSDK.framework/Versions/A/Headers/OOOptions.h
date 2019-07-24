@@ -108,6 +108,10 @@
  Added for future support, use @c playWithInitialTime: instead
  */
 @property (nonatomic) Float64 initialTime;
+/**
+ Flag to enable/disable native AdLearnMore button
+ */
+@property (nonatomic) BOOL showAdLearnMoreButton;
 
 /**
  Initialize an @c OOOptions object with the all properties with default values

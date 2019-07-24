@@ -7,6 +7,8 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
+@import Foundation;
+
 #ifndef OoyalaSDK_Callbacks_h
 #define OoyalaSDK_Callbacks_h
 
@@ -48,9 +50,10 @@ typedef void(^OOContentTreeNextCallback)(NSRange range, OOOoyalaError *error);
 /**
  The callback used for OOOoyalaAPIClient.metadata:params:callback: calls
 
+ @param metadata an instance of @c NSSDictionary with metadata
  @param error the OOOoyalaError if one occurred
  */
-typedef void(^OOMetadataDictionaryFromAPICallback)(OOOoyalaError *error);
+typedef void(^OOMetadataDictionaryFromAPICallback)(NSDictionary *metadata, OOOoyalaError *error);
 
 /**
  The callback used for OOPaginatedParentItem.fetchMoreChildren: calls.
@@ -63,9 +66,10 @@ typedef void(^OOFetchMoreChildrenCallback)(NSRange range, OOOoyalaError *error);
 /**
  The callback used for authorization requests
 
+ @param authData an instance of @c NSSDictionary with authorization data
  @param error the OOOoyalaError if one occurred
  */
-typedef void (^OOAuthorizeCallback)(OOOoyalaError *error);
+typedef void (^OOAuthorizeCallback)(NSDictionary *authData, OOOoyalaError *error);
 
 /**
  The callback used for heartbeat requests

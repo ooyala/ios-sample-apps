@@ -7,7 +7,6 @@
 
 @protocol OOAudioTrackProtocol;
 
-
 /**
  This protocol defines all the required methods to manage audio tracks and audio languages for OOOoyalaPlayer.
  */

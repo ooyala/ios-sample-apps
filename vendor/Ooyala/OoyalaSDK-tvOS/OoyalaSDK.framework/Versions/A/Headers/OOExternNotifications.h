@@ -33,28 +33,7 @@ extern NSString *const OOOoyalaPlayerDesiredStateChangedNotification;
 
 /**
  \memberof OOOoyalaPlayer
- \brief The name used for notifications when the upcoming asset's content tree is ready and can be accessed.
- \details Nothing is provided through UserInfo.
- */
-extern NSString *const OOOoyalaPlayerContentTreeReadyNotification;
-
-/**
- \memberof OOOoyalaPlayer
- \brief The name used for notifications when the upcoming asset's metadata is ready and can be accessed.
- \details Nothing is provided through UserInfo.
- */
-extern NSString *const OOOoyalaPlayerMetadataReadyNotification;
-
-/**
- \memberof OOOoyalaPlayer
- \brief The name used for notifications when the upcoming asset's authorization status is ready and can be accessed.
- \details Nothing is provided through UserInfo.
- */
-extern NSString *const OOOoyalaPlayerAuthorizationReadyNotification;
-
-/**
- \memberof OOOoyalaPlayer
- \brief The name used for notifications when all of the upcoming asset's metadata is ready, and the item is ready to be played.
+ \brief The name used for notifications when all of the upcoming asset's metadata is ready. But in this moment item is not ready to be played, if you need to be notified when is ready, please use OOOyalaPlayer's property  currentItemChangedCallback (type OOCurrentItemChangedCallback)
  \details Nothing is provided through UserInfo.
  @see currentItem
  */
@@ -289,18 +268,6 @@ extern NSString *const OOOoyalaPlayerSsaiAdsMetadataReceivedNotification;
 
 /**
  \memberof OOOoyalaPlayer
- \brief Notification when an ssai ad break has started.
- */
-extern NSString *const OOOoyalaPlayerSsaiPlaySingleAdNotification;
-
-/**
- \memberof OOOoyalaPlayer
- \brief Notification when an SSAI ad break has ended.
- */
-extern NSString *const OOOoyalaPlayerSsaiSingleAdPlayedNotification;
-
-/**
- \memberof OOOoyalaPlayer
  \brief Notification when asset is available for playback speed.
  */
 extern NSString *const OOOoyalaPlayerPlaybackSpeedEnabledNotification;
@@ -310,11 +277,5 @@ extern NSString *const OOOoyalaPlayerPlaybackSpeedEnabledNotification;
  \brief Notification when playback speed rate changed.
  */
 extern NSString *const OOOoyalaPlayerPlaybackSpeedRateChangedChangedNotification;
-
-/**
- \memberof OOOoyalaPlayer
- \brief Notification when application volume changed.
- */
-extern NSString *const OOOoyalaPlayerApplicationVolumeChangedNotification;
 
 #endif /* ExternNotifications_h */

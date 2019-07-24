@@ -5,14 +5,15 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "OOControls.h"
 #import "OOTimeSliderProtocol.h"
 #import "OOVolumeSliderProtocol.h"
-#import "OOControlsDelegate.h"
-#import "OOTimeSliderDelegate.h"
-#import "OOVolumeSliderDelegate.h"
 
+@protocol OOControlsDelegate;
+@protocol OOTimeSliderDelegate;
+@protocol OOVolumeSliderDelegate;
 
 @interface OOFullScreenControlsView : UIView <OOControls, OOTimeSliderProtocol, OOVolumeSliderProtocol>
 

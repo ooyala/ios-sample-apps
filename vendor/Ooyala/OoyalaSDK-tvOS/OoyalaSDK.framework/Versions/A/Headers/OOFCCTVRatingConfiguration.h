@@ -1,18 +1,11 @@
 //
-//Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
 @import Foundation;
 @import CoreGraphics;
 
-#define OOFCCTVRATINGCONFIGURATION_DURATION_NONE 0
-#define OOFCCTVRATINGCONFIGURATION_DURATION_FOR_EVER CGFLOAT_MAX
-#define OOFCCTVRATINGCONFIGURATION_DEFAULT_TIMER OOFCCTVRATINGCONFIGURATION_DURATION_NONE
-#define OOFCCTVRATINGCONFIGURATION_DEFAULT_POSITION OOFCCTvRatingsPositionTopLeft
-#define OOFCCTVRATINGCONFIGURATION_DEFAULT_SCALE 0.2
-#define OOFCCTVRATINGCONFIGURATION_DEFAULT_OPACITY 0.9
-
-typedef NS_ENUM( NSInteger, OOFCCTvRatingsPosition ) {
+typedef NS_ENUM(NSInteger, OOFCCTvRatingsPosition) {
   OOFCCTvRatingsPositionTopLeft,
   OOFCCTvRatingsPositionTopRight,
   OOFCCTvRatingsPositionBottomLeft,
@@ -35,4 +28,5 @@ typedef NS_ENUM( NSInteger, OOFCCTvRatingsPosition ) {
                                position:(OOFCCTvRatingsPosition)position
                                   scale:(CGFloat)scale
                                 opacity:(CGFloat)opacity;
+
 @end

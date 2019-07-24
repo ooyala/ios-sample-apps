@@ -1,5 +1,6 @@
-#import <Foundation/Foundation.h>
-#import "OOReturnState.h"
+@import Foundation;
+
+#import "OOEnums.h"
 
 @class OOCaption;
 
@@ -10,13 +11,13 @@
 @interface OOClosedCaptions : NSObject
 
 /** List of available langauges */
-@property(readonly, nonatomic) NSArray *languages;
+@property (readonly, nonatomic) NSArray *languages;
 /** Default close caption langauge */
-@property(readonly, nonatomic) NSString *defaultLanguage;
+@property (readonly, nonatomic) NSString *defaultLanguage;
 /** URL of the close captions source file */
-@property(readonly, nonatomic, strong) NSURL *url;
+@property (readonly, nonatomic) NSURL *url;
 /** the vtt caption dictionary*/
-@property(readonly, nonatomic, strong) NSDictionary *vttCaptions;
+@property (readonly, nonatomic) NSDictionary *vttCaptions;
 
 - (instancetype)init __attribute__((unavailable("use initWithDictionary:")));
 

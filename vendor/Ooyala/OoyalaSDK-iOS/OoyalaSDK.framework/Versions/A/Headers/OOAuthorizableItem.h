@@ -1,4 +1,4 @@
-#import "OOReturnState.h"
+#import "OOEnums.h"
 
 /**
  * Authorize response codes
@@ -34,11 +34,14 @@ typedef NS_ENUM(NSInteger, OOAuthCode) {
   OOAuthCodeProxyDetected               = 24,
   OOAuthCodeMax                         = 24  /**< The maximum value for auth codes from the server */
 };
+extern NSString *OOAuthCodeMessage(OOAuthCode authCode);
 
 /**
  A protocol that represents a content item that requires authorization to play.
  */
 @protocol OOAuthorizableItem <NSObject>
+
+@property (nonatomic) BOOL heartbeatRequired;
 
 /** @internal
  Update the OOContentItem using the specified data (subclasses should override and call this)
@@ -64,7 +67,5 @@ typedef NS_ENUM(NSInteger, OOAuthCode) {
  @return an OOAuthCode with the status of the authorization request
  */
 - (OOAuthCode)authCode;
-
-@property (nonatomic) BOOL heartbeatRequired;
 
 @end

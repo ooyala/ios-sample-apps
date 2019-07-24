@@ -6,8 +6,8 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-
 @import Foundation;
+
 #import "OOAuthorizableItem.h"
 
 @class OOPlayerAPIClient;

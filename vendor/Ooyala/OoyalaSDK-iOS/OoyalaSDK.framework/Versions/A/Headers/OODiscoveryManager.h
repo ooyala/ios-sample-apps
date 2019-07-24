@@ -7,10 +7,10 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
-#import "OOEmbedTokenGenerator.h"
-#import "OOOoyalaError.h"
-#import "OODiscoveryOptions.h"
+@import Foundation;
+
+@class OOOoyalaError;
+@class OODiscoveryOptions;
 
 /**
  * The callback used for OODiscoveryManager to notify the discovery results

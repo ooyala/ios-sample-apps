@@ -5,7 +5,7 @@
 //  Created on 8/9/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @class OOPlayerDomain;
 @class OOAssetLoaderDelegate;
@@ -67,8 +67,8 @@
 
 /**
  When this property is enabled users will be able to download an asset using cellular data, e.g. 4G, LTE, 3G.
- Set it to false (NO) to only allow WiFi to be used.
- By default it is true (YES)
+ Set it to NO to only allow WiFi to be used.
+ By default it is YES
  */
 @property (nonatomic) BOOL allowsCellularAccess;
 

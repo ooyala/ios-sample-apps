@@ -12,7 +12,7 @@
 
 + (void)doSafeGStateBlock:(void(^)(CGContextRef))block;
 
-+ (UIColor *)colorByDarkening:(UIColor*)color by:(float)factor;
++ (UIColor *)colorByDarkening:(UIColor *)color by:(float)factor;
 
 + (UIImage *)imageFromBase64String:(NSString *)string;
 

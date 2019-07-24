@@ -7,11 +7,12 @@
  */
 
 @import Foundation;
-#import "OOSecureURLGenerator.h"
-#import "OOCallbacks.h"
-#import "OOPaginatedParentItem.h"
-#import "OOEmbedTokenGenerator.h"
 
+#import "OOCallbacks.h"
+
+@protocol OOSecureURLGenerator;
+@protocol OOPaginatedParentItem;
+@protocol OOEmbedTokenGenerator;
 @class OOPlayerAPIClient;
 @class OOContentItem;
 @class OOOoyalaError;
@@ -59,7 +60,6 @@
 - (instancetype)initWithPcode:(NSString *)pcode
                        domain:(OOPlayerDomain *)domain
            secureUrlGenerator:(id<OOSecureURLGenerator>)secureURLGenerator;
-
 
 /**
  * Initialize an OOOoyalaAPIClient with pcode, embed domain, API key and secret
@@ -137,17 +137,17 @@
  * @param embedCodes an NSArray containing the embed codes to fetch the content tree for
  * @param callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  */
-- (void)contentTree:(NSArray *)embedCodes
+- (void)contentTree:(nonnull NSArray<NSString *> *)embedCodes
            callback:(OOContentTreeCallback)callback;
 
 /**
  * Asynchronously fetch the content tree for a set of embed codes, with the specified ad set
  * @param embedCodes an NSArray containing the embed codes to fetch the content tree for
- * @param adSetCode (possibly nil) an NSString containing the ad set code for the ad set to dynamically assign
+ * @param adSetCode an NSString containing the ad set code for the ad set to dynamically assign
  * @param callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  */
-- (void)contentTree:(NSArray *)embedCodes
-          adSetCode:(NSString *)adSetCode
+- (void)contentTree:(nonnull NSArray<NSString *> *)embedCodes
+          adSetCode:(nullable NSString *)adSetCode
            callback:(OOContentTreeCallback)callback;
 
 /**
@@ -179,7 +179,5 @@
  * @return the embed domain this OOOoyalaAPIClient uses
  */
 - (OOPlayerDomain *)domain;
-
-+ (NSString *)messageForAuthCode:(int)code;
 
 @end

@@ -7,8 +7,8 @@
 
 @import UIKit;
 
-#import "OOFullScreenControlsBottomBarMainControlsView.h"
-#import "OOFullScreenControlsBottomBarVolumeView.h"
+@class OOFullScreenControlsBottomBarMainControlsView;
+@class OOFullScreenControlsBottomBarVolumeView;
 
 @interface OOFullScreenControlsBottomBar : UIView
 

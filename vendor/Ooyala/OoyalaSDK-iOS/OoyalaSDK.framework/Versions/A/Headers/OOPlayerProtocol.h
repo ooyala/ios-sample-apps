@@ -2,11 +2,11 @@
 //  OOPlayerProtocol.h
 //  OoyalaSDK
 //
-// Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreMedia/CMTimeRange.h>
+@import CoreMedia.CMTimeRange;
+
 #import "OOPlayerState.h"
 
 #ifndef OOPlayerProtocol_h
@@ -14,7 +14,7 @@
 
 @class UIImage;
 
-@protocol OOPlayerProtocol<NSObject>
+@protocol OOPlayerProtocol <NSObject>
 
 /**
  * @return YES if the player will put its own controls on-screen;
@@ -38,18 +38,6 @@
 - (void)stop;
 
 /**
- * Get the current playhead time
- * @return the current playhead time as CMTime
- */
-- (Float64)playheadTime;
-
-/**
- * Get the current item's duration
- * @return duration as CMTime
- */
-- (Float64)duration;
-
-/**
  * Get the current item's buffer
  * @return buffer as CMTimeRange
  */
@@ -61,16 +49,9 @@
  */
 - (void)seekToTime:(Float64)time;
 
-/**
- * @return current frame of playing asset
- */
-- (UIImage *)screenshot;
-
 - (void)setVideoGravity:(OOOoyalaPlayerVideoGravity)gravity;
 
 - (void)setClosedCaptionsLanguage:(NSString *)language;
-
-- (void)disablePlaylistClosedCaptions;
 
 /**
  * This returns the player state
@@ -81,13 +62,35 @@
 @property (nonatomic)           BOOL seekable;
 @property (nonatomic, readonly) CMTimeRange seekableTimeRange;
 @property (nonatomic)           BOOL allowsExternalPlayback;
-@property (nonatomic)           BOOL usesExternalPlaybackWhileExternalScreenIsActive;
 @property (nonatomic, readonly) BOOL externalPlaybackActive;
 @property (nonatomic)           float rate; // playback rate
 @property (nonatomic, readonly) double bitrate;
 @property (nonatomic, readonly) BOOL supportsVideoGravityButton;
 @property (nonatomic, readonly, getter = isLiveClosedCaptionsAvailable) BOOL liveClosedCaptionsAvailable;
+
+@optional
+
+@property (nonatomic) BOOL usesExternalPlaybackWhileExternalScreenIsActive;
 @property (nonatomic) float volume; /** the player volume*/
+
+/**
+ * Get the current item's duration
+ * @return duration as CMTime
+ */
+- (Float64)duration;
+
+/**
+ * Get the current playhead time
+ * @return the current playhead time as CMTime
+ */
+- (Float64)playheadTime;
+
+/**
+ * @return current frame of playing asset
+ */
+- (UIImage *)screenshot;
+
+- (void)disablePlaylistClosedCaptions;
 
 @end
 

@@ -10,7 +10,8 @@
 #define OOOoyalaPlayerDelegate_h
 
 @import Foundation;
-#import "OOPlayerProtocol.h"
+
+#import "OOPlayerState.h"
 
 @protocol OOOoyalaPlayerDelegate <NSObject>
 
@@ -19,6 +20,5 @@
 - (void)ooyalaPlayerDidSwitchToAd;
 
 @end
-
 
 #endif /* OOOoyalaPlayerDelegate_h */

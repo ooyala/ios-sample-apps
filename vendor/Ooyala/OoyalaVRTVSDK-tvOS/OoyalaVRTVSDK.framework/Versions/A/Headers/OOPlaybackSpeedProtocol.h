@@ -5,10 +5,9 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @protocol OOPlaybackSpeedProtocol <NSObject>
-
 
 /**
  Gets the currently selected playback speed rate.

@@ -38,6 +38,7 @@
 @class OOAssetLoaderDelegate;
 @class OOUnbundledVideo;
 @class OOStream;
+@class OOOoyalaError;
 @protocol OOEmbedTokenGenerator;
 
 /**
@@ -48,8 +49,6 @@
  * \defgroup vast VAST-Specific
  * \defgroup offline Offline Playback (DTO)
  */
-
-#define OOOOYALAPLAYER_DURATION_MISSING (-1)
 
 /**
  * The OoyalaPlayer is the heart of the playback system.
@@ -62,7 +61,7 @@
 /**
  * Set which environment is used for Player APIs. Default OOOoyalaPlayerEnvironmentProduction
  */
-+ (void)setEnvironment:(OOOoyalaPlayerEnvironment)e;
++ (void)setEnvironment:(OOOoyalaPlayerEnvironment)env;
 
 /**
  * Set if SSL is used for Player APIs. Default YES
@@ -255,7 +254,7 @@
 - (instancetype)initWithPcode:(NSString *)pcode
                        domain:(OOPlayerDomain *)domain
           embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
-                      options:(OOOptions*)options;
+                      options:(OOOptions *)options;
 
 
 #pragma mark Content Setters
@@ -265,62 +264,201 @@
 /**
  * @param stream non-nil, non-empty NSArray containing OOStreams.
  */
-- (BOOL)setStream:(OOStream*)stream;
+- (BOOL)setStream:(OOStream *)stream;
 
 /**
  * @param streams non-nil, non-empty NSArray containing OOStreams.
  */
-- (BOOL)setStreams:(NSArray*)streams;
+- (BOOL)setStreams:(NSArray *)streams;
 
 /**
  * Casting of OOUnbundledVideo is not supported.
  * @param unbundledVideo non-nil OOUnbundledVideo containing OOStreams.
  */
-- (BOOL)setUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
+- (BOOL)setUnbundledVideo:(OOUnbundledVideo *)unbundledVideo;
 
 /**
- * Reinitializes the player with a new embedCode.
- * @param embedCode the embed code to use
- * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ DEPRECATED. The internal method of this call is @c asynchronous, so we recommend using a method with a callback.
+ Use @c-setEmbedCode:callback: instead
+ 
+ Reinitializes the player with a new embedCode.
+ @param embedCode the embed code to use
+ @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCode:(NSString *)embedCode;
+- (BOOL)setEmbedCode:(nonnull NSString *)embedCode;
+__deprecated_msg("Use -setEmbedCode:callback: instead");
 
 /**
- * Reinitializes the player with the new embedCodes (as an array).
- * @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
- * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ DEPRECATED. The internal method of this call is @c asynchronous, so we recommend using a method with callback.
+ Use @c-setEmbedCodes:withCallback: instead
+ 
+ Reinitializes the player with an array of embedCodes
+ @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCodes:(NSArray *)embedCodes;
+- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes;
+__deprecated_msg("Use -setEmbedCodes:withCallback: instead");
 
 /**
- * Reinitializes the player with a new embedCode and sets the ad set dynamically.
- * @param embedCode the embed code to use
- * @param adSetCode (possibly nil) the ad set code to use
- * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ DEPRECATED. The internal method of this call is @c asynchronous, so we recommend using a method with callback.
+ Use @c-setEmbedCode:adSetCode:withCallback: instead
+ 
+ Reinitializes the player a new embedCode and sets the ad set dynamically.
+ @param embedCode the embed code to use
+ @param adSetCode the ad set code to use
+ @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCode:(NSString *)embedCode adSetCode:(NSString *)adSetCode;
+- (BOOL)setEmbedCode:(nonnull NSString *)embedCode adSetCode:(nullable NSString *)adSetCode;
+__deprecated_msg("Use -setEmbedCode:adSetCode:withCallback: instead");
 
 /**
- * Reinitializes the player with the new embedCodes (as an array) and sets the ad set dynamically.
- * @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
- * @param adSetCode (possibly nil) the ad set code to use.
- * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+  DEPRECATED. The internal method of this call is @c asynchronous, so we recommend using a method with callback.
+ Use @c-setEmbedCodes:adSetCode:withCallback: instead
+ 
+ * Reinitializes the player with an array of embedCodes and sets the ad set dynamically.
+ * @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ * @param adSetCode the ad set code to use.
+ * @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCodes:(NSArray *)embedCodes adSetCode:(NSString *)adSetCode;
+- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes adSetCode:(nullable NSString *)adSetCode;
+__deprecated_msg("Use -setEmbedCodes:adSetCode:withCallback: instead");
 
 /**
+ DEPRECATED. The internal method of this call is @c asynchronous, so we recommend using a method with callback.
+ Use @c-setExternalId:withCallback: instead
+ 
  * Reinitializes the player with a new external ID. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
  * @param externalId the external ID to use
- * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason
  */
-- (BOOL)setExternalId:(NSString *)externalId;
+- (BOOL)setExternalId:(nonnull NSString *)externalId;
+__deprecated_msg("Use -setExternalId:withCallback: instead");
 
 /**
- * Reinitializes the player with the new external IDs (as an array). External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
- * @param externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes a OODynamicChannel.
- * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ DEPRECATED. The internal method of this call is @c asynchronous, so we recommend using a method with callback.
+ Use @c-setExternalIds:withCallback: instead
+ 
+ * Reinitializes the player with an array of new external IDs. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
+ * @param externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ * @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason
  */
-- (BOOL)setExternalIds:(NSArray *)externalIds;
+- (BOOL)setExternalIds:(nonnull NSArray<NSString *> *)externalIds;
+__deprecated_msg("Use -setExternalIds:withCallback: instead");
+
+
+/**
+ Reinitializes the player with a new external ID. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
+ @param externalId the external ID to use
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setExternalId:(nonnull NSString *)externalId
+         withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Reinitializes the player with an array of new external IDs. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
+ @param externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setExternalIds:(nonnull NSArray<NSString *> *)externalIds
+          withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with a new embedCode.
+ 
+ @param embedCode the embed code to use
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCode:(nonnull NSString *)embedCode
+        withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with a new embedCode.
+ 
+ @param embedCode the embed code to use
+ @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCode:(nonnull NSString *)embedCode
+      shouldAutoPlay:(BOOL)autoPlay
+        withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with an array of embedCodes.
+ 
+ @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCodes:(nonnull NSArray <NSString *> *)embedCodes
+         withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with an array of embedCodes.
+ 
+ @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCodes:(nonnull NSArray <NSString *> *)embedCodes
+       shouldAutoPlay:(BOOL)autoPlay
+         withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with a new embedCode and sets the ad set dynamically.
+ 
+ @param embedCode the embed code to use
+ @param adSetCode the ad set code to use
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCode:(nonnull NSString *)embedCode
+           adSetCode:(nullable NSString *)adSetCode
+        withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with a new embedCode and sets the ad set dynamically.
+ 
+ @param embedCode the embed code to use
+ @param adSetCode the ad set code to use
+ @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCode:(nonnull NSString *)embedCode
+           adSetCode:(nullable NSString *)adSetCode
+      shouldAutoPlay:(BOOL)autoPlay
+        withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with an array of embedCodes and sets the ad set dynamically.
+ 
+ @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ @param adSetCode the ad set code to use.
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes
+            adSetCode:(nullable NSString *)adSetCode
+         withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
+
+/**
+ Asynchronous method that reinitializes the player with an array of embedCodes and sets the ad set dynamically.
+ 
+ @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
+ @param adSetCode the ad set code to use.
+ @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
+ @param callback The callback that called when request is completed.
+ @param error An error instance that describes why the request failed; otherwise, 'nil'
+ */
+- (void)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes
+            adSetCode:(nullable NSString *)adSetCode
+       shouldAutoPlay:(BOOL)autoPlay
+         withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
 
 /**
  * Reinitializes the player with a root item.
@@ -332,26 +470,26 @@
  * Reinitializes the player with a new asset JSON.
  * @param asset the new asset JSON to use
  */
-- (void)setAsset:(NSDictionary *)asset;
+- (void)setAsset:(nonnull NSDictionary *)asset;
 
 /**
  * Sets the current video in a channel, if the video is present.
  * @param embedCode the embed code of the video to play
- * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for reason)
+ * @return YES if successful; otherwise, returns NO (check OOOoyalaPlayer.error for a reason)
  */
-- (BOOL)changeCurrentItemToEmbedCode:(NSString *)embedCode;
+- (BOOL)changeCurrentItemToEmbedCode:(nonnull NSString *)embedCode;
 
 /**
- * Sets the current video.  OOVideo must be a part of the content tree provided by the root item.
- * @return a BOOL indicating that the item was successfully changed
+ Sets the current video.  OOVideo must be a part of the content tree provided by the root item.
+ @return Return YES if all data checkings was completed, linked objects were updated and async request for playback info was send. Flag doesn’t describe request result. NO - if checking failed and/or updating interrupted and/or request wasn’t sent. If something is wrong please check OOOoyalaPlayer.error for a reason
  */
-- (BOOL)changeCurrentItemToVideo:(OOVideo *)video;
+- (BOOL)changeCurrentItemToVideo:(nonnull OOVideo *)video;
 
 /**
  * Set the unbundled HA video.
  * @return a BOOL indicating that the item was successfully changed
  */
-- (BOOL) changeUnbundledVideo:(OOVideo *)video;
+- (BOOL)changeUnbundledVideo:(nonnull OOVideo *)video;
 
 /**
  Performs authorization on the current item, refreshing teh auth token if necessary

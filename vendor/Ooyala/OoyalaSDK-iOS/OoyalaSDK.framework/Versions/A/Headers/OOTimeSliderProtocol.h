@@ -5,7 +5,8 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
+@import AVFoundation;
+
 #import "OOOoyalaPlayer.h" // Neef for visible OOUIProgressSliderMode enum
 
 @protocol OOTimeSliderProtocol

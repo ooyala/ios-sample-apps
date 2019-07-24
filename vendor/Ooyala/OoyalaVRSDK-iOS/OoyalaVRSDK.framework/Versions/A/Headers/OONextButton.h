@@ -7,7 +7,6 @@
 
 #import "OOScalableImageButton.h"
 
-
 @interface OONextButton : OOScalableImageButton
 
 @end

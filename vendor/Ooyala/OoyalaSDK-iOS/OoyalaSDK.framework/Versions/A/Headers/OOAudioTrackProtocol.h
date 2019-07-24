@@ -5,11 +5,9 @@
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 @class AVMediaSelectionOption;
-
 
 /**
  Encapsulates important information of an AVMediaSelectionOption instance.

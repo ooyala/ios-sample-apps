@@ -5,7 +5,6 @@
  * @copyright Copyright © 2016 Ooyala, Inc. All rights reserved.
  */
 
-#import "OOAnalyticsPluginProtocol.h"
 #import "OOAnalyticsPluginBaseImpl.h"
 
 @interface OOTestAnalyticsPlugin : OOAnalyticsPluginBaseImpl

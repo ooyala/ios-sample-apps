@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerDesiredState) {
  * @return an external facing DesiredState string
  */
 + (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
-@end
 
+@end
 
 #endif /* OOPlayerState_h */

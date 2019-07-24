@@ -1,17 +1,13 @@
 //
 //  OOCastManager.h
-//  OoyalaSDK
+//  OoyalaCastSDK
 //
 //  Created on 8/29/14.
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.
 //
 
-@import Foundation;
-@import GoogleCast.GCKDevice;
-@import GoogleCast.GCKError;
-
 #import <OoyalaSDK/OOCastManagerProtocol.h>
-#import <OoyalaSDK/OOPlayerProtocol.h>
+#import <OoyalaSDK/OOPlayerState.h>
 #import <OoyalaSDK/OOCastModeOptions.h>
 
 @class UIButton;
@@ -19,23 +15,25 @@
 @class OOCastPlayer;
 @class OOOoyalaPlayer;
 @class OOCastManager;
+@class GCKDevice;
+@class GCKError;
 @protocol OOCastMiniControllerProtocol;
 
 @protocol OOCastManagerDelegate
 /**
- Fires when a @c OOCastManager disconnects from chromecast device
+ Fires when a @c OOCastManager has entered a cast mode
 
  @param manager @c OOCastManager instance
  */
 - (void)castManagerDidEnterCastMode:(nonnull OOCastManager *)manager;
 /**
- Fires when enter cast mode
+ Fires when @c OOCastManager has exited a cast mode
 
  @param manager @c OOCastManager instance
  */
 - (void)castManagerDidExitCastMode:(nonnull OOCastManager *)manager;
 /**
- Fires when exit cast mode
+ Fires when @c OOCastManager hast disconnected from a device
 
  @param manager @c OOCastManager instance
  */

@@ -1,10 +1,9 @@
-#import <Foundation/Foundation.h>
 #import "OOCallbacks.h"
-#import "OOReturnState.h"
+#import "OOEnums.h"
 
 @class OOOoyalaError;
 
-@protocol OOPaginatedParentItem<NSObject>
+@protocol OOPaginatedParentItem <NSObject>
 
 /**
  * The OOPaginatedParentItem's Embed Code

@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /**
  * @brief A simple protocol which has the list of available streams for playback.
@@ -9,6 +9,6 @@
  * Returns a set of streams representing the currently playing content
  * @return An NSArray of OOStreams.
  */
-- (NSArray *)getStreams;
+- (NSArray *)streams;
 
 @end

@@ -7,6 +7,7 @@
 #define OOIQConfiguration_h
 
 @import Foundation;
+
 @class OODeviceInfo;
 
 /** The default player ID value is @c"ooyala ios player" */

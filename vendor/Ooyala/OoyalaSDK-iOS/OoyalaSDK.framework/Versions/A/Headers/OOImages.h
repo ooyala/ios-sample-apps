@@ -2,18 +2,13 @@
 //  OOImages.h
 //  OoyalaSDK
 //
-// Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface OOImages : NSObject
 
-+ (UIImage *)playImage:(CGSize)size;
-+ (UIImage *)pauseImage:(CGSize)size;
-+ (UIImage *)maximizeImage:(CGSize)size;
-+ (UIImage *)nextImage:(CGSize)size;
-+ (UIImage *)previousImage:(CGSize)size;
 + (UIImage *)closedCaptionsImage;
 + (UIImage *)expandImage;
 + (UIImage *)collapseImage;
@@ -22,14 +17,7 @@
 + (UIImage *)playImage;
 + (UIImage *)pauseImage;
 + (UIImage *)thumbImage;
-+ (UIImage *)routeImage;
-+ (UIImage *)routeOnImage;
++ (UIImage *)volumeImage;
++ (UIImage *)replayImage;
 
-+ (UIImage *) castOffImage;
-+ (UIImage *) castOnImage;
-+ (UIImage *) castOn0Image;
-+ (UIImage *) castOn1Image;
-+ (UIImage *) castOn2Image;
-+ (UIImage *) volumeImage;
-+ (UIImage *) replayImage;
 @end

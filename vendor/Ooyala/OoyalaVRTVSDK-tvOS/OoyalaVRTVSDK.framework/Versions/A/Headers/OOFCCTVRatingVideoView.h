@@ -2,15 +2,17 @@
 //  OOFCCTVRatingVideoView.h
 //  OoyalaSDK
 //
-// Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "OOFCCTVRating.h"
-#import "OOFCCTVRatingConfiguration.h"
-#import "OOOoyalaPlayer.h"
+@import UIKit;
+
+#import "OOPlayerState.h"
 
 @class OOPlayer;
+@class OOOoyalaPlayer;
+@class OOFCCTVRatingConfiguration;
+@class OOFCCTVRating;
 
 @interface OOFCCTVRatingVideoView : UIView
 
@@ -19,7 +21,7 @@
 @property (nonatomic) OOOoyalaPlayerVideoGravity videoGravity;
 
 - (instancetype) __unavailable initWithCoder:(NSCoder *)aDecoder;
-- (void)setContentPlayerAndSubview:(OOPlayer*)player;
-- (void)setAdPlayerAndSubview:(OOPlayer*)player;
+- (void)setContentPlayerAndSubview:(OOPlayer *)player;
+- (void)setAdPlayerAndSubview:(OOPlayer *)player;
 
 @end

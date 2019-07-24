@@ -5,7 +5,7 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface OOAdobeHeartbeatConfiguration : NSObject
 
@@ -41,6 +41,7 @@
                                      playerName:(NSString *)playerName
                             onlineVideoPlatform:(NSString *)onlineVideoPlatform NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)initWithHeartbeatTrackingServer:(NSString *)trackingServer heartbeatPublisher:(NSString *)publisher;
+- (instancetype)initWithHeartbeatTrackingServer:(NSString *)trackingServer
+                             heartbeatPublisher:(NSString *)publisher;
 
 @end
