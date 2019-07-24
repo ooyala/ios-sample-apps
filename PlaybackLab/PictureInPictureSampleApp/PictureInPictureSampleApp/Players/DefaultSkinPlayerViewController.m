@@ -58,6 +58,7 @@
   
   OOOptions *options = [OOOptions new];
   options.enablePictureInPictureSupport = YES;
+  
   BOOL canUsePip = options.enablePictureInPictureSupport &&
                    AVPictureInPictureController.isPictureInPictureSupported &&
                    !self.isAudioOnlyAsset;
@@ -96,15 +97,6 @@
   
   //Start playback
   [ooyalaPlayer setEmbedCode:self.embedCode];
-}
-
-#pragma mark - Private methods
-// TODO: OS: it's better to change icon on pip-button (via notifying JS about apropriate event) from this place that is triggered by AVPipControllerDelegate.
-// But problem is to get access from this VC to *ooReactSkinModel 'OOReactSkinModel (is private property *skinModel in OOSkinViewController, it has APi for interacting with *skinEventsEmitter 'OOReactSkinEventsEmitter' and with *bridge 'RCTBridge' (OOReactSkinBridge))' (path 1) or create new notification in OOyalaSDK, post in here in 'DefaultSkinPlayerViewController (AVPipControllerDelegate)' and listen it in the 'OOSkinPlayerObserver' (path 2, what is too sophisticated solution as for me)
-
-- (void)updatePipButtonForStateIsActivated:(BOOL)isActivated {
-  //id params = @{isPipActivatedKey:@(isActivated), isPipButtonVisibleKey:@(true)};
-  //[self.skinController.player.bridge.skinEventsEmitter sendDeviceEventWithName:pipEventKey body:params];
 }
 
 @end

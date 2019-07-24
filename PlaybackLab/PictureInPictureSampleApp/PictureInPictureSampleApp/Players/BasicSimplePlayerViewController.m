@@ -66,6 +66,7 @@
 
   OOOptions *options = [OOOptions new];
   options.enablePictureInPictureSupport = YES;
+  options.backgroundMode = OOBackgroundPlaybackModeDisabled;
   if (self.isAudioOnlyAsset) {
     options.playerInfo = [OODefaultAudioOnlyPlayerInfo new];
   } else {
