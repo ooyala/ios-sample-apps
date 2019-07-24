@@ -96,27 +96,17 @@
   // Attach it to current view
   [self addPlayerViewController:self.ooyalaPlayerViewController];
   
-  __weak typeof(self) weakSelf = self;
-  //OS: to avoid calling '[weakSelf.player play]' until player really ready to play
-  void (^expectedBlock) (OOVideo *currentItem);
-  expectedBlock = ^(OOVideo *currentItem) {
-    LOG(@"✅ got expectedBlock");
-    if ([currentItem.embedCode isEqualToString:weakSelf.embedCode]) {
-      LOG(@"✅ aseet with embed code %@", currentItem.embedCode);
-      [weakSelf.ooyalaPlayerViewController.player play];
-      //OS: block must be removed after '[weakSelf.player play]', to prevent ignition from OOBaseStreamPlayer's KVO 'AVPlayerItemStatusReadyToPlay'
-      weakSelf.ooyalaPlayerViewController.player.currentItemChangedCallback = nil;
-    }
-  };
-  self.ooyalaPlayerViewController.player.currentItemChangedCallback = expectedBlock; //OOCurrentItemChangedCallback
-  
   // Load the video
+  //Deprecated API. Remove this calls when SDK version become more then 4.46.0_GA. Uncomment code with Asynchronous method instead.
   //[self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  //Deprecated API. Remove this call when SDK version become more then 4.46.0_GA. Uncomment code with Asynchronous method instead.
   //[self.ooyalaPlayerViewController.player play];
   
   //new API. Uncomment when SDK version become more then 4.46.0_GA
+  [self.ooyalaPlayerViewController.player activateDelayedPlaybackWhenReadyForEmbedCode:self.embedCode];
+  
+  __weak typeof(self) weakSelf = self;
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode withCallback:^(OOOoyalaError *error) {
+    //just for debug purpose and demonstration that caalback can be usefull, remove if you don't need
     LOG(@"✅ got callback. embed: %@, is success: %@. But it doesn't mean that status is 'AVPlayerItemStatusReadyToPlay'", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
   }];
 }
