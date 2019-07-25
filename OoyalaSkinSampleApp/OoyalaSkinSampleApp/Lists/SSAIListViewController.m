@@ -18,8 +18,8 @@
   self.options = [NSArray array];
   self.options = @[
                    [self optionWithTitle:@"SSAI / VOD / Ooyala Pulse"
-                               embedCode:@"l5bm11ZjE6VFJyNE2iE6EKpCBVSRroAF"
-                                   pcode:@"ZsdGgyOnugo44o442aALkge_dVVK"
+                               embedCode:@"dxbzNjZDE6nU5lB0PjWGQmD4Bqj9rcXZ"
+                                   pcode:@"RpOWUyOq86gFq-STNqpgzhzIcXHV"
                            adSetProvider:@"ooyala_pulse"],
                    
                    [self optionWithTitle:@"SSAI / VOD / Google DFP"
