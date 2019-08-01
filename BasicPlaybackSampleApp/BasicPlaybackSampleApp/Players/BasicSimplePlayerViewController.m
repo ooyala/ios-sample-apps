@@ -82,7 +82,7 @@
                                                          options:options];
   
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
-  
+
   [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
                                              name:nil
