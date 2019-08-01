@@ -100,7 +100,6 @@
                                                           parent:_videoView];
   [self addChildViewController:_skinController];
   _skinController.view.frame = self.videoView.bounds;
-  [ooyalaPlayer setEmbedCode:self.embedCode];
   
   // Notifications
   [NSNotificationCenter.defaultCenter addObserver:self
