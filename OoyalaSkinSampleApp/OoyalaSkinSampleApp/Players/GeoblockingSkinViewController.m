@@ -98,7 +98,7 @@
   self.textView.hidden = !self.qaModeEnabled;
   
   // Load the video
-  [ooyalaPlayer setEmbedCode:self.embedCode];
+  [ooyalaPlayer setEmbedCode:self.embedCode shouldAutoPlay:NO withCallback:nil];
 }
 
 #pragma mark - EmbedTokenGenerator protocol

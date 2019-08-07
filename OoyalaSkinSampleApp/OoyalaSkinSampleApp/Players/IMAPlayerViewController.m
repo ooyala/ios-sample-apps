@@ -94,7 +94,7 @@
   self.adsManager.imaAdsManagerDelegate = self;
   
   // Load the video
-  [ooyalaPlayer setEmbedCode:self.embedCode];
+  [ooyalaPlayer setEmbedCode:self.embedCode shouldAutoPlay:NO withCallback:nil];
 }
 
 #pragma mark - Private functions

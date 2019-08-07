@@ -104,7 +104,7 @@
   [self.adsManager overrideFreewheelParameters:fwParameters];
   
   // Load the video
-  [ooyalaPlayer setEmbedCode:self.embedCode];
+  [ooyalaPlayer setEmbedCode:self.embedCode shouldAutoPlay:NO withCallback:nil];
 }
 
 #pragma mark - Private functions
