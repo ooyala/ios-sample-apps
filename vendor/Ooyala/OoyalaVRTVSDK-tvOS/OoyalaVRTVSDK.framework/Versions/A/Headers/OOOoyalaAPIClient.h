@@ -137,7 +137,7 @@
  * @param embedCodes an NSArray containing the embed codes to fetch the content tree for
  * @param callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  */
-- (void)contentTree:(nonnull NSArray<NSString *> *)embedCodes
+- (void)contentTree:(NSArray<NSString *> *)embedCodes
            callback:(OOContentTreeCallback)callback;
 
 /**
@@ -146,8 +146,8 @@
  * @param adSetCode an NSString containing the ad set code for the ad set to dynamically assign
  * @param callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  */
-- (void)contentTree:(nonnull NSArray<NSString *> *)embedCodes
-          adSetCode:(nullable NSString *)adSetCode
+- (void)contentTree:(NSArray<NSString *> *)embedCodes
+          adSetCode:(NSString *)adSetCode
            callback:(OOContentTreeCallback)callback;
 
 /**

@@ -72,7 +72,7 @@
  * Get the version and RC of the Ooyala SDK
  * @return the string that represents the SDK version
  */
-+ (NSString *)version;
++ (nonnull NSString *)version;
 
 /**
  * @return YES means to try to use local/debug DRM modes,
@@ -114,24 +114,24 @@
 
 #pragma mark Properties
 
-@property (readonly, nonatomic) OOVideo *currentItem; /**< The OOOoyalaPlayer's currently playing OOVideo */
-@property (readonly, nonatomic) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
-@property (readonly, nonatomic) NSDictionary *metadata; /**< The OOOoyalaPlayer's content metadata for currently loaded content */
-@property (readonly, nonatomic) OOOoyalaError *error; /**< The OOOoyalaPlayer's current error if it exists */
-@property (readonly, nonatomic) OOOoyalaPlayerSessionIDManager *sessionIDManager;
-@property (readonly, nonatomic) UIView *view; /**< the view associated with the player*/
+@property (readonly, nonatomic, nullable) OOVideo *currentItem; /**< The OOOoyalaPlayer's currently playing OOVideo */
+@property (readonly, nonatomic, nullable) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
+@property (readonly, nonatomic, nullable) NSDictionary *metadata; /**< The OOOoyalaPlayer's content metadata for currently loaded content */
+@property (readonly, nonatomic, nullable) OOOoyalaError *error; /**< The OOOoyalaPlayer's current error if it exists */
+@property (readonly, nonatomic, nonnull) OOOoyalaPlayerSessionIDManager *sessionIDManager;
+@property (readonly, nonatomic, nonnull) UIView *view; /**< the view associated with the player*/
 @property (nonatomic) OOOoyalaPlayerVideoGravity videoGravity;
 @property (readonly, nonatomic) BOOL supportsVideoGravityButton;
 @property (nonatomic) BOOL seekable; /**< Whether or not the Videos that OOOoyalaPlayer plays are seekable */
 @property (nonatomic) BOOL adsSeekable; /**< Whether or not the Ads that OOOoyalaPlayer plays are seekable */
 @property (readonly, nonatomic) OOSeekStyle seekStyle;
-@property (nonatomic) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
+@property (nonatomic, nullable) NSString *closedCaptionsLanguage; /**< the current closed captions language, or nil to hide closed captions. */
 /**
  * Get whether the player is playing the audio only stream in an m3u8
  */
 @property (readonly, nonatomic) BOOL isAudioOnlyStreamPlaying;
 @property (readonly, nonatomic, getter = isClosedCaptionsTrackAvailable) BOOL closedCaptionsTrackAvailable;
-@property (nonatomic) OOCurrentItemChangedCallback currentItemChangedCallback; /**< A callback that will be called every time the current item is changed */
+@property (nonatomic, nullable) OOCurrentItemChangedCallback currentItemChangedCallback; /**< A callback that will be called every time the current item is changed */
 
 @property (nonatomic) OOOoyalaPlayerActionAtEnd actionAtEnd; /**< the OOOoyalaPlayerActionAtEnd to perform when the current item finishes playing. */
 
@@ -142,10 +142,10 @@
 @property (nonatomic) BOOL usesExternalPlaybackWhileExternalScreenIsActive; /** When external playback is enabled, this will share the video view to the external screen only, instead of mirroring the device. */
 
 @property (nonatomic) float playbackRate; /**< the rate of playback. 1 is the normal speed.  Set to .5 for half speed, 2 for double speed, etc. */
-@property (readonly, nonatomic) NSString *authToken; /**< The Auth Token provided by Ooyala Authorization, when using Ooyala Player Token */
+@property (readonly, nonatomic, nullable) NSString *authToken; /**< The Auth Token provided by Ooyala Authorization, when using Ooyala Player Token */
 
-@property (readonly, nonatomic) NSString *playerSessionId; /**< A Session ID that is created at the initialization of OoyalaPlayer. Persists for the life of the OoyalaPlayer */
-@property (readonly, nonatomic) NSString *contentSessionId; /**< A Session ID that is created on the set of a new piece of content (i.e setEmbedCode). Persists until a new piece of content is set. Can be null if no video was set **/
+@property (readonly, nonatomic, nonnull) NSString *playerSessionId; /**< A Session ID that is created at the initialization of OoyalaPlayer. Persists for the life of the OoyalaPlayer */
+@property (readonly, nonatomic, nullable) NSString *contentSessionId; /**< A Session ID that is created on the set of a new piece of content (i.e setEmbedCode). Persists until a new piece of content is set. Can be null if no video was set **/
 
 /**
  * The volume of the OoyalaPlayer, relative to the device's volume setting.
@@ -162,7 +162,7 @@
  * player but before calling [player setEmbedCode:] method.
  *
  */
-@property (nonatomic) NSString *userAgent;
+@property (nonatomic, nullable) NSString *userAgent;
 
 /**
  * This property can be used to pass Custom Implementation of AVAssetResourceLoaderDelegate
@@ -170,10 +170,10 @@
  * Note : This only for special purposes. Not recommend to use this property often.
  *        When this property is in use, you CAN NOT use FairPlay.
  */
-@property (nonatomic) OOAssetLoaderDelegate *assetLoaderDelegate;
-@property (nonatomic) NSString *customDrmData;
-@property (nonatomic, readonly) OOStreamPlayerMapping *streamPlayerMapping;
-@property (nonatomic, readonly) NSString *pcode;
+@property (nonatomic, nullable) OOAssetLoaderDelegate *assetLoaderDelegate;
+@property (nonatomic, nullable) NSString *customDrmData;
+@property (nonatomic, readonly, nonnull) OOStreamPlayerMapping *streamPlayerMapping;
+@property (nonatomic, readonly, nonnull) NSString *pcode;
 
 
 /**
@@ -185,12 +185,12 @@
 /**
  * Get the managedAdsPlugin that manages OOOoyalaAdSpots and OOVASTAdSpots.
  */
-@property (readonly, nonatomic) OOManagedAdsPlugin *managedAdsPlugin;
+@property (readonly, nonatomic, nonnull) OOManagedAdsPlugin *managedAdsPlugin;
 
 /**
  * Get the options
  */
-@property (readonly, nonatomic) OOOptions *options;
+@property (readonly, nonatomic, nonnull) OOOptions *options;
 
 /**
  * @internal the ui slider mode
@@ -201,7 +201,7 @@
 /**
  * @internal Audio Session
  */
-@property (nonatomic) OOAudioSession *audioSession;
+@property (nonatomic, nonnull) OOAudioSession *audioSession;
 
 #pragma mark Initializers
 
@@ -210,7 +210,7 @@
  * @param apiClient the initialized OOOoyalaAPIClient to use
  * @return the initialized OOOoyalaPlayer
  */
-- (instancetype)initWithOoyalaAPIClient:(OOOoyalaAPIClient *)apiClient;
+- (nonnull instancetype)initWithOoyalaAPIClient:(nonnull OOOoyalaAPIClient *)apiClient;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -218,8 +218,8 @@
  * @param domain Your Embed Domain
  * @return the initialized OOOoyalaPlayer
  */
-- (instancetype)initWithPcode:(NSString *)pcode
-                       domain:(OOPlayerDomain *)domain;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -228,9 +228,9 @@
  * @param options the options
  * @return the initialized OOOoyalaPlayer
  */
-- (instancetype)initWithPcode:(NSString *)pcode
-                       domain:(OOPlayerDomain *)domain
-                      options:(OOOptions *)options;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain
+                              options:(nullable OOOptions *)options;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -239,9 +239,9 @@
  * @param embedTokenGenerator the initialized OOEmbedTokenGenerator to use
  * @return the initialized OOOoyalaPlayer
  */
-- (instancetype)initWithPcode:(NSString *)pcode
-                       domain:(OOPlayerDomain *)domain
-          embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain
+                  embedTokenGenerator:(nullable id<OOEmbedTokenGenerator>)embedTokenGenerator;
 
 /**
  * Initialize an OOOoyalaPlayer with the given parameters
@@ -251,10 +251,10 @@
  * @param options Extra settings
  * @return the initialized OOOoyalaPlayer
  */
-- (instancetype)initWithPcode:(NSString *)pcode
-                       domain:(OOPlayerDomain *)domain
-          embedTokenGenerator:(id<OOEmbedTokenGenerator>)embedTokenGenerator
-                      options:(OOOptions *)options;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain
+                  embedTokenGenerator:(nullable id<OOEmbedTokenGenerator>)embedTokenGenerator
+                              options:(nullable OOOptions *)options;
 
 
 #pragma mark Content Setters
@@ -262,20 +262,20 @@
 - (void)setDesiredState:(OOOoyalaPlayerDesiredState)desiredState;
 
 /**
- * @param stream non-nil, non-empty NSArray containing OOStreams.
+ * @param stream non-nil OOStream.
  */
-- (BOOL)setStream:(OOStream *)stream;
+- (BOOL)setStream:(nonnull OOStream *)stream;
 
 /**
- * @param streams non-nil, non-empty NSArray containing OOStreams.
+ * @param streams non-nil, non-empty NSArray that contains OOStreams.
  */
-- (BOOL)setStreams:(NSArray *)streams;
+- (BOOL)setStreams:(nonnull NSArray *)streams;
 
 /**
  * Casting of OOUnbundledVideo is not supported.
  * @param unbundledVideo non-nil OOUnbundledVideo containing OOStreams.
  */
-- (BOOL)setUnbundledVideo:(OOUnbundledVideo *)unbundledVideo;
+- (BOOL)setUnbundledVideo:(nonnull OOUnbundledVideo *)unbundledVideo;
 
 /**
  DEPRECATED. The internal method of this call is @c asynchronous, so we recommend using a method with a callback.
@@ -285,7 +285,7 @@
  @param embedCode the embed code to use
  @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCode:(nonnull NSString *)embedCode;
+- (BOOL)setEmbedCode:(nonnull NSString *)embedCode
 __deprecated_msg("Use -setEmbedCode:callback: instead");
 
 /**
@@ -296,7 +296,7 @@ __deprecated_msg("Use -setEmbedCode:callback: instead");
  @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
  @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes;
+- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes
 __deprecated_msg("Use -setEmbedCodes:withCallback: instead");
 
 /**
@@ -308,7 +308,7 @@ __deprecated_msg("Use -setEmbedCodes:withCallback: instead");
  @param adSetCode the ad set code to use
  @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCode:(nonnull NSString *)embedCode adSetCode:(nullable NSString *)adSetCode;
+- (BOOL)setEmbedCode:(nonnull NSString *)embedCode adSetCode:(nullable NSString *)adSetCode
 __deprecated_msg("Use -setEmbedCode:adSetCode:withCallback: instead");
 
 /**
@@ -320,7 +320,7 @@ __deprecated_msg("Use -setEmbedCode:adSetCode:withCallback: instead");
  * @param adSetCode the ad set code to use.
  * @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes adSetCode:(nullable NSString *)adSetCode;
+- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes adSetCode:(nullable NSString *)adSetCode
 __deprecated_msg("Use -setEmbedCodes:adSetCode:withCallback: instead");
 
 /**
@@ -331,7 +331,7 @@ __deprecated_msg("Use -setEmbedCodes:adSetCode:withCallback: instead");
  * @param externalId the external ID to use
  * @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason
  */
-- (BOOL)setExternalId:(nonnull NSString *)externalId;
+- (BOOL)setExternalId:(nonnull NSString *)externalId
 __deprecated_msg("Use -setExternalId:withCallback: instead");
 
 /**
@@ -342,7 +342,7 @@ __deprecated_msg("Use -setExternalId:withCallback: instead");
  * @param externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
  * @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason
  */
-- (BOOL)setExternalIds:(nonnull NSArray<NSString *> *)externalIds;
+- (BOOL)setExternalIds:(nonnull NSArray<NSString *> *)externalIds
 __deprecated_msg("Use -setExternalIds:withCallback: instead");
 
 
@@ -464,7 +464,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  * Reinitializes the player with a root item.
  * @param theRootItem the root item to use
  */
-- (void)setRootItem:(OOContentItem *)theRootItem;
+- (void)setRootItem:(nonnull OOContentItem *)theRootItem;
 
 /**
  * Reinitializes the player with a new asset JSON.
@@ -493,10 +493,9 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
 
 /**
  Performs authorization on the current item, refreshing teh auth token if necessary
-
  @param callback a callback with error if present
  */
-- (void)reauthorizeCurrentItemWithCallback:(OOAuthorizeCallback)callback;
+- (void)reauthorizeCurrentItemWithCallback:(nonnull OOAuthorizeCallback)callback;
 
 #pragma mark During-playback status
 
@@ -512,7 +511,8 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  * DEPRECATED. Sets a tag for custom analytics.
  * @param tags n array of NSStrings
  */
-- (void)setCustomAnalyticsTags:(NSArray *)tags;
+- (void)setCustomAnalyticsTags:(nullable NSArray *)tags
+__deprecated_msg();
 
 - (void)destroy;
 
@@ -521,7 +521,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
 /**
  * Return an OoyalaAPIClient
  */
-- (OOOoyalaAPIClient *)api;
+- (nonnull OOOoyalaAPIClient *)api;
 
 @end
 
