@@ -98,7 +98,9 @@
   
   // Load the video
   __weak typeof(self) weakSelf = self;
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode shouldAutoPlay:YES withCallback:^(OOOoyalaError *error) {
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode
+                                        shouldAutoPlay:YES
+                                          withCallback:^(OOOoyalaError *error) {
     //just for debug purpose and demonstration that caalback can be usefull, remove if you don't need
     LOG(@"✅ got callback. embed: %@, is success: %@. But it doesn't mean that status is 'AVPlayerItemStatusReadyToPlay'", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
   }];
