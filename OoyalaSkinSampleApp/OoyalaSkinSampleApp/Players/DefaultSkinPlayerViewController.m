@@ -98,7 +98,7 @@
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
 
-  [ooyalaPlayer setEmbedCode:self.embedCode];
+  [ooyalaPlayer setEmbedCode:self.embedCode shouldAutoPlay:NO withCallback:nil];
   
   [self configureScreenshot];
 }

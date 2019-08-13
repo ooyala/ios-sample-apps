@@ -82,7 +82,7 @@
                                                          options:options];
   
   self.ooyalaPlayerViewController = [[OOOoyalaPlayerViewController alloc] initWithPlayer:player];
-
+  
   [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
                                              name:nil
@@ -96,7 +96,7 @@
   // Attach it to current view
   [self addPlayerViewController:self.ooyalaPlayerViewController];
   
-  // Load the video  
+  // Load the video
   __weak typeof(self) weakSelf = self;
   [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode
                                         shouldAutoPlay:YES
@@ -148,11 +148,6 @@
   }
   
   appDel.count++;
-}
-
-
-- (void)callbackListener {
-  
 }
 
 @end

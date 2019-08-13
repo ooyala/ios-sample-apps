@@ -77,7 +77,7 @@
   _skinController.view.frame = self.videoView.bounds;
 
   // Load the video
-  [self.ooyalaPlayer setEmbedCode:self.embedCode];
+  [self.ooyalaPlayer setEmbedCode:self.embedCode withCallback:nil];
   
   // Ooyala SSAI Plugin initialization
   self.ssaiPlugin = [OOSsaiPlugin new];
@@ -140,7 +140,7 @@
   NSString *params = self.playerParams.text;
   if ([self.ssaiPlugin setParams:params] &&
       self.ssaiPlugin.player.state != OOOoyalaPlayerStatePlaying) {
-    [self.ooyalaPlayer setEmbedCode:self.playerSelectionOption.embedCode];
+    [self.ooyalaPlayer setEmbedCode:self.playerSelectionOption.embedCode withCallback:nil];
   }
 }
 
