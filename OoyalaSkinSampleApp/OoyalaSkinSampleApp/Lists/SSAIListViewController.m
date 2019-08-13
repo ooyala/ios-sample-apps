@@ -17,9 +17,9 @@
 - (void)addTestCases {
   self.options = [NSArray array];
   self.options = @[
-                   [self optionWithTitle:@"SSAI / VOD / Ooyala Pulse"
-                               embedCode:@"dxbzNjZDE6nU5lB0PjWGQmD4Bqj9rcXZ"
-                                   pcode:@"RpOWUyOq86gFq-STNqpgzhzIcXHV"
+                   [self optionWithTitle:@"SSAI / VOD / Ooyala Pulse " //@"PLAYER-4221"
+                               embedCode:@"cxM3NlZzE6tLqRQWj43hP2SGtJpnmHsj"
+                                   pcode:@"JvYWsyOr0ubFQBsEYCtxqD3CURPO"
                            adSetProvider:@"ooyala_pulse"],
                    
                    [self optionWithTitle:@"SSAI / VOD / Google DFP"
