@@ -55,7 +55,6 @@
 
 /**
  * This returns the player state
- *
  * @return the state
  */
 @property (nonatomic, readonly) OOOoyalaPlayerState state;
