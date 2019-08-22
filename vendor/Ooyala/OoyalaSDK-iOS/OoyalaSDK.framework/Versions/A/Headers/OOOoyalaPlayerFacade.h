@@ -349,8 +349,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
 /**
  Reinitializes the player with a new external ID. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
  @param externalId the external ID to use
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setExternalId:(nonnull NSString *)externalId
          withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
@@ -358,8 +357,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
 /**
  Reinitializes the player with an array of new external IDs. External IDs enable you to assign custom identifiers to your assets so they are easier to organize, update, and modify.
  @param externalIds the external ID(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setExternalIds:(nonnull NSArray<NSString *> *)externalIds
           withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
@@ -368,8 +366,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  Asynchronous method that reinitializes the player with a new embedCode.
  
  @param embedCode the embed code to use
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCode:(nonnull NSString *)embedCode
         withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
@@ -379,8 +376,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  
  @param embedCode the embed code to use
  @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCode:(nonnull NSString *)embedCode
       shouldAutoPlay:(BOOL)autoPlay
@@ -390,8 +386,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  Asynchronous method that reinitializes the player with an array of embedCodes.
  
  @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCodes:(nonnull NSArray <NSString *> *)embedCodes
          withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
@@ -401,8 +396,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  
  @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
  @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCodes:(nonnull NSArray <NSString *> *)embedCodes
        shouldAutoPlay:(BOOL)autoPlay
@@ -413,8 +407,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  
  @param embedCode the embed code to use
  @param adSetCode the ad set code to use
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCode:(nonnull NSString *)embedCode
            adSetCode:(nullable NSString *)adSetCode
@@ -426,8 +419,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  @param embedCode the embed code to use
  @param adSetCode the ad set code to use
  @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCode:(nonnull NSString *)embedCode
            adSetCode:(nullable NSString *)adSetCode
@@ -439,8 +431,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  
  @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
  @param adSetCode the ad set code to use.
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes
             adSetCode:(nullable NSString *)adSetCode
@@ -452,8 +443,7 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  @param embedCodes the embed code(s) to use. If more than one is specified, OOOoyalaPlayer.rootItem becomes an OODynamicChannel.
  @param adSetCode the ad set code to use.
  @param autoPlay set 'YES' if you need to start playback for new asset when player is ready, otherwise, 'NO'
- @param callback The callback that called when request is completed.
- @param error An error instance that describes why the request failed; otherwise, 'nil'
+ @param callback The callback with error if any that called when request is completed.
  */
 - (void)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes
             adSetCode:(nullable NSString *)adSetCode

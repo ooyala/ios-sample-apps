@@ -12,9 +12,9 @@
 
 @interface OOFCCTVRatingStampView : UIView
 
-@property (nonatomic) OOPlayer *player;
-@property (nonatomic) OOFCCTVRating *tvRating;
-@property (nonatomic) OOFCCTVRatingConfiguration *tvRatingConfiguration;
+@property (nonatomic, weak) OOPlayer *player;
+@property (nonatomic, weak) OOFCCTVRating *tvRating;
+@property (nonatomic, weak) OOFCCTVRatingConfiguration *tvRatingConfiguration;
 @property (nonatomic) OOOoyalaPlayerVideoGravity videoGravity;
 
 - (instancetype) __unavailable initWithCoder:(NSCoder *)aDecoder;
