@@ -51,7 +51,7 @@ NSString *TV_EMBEDCODE_TEST5 = @"Izbm1rYzE6Hr19rd1wK74qeraVA7xSLx"; // ---> IMA 
   
   [self addChildViewController:_skinController];
   
-  [ooyalaVRTVPlayer setEmbedCode:TV_EMBEDCODE_TEST4];
+  [ooyalaVRTVPlayer setEmbedCode:TV_EMBEDCODE_TEST4 shouldAutoPlay:NO withCallback:nil];
 }
 
 @end
