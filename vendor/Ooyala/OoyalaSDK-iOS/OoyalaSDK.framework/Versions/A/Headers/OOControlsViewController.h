@@ -35,6 +35,7 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 @property (nonatomic) BOOL isVisible;
 @property (nonatomic) NSTimer *hideControlsTimer;
 @property (nonatomic) BOOL autohideControls;
+@property (nonatomic) OOOoyalaPlayerState lastEnumState;
 
 - (instancetype)initWithControlsType:(OOOoyalaPlayerControlType)controlsType
                               player:(OOOoyalaPlayer *)player

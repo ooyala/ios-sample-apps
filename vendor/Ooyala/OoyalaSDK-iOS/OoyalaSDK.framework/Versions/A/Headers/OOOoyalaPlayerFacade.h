@@ -1,5 +1,5 @@
 //
-//  OOOyalaPlayerInternal.h
+//  OOOyalaPlayerFacade.h
 //  OoyalaSDK
 //
 //  Copyright © 2018 Ooyala, Inc. All rights reserved.

@@ -24,7 +24,6 @@
   NSMutableArray *ads;
   OOClosedCaptions *closedCaptions;
   OOChannel *parent;
-  Float64 duration;
   BOOL live;
 }
 
