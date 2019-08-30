@@ -39,8 +39,7 @@ class ChildPlayerViewController: AbstractPlayerViewController {
     ooyalaPlayerViewController.didMove(toParent: self)
     
     // Load the video
-    ooyalaPlayerViewController.player.setEmbedCode(option.embedCode)
-    ooyalaPlayerViewController.player.play()
+    ooyalaPlayerViewController.player.setEmbedCode(option.embedCode, shouldAutoPlay: true, withCallback: nil)
   }
   
 }

@@ -39,8 +39,7 @@ class FairplayPlayerViewController: OOOoyalaTVPlayerViewController, OOEmbedToken
                                            name: nil,
                                            object: player)
     
-    player.setEmbedCode(option.embedCode)
-    player.play()
+    player.setEmbedCode(option.embedCode, shouldAutoPlay: true, withCallback: nil)
   }
   
   @objc func notificationHandler(_ notification: Notification) {

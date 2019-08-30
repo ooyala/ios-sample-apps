@@ -25,8 +25,7 @@ class OoyalaPlayerTokenPlayerViewController: OOOoyalaTVPlayerViewController, OOE
     player = OOOoyalaPlayer(pcode: option.pcode,
                             domain: OOPlayerDomain(string: option.domain),
                             embedTokenGenerator: self)
-    player.setEmbedCode(option.embedCode)
-    player.play()
+    player.setEmbedCode(option.embedCode, shouldAutoPlay: true, withCallback: nil)
   }
 
   func token(forEmbedCodes embedCodes: [String],

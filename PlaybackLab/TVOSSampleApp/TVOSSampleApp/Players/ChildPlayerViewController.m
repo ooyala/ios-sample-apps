@@ -46,8 +46,7 @@
   [self.ooyalaPlayerViewController didMoveToParentViewController:self];
   
   // Load the video
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.option.embedCode];
-  [self.ooyalaPlayerViewController.player play];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.option.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 @end
