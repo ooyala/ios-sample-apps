@@ -111,6 +111,7 @@ extern NSString *const OO_MIME_TYPE_MP4;                      /**< The MIME type
 extern NSString *const OO_MIME_TYPE_M3U8;                     /**< The MIME type for .m3u8 files */
 
 extern NSString *const OO_TAG_CREATE_VIEW;
+extern NSString *const OO_TAG_UNDEFINED_QUARTILE;
 extern NSString *const OO_TAG_START;                          /**< The tag for start event */
 extern NSString *const OO_TAG_FIRST_QUARTILE;                 /**< The tag for first quartile event */
 extern NSString *const OO_TAG_MIDPOINT;                       /**< The tag for midpoint event */
