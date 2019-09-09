@@ -71,7 +71,7 @@ extern const NSInteger kIMAAutodetectBitrate;
 /**
  *  If specified, the SDK will play the media with MIME type on the list.
  *  List of strings specifying the MIME types. When nil or empty, the SDK will
- *  use it's default list of MIME types supported on iOS.
+ *  use its default list of MIME types supported on iOS.
  *  Example: @[ @"video/mp4", @"application/x-mpegURL" ]
  *  The property is an empty array by default.
  */
@@ -104,7 +104,8 @@ extern const NSInteger kIMAAutodetectBitrate;
 /**
  *  Specifies the list of UI elements that should be visible.
  *  This property may be ignored for AdSense/AdX ads. For valid values, see
- *  <a href="../Enums/IMAUiElementType.html">IMAUiElementType</a>.
+ *  <a href="../Enums/IMAUiElementType.html">IMAUiElementType</a>. This field
+ *  is ignored on tvOS, where UI elements are unavailable.
  */
 @property(nonatomic, copy) NSArray<NSNumber *> *uiElements;
 
@@ -120,12 +121,14 @@ extern const NSInteger kIMAAutodetectBitrate;
  *  in-app browser.
  *  When nil, tapping the video ad "Learn More" button or companion ads
  *  will result in opening Safari browser. If provided, in-app browser will
- *  be used, allowing the user to stay in the app and return easily.
+ *  be used, allowing the user to stay in the app and return easily. This field
+ *  is ignored on tvOS, where Safari is not available.
  */
 @property(nonatomic, weak) UIViewController *webOpenerPresentingController;
 
 /**
  *  The IMAWebOpenerDelegate to be notified when in-app or external browser opens/closes.
+ *  This field is ignored on tvOS, where Safari is not available.
  */
 @property(nonatomic, weak) id<IMAWebOpenerDelegate> webOpenerDelegate;
 

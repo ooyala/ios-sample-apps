@@ -45,7 +45,7 @@
  *  @return the IMAAdDisplayContainer instance
  */
 - (instancetype)initWithAdContainer:(UIView *)adContainer
-                     companionSlots:(NSArray *)companionSlots NS_DESIGNATED_INITIALIZER;
+                     companionSlots:(NSArray *)companionSlots;
 
 /**
  * :nodoc:
