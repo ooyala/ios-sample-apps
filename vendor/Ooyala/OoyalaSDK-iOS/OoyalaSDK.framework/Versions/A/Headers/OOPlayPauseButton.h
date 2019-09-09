@@ -10,11 +10,18 @@
 #ifndef OOPlayPauseButton_h
 #define OOPlayPauseButton_h
 
+/** @internal
+ Possible icons for @c OOPlayPauseButton
+ */
+typedef NS_ENUM(NSInteger, OOButtonIcon) {
+  OOButtonIconPlay,
+  OOButtonIconPause,
+  OOButtonIconReplay
+};
+
 @interface OOPlayPauseButton : OOScalableImageButton
 
-@property (nonatomic) BOOL isPlayShowing; /**< set to YES to show the play icon, or NO to show the pause icon */
-
-- (void)showReplayIcon; /**< called when playback is completed */
+@property (nonatomic) OOButtonIcon buttonIcon;
 
 @end
 

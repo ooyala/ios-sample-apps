@@ -25,7 +25,7 @@
 @property (nonatomic) OOPiPButton *pipButton;
 @property (nonatomic) OOVolumeSliderView *volumeSliderView;
 
-@property (nonatomic) BOOL playingStatus;
+@property (nonatomic) BOOL isPlaying;
 @property (nonatomic) BOOL airPlayButtonShowing;
 @property (nonatomic) BOOL pipButtonShowing;
 

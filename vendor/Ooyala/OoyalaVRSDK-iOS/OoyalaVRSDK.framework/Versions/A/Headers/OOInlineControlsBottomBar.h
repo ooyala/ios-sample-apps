@@ -25,7 +25,7 @@
 @property (nonatomic) OOProgressSliderView *timeSlider;
 @property (nonatomic) OOPiPButton *pipButton;
 
-@property (nonatomic) BOOL isPlayingStatus;
+@property (nonatomic) BOOL isPlaying;
 @property (nonatomic) BOOL fullscreenButtonShowing;
 @property (nonatomic) BOOL airPlayButtonShowing;
 @property (nonatomic) BOOL gravityFillButtonShowing;

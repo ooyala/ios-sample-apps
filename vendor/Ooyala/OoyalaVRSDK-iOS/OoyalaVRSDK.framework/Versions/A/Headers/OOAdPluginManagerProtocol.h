@@ -10,7 +10,7 @@
 @protocol OOAdPlugin;
 
 /**
- * Defines player behavior after video playback has ended, defaults to OOOoyalaPlayerActionAtEndContinue
+ * OOAdMode
  */
 typedef NS_ENUM(NSInteger, OOAdMode) {
   OOAdModeNone,
