@@ -42,7 +42,8 @@
 /**
  *  Ad slot for companion ads. The SDK will put a subview inside the provided
  *  UIView container. The companion will be matched to the width and height
- *  provided here.
+ *  provided here. This class cannot be instantiated on tvOS, where companion ads
+ *  are not available.
  */
 @interface IMACompanionAdSlot : NSObject
 
@@ -78,7 +79,9 @@
  *
  *  @return the IMACompanionAdSlot instance
  */
-- (instancetype)initWithView:(UIView *)view width:(NSInteger)width height:(NSInteger)height;
+- (instancetype)initWithView:(UIView *)view
+                       width:(NSInteger)width
+                      height:(NSInteger)height __TVOS_UNAVAILABLE;
 
 /**
  * :nodoc:

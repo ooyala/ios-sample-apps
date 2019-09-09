@@ -57,6 +57,14 @@
  */
 @property(nonatomic) BOOL adWillPlayMuted;
 
+
+/**
+ * Specifies whether the player intends to continuously play the content videos one after
+ * another similar to TV broadcast. Not calling this function leaves the setting as unknown.
+ * Note: Changing this setting will have no impact on ad playback.
+ */
+@property(nonatomic) BOOL continuousPlayback;
+
 /**
  *  Specifies the duration of the content in seconds to be shown. Used in AdX requests. This
  *  parameter is optional.

@@ -43,5 +43,6 @@ FOUNDATION_EXPORT const unsigned char GoogleInteractiveMediaAdsVersionString[];
 #import <GoogleInteractiveMediaAds/IMAStreamManager.h>
 #import <GoogleInteractiveMediaAds/IMAStreamRequest.h>
 #import <GoogleInteractiveMediaAds/IMAUiElements.h>
+#import <GoogleInteractiveMediaAds/IMAUniversalAdID.h>
 #import <GoogleInteractiveMediaAds/IMAVODStreamRequest.h>
 #import <GoogleInteractiveMediaAds/IMAVideoDisplay.h>

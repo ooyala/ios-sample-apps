@@ -41,9 +41,10 @@ typedef NS_ENUM(NSInteger, IMAErrorCode){
    */
   kIMAError_VAST_MALFORMED_RESPONSE = 100,
   /**
-   *  The ad response was not understood and cannot be parsed.
+   *  Trafficking error. Video player received an ad type that it was not expecting and/or cannot
+   *  display.
    */
-  kIMAError_UNKNOWN_AD_RESPONSE = 200,
+  kIMAError_VAST_TRAFFICKING_ERROR = 200,
   /**
    *  The VAST URI provided, or a VAST URI provided in a subsequent Wrapper
    *  element, was either unavailable or reached a timeout, as defined by the

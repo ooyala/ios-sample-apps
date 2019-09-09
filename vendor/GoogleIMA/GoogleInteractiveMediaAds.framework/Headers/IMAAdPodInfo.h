@@ -30,8 +30,14 @@
 @property(nonatomic, readonly) BOOL isBumper;
 
 /**
- *  The index of the pod, where pre-roll pod is 0, mid-roll pods are 1 .. N
- *  and the post-roll is -1.
+ *  Client side: Returns the index of the ad pod. For a preroll pod, returns 0.
+ *  For midrolls, returns 1, 2,..., N. For a postroll pod, returns -1. Defaults
+ *  to 0 if this ad is not part of a pod, or this pod is not part of a playlist.
+ *  DAI live stream: Always returns -1.
+ *  DAI VOD: Returns the index of the ad pod. For a preroll pod, returns 0. For
+ *  midrolls, returns 1, 2,...,N. For a postroll pod, returns N+1...N+X.
+ *  Defaults to 0 if this ad is not part of a pod, or this pod is not part of a
+ *  playlist.
  */
 @property(nonatomic, readonly) NSInteger podIndex;
 

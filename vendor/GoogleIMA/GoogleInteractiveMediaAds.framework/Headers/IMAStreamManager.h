@@ -59,6 +59,7 @@
  */
 - (void)streamManager:(IMAStreamManager *)streamManager didReceiveAdError:(IMAAdError *)error;
 
+@optional
 
 /**
  *  Called when the ad is playing to give updates about ad progress.
