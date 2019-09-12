@@ -1,13 +1,13 @@
 //
 //  OO360GVRRenderHeadPosController.h
-//  OoyalaSDK
+//  OoyalaVRSDK
 //
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <OoyalaGVRSDK/OO360GVRRender.h>
+@import UIKit;
 
+@class OO360GVRRender;
 
 @interface OO360GVRRenderHeadPosController : NSObject
 

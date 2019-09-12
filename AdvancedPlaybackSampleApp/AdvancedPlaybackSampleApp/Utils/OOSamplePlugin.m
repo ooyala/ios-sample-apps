@@ -116,7 +116,7 @@
   self.adPlayer = [[OOSampleAdPlayer alloc] initWithFrame:rect notifier:self.notifier];
   self.adPlayer.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   [self.ooplayer.view addSubview:self.adPlayer];
-  [self.notifier notifyAdStarted];
+  [self.notifier notifyAdStartedWithAdPodInfo:[OOAdPodInfo new]];
   [self.adPlayer loadAd:ad];
   [self.adPlayer play];
 }

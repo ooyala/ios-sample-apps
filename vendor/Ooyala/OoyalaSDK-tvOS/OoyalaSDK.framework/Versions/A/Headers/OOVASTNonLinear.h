@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
-#import "OOVASTResource.h"
+
+@class OOVASTResource;
 
 /**
  * A single non-linear, static advertisement that was defined in a VAST XML
@@ -8,7 +8,7 @@
  */
 @interface OOVASTNonLinear : NSObject
 
-@property (readonly, nonatomic, strong) NSString *id;
+@property (readonly, nonatomic) NSString *nonLinearId;
 @property (readonly, nonatomic) NSInteger width;
 @property (readonly, nonatomic) NSInteger height;
 @property (readonly, nonatomic) NSInteger expandedWidth;
@@ -17,13 +17,13 @@
 @property (readonly, nonatomic) BOOL maintainAspectRatio;
 
 @property (readonly, nonatomic) NSInteger minSuggestedDuration;
-@property (readonly, nonatomic, strong) NSString *apiFramework;
-@property (readonly, nonatomic, strong) OOVASTResource *resource;
-@property (readonly, nonatomic, strong) NSMutableArray *clickTrackings;
-@property (readonly, nonatomic, strong) NSString *clickThrough;
+@property (readonly, nonatomic) NSString *apiFramework;
+@property (readonly, nonatomic) OOVASTResource *resource;
+@property (readonly, nonatomic) NSMutableArray *clickTrackings;
+@property (readonly, nonatomic) NSString *clickThrough;
 @property (readonly, nonatomic) OOTBXMLElement *creativeExtensions;
-@property (readonly, nonatomic, strong) NSString *parameters;
+@property (readonly, nonatomic) NSString *parameters;
 
-- (id)initWithElement:(OOTBXMLElement *)element;
+- (instancetype)initWithElement:(OOTBXMLElement *)element;
 
 @end

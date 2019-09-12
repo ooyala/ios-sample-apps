@@ -105,7 +105,7 @@ class PlayerViewController: UIViewController, OOEmbedTokenGenerator {
   }
 
   @IBAction func playOnline() {
-    ooyalaPlayerViewController.player.setEmbedCode(self.dtoAsset.embedCode)
+    ooyalaPlayerViewController.player.setEmbedCode(self.dtoAsset.embedCode, shouldAutoPlay: true, withCallback: nil)
     ooyalaPlayerViewController.player.play()
   }
   

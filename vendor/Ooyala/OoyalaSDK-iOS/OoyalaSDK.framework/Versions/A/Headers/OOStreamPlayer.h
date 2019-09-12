@@ -2,10 +2,10 @@
 //  OOStreamPlayer.h
 //  OoyalaSDK
 //
-// Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #import "OOPlayer.h"
 #import "OOEnums.h"
@@ -28,7 +28,6 @@
 + (void)setDefaultPlayerInfo:(id<OOPlayerInfo>)playerInfo;
 
 - (BOOL)setup:(NSArray *)streams parent:(OOOoyalaPlayer *)parent;
-- (id<OOPlayerInfo>)playerInfo;
 
 /**
  * seek to time

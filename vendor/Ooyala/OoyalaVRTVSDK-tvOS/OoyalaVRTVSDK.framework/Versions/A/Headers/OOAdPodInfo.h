@@ -39,6 +39,6 @@
                 requiredAdBar:(BOOL)adbar
               requireControls:(BOOL)controls;
 
-- (NSDictionary *)toDictionary;
+- (NSDictionary *)dictionaryView;
 
 @end

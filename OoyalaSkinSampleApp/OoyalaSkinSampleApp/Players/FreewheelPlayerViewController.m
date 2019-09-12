@@ -76,7 +76,6 @@
                                                           parent:_videoView];
   [self addChildViewController:_skinController];
   _skinController.view.frame = self.videoView.bounds;
-  [ooyalaPlayer setEmbedCode:self.embedCode];
 
   [NSNotificationCenter.defaultCenter addObserver:self
                                          selector:@selector(notificationHandler:)
@@ -105,7 +104,7 @@
   [self.adsManager overrideFreewheelParameters:fwParameters];
   
   // Load the video
-  [ooyalaPlayer setEmbedCode:self.embedCode];
+  [ooyalaPlayer setEmbedCode:self.embedCode shouldAutoPlay:NO withCallback:nil];
 }
 
 #pragma mark - Private functions

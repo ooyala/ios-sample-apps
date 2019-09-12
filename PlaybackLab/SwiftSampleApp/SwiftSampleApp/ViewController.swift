@@ -55,12 +55,12 @@ class ViewController: UIViewController {
     formatter.dateFormat = "\nyyyy-MM-dd HH:mm:ss \n"
     
     // Load the video
-    ooyalaPlayerViewController.player.setEmbedCode(EMBED_CODE)
+    ooyalaPlayerViewController.player.setEmbedCode(EMBED_CODE, shouldAutoPlay: false, withCallback: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(ViewController.notificationHandler(_:)), name: nil, object: ooyalaPlayerViewController.player)
   }
   
   func onPlayerError(_ notification: Notification){
-    NSLog("Error: %@", ooyalaPlayerViewController.player.error)
+    print("Error: \(String(describing: ooyalaPlayerViewController.player.error?.description))")
   }
 
   @objc func notificationHandler(_ notification: Notification) {

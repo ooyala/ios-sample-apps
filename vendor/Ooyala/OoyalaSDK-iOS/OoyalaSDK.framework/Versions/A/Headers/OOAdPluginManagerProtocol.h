@@ -2,14 +2,15 @@
 //  OOAdPluginManagerProtocol.h
 //  OoyalaSDK
 //
-// Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "OOAdPlugin.h"
+@import Foundation;
+
+@protocol OOAdPlugin;
 
 /**
- * Defines player behavior after video playback has ended, defaults to OOOoyalaPlayerActionAtEndContinue
+ * OOAdMode
  */
 typedef NS_ENUM(NSInteger, OOAdMode) {
   OOAdModeNone,

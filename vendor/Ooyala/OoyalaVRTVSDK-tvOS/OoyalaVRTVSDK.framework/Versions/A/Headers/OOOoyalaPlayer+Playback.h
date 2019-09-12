@@ -13,6 +13,12 @@
 
 @interface OOOoyalaPlayer (Playback)
 
+/**
+ Checks if controller for PictureInPicture is activated now.
+ 
+ For iOS 9 and up only, for iPads only.
+ @return YES if PictureInPicture is active, NO otherwise
+ */
 @property (readonly, nonatomic, getter=isPiPActivated) BOOL pipActivated;
 @property (readonly, nonatomic, getter=isAudioOnly) BOOL audioOnly;
 
@@ -32,12 +38,12 @@
  * Checks the expiration of the authToken, and compares it to the current time.
  * @return YES if token is expired, NO otherwise
  */
-- (BOOL) isAuthTokenExpired;
+- (BOOL)isAuthTokenExpired;
 
 /**
  * current seekable range for main video.
  */
-- (CMTimeRange) seekableTimeRange;
+- (CMTimeRange)seekableTimeRange;
 
 /**
  * Get whether the player is playing ad
@@ -50,6 +56,13 @@
  * it has custom controls, instead of using the Ooyala video controls.
  */
 - (BOOL)isShowingAdWithCustomControls;
+
+/**
+ Indicator for ads with hidden controls
+
+ @return @c YES if self.isShowingAd==YES and @c showAdsControls==NO
+ */
+- (BOOL)showingAdsWithHiddenControls;
 
 /**
  * Gets the current playhead time (the part of the video currently being accessed).
@@ -83,7 +96,7 @@
 
 /**
  * Toggle the picture in picture mode
- * iOS 9 and up only
+ * For iOS 9 and up only, for iPads only.
  */
 - (void)togglePictureInPictureMode;
 
@@ -91,7 +104,7 @@
  * Sets the current playhead time of the player (same as seek). For example, to start a video at the 30 second point, you would set the playhead to 30.
  * @param time the playhead time, in seconds
  */
-- (void)setPlayheadTime:(Float64) time;
+- (void)setPlayheadTime:(Float64)time;
 
 /**
  * Sets the current playhead time of the player (same as setPlayheadTime).

@@ -8,6 +8,7 @@
 #import "IMAStreamRequest.h"
 
 @class IMAAdDisplayContainer;
+@class IMAPictureInPictureProxy;
 @protocol IMAVideoDisplay;
 
 /**

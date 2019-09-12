@@ -44,10 +44,9 @@ class DefaultVideoPlayerViewController: UIViewController {
     options.bypassPCodeMatching = false
 
     let domain = OOPlayerDomain(string: viewModel.domain)
-    guard let ooyalaVRPlayer = OOOoyalaVRPlayer(pcode: viewModel.pcode,
-                                                domain: domain, options: options) else {
-                                                  return
-    }
+    let ooyalaVRPlayer = OOOoyalaVRPlayer(pcode: viewModel.pcode,
+                                          domain: domain,
+                                          options: options)
 
     // Skin
     let discoveryOptions = OODiscoveryOptions(type: .popular, limit: 10, timeout: 60)
@@ -77,7 +76,7 @@ class DefaultVideoPlayerViewController: UIViewController {
                                            object: nil)
 
     // Set video embed code
-    ooyalaVRPlayer.setEmbedCode(viewModel.videoItem.embedCode)
+    ooyalaVRPlayer.setEmbedCode(viewModel.videoItem.embedCode, shouldAutoPlay: false, withCallback: nil)
   }
 
   private func configureUI() {

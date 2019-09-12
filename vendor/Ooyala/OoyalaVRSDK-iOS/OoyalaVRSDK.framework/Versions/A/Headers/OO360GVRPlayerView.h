@@ -1,6 +1,6 @@
 //
 //  OO360GVRPlayerView.h
-//  OoyalaSDK
+//  OoyalaVRSDK
 //
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
@@ -22,15 +22,15 @@
  */
 typedef NS_ENUM(NSInteger, OO360VideoType) {
   /** Render video in mono type with handle touches */
-  Mono,
+  OO360VideoTypeMono,
   /** Render video in stereo type for using cardboard without handling touches */
-  Stereo,
+  OO360VideoTypeStereo
 };
 /**
  * @property videoType
  * @brief This property is using to choose scene for a rendering. Default: Mono
  */
-@property (nonatomic, assign) OO360VideoType videoType;
+@property (nonatomic) OO360VideoType videoType;
 
 /**
  *  @brief Switch video mode between Stereo and Mono
@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, OO360VideoType) {
 /**
  *  @abstract Hide render view if video has ended
  *  @see 00360GVRRenderView
- *  @param hidden: true if needs to hide render view, false otherwise
+ *  @param hidden true if needs to hide render view, false otherwise
  */
 - (void)setHidden:(BOOL)hidden;
 

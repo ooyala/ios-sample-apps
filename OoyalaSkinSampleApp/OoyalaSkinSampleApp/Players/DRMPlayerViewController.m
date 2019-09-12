@@ -100,7 +100,6 @@
                                                           parent:_videoView];
   [self addChildViewController:_skinController];
   _skinController.view.frame = self.videoView.bounds;
-  [ooyalaPlayer setEmbedCode:self.embedCode];
   
   // Notifications
   [NSNotificationCenter.defaultCenter addObserver:self
@@ -116,7 +115,7 @@
   // In QA Mode , making textView visible
   self.textView.hidden = !self.qaModeEnabled;
   // Load the video
-  [ooyalaPlayer setEmbedCode:self.embedCode];
+  [ooyalaPlayer setEmbedCode:self.embedCode shouldAutoPlay:NO withCallback:nil];
 }
 
 #pragma mark - Private functions

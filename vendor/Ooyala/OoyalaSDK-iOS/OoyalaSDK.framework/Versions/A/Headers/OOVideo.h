@@ -24,7 +24,6 @@
   NSMutableArray *ads;
   OOClosedCaptions *closedCaptions;
   OOChannel *parent;
-  Float64 duration;
   BOOL live;
 }
 
@@ -41,14 +40,14 @@
  * Initialize a OOVideo using the specified data (subclasses should override this)
  * @param unbundledVideo defines the streams and ads to use initializing the OOVideo.
  */
-- (instancetype)initWithUnbundledVideo:(OOUnbundledVideo*)unbundledVideo;
+- (instancetype)initWithUnbundledVideo:(OOUnbundledVideo *)unbundledVideo;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
  * @param theStreams NSArray containing OOStreams.
  * @param theAds NSArray containing OOManagedAdSpots.
  */
-- (instancetype)initWithUnbundledStreams:(NSArray*)theStreams ads:(NSArray*)theAds;
+- (instancetype)initWithUnbundledStreams:(NSArray *)theStreams ads:(NSArray *)theAds;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
@@ -148,8 +147,8 @@
  * Edit the list of ads, allowing for removal of ads.
  * @param predicate block that returns TRUE for ads to keep, FALSE for ads to remove.
  */
--(void)filterAds:(NSPredicate*)predicate;
+- (void)filterAds:(NSPredicate *)predicate;
 
--(BOOL)isSsaiEnabled;
+- (BOOL)isSsaiEnabled;
 
 @end

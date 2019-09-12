@@ -90,7 +90,7 @@
   self.adsManager.adUrlOverride = @"http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7521029/pb_test_mid&ciu_szs=640x480&impl=s&cmsid=949&vid=FjbGRjbzp0DV_5-NtXBVo5Rgp3Sj0R5C&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
 
   // Load the video
-  [_ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 #pragma mark - Private functions

@@ -6,8 +6,9 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
-#import "OOReturnState.h"
+@import Foundation;
+
+#import "OOEnums.h"
 
 @class OOStream;
 

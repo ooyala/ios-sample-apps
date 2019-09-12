@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 
 #import "IMAAdPodInfo.h"
+#import "IMAUniversalAdID.h"
 
 /**
  *  Data object representing a single ad.
@@ -129,16 +130,24 @@
 @property(nonatomic, copy, readonly) NSString *creativeAdID;
 
 /**
+ *  The list of all UniversalAdIds of the selected creative for this ad. Returns an empty array if
+ *  no universal ad IDs are found.
+ */
+@property(nonatomic, copy, readonly) NSArray<IMAUniversalAdID *> *universalAdIDs;
+
+/**
  *  The UniversalAdId of the selected creative for the ad. Returns the id value or "unknown"
  *  if unavailable.
  */
-@property(nonatomic, copy, readonly) NSString *universalAdIdValue;
+@property(nonatomic, copy, readonly)
+    NSString *universalAdIdValue DEPRECATED_MSG_ATTRIBUTE("Use universalAdIDs instead.");
 
 /**
  *  The registry associated with cataloging the UniversalAdId of the selected creative for the ad.
  *  Returns the registry value, or "unknown" if unavailable.
  */
-@property(nonatomic, copy, readonly) NSString *universalAdIdRegistry;
+@property(nonatomic, copy, readonly)
+    NSString *universalAdIdRegistry DEPRECATED_MSG_ATTRIBUTE("Use universalAdIDs instead.");
 
 /**
  *  The advertiser name as defined by the serving party.

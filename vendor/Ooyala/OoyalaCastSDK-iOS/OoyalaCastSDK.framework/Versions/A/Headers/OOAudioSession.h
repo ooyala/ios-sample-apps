@@ -11,6 +11,7 @@
 @import Foundation;
 
 extern NSString *const volumePropertyKey;
+extern NSString *const volumeChangeKey;
 
 @protocol OOAudioSessionDelegate <NSObject>
 @optional
@@ -34,6 +35,8 @@ extern NSString *const volumePropertyKey;
 - (void)addVolumeObserver:(NSObject *)observer;
 - (void)disableSession;
 - (void)volumeChanged:(float)systemVolume;
+
+- (BOOL)isAirPlay;
 
 @end
 

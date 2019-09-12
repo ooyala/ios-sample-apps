@@ -1,4 +1,3 @@
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
 /**
@@ -22,7 +21,7 @@
 @property (readonly, nonatomic) NSMutableArray *nonLinearCreatives;    /**< the Non Linear creatives of the Ad */
 @property (readonly, nonatomic) NSMutableArray *companionCreatives;    /**< the Companion creatives of the Ad */
 
-//@property(readonly, nonatomic) NSMutableArray *sequence;         /**< the ordered sequence of the Ad (NSMutableArray of OOVASTSequenceItem) */
+//@property (readonly, nonatomic) NSMutableArray *sequence;         /**< the ordered sequence of the Ad (NSMutableArray of OOVASTSequenceItem) */
 @property (readonly, nonatomic) NSDictionary *extensions;       /**< the extensions of the Ad */
 
 

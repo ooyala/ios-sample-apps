@@ -40,8 +40,7 @@ NSString *const PLAYER_DOMAIN = @"http://www.ooyala.com";
   self.manager = [[OOPulseManager alloc] initWithPlayer:self.player];
   self.manager.delegate = self;
   
-  [self.player setEmbedCode:self.option.embedCode];
-  [self.player play];
+  [self.player setEmbedCode:self.option.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 - (void)notificationHandler:(NSNotification *)notification {

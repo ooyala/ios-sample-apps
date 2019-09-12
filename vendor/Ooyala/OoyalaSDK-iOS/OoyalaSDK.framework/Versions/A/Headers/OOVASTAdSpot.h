@@ -1,5 +1,6 @@
 #import "OOManagedAdSpot.h"
 #import "OOTBXML.h"
+#import "OOEnums.h"
 
 /**
  * Represents all VAST information from a root VAST XML file. May have multiple vast XMLs as part of the ad hierarchy.

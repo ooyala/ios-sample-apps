@@ -1,4 +1,3 @@
-
 //
 //  OOOoyalaVRTVPlayer.h
 //  OoyalaVRTVSDK
@@ -7,7 +6,6 @@
 //
 
 #import "OOOoyalaPlayer.h"
-
 
 @interface OOOoyalaVRTVPlayer : OOOoyalaPlayer
 

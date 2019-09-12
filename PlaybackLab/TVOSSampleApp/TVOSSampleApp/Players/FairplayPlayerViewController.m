@@ -60,8 +60,7 @@
                                   embedTokenGenerator:self
                                               options:options];
   
-  [self.player setEmbedCode:self.option.embedCode];
-  [self.player play];
+  [self.player setEmbedCode:self.option.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 - (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes

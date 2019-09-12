@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
-#import "OOVASTLinearAd.h"
-#import "OOVASTCompanionAds.h"
-#import "OOVASTNonLinearAds.h"
+
+@class OOVASTLinearAd;
+@class OOVASTCompanionAds;
+@class OOVASTNonLinearAds;
 
 /**
  * A creative that was defined in a VAST XML
@@ -11,13 +11,13 @@
 @interface OOVASTCreative : NSObject
 
 @property (readonly, nonatomic) NSInteger sequence;
-@property (readonly, nonatomic, strong) NSString *id;
-@property (readonly, nonatomic, strong) NSString *adId;
-@property (readonly, nonatomic, strong) OOVASTLinearAd *linear;
-@property (readonly, nonatomic, strong) OOVASTCompanionAds *companionAds;
-@property (readonly, nonatomic, strong) OOVASTNonLinearAds *nonLinearAds;
+@property (readonly, nonatomic) NSString *creativeId;
+@property (readonly, nonatomic) NSString *adId;
+@property (readonly, nonatomic) OOVASTLinearAd *linear;
+@property (readonly, nonatomic) OOVASTCompanionAds *companionAds;
+@property (readonly, nonatomic) OOVASTNonLinearAds *nonLinearAds;
 
-- (id)initWithElement:(OOTBXMLElement *)element;
+- (instancetype)initWithElement:(OOTBXMLElement *)element;
 - (BOOL)hasLinear;
 - (BOOL)hasCompanionAds;
 - (BOOL)hasNonLinearAds;

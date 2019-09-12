@@ -5,16 +5,16 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import "OOCuePointsView.h"
-#import "OOOoyalaPlayer.h"
+@import UIKit;
+@import AVFoundation;
 
+#import "OOCuePointsView.h"
+#import "OOEnums.h"
 
 /**
  A view that can display the the current time, duration, and scrubber.
  */
-@interface OOProgressSliderView : UIView<OOCuePointViewDurationDataSource> {
+@interface OOProgressSliderView : UIView <OOCuePointViewDurationDataSource> {
   OOUIProgressSliderMode mode;
 }
 
@@ -42,10 +42,10 @@
  @return the absolute value of the scrubber's value
  */
 - (Float64)scrubberAbsoluteValue;
+
 /**
  Force the slider to render the "Live" indicator
  */
 - (void)drawLiveIndicator;
-
 
 @end

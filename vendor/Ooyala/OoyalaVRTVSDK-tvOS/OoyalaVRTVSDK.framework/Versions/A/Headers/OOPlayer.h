@@ -6,10 +6,8 @@
  * @copyright Copyright © 2015 Ooyala, Inc. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-#import "OOOoyalaError.h"
 #import "OOPlayerProtocol.h"
 #import "OOLifeCycle.h"
 #import "OOAudioTrackSelectionProtocol.h"
@@ -18,7 +16,11 @@
 #ifndef OOPlayer_h
 #define OOPlayer_h
 
-@interface OOPlayer : NSObject<OOPlayerProtocol, OOLifeCycle, OOAudioTrackSelectionProtocol, OOPlaybackSpeedSelectionProtocol> { // really, an Abstract class.
+@class OOOoyalaError;
+
+// really, an Abstract class.
+@interface OOPlayer : NSObject <OOPlayerProtocol, OOLifeCycle,
+                                OOAudioTrackSelectionProtocol, OOPlaybackSpeedSelectionProtocol> {
 @protected
   OOOoyalaError *playerError;
   UIView *view;

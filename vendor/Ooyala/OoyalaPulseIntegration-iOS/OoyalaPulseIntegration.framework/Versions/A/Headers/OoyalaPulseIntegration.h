@@ -1,6 +1,6 @@
 //
 //  OoyalaPulseIntegration.h
-//  OoyalaSDK
+//  OoyalaPulseIntegration
 //
 //  Created on 04/04/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.

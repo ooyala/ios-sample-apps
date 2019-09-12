@@ -33,8 +33,7 @@
                                              name:nil
                                            object:self.player];
   
-  [self.player setEmbedCode:self.option.embedCode];
-  [self.player play];
+  [self.player setEmbedCode:self.option.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 - (void)notificationHandler:(NSNotification *)notification {

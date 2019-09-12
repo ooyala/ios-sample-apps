@@ -79,7 +79,7 @@
                                            object:nil];
   
   // Set video embed code
-  [ooyalaVRPlayer setEmbedCode:self.viewModel.videoItem.embedCode];
+  [ooyalaVRPlayer setEmbedCode:self.viewModel.videoItem.embedCode shouldAutoPlay:NO withCallback:nil];
 }
 
 - (void)configureUI {

@@ -7,6 +7,7 @@
 //  Declares a simple video display class used for ad playback.
 
 #import "IMAAdPlaybackInfo.h"
+
 @protocol IMAVideoDisplay;
 
 /**
@@ -15,11 +16,19 @@
 @protocol IMAVideoDisplayDelegate<NSObject>
 
 /**
- *  Informs the SDK the ad has started playback.
+ *  Informs the SDK that the ad has loaded.
+ *
+ *  @param videoDisplay the IMAVideoDisplay that loaded the ad
+ */
+- (void)videoDisplayDidLoad:(id<IMAVideoDisplay>)videoDisplay;
+
+/**
+ *  Informs the SDK the ad has started playback. This must be called at most once per loadStream:
+ *  or loadUrl: call.
  *
  *  @param videoDisplay the IMAVideoDisplay that started ad playback
  */
-- (void)videoDisplayDidPlay:(id<IMAVideoDisplay>)videoDisplay;
+- (void)videoDisplayDidStart:(id<IMAVideoDisplay>)videoDisplay;
 
 /**
  *  Informs the SDK the ad has paused.
@@ -36,11 +45,12 @@
 - (void)videoDisplayDidResume:(id<IMAVideoDisplay>)videoDisplay;
 
 /**
- *  Informs the SDK the ad has started playback.
+ *  Informs the SDK the ad has resumed playback.
  *
- *  @param videoDisplay the IMAVideoDisplay that started ad playback
+ *  @param videoDisplay the IMAVideoDisplay that resumed ad playback
  */
-- (void)videoDisplayDidStart:(id<IMAVideoDisplay>)videoDisplay;
+- (void)videoDisplayDidPlay:(id<IMAVideoDisplay>)videoDisplay
+    DEPRECATED_MSG_ATTRIBUTE("Use videoDisplayDidResume: instead.");
 
 /**
  *  Informs the SDK the ad has completed playback.
@@ -77,13 +87,6 @@
  *  @param videoDisplay the IMAVideoDisplay that showed the skip button
  */
 - (void)videoDisplayDidShowSkip:(id<IMAVideoDisplay>)videoDisplay;
-
-/**
- *  Informs the SDK that the ad has loaded.
- *
- *  @param videoDisplay the IMAVideoDisplay that loaded the ad
- */
-- (void)videoDisplayDidLoad:(id<IMAVideoDisplay>)videoDisplay;
 
 /**
  *  Informs the SDK that the ad volume was changed.

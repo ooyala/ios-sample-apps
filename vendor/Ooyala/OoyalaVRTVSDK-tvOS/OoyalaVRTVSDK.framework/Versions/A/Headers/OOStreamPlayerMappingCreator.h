@@ -1,12 +1,14 @@
 //
-//Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @class OOOoyalaPlayer;
 @class OOStreamPlayer;
 
 @protocol OOStreamPlayerMappingCreator <NSObject>
+
 - (OOStreamPlayer *)newPlayer;
+
 @end

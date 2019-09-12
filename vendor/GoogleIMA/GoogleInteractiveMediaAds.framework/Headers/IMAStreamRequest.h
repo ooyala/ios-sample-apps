@@ -38,7 +38,6 @@
  *  The stream request authorization token. This is used in place of the API key for stricter
  *  content authorization. The publisher can control individual content streams authorized based
  *  on this token.
- *  :nodoc:
  */
 @property(nonatomic, copy) NSString *authToken;
 

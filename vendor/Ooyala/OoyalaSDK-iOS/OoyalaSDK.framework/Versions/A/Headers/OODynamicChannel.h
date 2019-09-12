@@ -19,7 +19,7 @@
 }
 
 /** Ordered list of embed codes */
-@property(readonly, nonatomic, strong) NSArray *embedCodes;
+@property (readonly, nonatomic) NSArray *embedCodes;
 
 /** @internal
  * Initialize a OODynamicChannel using the specified data (subclasses should override and call this)
@@ -28,7 +28,9 @@
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
  * @return the initialized OODynamicChannel
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCodes:(NSArray *)theEmbedCodes api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                        embedCodes:(NSArray *)theEmbedCodes
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Initialize a OODynamicChannel using the specified data (subclasses should override and call this)
@@ -38,7 +40,10 @@
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
  * @return the initialized OODynamicChannel
  */
-- (id)initWithDictionary:(NSDictionary *)data embedCodes:(NSArray *)theEmbedCodes parent:(OOChannelSet *)theParent api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithDictionary:(NSDictionary *)data
+                        embedCodes:(NSArray *)theEmbedCodes
+                            parent:(OOChannelSet *)theParent
+                               api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OODynamicChannel using the specified data (subclasses should override and call this)

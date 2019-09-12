@@ -1,6 +1,6 @@
 //
 //  OOCastMiniControllerProtocol.h
-//  OoyalaSDK
+//  OoyalaCastSDK
 //
 //  Created on 9/9/14.
 //  Copyright © 2014 Ooyala, Inc. All rights reserved.

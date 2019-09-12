@@ -142,7 +142,7 @@ extern NSString *const kIMAAdBreakTime;
 /**
  *  Extra data about the ad. Can be nil.
  */
-@property(nonatomic, copy, readonly) NSDictionary *adData;
+@property(nonatomic, copy, readonly) NSDictionary<NSString *, id> *adData;
 
 /**
  * :nodoc:

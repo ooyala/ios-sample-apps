@@ -29,7 +29,7 @@
  * @param name is the long name, from availableClosedCaptionsLanguages.
  * @return the short cc code. If the reverse mapping fails, the original name parameter value is returned.
  */
--(NSString*)languageNameToLanguageCode:(NSString*)name;
+- (NSString *)languageNameToLanguageCode:(NSString *)name;
 
 @end
 

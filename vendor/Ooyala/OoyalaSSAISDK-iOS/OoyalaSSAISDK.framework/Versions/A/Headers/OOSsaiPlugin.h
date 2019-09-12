@@ -8,14 +8,21 @@
 #ifndef OOSsaiPlugin_h
 #define OOSsaiPlugin_h
 
-#import <OoyalaSDK/OoyalaSDK.h>
+@import Foundation;
+
+#import "OOAdPlugin.h"
+
+@protocol OOSSAIPlayerDelegate <NSObject>
+- (void)ssaiAdPaused;
+- (void)ssaiAdResumed;
+@end
 
 @class OOOoyalaPlayer;
 
 /**
  Ooyala SSAI plugin implementation.
  */
-@interface OOSsaiPlugin : NSObject<OOAdPlugin>
+@interface OOSsaiPlugin : NSObject <OOAdPlugin, OOSSAIPlayerDelegate>
 
 /**
  Initializes the SSAI framework.

@@ -2,14 +2,13 @@
 //  OODefaultAdsPlugin.h
 //  OoyalaSDK
 //
-// Copyright © 2015 Ooyala, Inc. All rights reserved.
+//  Copyright © 2015 Ooyala, Inc. All rights reserved.
 //
 
 #import "OOAdPlugin.h"
-#import "OOAdSpotManager.h"
 
-#define PLUGIN_INIT -2
-#define CONTENT_CHANGED -1
+@class OOAdSpot;
+@class OOAdSpotManager;
 
 @protocol OOAdSpotPluginDelegate
 

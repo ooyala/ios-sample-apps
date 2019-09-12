@@ -12,9 +12,9 @@
 #import <OoyalaSkinSDK/OoyalaSkinSDK.h>
 
 typedef NS_ENUM(NSInteger, DownloadMode) {
-  Offline,
-  Online,
-  Undefined
+  DownloadModeOffline,
+  DownloadModeOnline,
+  DownloadModeUndefined
 };
 
 @interface PlayerViewController () <OOEmbedTokenGenerator>
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  self.currentMode = Undefined;
+  self.currentMode = DownloadModeUndefined;
   OOOoyalaPlayer *player = nil;
   // We assume we're dealing with a Fairplay asset because the Option instance has an embedTokenGenerator
   if (self.dtoAsset.options.embedTokenGenerator) {
@@ -120,24 +120,24 @@ typedef NS_ENUM(NSInteger, DownloadMode) {
 
 // action linked to the online video button
 - (IBAction)playOnline {
-  if (self.currentMode == Online) {
+  if (self.currentMode == DownloadModeOnline) {
     [self restartVideo];
   } else {
-    [self.ooyalaPlayerViewController.player setEmbedCode:self.dtoAsset.embedCode];
-    self.currentMode = Online;
+    [self.ooyalaPlayerViewController.player setEmbedCode:self.dtoAsset.embedCode shouldAutoPlay:NO withCallback:nil];
+    self.currentMode = DownloadModeOnline;
   }
 }
 
 // action linked to the offline video button
 - (IBAction)playOffline {
-  if (self.currentMode == Offline) {
+  if (self.currentMode == DownloadModeOffline) {
     [self restartVideo];
   } else {
     OOOfflineVideo *video = self.dtoAsset.offlineVideo;
     if (video) {
       [self.ooyalaPlayerViewController.player setUnbundledVideo:video];
     }
-    self.currentMode = Offline;
+    self.currentMode = DownloadModeOffline;
   }
 }
 

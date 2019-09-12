@@ -1,12 +1,11 @@
 //
 //  OO360GVRScreenStateController.h
-//  OoyalaSDK
+//  OoyalaVRSDK
 //
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 @protocol OO360GVRScreenStateControllerDelegate <NSObject>
 
@@ -23,12 +22,11 @@
 
 @end
 
-
 @interface OO360GVRScreenStateController : NSObject
 
-@property(nonatomic, weak) id<OO360GVRScreenStateControllerDelegate> delegate;
+@property (nonatomic, weak) id<OO360GVRScreenStateControllerDelegate> delegate;
 
 /** State of fullscreen mode. */
-@property(nonatomic, readonly) BOOL fullScreenEnabled;
+@property (nonatomic, readonly) BOOL fullScreenEnabled;
 
 @end

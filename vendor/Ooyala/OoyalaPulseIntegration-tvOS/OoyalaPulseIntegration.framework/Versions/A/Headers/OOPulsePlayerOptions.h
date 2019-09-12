@@ -1,6 +1,6 @@
 //
 //  OOPulsePlayerOptions.h
-//  OoyalaSDK
+//  OoyalaPulseIntegration
 //
 //  Created on 09/11/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.

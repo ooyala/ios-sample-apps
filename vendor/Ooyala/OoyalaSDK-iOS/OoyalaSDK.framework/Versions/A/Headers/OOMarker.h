@@ -10,7 +10,6 @@
 /**
  Stores the info for a marker.
  */
-
 @interface OOMarker : NSObject
 
 @property (readonly, nonatomic) NSString *type;

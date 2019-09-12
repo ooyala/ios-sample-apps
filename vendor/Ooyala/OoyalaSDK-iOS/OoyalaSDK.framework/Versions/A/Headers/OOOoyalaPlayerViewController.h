@@ -9,22 +9,18 @@
 #ifndef OOOoyalaPlayerViewController_h
 #define OOOoyalaPlayerViewController_h
 
-@import SceneKit;
 @import UIKit;
+
+#import "OOOoyalaPlayerControllerDelegate.h"
 
 extern NSString *const OOOoyalaPlayerViewControllerFullscreenEnter;
 extern NSString *const OOOoyalaPlayerViewControllerFullscreenExit;
 extern NSString *const OOOoyalaPlayerViewControllerInlineViewVisible;
 extern NSString *const OOOoyalaPlayerViewControllerFullscreenViewVisible;
 
-@class OOOoyalaAPIClient;
-@class OOControlsViewController;
-@class OOPlayerDomain;
-@class OOClosedCaptionsStyle;
-@class OOCameraPanGestureRecognizer;
-@class OOOoyalaPlayerViewController;
 @class OOOoyalaPlayer;
-@protocol OOMotionManagement;
+@class OOControlsViewController;
+@class OOClosedCaptionsStyle;
 
 typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
   /** an inline player, expandable to fullscreen */
@@ -37,7 +33,7 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
  Main ViewController class for Ooyala player.
  Implements a default skin as well as convenience methods for accesssing and initializing underlying OOOoyalaPlayer.
  */
-@interface OOOoyalaPlayerViewController : UIViewController
+@interface OOOoyalaPlayerViewController : UIViewController <OOOoyalaPlayerControllerDelegate>
 
 @property (nonatomic, readonly) OOOoyalaPlayerControlType initialControlType; // initial state
 @property (nonatomic) OOOoyalaPlayer *player;
@@ -119,6 +115,16 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
 - (void)hideControls;
 
 /**
+ Disables and hides controls
+ */
+- (void)disableControls;
+
+/**
+ Enables and sets the normal behaviour for controls
+ */
+- (void)enableControls;
+
+/**
  Sets visibility of full-screen button on inline player
  * @param showing True to show fullscreen button, false otherwise
  */
@@ -141,13 +147,6 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerControlType) {
  @param controller the initialized ViewController to use
  */
 - (void)setInlineViewController:(OOControlsViewController *)controller;
-
-/**
- update closed caption view position
- @param bottomControlsRect the bottom controls rect
- @param hidden YES if the bottom control is hidden, NO if it is not hidden
- */
-- (void)updateClosedCaptionsViewPosition:(CGRect)bottomControlsRect withControlsHide:(BOOL)hidden;
 
 @end
 

@@ -5,7 +5,7 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @class OOOoyalaPlayer;
 @class OOAdobeHeartbeatConfiguration;
@@ -27,7 +27,7 @@
  * @param config Configuration used to initialize analytics.
  */
 - (nullable instancetype)initWithPlayer:(nonnull OOOoyalaPlayer *)player
-                        config:(nonnull OOAdobeHeartbeatConfiguration *)config NS_DESIGNATED_INITIALIZER;
+                                 config:(nonnull OOAdobeHeartbeatConfiguration *)config NS_DESIGNATED_INITIALIZER;
 
 #pragma mark - Methods
 

@@ -1,6 +1,6 @@
 //
 //  OOPulseManager.h
-//  PulseOVPTestApp
+//  OoyalaPulseIntegration
 //
 //  Created on 03/02/16.
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
@@ -73,7 +73,7 @@
 /**
  The Pulse Manager plugin allows you to display ads from Ooyala Pulse in the Ooyala Player.
 */
-@interface OOPulseManager : NSObject<OOAdPlugin>
+@interface OOPulseManager : NSObject <OOAdPlugin>
 
 /**
  *  Initialize the Pulse Manager.

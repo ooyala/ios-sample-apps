@@ -6,8 +6,9 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "OOVASTNonLinear.h"
+@import Foundation;
+
+@class OOVASTNonLinear;
 
 @interface OOAdOverlayInfo : NSObject
 
@@ -18,13 +19,15 @@
 @property (readonly, nonatomic) NSString *resourceUrl;
 @property (readonly, nonatomic) NSString *clickUrl;
 
-- (id)initWithWidth:(NSInteger)width
-             height:(NSInteger)height
-      expandedWidth:(NSInteger)expandedWidth
-     expandedHeight:(NSInteger)expandedHeight
-        resourceUrl:(NSString *)resourceUrl
-           clickUrl:(NSString *)clickUrl;
+- (instancetype)initWithWidth:(NSInteger)width
+                       height:(NSInteger)height
+                expandedWidth:(NSInteger)expandedWidth
+               expandedHeight:(NSInteger)expandedHeight
+                  resourceUrl:(NSString *)resourceUrl
+                     clickUrl:(NSString *)clickUrl;
 
-- (id)initWithNonLinear:(OOVASTNonLinear *)nonLinear;
+- (instancetype)initWithNonLinear:(OOVASTNonLinear *)nonLinear;
+
+- (NSDictionary *)dictionaryView;
 
 @end

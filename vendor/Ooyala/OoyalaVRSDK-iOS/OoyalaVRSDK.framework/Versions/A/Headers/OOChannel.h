@@ -23,9 +23,9 @@
   OOChannelSet *parent;
 }
 
-@property(readonly, nonatomic, strong) NSString *nextChildren; /**< @internal the next children token */
-@property(readonly, nonatomic, strong) OOOrderedDictionary *videos; /**< The OOChannel's videos (keyed by embed code) */
-@property(readonly, nonatomic, strong) OOChannelSet *parent; /**< This OOChannel's parent OOChannelSet if it exists */
+@property (readonly, nonatomic) NSString *nextChildren; /**< @internal the next children token */
+@property (readonly, nonatomic) OOOrderedDictionary *videos; /**< The OOChannel's videos (keyed by embed code) */
+@property (readonly, nonatomic) OOChannelSet *parent; /**< This OOChannel's parent OOChannelSet if it exists */
 
 /** @internal
  * Initialize a OOChannel using the specified data (subclasses should override and call this)

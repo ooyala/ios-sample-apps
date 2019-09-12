@@ -48,8 +48,7 @@
                                                           domain:[[OOPlayerDomain alloc] initWithString:self.playerDomain]
                                              embedTokenGenerator:self];
   
-  [self.player setEmbedCode:self.option.embedCode];
-  [self.player play];
+  [self.player setEmbedCode:self.option.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 - (void)tokenForEmbedCodes:(NSArray<NSString *> *)embedCodes

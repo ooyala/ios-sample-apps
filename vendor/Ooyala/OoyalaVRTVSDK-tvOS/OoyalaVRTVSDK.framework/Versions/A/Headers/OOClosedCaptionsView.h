@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @class OOCaption;
 @class OOClosedCaptionsStyle;
@@ -11,9 +11,11 @@
   OOCaption *caption;
   OOClosedCaptionsStyle *style;
 }
-+ (void) setArbitararyScalingFactor:(CGFloat)scalingFactor;
 
-@property (nonatomic, strong) OOCaption *caption;
++ (void)setArbitararyScalingFactor:(CGFloat)scalingFactor;
 
-@property (nonatomic, strong) OOClosedCaptionsStyle *style;
+@property (nonatomic) OOCaption *caption;
+
+@property (nonatomic) OOClosedCaptionsStyle *style;
+
 @end

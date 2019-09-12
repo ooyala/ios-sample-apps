@@ -4,18 +4,13 @@
  @copyright Copyright © 2017 Ooyala, Inc. All rights reserved.
  */
 
-#import <SceneKit/SceneKit.h>
-#import <UIKit/UIKit.h>
-#import "OOEmbedTokenGenerator.h"
+@import UIKit;
 
-@class OOOoyalaAPIClient;
-@class OOControlsViewController;
-@class OOPlayerDomain;
-@class OOClosedCaptionsStyle;
-@protocol OOMotionManagement;
-@class OOCameraPanGestureRecognizer;
-@class OOOoyalaPlayerViewController;
+#import "OOOoyalaPlayerControllerDelegate.h"
+
 @class OOOoyalaPlayer;
+@class OOControlsViewController;
+@class OOClosedCaptionsStyle;
 
 typedef NS_ENUM(NSInteger, OOOoyalaTVPlayerControlType) {
   /** an inline player, expandable to fullscreen */
@@ -29,42 +24,29 @@ typedef NS_ENUM(NSInteger, OOOoyalaTVPlayerControlType) {
  * Main ViewController class for Ooyala player.
  * Implements a default skin as well as convenience methods for accesssing and initializing underlying OOOoyalaPlayer.
  */
-@interface OOOoyalaSimpleTVPlayerViewController : UIViewController
+@interface OOOoyalaSimpleTVPlayerViewController : UIViewController <OOOoyalaPlayerControllerDelegate>
 
 @property (nonatomic, readonly) OOOoyalaTVPlayerControlType initialControlType; // initial state
-@property (nonatomic, strong) OOOoyalaPlayer *player;
+@property (nonatomic) OOOoyalaPlayer *player;
+@property (nonatomic, getter=isFullscreen) BOOL fullscreen;
+@property (nonatomic) UIView *inlineOverlay;
+@property (nonatomic) UIView *fullscreenOverlay;
 
-@property (nonatomic, strong) UIView *inlineOverlay;
-@property (nonatomic, strong) UIView *fullscreenOverlay;
-
-@property(nonatomic, strong) OOClosedCaptionsStyle *closedCaptionsStyle; /**< The OOClosedCaptionsStyle to use when displaying closed captions */
-
-
-/**
- * Get the fullscreen state
- * @return true if in fullscreen mode, false if not
- */
-- (BOOL)isFullscreen;
-
-/**
- * Set the fullscreen state
- * @param fullscreen whether the view should be fullscreened
- */
-- (void)setFullscreen:(BOOL)fullscreen;
+@property (nonatomic) OOClosedCaptionsStyle *closedCaptionsStyle; /**< The OOClosedCaptionsStyle to use when displaying closed captions */
 
 /**
  * Initialize the UI with an existing OOOoyalaPlayer object
  * @param player Reference to OOOoyalaPlayer object
  */
-- (id)initWithPlayer:(OOOoyalaPlayer *)player;
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player;
 
 /**
  * Initialize the UI with an existing OOOoyalaPlayer object and control type
  * @param player Reference to OOOoyalaPlayer object
  * @param controlType Selects inline or fullscreen only UI mode
  */
-- (id)initWithPlayer:(OOOoyalaPlayer *)player
-         controlType:(OOOoyalaTVPlayerControlType)controlType;
+- (instancetype)initWithPlayer:(OOOoyalaPlayer *)player
+                   controlType:(OOOoyalaTVPlayerControlType)controlType;
 
 /**
  * Returns a dictionary of localization dictionaries. The keys are strings of locale codes.  the values are dictionaries of localized strings
@@ -97,17 +79,17 @@ typedef NS_ENUM(NSInteger, OOOoyalaTVPlayerControlType) {
 /**
  * Returns a dictionary of language according to the given language string
  */
-+ (NSDictionary*)getLanguageSettings:(NSString *)language;
++ (NSDictionary *)getLanguageSettings:(NSString *)language;
 
 /**
  * Returns a dictionary of current language
  */
-+ (NSDictionary*)currentLanguageSettings;
++ (NSDictionary *)currentLanguageSettings;
 
 /**
  * Returns the currently active controls
  */
-- (OOControlsViewController *)getControls;
+- (OOControlsViewController *)controlsViewController;
 
 /**
  * Shows controls on the current player
@@ -123,13 +105,13 @@ typedef NS_ENUM(NSInteger, OOOoyalaTVPlayerControlType) {
  * Sets visibility of full-screen button on inline player
  * @param showing True to show fullscreen button, false otherwise
  */
-- (void)setFullScreenButtonShowing: (BOOL) showing;
+- (void)setFullScreenButtonShowing:(BOOL)showing;
 
 /**
  * Sets visibility of volume button on inline player
  * @param showing True to show fullscreen button, false otherwise
  */
-- (void)setVolumeButtonShowing: (BOOL) showing;
+- (void)setVolumeButtonShowing:(BOOL)showing;
 
 /**
  * Sets the ViewController used to display controls in fullscreen mode
@@ -142,11 +124,5 @@ typedef NS_ENUM(NSInteger, OOOoyalaTVPlayerControlType) {
  */
 - (void)setInlineViewController:(OOControlsViewController *)controller;
 
-/**
- * update closed caption view position
- * @param bottomControlsRect the bottom controls rect
- * @param hidden YES if the bottom control is hidden, NO if it is not hidden
- */
-- (void)updateClosedCaptionsViewPosition:(CGRect)bottomControlsRect withControlsHide:(BOOL)hidden;
 
 @end

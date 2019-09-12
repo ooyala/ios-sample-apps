@@ -5,16 +5,14 @@
 //  Copyright © 2017 Ooyala, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "OOProgressSliderView.h"
-#import "OOPlayPauseButton.h"
-#import "OOFullscreenButton.h"
-#import "OOVolumeButton.h"
-#import "OOAirPlayButton.h"
-#import "OOClosedCaptionsButton.h"
-#import "OOProgressSliderView.h"
-#import "OOPiPButton.h"
+@import UIKit;
 
+@class OOPlayPauseButton;
+@class OOFullscreenButton;
+@class OOAirPlayButton;
+@class OOClosedCaptionsButton;
+@class OOProgressSliderView;
+@class OOPiPButton;
 
 @interface OOInlineControlsBottomBar : UIView
 
@@ -27,7 +25,7 @@
 @property (nonatomic) OOProgressSliderView *timeSlider;
 @property (nonatomic) OOPiPButton *pipButton;
 
-@property (nonatomic) BOOL isPlayingStatus;
+@property (nonatomic) BOOL isPlaying;
 @property (nonatomic) BOOL fullscreenButtonShowing;
 @property (nonatomic) BOOL airPlayButtonShowing;
 @property (nonatomic) BOOL gravityFillButtonShowing;

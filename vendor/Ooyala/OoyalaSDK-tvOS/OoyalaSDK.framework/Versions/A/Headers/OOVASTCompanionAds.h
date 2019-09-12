@@ -1,10 +1,9 @@
-#import <Foundation/Foundation.h>
 #import "OOTBXML.h"
 
-typedef NS_ENUM(NSInteger, RequiredType) {
-  RequiredTypeAll,
-  RequiredTypeAny,
-  RequiredTypeNone
+typedef NS_ENUM(NSInteger, OORequiredType) {
+  OORequiredTypeAll,
+  OORequiredTypeAny,
+  OORequiredTypeNone
 };
   
 /**
@@ -13,9 +12,9 @@ typedef NS_ENUM(NSInteger, RequiredType) {
  */
 @interface OOVASTCompanionAds : NSObject
 
-- (id)initWithElement:(OOTBXMLElement *)element;
+- (instancetype)initWithElement:(OOTBXMLElement *)element;
 
-@property (readonly, nonatomic) RequiredType required;
-@property (readonly, nonatomic, strong) NSMutableArray *companions;
+@property (readonly, nonatomic) OORequiredType required;
+@property (readonly, nonatomic) NSMutableArray *companions;
 
 @end

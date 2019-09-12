@@ -27,100 +27,86 @@
 //  THE SOFTWARE.
 // ================================================================================================
 
-
-// ================================================================================================
-//  Defines
-// ================================================================================================
-#define OO_TBXML_MAX_ELEMENTS 100
-#define OO_TBXML_MAX_ATTRIBUTES 100
-
-#define OO_TBXML_ATTRIBUTE_NAME_START 0
-#define OO_TBXML_ATTRIBUTE_NAME_END 1
-#define OO_TBXML_ATTRIBUTE_VALUE_START 2
-#define OO_TBXML_ATTRIBUTE_VALUE_END 3
-#define OO_TBXML_ATTRIBUTE_CDATA_END 4
-#import <Foundation/Foundation.h>
-
+@import Foundation;
 
 // ================================================================================================
 //  Structures
 // ================================================================================================
 typedef struct _OOTBXMLAttribute {
-	char * name;
-	char * value;
-	struct _OOTBXMLAttribute * next;
+	char *name;
+	char *value;
+	struct _OOTBXMLAttribute *next;
 } OOTBXMLAttribute;
 
 typedef struct _OOTBXMLElement {
-	char * name;
-	char * text;
+	char *name;
+	char *text;
 	
-	OOTBXMLAttribute * firstAttribute;
+	OOTBXMLAttribute *firstAttribute;
 	
-	struct _OOTBXMLElement * parentElement;
+	struct _OOTBXMLElement *parentElement;
 	
-	struct _OOTBXMLElement * firstChild;
-	struct _OOTBXMLElement * currentChild;
+	struct _OOTBXMLElement *firstChild;
+	struct _OOTBXMLElement *currentChild;
 	
-	struct _OOTBXMLElement * nextSibling;
-	struct _OOTBXMLElement * previousSibling;
+	struct _OOTBXMLElement *nextSibling;
+	struct _OOTBXMLElement *previousSibling;
 	
 } OOTBXMLElement;
 
 typedef struct _OOTBXMLElementBuffer {
-	OOTBXMLElement * elements;
-	struct _OOTBXMLElementBuffer * next;
-	struct _OOTBXMLElementBuffer * previous;
+	OOTBXMLElement *elements;
+	struct _OOTBXMLElementBuffer *next;
+	struct _OOTBXMLElementBuffer *previous;
 } OOTBXMLElementBuffer;
 
 typedef struct _OOTBXMLAttributeBuffer {
-	OOTBXMLAttribute * attributes;
-	struct _OOTBXMLAttributeBuffer * next;
-	struct _OOTBXMLAttributeBuffer * previous;
+	OOTBXMLAttribute *attributes;
+	struct _OOTBXMLAttributeBuffer *next;
+	struct _OOTBXMLAttributeBuffer *previous;
 } OOTBXMLAttributeBuffer;
 
 // ================================================================================================
 //  TBXML Public Interface
 // ================================================================================================
 @interface OOTBXML : NSObject {
-	
 @private
-	OOTBXMLElement * rootXMLElement;
+	OOTBXMLElement *rootXMLElement;
 	
-	OOTBXMLElementBuffer * currentElementBuffer;
-	OOTBXMLAttributeBuffer * currentAttributeBuffer;
+	OOTBXMLElementBuffer *currentElementBuffer;
+	OOTBXMLAttributeBuffer *currentAttributeBuffer;
 	
 	long currentElement;
 	long currentAttribute;
 	
-	char * bytes;
+	char *bytes;
 	long bytesLength;
-  NSArray * ignoredTags;
+  NSArray *ignoredTags;
 }
 
-@property (nonatomic, readonly) OOTBXMLElement * rootXMLElement;
+@property (nonatomic, readonly) OOTBXMLElement *rootXMLElement;
 
-+ (id)tbxmlWithURL:(NSURL*)aURL;
-+ (id)tbxmlWithURL:(NSURL*)aURL ignoredTags:(NSArray *)theIgnoredTags;
-+ (id)tbxmlWithXMLString:(NSString*)aXMLString;
-+ (id)tbxmlWithXMLString:(NSString*)aXMLString ignoredTags:(NSArray *)theIgnoredTags;
-+ (id)tbxmlWithXMLData:(NSData*)aData;
-+ (id)tbxmlWithXMLData:(NSData*)aData ignoredTags:(NSArray *)theIgnoredTags;
-+ (id)tbxmlWithXMLFile:(NSString*)aXMLFile;
-+ (id)tbxmlWithXMLFile:(NSString*)aXMLFile ignoredTags:(NSArray *)theIgnoredTags;
-+ (id)tbxmlWithXMLFile:(NSString*)aXMLFile fileExtension:(NSString*)aFileExtension;
-+ (id)tbxmlWithXMLFile:(NSString*)aXMLFile fileExtension:(NSString*)aFileExtension ignoredTags:(NSArray *)theIgnoredTags;
++ (instancetype)tbxmlWithURL:(NSURL *)aURL;
++ (instancetype)tbxmlWithURL:(NSURL *)aURL ignoredTags:(NSArray *)theIgnoredTags;
++ (instancetype)tbxmlWithXMLString:(NSString *)aXMLString;
++ (instancetype)tbxmlWithXMLString:(NSString *)aXMLString ignoredTags:(NSArray *)theIgnoredTags;
++ (instancetype)tbxmlWithXMLData:(NSData *)aData;
++ (instancetype)tbxmlWithXMLData:(NSData *)aData ignoredTags:(NSArray *)theIgnoredTags;
++ (instancetype)tbxmlWithXMLFile:(NSString *)aXMLFile;
++ (instancetype)tbxmlWithXMLFile:(NSString *)aXMLFile ignoredTags:(NSArray *)theIgnoredTags;
++ (instancetype)tbxmlWithXMLFile:(NSString *)aXMLFile fileExtension:(NSString *)aFileExtension;
++ (instancetype)tbxmlWithXMLFile:(NSString *)aXMLFile fileExtension:(NSString *)aFileExtension ignoredTags:(NSArray *)theIgnoredTags;
 
-- (id)initWithURL:(NSURL*)aURL;
-- (id)initWithURL:(NSURL*)aURL ignoredTags:(NSArray *)theIgnoredTags;
-- (id)initWithXMLString:(NSString*)aXMLString;
-- (id)initWithXMLString:(NSString*)aXMLString ignoredTags:(NSArray *)theIgnoredTags;
-- (id)initWithXMLData:(NSData*)aData;
-- (id)initWithXMLData:(NSData*)aData ignoredTags:(NSArray *)theIgnoredTags;
-- (id)initWithXMLFile:(NSString*)aXMLFile;
-- (id)initWithXMLFile:(NSString*)aXMLFile ignoredTags:(NSArray *)theIgnoredTags;
-- (id)initWithXMLFile:(NSString*)aXMLFile fileExtension:(NSString*)aFileExtension;
-- (id)initWithXMLFile:(NSString*)aXMLFile fileExtension:(NSString*)aFileExtension ignoredTags:(NSArray *)theIgnoredTags;
+- (instancetype)initWithURL:(NSURL *)aURL;
+- (instancetype)initWithURL:(NSURL *)aURL ignoredTags:(NSArray *)theIgnoredTags;
+- (instancetype)initWithXMLString:(NSString *)aXMLString;
+- (instancetype)initWithXMLString:(NSString *)aXMLString ignoredTags:(NSArray *)theIgnoredTags;
+- (instancetype)initWithXMLData:(NSData *)aData;
+- (instancetype)initWithXMLData:(NSData *)aData ignoredTags:(NSArray *)theIgnoredTags;
+- (instancetype)initWithXMLFile:(NSString *)aXMLFile;
+- (instancetype)initWithXMLFile:(NSString *)aXMLFile ignoredTags:(NSArray *)theIgnoredTags;
+- (instancetype)initWithXMLFile:(NSString *)aXMLFile fileExtension:(NSString *)aFileExtension;
+- (instancetype)initWithXMLFile:(NSString *)aXMLFile fileExtension:(NSString *)aFileExtension ignoredTags:(NSArray *)theIgnoredTags;
 
 @end
 
@@ -130,14 +116,14 @@ typedef struct _OOTBXMLAttributeBuffer {
 
 @interface OOTBXML (StaticFunctions)
 
-+ (NSString*) elementName:(OOTBXMLElement*)aXMLElement;
-+ (NSString*) textForElement:(OOTBXMLElement*)aXMLElement;
-+ (NSString*) valueOfAttributeNamed:(NSString *)aName forElement:(OOTBXMLElement*)aXMLElement;
++ (NSString *)elementName:(OOTBXMLElement *)aXMLElement;
++ (NSString *)textForElement:(OOTBXMLElement *)aXMLElement;
++ (NSString *)valueOfAttributeNamed:(NSString *)aName forElement:(OOTBXMLElement *)aXMLElement;
 
-+ (NSString*) attributeName:(OOTBXMLAttribute*)aXMLAttribute;
-+ (NSString*) attributeValue:(OOTBXMLAttribute*)aXMLAttribute;
++ (NSString *)attributeName:(OOTBXMLAttribute *)aXMLAttribute;
++ (NSString *)attributeValue:(OOTBXMLAttribute *)aXMLAttribute;
 
-+ (OOTBXMLElement*) nextSiblingNamed:(NSString*)aName searchFromElement:(OOTBXMLElement*)aXMLElement;
-+ (OOTBXMLElement*) childElementNamed:(NSString*)aName parentElement:(OOTBXMLElement*)aParentXMLElement;
++ (OOTBXMLElement *)nextSiblingNamed:(NSString *)aName searchFromElement:(OOTBXMLElement *)aXMLElement;
++ (OOTBXMLElement *)childElementNamed:(NSString *)aName parentElement:(OOTBXMLElement *)aParentXMLElement;
 
 @end

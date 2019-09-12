@@ -14,6 +14,8 @@
 #import "OOOoyalaPlayerDelegate.h"
 #import "OOTimeSliderDelegate.h"
 
+@protocol OOOoyalaPlayerControllerDelegate;
+
 @class OOOoyalaPlayer;
 
 static const double CONTROLS_HIDE_TIMEOUT = 5.37;
@@ -22,9 +24,10 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
   @protected
   BOOL seeking;
   BOOL inAdMode;
+  BOOL controlsDisabled;
 }
 
-@property (nonatomic, weak) id delegate;
+@property (nonatomic, weak) id<OOOoyalaPlayerControllerDelegate> delegate;
 @property (nonatomic, weak) OOOoyalaPlayer *player;
 @property (nonatomic, weak) UIView *overlay;
 @property (nonatomic) UIActivityIndicatorView *activityView;
@@ -32,20 +35,23 @@ static const double CONTROLS_HIDE_TIMEOUT = 5.37;
 @property (nonatomic) BOOL isVisible;
 @property (nonatomic) NSTimer *hideControlsTimer;
 @property (nonatomic) BOOL autohideControls;
+@property (nonatomic) OOOoyalaPlayerState lastEnumState;
 
 - (instancetype)initWithControlsType:(OOOoyalaPlayerControlType)controlsType
                               player:(OOOoyalaPlayer *)player
                              overlay:(UIView *)overlay
-                            delegate:(id)theDelegate;
+                            delegate:(id<OOOoyalaPlayerControllerDelegate>)theDelegate;
 
 - (void)showControls;
 - (void)hideControls;
+- (void)disableControls;
+- (void)enableControls;
 - (void)syncUIWithState:(OOOoyalaPlayerState)state;
 
-//Hide and show the full screen button on the inline view
+// Hide and show the full screen button on the inline view
 - (void)setFullScreenButtonShowing:(BOOL)isShowing;
 
-//Hide and show the volume button on the inline view
+// Hide and show the volume button on the inline view
 - (void)setVolumeButtonShowing:(BOOL)isShowing;
 
 - (OOUIProgressSliderMode)sliderMode;

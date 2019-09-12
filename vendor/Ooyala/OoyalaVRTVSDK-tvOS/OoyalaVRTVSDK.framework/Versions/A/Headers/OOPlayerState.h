@@ -63,7 +63,13 @@ typedef NS_ENUM(NSInteger, OOOoyalaPlayerDesiredState) {
  * @return an external facing DesiredState string
  */
 + (NSString *)playerDesiredStateToString:(OOOoyalaPlayerDesiredState)desiredState;
-@end
 
+/**
+ * Defines what state from enum OOOoyalaPlayerState is last.
+ * @return last state in enum
+ */
++ (OOOoyalaPlayerState)lastEnumMember;
+
+@end
 
 #endif /* OOPlayerState_h */

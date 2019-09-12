@@ -68,7 +68,6 @@
   appDel = (AppDelegate *)UIApplication.sharedApplication.delegate;
 
   OOOptions *options = [OOOptions new];
-  options.enablePictureInPictureSupport = YES;
   options.backgroundMode = OOBackgroundPlaybackModeDisabled;
   if (self.isAudioOnlyAsset) {
     options.playerInfo = [OODefaultAudioOnlyPlayerInfo new];
@@ -97,14 +96,10 @@
   [self addPlayerViewController:self.ooyalaPlayerViewController];
   
   // Load the video
-  //Deprecated API. Remove this calls when SDK version become more then 4.46.0_GA. Uncomment code with Asynchronous method instead.
-  //[self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  //[self.ooyalaPlayerViewController.player play];
-  
-  //new API. Uncomment when SDK version become more then 4.46.0_GA
-  
   __weak typeof(self) weakSelf = self;
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode shouldAutoPlay:YES withCallback:^(OOOoyalaError *error) {
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode
+                                        shouldAutoPlay:YES
+                                          withCallback:^(OOOoyalaError *error) {
     //just for debug purpose and demonstration that caalback can be usefull, remove if you don't need
     LOG(@"✅ got callback. embed: %@, is success: %@. But it doesn't mean that status is 'AVPlayerItemStatusReadyToPlay'", weakSelf.ooyalaPlayerViewController.player.currentItem.embedCode, (error == nil) ? @"YES" : @"NO");
   }];
@@ -152,11 +147,6 @@
   }
   
   appDel.count++;
-}
-
-
-- (void)callbackListener {
-  
 }
 
 @end

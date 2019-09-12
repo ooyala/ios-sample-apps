@@ -91,7 +91,7 @@ AppDelegate *appDel;
   // In QA Mode , making textView visible
   self.logTextView.hidden = !self.qaModeEnabled;
   
-  [ooyalaPlayer setEmbedCode:self.embedCode];
+  [ooyalaPlayer setEmbedCode:self.embedCode shouldAutoPlay:NO withCallback:nil];
 }
 
 - (void)dealloc {

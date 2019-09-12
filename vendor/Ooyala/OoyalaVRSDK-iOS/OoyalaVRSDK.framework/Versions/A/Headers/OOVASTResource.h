@@ -1,10 +1,10 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
-typedef NS_ENUM(NSInteger, Type) {
-  TypeNone,
-  TypeStatic,
-  TypeIFrame,
-  TypeHTML
+typedef NS_ENUM(NSInteger, OOResourceType) {
+  OOResourceTypeNone,
+  OOResourceTypeStatic,
+  OOResourceTypeIFrame,
+  OOResourceTypeHTML
 };
 
 /**
@@ -13,11 +13,14 @@ typedef NS_ENUM(NSInteger, Type) {
  */
 @interface OOVASTResource : NSObject
 
-@property (readonly, nonatomic) Type type;
-@property (readonly, nonatomic, strong) NSString *uri;
-@property (readonly, nonatomic, strong) NSString *mimeType;
+@property (readonly, nonatomic) OOResourceType type;
+@property (readonly, nonatomic) NSString *uri;
+@property (readonly, nonatomic) NSString *mimeType;
 
-- (id)initWithType:(Type)type mimeType:(NSString *)mimeType uri:(NSString *)uri;
-- (NSString *)typeToStr:(Type)type;
+- (instancetype)initWithType:(OOResourceType)type
+                    mimeType:(NSString *)mimeType
+                         uri:(NSString *)uri;
+
+- (NSString *)typeToStr:(OOResourceType)type;
 
 @end

@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 extern float const OO_MINIMUM_SUPPORTED_VAST_VERSION;         /**< The minimum supported VAST version */
 extern float const OO_MAXIMUM_SUPPORTED_VAST_VERSION;         /**< The maximum supported VAST version */
@@ -110,6 +110,8 @@ extern NSString *const OO_ATTRIBUTE_TEMPLATE_TYPE;            /**< The XML attri
 extern NSString *const OO_MIME_TYPE_MP4;                      /**< The MIME type for .mp4 files */
 extern NSString *const OO_MIME_TYPE_M3U8;                     /**< The MIME type for .m3u8 files */
 
+extern NSString *const OO_TAG_CREATE_VIEW;
+extern NSString *const OO_TAG_UNDEFINED_QUARTILE;
 extern NSString *const OO_TAG_START;                          /**< The tag for start event */
 extern NSString *const OO_TAG_FIRST_QUARTILE;                 /**< The tag for first quartile event */
 extern NSString *const OO_TAG_MIDPOINT;                       /**< The tag for midpoint event */
@@ -127,15 +129,15 @@ extern NSString *const OO_TAG_CLOSE_LINEAR;                   /**< The tag for c
 extern NSString *const OO_TAG_CLICK_THROUGH;                  /**< The tag for click through event */
 
 typedef NS_ENUM(NSInteger, OOVastError) {
-  OOVastErrorXmlParse = 100,                      /**< The code of XML parsing error */
-  OOVastErrorVastSchema = 101,                    /**< The code of VAST schema validation error */
-  OOVastErrorVastVersion = 102,                   /**< The code of VAST version of response not supported error */
-  OOVastErrorGeneralWrapper = 300,                /**< The code of General Wrapper error */
-  OOVastErrorWrapperLimit = 302,                  /**< The code of Wrapper limit reached error */
-  OOVastErrorVastResponseWrapper = 303,           /**< The code of No ads VAST response after Wrappers error */
-  OOVastErrorGeneralLinear = 400,                 /**< The code of General linear error */
-  OOVastErrorLinearFileNotFound = 401,
-  OOVastErrorLinearTimeoutMediafile = 402,
+  OOVastErrorXmlParse                     = 100,  /**< The code of XML parsing error */
+  OOVastErrorVastSchema                   = 101,  /**< The code of VAST schema validation error */
+  OOVastErrorVastVersion                  = 102,  /**< The code of VAST version of response not supported error */
+  OOVastErrorGeneralWrapper               = 300,  /**< The code of General Wrapper error */
+  OOVastErrorWrapperLimit                 = 302,  /**< The code of Wrapper limit reached error */
+  OOVastErrorVastResponseWrapper          = 303,  /**< The code of No ads VAST response after Wrappers error */
+  OOVastErrorGeneralLinear                = 400,  /**< The code of General linear error */
+  OOVastErrorLinearFileNotFound           = 401,
+  OOVastErrorLinearTimeoutMediafile       = 402,
   OOVastErrorLinearSupportedMediaNotFound = 403,
-  OOVastErrorGeneralNonlinearAds = 500            /**< The code of General NonLinear ads error */
+  OOVastErrorGeneralNonlinearAds          = 500   /**< The code of General NonLinear ads error */
 };

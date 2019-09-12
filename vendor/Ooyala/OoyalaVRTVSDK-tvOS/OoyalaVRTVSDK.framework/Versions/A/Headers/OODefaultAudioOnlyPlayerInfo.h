@@ -11,9 +11,6 @@
 
 #import "OODefaultPlayerInfo.h"
 
-#define OO_AUDIO_HLS @"audio_hls"
-#define OO_AUDIO_M4A @"audio_m4a"
-
 /**
  This is the default implementation of OOPlayerInfo for audio_only assets.
  OOPlayerInfo is used for providing information for Authorization.
