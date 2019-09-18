@@ -56,7 +56,7 @@
  Note the timeout is applied to every authorization request that happens in the background, so you might wait longer than specified if something is going wrong.
  Default: 10.0
  */
-@property (nonatomic) Float32 timeout;
+@property (nonatomic) NSTimeInterval timeout;
 
 /**
  The lowest media bitrate greater than or equal to this value will be selected.

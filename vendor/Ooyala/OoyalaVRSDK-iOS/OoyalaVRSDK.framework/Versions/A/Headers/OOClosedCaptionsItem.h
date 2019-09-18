@@ -8,12 +8,14 @@
 
 @import Foundation;
 
+@class OOContentTreeVttCaption;
+
 @interface OOClosedCaptionsItem : NSObject
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *url;
 
 - (instancetype)init __attribute__((unavailable("use initWithDictionary")));
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithContentTreeVttCaption:(OOContentTreeVttCaption *)vttCaption;
 
 @end

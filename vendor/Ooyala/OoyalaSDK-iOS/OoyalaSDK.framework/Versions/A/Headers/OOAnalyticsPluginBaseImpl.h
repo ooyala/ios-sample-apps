@@ -9,8 +9,6 @@
  @copyright Copyright (c) 2016 Ooyala, Inc. All rights reserved.
  */
 
-@import Foundation;
-
 #import "OOAnalyticsPluginProtocol.h"
 
 @interface OOAnalyticsPluginBaseImpl : NSObject <OOAnalyticsPluginProtocol>

@@ -124,5 +124,4 @@ typedef NS_ENUM(NSInteger, OOOoyalaTVPlayerControlType) {
  */
 - (void)setInlineViewController:(OOControlsViewController *)controller;
 
-
 @end

@@ -8,17 +8,23 @@
 
 @import Foundation;
 
-#import "OOAuthorizableItem.h"
+#import "OOAuthCode.h"
+#import "OOEnums.h"
 
 @class OOPlayerAPIClient;
 @class OOVideo;
 @class OOFCCTVRating;
 @class SsaiMetadata;
+@class OOContentTree;
+@class OOAuthorization;
+@class OOMetadata;
+@class OOMetadataIMAAd;
+@class OOMarker;
 
 /**
  * A single playable content item, such as video
  */
-@interface OOContentItem : NSObject <OOAuthorizableItem> {
+@interface OOContentItem : NSObject {
 @protected
   NSString *embedCode;
   NSString *externalId;
@@ -34,29 +40,28 @@
   NSString *contentType;
 }
 
-@property (readonly, nonatomic) NSString *embedCode;    /**< The OOContentItem's Embed Code */
-@property (readonly, nonatomic) NSString *externalId;   /**< The OOContentItem's External ID if it exists */
-@property (readonly, nonatomic) NSString *title;        /**< The OOContentItem's Title */
+@property (readonly, nonatomic) NSString *embedCode;        /**< The OOContentItem's Embed Code */
+@property (readonly, nonatomic) NSString *externalId;       /**< The OOContentItem's External ID if it exists */
+@property (readonly, nonatomic) NSString *title;            /**< The OOContentItem's Title */
 @property (readonly, nonatomic) NSString *itemDescription;  /**< The OOContentItem's Description */
-@property (readonly, nonatomic) NSString *promoImageURL;  /**< The OOContentItem's Promo Image URL */
-@property (readonly, nonatomic) NSString *hostedAtURL;    /**< The OOContentItem's Hosted At URL */
-@property (readonly, nonatomic) NSString *markersURL;     /**< The OOContentItem's Chapter Markers URL */
-@property (readonly, nonatomic) NSArray *markerList;     /**< The OOContentItem's Chapter Markers */
-@property (readonly, nonatomic) OOPlayerAPIClient *api;   /**< @internal The API that was used to fetch the OOContentItem */
-@property (readonly, nonatomic) BOOL authorized;                /**< Whether or not this OOContentItem is authorized */
-@property (readonly, nonatomic) OOAuthCode authCode;              /**< The response code from the authorize call */
-@property (readonly, nonatomic) NSDictionary *metadata;
+@property (readonly, nonatomic) NSString *promoImageURL;    /**< The OOContentItem's Promo Image URL */
+@property (readonly, nonatomic) NSString *hostedAtURL;      /**< The OOContentItem's Hosted At URL */
+@property (readonly, nonatomic) NSString *markersURL;       /**< The OOContentItem's Chapter Markers URL */
+@property (readonly, nonatomic) NSArray<OOMarker *> *markerList;   /**< The OOContentItem's Chapter Markers */
+@property (readonly, nonatomic) OOPlayerAPIClient *api;     /**< @internal The API that was used to fetch the OOContentItem */
+@property (readonly, nonatomic) BOOL authorized;            /**< Whether or not this OOContentItem is authorized */
+@property (readonly, nonatomic) OOAuthCode authCode;        /**< The response code from the authorize call */
+
 @property (readonly, nonatomic) NSDictionary *moduleData;
 @property (nonatomic) BOOL heartbeatRequired;
 @property (readonly, nonatomic) OOFCCTVRating *tvRating;
-@property (readonly, nonatomic) NSString *assetPcode;  /**< The OOContentItem's Promo Image URL */
-@property (readonly, nonatomic) NSDictionary *movieAttributes;
+@property (readonly, nonatomic) NSString *assetPcode;       /**< The OOContentItem's Promo Image URL */
 @property (readonly, nonatomic) BOOL haEnabled;
 @property (readonly, nonatomic) BOOL needsMidStreamCheck;
 @property (readonly, nonatomic) int midStreamCheckInterval;
 @property (readonly, nonatomic) SsaiMetadata *ssaiMetadata;
 @property (readonly, nonatomic) NSString *contentType;
-@property (readonly, nonatomic) NSMutableArray *externalAds;
+@property (readonly, nonatomic) NSArray<OOMetadataIMAAd *> *externalAds;
 
 /**
  * Initialize a OOContentItem
@@ -71,21 +76,33 @@
 
 /** @internal
  * Initialize a OOContentItem using the specified data (subclasses should override this)
- * @param data the NSDictionary containing the data to use to initialize this OOContentItem
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCode the embed code to fetch from the dictionary
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOContentItem
  * @return the initialized OOContentItem
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                         embedCode:(NSString *)theEmbedCode
-                               api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                          embedCode:(NSString *)theEmbedCode
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
- * Update the OOContentItem using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOContentItem
+ * Update the @c OOContentItem using the content_tree data (subclasses should override and call this)
+ * @param contentTree the @c OOContentTree containing the data from content_tree request
  * @return a OOReturnState based on if the data matched or not (or parsing failed)
  */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+- (OOReturnState)updateWithContentTree:(OOContentTree *)contentTree;
+/** @internal
+ * Update the @c OOContentItem using the authorization data (subclasses should override and call this)
+ * @param authorization the @c OOAuthorization containing the data from authorization request
+ * @return a OOReturnState based on if the data matched or not (or parsing failed)
+ */
+- (OOReturnState)updateWithAuthorization:(OOAuthorization *)authorization;
+/** @internal
+ * Update the @c OOContentItem using the metadata data (subclasses should override and call this)
+ * @param metadata the @c OOMetadata containing the data from metadata request
+ * @return a OOReturnState based on if the data matched or not (or parsing failed)
+ */
+- (OOReturnState)updateWithMetadata:(OOMetadata *)metadata;
 
 /**
  * Get the promo image URL for this content item that will be at least the specified dimensions
@@ -118,25 +135,25 @@
 
 /** @internal
  * Create a OOContentItem from the given data
- * @param data the data to create the OOContentItem with
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param embedCode the embed code to fetch from the dictionary
  * @param api the OOPlayerAPIClient that was used to fetch this OOContentItem
  * @return the created OOContentItem (could be a Movie, OOChannel, or OOChannelSet)
  */
-+ (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data
-                                   embedCode:(NSString *)embedCode
-                                         api:(OOPlayerAPIClient *)api;
++ (OOContentItem *)contentItemFromContentTree:(OOContentTree *)contentTree
+                                    embedCode:(NSString *)embedCode
+                                          api:(OOPlayerAPIClient *)api;
 
 /** @internal
  * Create a OOContentItem from the given data
- * @param data the data to create the OOContentItem with
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param embedCodes the embed codes to fetch from the dictionary
  * @param api the OOPlayerAPIClient that was used to fetch this OOContentItem
  * @return the created OOContentItem (could be a Movie, OOChannel, OODynamicChannel, or OOChannelSet)
  */
-+ (OOContentItem *)contentItemFromDictionary:(NSDictionary *)data
-                                  embedCodes:(NSArray *)embedCodes
-                                         api:(OOPlayerAPIClient *)api;
++ (OOContentItem *)contentItemFromContentTree:(OOContentTree *)contentTree
+                                   embedCodes:(NSArray *)embedCodes
+                                          api:(OOPlayerAPIClient *)api;
 
 /**
  * The total duration (not including Ads) of this OOContentItem

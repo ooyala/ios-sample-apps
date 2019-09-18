@@ -9,8 +9,6 @@
 #ifndef OOAnalyticsAdEventsReportingProtocol_h
 #define OOAnalyticsAdEventsReportingProtocol_h
 
-@import Foundation;
-
 #import "OOOoyalaPlayer+Ads.h"
 
 @protocol OOAnalyticsAdEventsReportingProtocol

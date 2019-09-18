@@ -62,13 +62,6 @@ extern NSString *const ooErrorTextHeartbeatNil;
 extern NSString *const ooErrorTextHeartbeatInvalid;
 extern NSString *const ooErrorTextHeartbeatException;
 
-extern NSString *const ooErrorTextAuthorizationNil;
-extern NSString *const ooErrorTextAuthorizationInvalid;
-extern NSString *const ooErrorTextAuthorizationDoesNotExist;
-extern NSString *const ooErrorTextAuthorizationException;
-extern NSString *const ooErrorTextAuthorizationNoDownloadableStreams;
-extern NSString *const ooErrorTextAuthorizationUnsupportedDRM;
-
 extern NSString *const ooErrorTextContentTreeNil;
 extern NSString *const ooErrorTextContentTreeInvalid;
 extern NSString *const ooErrorTextContentTreeInvalidNoKey;
@@ -77,6 +70,13 @@ extern NSString *const ooErrorTextContentTreeException;
 extern NSString *const ooErrorTextContentTreeNoValuesForAllExtIds;
 extern NSString *const ooErrorTextContentTreeNoToken;
 extern NSString *const ooErrorTextContentTreeNoAdditionalChildren;
+
+extern NSString *const ooErrorTextAuthorizationNil;
+extern NSString *const ooErrorTextAuthorizationInvalid;
+extern NSString *const ooErrorTextAuthorizationDoesNotExist;
+extern NSString *const ooErrorTextAuthorizationException;
+extern NSString *const ooErrorTextAuthorizationNoDownloadableStreams;
+extern NSString *const ooErrorTextAuthorizationUnsupportedDRM;
 
 extern NSString *const ooErrorTextMetadataFailed;
 extern NSString *const ooErrorTextMetadataInvalid;

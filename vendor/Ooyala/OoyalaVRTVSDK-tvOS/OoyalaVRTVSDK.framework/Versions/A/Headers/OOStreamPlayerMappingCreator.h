@@ -4,7 +4,6 @@
 
 @import Foundation;
 
-@class OOOoyalaPlayer;
 @class OOStreamPlayer;
 
 @protocol OOStreamPlayerMappingCreator <NSObject>

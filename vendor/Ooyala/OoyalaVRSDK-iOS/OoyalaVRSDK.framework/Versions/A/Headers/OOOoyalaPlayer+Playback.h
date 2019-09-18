@@ -23,6 +23,11 @@
 @property (readonly, nonatomic, getter=isAudioOnly) BOOL audioOnly;
 
 /**
+ Adds observer for seekCompleted
+ */
+- (void)addSeekCompletedObserver;
+
+/**
  * Gets the duration of the asset.
  * @return the duration of the currently playing asset, in seconds
  */

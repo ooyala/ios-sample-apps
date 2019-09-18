@@ -15,16 +15,16 @@
 @class OOClosedCaptions;
 @class OOUnbundledVideo;
 @class SsaiMetadata;
+@class OOContentTree;
+@class OOMetadataPulseData;
+
 
 /**
  * this class implements video stream object
  */
 @interface OOVideo : OOContentItem <OOPlayableItem> {
 @protected
-  NSMutableArray *ads;
-  OOClosedCaptions *closedCaptions;
   OOChannel *parent;
-  BOOL live;
 }
 
 @property (readonly, nonatomic) NSMutableArray *ads;                    /**< @internal An NSMutableArray containing the ads */
@@ -35,6 +35,12 @@
 @property (readonly, nonatomic) NSURL *fairplayKeyURL;                  /**< If this is an offline Fairplay asset, this is where the Fairplay key is located */
 @property (nonatomic) int retryCount;                                   /**< Keeps track of the number of retries already done for a given error. Used by the HA plugin to try an reset the video with the player. */
 @property (readonly, nonatomic) NSString *defaultLanguageCode;          /**< The OOContentItem's Default language Code (eng, deu etc.) */
+
+@property (readonly, nonatomic) BOOL isVrContent;                       /**< Flag indicating if content is VR */
+@property (readonly, nonatomic) NSString *vr360type;                    /**< Type of vr360 if any */
+
+@property (readonly, nonatomic) OOMetadataPulseData *pulseData;         /**< A Pulse data if any */
+@property (readonly, nonatomic) NSMutableDictionary *nielsenData;       /**< A Nielsen data if any */
 
 /**
  * Initialize a OOVideo using the specified data (subclasses should override this)
@@ -51,34 +57,27 @@
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
- * @param data the NSDictionary containing the data to use to initialize this OOVideo
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCode the embed code to fetch from the dictionary
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
  * @return the initialized OOVideo
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                         embedCode:(NSString *)theEmbedCode
-                               api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                          embedCode:(NSString *)theEmbedCode
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Initialize a OOVideo using the specified data (subclasses should override this)
- * @param data the NSDictionary containing the data to use to initialize this OOVideo
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCode the embed code to fetch from the dictionary
  * @param theParent the parent OOChannel of this OOVideo
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOVideo
  * @return the initialized OOVideo
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                         embedCode:(NSString *)theEmbedCode
-                            parent:(OOChannel *)theParent
-                               api:(OOPlayerAPIClient *)theAPI;
-
-/** @internal
- * Update the OOVideo using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOVideo
- * @return a OOReturnState based on if the data matched or not (or parsing failed)
- */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                          embedCode:(NSString *)theEmbedCode
+                             parent:(OOChannel *)theParent
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OOVideo high availability parameters using the specified data

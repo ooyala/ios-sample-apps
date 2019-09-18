@@ -20,25 +20,15 @@
 @class OOVideo;
 @class OOOoyalaError;
 @class OOOoyalaAPIClient;
-@class OOClosedCaptionsStyle;
-@class OOStreamPlayer;
-@class OOManagedAdSpot;
 @class OOPlayerDomain;
-@class OOCastManager;
+@class OOStream;
 @class OOStreamPlayerMapping;
-@class OOFCCTVRatingConfiguration;
-@class OOFCCTVRating;
 @class OOOptions;
 @class OOManagedAdsPlugin;
-@class OOPlayer;
-@class OOSsaiAdsMetadata;
 @class OOAudioSession;
-@class OOOoyalaPlayerContextSwitcher;
 @class OOOoyalaPlayerSessionIDManager;
 @class OOAssetLoaderDelegate;
 @class OOUnbundledVideo;
-@class OOStream;
-@class OOOoyalaError;
 @protocol OOEmbedTokenGenerator;
 
 /**
@@ -72,7 +62,7 @@
  * Get the version and RC of the Ooyala SDK
  * @return the string that represents the SDK version
  */
-+ (nonnull NSString *)version;
++ (nonnull NSString *)sdkVersion;
 
 /**
  * @return YES means to try to use local/debug DRM modes,
@@ -80,12 +70,11 @@
  */
 + (BOOL)useDebugDRMPlayback;
 
-
 /**
- * set encryptedloopback.
- * @param enabled true if enabled, false if disabled
+ * YES means to try to use local/debug DRM modes,
+ * NO means to use regular DRM config.
  */
-+ (void)setEncryptedLoopback:(BOOL)enabled;
++ (void)setUseDebugDRMPlayback:(BOOL)enable;
 
 /**
  * get encryptedloopback.
@@ -94,10 +83,10 @@
 + (BOOL)encryptedLoopback;
 
 /**
- * YES means to try to use local/debug DRM modes,
- * NO means to use regular DRM config.
+ * set encryptedloopback.
+ * @param enabled true if enabled, false if disabled
  */
-+ (void)setUseDebugDRMPlayback:(BOOL)enable;
++ (void)setEncryptedLoopback:(BOOL)enabled;
 
 /**
  Use to get state for Ooyala Analytics (IQ) tracking.
@@ -115,8 +104,7 @@
 #pragma mark Properties
 
 @property (readonly, nonatomic, nullable) OOVideo *currentItem; /**< The OOOoyalaPlayer's currently playing OOVideo */
-@property (readonly, nonatomic, nullable) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
-@property (readonly, nonatomic, nullable) NSDictionary *metadata; /**< The OOOoyalaPlayer's content metadata for currently loaded content */
+@property (nonatomic, nullable) OOContentItem *rootItem; /**< The OOOoyalaPlayer's embedded content (OOVideo, OOChannel, or OOChannelSet) */
 @property (readonly, nonatomic, nullable) OOOoyalaError *error; /**< The OOOoyalaPlayer's current error if it exists */
 @property (readonly, nonatomic, nonnull) OOOoyalaPlayerSessionIDManager *sessionIDManager;
 @property (readonly, nonatomic, nonnull) UIView *view; /**< the view associated with the player*/
@@ -180,7 +168,7 @@
  * Gets the user's current desired state.
  * @return a string containing the current state
  */
-@property (nonatomic, readonly)OOOoyalaPlayerDesiredState desiredState;
+@property (nonatomic) OOOoyalaPlayerDesiredState desiredState;
 
 /**
  * Get the managedAdsPlugin that manages OOOoyalaAdSpots and OOVASTAdSpots.
@@ -196,7 +184,6 @@
  * @internal the ui slider mode
  */
 @property (nonatomic) OOUIProgressSliderMode normalSliderMode;
-
 
 /**
  * @internal Audio Session
@@ -256,18 +243,15 @@
                   embedTokenGenerator:(nullable id<OOEmbedTokenGenerator>)embedTokenGenerator
                               options:(nullable OOOptions *)options;
 
-
 #pragma mark Content Setters
 
-- (void)setDesiredState:(OOOoyalaPlayerDesiredState)desiredState;
-
 /**
- * @param stream non-nil OOStream.
+ * @param stream non-nil @c OOStream.
  */
 - (BOOL)setStream:(nonnull OOStream *)stream;
 
 /**
- * @param streams non-nil, non-empty NSArray that contains OOStreams.
+ * @param streams non-nil, non-empty NSArray containing OOStreams.
  */
 - (BOOL)setStreams:(nonnull NSArray *)streams;
 
@@ -320,7 +304,8 @@ __deprecated_msg("Use -setEmbedCode:adSetCode:withCallback: instead");
  * @param adSetCode the ad set code to use.
  * @return YES always, doesn't depend on asynchronous execution result, so don't rely on it. If something is wrong please check OOOoyalaPlayer.error for a reason.
  */
-- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes adSetCode:(nullable NSString *)adSetCode
+- (BOOL)setEmbedCodes:(nonnull NSArray<NSString *> *)embedCodes
+            adSetCode:(nullable NSString *)adSetCode
 __deprecated_msg("Use -setEmbedCodes:adSetCode:withCallback: instead");
 
 /**
@@ -449,12 +434,6 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
             adSetCode:(nullable NSString *)adSetCode
        shouldAutoPlay:(BOOL)autoPlay
          withCallback:(void(^_Nullable)(OOOoyalaError * _Nullable error))callback;
-
-/**
- * Reinitializes the player with a root item.
- * @param theRootItem the root item to use
- */
-- (void)setRootItem:(nonnull OOContentItem *)theRootItem;
 
 /**
  * Reinitializes the player with a new asset JSON.

@@ -8,16 +8,13 @@
  */
 
 #import "OOAdSpot.h"
-
-@class OOPlayerAPIClient;
-
 /**
  * Base class for concrete ad spot implementations.
  * Should not be used directly by app developers, instead use OOOoyalaAdSpot or OOVASTAd
  */
 @interface OOManagedAdSpot : OOAdSpot
 
-@property (readonly) NSURL *clickURL; /**< The URL which should be opened when the OOAdSpot is clicked */
-@property (readonly) NSArray *trackingURLs; /**< The Array of URLs which should be pinged when the OOAdSpot plays */
+@property (nonatomic, readonly) NSURL *clickURL;        /**< The URL which should be opened when the OOAdSpot is clicked */
+@property (nonatomic, readonly) NSArray *trackingURLs;  /**< The Array of URLs which should be pinged when the OOAdSpot plays */
 
 @end
