@@ -188,7 +188,7 @@ class MultiplePlayerViewController: UIViewController {
     
     if currentItemIndex == indexPathForVisibleCell.row {
       //OS: this even can occurs after player was requested to set another embed code, so better change ebmbed codes
-      guard playerSelectionOption.embedCode == sharedPlayer.player.currentItem.embedCode else {
+      guard playerSelectionOption.embedCode == sharedPlayer.player.currentItem?.embedCode else {
         print("❌ ERROR. early return")
         return
       }
@@ -209,7 +209,7 @@ class MultiplePlayerViewController: UIViewController {
   private func displayPlayerOnCell(_ indexPath: IndexPath) {
     DispatchQueue.main.async {
       guard let cell = self.collectionView.cellForItem(at: indexPath) as? PlayerCell else { return }
-      cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem.title)!)"
+      cell.titleLabel.text = "\(indexPath.row + 1).- \((self.sharedPlayer.player.currentItem?.title)!)"
       cell.videoView.subviews.forEach({ $0.removeFromSuperview() })
       cell.videoView.addSubview(self.sharedPlayer.view)
       NSLayoutConstraint.activate([
@@ -250,7 +250,7 @@ class MultiplePlayerViewController: UIViewController {
       return
     }
 
-    let state = sharedPlayer.player.state()
+    let state = sharedPlayer.player.state
     var playerSelectionOption = options[currentItemIndex]
     //OS: notification OOOoyalaPlayerStateChanged can arrive when table scrolled to another cell and selection option
     playerSelectionOption = checkSelectionOptionAndReplaceIfNeed(selectionOption: playerSelectionOption)
