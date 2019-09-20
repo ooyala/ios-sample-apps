@@ -2,6 +2,9 @@
 #import "OOTBXML.h"
 #import "OOEnums.h"
 
+@class OOPlayerAPIClient;
+@class OOContentTreeAd;
+
 /**
  * Represents all VAST information from a root VAST XML file. May have multiple vast XMLs as part of the ad hierarchy.
  * \ingroup vast
@@ -43,21 +46,14 @@
 
 /** @internal
  * Initialize a OOVASTAdSpot using the specified data (subclasses should override this)
- * @param data the NSDictionary containing the data to use to initialize this OOVASTAdSpot
+ * @param contentTreeAd a @c OOContentTreeAd containing the data to use to initialize this OOVASTAdSpot
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOVASTAd
  * @param duration the content duration
  * @return the initialized OOVASTAdSpot
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                               api:(OOPlayerAPIClient *)theAPI
-                          duration:(NSInteger)duration;
-
-/** @internal
- * Update the OOVASTAdSpot using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOVASTAdSpot
- * @return OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful
- */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithContentTreeAd:(OOContentTreeAd *)contentTreeAd
+                                  api:(OOPlayerAPIClient *)theAPI
+                             duration:(NSInteger)duration;
 
 /** @internal
  * Fetch the additional required info for the ad

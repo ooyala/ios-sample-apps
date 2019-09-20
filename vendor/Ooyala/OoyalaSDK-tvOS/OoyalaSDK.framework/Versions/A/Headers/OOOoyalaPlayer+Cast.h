@@ -11,11 +11,11 @@
 #ifndef OOOoyalaPlayer_Cast_h
 #define OOOoyalaPlayer_Cast_h
 
-@class OOCastManager;
+@protocol OOCastManagerProtocol;
 
 @interface OOOoyalaPlayer (Cast)
 
-- (void)initCastManager:(OOCastManager *)castManager;
+- (void)initCastManager:(id<OOCastManagerProtocol>)castManager;
 
 - (void)switchToCastMode;
 

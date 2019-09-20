@@ -18,6 +18,11 @@
 @interface OOOoyalaPlayer (AdPluginManagement)<OOAdPluginManagerProtocol>
 
 /**
+ * Register all available ad players with corresponding ad types: 
+ */
+- (void)initAllAdPlayers;
+
+/**
  * Register ad player for an ad type
  * @param adPlayerClass the ad player class
  * @param adClass the ad class

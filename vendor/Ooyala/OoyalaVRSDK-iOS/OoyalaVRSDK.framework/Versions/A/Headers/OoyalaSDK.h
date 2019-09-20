@@ -28,6 +28,9 @@
 #import "OODefaultPlayerInfo.h"
 #import "OODefaultAudioOnlyPlayerInfo.h"
 
+#import "OOMetadataPulseData.h"
+#import "OOMetadataIMAAd.h"
+
 // VAST ad classes
 #import "OOVASTConstants.h"
 #import "OOVASTCreative.h"
@@ -134,7 +137,7 @@
 #import "OOPaginatedParentItem.h"
 #import "OOStream.h"
 #import "OOVideo.h"
-#import "OOAuthorizableItem.h"
+#import "OOAuthCode.h"
 #import "OOClosedCaptionsItem.h"
 #import "OOUnbundledVideo.h"
 #import "OOOfflineVideo.h"

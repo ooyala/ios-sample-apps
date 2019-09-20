@@ -10,7 +10,7 @@
  */
 @protocol OOCuePointViewDurationDataSource
 
-@property (nonatomic, readonly) double duration; /**< The duration of a video */
+@property (nonatomic, readonly) float duration; /**< The duration of a video */
 
 @end
 

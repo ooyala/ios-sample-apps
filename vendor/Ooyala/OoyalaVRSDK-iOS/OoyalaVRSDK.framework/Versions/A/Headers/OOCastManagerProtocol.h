@@ -1,5 +1,5 @@
 //
-//  OOCastManager
+//  OOCastManagerProtocol.h
 //  OoyalaSDK
 //
 //  Created on 3/27/15.

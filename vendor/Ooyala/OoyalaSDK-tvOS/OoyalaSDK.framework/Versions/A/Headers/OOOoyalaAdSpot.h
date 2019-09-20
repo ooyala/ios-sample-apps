@@ -7,21 +7,24 @@
  */
 
 #import "OOManagedAdSpot.h"
-#import "OOAuthorizableItem.h"
+
 #import "OOPlayableItem.h"
+#import "OOAuthCode.h"
 
 @class OOOoyalaAPIClient;
+@class OOPlayerAPIClient;
+@class OOAuthorization;
+@class OOContentTreeAd;
 
 /**
  * A single ooyala video ad associated with specific time
  */
-@interface OOOoyalaAdSpot : OOManagedAdSpot <OOAuthorizableItem, OOPlayableItem> 
+@interface OOOoyalaAdSpot : OOManagedAdSpot <OOPlayableItem> 
 
 @property (readonly, nonatomic) NSMutableArray *streams;
-@property (readonly, nonatomic) NSString *embedCode; /**< The OOOoyalaAdSpot's Embed Code */
-@property (readonly, nonatomic) BOOL authorized;             /**< @internal Whether or not this OOOoyalaAdSpot is authorized */
-@property (readonly, nonatomic) OOAuthCode authCode;         /**< @internal The response code from the authorize call */
-@property (nonatomic) BOOL heartbeatRequired;        /**< @internal if the heartbeat is required */
+@property (readonly, nonatomic) NSString *embedCode;      /**< The OOOoyalaAdSpot's Embed Code */
+@property (readonly, nonatomic) BOOL authorized;          /**< @internal Whether or not this OOOoyalaAdSpot is authorized */
+@property (readonly, nonatomic) OOAuthCode authCode;      /**< @internal The response code from the authorize call */
 
 /**
  * Initialize an OOOoyalaAdSpot using the embed code
@@ -40,19 +43,18 @@
 
 /** @internal
  * Initialize an OOOoyalaAdSpot using the specified data (subclasses should override this)
- * @param data the NSDictionary containing the data to use to initialize this OOOoyalaAdSpot
+ * @param contentTreeAd a @c OOContentTreeAd from content_tree response
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOOoyalaAdSpot
  * @return the initialized OOOoyalaAdSpot
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                               api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithContentTreeAd:(OOContentTreeAd *)contentTreeAd
+                                  api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Update the OOOoyalaAdSpot using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOOoyalaAdSpot
- * @return OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful
+ * @param authorization an instance of @c OOAuthorization from authorization request
  */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+- (void)updateWithAuthorization:(OOAuthorization *)authorization;
 
 /** @internal
  Fetch the additional required info for the ad

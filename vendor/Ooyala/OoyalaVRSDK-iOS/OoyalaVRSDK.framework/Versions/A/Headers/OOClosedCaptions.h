@@ -1,8 +1,8 @@
 @import Foundation;
 
-#import "OOEnums.h"
-
 @class OOCaption;
+@class OOContentTreeCC;
+@class OOContentTreeVTT;
 
 /**
  * An object which represents all closed captions information for the asset
@@ -19,33 +19,26 @@
 /** the vtt caption dictionary*/
 @property (readonly, nonatomic) NSDictionary *vttCaptions;
 
-- (instancetype)init __attribute__((unavailable("use initWithDictionary:")));
+- (instancetype)init __attribute__((unavailable("use initWithContentTreeCC:")));
 
 /**
  * INTERNAL
  * @internal
  * Initialize a OOClosedCaptions using the specified data (subclasses should override this)
- * @param data the NSDictionary containing the data to use to initialize this OOClosedCaptions
+ * @param contentTreeCC a @c OOContentTreeCC fetched in content_tree response
+ * @param embedCode an embed code to use
  * @return the initialized OOClosedCaptions
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithContentTreeCC:(OOContentTreeCC *)contentTreeCC
+                         andEmbedCode:(NSString *)embedCode;
 
 /**
  * INTERNAL
  * @internal
  * Update the OOClosedCaptions using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOClosedCaptions
- * @return a OOReturnState based on if the data matched or not (or parsing failed)
+ * @param contentTreeVTT a @c OOContentTreeVTT fetched in content_tree response
  */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
-
-/**
- * INTERNAL
- * @internal
- * Update the OOClosedCaptions using the vtt data
- * @param data the NSDictionary containing the data to use to update this OOClosedCaptions
- */
-- (void)updateWithVttDictionary:(NSDictionary *)data;
+- (void)updateWithContentTreeVTT:(OOContentTreeVTT *)contentTreeVTT;
 
 /**
  * INTERNAL

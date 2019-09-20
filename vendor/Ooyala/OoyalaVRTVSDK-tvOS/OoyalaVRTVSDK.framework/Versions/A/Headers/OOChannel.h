@@ -13,6 +13,7 @@
 @class OOVideo;
 @class OOChannelSet;
 @class OOOoyalaError;
+@class OOContentTree;
 
 /**
  * A OOContentItem which contains other items, representing a single channel as defined in Backlot.
@@ -23,40 +24,33 @@
   OOChannelSet *parent;
 }
 
-@property (readonly, nonatomic) NSString *nextChildren; /**< @internal the next children token */
+@property (readonly, nonatomic) NSString *nextChildren;      /**< @internal the next children token */
 @property (readonly, nonatomic) OOOrderedDictionary *videos; /**< The OOChannel's videos (keyed by embed code) */
-@property (readonly, nonatomic) OOChannelSet *parent; /**< This OOChannel's parent OOChannelSet if it exists */
+@property (readonly, nonatomic) OOChannelSet *parent;        /**< This OOChannel's parent OOChannelSet if it exists */
 
 /** @internal
  * Initialize a OOChannel using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to initialize this OOChannel
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCode the embed code to fetch from the dictionary
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOChannel
  * @return the initialized OOChannel
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                         embedCode:(NSString *)theEmbedCode
-                               api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                          embedCode:(NSString *)theEmbedCode
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Initialize a OOChannel using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to initialize this OOChannel
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCode the embed code to fetch from the dictionary
  * @param theParent the parent OOChannelSet of this OOChannel
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOChannel
  * @return the initialized OOChannel
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                         embedCode:(NSString *)theEmbedCode
-                            parent:(OOChannelSet *)theParent
-                               api:(OOPlayerAPIClient *)theAPI;
-
-/** @internal
- * Update the OOChannel using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOChannel
- * @return a OOReturnState based on if the data matched or not (or parsing failed)
- */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                          embedCode:(NSString *)theEmbedCode
+                             parent:(OOChannelSet *)theParent
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /**
  * Get the first OOVideo for this OOChannel

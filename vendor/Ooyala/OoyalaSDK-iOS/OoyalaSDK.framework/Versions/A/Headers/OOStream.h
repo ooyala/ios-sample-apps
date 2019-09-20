@@ -11,6 +11,7 @@
 #import "OOEnums.h"
 
 @class OOStream;
+@class OOAuthorizationStream;
 
 /**
  * The block used to select the correct OOStream to play.
@@ -21,34 +22,28 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 @interface OOStream : NSObject {
   NSString *deliveryType;
-  NSString *videoCodec;
-  NSString *urlFormat;
-  NSString *framerate;
   NSInteger videoBitrate;
   NSInteger audioBitrate;
   NSInteger height;
   NSInteger width;
-  NSString *url;
-  NSString *aspectRatio;
-  BOOL isLiveStream;
+  NSURL *decodedURL;
 }
 
-@property (readonly, nonatomic) NSString *deliveryType; /**< The OOStream's delivery type */
-@property (readonly, nonatomic) NSString *videoCodec; /**< The OOStream's video codec */
-@property (readonly, nonatomic) NSString *urlFormat; /**< The OOStream's url format */
-@property (readonly, nonatomic) NSString *framerate; /**< The OOStream's framerate */
-@property (readonly, nonatomic) NSInteger videoBitrate; /**< The OOStream's video bitrate */
-@property (readonly, nonatomic) NSInteger audioBitrate; /**< The OOStream's audio bitrate */
-@property (readonly, nonatomic) NSInteger height; /**< The OOStream's height */
-@property (readonly, nonatomic) NSInteger width; /**< The OOStream's width */
-@property (readonly, nonatomic) NSString *url; /**< The OOStream's URL in the format specified by OOStream.urlFormat */
-@property (readonly, nonatomic) NSString *aspectRatio; /**< The OOStream's URL (Remote Asset only) */
-@property (readonly, nonatomic, assign) BOOL isLiveStream; /**< The OOStream's URL (Remote Asset only) */
-@property (readonly, nonatomic) NSString *profile; /**< The OOStream's encoding profile */
+@property (readonly, nonatomic) NSString *deliveryType;     /**< The OOStream's delivery type */
+@property (readonly, nonatomic) NSString *videoCodec;       /**< The OOStream's video codec */
+@property (readonly, nonatomic) double framerate;           /**< The OOStream's framerate */
+@property (readonly, nonatomic) NSInteger videoBitrate;     /**< The OOStream's video bitrate */
+@property (readonly, nonatomic) NSInteger audioBitrate;     /**< The OOStream's audio bitrate */
+@property (readonly, nonatomic) NSInteger height;           /**< The OOStream's height */
+@property (readonly, nonatomic) NSInteger width;            /**< The OOStream's width */
+@property (readonly, nonatomic) NSURL *decodedURL;          /**< The OOStream's URL */
+@property (readonly, nonatomic) NSString *aspectRatio;      /**< The OOStream's URL (Remote Asset only) */
+@property (readonly, nonatomic, assign) BOOL isLiveStream;  /**< The OOStream's URL (Remote Asset only) */
+@property (readonly, nonatomic) NSString *profile;          /**< The OOStream's encoding profile */
 
-@property (readonly, nonatomic) NSString *drmType;        /**< If drm protected, The OOStream's drm type */
-@property (readonly, nonatomic) NSString *licenseUrl;     /**< If drm protected, The OOStream's license url */
-@property (readonly, nonatomic) NSString *certificateUrl; /**< If drm protected, The OOStream's certificate url */
+@property (readonly, nonatomic) NSString *drmType;          /**< If drm protected, The OOStream's drm type */
+@property (readonly, nonatomic) NSString *licenseUrl;       /**< If drm protected, The OOStream's license url */
+@property (readonly, nonatomic) NSString *certificateUrl;   /**< If drm protected, The OOStream's certificate url */
 
 /**
  * Get the combined (video+audio) bitrate of this OOStream
@@ -65,10 +60,10 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /** @internal
  * Initialize a OOStream using the specified data (subclasses should override this)
- * @param data the NSDictionary containing the data to use to initialize this OOStream
+ * @param authorizationStream a @c OOAuthorizationStream from authorization response
  * @return the initialized OOStream
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithAuthorizationStream:(OOAuthorizationStream *)authorizationStream;
 
 /** @internal
  * Initialize a OOStream using the specified asset data (subclasses should override this)
@@ -79,16 +74,10 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /** @internal
  * Update the OOStream using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOStream
+ * @param authorizationStream a @c OOAuthorizationStream from authorization response
  * @return OOReturnState.OOReturnStateFail if the parsing failed, OOReturnState.OOReturnStateMatched if it was successful
  */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
-
-/** @internal
- * Get an NSURL from the url + urlFormat
- * @return an NSURL object created by decoding the url according to urlFromat
- */
-- (NSURL *)decodedURL;
+- (OOReturnState)updateWithAuthorizationStream:(OOAuthorizationStream *)authorizationStream;
 
 /** @internal
  * Check if the OOStream is better than the other
@@ -116,10 +105,10 @@ typedef OOStream *(^OOStreamSelector)(NSArray *streams);
 
 /** @internal
  * Create a OOStream from the given data
- * @param data the data to create the OOStream with
+ * @param authorizationStream a @c OOAuthorizationStream from authorization response
  * @return the created OOStream
  */
-+ (OOStream *)streamFromDictionary:(NSDictionary *)data;
++ (OOStream *)streamFromAuthorizationStream:(OOAuthorizationStream *)authorizationStream;
 
 + (OOStream *)streamFromUrl:(NSURL *)url withType:(NSString *)type;
 

@@ -10,8 +10,6 @@
  @copyright Copyright © 2016 Ooyala, Inc. All rights reserved.
  */
 
-@import Foundation;
-
 #import "OOAnalyticsAdEventsReportingProtocol.h"
 
 typedef NS_ENUM(NSInteger, OOBitrateState) {

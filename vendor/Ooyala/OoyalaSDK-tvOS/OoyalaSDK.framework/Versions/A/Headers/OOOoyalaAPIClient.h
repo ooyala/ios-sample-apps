@@ -14,7 +14,6 @@
 @protocol OOPaginatedParentItem;
 @protocol OOEmbedTokenGenerator;
 @class OOPlayerAPIClient;
-@class OOContentItem;
 @class OOOoyalaError;
 @class OOPlayerDomain;
 
@@ -31,7 +30,8 @@
  * @param domain the embed domain
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithPcode:(NSString *)pcode domain:(OOPlayerDomain *)domain;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain;
 
 /**
  * Initialize an OOOoyalaAPIClient with pcode, embed domain and OOEmbedTokenGenerator.
@@ -43,9 +43,9 @@
  * @param generator OOEmbedTokenGenerator for creating Ooyala Player Tokens
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithPcode:(NSString *)pcode
-                       domain:(OOPlayerDomain *)domain
-          embedTokenGenerator:(id<OOEmbedTokenGenerator>)generator;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain
+                  embedTokenGenerator:(nullable id<OOEmbedTokenGenerator>)generator;
 
 /**
  * Initialize an OOOoyalaAPIClient with pcode, embed domain and OOSecureURLGenerator
@@ -57,9 +57,9 @@
  * @param secureURLGenerator an initialized instance of OOSecureURLGenerator used for signing Backlot requests
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithPcode:(NSString *)pcode
-                       domain:(OOPlayerDomain *)domain
-           secureUrlGenerator:(id<OOSecureURLGenerator>)secureURLGenerator;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain
+                   secureUrlGenerator:(nullable id<OOSecureURLGenerator>)secureURLGenerator;
 
 /**
  * Initialize an OOOoyalaAPIClient with pcode, embed domain, API key and secret
@@ -73,10 +73,10 @@
  * @param domain the embed domain
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithAPIKey:(NSString *)apiKey
-                        secret:(NSString *)secret
-                         pcode:(NSString *)pcode
-                        domain:(OOPlayerDomain *)domain;
+- (nonnull instancetype)initWithAPIKey:(nonnull NSString *)apiKey
+                                secret:(nonnull NSString *)secret
+                                 pcode:(nonnull NSString *)pcode
+                                domain:(nonnull OOPlayerDomain *)domain;
 
 /**
  * Initialize an OOOoyalaAPIClient with pcode, embed domain, API key and secret and OOEmbedTokenGenerator
@@ -92,11 +92,11 @@
  * @param generator the initialized OOEmbedTokenGenerator to use
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithAPIKey:(NSString *)apiKey
-                        secret:(NSString *)secret
-                         pcode:(NSString *)pcode
-                        domain:(OOPlayerDomain *)domain
-           embedTokenGenerator:(id<OOEmbedTokenGenerator>)generator;
+- (nonnull instancetype)initWithAPIKey:(nonnull NSString *)apiKey
+                                secret:(nonnull NSString *)secret
+                                 pcode:(nonnull NSString *)pcode
+                                domain:(nonnull OOPlayerDomain *)domain
+                   embedTokenGenerator:(nullable id<OOEmbedTokenGenerator>)generator;
 
 /**
  * Initialize an OOOoyalaAPIClient with pcode, embed domain, OOEmbedTokenGenerator and OOSecureURLGenerator
@@ -110,10 +110,10 @@
  * @param secureURLGenerator an initialized instance of OOSecureURLGenerator used for signing Backlot requests
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithPcode:(NSString *)pcode
-                       domain:(OOPlayerDomain *)domain
-          embedTokenGenerator:(id<OOEmbedTokenGenerator>)generator
-           secureUrlGenerator:(id<OOSecureURLGenerator>)secureURLGenerator;
+- (nonnull instancetype)initWithPcode:(nonnull NSString *)pcode
+                               domain:(nonnull OOPlayerDomain *)domain
+                  embedTokenGenerator:(nullable id<OOEmbedTokenGenerator>)generator
+                   secureUrlGenerator:(nullable id<OOSecureURLGenerator>)secureURLGenerator;
 
 
 /** @internal
@@ -122,23 +122,23 @@
  * @param secureURLGenerator an initialized instance of OOSecureURLGenerator used for signing Backlot requests
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithPlayerAPIClient:(OOPlayerAPIClient *)playerAPI
-                     secureUrlGenerator:(id<OOSecureURLGenerator>)secureURLGenerator;
+- (nonnull instancetype)initWithPlayerAPIClient:(nonnull OOPlayerAPIClient *)playerAPI
+                             secureUrlGenerator:(nullable id<OOSecureURLGenerator>)secureURLGenerator;
 
 /** @internal
  * Initialize an OOOoyalaAPIClient, able to sign Backlot requests
  * @param thePlayerAPIClient the initialized OOPlayerAPIClient to use
  * @return the initialized OOOoyalaAPIClient
  */
-- (instancetype)initWithPlayerAPIClient:(OOPlayerAPIClient *)thePlayerAPIClient;
+- (nonnull instancetype)initWithPlayerAPIClient:(nonnull OOPlayerAPIClient *)thePlayerAPIClient;
 
 /**
  * Asynchronously fetch the content tree for a set of embed codes
  * @param embedCodes an NSArray containing the embed codes to fetch the content tree for
  * @param callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  */
-- (void)contentTree:(NSArray<NSString *> *)embedCodes
-           callback:(OOContentTreeCallback)callback;
+- (void)contentTree:(nonnull NSArray<NSString *> *)embedCodes
+           callback:(nonnull OOContentTreeCallback)callback;
 
 /**
  * Asynchronously fetch the content tree for a set of embed codes, with the specified ad set
@@ -146,9 +146,9 @@
  * @param adSetCode an NSString containing the ad set code for the ad set to dynamically assign
  * @param callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  */
-- (void)contentTree:(NSArray<NSString *> *)embedCodes
-          adSetCode:(NSString *)adSetCode
-           callback:(OOContentTreeCallback)callback;
+- (void)contentTree:(nonnull NSArray<NSString *> *)embedCodes
+          adSetCode:(nullable NSString *)adSetCode
+           callback:(nonnull OOContentTreeCallback)callback;
 
 /**
  * Asynchronously fetch the content tree for a set of external ids
@@ -156,8 +156,8 @@
  * @param externalIds an NSArray containing the external ids to fetch the content tree for
  * @param callback the OOContentTreeCallback to execute when the asynchronous fetch completes
  */
-- (void)contentTreeByExternalIds:(NSArray *)externalIds
-                        callback:(OOContentTreeCallback)callback;
+- (void)contentTreeByExternalIds:(nonnull NSArray *)externalIds
+                        callback:(nonnull OOContentTreeCallback)callback;
 
 /**
  * Asynchronously fetch next part of the content tree if content tree is too large
@@ -165,19 +165,19 @@
  * @param[in,out] parent the OOPaginatedParentItem to fetch more children for
  * @param callback a block called on return
  */
-- (void)contentTreeNext:(id<OOPaginatedParentItem>)parent
-               callback:(OOContentTreeNextCallback)callback;
+- (void)contentTreeNext:(nonnull id<OOPaginatedParentItem>)parent
+               callback:(nonnull OOContentTreeNextCallback)callback;
 
 /** @internal
  * Get the provider code that this OOOoyalaAPIClient uses
  * @return the provider code this OOOoyalaAPIClient uses
  */
-- (NSString *)pcode;
+- (nonnull NSString *)pcode;
 
 /** @internal
  * Get the embed domain that this OOOoyalaAPIClient uses
  * @return the embed domain this OOOoyalaAPIClient uses
  */
-- (OOPlayerDomain *)domain;
+- (nonnull OOPlayerDomain *)domain;
 
 @end

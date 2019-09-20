@@ -98,7 +98,7 @@
  The initial playback speed rate. Default 1.0.
  @warning: Not working for live, Ad's and VR assets.
  */
-@property (nonatomic) Float64 initialPlaybackSpeedRate;
+@property (nonatomic) float initialPlaybackSpeedRate;
 /**
  Markers Inline to be added using an external file or with @c NSDictionary definiton
  */

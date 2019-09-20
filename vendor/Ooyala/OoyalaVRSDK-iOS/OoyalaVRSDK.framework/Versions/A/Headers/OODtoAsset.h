@@ -79,9 +79,9 @@ NS_CLASS_AVAILABLE_IOS(10.0)
  */
 @property (nonatomic, readonly, nullable) OOOfflineVideo *offlineVideo;
 
-@property ProgressParameter _Nullable progressClosure;
-@property FinishParameter _Nullable finishClosure;
-@property ErrorParameter _Nullable errorClosure;
+@property (nullable) ProgressParameter progressClosure;
+@property (nullable) FinishParameter finishClosure;
+@property (nullable) ErrorParameter errorClosure;
 
 /**
  Flag indicating if download was successful

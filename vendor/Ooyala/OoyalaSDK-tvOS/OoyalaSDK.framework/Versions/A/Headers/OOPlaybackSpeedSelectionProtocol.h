@@ -11,6 +11,6 @@
  Requests to change the current playback speed rate to the one provided as a parameter.
  @param playbackSpeedRate to be used
  */
-- (void)changePlaybackSpeedRate:(Float64)playbackSpeedRate;
+- (void)changePlaybackSpeedRate:(float)playbackSpeedRate;
 
 @end

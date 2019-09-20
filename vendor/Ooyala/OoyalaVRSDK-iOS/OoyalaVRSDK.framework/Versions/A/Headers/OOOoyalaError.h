@@ -18,10 +18,10 @@
 @interface OOOoyalaError : NSObject
 
 @property (readonly, nonatomic) OOOoyalaErrorCode code; /**< The OOOoyalaError's code */
-@property (readonly, nonatomic) NSString *message; /**< The OOOoyalaError's description */
-@property (readonly, nonatomic) NSError *error; /**< The underlying NSError if it exists */
+@property (readonly, nonatomic) NSString *message;      /**< The OOOoyalaError's description */
+@property (readonly, nonatomic) NSError *error;         /**< The underlying NSError if it exists */
 @property (readonly, nonatomic) NSDictionary *userInfo; /**< An optional NSDictionary that has more info about the error */
-@property (nonatomic) NSString *failingUrl; /**< A failing URL if present */
+@property (nonatomic) NSString *failingUrl;             /**< A failing URL if present */
 
 /** @internal
  * Initialize an OOOoyalaError
