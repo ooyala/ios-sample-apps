@@ -30,7 +30,7 @@ class FullscreenPlayerViewController: OOOoyalaTVPlayerViewController {
     }
     
     NSLog("Notification Received: %@. state: %@. playhead: %f", name.rawValue,
-          OOOoyalaPlayerStateConverter.playerState(toString: player.state()),
+          OOOoyalaPlayerStateConverter.playerState(toString: player.state),
           player.playheadTime())
   }
   
