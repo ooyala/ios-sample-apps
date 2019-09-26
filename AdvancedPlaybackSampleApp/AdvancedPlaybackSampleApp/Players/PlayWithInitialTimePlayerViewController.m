@@ -77,8 +77,10 @@
   self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   
   // Load the video
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [self.ooyalaPlayerViewController.player playWithInitialTime:20];
+  __weak typeof(self) weakSelf = self;
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode shouldAutoPlay:YES withCallback:^(OOOoyalaError * _Nullable error) {
+    [weakSelf.ooyalaPlayerViewController.player playWithInitialTime:20];
+  }];
 }
 
 - (void)notificationHandler:(NSNotification *)notification {
