@@ -33,6 +33,8 @@ static const double refreshRate = 0.25;
 @synthesize externalPlaybackActive = _externalPlaybackActive;
 @synthesize rate = _rate; // playback rate
 @synthesize bitrate = _bitrate;
+@synthesize ooPlayerState;
+@synthesize supportsVideoGravityButton;
 
 #pragma mark - Init
 
@@ -53,7 +55,7 @@ static const double refreshRate = 0.25;
   return self;
 }
 
-- (OOOoyalaPlayerState)state {
+- (OOOoyalaPlayerState)ooPlayerState {
   return _stateNotifier.notifierState;
 }
 
