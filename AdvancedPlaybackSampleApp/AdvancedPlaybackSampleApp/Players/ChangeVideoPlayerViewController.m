@@ -79,20 +79,17 @@
   self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   
   // Load the video
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [self.ooyalaPlayerViewController.player play];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 #pragma mark - Actions
 
 - (IBAction)onLeftBtnClick:(UIButton *)sender {
-  [self.ooyalaPlayerViewController.player setEmbedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1"];
-  [self.ooyalaPlayerViewController.player play];
+  [self.ooyalaPlayerViewController.player setEmbedCode:@"Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" shouldAutoPlay:YES withCallback:nil];
 }
 
 - (IBAction)onRightBtnClick:(UIButton *)sender {
-  [self.ooyalaPlayerViewController.player setEmbedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx"];
-  [self.ooyalaPlayerViewController.player play];
+  [self.ooyalaPlayerViewController.player setEmbedCode:@"h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx" shouldAutoPlay:YES withCallback:nil];
 }
 
 - (void)notificationHandler:(NSNotification *)notification {

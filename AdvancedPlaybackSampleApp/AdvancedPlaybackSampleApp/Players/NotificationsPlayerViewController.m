@@ -77,8 +77,7 @@
   self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   
   // Load the video
-  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode];
-  [self.ooyalaPlayerViewController.player play];
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 /** Handle all notifications from the OoyalaPlayer

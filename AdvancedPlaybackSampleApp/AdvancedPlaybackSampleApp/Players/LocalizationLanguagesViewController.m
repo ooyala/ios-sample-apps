@@ -80,9 +80,7 @@
   [self.playerView addSubview:self.ooyalaPlayerViewController.view];
   self.ooyalaPlayerViewController.view.frame = self.playerView.bounds;
   
-  if ([self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode]) {
-    [self.ooyalaPlayerViewController.player play];
-  }
+  [self.ooyalaPlayerViewController.player setEmbedCode:self.embedCode shouldAutoPlay:YES withCallback:nil];
 }
 
 #pragma mark - Private functions
