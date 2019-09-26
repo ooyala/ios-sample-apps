@@ -45,7 +45,7 @@ static const double refreshRate = 0.25;
     _externalPlaybackActive = NO;
     _rate = 0;
     _bitrate = 0;
-    _stateNotifier.state = OOOoyalaPlayerStateLoading;
+    _stateNotifier.notifierState = OOOoyalaPlayerStateLoading;
     _playheadTime = 0;
   }
   self.textColor = UIColor.blackColor;
@@ -54,13 +54,13 @@ static const double refreshRate = 0.25;
 }
 
 - (OOOoyalaPlayerState)state {
-  return _stateNotifier.state;
+  return _stateNotifier.notifierState;
 }
 
 - (void)loadAd:(OOSampleAdSpot *)ad {
   self.adText = ad.text;
   self.text = [NSString stringWithFormat:@"%@ - %f", self.adText, duration];
-  self.stateNotifier.state = OOOoyalaPlayerStateReady;
+  self.stateNotifier.notifierState = OOOoyalaPlayerStateReady;
 }
 
 #pragma mark player
@@ -71,13 +71,13 @@ static const double refreshRate = 0.25;
                                                      selector:@selector(onTimer:)
                                                      userInfo:nil
                                                       repeats:YES];
-  self.stateNotifier.state = OOOoyalaPlayerStatePlaying;
+  self.stateNotifier.notifierState = OOOoyalaPlayerStatePlaying;
 }
 
 - (void)pause {
   [self.refreshTimer invalidate];
   self.refreshTimer = nil;
-  [self.stateNotifier setState:OOOoyalaPlayerStatePaused];
+  [self.stateNotifier setNotifierState:OOOoyalaPlayerStatePaused];
 }
 
 - (void)stop {}
@@ -104,7 +104,7 @@ static const double refreshRate = 0.25;
     [self.refreshTimer invalidate];
     self.refreshTimer = nil;
     self.playheadTime = duration;
-    self.stateNotifier.state = OOOoyalaPlayerStateCompleted;
+    self.stateNotifier.notifierState = OOOoyalaPlayerStateCompleted;
   }
   [self setText:[NSString stringWithFormat:@"%@ - %d", self.adText, (int)round(duration - self.playheadTime)]];
   [self.stateNotifier notifyPlayheadChange];
