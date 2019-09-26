@@ -53,7 +53,7 @@
 @property (readonly, nonatomic) OOAuthCode authCode;        /**< The response code from the authorize call */
 
 @property (readonly, nonatomic) NSDictionary *moduleData;
-@property (nonatomic) BOOL heartbeatRequired;
+@property (readonly, nonatomic) BOOL heartbeatRequired;
 @property (readonly, nonatomic) OOFCCTVRating *tvRating;
 @property (readonly, nonatomic) NSString *assetPcode;       /**< The OOContentItem's Promo Image URL */
 @property (readonly, nonatomic) BOOL haEnabled;

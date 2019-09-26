@@ -81,7 +81,7 @@ didEndSessionWithError:(nonnull NSError *)error;
 /**
  Initiate and get a singleton OOCastManager with the given reveiverAppID and nameSpace
  @param receiverAppID identifier of receiever's application
- @param namespace application namespace
+ @param appNamespace application namespace
  */
 + (nonnull OOCastManager *)castManagerWithAppID:(nonnull NSString *)receiverAppID
                                       namespace:(nonnull NSString *)appNamespace;

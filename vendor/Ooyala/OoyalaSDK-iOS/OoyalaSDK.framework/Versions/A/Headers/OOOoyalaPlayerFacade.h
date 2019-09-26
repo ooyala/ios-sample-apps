@@ -135,6 +135,13 @@
 @property (readonly, nonatomic, nonnull) NSString *playerSessionId; /**< A Session ID that is created at the initialization of OoyalaPlayer. Persists for the life of the OoyalaPlayer */
 @property (readonly, nonatomic, nullable) NSString *contentSessionId; /**< A Session ID that is created on the set of a new piece of content (i.e setEmbedCode). Persists until a new piece of content is set. Can be null if no video was set **/
 
+#pragma mark During-playback status
+
+/**
+ * Gets the player's current state.
+ */
+@property (readonly, nonatomic) OOOoyalaPlayerState state;
+
 /**
  * The volume of the OoyalaPlayer, relative to the device's volume setting.
  * For example, if volume is 1.0 (default), the playback volume would be as loud as the device's volume.
@@ -465,14 +472,6 @@ __deprecated_msg("Use -setExternalIds:withCallback: instead");
  @param callback a callback with error if present
  */
 - (void)reauthorizeCurrentItemWithCallback:(nonnull OOAuthorizeCallback)callback;
-
-#pragma mark During-playback status
-
-/**
- * Gets the player's current state.
- * @return a string containing the current state
- */
-- (OOOoyalaPlayerState)state;
 
 #pragma mark Playback Actions
 
