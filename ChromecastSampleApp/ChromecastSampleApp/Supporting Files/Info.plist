@@ -53,14 +53,8 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>audio</string>
-	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>App uses bluetooth for connection to Chromecast device</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ooyala-slick-type.ttf</string>
@@ -69,6 +63,14 @@
 		<string>RobotoCondensed-Regular.ttf</string>
 		<string>RobotoCondensed-Bold.ttf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
