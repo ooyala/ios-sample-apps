@@ -7,6 +7,8 @@
 
 @import Foundation;
 
+@class OOSASMarker;
+
 /**
  Stores the info for a marker.
  */
@@ -22,22 +24,19 @@
 @property (readonly, nonatomic) NSString *imageUrl;
 @property (readonly, nonatomic) NSString *text;
 
-- (instancetype)init __attribute__((unavailable("use initWithDictionary:")));
+- (instancetype)init __attribute__((unavailable("use initWithSASMarker:")));
 
 /**
- Initializes a @c OOMarker using @c NSDictionary.
+ Initializes a @c OOMarker using @c OOSASMarker.
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithSASMarker:(OOSASMarker *)sasMarker;
 
 /**
- Initializes and returns @c OOMarker using @c NSDictionary.
+ Initializes and returns @c OOMarker using @c OOSASMarker.
  */
-+ (instancetype)initWithDictionary:(NSDictionary *)data;
++ (instancetype)markerFromSASMarker:(OOSASMarker *)sasMarker;
 
-/**
- Updates @c OOMarker using a @c NSDictionary.
- */
-- (void)updateWithDictionary:(NSDictionary *)data;
++ (NSArray<OOMarker *> *)arrayFromSASMarkersArray:(NSArray<OOSASMarker *> *)sasMarkersArray;
 
 /**
  Gets a @c NSString with the json representation of the @c OOMarker.

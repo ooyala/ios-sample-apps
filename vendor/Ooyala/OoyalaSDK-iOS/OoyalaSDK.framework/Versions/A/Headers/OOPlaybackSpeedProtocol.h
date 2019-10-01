@@ -12,9 +12,9 @@
 /**
  Gets the currently selected playback speed rate.
  
- @return An Float64 value.
+ @return An float value.
  */
-@property (nonatomic, readonly) Float64 selectedPlaybackSpeedRate;
+@property (nonatomic, readonly) float selectedPlaybackSpeedRate;
 
 /**
  Lets you know if the current video supporting playback speed.
@@ -41,6 +41,6 @@
 
  @param playbackSpeedRate to be used.
  */
-- (void)changePlaybackSpeedRate:(Float64)playbackSpeedRate;
+- (void)changePlaybackSpeedRate:(float)playbackSpeedRate;
 
 @end

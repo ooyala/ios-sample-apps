@@ -57,12 +57,12 @@
  * This returns the player state
  * @return the state
  */
-@property (nonatomic, readonly) OOOoyalaPlayerState state;
-@property (nonatomic)           BOOL seekable;
+@property (nonatomic) OOOoyalaPlayerState ooPlayerState;
+@property (nonatomic) BOOL seekable;
 @property (nonatomic, readonly) CMTimeRange seekableTimeRange;
-@property (nonatomic)           BOOL allowsExternalPlayback;
+@property (nonatomic) BOOL allowsExternalPlayback;
 @property (nonatomic, readonly) BOOL externalPlaybackActive;
-@property (nonatomic)           float rate; // playback rate
+@property (nonatomic) float rate; // playback rate
 @property (nonatomic, readonly) double bitrate;
 @property (nonatomic, readonly) BOOL supportsVideoGravityButton;
 @property (nonatomic, readonly, getter = isLiveClosedCaptionsAvailable) BOOL liveClosedCaptionsAvailable;

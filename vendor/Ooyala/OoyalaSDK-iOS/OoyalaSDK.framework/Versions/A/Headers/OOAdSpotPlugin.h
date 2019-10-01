@@ -1,5 +1,5 @@
 //
-//  OODefaultAdsPlugin.h
+//  OOAdSpotPlugin.h
 //  OoyalaSDK
 //
 //  Copyright © 2015 Ooyala, Inc. All rights reserved.
@@ -21,7 +21,7 @@
 @interface OOAdSpotPlugin : NSObject <OOAdPlugin>
 
 @property (nonatomic) Float64 lastAdModeTime;
-@property (readonly) OOAdSpotManager *adSpotManager;
+@property (nonatomic, readonly) OOAdSpotManager *adSpotManager;
 @property (nonatomic, weak) id<OOAdSpotPluginDelegate> delegate;
 
 - (BOOL)playAdsBeforeTime;

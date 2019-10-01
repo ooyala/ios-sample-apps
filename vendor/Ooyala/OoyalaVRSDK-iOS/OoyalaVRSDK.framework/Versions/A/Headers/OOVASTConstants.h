@@ -4,6 +4,7 @@ extern float const OO_MINIMUM_SUPPORTED_VAST_VERSION;         /**< The minimum s
 extern float const OO_MAXIMUM_SUPPORTED_VAST_VERSION;         /**< The maximum supported VAST version */
 extern float const OO_MINIMUM_SUPPORTED_VMAP_VERSION;         /**< The minimum supported VMAP version */
 extern float const OO_MAXIMUM_SUPPORTED_VMAP_VERSION;         /**< The maximum supported VMAP version */
+
 extern char *const OO_ELEMENT_VAST;                           /**< The XML element name for VAST */
 extern char *const OO_ELEMENT_AD;                             /**< The XML element name for Ad */
 extern char *const OO_ELEMENT_IN_LINE;                        /**< The XML element name for InLine */
@@ -65,7 +66,7 @@ extern char *const OO_ELEMENT_ADBREAK;                        /**< The XML eleme
 extern char *const OO_ELEMENT_ADSOURCE;                       /**< The XML element name for vmap ad source */
 extern char *const OO_ELEMENT_ADTAGURI;                       /**< The XML element name for vmap ad tag uri */
 extern char *const OO_ELEMENT_VASTADDATA;                     /**< The XML element name for vast ad data */
-extern char *const OO_ELEMENT_CUSTOMADATA;                     /**< The XML element name for custom ad data */
+extern char *const OO_ELEMENT_CUSTOMADATA;                    /**< The XML element name for custom ad data */
 
 extern NSString *const OO_ATTRIBUTE_VERSION;                  /**< The XML attribute name for version */
 extern NSString *const OO_ATTRIBUTE_ID;                       /**< The XML attribute name for id */

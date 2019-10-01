@@ -19,6 +19,7 @@
 @class OOIMAConfiguration;
 @class OOIMAAdPlayer;
 @class OOAdSpotManager;
+@class OOMetadataIMAAd;
 
 @class IMAAdsManager;
 @class IMAAdsLoader;
@@ -110,6 +111,6 @@
  * @param adsMetadata as NSMutableArray
  * @return ad spot as OOAdSpotManager
  */
-- (OOAdSpotManager *)parseAllAdsMetadata:(NSMutableArray *)adsMetadata;
+- (OOAdSpotManager *)parseAllAdsMetadata:(NSArray<OOMetadataIMAAd *> *)adsMetadata;
 
 @end

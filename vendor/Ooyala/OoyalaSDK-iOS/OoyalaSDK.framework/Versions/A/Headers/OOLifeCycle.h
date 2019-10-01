@@ -34,7 +34,7 @@
 - (void)resume:(Float64)time stateToResume:(OOOoyalaPlayerState)state;
 
 /**
- * This is called when plugin should be destryed
+ * This is called when plugin should be destroyed
  */
 - (void)destroy;
 

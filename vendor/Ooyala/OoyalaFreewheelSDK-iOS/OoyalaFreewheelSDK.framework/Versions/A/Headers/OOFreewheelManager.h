@@ -10,7 +10,6 @@
 
 @class OOOoyalaPlayerViewController;
 @class OOOoyalaPlayer;
-@class OOContentItem;
 @class OOStateNotifier;
 @protocol FWContext;
 /**

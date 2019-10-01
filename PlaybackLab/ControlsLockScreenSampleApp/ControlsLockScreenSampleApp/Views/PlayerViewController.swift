@@ -210,7 +210,7 @@ class PlayerViewController: UIViewController {
     // Ignore TimeChangedNotificiations for shorter logs
     if notification.name == NSNotification.Name.OOOoyalaPlayerTimeChanged { return }
     guard let player = ooyalaPlayerVC?.player,
-          let stringState = OOOoyalaPlayerStateConverter.playerState(toString: player.state()) else { return }
+          let stringState = OOOoyalaPlayerStateConverter.playerState(toString: player.state) else { return }
     print("PlayerVC Notification Received: \(notification.name.rawValue), state: \(stringState), playhead: \(player.playheadTime())")
   }
   

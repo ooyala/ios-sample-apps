@@ -13,8 +13,11 @@
 #define OoyalaSDK_Callbacks_h
 
 @class OOVideo;
-@class OOContentItem;
 @class OOOoyalaError;
+@class OOContentTree;
+@class OOAuthorization;
+@class OOMetadata;
+@class OOContentTreeEmbedCode;
 
 /**
  The callback called when the current item is changed in an OOOoyalaPlayer
@@ -26,50 +29,42 @@ typedef void(^OOCurrentItemChangedCallback)(OOVideo *currentItem);
 /**
  The callback used for OOOoyalaAPIClient.contentTree:callback: calls
 
- @param contentItem the root content item fetched in the contentTree call
+ @param contentTree an instance of @c OOContentTree fetched from the contentTree call
  @param error the OOOoyalaError if one occurreds
  */
-typedef void(^OOContentTreeCallback)(OOContentItem *contentItem, OOOoyalaError *error);
-
-/**
- The callback used for OOOoyalaAPIClient.authorizeDownloadForEmbedCode:withPlayerInfo:callback calls
-
- @param video OOVideo if authorized for offline use
- @param error error if present
- */
-typedef void(^OOVideoAuthCallback)(OOVideo *video, OOOoyalaError *error);
+// TODO: replace with OOContentTree
+typedef void(^OOContentTreeCallback)(OOContentTree *contentTree, OOOoyalaError *error);
 
 /**
  The callback used for OOOoyalaAPIClient.contentTreeNext:callback: calls
 
- @param range the NSRange denoting the new children added
+ @param tokenDict a @c OOContentTreeEmbedCode with new children
  @param error the OOOoyalaError if one occurred
  */
-typedef void(^OOContentTreeNextCallback)(NSRange range, OOOoyalaError *error);
-
-/**
- The callback used for OOOoyalaAPIClient.metadata:params:callback: calls
-
- @param metadata an instance of @c NSSDictionary with metadata
- @param error the OOOoyalaError if one occurred
- */
-typedef void(^OOMetadataDictionaryFromAPICallback)(NSDictionary *metadata, OOOoyalaError *error);
-
-/**
- The callback used for OOPaginatedParentItem.fetchMoreChildren: calls.
-
- @param range the NSRange denoting the start index of the new children and the number of new children fetched
- @param error an OOOoyalaError denoting what error occurred (nil if no error)
- */
-typedef void(^OOFetchMoreChildrenCallback)(NSRange range, OOOoyalaError *error);
+typedef void(^OOContentTreeNextCallback)(OOContentTreeEmbedCode *tokenDict, OOOoyalaError *error);
 
 /**
  The callback used for authorization requests
 
- @param authData an instance of @c NSSDictionary with authorization data
+ @param authorization an instance of @c OOAuthorization fetched from the authorization call
  @param error the OOOoyalaError if one occurred
  */
-typedef void (^OOAuthorizeCallback)(NSDictionary *authData, OOOoyalaError *error);
+typedef void (^OOAuthorizeCallback)(OOAuthorization *authorization, OOOoyalaError *error);
+
+/**
+ The callback used for OOOoyalaAPIClient.metadata:params:callback: calls
+
+ @param metadata an instance of @c OOMetadata fetched from the metadata call
+ @param error the OOOoyalaError if one occurred
+ */
+typedef void(^OOMetadataCallback)(OOMetadata *metadata, OOOoyalaError *error);
+
+/**
+ The callback used for OOPaginatedParentItem.fetchMoreChildren: calls.
+
+ @param error an OOOoyalaError denoting what error occurred (nil if no error)
+ */
+typedef void(^OOFetchMoreChildrenCallback)(OOOoyalaError *error);
 
 /**
  The callback used for heartbeat requests

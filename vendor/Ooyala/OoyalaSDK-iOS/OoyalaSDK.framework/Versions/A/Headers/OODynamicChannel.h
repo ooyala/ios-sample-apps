@@ -23,34 +23,27 @@
 
 /** @internal
  * Initialize a OODynamicChannel using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to initialize this OODynamicChannel
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCodes the embed codes to fetch from the dictionary (ordered)
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
  * @return the initialized OODynamicChannel
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                        embedCodes:(NSArray *)theEmbedCodes
-                               api:(OOPlayerAPIClient *)theAPI;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                         embedCodes:(NSArray *)theEmbedCodes
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * Initialize a OODynamicChannel using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to initialize this OODynamicChannel
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCodes the embed codes to fetch from the dictionary (ordered)
  * @param theParent the parent OOChannelSet of this OODynamicChannel
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OODynamicChannel
  * @return the initialized OODynamicChannel
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                        embedCodes:(NSArray *)theEmbedCodes
-                            parent:(OOChannelSet *)theParent
-                               api:(OOPlayerAPIClient *)theAPI;
-
-/** @internal
- * Update the OODynamicChannel using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OODynamicChannel
- * @return a OOReturnState based on if the data matched or not (or parsing failed)
- */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                         embedCodes:(NSArray *)theEmbedCodes
+                             parent:(OOChannelSet *)theParent
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /** @internal
  * The embed codes to authorize

@@ -18,7 +18,7 @@
 
 @interface OOStateNotifier : NSObject
 
-@property (nonatomic) OOOoyalaPlayerState state;
+@property (nonatomic) OOOoyalaPlayerState notifierState;
 
 - (void)notifyPlayheadChange;
 

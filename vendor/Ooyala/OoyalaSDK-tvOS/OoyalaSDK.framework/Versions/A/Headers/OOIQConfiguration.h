@@ -39,9 +39,7 @@ extern NSString *const OOIQCONFIGURATION_DEFAULT_DEVICE_BRAND;
 extern NSString *const OOIQCONFIGURATION_DEFAULT_MODEL;
 /**
  The default network to send analytics data
-
  @c NO is the default and will use any available (local or wifi)
-
  @c YES to use wifi network only for sending data
  */
 extern BOOL const OOIQCONFIGURATION_DEFAULT_NETWORK_WIFI;

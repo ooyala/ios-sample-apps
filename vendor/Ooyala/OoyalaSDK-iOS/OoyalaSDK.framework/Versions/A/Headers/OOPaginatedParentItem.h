@@ -11,13 +11,6 @@
  */
 - (NSString *)embedCode;
 
-/** @internal
- * Update the OOPaginatedParentItem using the specified data
- * @param data the NSDictionary containing the data to use to update this OOPaginatedParentItem
- * @return a OOReturnState based on if the data matched or not (or parsing failed)
- */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
-
 /**
  * Find out it this OOPaginatedParentItem has more children
  * @return YES if it does, NO if it doesn't

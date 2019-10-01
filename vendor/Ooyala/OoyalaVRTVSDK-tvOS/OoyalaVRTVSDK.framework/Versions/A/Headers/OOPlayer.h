@@ -43,8 +43,6 @@ extern NSString *const PlayerErrorNotification;
 
 - (CGRect)videoRect;
 
-- (void)setState:(OOOoyalaPlayerState)state;
-
 @end
 
 #endif /* OOPlayer_h */

@@ -20,9 +20,9 @@
 
 #pragma mark - Public properties
 
-@property (nonatomic) double duration; /**< The duration to display in the slider, in seconds */
-@property (nonatomic) double currentTime; /**< The current time to display in the slider, in seconds */
-@property (nonatomic) double currentAvailableTime; /**< The available buffer time to display on the slider, in seconds */
+@property (nonatomic) float duration; /**< The duration to display in the slider, in seconds */
+@property (nonatomic) float currentTime; /**< The current time to display in the slider, in seconds */
+@property (nonatomic) float currentAvailableTime; /**< The available buffer time to display on the slider, in seconds */
 @property (nonatomic) OOUIProgressSliderMode mode; /**< The UI style to use in the slider */
 @property (nonatomic) CMTimeRange seekableTimeRange; /**< The seekable time range of the OoyalaPlayer */
 @property (nonatomic) UILabel *liveIndicator; /**< A label that indicates if the video is live or not */

@@ -139,7 +139,7 @@
 - (IBAction)setParams:(UIButton *)sender {
   NSString *params = self.playerParams.text;
   if ([self.ssaiPlugin setParams:params] &&
-      self.ssaiPlugin.player.state != OOOoyalaPlayerStatePlaying) {
+      self.ssaiPlugin.player.ooPlayerState != OOOoyalaPlayerStatePlaying) {
     [self.ooyalaPlayer setEmbedCode:self.playerSelectionOption.embedCode withCallback:nil];
   }
 }

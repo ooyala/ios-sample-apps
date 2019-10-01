@@ -12,6 +12,7 @@
 @class OOOrderedDictionary;
 @class OOChannel;
 @class OOOoyalaError;
+@class OOContentTree;
 
 /**
  * A OOContentItem which contains channels, representing a single channel set as defined in Backlot.
@@ -21,26 +22,19 @@
   OOOrderedDictionary *channels;
 }
 
-@property (readonly, nonatomic) NSString *nextChildren; /**< @internal the next children token */
-@property (readonly, nonatomic) OOOrderedDictionary *channels; /**< The OOChannelSet's channels (keyed by embed code) */
+@property (readonly, nonatomic) NSString *nextChildren;         /**< @internal the next children token */
+@property (readonly, nonatomic) OOOrderedDictionary *channels;  /**< The OOChannelSet's channels (keyed by embed code) */
 
 /** @internal
  * Initialize a OOContentItem using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to initialize this OOChannelSet
+ * @param contentTree an instance of @c OOContentTree fetched from content_tree request
  * @param theEmbedCode the embed code to fetch from the dictionary
  * @param theAPI the OOPlayerAPIClient that was used to fetch this OOChannelSet
  * @return the initialized OOChannelSet
  */
-- (instancetype)initWithDictionary:(NSDictionary *)data
-                         embedCode:(NSString *)theEmbedCode
-                               api:(OOPlayerAPIClient *)theAPI;
-
-/** @internal
- * Update the OOChannelSet using the specified data (subclasses should override and call this)
- * @param data the NSDictionary containing the data to use to update this OOChannelSet
- * @return a OOReturnState based on if the data matched or not (or parsing failed)
- */
-- (OOReturnState)updateWithDictionary:(NSDictionary *)data;
+- (instancetype)initWithContentTree:(OOContentTree *)contentTree
+                          embedCode:(NSString *)theEmbedCode
+                                api:(OOPlayerAPIClient *)theAPI;
 
 /**
  * Get the first OOVideo for this OOChannelSet

@@ -11,12 +11,7 @@
 /**
  * Single timed text item
  */
-@interface OOCaption : NSObject {
-@protected
-  Float64 begin;
-  Float64 end;
-  NSString *text;
-}
+@interface OOCaption : NSObject
 
 /** Time when the text should appear */
 @property (readonly, nonatomic) Float64 begin;
@@ -25,7 +20,7 @@
 /** Text string to appear */
 @property (readonly, nonatomic) NSString *text;
 
-- (instancetype)initWithBegin:(Float64)begin_ end:(Float64)end_ text:(NSString *)text_;
+- (instancetype)initWithBegin:(Float64)begin end:(Float64)end text:(NSString *)text;
 
 /** @internal
  * Initialize a OOCaption using the specified xml (subclasses should override this)
